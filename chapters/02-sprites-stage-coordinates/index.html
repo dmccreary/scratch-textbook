@@ -1,0 +1,3013 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Covers sprites, the stage, coordinate system fundamentals, and motion block basics for young learners">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/02-sprites-stage-coordinates/">
+      
+      
+        <link rel="prev" href="../01-welcome-to-scratch/">
+      
+      
+        <link rel="next" href="../03-motion-blocks-categories/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Sprites, Stage, and the Coordinate System - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sprites-stage-and-the-coordinate-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprites, Stage, and the Coordinate System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-welcome-to-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-your-cast-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting Your Cast: Sprites!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting Your Cast: Sprites!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-sprite-a-quick-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Sprite? (A Quick Reminder)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sprites-building-your-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sprites — Building Your Cast
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Sprites — Building Your Cast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding More Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each-sprite-has-its-own-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Each Sprite Has Its Own Everything!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stage-your-theater" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stage — Your Theater
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Stage — Your Theater">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-size-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Size and Boundaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Size and Boundaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-stage-layout-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Stage Layout and Boundaries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-backdrops-setting-the-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Backdrops — Setting the Scene
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Backdrops — Setting the Scene">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-backdrops" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Change Backdrops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdrop-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backdrop Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-coordinate-system-your-gps-on-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Coordinate System — Your GPS on Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Coordinate System — Your GPS on Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding X and Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Coordinates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-coordinate-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Coordinate Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-and-negative-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive and Negative Numbers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-blocks-making-sprites-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Blocks — Making Sprites Move!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Blocks — Making Sprites Move!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-blocks-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Blocks at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Blocks at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-motion-blocks-visual-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Motion Blocks Visual Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-vs-glide-whats-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move vs. Glide — What's the Difference?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turning-cw-vs-ccw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turning — CW vs. CCW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#going-to-specific-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Going to Specific Positions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Going to Specific Positions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-to-x-y-instant-teleport" class="md-nav__link">
+    <span class="md-ellipsis">
+      go to x: y: — Instant Teleport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glide-secs-to-x-y-smooth-slide" class="md-nav__link">
+    <span class="md-ellipsis">
+      glide secs to x: y: — Smooth Slide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#looks-blocks-changing-how-sprites-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looks Blocks — Changing How Sprites Look
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Looks Blocks — Changing How Sprites Look">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-looks-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Looks Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speech-vs-thought-bubbles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speech vs. Thought Bubbles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphic-effects-cool-visual-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphic Effects — Cool Visual Tricks!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-blocks-when-things-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Blocks — When Things Happen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Blocks — When Things Happen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-event-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Event Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-green-flag-your-start-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Green Flag — Your "Start" Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-sprites-interactive-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clicking Sprites — Interactive Fun!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-control-player-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Control — Player Movement!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcasts-sprites-talking-to-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcasts — Sprites Talking to Each Other!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-categories-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Categories Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Categories Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-color-coding-why-colors-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Color Coding — Why Colors Matter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-variables-lists-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-design-process-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-your-cast-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting Your Cast: Sprites!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting Your Cast: Sprites!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-sprite-a-quick-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Sprite? (A Quick Reminder)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sprites-building-your-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sprites — Building Your Cast
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Sprites — Building Your Cast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding More Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each-sprite-has-its-own-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Each Sprite Has Its Own Everything!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stage-your-theater" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stage — Your Theater
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Stage — Your Theater">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-size-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Size and Boundaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Size and Boundaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-stage-layout-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Stage Layout and Boundaries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-backdrops-setting-the-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Backdrops — Setting the Scene
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Backdrops — Setting the Scene">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-backdrops" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Change Backdrops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdrop-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backdrop Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-coordinate-system-your-gps-on-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Coordinate System — Your GPS on Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Coordinate System — Your GPS on Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding X and Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Coordinates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-coordinate-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Coordinate Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-and-negative-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive and Negative Numbers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-blocks-making-sprites-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Blocks — Making Sprites Move!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Blocks — Making Sprites Move!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-blocks-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Blocks at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Blocks at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-motion-blocks-visual-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Motion Blocks Visual Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-vs-glide-whats-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move vs. Glide — What's the Difference?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turning-cw-vs-ccw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turning — CW vs. CCW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#going-to-specific-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Going to Specific Positions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Going to Specific Positions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-to-x-y-instant-teleport" class="md-nav__link">
+    <span class="md-ellipsis">
+      go to x: y: — Instant Teleport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glide-secs-to-x-y-smooth-slide" class="md-nav__link">
+    <span class="md-ellipsis">
+      glide secs to x: y: — Smooth Slide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#looks-blocks-changing-how-sprites-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looks Blocks — Changing How Sprites Look
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Looks Blocks — Changing How Sprites Look">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-looks-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Looks Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speech-vs-thought-bubbles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speech vs. Thought Bubbles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphic-effects-cool-visual-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphic Effects — Cool Visual Tricks!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-blocks-when-things-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Blocks — When Things Happen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Blocks — When Things Happen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-event-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Event Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-green-flag-your-start-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Green Flag — Your "Start" Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-sprites-interactive-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clicking Sprites — Interactive Fun!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-control-player-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Control — Player Movement!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcasts-sprites-talking-to-each-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcasts — Sprites Talking to Each Other!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-categories-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Categories Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Categories Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-color-coding-why-colors-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Color Coding — Why Colors Matter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/02-sprites-stage-coordinates/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sprites-stage-and-the-coordinate-system">Sprites, Stage, and the Coordinate System<a class="headerlink" href="#sprites-stage-and-the-coordinate-system" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Covers sprites, the stage, coordinate system fundamentals, and motion block basics. This chapter covers 18 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 18 concepts from the learning graph:</p>
+<ol>
+<li>Multiple Sprites</li>
+<li>Green Flag</li>
+<li>Coordinate System</li>
+<li>Stage Size</li>
+<li>Motion Blocks</li>
+<li>Looks Blocks</li>
+<li>Event Blocks</li>
+<li>Motion Block Category</li>
+<li>Looks Block Category</li>
+<li>Sound Block Category</li>
+<li>Events Block Category</li>
+<li>Control Block Category</li>
+<li>Sensing Block Category</li>
+<li>Operators Block Category</li>
+<li>Variables Block Category</li>
+<li>List Block Category</li>
+<li>My Blocks Category</li>
+<li>Block Color Coding</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-welcome-to-scratch/">1. Welcome to Scratch</a></li>
+</ul>
+<hr />
+<h2 id="meeting-your-cast-sprites">Meeting Your Cast: Sprites!<a class="headerlink" href="#meeting-your-cast-sprites" title="Permanent link">&para;</a></h2>
+<p>In Chapter 1, you met the Scratch cat — your first <strong>sprite</strong>. But one sprite gets lonely! Real Scratch projects have <strong>many sprites</strong> working together, just like actors in a play.</p>
+<h3 id="what-is-a-sprite-a-quick-reminder">What Is a Sprite? (A Quick Reminder)<a class="headerlink" href="#what-is-a-sprite-a-quick-reminder" title="Permanent link">&para;</a></h3>
+<p>A <strong>sprite</strong> is any character or object that can:</p>
+<ul>
+<li>🎭 <strong>Move</strong> around the stage</li>
+<li>👗 <strong>Change appearance</strong> (costumes)</li>
+<li>🔊 <strong>Make sounds</strong></li>
+<li>🤔 <strong>React</strong> to clicks, keys, and messages</li>
+<li>🧠 <strong>Remember</strong> things with variables</li>
+</ul>
+<p>Think of sprites like <strong>actors in a movie</strong>. Each actor has their own script (code), their own costumes, and their own lines (sounds).</p>
+<hr />
+<h2 id="multiple-sprites-building-your-cast">Multiple Sprites — Building Your Cast<a class="headerlink" href="#multiple-sprites-building-your-cast" title="Permanent link">&para;</a></h2>
+<h3 id="adding-more-sprites">Adding More Sprites<a class="headerlink" href="#adding-more-sprites" title="Permanent link">&para;</a></h3>
+<p>In the <strong>sprite pane</strong> (bottom right), you have several ways to add sprites:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How To</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Choose a Sprite</strong> (🐱 icon)</td>
+<td>Click the cat face with + sign → pick from library</td>
+<td>Want a ready-made character</td>
+</tr>
+<tr>
+<td><strong>Paint</strong> (🎨 brush icon)</td>
+<td>Click paintbrush → draw your own</td>
+<td>Want a totally unique character</td>
+</tr>
+<tr>
+<td><strong>Surprise</strong> (✨ magic wand)</td>
+<td>Click magic wand → get random sprite</td>
+<td>Feeling lucky!</td>
+</tr>
+<tr>
+<td><strong>Upload</strong> (⬆️ arrow icon)</td>
+<td>Click upload → choose image file</td>
+<td>Have a drawing or photo to use</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🎨 Paint Your Own!</p>
+<p>The <strong>Paint</strong> option opens a drawing editor where you can create anything — a spaceship, a pizza, your pet dog, or a walking taco!</p>
+</div>
+<h3 id="renaming-sprites">Renaming Sprites<a class="headerlink" href="#renaming-sprites" title="Permanent link">&para;</a></h3>
+<p><strong>Always rename your sprites!</strong> Default names like "Sprite1", "Sprite2" get confusing fast.</p>
+<ol>
+<li>Click the sprite in the sprite pane</li>
+<li>Click the <strong>name field</strong> at the top (where it says "Sprite1")</li>
+<li>Type a descriptive name: <code>Player</code>, <code>Enemy</code>, <code>Coin</code>, <code>Background</code></li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">💡 Naming Tips</p>
+<ul>
+<li>Use <strong>capitalizing words</strong>: <code>MainCharacter</code>, <code>EvilRobot</code>, <code>GoldenCoin</code></li>
+<li>No spaces — use <strong>camelCase</strong> or <strong>underscores</strong></li>
+<li>Be specific: <code>RedCar</code> not just <code>Car</code></li>
+</ul>
+</div>
+<h3 id="each-sprite-has-its-own-everything">Each Sprite Has Its Own Everything!<a class="headerlink" href="#each-sprite-has-its-own-everything" title="Permanent link">&para;</a></h3>
+<p>This is <strong>super important</strong>: Every sprite is <strong>completely independent</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>What Each Sprite Owns</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scripts</strong> (code)</td>
+<td>Player has movement code; Enemy has patrol code</td>
+</tr>
+<tr>
+<td><strong>Costumes</strong></td>
+<td>Player has walk1, walk2, jump; Coin has spin1, spin2, spin3</td>
+</tr>
+<tr>
+<td><strong>Sounds</strong></td>
+<td>Player has jump sound; Coin has "ching!" sound</td>
+</tr>
+<tr>
+<td><strong>Variables</strong></td>
+<td>Player has <code>lives</code>; Enemy has <code>speed</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">🔑 Key Concept</p>
+<p>Code you write for <strong>one sprite does NOT affect other sprites</strong> — unless you use <strong>broadcasts</strong> (coming in Chapter 4!) or <strong>variables for all sprites</strong>.</p>
+</div>
+<hr />
+<h2 id="the-stage-your-theater">The Stage — Your Theater<a class="headerlink" href="#the-stage-your-theater" title="Permanent link">&para;</a></h2>
+<h3 id="stage-size-and-boundaries">Stage Size and Boundaries<a class="headerlink" href="#stage-size-and-boundaries" title="Permanent link">&para;</a></h3>
+<p>The <strong>stage</strong> is where all the action happens. Remember from Chapter 1:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Width</strong></td>
+<td>480 pixels</td>
+</tr>
+<tr>
+<td><strong>Height</strong></td>
+<td>360 pixels</td>
+</tr>
+<tr>
+<td><strong>Center</strong></td>
+<td>(0, 0)</td>
+</tr>
+</tbody>
+</table>
+<p>The stage has <strong>edges</strong> — sprites can't go past them (unless you write code to wrap around).</p>
+<h4 id="diagram-stage-layout-and-boundaries">Diagram: Stage Layout and Boundaries<a class="headerlink" href="#diagram-stage-layout-and-boundaries" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/stage-layout/main.html" width="100%" height="450px" scrolling="no"></iframe>
+
+<details>
+<summary>Stage Layout and Boundaries</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> stage-layout<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Understand stage dimensions, edges, and what happens when sprites reach boundaries</p>
+<p>Canvas layout:
+- Full stage (480×360) with visible edge markers
+- Draggable sprite that shows distance to each edge
+- Edge labels: "Left: -240", "Right: 240", "Top: 180", "Bottom: -180"</p>
+<p>Visual elements:
+- Stage rectangle with subtle grid
+- Four edge zones highlighted in different colors
+- Sprite that can be dragged anywhere
+- Live display: "Distance to left edge: ___ px"
+- Warning glow when sprite touches edge</p>
+<p>Interactive controls:
+- Drag sprite to explore boundaries
+- "Test edge behavior" button — runs a script that moves sprite to each edge
+- Toggle "bounce at edges" vs "stop at edges" mode
+- Show/hide coordinate axes</p>
+<p>Default parameters:
+- Sprite at center (0, 0)
+- Edges: visible
+- Mode: stop at edges</p>
+<p>Data Visibility Requirements:
+  Stage 1: Show stage with edge markers and center point
+  Stage 2: Show sprite at center with distances to all 4 edges
+  Stage 3: Show sprite at each edge with distance = 0
+  Stage 4: Demonstrate "if touching edge, bounce" behavior</p>
+<p>Instructional Rationale: Concrete visualization of boundaries supports the Understand/explain objective. Learners predict what happens at edges before seeing the behavior.</p>
+<p>Implementation notes:
+- Use p5.js
+- Color-code edges: left=red, right=green, top=blue, bottom=orange
+- Touch detection using x/y position</p>
+</details>
+<hr />
+<h3 id="stage-backdrops-setting-the-scene">Stage Backdrops — Setting the Scene<a class="headerlink" href="#stage-backdrops-setting-the-scene" title="Permanent link">&para;</a></h3>
+<p>The <strong>stage</strong> can wear costumes too — they're called <strong>backdrops</strong>!</p>
+<h4 id="how-to-change-backdrops">How to Change Backdrops<a class="headerlink" href="#how-to-change-backdrops" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Click <strong>Stage</strong> in the sprite pane (icon looks like a picture frame)</li>
+<li>Click <strong>Backdrops</strong> tab</li>
+<li>Click <strong>Choose a Backdrop</strong> (picture frame + icon)</li>
+<li>Pick from library, paint, surprise, or upload</li>
+</ol>
+<h4 id="backdrop-tips">Backdrop Tips<a class="headerlink" href="#backdrop-tips" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Match your theme</strong></td>
+<td>Space game → starfield backdrop; Jungle → trees and vines</td>
+</tr>
+<tr>
+<td><strong>Keep it simple</strong></td>
+<td>Busy backdrops make sprites hard to see</td>
+</tr>
+<tr>
+<td><strong>Contrast colors</strong></td>
+<td>Light sprites on dark backdrops (or vice versa)</td>
+</tr>
+<tr>
+<td><strong>Use blank backdrop</strong></td>
+<td>For drawing with Pen extension</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">🎮 Backdrop Ideas by Game Type</p>
+<table>
+<thead>
+<tr>
+<th>Game Type</th>
+<th>Backdrop Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platformer</td>
+<td>Ground, platforms, sky</td>
+</tr>
+<tr>
+<td>Maze</td>
+<td>Maze walls, start/finish markers</td>
+</tr>
+<tr>
+<td>Space Shooter</td>
+<td>Stars, planets, nebula</td>
+</tr>
+<tr>
+<td>Story</td>
+<td>Different scenes (bedroom, park, school)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="the-coordinate-system-your-gps-on-stage">The Coordinate System — Your GPS on Stage<a class="headerlink" href="#the-coordinate-system-your-gps-on-stage" title="Permanent link">&para;</a></h2>
+<h3 id="understanding-x-and-y">Understanding X and Y<a class="headerlink" href="#understanding-x-and-y" title="Permanent link">&para;</a></h3>
+<p>The stage uses a <strong>coordinate system</strong> — like a map with X and Y numbers that tell you exactly where things are.</p>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Direction</th>
+<th>Range</th>
+<th>Center</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (horizontal)</strong></td>
+<td>Left ← → Right</td>
+<td>-240 to +240</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Y (vertical)</strong></td>
+<td>Down ← → Up</td>
+<td>-180 to +180</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reading-coordinates">Reading Coordinates<a class="headerlink" href="#reading-coordinates" title="Permanent link">&para;</a></h3>
+<p>A position is written as <strong>(x, y)</strong> — always <strong>X first, then Y</strong>!</p>
+<ul>
+<li><strong>(0, 0)</strong> = <strong>Dead center</strong> of stage</li>
+<li><strong>(100, 50)</strong> = Right 100, Up 50 from center</li>
+<li><strong>(-200, -100)</strong> = Left 200, Down 100 from center</li>
+<li><strong>(240, 180)</strong> = Top-right corner</li>
+<li><strong>(-240, -180)</strong> = Bottom-left corner</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">🧭 Remember: X comes before Y in the alphabet!</p>
+<ul>
+<li><strong>X</strong> = horizontal (left/right)</li>
+<li><strong>Y</strong> = vertical (up/down)</li>
+</ul>
+</div>
+<hr />
+<h4 id="diagram-interactive-coordinate-explorer">Diagram: Interactive Coordinate Explorer<a class="headerlink" href="#diagram-interactive-coordinate-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/coordinate-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Interactive Coordinate Explorer</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> coordinate-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Build intuition for the coordinate system by exploring positions interactively</p>
+<p>Canvas layout:
+- Full stage with coordinate grid (60px major, 20px minor lines)
+- Movable target sprite (crosshair or character)
+- Click anywhere to place target and see coordinates
+- Quadrant labels: I (+,+), II (-,+), III (-,-), IV (+,-)</p>
+<p>Visual elements:
+- Grid with labeled axes (-240 to 240, -180 to 180)
+- Four quadrants shaded in pastel colors
+- Target sprite showing live (x, y) coordinates
+- Quadrant labels: "Q1: x&gt;0, y&gt;0", "Q2: x&lt;0, y&gt;0", etc.
+- Special points marked: center (0,0), corners</p>
+<p>Interactive controls:
+- Click stage to place target and show coordinates
+- "Go to quadrant" buttons (I, II, III, IV)
+- "Go to center" button
+- "Random position" button
+- Toggle grid on/off
+- Toggle quadrant shading on/off
+- "Quiz mode" — shows coordinate, click where it is</p>
+<p>Default parameters:
+- Grid: ON
+- Quadrant shading: ON
+- Target at center</p>
+<p>Data Visibility Requirements:
+  Stage 1: Show grid with labeled axes and quadrant names
+  Stage 2: Show target at (0,0) with coordinate display
+  Stage 3: Show target at various positions with live updates
+  Stage 4: Quiz mode — "Where is (150, -50)?" → click to answer</p>
+<p>Instructional Rationale: Step-through with concrete positions and quadrant visualization supports the Remember/Identify and Understand/Explain objectives. Interactive exploration builds spatial reasoning.</p>
+<p>Implementation notes:
+- Use p5.js
+- Click handler converts mouse position to stage coordinates
+- Quadrant detection: x&gt;0 &amp;&amp; y&gt;0 = Q1, x&lt;0 &amp;&amp; y&gt;0 = Q2, etc.
+- Quiz mode generates random valid coordinates</p>
+</details>
+<hr />
+<h3 id="positive-and-negative-numbers">Positive and Negative Numbers<a class="headerlink" href="#positive-and-negative-numbers" title="Permanent link">&para;</a></h3>
+<p><strong>Positive X</strong> = Right of center | <strong>Negative X</strong> = Left of center
+<strong>Positive Y</strong> = Above center | <strong>Negative Y</strong> = Below center</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right side</td>
+<td>Positive (+)</td>
+<td>Can be + or -</td>
+</tr>
+<tr>
+<td>Left side</td>
+<td>Negative (-)</td>
+<td>Can be + or -</td>
+</tr>
+<tr>
+<td>Top half</td>
+<td>Can be + or -</td>
+<td>Positive (+)</td>
+</tr>
+<tr>
+<td>Bottom half</td>
+<td>Can be + or -</td>
+<td>Negative (-)</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">🔢 Quick Practice</p>
+<ul>
+<li><strong>Far right, middle height:</strong> (240, 0)</li>
+<li><strong>Far left, top:</strong> (-240, 180)</li>
+<li><strong>Middle, bottom:</strong> (0, -180)</li>
+<li><strong>A bit right, a bit up:</strong> (50, 30)</li>
+</ul>
+</div>
+<hr />
+<h2 id="motion-blocks-making-sprites-move">Motion Blocks — Making Sprites Move!<a class="headerlink" href="#motion-blocks-making-sprites-move" title="Permanent link">&para;</a></h2>
+<p>Now for the fun part — <strong>making things move!</strong> The <strong>Motion category</strong> (🔵 blue) has all the blocks for movement.</p>
+<h3 id="motion-blocks-at-a-glance">Motion Blocks at a Glance<a class="headerlink" href="#motion-blocks-at-a-glance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+<th>Example Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>move (10) steps</code></td>
+<td>Move forward in current direction</td>
+<td>Walking, flying</td>
+</tr>
+<tr>
+<td><code>turn cw (15) degrees</code></td>
+<td>Turn clockwise (right)</td>
+<td>Steering</td>
+</tr>
+<tr>
+<td><code>turn ccw (15) degrees</code></td>
+<td>Turn counter-clockwise (left)</td>
+<td>Steering</td>
+</tr>
+<tr>
+<td><code>go to x: (0) y: (0)</code></td>
+<td>Teleport to exact position</td>
+<td>Spawning, resetting</td>
+</tr>
+<tr>
+<td><code>go to (mouse-pointer v)</code></td>
+<td>Teleport to mouse or another sprite</td>
+<td>Click-to-move</td>
+</tr>
+<tr>
+<td><code>glide (1) secs to x: (0) y: (0)</code></td>
+<td>Smooth slide to position</td>
+<td>Cutscenes, smooth movement</td>
+</tr>
+<tr>
+<td><code>glide (1) secs to (mouse-pointer v)</code></td>
+<td>Smooth slide to mouse/sprite</td>
+<td>Following</td>
+</tr>
+<tr>
+<td><code>point in direction (90 v)</code></td>
+<td>Face a specific angle</td>
+<td>Setting initial direction</td>
+</tr>
+<tr>
+<td><code>point towards (mouse-pointer v)</code></td>
+<td>Face mouse or another sprite</td>
+<td>Aiming</td>
+</tr>
+<tr>
+<td><code>change x by (10)</code></td>
+<td>Move horizontally</td>
+<td>Side scrolling</td>
+</tr>
+<tr>
+<td><code>change y by (10)</code></td>
+<td>Move vertically</td>
+<td>Jumping, falling</td>
+</tr>
+<tr>
+<td><code>set x to (0)</code></td>
+<td>Set horizontal position exactly</td>
+<td>Positioning</td>
+</tr>
+<tr>
+<td><code>set y to (0)</code></td>
+<td>Set vertical position exactly</td>
+<td>Positioning</td>
+</tr>
+<tr>
+<td><code>x position</code></td>
+<td>Reporter: current X coordinate</td>
+<td>Checking position</td>
+</tr>
+<tr>
+<td><code>y position</code></td>
+<td>Reporter: current Y coordinate</td>
+<td>Checking position</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td>Reporter: current facing angle</td>
+<td>Checking angle</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">🧭 Direction Numbers</p>
+<p>Scratch uses <strong>degrees</strong> for direction:
+- <strong>0</strong> = Up (North)
+- <strong>90</strong> = Right (East)
+- <strong>180</strong> = Down (South)
+- <strong>-90</strong> (or 270) = Left (West)</p>
+</div>
+<hr />
+<h4 id="diagram-motion-blocks-visual-guide">Diagram: Motion Blocks Visual Guide<a class="headerlink" href="#diagram-motion-blocks-visual-guide" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/motion-blocks-guide/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Motion Blocks Visual Guide</summary>
+<p>Type: infographic
+<strong>sim-id:</strong> motion-blocks-guide<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Visual reference for all motion blocks with examples</p>
+<p>Layout: Categorized cards showing:
+- <strong>Teleport blocks</strong> (go to, go to mouse-pointer)
+- <strong>Smooth movement</strong> (glide, glide to)
+- <strong>Step movement</strong> (move, turn)
+- <strong>Precise positioning</strong> (set x, set y, change x, change y)
+- <strong>Direction blocks</strong> (point in direction, point towards)
+- <strong>Reporter blocks</strong> (x position, y position, direction)</p>
+<p>Each card shows:
+- Block image with color
+- Plain English description
+- "Try this:" mini-example
+- Common parameter values</p>
+<p>Interactive elements:
+- Hover a block to see animated demo of what it does
+- Click "Copy example" to get a script snippet
+- Filter by "teleport", "smooth", "step", "precision", "direction", "reporters"</p>
+<p>Visual style: Motion blue theme throughout
+Color scheme: Match Scratch Motion blue</p>
+</details>
+<hr />
+<h3 id="move-vs-glide-whats-the-difference">Move vs. Glide — What's the Difference?<a class="headerlink" href="#move-vs-glide-whats-the-difference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Speed</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>move 10 steps</code></td>
+<td><strong>Instant</strong> (1 frame)</td>
+<td>Quick response, games</td>
+</tr>
+<tr>
+<td><code>glide 1 sec to x: 100 y: 100</code></td>
+<td><strong>Smooth over time</strong></td>
+<td>Cutscenes, animations</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try both!</strong> Make two scripts — one with <code>move</code>, one with <code>glide</code> — and see the difference.</p>
+<hr />
+<h3 id="turning-cw-vs-ccw">Turning — CW vs. CCW<a class="headerlink" href="#turning-cw-vs-ccw" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CW</strong> = <strong>Clockwise</strong> (turn right) ⏩</li>
+<li><strong>CCW</strong> = <strong>Counter-Clockwise</strong> (turn left) ⏪</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Current direction: 0 (facing up)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>turn cw 90 degrees  →  now facing 90 (right)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>turn ccw 90 degrees →  now facing 0 (up again)
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">🎯 Pro Tip: <code>point towards</code></p>
+<p>Use <code>point towards [mouse-pointer v]</code> to make a sprite <strong>always face the mouse</strong> — perfect for aiming games!</p>
+</div>
+<hr />
+<h3 id="going-to-specific-positions">Going to Specific Positions<a class="headerlink" href="#going-to-specific-positions" title="Permanent link">&para;</a></h3>
+<h4 id="go-to-x-y-instant-teleport"><code>go to x: y:</code> — Instant Teleport<a class="headerlink" href="#go-to-x-y-instant-teleport" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>when green flag clicked
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>go to x: -200 y: 100    // Teleport to top-left area
+</span></code></pre></div>
+<h4 id="glide-secs-to-x-y-smooth-slide"><code>glide secs to x: y:</code> — Smooth Slide<a class="headerlink" href="#glide-secs-to-x-y-smooth-slide" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>when green flag clicked
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>glide 2 secs to x: 200 y: -100   // Smooth slide to bottom-right
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">🎮 Platformer Spawn Point</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when green flag clicked
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>go to x: -200 y: -100    // Start at left platform
+</span></code></pre></div>
+</div>
+<hr />
+<h2 id="looks-blocks-changing-how-sprites-look">Looks Blocks — Changing How Sprites Look<a class="headerlink" href="#looks-blocks-changing-how-sprites-look" title="Permanent link">&para;</a></h2>
+<p>The <strong>Looks category</strong> (🟣 purple) lets you change appearance, speech, and size.</p>
+<h3 id="key-looks-blocks">Key Looks Blocks<a class="headerlink" href="#key-looks-blocks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>say [Hello!] for (2) secs</code></td>
+<td>Speech bubble with timer</td>
+<td>Dialogue</td>
+</tr>
+<tr>
+<td><code>say [Hello!]</code></td>
+<td>Speech bubble (stays until changed)</td>
+<td>Ongoing text</td>
+</tr>
+<tr>
+<td><code>think [Hmm...] for (2) secs</code></td>
+<td>Thought bubble</td>
+<td>Inner monologue</td>
+</tr>
+<tr>
+<td><code>switch costume to [costume1 v]</code></td>
+<td>Change to specific costume</td>
+<td>Animations</td>
+</tr>
+<tr>
+<td><code>next costume</code></td>
+<td>Cycle to next costume</td>
+<td>Walking animation</td>
+</tr>
+<tr>
+<td><code>change size by (10)</code></td>
+<td>Grow/shrink gradually</td>
+<td>Power-ups</td>
+</tr>
+<tr>
+<td><code>set size to (100%)</code></td>
+<td>Exact size</td>
+<td>Resetting</td>
+</tr>
+<tr>
+<td><code>change [color v] effect by (25)</code></td>
+<td>Color tint, ghost, pixelate, etc.</td>
+<td>Special effects</td>
+</tr>
+<tr>
+<td><code>clear graphic effects</code></td>
+<td>Reset all effects</td>
+<td>Cleanup</td>
+</tr>
+<tr>
+<td><code>show</code></td>
+<td>Make visible</td>
+<td>Revealing</td>
+</tr>
+<tr>
+<td><code>hide</code></td>
+<td>Make invisible</td>
+<td>Secrets, deaths</td>
+</tr>
+<tr>
+<td><code>go to [front v] layer</code> / <code>go back (1) layers</code></td>
+<td>Layer order</td>
+<td>Overlapping sprites</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🎭 Costume Animation Secret</p>
+<p>The <strong>smoothest animations</strong> use <code>next costume</code> inside a <code>forever</code> loop with a tiny <code>wait</code>!
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when green flag clicked
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>forever
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    next costume
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    wait 0.1 secs
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>end
+</span></code></pre></div></p>
+</div>
+<hr />
+<h3 id="speech-vs-thought-bubbles">Speech vs. Thought Bubbles<a class="headerlink" href="#speech-vs-thought-bubbles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bubble Type</th>
+<th>Block</th>
+<th>Looks Like</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Speech</strong></td>
+<td><code>say</code></td>
+<td>Rounded rectangle, pointed at sprite</td>
+<td>Talking aloud</td>
+</tr>
+<tr>
+<td><strong>Thought</strong></td>
+<td><code>think</code></td>
+<td>Cloud-shaped bubble</td>
+<td>Thinking silently</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="graphic-effects-cool-visual-tricks">Graphic Effects — Cool Visual Tricks!<a class="headerlink" href="#graphic-effects-cool-visual-tricks" title="Permanent link">&para;</a></h3>
+<p>The <code>change [effect] by</code> block has <strong>7 effects</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>What It Does</th>
+<th>Fun Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>color</strong></td>
+<td>Shifts hue (rainbow cycle)</td>
+<td>Magic spells</td>
+</tr>
+<tr>
+<td><strong>fisheye</strong></td>
+<td>Bulges center</td>
+<td>Funhouse mirror</td>
+</tr>
+<tr>
+<td><strong>whirl</strong></td>
+<td>Swirls pixels</td>
+<td>Teleportation</td>
+</tr>
+<tr>
+<td><strong>pixelate</strong></td>
+<td>Makes blocky</td>
+<td>Retro/glitch</td>
+</tr>
+<tr>
+<td><strong>mosaic</strong></td>
+<td>Tiles the image</td>
+<td>Disguise</td>
+</tr>
+<tr>
+<td><strong>brightness</strong></td>
+<td>Lighten/darken</td>
+<td>Day/night</td>
+</tr>
+<tr>
+<td><strong>ghost</strong></td>
+<td>Makes transparent</td>
+<td>Invisibility!</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">🧹 Clean Up Effects</p>
+<p>Always use <code>clear graphic effects</code> when done, or effects stack up and slow down your project!</p>
+</div>
+<hr />
+<h2 id="event-blocks-when-things-happen">Event Blocks — When Things Happen<a class="headerlink" href="#event-blocks-when-things-happen" title="Permanent link">&para;</a></h2>
+<p>The <strong>Events category</strong> (🟡 yellow) has the <strong>hat blocks</strong> that start your scripts.</p>
+<h3 id="all-event-blocks">All Event Blocks<a class="headerlink" href="#all-event-blocks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Triggers When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>when green flag clicked</code></td>
+<td>🟢 Green flag pressed (start project)</td>
+</tr>
+<tr>
+<td><code>when this sprite clicked</code></td>
+<td>👆 Sprite is clicked/tapped</td>
+</tr>
+<tr>
+<td><code>when [space v] key pressed</code></td>
+<td>⌨️ Specific key pressed</td>
+</tr>
+<tr>
+<td><code>when backdrop switches to [backdrop1 v]</code></td>
+<td>🎭 Backdrop changes</td>
+</tr>
+<tr>
+<td><code>when I receive [message v]</code></td>
+<td>📡 Broadcast received</td>
+</tr>
+<tr>
+<td><code>broadcast [message v]</code></td>
+<td>📡 Send message to all sprites</td>
+</tr>
+<tr>
+<td><code>broadcast [message v] and wait</code></td>
+<td>📡 Send + wait for all to finish</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="the-green-flag-your-start-button">The Green Flag — Your "Start" Button<a class="headerlink" href="#the-green-flag-your-start-button" title="Permanent link">&para;</a></h3>
+<p>The <strong>green flag</strong> is the most common way to start a project. <strong>Put <code>when green flag clicked</code> at the top of every main script!</strong></p>
+<div class="admonition note">
+<p class="admonition-title">🏁 Green Flag = Go!</p>
+<p>Think of the green flag like the starting pistol in a race. When it fires (clicked), <strong>all scripts with that hat block start at the same time</strong> — parallel execution!</p>
+</div>
+<hr />
+<h3 id="clicking-sprites-interactive-fun">Clicking Sprites — Interactive Fun!<a class="headerlink" href="#clicking-sprites-interactive-fun" title="Permanent link">&para;</a></h3>
+<p><code>when this sprite clicked</code> makes sprites <strong>react to player clicks</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when this sprite clicked
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>play sound [pop v] until done
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>change color effect by 25
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>wait 0.2 secs
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>clear graphic effects
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">🎮 Clicker Game Start</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when green flag clicked
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>set score to 0
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>show
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>when this sprite clicked
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>change score by 1
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>play sound [pop v] until done
+</span></code></pre></div>
+</div>
+<hr />
+<h3 id="keyboard-control-player-movement">Keyboard Control — Player Movement!<a class="headerlink" href="#keyboard-control-player-movement" title="Permanent link">&para;</a></h3>
+<p><code>when [key] key pressed</code> lets players <strong>control sprites</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when [right arrow v] key pressed
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>change x by 10
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>when [left arrow v] key pressed
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>change x by -10
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>when [up arrow v] key pressed
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>change y by 10
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>when [down arrow v] key pressed
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>change y by -10
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">⌨️ Smooth Movement Trick</p>
+<p>For <strong>smooth continuous movement</strong>, use <code>forever</code> + <code>if key pressed?</code> (Sensing) instead of hat blocks — we'll learn this in Chapter 6!</p>
+</div>
+<hr />
+<h3 id="broadcasts-sprites-talking-to-each-other">Broadcasts — Sprites Talking to Each Other!<a class="headerlink" href="#broadcasts-sprites-talking-to-each-other" title="Permanent link">&para;</a></h3>
+<p><strong>Broadcasts</strong> let sprites send messages — like walkie-talkies!</p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>broadcast [message]</code></td>
+<td>Shouts message, continues immediately</td>
+</tr>
+<tr>
+<td><code>broadcast [message] and wait</code></td>
+<td>Shouts message, <strong>waits for all receivers to finish</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Receiver script:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when I receive [game-over v]
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>hide
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>play sound [sad-trombone v] until done
+</span></code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">📡 Broadcast = Event</p>
+<p>Broadcasting <strong>creates an event</strong> that other sprites can listen for with <code>when I receive</code>. It's how sprites coordinate!</p>
+</div>
+<hr />
+<h2 id="block-categories-quick-reference">Block Categories Quick Reference<a class="headerlink" href="#block-categories-quick-reference" title="Permanent link">&para;</a></h2>
+<p>Here's a <strong>complete review</strong> of all 10 categories and their colors:</p>
+<h3 id="quick-reference-table">Quick Reference Table<a class="headerlink" href="#quick-reference-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Category</th>
+<th>Color</th>
+<th>Main Job</th>
+<th>Key Blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Motion</strong></td>
+<td>🔵 Blue</td>
+<td>Move, turn, position</td>
+<td><code>move</code>, <code>turn</code>, <code>go to</code>, <code>glide</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Looks</strong></td>
+<td>🟣 Purple</td>
+<td>Appearance, speech, size</td>
+<td><code>say</code>, <code>switch costume</code>, <code>change size</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sound</strong></td>
+<td>🩷 Pink</td>
+<td>Audio playback</td>
+<td><code>play sound</code>, <code>start sound</code>, <code>change tempo</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Events</strong></td>
+<td>🟡 Yellow</td>
+<td>Start scripts</td>
+<td><code>when green flag</code>, <code>when clicked</code>, <code>broadcast</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Control</strong></td>
+<td>🟠 Orange</td>
+<td>Loops, decisions</td>
+<td><code>forever</code>, <code>repeat</code>, <code>if</code>, <code>wait</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sensing</strong></td>
+<td>🔷 Light Blue</td>
+<td>Detect things</td>
+<td><code>touching?</code>, <code>key pressed?</code>, <code>distance to</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Operators</strong></td>
+<td>🟢 Green</td>
+<td>Math &amp; logic</td>
+<td><code>+ - * /</code>, <code>&lt; &gt; =</code>, <code>and or not</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Variables</strong></td>
+<td>🔴 Red</td>
+<td>Store ONE value</td>
+<td><code>set</code>, <code>change</code>, <code>show</code> (score, lives)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Lists</strong></td>
+<td>🟤 Dark Red</td>
+<td>Store MANY values</td>
+<td><code>add</code>, <code>delete</code>, <code>item</code>, <code>length</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>My Blocks</strong></td>
+<td>🩷 Pink</td>
+<td>Custom blocks</td>
+<td><code>define</code>, <code>parameter</code>, <code>run without refresh</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="block-color-coding-why-colors-matter">Block Color Coding — Why Colors Matter<a class="headerlink" href="#block-color-coding-why-colors-matter" title="Permanent link">&para;</a></h3>
+<p>The colors aren't random! They <strong>group related functions</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Color Family</th>
+<th>Categories</th>
+<th>What They Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blue/Blue-Green</strong></td>
+<td>Motion, Sensing</td>
+<td><strong>Movement &amp; detection</strong> (where things are)</td>
+</tr>
+<tr>
+<td><strong>Purple/Pink</strong></td>
+<td>Looks, Sound, My Blocks</td>
+<td><strong>Expression &amp; extension</strong> (how things look/sound/custom)</td>
+</tr>
+<tr>
+<td><strong>Yellow/Orange</strong></td>
+<td>Events, Control</td>
+<td><strong>Program flow</strong> (when &amp; how scripts run)</td>
+</tr>
+<tr>
+<td><strong>Green</strong></td>
+<td>Operators</td>
+<td><strong>Calculation &amp; logic</strong> (math &amp; decisions)</td>
+</tr>
+<tr>
+<td><strong>Red/Brown</strong></td>
+<td>Variables, Lists</td>
+<td><strong>Data storage</strong> (remembering things)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🎨 Color = Category at a Glance</p>
+<p>When you're hunting for a block, <strong>look for the color first</strong>! Need a loop? Look for <strong>orange</strong>. Need math? Look for <strong>green</strong>.</p>
+</div>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this chapter, you learned:</p>
+<ul>
+<li>✅ <strong>Multiple sprites</strong> — each has its own scripts, costumes, sounds</li>
+<li>✅ <strong>Stage size</strong> — 480×360, center at (0,0), edges at ±240/±180</li>
+<li>✅ <strong>Coordinate system</strong> — X (-240 to 240), Y (-180 to 180), quadrants</li>
+<li>✅ <strong>Motion blocks</strong> — move, turn, go to, glide, point towards, change x/y</li>
+<li>✅ <strong>Looks blocks</strong> — say/think, costumes, size, graphic effects, show/hide</li>
+<li>✅ <strong>Event blocks</strong> — green flag, click, key press, backdrop switch, broadcast</li>
+<li>✅ <strong>All 10 block categories</strong> — colors, main jobs, key blocks</li>
+<li>✅ <strong>Why color coding works</strong> — color families group related functions</li>
+<li>✅ <strong>Backdrops</strong> — stage costumes for scene changes</li>
+</ul>
+<hr />
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprite</strong></td>
+<td>A programmable character/object with its own scripts, costumes, sounds</td>
+</tr>
+<tr>
+<td><strong>Stage</strong></td>
+<td>The 480×360 background where sprites perform</td>
+</tr>
+<tr>
+<td><strong>Backdrop</strong></td>
+<td>A costume for the stage (scene background)</td>
+</tr>
+<tr>
+<td><strong>Coordinate System</strong></td>
+<td>X,Y grid for positioning (-240 to 240, -180 to 180)</td>
+</tr>
+<tr>
+<td><strong>X Coordinate</strong></td>
+<td>Horizontal position (negative=left, positive=right)</td>
+</tr>
+<tr>
+<td><strong>Y Coordinate</strong></td>
+<td>Vertical position (negative=down, positive=up)</td>
+</tr>
+<tr>
+<td><strong>Quadrant</strong></td>
+<td>One of 4 stage areas based on X/Y signs</td>
+</tr>
+<tr>
+<td><strong>Motion Block</strong></td>
+<td>Blue blocks for movement and positioning</td>
+</tr>
+<tr>
+<td><strong>Looks Block</strong></td>
+<td>Purple blocks for appearance and speech</td>
+</tr>
+<tr>
+<td><strong>Event Block</strong></td>
+<td>Yellow hat blocks that start scripts</td>
+</tr>
+<tr>
+<td><strong>Broadcast</strong></td>
+<td>Sending a message to all sprites</td>
+</tr>
+<tr>
+<td><code>when I receive</code></td>
+<td>Hat block that runs when a broadcast is received</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge 1:</strong> Create <strong>3 sprites</strong> — a Player, an Enemy, and a Coin. Name them properly!</p>
+<p><strong>Challenge 2:</strong> Make the Player <strong>glide smoothly</strong> to all 4 corners of the stage in a square pattern.</p>
+<p><strong>Challenge 3:</strong> Program the Arrow Keys to move a sprite (hint: <code>when [right arrow] key pressed</code> + <code>change x by 10</code>)</p>
+<p><strong>Challenge 4:</strong> Make a sprite <strong>say "Hello!" for 2 seconds</strong> when clicked, then <strong>think "Hmm..." for 2 seconds</strong></p>
+<p><strong>Challenge 5:</strong> Use <code>broadcast [start-game]</code> when green flag clicked, and make another sprite <code>when I receive [start-game]</code> say "Ready!"</p>
+<p><strong>Challenge 6:</strong> Explore the <strong>graphic effects</strong> — make a sprite <code>change ghost effect by 25</code> every time it's clicked</p>
+<hr />
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>In <strong>Chapter 3</strong>, you'll discover <strong>Motion Blocks and Block Categories</strong> in depth. You'll learn how to combine motion blocks for complex movement patterns, create smooth animations with glide, and master the coordinate system for precise positioning!</p>
+<p><a href="../03-motion-blocks-categories/"><strong>→ Next Chapter: Motion Blocks and Block Categories</strong></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-welcome-to-scratch/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Welcome to Scratch">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. Welcome to Scratch
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-motion-blocks-categories/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Motion Blocks and Block Categories">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. Motion Blocks and Block Categories
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

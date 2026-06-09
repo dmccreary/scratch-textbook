@@ -1,0 +1,5491 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Teaches costume animation, parallel execution, loops, and systematic debugging techniques for young learners">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/08-animation-parallelism-debugging/">
+      
+      
+        <link rel="prev" href="../07-variables-lists-data/">
+      
+      
+        <link rel="next" href="../09-advanced-control-operators/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Animation, Parallelism, and Debugging - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#animation-parallelism-and-debugging" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Animation, Parallelism, and Debugging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-welcome-to-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-variables-lists-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-description-what-are-we-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Description — What Are We Building?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Description — What Are We Building?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Big Picture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-description-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Description Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-project-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Project Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-thinking-think-like-a-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking — Think Like a Computer!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithmic Thinking — Think Like a Computer!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Algorithm?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-thinking-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-thinking-in-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking in Scratch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costume-animation-bring-sprites-to-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costume Animation — Bring Sprites to Life!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Costume Animation — Bring Sprites to Life!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-animation-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Animation Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-blocks-looks-purple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Blocks (Looks → Purple)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooth-animation-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smooth Animation Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#walking-animation-4-costumes-walk1-walk2-walk3-walk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Walking Animation (4 costumes: walk1, walk2, walk3, walk4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying-animation-2-costumes-wings-up-wings-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flying Animation (2 costumes: wings-up, wings-down)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-animation-3-frames-windup-strike-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Animation (3 frames: windup, strike, recovery)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costume-center-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costume Center Reminder!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-motion-smooth-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Motion — Smooth Movement!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Motion — Smooth Movement!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-continuous-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Continuous Motion?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-secret-forever-if-not-hat-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Secret: Forever + If (Not Hat Blocks!)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Secret: Forever + If (Not Hat Blocks!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrong-hat-blocks-choppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Wrong: Hat Blocks (Choppy!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correct-forever-if-smooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct: Forever + If (Smooth!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-motion-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Motion Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speed Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrolling-background-infinite-worlds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrolling Background — Infinite Worlds!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrolling Background — Infinite Worlds!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-illusion-of-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Illusion of Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-1-multiple-background-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Multiple Background Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-backdrop-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Backdrop Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrolling-background-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrolling Background Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beat-synchronization-music-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beat Synchronization — Music + Action!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beat Synchronization — Music + Action!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-beat-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Beat Sync?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Tempo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beat-sync-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beat Sync Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beat Sync Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-beat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Beat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacle-spawn-on-beat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obstacle Spawn on Beat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-reactive-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Music-Reactive Background
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-nesting-loops-inside-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Nesting — Loops Inside Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Nesting — Loops Inside Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-loop-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Loop Nesting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loop-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loop Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loop-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loop Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Loop Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-pattern-rows-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Pattern (Rows × Columns)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spiral-with-nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spiral with Nested Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enemy-movement-smart-adversaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Movement — Smart Adversaries!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enemy Movement — Smart Adversaries!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-enemy-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Enemy AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patrol-enemy-back-and-forth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patrol Enemy (Back and Forth)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chase-enemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chase Enemy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-patrol-platform-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Patrol (Platform Edges)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Variations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-basics-finding-and-fixing-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Basics — Finding and Fixing Bugs!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Basics — Finding and Fixing Bugs!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Bug?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-debugging-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Debugging Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-bugs-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Bugs &amp; Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-say" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with say
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-and-wait-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait — Synchronization!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast And Wait — Synchronization!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-vs-broadcast-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast vs Broadcast And Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-broadcast-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Broadcast And Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-and-wait-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-passing-sprites-sharing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Passing — Sprites Sharing Data!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Passing — Sprites Sharing Data!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-message-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Message Passing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-message-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Message Passing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-passing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Passing Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous-broadcast-fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asynchronous Broadcast — Fire and Forget!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asynchronous Broadcast — Fire and Forget!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast (Fire and Forget)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-async-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Async Broadcast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-making-if-this-then-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Making — If This, Then That!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decision Making — If This, Then That!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-making-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Making in Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Blocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-branching-two-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Branching — Two Paths!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Branching — Two Paths!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-Else Review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branching-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branching Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branching Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-level-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Branch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-i-start-as-clone-clone-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      When I Start As Clone — Clone Initialization!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When I Start As Clone — Clone Initialization!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-hat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Hat Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-initialization-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Initialization Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-initialization-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Initialization Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrent-scripts-parallel-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrent Scripts — Parallel Power!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrent Scripts — Parallel Power!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-concurrent-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Concurrent Scripts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-naturally-concurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch = Naturally Concurrent!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Concurrency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-computing-code-meets-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Computing — Code Meets Reality!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical Computing — Code Meets Reality!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-physical-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Physical Computing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-hardware-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Hardware Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makey-makey-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makey Makey Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microbit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      micro:bit Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-computing-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Computing Ideas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeat-until-loop-smart-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Loop — Smart Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repeat Until Loop — Smart Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repeat Until Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-until-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move Until Edge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-for-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait for Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-for-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait for Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-vs-other-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until vs Other Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic-and-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Logic — And, Or, Not!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Logic — And, Or, Not!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-operators-operators-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Operators (Operators → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-logic-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Logic Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Logic Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and-both-must-be-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND — Both Must Be True
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-at-least-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR — At Least One
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-flip-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT — Flip It
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truth-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Truth Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dice-roll-random-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll — Random Fun!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dice Roll — Random Fun!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-pick-random-1-to-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll = Pick Random 1 to 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll Uses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dice Roll Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attack-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Roll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loot-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loot Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-variable-math-on-the-fly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable — Math on the Fly!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Variable — Math on the Fly!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Variable Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Velocity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cooldown-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cooldown Timer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-scope-for-all-vs-this-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Scope — For All vs This Sprite!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Scope — For All vs This Sprite!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-all-sprites-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      For All Sprites (Global)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-this-sprite-only-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      For This Sprite Only (Local)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Which
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-list-building-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List — Building Collections!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add To List — Building Collections!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-to-list-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-to-list-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add To List Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-length-how-many-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Length — How Many Items?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Length — How Many Items?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length-of-list-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Length of List Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-length-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Length Uses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Length Uses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-if-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check If Empty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-list-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit List Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Through List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-design-process-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-description-what-are-we-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Description — What Are We Building?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Description — What Are We Building?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Big Picture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-description-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Description Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-project-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Project Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-thinking-think-like-a-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking — Think Like a Computer!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithmic Thinking — Think Like a Computer!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Algorithm?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-thinking-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-thinking-in-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking in Scratch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costume-animation-bring-sprites-to-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costume Animation — Bring Sprites to Life!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Costume Animation — Bring Sprites to Life!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-animation-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Animation Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-blocks-looks-purple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Blocks (Looks → Purple)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smooth-animation-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smooth Animation Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#walking-animation-4-costumes-walk1-walk2-walk3-walk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Walking Animation (4 costumes: walk1, walk2, walk3, walk4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying-animation-2-costumes-wings-up-wings-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flying Animation (2 costumes: wings-up, wings-down)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-animation-3-frames-windup-strike-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Animation (3 frames: windup, strike, recovery)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costume-center-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costume Center Reminder!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-motion-smooth-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Motion — Smooth Movement!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Motion — Smooth Movement!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-continuous-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Continuous Motion?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-secret-forever-if-not-hat-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Secret: Forever + If (Not Hat Blocks!)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Secret: Forever + If (Not Hat Blocks!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wrong-hat-blocks-choppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Wrong: Hat Blocks (Choppy!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correct-forever-if-smooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct: Forever + If (Smooth!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-motion-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Motion Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speed Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrolling-background-infinite-worlds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrolling Background — Infinite Worlds!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrolling Background — Infinite Worlds!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-illusion-of-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Illusion of Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-1-multiple-background-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Multiple Background Sprites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-backdrop-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Backdrop Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrolling-background-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrolling Background Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beat-synchronization-music-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beat Synchronization — Music + Action!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beat Synchronization — Music + Action!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-beat-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Beat Sync?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Tempo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beat-sync-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beat Sync Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beat Sync Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-beat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Beat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacle-spawn-on-beat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obstacle Spawn on Beat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#music-reactive-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Music-Reactive Background
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-nesting-loops-inside-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Nesting — Loops Inside Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Nesting — Loops Inside Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-loop-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Loop Nesting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loop-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loop Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-loop-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loop Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Loop Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-pattern-rows-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Pattern (Rows × Columns)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spiral-with-nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spiral with Nested Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enemy-movement-smart-adversaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Movement — Smart Adversaries!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enemy Movement — Smart Adversaries!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-enemy-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Enemy AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patrol-enemy-back-and-forth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patrol Enemy (Back and Forth)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chase-enemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chase Enemy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-patrol-platform-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Patrol (Platform Edges)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Variations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-basics-finding-and-fixing-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Basics — Finding and Fixing Bugs!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Basics — Finding and Fixing Bugs!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Bug?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-debugging-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Debugging Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-bugs-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Bugs &amp; Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-say" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with say
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-and-wait-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait — Synchronization!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast And Wait — Synchronization!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-vs-broadcast-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast vs Broadcast And Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-broadcast-and-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Broadcast And Wait
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-and-wait-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-passing-sprites-sharing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Passing — Sprites Sharing Data!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Passing — Sprites Sharing Data!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-message-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Message Passing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-message-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Message Passing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-passing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Passing Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous-broadcast-fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asynchronous Broadcast — Fire and Forget!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asynchronous Broadcast — Fire and Forget!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast (Fire and Forget)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-async-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Async Broadcast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-making-if-this-then-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Making — If This, Then That!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decision Making — If This, Then That!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-making-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Making in Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Blocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-branching-two-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Branching — Two Paths!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Branching — Two Paths!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-else-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-Else Review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branching-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branching Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branching Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-level-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Branch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-i-start-as-clone-clone-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      When I Start As Clone — Clone Initialization!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When I Start As Clone — Clone Initialization!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-hat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Hat Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-initialization-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Initialization Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-initialization-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Initialization Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrent-scripts-parallel-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrent Scripts — Parallel Power!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrent Scripts — Parallel Power!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-concurrent-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Concurrent Scripts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-naturally-concurrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch = Naturally Concurrent!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Concurrency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-computing-code-meets-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Computing — Code Meets Reality!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical Computing — Code Meets Reality!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-physical-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Physical Computing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-hardware-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Hardware Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makey-makey-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makey Makey Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microbit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      micro:bit Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-computing-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical Computing Ideas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeat-until-loop-smart-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Loop — Smart Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repeat Until Loop — Smart Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repeat Until Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-until-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move Until Edge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-for-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait for Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-for-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait for Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat-until-vs-other-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Until vs Other Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic-and-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Logic — And, Or, Not!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Logic — And, Or, Not!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-operators-operators-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Operators (Operators → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-logic-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Logic Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Logic Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and-both-must-be-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND — Both Must Be True
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-at-least-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR — At Least One
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-flip-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT — Flip It
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truth-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Truth Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dice-roll-random-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll — Random Fun!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dice Roll — Random Fun!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-pick-random-1-to-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll = Pick Random 1 to 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll Uses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dice-roll-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dice Roll Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dice Roll Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attack-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Roll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loot-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loot Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-variable-math-on-the-fly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable — Math on the Fly!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Variable — Math on the Fly!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-variable-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Variable Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Variable Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Velocity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cooldown-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cooldown Timer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-scope-for-all-vs-this-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Scope — For All vs This Sprite!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Scope — For All vs This Sprite!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-all-sprites-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      For All Sprites (Global)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-this-sprite-only-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      For This Sprite Only (Local)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Which
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-list-building-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List — Building Collections!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add To List — Building Collections!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-to-list-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-to-list-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add To List Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add To List Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-length-how-many-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Length — How Many Items?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Length — How Many Items?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length-of-list-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Length of List Block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-length-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Length Uses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Length Uses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-if-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check If Empty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-list-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit List Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Through List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/08-animation-parallelism-debugging/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="animation-parallelism-and-debugging">Animation, Parallelism, and Debugging<a class="headerlink" href="#animation-parallelism-and-debugging" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Teaches costume animation, parallel execution, loops, and systematic debugging techniques. This chapter covers 25 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<ol>
+<li>Project Description</li>
+<li>Algorithmic Thinking</li>
+<li>Costume Animation</li>
+<li>Continuous Motion</li>
+<li>Scrolling Background</li>
+<li>Beat Synchronization</li>
+<li>Loop Nesting</li>
+<li>Enemy Movement</li>
+<li>Debugging Basics</li>
+<li>Broadcast And Wait</li>
+<li>Message Passing</li>
+<li>Asynchronous Broadcast</li>
+<li>Decision Making</li>
+<li>Conditional Branching</li>
+<li>When I Start As Clone</li>
+<li>Concurrent Scripts</li>
+<li>Physical Computing</li>
+<li>Repeat Until Loop</li>
+<li>Boolean Logic</li>
+<li>Dice Roll</li>
+<li>Change Variable</li>
+<li>For All Sprites</li>
+<li>For This Sprite Only</li>
+<li>Add To List</li>
+<li>List Length</li>
+<li>List Length</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-welcome-to-scratch/">1. Welcome to Scratch</a></li>
+<li><a href="../02-sprites-stage-coordinates/">2. Sprites, Stage, and the Coordinate System</a></li>
+<li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
+<li><a href="../05-sounds-extensions-sharing/">5. Sounds, Extensions, and Sharing Projects</a></li>
+<li><a href="../06-broadcasting-conditionals-sensing/">6. Broadcasting, Conditionals, and Sensing</a></li>
+<li><a href="../07-variables-lists-data/">7. Variables, Lists, and Data Management</a></li>
+</ul>
+<hr />
+<h2 id="project-description-what-are-we-building">Project Description — What Are We Building?<a class="headerlink" href="#project-description-what-are-we-building" title="Permanent link">&para;</a></h2>
+<h3 id="the-big-picture">The Big Picture<a class="headerlink" href="#the-big-picture" title="Permanent link">&para;</a></h3>
+<p>Before writing code, we <strong>describe the project</strong> — like a movie pitch!</p>
+<h3 id="project-description-template">Project Description Template<a class="headerlink" href="#project-description-template" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to Include</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Catchy name: "Space Runner 3000"</td>
+</tr>
+<tr>
+<td><strong>Genre</strong></td>
+<td>Platformer, puzzle, shooter, story</td>
+</tr>
+<tr>
+<td><strong>Core Mechanic</strong></td>
+<td>"Run, jump, collect stars, avoid spikes"</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>"Reach the end of 5 levels"</td>
+</tr>
+<tr>
+<td><strong>Controls</strong></td>
+<td>"Arrows move, Space jumps"</td>
+</tr>
+<tr>
+<td><strong>Look &amp; Feel</strong></td>
+<td>"Retro pixel art, synthwave music"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-project-description">Example Project Description<a class="headerlink" href="#example-project-description" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Title:</strong> "Coin Collector Extreme"
+<strong>Genre:</strong> Platformer / Collection
+<strong>Core Mechanic:</strong> Run, jump, and dash through 10 levels collecting golden coins while avoiding enemies and spikes.
+<strong>Goal:</strong> Collect all 50 coins in each level to unlock the next. Beat all 5 worlds!
+<strong>Controls:</strong> Arrow keys move, Space jumps, Shift dashes.
+<strong>Look &amp; Feel:</strong> Bright cartoon style, upbeat chiptune music, particle effects on coin collect.</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">📝 Write It Down First!</p>
+<p>A clear project description <strong>keeps you focused</strong> and helps you explain your game to others!</p>
+</div>
+<hr />
+<h2 id="algorithmic-thinking-think-like-a-computer">Algorithmic Thinking — Think Like a Computer!<a class="headerlink" href="#algorithmic-thinking-think-like-a-computer" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-an-algorithm">What Is an Algorithm?<a class="headerlink" href="#what-is-an-algorithm" title="Permanent link">&para;</a></h3>
+<p>An <strong>algorithm</strong> is a <strong>step-by-step recipe</strong> for solving a problem — precise enough that a computer can follow it!</p>
+<h3 id="algorithmic-thinking-steps">Algorithmic Thinking Steps<a class="headerlink" href="#algorithmic-thinking-steps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Question</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Understand</strong></td>
+<td>What's the problem?</td>
+<td>"Make player jump realistically"</td>
+</tr>
+<tr>
+<td><strong>2. Break Down</strong></td>
+<td>What are the steps?</td>
+<td>"Check ground → apply force → apply gravity → land"</td>
+</tr>
+<tr>
+<td><strong>3. Order</strong></td>
+<td>What comes first?</td>
+<td>Check ground → if on ground &amp; space → jump → apply gravity each frame</td>
+</tr>
+<tr>
+<td><strong>4. Test</strong></td>
+<td>Does it work?</td>
+<td>Test jump height, double-jump prevention, landing</td>
+</tr>
+<tr>
+<td><strong>5. Improve</strong></td>
+<td>Can it be better?</td>
+<td>Add coyote time, jump buffering, variable height</td>
+</tr>
+</tbody>
+</table>
+<h3 id="algorithmic-thinking-in-scratch">Algorithmic Thinking in Scratch<a class="headerlink" href="#algorithmic-thinking-in-scratch" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Thinking Step</th>
+<th>Scratch Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sequence</strong></td>
+<td>Blocks top-to-bottom</td>
+</tr>
+<tr>
+<td><strong>Condition</strong></td>
+<td><code>if &lt; &gt; then else</code></td>
+</tr>
+<tr>
+<td><strong>Loop</strong></td>
+<td><code>repeat</code>, <code>forever</code>, <code>repeat until</code></td>
+</tr>
+<tr>
+<td><strong>Variable</strong></td>
+<td><code>score</code>, <code>timer</code>, <code>velocity</code></td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td>Custom block (<code>define jump</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="costume-animation-bring-sprites-to-life">Costume Animation — Bring Sprites to Life!<a class="headerlink" href="#costume-animation-bring-sprites-to-life" title="Permanent link">&para;</a></h2>
+<h3 id="how-animation-works">How Animation Works<a class="headerlink" href="#how-animation-works" title="Permanent link">&para;</a></h3>
+<p><strong>Animation</strong> = rapidly switching <strong>costumes</strong> (pictures) to create illusion of movement!</p>
+<h3 id="animation-blocks-looks-purple">Animation Blocks (Looks → Purple)<a class="headerlink" href="#animation-blocks-looks-purple" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>switch costume to [costume1 v]</code></td>
+<td>Instant change to specific costume</td>
+</tr>
+<tr>
+<td><code>next costume</code></td>
+<td>Cycle to next in list</td>
+</tr>
+<tr>
+<td><code>costume #</code></td>
+<td>Reporter: current costume number</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="smooth-animation-pattern">Smooth Animation Pattern<a class="headerlink" href="#smooth-animation-pattern" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>when green flag clicked
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>forever
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    next costume
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    wait 0.1 secs
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>end
+</span></code></pre></div>
+<p><strong>Cycles through all costumes</strong> with a 0.1 sec delay between each!</p>
+<hr />
+<h3 id="animation-timing">Animation Timing<a class="headerlink" href="#animation-timing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Wait Time</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.05 secs</code></td>
+<td>Very fast (hummingbird wings)</td>
+</tr>
+<tr>
+<td><code>0.1 secs</code></td>
+<td>Normal walk/run</td>
+</tr>
+<tr>
+<td><code>0.2 secs</code></td>
+<td>Slow walk, heavy character</td>
+</tr>
+<tr>
+<td><code>0.5 secs</code></td>
+<td>Very slow (zombie shuffle)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="animation-examples">Animation Examples<a class="headerlink" href="#animation-examples" title="Permanent link">&para;</a></h3>
+<h4 id="walking-animation-4-costumes-walk1-walk2-walk3-walk4">Walking Animation (4 costumes: walk1, walk2, walk3, walk4)<a class="headerlink" href="#walking-animation-4-costumes-walk1-walk2-walk3-walk4" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>when green flag clicked
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>forever
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    if &lt;key [right arrow] pressed?&gt; then
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        next costume
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        wait 0.1 secs
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    else
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        switch costume to [idle v]
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    end
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>end
+</span></code></pre></div>
+<h4 id="flying-animation-2-costumes-wings-up-wings-down">Flying Animation (2 costumes: wings-up, wings-down)<a class="headerlink" href="#flying-animation-2-costumes-wings-up-wings-down" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>forever
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    next costume
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    wait 0.15 secs
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>end
+</span></code></pre></div>
+<h4 id="attack-animation-3-frames-windup-strike-recovery">Attack Animation (3 frames: windup, strike, recovery)<a class="headerlink" href="#attack-animation-3-frames-windup-strike-recovery" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when [space] key pressed
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>switch costume to [windup v]
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>wait 0.1 secs
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>switch costume to [strike v]
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>wait 0.05 secs
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>switch costume to [recovery v]
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>wait 0.1 secs
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>switch costume to [idle v]
+</span></code></pre></div>
+<hr />
+<h3 id="costume-center-reminder">Costume Center Reminder!<a class="headerlink" href="#costume-center-reminder" title="Permanent link">&para;</a></h3>
+<p><strong>Set costume center to FEET</strong> for walking characters — prevents "floating" or "sinking" during animation!</p>
+<hr />
+<h2 id="continuous-motion-smooth-movement">Continuous Motion — Smooth Movement!<a class="headerlink" href="#continuous-motion-smooth-movement" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-continuous-motion">What Is Continuous Motion?<a class="headerlink" href="#what-is-continuous-motion" title="Permanent link">&para;</a></h3>
+<p><strong>Continuous motion</strong> = sprite moves <strong>smoothly every frame</strong> while key held, not in jumps!</p>
+<h3 id="the-secret-forever-if-not-hat-blocks">The Secret: Forever + If (Not Hat Blocks!)<a class="headerlink" href="#the-secret-forever-if-not-hat-blocks" title="Permanent link">&para;</a></h3>
+<h4 id="wrong-hat-blocks-choppy">❌ Wrong: Hat Blocks (Choppy!)<a class="headerlink" href="#wrong-hat-blocks-choppy" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when [right arrow] key pressed
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>change x by 10
+</span></code></pre></div>
+<p><strong>Only moves ONCE per key press!</strong> Choppy!</p>
+<h4 id="correct-forever-if-smooth">✅ Correct: Forever + If (Smooth!)<a class="headerlink" href="#correct-forever-if-smooth" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when green flag clicked
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>forever
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    if &lt;key [right arrow] pressed?&gt; then
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        change x by 5
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        point in direction 90
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        next costume
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    end
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    if &lt;key [left arrow] pressed?&gt; then
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        change x by -5
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        point in direction -90
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        next costume
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    end
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>end
+</span></code></pre></div>
+<p><strong>Checks every frame</strong> — buttery smooth!</p>
+<hr />
+<h3 id="continuous-motion-template">Continuous Motion Template<a class="headerlink" href="#continuous-motion-template" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when green flag clicked
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>forever
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    // Horizontal
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    if &lt;key [right arrow] pressed?&gt; then
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        change x by (speed)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        point in direction 90
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        next costume
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    end
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    if &lt;key [left arrow] pressed?&gt; then
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        change x by (speed * -1)
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        point in direction -90
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        next costume
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    end
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    // Vertical (gravity, jump)
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    // ... jump code here ...
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    wait 0.01 secs    // Critical! Prevents lag
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="speed-variables">Speed Variables<a class="headerlink" href="#speed-variables" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when green flag clicked
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>set [walk-speed v] to (5)
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>set [run-speed v] to (10)
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>set [jump-power v] to (15)
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>forever
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    if &lt;key [right arrow] pressed?&gt; then
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        change x by (walk-speed)
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    end
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    // ...
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>end
+</span></code></pre></div>
+<p><strong>Easy to tweak!</strong> Change <code>walk-speed</code> variable to adjust feel.</p>
+<hr />
+<h2 id="scrolling-background-infinite-worlds">Scrolling Background — Infinite Worlds!<a class="headerlink" href="#scrolling-background-infinite-worlds" title="Permanent link">&para;</a></h2>
+<h3 id="the-illusion-of-movement">The Illusion of Movement<a class="headerlink" href="#the-illusion-of-movement" title="Permanent link">&para;</a></h3>
+<p><strong>Scrolling background</strong> = move background opposite to player = feels like player moves through big world!</p>
+<hr />
+<h3 id="method-1-multiple-background-sprites">Method 1: Multiple Background Sprites<a class="headerlink" href="#method-1-multiple-background-sprites" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Background1 (original)
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Background2 (copy, positioned right next to 1)
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>forever
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    change x by (-scroll-speed)  // Move left
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    if &lt;x &lt; -480&gt; then
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        go to x: 480   // Wrap to right side
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    end
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>end
+</span></code></pre></div>
+<h3 id="method-2-backdrop-switching">Method 2: Backdrop Switching<a class="headerlink" href="#method-2-backdrop-switching" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>forever
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    if &lt;player near edge&gt; then
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        next backdrop
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        // Reposition everything for new scene
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    end
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>end
+</span></code></pre></div>
+<h3 id="scrolling-background-example">Scrolling Background Example<a class="headerlink" href="#scrolling-background-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>when green flag clicked
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>go to x: 0 y: 0
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>forever
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    change x by (-3)    // Scroll left at speed 3
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    if &lt; (x position) &lt; -480 &gt; then
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        go to x: 480     // Teleport to right side
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    end
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>end
+</span></code></pre></div>
+<p><strong>Two copies side-by-side</strong> = infinite seamless scroll!</p>
+<hr />
+<h2 id="beat-synchronization-music-action">Beat Synchronization — Music + Action!<a class="headerlink" href="#beat-synchronization-music-action" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-beat-sync">What Is Beat Sync?<a class="headerlink" href="#what-is-beat-sync" title="Permanent link">&para;</a></h3>
+<p><strong>Beat synchronization</strong> = game actions happen <strong>on the musical beat</strong>!</p>
+<h3 id="using-tempo">Using Tempo<a class="headerlink" href="#using-tempo" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>when green flag clicked
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>forever
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    wait (60 / tempo) secs    // One beat at current tempo
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    // Do something on beat
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    change color effect by 25
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>end
+</span></code></pre></div>
+<h3 id="beat-sync-examples">Beat Sync Examples<a class="headerlink" href="#beat-sync-examples" title="Permanent link">&para;</a></h3>
+<h4 id="visual-beat">Visual Beat<a class="headerlink" href="#visual-beat" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>forever
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    wait (60 / tempo) secs
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    change size by 10
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    wait 0.1 secs
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    change size by -10
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>end
+</span></code></pre></div>
+<h4 id="obstacle-spawn-on-beat">Obstacle Spawn on Beat<a class="headerlink" href="#obstacle-spawn-on-beat" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>forever
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    wait (60 / tempo) secs
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    if &lt; (pick random 1 to 4) = 1 &gt; then
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        create clone of [obstacle v]
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    end
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>end
+</span></code></pre></div>
+<h4 id="music-reactive-background">Music-Reactive Background<a class="headerlink" href="#music-reactive-background" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>when green flag clicked
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>forever
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    wait (60 / tempo) secs
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    change color effect by 10
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    change pen color by 5
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>end
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">🎵 Beat Sync = Rhythm Game!</p>
+<p>Scratch's <code>tempo</code> variable (default 60 BPM) lets you sync <strong>everything to music</strong>!</p>
+</div>
+<hr />
+<h2 id="loop-nesting-loops-inside-loops">Loop Nesting — Loops Inside Loops!<a class="headerlink" href="#loop-nesting-loops-inside-loops" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-loop-nesting">What Is Loop Nesting?<a class="headerlink" href="#what-is-loop-nesting" title="Permanent link">&para;</a></h3>
+<p><strong>Loop nesting</strong> = putting a loop <strong>inside another loop</strong>!</p>
+<h3 id="nested-loop-structure">Nested Loop Structure<a class="headerlink" href="#nested-loop-structure" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>repeat (outer)
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    repeat (inner)
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        // Do something many times
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    end
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>end
+</span></code></pre></div>
+<p><strong>Total iterations = outer × inner</strong></p>
+<hr />
+<h3 id="nested-loop-examples">Nested Loop Examples<a class="headerlink" href="#nested-loop-examples" title="Permanent link">&para;</a></h3>
+<h4 id="grid-pattern-rows-columns">Grid Pattern (Rows × Columns)<a class="headerlink" href="#grid-pattern-rows-columns" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>repeat (5)          // 5 rows
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    repeat (10)     // 10 columns
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        stamp
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>        move 20 steps
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    end
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    go to x: -100 y: (y + 20)   // Next row
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>end
+</span></code></pre></div>
+<p><strong>Creates 50 stamps in a 5×10 grid!</strong></p>
+<h4 id="nested-animation">Nested Animation<a class="headerlink" href="#nested-animation" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>repeat (3)              // 3 waves
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    repeat (10)         // 10 ripples per wave
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>        change size by 5
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>        wait 0.05 secs
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    end
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    repeat (10)
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        change size by -5
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        wait 0.05 secs
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    end
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>end
+</span></code></pre></div>
+<h4 id="spiral-with-nested-loops">Spiral with Nested Loops<a class="headerlink" href="#spiral-with-nested-loops" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>repeat (6)              // 6 arms
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    repeat (60)         // 60 steps per arm
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>        move 5 steps
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        turn 1 degrees
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>        change pen color by 1
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    end
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    turn 60 degrees     // Next arm
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="enemy-movement-smart-adversaries">Enemy Movement — Smart Adversaries!<a class="headerlink" href="#enemy-movement-smart-adversaries" title="Permanent link">&para;</a></h2>
+<h3 id="types-of-enemy-ai">Types of Enemy AI<a class="headerlink" href="#types-of-enemy-ai" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Behavior</th>
+<th>Code Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Patrol</strong></td>
+<td>Back and forth</td>
+<td><code>repeat until edge, turn 180</code></td>
+</tr>
+<tr>
+<td><strong>Chase</strong></td>
+<td>Follow player</td>
+<td><code>point towards player, move</code></td>
+</tr>
+<tr>
+<td><strong>Random</strong></td>
+<td>Wander randomly</td>
+<td><code>pick random direction, move</code></td>
+</tr>
+<tr>
+<td><strong>Turret</strong></td>
+<td>Stay put, shoot</td>
+<td><code>point towards player, shoot</code></td>
+</tr>
+<tr>
+<td><strong>Boss</strong></td>
+<td>Phases, patterns</td>
+<td>Broadcast + phases</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="patrol-enemy-back-and-forth">Patrol Enemy (Back and Forth)<a class="headerlink" href="#patrol-enemy-back-and-forth" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>when green flag clicked
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>forever
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    move 3 steps
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    if &lt;touching [edge v]?&gt; then
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>        turn 180 degrees
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    end
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>end
+</span></code></pre></div>
+<h3 id="chase-enemy">Chase Enemy<a class="headerlink" href="#chase-enemy" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>when green flag clicked
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>forever
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    point towards [player v]
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    move 2 steps
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    if &lt;touching [player v]?&gt; then
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>        broadcast [player-hit v]
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    end
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>end
+</span></code></pre></div>
+<h3 id="smart-patrol-platform-edges">Smart Patrol (Platform Edges)<a class="headerlink" href="#smart-patrol-platform-edges" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>forever
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    move 2 steps
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    if &lt;touching [edge v]?&gt; or &lt;not &lt;touching color [#8B4513]?&gt;&gt; then
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>        turn 180 degrees
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    end
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>end
+</span></code></pre></div>
+<p><strong>Turns around at platform edges</strong> (brown color #8B4513 = ground)!</p>
+<hr />
+<h3 id="enemy-variations">Enemy Variations<a class="headerlink" href="#enemy-variations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variation</th>
+<th>Code Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast enemy</strong></td>
+<td><code>move 5 steps</code> instead of 2</td>
+</tr>
+<tr>
+<td><strong>Jumping enemy</strong></td>
+<td>Add jump logic on timer</td>
+</tr>
+<tr>
+<td><strong>Shooting enemy</strong></td>
+<td><code>if &lt;distance &lt; 200&gt; then broadcast [shoot]</code></td>
+</tr>
+<tr>
+<td><strong>Boss</strong></td>
+<td>Phases: <code>broadcast [phase1]</code>, <code>broadcast [phase2]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="debugging-basics-finding-and-fixing-bugs">Debugging Basics — Finding and Fixing Bugs!<a class="headerlink" href="#debugging-basics-finding-and-fixing-bugs" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-bug">What Is a Bug?<a class="headerlink" href="#what-is-a-bug" title="Permanent link">&para;</a></h3>
+<p>A <strong>bug</strong> = code that doesn't do what you intended. <strong>Debugging</strong> = finding and fixing it!</p>
+<h3 id="debugging-steps">Debugging Steps<a class="headerlink" href="#debugging-steps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Reproduce</strong></td>
+<td>Make the bug happen consistently</td>
+</tr>
+<tr>
+<td><strong>2. Isolate</strong></td>
+<td>Find which script/block causes it</td>
+</tr>
+<tr>
+<td><strong>3. Hypothesize</strong></td>
+<td>"I think the <code>change x by</code> is wrong"</td>
+</tr>
+<tr>
+<td><strong>4. Test</strong></td>
+<td>Change one thing, test again</td>
+</tr>
+<tr>
+<td><strong>4. Fix</strong></td>
+<td>Apply the correction</td>
+</tr>
+<tr>
+<td><strong>5. Verify</strong></td>
+<td>Test thoroughly — did it fix? Any new bugs?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="scratch-debugging-tools">Scratch Debugging Tools<a class="headerlink" href="#scratch-debugging-tools" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>How to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Block Highlighting</strong></td>
+<td>Watch which block glows when running</td>
+</tr>
+<tr>
+<td><strong>Variable Watchers</strong></td>
+<td>Show variables on stage — watch values live</td>
+</tr>
+<tr>
+<td><strong><code>say</code> for Debug</strong></td>
+<td><code>say (variable) for 2 secs</code> — prints value</td>
+</tr>
+<tr>
+<td><strong>Single Step</strong></td>
+<td>Click green flag, then press space to step (in some versions)</td>
+</tr>
+<tr>
+<td><strong><code>wait</code> for Timing</strong></td>
+<td>Add <code>wait 1 secs</code> to slow down and watch</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="common-bugs-fixes">Common Bugs &amp; Fixes<a class="headerlink" href="#common-bugs-fixes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bug</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprite doesn't move</strong></td>
+<td>Wrong hat block, or <code>forever</code> missing</td>
+<td>Check hat block, add <code>forever</code></td>
+</tr>
+<tr>
+<td><strong>Moves wrong direction</strong></td>
+<td><code>change x by -10</code> vs <code>10</code></td>
+<td>Check positive/negative</td>
+</tr>
+<tr>
+<td><strong>Jumps forever</strong></td>
+<td>No ground check</td>
+<td>Add <code>touching ground?</code></td>
+</tr>
+<tr>
+<td><strong>Stuck in wall</strong></td>
+<td>No edge check</td>
+<td>Add <code>touching color?</code> check</td>
+</tr>
+<tr>
+<td><strong>Score doesn't increase</strong></td>
+<td>Wrong variable name</td>
+<td>Check spelling: <code>score</code> vs <code>Score</code></td>
+</tr>
+<tr>
+<td><strong>Infinite loop</strong></td>
+<td>Missing <code>wait</code> in <code>forever</code></td>
+<td>Add <code>wait 0.01 secs</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="debugging-with-say">Debugging with <code>say</code><a class="headerlink" href="#debugging-with-say" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>when green flag clicked
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>forever
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    say (join [x: ] (x position)) for 0.1 secs
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    // Shows x position live!
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>end
+</span></code></pre></div>
+<p><strong>Live variable display</strong> — watch values change in real time!</p>
+<hr />
+<h2 id="broadcast-and-wait-synchronization">Broadcast And Wait — Synchronization!<a class="headerlink" href="#broadcast-and-wait-synchronization" title="Permanent link">&para;</a></h2>
+<h3 id="broadcast-vs-broadcast-and-wait">Broadcast vs Broadcast And Wait<a class="headerlink" href="#broadcast-vs-broadcast-and-wait" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>broadcast [msg]</code></td>
+<td>Sends, continues immediately</td>
+</tr>
+<tr>
+<td><code>broadcast [msg] and wait</code></td>
+<td>Sends, <strong>waits for ALL receivers</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="when-to-use-broadcast-and-wait">When to Use Broadcast And Wait<a class="headerlink" href="#when-to-use-broadcast-and-wait" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level start</strong></td>
+<td>All sprites ready before gameplay</td>
+</tr>
+<tr>
+<td><strong>Cutscene steps</strong></td>
+<td>Each phase completes before next</td>
+</tr>
+<tr>
+<td><strong>Save game</strong></td>
+<td>All data saved before continuing</td>
+</tr>
+<tr>
+<td><strong>Level complete</strong></td>
+<td>All effects finish before next level</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="broadcast-and-wait-example">Broadcast And Wait Example<a class="headerlink" href="#broadcast-and-wait-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>when green flag clicked
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>broadcast [setup-level v] and wait
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>wait 1 secs
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>broadcast [spawn-player v] and wait
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>broadcast [spawn-enemies v] and wait
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>broadcast [game-start v]
+</span></code></pre></div>
+<p><strong>Each phase finishes completely before next starts!</strong></p>
+<hr />
+<h2 id="message-passing-sprites-sharing-data">Message Passing — Sprites Sharing Data!<a class="headerlink" href="#message-passing-sprites-sharing-data" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-message-passing">What Is Message Passing?<a class="headerlink" href="#what-is-message-passing" title="Permanent link">&para;</a></h3>
+<p><strong>Message passing</strong> = sprites communicating via broadcasts instead of directly accessing each other.</p>
+<h3 id="why-message-passing">Why Message Passing?<a class="headerlink" href="#why-message-passing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Loose coupling</strong></td>
+<td>Sprites don't need to know about each other</td>
+</tr>
+<tr>
+<td><strong>Flexible</strong></td>
+<td>Add/remove sprites without breaking others</td>
+</tr>
+<tr>
+<td><strong>Scalable</strong></td>
+<td>Add more sprites easily</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="message-passing-patterns">Message Passing Patterns<a class="headerlink" href="#message-passing-patterns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Sender</th>
+<th>Receiver</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Event</strong></td>
+<td><code>broadcast [coin]</code></td>
+<td><code>when I receive [coin]</code></td>
+<td>Score +10</td>
+</tr>
+<tr>
+<td><strong>Command</strong></td>
+<td><code>broadcast [jump]</code></td>
+<td><code>when I receive [jump]</code></td>
+<td>All sprites jump</td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><code>broadcast [get-score]</code></td>
+<td><code>when I receive [get-score]</code> → <code>broadcast [score-is] + wait</code></td>
+<td>Get data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="asynchronous-broadcast-fire-and-forget">Asynchronous Broadcast — Fire and Forget!<a class="headerlink" href="#asynchronous-broadcast-fire-and-forget" title="Permanent link">&para;</a></h2>
+<h3 id="broadcast-fire-and-forget">Broadcast (Fire and Forget)<a class="headerlink" href="#broadcast-fire-and-forget" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>broadcast [explosion v]
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>// Continues immediately!
+</span></code></pre></div>
+<p><strong>Doesn't wait</strong> — sender continues instantly.</p>
+<h3 id="when-to-use-async-broadcast">When to Use Async Broadcast<a class="headerlink" href="#when-to-use-async-broadcast" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Why Async</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Effects</strong></td>
+<td>Explosion, particles — don't block gameplay</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>"Achievement unlocked" — don't pause game</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Send analytics — don't slow down</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="decision-making-if-this-then-that">Decision Making — If This, Then That!<a class="headerlink" href="#decision-making-if-this-then-that" title="Permanent link">&para;</a></h2>
+<h3 id="decision-making-in-code">Decision Making in Code<a class="headerlink" href="#decision-making-in-code" title="Permanent link">&para;</a></h3>
+<p><strong>Every game is a series of decisions:</strong>
+- Is player on ground? → Allow jump
+- Is score &gt; 100? → Level up
+- Touching enemy? → Lose life
+- Timer = 0? → Game over</p>
+<h3 id="decision-blocks">Decision Blocks<a class="headerlink" href="#decision-blocks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if &lt; &gt; then</code></td>
+<td>One option</td>
+</tr>
+<tr>
+<td><code>if &lt; &gt; then else</code></td>
+<td>Two paths</td>
+</tr>
+<tr>
+<td><code>repeat until &lt; &gt;</code></td>
+<td>Loop until condition</td>
+</tr>
+<tr>
+<td><code>&lt; &gt; and &lt; &gt;</code></td>
+<td>Both must be true</td>
+</tr>
+<tr>
+<td><code>&lt; &gt; or &lt; &gt;</code></td>
+<td>Either true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conditional-branching-two-paths">Conditional Branching — Two Paths!<a class="headerlink" href="#conditional-branching-two-paths" title="Permanent link">&para;</a></h2>
+<h3 id="if-else-review">If-Else Review<a class="headerlink" href="#if-else-review" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>if &lt;condition&gt; then
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    // TRUE path
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>else
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    // FALSE path
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>end
+</span></code></pre></div>
+<h3 id="branching-examples">Branching Examples<a class="headerlink" href="#branching-examples" title="Permanent link">&para;</a></h3>
+<h4 id="simple-branch">Simple Branch<a class="headerlink" href="#simple-branch" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>if &lt;touching [coin v]?&gt; then
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    change score by 10
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>else
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    // Nothing, keep playing
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>end
+</span></code></pre></div>
+<h4 id="multi-level-branch">Multi-Level Branch<a class="headerlink" href="#multi-level-branch" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>if &lt; (score) &gt; 1000 &gt; then
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    broadcast [level-3 v]
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>else
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    if &lt; (score) &gt; 500 &gt; then
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>        broadcast [level-2 v]
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>    else
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>        broadcast [level-1 v]
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>    end
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="when-i-start-as-clone-clone-initialization">When I Start As Clone — Clone Initialization!<a class="headerlink" href="#when-i-start-as-clone-clone-initialization" title="Permanent link">&para;</a></h2>
+<h3 id="clone-hat-block">Clone Hat Block<a class="headerlink" href="#clone-hat-block" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>when I start as a clone
+</span></code></pre></div>
+<p><strong>Runs automatically for EACH new clone</strong> — perfect for initialization!</p>
+<hr />
+<h3 id="clone-initialization-pattern">Clone Initialization Pattern<a class="headerlink" href="#clone-initialization-pattern" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>when I start as a clone
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>go to x: (pick random -200 to 200) y: (180)
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>set [velocity-y v] to (0)
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>show
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>forever
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    change y by (velocity-y)
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>    change [velocity-y v] by (-1)   // Gravity
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>    if &lt;touching [ground v]?&gt; then
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>        delete this clone
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>    end
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>end
+</span></code></pre></div>
+<p><strong>Every clone sets itself up automatically!</strong></p>
+<hr />
+<h3 id="clone-initialization-checklist">Clone Initialization Checklist<a class="headerlink" href="#clone-initialization-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Position</strong></td>
+<td><code>go to x: (random) y: (top)</code></td>
+</tr>
+<tr>
+<td><strong>Variables</strong></td>
+<td><code>set [velocity v] to (0)</code></td>
+</tr>
+<tr>
+<td><strong>Appearance</strong></td>
+<td><code>switch costume to [rock v]</code>, <code>show</code></td>
+</tr>
+<tr>
+<td><strong>Behavior</strong></td>
+<td><code>forever { physics, check delete }</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="concurrent-scripts-parallel-power">Concurrent Scripts — Parallel Power!<a class="headerlink" href="#concurrent-scripts-parallel-power" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-concurrent-scripts">What Are Concurrent Scripts?<a class="headerlink" href="#what-are-concurrent-scripts" title="Permanent link">&para;</a></h3>
+<p><strong>Concurrent scripts</strong> = multiple scripts running <strong>at the same time</strong> (parallelism).</p>
+<h3 id="scratch-naturally-concurrent">Scratch = Naturally Concurrent!<a class="headerlink" href="#scratch-naturally-concurrent" title="Permanent link">&para;</a></h3>
+<p><strong>Every hat block starts a new "thread"</strong> that runs independently.</p>
+<h3 id="managing-concurrency">Managing Concurrency<a class="headerlink" href="#managing-concurrency" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable conflicts</strong></td>
+<td>Use <code>broadcast and wait</code> for order</td>
+</tr>
+<tr>
+<td><strong>Race conditions</strong></td>
+<td>Single "manager" script for shared data</td>
+</tr>
+<tr>
+<td><strong>Too many loops</strong></td>
+<td>Combine into one main game loop</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="concurrency-example">Concurrency Example<a class="headerlink" href="#concurrency-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>when green flag clicked          // Script 1: Player
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>forever
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    // Movement, jump, animation
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>end
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>when green flag clicked          // Script 2: Enemies
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>forever
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    // Spawn, move, check collisions
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>end
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>when green flag clicked          // Script 3: UI
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>forever
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>    // Update score display, timer
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>end
+</span></code></pre></div>
+<p><strong>All three run simultaneously!</strong></p>
+<hr />
+<h2 id="physical-computing-code-meets-reality">Physical Computing — Code Meets Reality!<a class="headerlink" href="#physical-computing-code-meets-reality" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-physical-computing">What Is Physical Computing?<a class="headerlink" href="#what-is-physical-computing" title="Permanent link">&para;</a></h3>
+<p><strong>Physical computing</strong> = code interacting with <strong>real-world hardware</strong> (sensors, motors, lights)!</p>
+<h3 id="scratch-hardware-extensions">Scratch Hardware Extensions<a class="headerlink" href="#scratch-hardware-extensions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Extension</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Makey Makey</strong></td>
+<td>Makey Makey</td>
+<td>Everyday objects → keys</td>
+</tr>
+<tr>
+<td><strong>micro:bit</strong></td>
+<td>micro:bit</td>
+<td>Buttons, LEDs, accelerometer</td>
+</tr>
+<tr>
+<td><strong>LEGO SPIKE</strong></td>
+<td>LEGO®</td>
+<td>Motors, sensors, robots</td>
+</tr>
+<tr>
+<td><strong>Go Direct</strong></td>
+<td>Go Direct</td>
+<td>Science sensors (temp, force, etc.)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="makey-makey-example">Makey Makey Example<a class="headerlink" href="#makey-makey-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>when [banana] key pressed
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>change x by 10
+</span></code></pre></div>
+<p><strong>Banana = right arrow key!</strong></p>
+<h3 id="microbit-example">micro:bit Example<a class="headerlink" href="#microbit-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>when [button A] pressed
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>change x by 10
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>when [tilt left] detected
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>turn 15 degrees
+</span></code></pre></div>
+<h3 id="physical-computing-ideas">Physical Computing Ideas<a class="headerlink" href="#physical-computing-ideas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Hardware</th>
+<th>Code Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fruit Piano</strong></td>
+<td>Makey Makey</td>
+<td>Each fruit = note</td>
+</tr>
+<tr>
+<td><strong>Tilt Maze</strong></td>
+<td>micro:bit</td>
+<td>Tilt to roll ball</td>
+</tr>
+<tr>
+<td><strong>Robot Dance</strong></td>
+<td>LEGO SPIKE</td>
+<td>Code dance moves</td>
+</tr>
+<tr>
+<td><strong>Weather Station</strong></td>
+<td>Go Direct</td>
+<td>Log temp, graph it</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="repeat-until-loop-smart-loops">Repeat Until Loop — Smart Loops!<a class="headerlink" href="#repeat-until-loop-smart-loops" title="Permanent link">&para;</a></h2>
+<h3 id="repeat-until-block">Repeat Until Block<a class="headerlink" href="#repeat-until-block" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>repeat until &lt;condition&gt;
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    // Runs until condition becomes TRUE
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>end
+</span></code></pre></div>
+<p><strong>Checks condition at START of each iteration.</strong></p>
+<hr />
+<h3 id="repeat-until-examples">Repeat Until Examples<a class="headerlink" href="#repeat-until-examples" title="Permanent link">&para;</a></h3>
+<h4 id="move-until-edge">Move Until Edge<a class="headerlink" href="#move-until-edge" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>repeat until &lt;touching [edge v]?&gt;
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    move 5 steps
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>end
+</span></code></pre></div>
+<h4 id="wait-for-button">Wait for Button<a class="headerlink" href="#wait-for-button" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>repeat until &lt;key [space] pressed?&gt;
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    say [Press SPACE to start]
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    wait 0.5 secs
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>end
+</span></code></pre></div>
+<h4 id="wait-for-condition">Wait for Condition<a class="headerlink" href="#wait-for-condition" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>repeat until &lt; (score) &gt; 100 &gt;
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    wait 1 secs
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>end
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>broadcast [level-complete v]
+</span></code></pre></div>
+<hr />
+<h3 id="repeat-until-vs-other-loops">Repeat Until vs Other Loops<a class="headerlink" href="#repeat-until-vs-other-loops" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Loop Type</th>
+<th>Stops When...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repeat (10)</code></td>
+<td>After 10 iterations</td>
+</tr>
+<tr>
+<td><code>forever</code></td>
+<td>Never (until stop)</td>
+</tr>
+<tr>
+<td><code>repeat until &lt;cond&gt;</code></td>
+<td>Condition becomes TRUE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="boolean-logic-and-or-not">Boolean Logic — And, Or, Not!<a class="headerlink" href="#boolean-logic-and-or-not" title="Permanent link">&para;</a></h2>
+<h3 id="boolean-operators-operators-green">Boolean Operators (Operators → Green)<a class="headerlink" href="#boolean-operators-operators-green" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Symbol</th>
+<th>True When...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt; &gt; and &lt; &gt;</code></td>
+<td>AND</td>
+<td>Both TRUE</td>
+</tr>
+<tr>
+<td><code>&lt; &gt; or &lt; &gt;</code></td>
+<td>OR</td>
+<td>At least one TRUE</td>
+</tr>
+<tr>
+<td><code>not &lt; &gt;</code></td>
+<td>NOT</td>
+<td>Flips TRUE↔FALSE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="boolean-logic-examples">Boolean Logic Examples<a class="headerlink" href="#boolean-logic-examples" title="Permanent link">&para;</a></h3>
+<h4 id="and-both-must-be-true">AND — Both Must Be True<a class="headerlink" href="#and-both-must-be-true" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>if &lt;touching [coin v]?&gt; and &lt; (lives) &gt; 0 &gt; then
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    change score by 10
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>end
+</span></code></pre></div>
+<h4 id="or-at-least-one">OR — At Least One<a class="headerlink" href="#or-at-least-one" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>if &lt;touching [spike v]?&gt; or &lt;touching [lava v]?&gt; then
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>    broadcast [player-hit v]
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>end
+</span></code></pre></div>
+<h4 id="not-flip-it">NOT — Flip It<a class="headerlink" href="#not-flip-it" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>if &lt;not &lt;touching [ground v]?&gt;&gt; then
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    // In the air!
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>    change [velocity-y v] by (-1)   // Gravity
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>end
+</span></code></pre></div>
+<h3 id="truth-tables">Truth Tables<a class="headerlink" href="#truth-tables" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+<th>A OR B</th>
+<th>NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dice-roll-random-fun">Dice Roll — Random Fun!<a class="headerlink" href="#dice-roll-random-fun" title="Permanent link">&para;</a></h2>
+<h3 id="dice-roll-pick-random-1-to-6">Dice Roll = Pick Random 1 to 6<a class="headerlink" href="#dice-roll-pick-random-1-to-6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>pick random (1) to (6)
+</span></code></pre></div>
+<p><strong>Simulates a 6-sided die!</strong></p>
+<h3 id="dice-roll-uses">Dice Roll Uses<a class="headerlink" href="#dice-roll-uses" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Simulates</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pick random 1 to 6</code></td>
+<td>1d6</td>
+<td>Board games, RPGs</td>
+</tr>
+<tr>
+<td><code>pick random 1 to 20</code></td>
+<td>1d20</td>
+<td>D&amp;D style</td>
+</tr>
+<tr>
+<td><code>(pick random 1 to 6) + (pick random 1 to 6)</code></td>
+<td>2d6</td>
+<td>Monopoly, Catan</td>
+</tr>
+<tr>
+<td><code>pick random 1 to 100</code></td>
+<td>d100</td>
+<td>Percentile rolls</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dice-roll-examples">Dice Roll Examples<a class="headerlink" href="#dice-roll-examples" title="Permanent link">&para;</a></h3>
+<h4 id="attack-roll">Attack Roll<a class="headerlink" href="#attack-roll" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>if &lt; (pick random 1 to 20) &gt; 15 &gt; then
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>    // Critical hit!
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>    change [damage v] by (10)
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>else
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>    change [damage v] by (5)
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>end
+</span></code></pre></div>
+<h4 id="loot-table">Loot Table<a class="headerlink" href="#loot-table" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>set [roll v] to (pick random 1 to 100)
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>if &lt; (roll) &lt; 50 &gt; then
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>    add [common-item] to [inventory v]
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>else
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>    if &lt; (roll) &lt; 80 &gt; then
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>        add [uncommon-item] to [inventory v]
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>    else
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>        if &lt; (roll) &lt; 95 &gt; then
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>            add [rare-item] to [inventory v]
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>        else
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>            add [legendary-item] to [inventory v]
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>        end
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>    end
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="change-variable-math-on-the-fly">Change Variable — Math on the Fly!<a class="headerlink" href="#change-variable-math-on-the-fly" title="Permanent link">&para;</a></h2>
+<h3 id="change-variable-block">Change Variable Block<a class="headerlink" href="#change-variable-block" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>change [score v] by (10)
+</span></code></pre></div>
+<p><strong>Adds (or subtracts) from current value.</strong></p>
+<h3 id="change-variable-patterns">Change Variable Patterns<a class="headerlink" href="#change-variable-patterns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>change [score v] by (10)</code></td>
+<td>+10</td>
+</tr>
+<tr>
+<td><code>change [score v] by (-5)</code></td>
+<td>-5</td>
+</tr>
+<tr>
+<td><code>change [x v] by (10)</code></td>
+<td>Move right</td>
+</tr>
+<tr>
+<td><code>change [x v] by (-10)</code></td>
+<td>Move left</td>
+</tr>
+<tr>
+<td><code>change [velocity-y v] by (-1)</code></td>
+<td>Gravity!</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="change-variable-examples">Change Variable Examples<a class="headerlink" href="#change-variable-examples" title="Permanent link">&para;</a></h3>
+<h4 id="score-system">Score System<a class="headerlink" href="#score-system" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>when I receive [coin v]
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>change [score v] by (10)
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>when I receive [gem v]
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>change [score v] by (50)
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>when I receive [boss-defeated v]
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>change [score v] by (1000)
+</span></code></pre></div>
+<h4 id="physics-velocity">Physics Velocity<a class="headerlink" href="#physics-velocity" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>when green flag clicked
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>set [velocity-x v] to (0)
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>set [velocity-y v] to (0)
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>forever
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>    change [velocity-y v] by (-0.5)   // Gravity
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>    change x by (velocity-x)
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>    change y by (velocity-y)
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>end
+</span></code></pre></div>
+<h4 id="cooldown-timer">Cooldown Timer<a class="headerlink" href="#cooldown-timer" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>when [space] key pressed
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>if &lt; (cooldown) = 0 &gt; then
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>    set [cooldown v] to (30)   // 30 frames = 0.5 sec at 60fps
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>    broadcast [shoot v]
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>end
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>forever
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>    if &lt; (cooldown) &gt; 0 &gt; then
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>        change [cooldown v] by (-1)
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>    end
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="variable-scope-for-all-vs-this-sprite">Variable Scope — For All vs This Sprite!<a class="headerlink" href="#variable-scope-for-all-vs-this-sprite" title="Permanent link">&para;</a></h2>
+<h3 id="for-all-sprites-global">For All Sprites (Global)<a class="headerlink" href="#for-all-sprites-global" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>set [score v] to (0)    // ONE box, everyone shares
+</span></code></pre></div>
+<p><strong>All sprites see and change the SAME value.</strong></p>
+<h3 id="for-this-sprite-only-local">For This Sprite Only (Local)<a class="headerlink" href="#for-this-sprite-only-local" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>set [health v] to (100)    // EACH sprite has own box
+</span></code></pre></div>
+<p><strong>Each sprite has its OWN private copy.</strong></p>
+<hr />
+<h3 id="when-to-use-which">When to Use Which<a class="headerlink" href="#when-to-use-which" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Use For</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>For all sprites</strong></td>
+<td>Shared game state</td>
+<td><code>score</code>, <code>timer</code>, <code>level</code>, <code>high-score</code></td>
+</tr>
+<tr>
+<td><strong>For this sprite only</strong></td>
+<td>Individual state</td>
+<td><code>health</code>, <code>speed</code>, <code>ammo</code>, <code>facing-right</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="scope-example">Scope Example<a class="headerlink" href="#scope-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>Player script:
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>set [score v] to (0)           // Global
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>set [player-health v] to (100) // Local
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>Enemy script:
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>when I start as a clone
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>set [enemy-health v] to (50)   // Local (each clone own!)
+</span></code></pre></div>
+<hr />
+<h2 id="add-to-list-building-collections">Add To List — Building Collections!<a class="headerlink" href="#add-to-list-building-collections" title="Permanent link">&para;</a></h2>
+<h3 id="add-to-list-block">Add To List Block<a class="headerlink" href="#add-to-list-block" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>add [apple] to [inventory v]
+</span></code></pre></div>
+<p><strong>Appends to END of list.</strong></p>
+<hr />
+<h3 id="add-to-list-examples">Add To List Examples<a class="headerlink" href="#add-to-list-examples" title="Permanent link">&para;</a></h3>
+<h4 id="inventory-system">Inventory System<a class="headerlink" href="#inventory-system" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>when I receive [found-apple v]
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>add [apple] to [inventory v]
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>say [Got an apple!] for 2 secs
+</span></code></pre></div>
+<h4 id="high-score-list">High Score List<a class="headerlink" href="#high-score-list" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>when I receive [game-over v]
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>add (score) to [high-scores v]
+</span></code></pre></div>
+<h4 id="level-codes">Level Codes<a class="headerlink" href="#level-codes" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>when green flag clicked
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>add [LEVEL1-CODE] to [level-codes v]
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>add [LEVEL2-CODE] to [level-codes v]
+</span></code></pre></div>
+<hr />
+<h2 id="list-length-how-many-items">List Length — How Many Items?<a class="headerlink" href="#list-length-how-many-items" title="Permanent link">&para;</a></h2>
+<h3 id="length-of-list-block">Length of List Block<a class="headerlink" href="#length-of-list-block" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>length of [inventory v]
+</span></code></pre></div>
+<p><strong>Reporter: tells you how many items in list.</strong></p>
+<hr />
+<h3 id="list-length-uses">List Length Uses<a class="headerlink" href="#list-length-uses" title="Permanent link">&para;</a></h3>
+<h4 id="check-if-empty">Check If Empty<a class="headerlink" href="#check-if-empty" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>if &lt; (length of [inventory v]) = 0 &gt; then
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    say [Inventory empty!] for 2 secs
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>end
+</span></code></pre></div>
+<h4 id="limit-list-size">Limit List Size<a class="headerlink" href="#limit-list-size" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>add (new-score) to [high-scores v]
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>if &lt; (length of [high-scores v]) &gt; 10 &gt; then
+</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>    delete (11) of [high-scores v]   // Remove 11th (keep top 10)
+</span><span id="__span-56-4"><a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>end
+</span></code></pre></div>
+<h4 id="loop-through-list">Loop Through List<a class="headerlink" href="#loop-through-list" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>repeat (length of [inventory v])
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>    say (item (loop-counter) of [inventory v]) for 1 secs
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this chapter, you learned:</p>
+<ul>
+<li>✅ <strong>Project Description</strong> — Plan before you code</li>
+<li>✅ <strong>Algorithmic Thinking</strong> — Step-by-step problem solving</li>
+<li>✅ <strong>Costume Animation</strong> — <code>next costume</code> + <code>wait</code> for smooth animation</li>
+<li>✅ <strong>Continuous Motion</strong> — <code>forever + if key pressed</code> for smooth movement</li>
+<li>✅ <strong>Scrolling Background</strong> — Infinite world illusion</li>
+<li>✅ <strong>Beat Synchronization</strong> — Sync actions to music tempo</li>
+<li>✅ <strong>Loop Nesting</strong> — Loops inside loops for grids, patterns</li>
+<li>✅ <strong>Enemy Movement</strong> — Patrol, chase, random, turret AI</li>
+<li>✅ <strong>Debugging Basics</strong> — Reproduce, isolate, hypothesize, test, fix</li>
+<li>✅ <strong>Broadcast And Wait</strong> — Synchronized multi-sprite coordination</li>
+<li>✅ <strong>Message Passing</strong> — Broadcasts for loose coupling</li>
+<li>✅ <strong>Async Broadcast</strong> — Fire-and-forget for effects</li>
+<li>✅ <strong>Decision Making</strong> — If/else, boolean logic</li>
+<li>✅ <strong>Conditional Branching</strong> — If-else, nested ifs</li>
+<li>✅ <strong>When I Start As Clone</strong> — Clone initialization pattern</li>
+<li>✅ <strong>Concurrent Scripts</strong> — Natural parallelism in Scratch</li>
+<li>✅ <strong>Physical Computing</strong> — Makey Makey, micro:bit, LEGO, sensors</li>
+<li>✅ <strong>Repeat Until Loop</strong> — Smart loops with exit conditions</li>
+<li>✅ <strong>Boolean Logic</strong> — And, or, not for complex conditions</li>
+<li>✅ <strong>Dice Roll</strong> — <code>pick random 1 to 6</code> for games</li>
+<li>✅ <strong>Change Variable</strong> — Increment/decrement on the fly</li>
+<li>✅ <strong>Variable Scope</strong> — Global vs local variables</li>
+<li>✅ <strong>Add To List</strong> — Build collections dynamically</li>
+<li>✅ <strong>List Length</strong> — Count items, limit size, loop through</li>
+</ul>
+<hr />
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Project Description</strong></td>
+<td>Written plan for your game</td>
+</tr>
+<tr>
+<td><strong>Algorithmic Thinking</strong></td>
+<td>Step-by-step problem solving</td>
+</tr>
+<tr>
+<td><strong>Costume Animation</strong></td>
+<td><code>next costume</code> + <code>wait</code> loop</td>
+</tr>
+<tr>
+<td><strong>Continuous Motion</strong></td>
+<td><code>forever + if key pressed</code></td>
+</tr>
+<tr>
+<td><strong>Scrolling Background</strong></td>
+<td>Moving backdrop for infinite world</td>
+</tr>
+<tr>
+<td><strong>Beat Synchronization</strong></td>
+<td>Sync actions to music tempo</td>
+</tr>
+<tr>
+<td><strong>Loop Nesting</strong></td>
+<td>Loop inside a loop</td>
+</tr>
+<tr>
+<td><strong>Enemy AI</strong></td>
+<td>Patrol, chase, random, turret patterns</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Find and fix bugs systematically</td>
+</tr>
+<tr>
+<td><strong>Broadcast And Wait</strong></td>
+<td>Synchronized broadcast</td>
+</tr>
+<tr>
+<td><strong>Message Passing</strong></td>
+<td>Broadcasts for communication</td>
+</tr>
+<tr>
+<td><strong>Async Broadcast</strong></td>
+<td>Fire-and-forget broadcast</td>
+</tr>
+<tr>
+<td><strong>Conditional Branching</strong></td>
+<td>If-else decision trees</td>
+</tr>
+<tr>
+<td><code>when I start as a clone</code></td>
+<td>Clone initialization hat block</td>
+</tr>
+<tr>
+<td><strong>Concurrent Scripts</strong></td>
+<td>Parallel script execution</td>
+</tr>
+<tr>
+<td><strong>Physical Computing</strong></td>
+<td>Hardware + code (Makey Makey, micro:bit)</td>
+</tr>
+<tr>
+<td><code>repeat until</code></td>
+<td>Loop until condition true</td>
+</tr>
+<tr>
+<td><strong>Boolean Logic</strong></td>
+<td>And, or, not operators</td>
+</tr>
+<tr>
+<td><strong>Dice Roll</strong></td>
+<td><code>pick random 1 to 6</code></td>
+</tr>
+<tr>
+<td><strong>Change Variable</strong></td>
+<td>Increment/decrement variable</td>
+</tr>
+<tr>
+<td><strong>Variable Scope</strong></td>
+<td>Global (all sprites) vs local (this sprite)</td>
+</tr>
+<tr>
+<td><code>add to list</code></td>
+<td>Append to collection</td>
+</tr>
+<tr>
+<td><code>length of list</code></td>
+<td>Count items in list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge 1:</strong> Create a <strong>walking animation</strong> with 4 costumes and smooth movement</p>
+<p><strong>Challenge 2:</strong> Build a <strong>scrolling background</strong> with 2 sprites that wrap</p>
+<p><strong>Challenge 2:</strong> Add <strong>beat synchronization</strong> — make background pulse to music</p>
+<p><strong>Challenge 3:</strong> Create <strong>nested loops</strong> to draw a 5×5 grid of stamps</p>
+<p><strong>Challenge 4:</strong> Build <strong>3 enemy types</strong>: patrol, chase, and random wanderer</p>
+<p><strong>Challenge 5:</strong> <strong>Debug a broken script</strong> — use <code>say</code> to watch variable values</p>
+<p><strong>Challenge 6:</strong> Use <strong>broadcast and wait</strong> for a 3-phase level start sequence</p>
+<p><strong>Challenge 7:</strong> Build a <strong>coin flip simulator</strong> using <code>pick random 1 to 2</code></p>
+<hr />
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>In <strong>Chapter 9</strong>, you'll master <strong>Advanced Control and Operators</strong> — complex loops, boolean mastery, clone management, and physical computing extensions!</p>
+<p><a href="../09-advanced-control-operators/"><strong>→ Next Chapter: Advanced Control and Operators</strong></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../07-variables-lists-data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. Variables, Lists, and Data Management">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                7. Variables, Lists, and Data Management
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09-advanced-control-operators/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Advanced Control and Operators">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                9. Advanced Control and Operators
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

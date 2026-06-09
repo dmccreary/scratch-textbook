@@ -1,0 +1,4085 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Covers variables for game state, lists for collections, and variable scope concepts for young learners">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/07-variables-lists-data/">
+      
+      
+        <link rel="prev" href="../06-broadcasting-conditionals-sensing/">
+      
+      
+        <link rel="next" href="../08-animation-parallelism-debugging/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Variables, Lists, and Data Management - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variables-lists-and-data-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variables, Lists, and Data Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-welcome-to-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators-making-number-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators — Making Number Decisions!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Operators — Making Number Decisions!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greater-than-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greater Than Operator (&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equal-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equal Operator (=)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-three-comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Three Comparison Operators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers-pick-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Numbers — Pick Random!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Numbers — Pick Random!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pick-random-block-operators-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pick Random Block (Operators → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-number-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Number Uses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random in Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-spawn-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Spawn Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-chance-20-1-in-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Chance (20% = 1 in 5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Wait
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counted-repetition-exact-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counted Repetition — Exact Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Counted Repetition — Exact Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeat-block-control-orange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Block (Control → Orange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counted-repeat-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counted Repeat Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Counted Repeat Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draw-a-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw a Polygon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawn-exact-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawn Exact Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Countdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-basics-your-data-boxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Basics — Your Data Boxes!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Basics — Your Data Boxes!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Variable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-blocks-variables-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Blocks (Variables → Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-scope-who-can-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Scope — Who Can See It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lives-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lives System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showhide-variables-control-the-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show/Hide Variables — Control the Display!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Show/Hide Variables — Control the Display!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hide Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-showhide" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Show/Hide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists-collections-of-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists — Collections of Values!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists — Collections of Values!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a List?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-blocks-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Blocks (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-parameters-custom-block-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Parameters — Custom Block Inputs!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Parameters — Custom Block Inputs!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Parameters?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jump-with-height" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump with Height
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#draw-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw Polygon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glide-to-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glide to Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction-hiding-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstraction — Hiding Complexity!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abstraction — Hiding Complexity!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Abstraction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-scratch-custom-blocks-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Scratch: Custom Blocks = Abstraction!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-abstraction-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Abstraction Helps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pen-extension-deep-dive-drawing-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Extension Deep Dive — Drawing Details!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pen Extension Deep Dive — Drawing Details!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pen-blocks-review-pen-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Blocks Review (Pen → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-down-pen-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Down / Pen Up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pen Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rainbow-spiral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rainbow Spiral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stamp-circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stamp Circle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-detection-camera-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Detection — Camera Magic!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Detection — Camera Magic!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-sensing-recap-extensions-video-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Sensing Recap (Extensions → Video Sensing)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-detection-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Detection Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talking-sprites-text-to-speech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Talking Sprites — Text to Speech!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Talking Sprites — Text to Speech!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-to-speech-recap-extensions-text-to-speech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text to Speech Recap (Extensions → Text to Speech)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voices-alto-tenor-soprano-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voices: alto, tenor, soprano, random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#languages-english-spanish-french-german-chinese-japanese-korean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-to-speech-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text to Speech Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-features-making-games-for-everyone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility Features — Making Games for Everyone!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Features — Making Games for Everyone!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-accessibility-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Accessibility Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-accessibility-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Accessibility Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessible-design-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessible Design Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multilingual-projects-games-for-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilingual Projects — Games for the World!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multilingual Projects — Games for the World!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate-text-to-speech-polyglot-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translate + Text to Speech = Polyglot Games!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilingual-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilingual Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-mechanics-snap-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Mechanics — Snap Together!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Mechanics — Snap Together!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-blocks-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Blocks Connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remix-exploration-learn-from-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remix Exploration — Learn from Others!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remix Exploration — Learn from Others!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-remixing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Remixing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Remix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-from-remixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning from Remixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remix-etiquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remix Etiquette
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tags-help-others-find-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Tags — Help Others Find Your Game!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Tags — Help Others Find Your Game!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Tags?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-design-process-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators-making-number-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators — Making Number Decisions!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Operators — Making Number Decisions!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greater-than-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greater Than Operator (&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equal-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equal Operator (=)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-three-comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Three Comparison Operators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers-pick-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Numbers — Pick Random!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Numbers — Pick Random!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pick-random-block-operators-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pick Random Block (Operators → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-number-uses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Number Uses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random in Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-spawn-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Spawn Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-chance-20-1-in-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Chance (20% = 1 in 5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Wait
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counted-repetition-exact-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counted Repetition — Exact Loops!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Counted Repetition — Exact Loops!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeat-block-control-orange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeat Block (Control → Orange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counted-repeat-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counted Repeat Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Counted Repeat Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draw-a-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw a Polygon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spawn-exact-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawn Exact Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Countdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-basics-your-data-boxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Basics — Your Data Boxes!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Basics — Your Data Boxes!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Variable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-blocks-variables-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Blocks (Variables → Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-scope-who-can-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Scope — Who Can See It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Score System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lives-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lives System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showhide-variables-control-the-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show/Hide Variables — Control the Display!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Show/Hide Variables — Control the Display!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hide Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-showhide" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Show/Hide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists-collections-of-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists — Collections of Values!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists — Collections of Values!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a List?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-blocks-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Blocks (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-parameters-custom-block-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Parameters — Custom Block Inputs!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Parameters — Custom Block Inputs!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Parameters?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jump-with-height" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump with Height
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#draw-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draw Polygon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glide-to-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glide to Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction-hiding-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstraction — Hiding Complexity!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abstraction — Hiding Complexity!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Abstraction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-scratch-custom-blocks-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Scratch: Custom Blocks = Abstraction!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-abstraction-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Abstraction Helps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pen-extension-deep-dive-drawing-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Extension Deep Dive — Drawing Details!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pen Extension Deep Dive — Drawing Details!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pen-blocks-review-pen-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Blocks Review (Pen → Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-down-pen-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Down / Pen Up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pen-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pen Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pen Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rainbow-spiral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rainbow Spiral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stamp-circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stamp Circle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-detection-camera-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Detection — Camera Magic!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion Detection — Camera Magic!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-sensing-recap-extensions-video-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Sensing Recap (Extensions → Video Sensing)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-detection-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Detection Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talking-sprites-text-to-speech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Talking Sprites — Text to Speech!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Talking Sprites — Text to Speech!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-to-speech-recap-extensions-text-to-speech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text to Speech Recap (Extensions → Text to Speech)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voices-alto-tenor-soprano-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voices: alto, tenor, soprano, random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#languages-english-spanish-french-german-chinese-japanese-korean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-to-speech-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text to Speech Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-features-making-games-for-everyone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility Features — Making Games for Everyone!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Features — Making Games for Everyone!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-accessibility-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Accessibility Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-accessibility-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scratch Accessibility Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessible-design-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessible Design Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multilingual-projects-games-for-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilingual Projects — Games for the World!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multilingual Projects — Games for the World!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate-text-to-speech-polyglot-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translate + Text to Speech = Polyglot Games!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilingual-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilingual Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-mechanics-snap-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Mechanics — Snap Together!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Mechanics — Snap Together!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-blocks-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Blocks Connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remix-exploration-learn-from-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remix Exploration — Learn from Others!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remix Exploration — Learn from Others!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-remixing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Remixing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Remix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-from-remixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning from Remixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remix-etiquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remix Etiquette
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tags-help-others-find-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Tags — Help Others Find Your Game!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Tags — Help Others Find Your Game!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Tags?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tagging-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/07-variables-lists-data/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="variables-lists-and-data-management">Variables, Lists, and Data Management<a class="headerlink" href="#variables-lists-and-data-management" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Covers variables for game state, lists for collections, and variable scope concepts. This chapter covers 25 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<ol>
+<li>Greater Than Operator</li>
+<li>Equal Operator</li>
+<li>Pick Random</li>
+<li>Counted Repetition</li>
+<li>Set Variable</li>
+<li>Show Variable</li>
+<li>Hide Variable</li>
+<li>Variable Scope</li>
+<li>List Creation</li>
+<li>Block Parameters</li>
+<li>Abstraction</li>
+<li>Geometric Patterns</li>
+<li>Pen Down</li>
+<li>Pen Up</li>
+<li>Pen Color</li>
+<li>Pen Size</li>
+<li>Clear Graphics</li>
+<li>Erase All</li>
+<li>Motion Detection</li>
+<li>Talking Sprites</li>
+<li>Accessibility Features</li>
+<li>Multilingual Projects</li>
+<li>Snap Together</li>
+<li>Remix Exploration</li>
+<li>Project Tags</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-welcome-to-scratch/">1. Welcome to Scratch</a></li>
+<li><a href="../02-sprites-stage-coordinates/">2. Sprites, Stage, and the Coordinate System</a></li>
+<li><a href="../03-motion-blocks-categories/">3. Motion Blocks and Block Categories</a></li>
+<li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
+<li><a href="../05-sounds-extensions-sharing/">5. Sounds, Extensions, and Sharing Projects</a></li>
+</ul>
+<hr />
+<h2 id="comparison-operators-making-number-decisions">Comparison Operators — Making Number Decisions!<a class="headerlink" href="#comparison-operators-making-number-decisions" title="Permanent link">&para;</a></h2>
+<h3 id="greater-than-operator">Greater Than Operator (&gt;)<a class="headerlink" href="#greater-than-operator" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt; (10) &gt; (5) &gt;
+</span></code></pre></div>
+<p><strong>True if left number is BIGGER than right number.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>10 &gt; 5</code></td>
+<td>True ✅</td>
+</tr>
+<tr>
+<td><code>5 &gt; 10</code></td>
+<td>False ❌</td>
+</tr>
+<tr>
+<td><code>10 &gt; 10</code></td>
+<td>False ❌ (not greater, equal)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use for:</strong> High score checks, boundary limits, "is big enough?"</p>
+<hr />
+<h3 id="equal-operator">Equal Operator (=)<a class="headerlink" href="#equal-operator" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt; (10) = (10) &gt;
+</span></code></pre></div>
+<p><strong>True if both numbers are EXACTLY the same.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>10 = 10</code></td>
+<td>True ✅</td>
+</tr>
+<tr>
+<td><code>10 = 5</code></td>
+<td>False ❌</td>
+</tr>
+<tr>
+<td><code>0 = 0</code></td>
+<td>True ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use for:</strong> Exact matches, "did we reach exactly 100?", "is timer 0?"</p>
+<hr />
+<h3 id="all-three-comparison-operators">All Three Comparison Operators<a class="headerlink" href="#all-three-comparison-operators" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Symbol</th>
+<th>True When...</th>
+<th>Memory Trick</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt; &gt;</code></td>
+<td>&lt;</td>
+<td>Left SMALLER than right</td>
+<td>"Less than" points to smaller</td>
+</tr>
+<tr>
+<td><code>&lt; &gt;</code></td>
+<td>&gt;</td>
+<td>Left BIGGER than right</td>
+<td>"Greater than" points to bigger</td>
+</tr>
+<tr>
+<td><code>&lt; = &gt;</code></td>
+<td>=</td>
+<td>Left EQUALS right</td>
+<td>Two lines = same</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="random-numbers-pick-random">Random Numbers — Pick Random!<a class="headerlink" href="#random-numbers-pick-random" title="Permanent link">&para;</a></h2>
+<h3 id="pick-random-block-operators-green">Pick Random Block (Operators → Green)<a class="headerlink" href="#pick-random-block-operators-green" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pick random (1) to (10)
+</span></code></pre></div>
+<p><strong>Gives a random whole number</strong> between the two numbers (including both!).</p>
+<h3 id="random-number-uses">Random Number Uses<a class="headerlink" href="#random-number-uses" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Range</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pick random 1 to 6</code></td>
+<td>1–6</td>
+<td>Dice roll</td>
+</tr>
+<tr>
+<td><code>pick random 1 to 100</code></td>
+<td>1–100</td>
+<td>Percent chance (1% each)</td>
+</tr>
+<tr>
+<td><code>pick random -10 to 10</code></td>
+<td>-10 to 10</td>
+<td>Random direction</td>
+</tr>
+<tr>
+<td><code>pick random 0 to 360</code></td>
+<td>0–360</td>
+<td>Random angle</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="random-in-action">Random in Action<a class="headerlink" href="#random-in-action" title="Permanent link">&para;</a></h3>
+<h4 id="random-spawn-position">Random Spawn Position<a class="headerlink" href="#random-spawn-position" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when I start as a clone
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>go to x: (pick random -200 to 200) y: (pick random -150 to 150)
+</span></code></pre></div>
+<h4 id="random-chance-20-1-in-5">Random Chance (20% = 1 in 5)<a class="headerlink" href="#random-chance-20-1-in-5" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>if &lt; (pick random 1 to 5) = 1 &gt; then
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    // 20% chance!
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    broadcast [rare-item v]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>end
+</span></code></pre></div>
+<h4 id="random-wait">Random Wait<a class="headerlink" href="#random-wait" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>forever
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    wait (pick random 1 to 3) secs
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    create clone of [myself v]
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="counted-repetition-exact-loops">Counted Repetition — Exact Loops!<a class="headerlink" href="#counted-repetition-exact-loops" title="Permanent link">&para;</a></h2>
+<h3 id="repeat-block-control-orange">Repeat Block (Control → Orange)<a class="headerlink" href="#repeat-block-control-orange" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>repeat (10)
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    move 10 steps
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    turn 15 degrees
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>end
+</span></code></pre></div>
+<p><strong>Runs exactly N times</strong> — perfect when you know how many!</p>
+<hr />
+<h3 id="counted-repeat-examples">Counted Repeat Examples<a class="headerlink" href="#counted-repeat-examples" title="Permanent link">&para;</a></h3>
+<h4 id="draw-a-polygon">Draw a Polygon<a class="headerlink" href="#draw-a-polygon" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>repeat (5)        // Pentagon
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    move 100 steps
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    turn 72 degrees    // 360/5 = 72
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>end
+</span></code></pre></div>
+<h4 id="spawn-exact-number">Spawn Exact Number<a class="headerlink" href="#spawn-exact-number" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>repeat (10)
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    create clone of [myself v]
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    wait 0.5 secs
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>end
+</span></code></pre></div>
+<h4 id="countdown">Countdown<a class="headerlink" href="#countdown" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>set [countdown v] to (10)
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>repeat (10)
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    say (countdown) for 1 secs
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    change [countdown v] by (-1)
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="variable-basics-your-data-boxes">Variable Basics — Your Data Boxes!<a class="headerlink" href="#variable-basics-your-data-boxes" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-variable">What Is a Variable?<a class="headerlink" href="#what-is-a-variable" title="Permanent link">&para;</a></h3>
+<p>A <strong>variable</strong> is a <strong>named box</strong> that holds <strong>one value</strong> that can <strong>change</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>set [score v] to (0)    // Put 0 in the &quot;score&quot; box
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>change [score v] by (10)  // Add 10 to the box
+</span></code></pre></div>
+<h3 id="variable-blocks-variables-red">Variable Blocks (Variables → Red)<a class="headerlink" href="#variable-blocks-variables-red" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set [name v] to (value)</code></td>
+<td>Put exact value in box</td>
+</tr>
+<tr>
+<td><code>change [name v] by (amount)</code></td>
+<td>Add/subtract from box</td>
+</tr>
+<tr>
+<td><code>show variable [name]</code></td>
+<td>Display on stage</td>
+</tr>
+<tr>
+<td><code>hide variable [name]</code></td>
+<td>Remove from stage</td>
+</tr>
+<tr>
+<td><code>variable</code> (reporter)</td>
+<td>Get current value</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="creating-variables">Creating Variables<a class="headerlink" href="#creating-variables" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Variables</strong> (🔴 Red)</li>
+<li>Click <strong>Make a Variable</strong></li>
+<li>Name it: <code>score</code>, <code>lives</code>, <code>timer</code>, <code>level</code>, <code>high-score</code></li>
+<li>Choose scope:</li>
+<li><strong>For all sprites</strong> = shared (one box for everyone)</li>
+<li><strong>For this sprite only</strong> = private (each sprite has own)</li>
+<li>Click OK!</li>
+</ol>
+<hr />
+<h3 id="variable-scope-who-can-see-it">Variable Scope — Who Can See It?<a class="headerlink" href="#variable-scope-who-can-see-it" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Who Sees It</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>For all sprites</strong></td>
+<td>Everyone shares ONE box</td>
+<td>Score, timer, high score, level</td>
+</tr>
+<tr>
+<td><strong>For this sprite only</strong></td>
+<td>Each sprite has own box</td>
+<td>Player health, enemy speed, sprite state</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="variable-examples">Variable Examples<a class="headerlink" href="#variable-examples" title="Permanent link">&para;</a></h3>
+<h4 id="score-system">Score System<a class="headerlink" href="#score-system" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>when green flag clicked
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>set [score v] to (0)
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>show variable [score v]
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>when I receive [coin-collected v]
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>change [score v] by (10)
+</span></code></pre></div>
+<h4 id="lives-system">Lives System<a class="headerlink" href="#lives-system" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>when green flag clicked
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>set [lives v] to (3)
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>show variable [lives v]
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>when I receive [player-hit v]
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>change [lives v] by (-1)
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>if &lt; (lives) = 0 &gt; then
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    broadcast [game-over v]
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>end
+</span></code></pre></div>
+<h4 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>when green flag clicked
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>set [timer v] to (0)
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>show variable [timer v]
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>forever
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    wait (1) secs
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    change [timer v] by (1)
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="showhide-variables-control-the-display">Show/Hide Variables — Control the Display!<a class="headerlink" href="#showhide-variables-control-the-display" title="Permanent link">&para;</a></h2>
+<h3 id="show-variable">Show Variable<a class="headerlink" href="#show-variable" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>show variable [score v]
+</span></code></pre></div>
+<p><strong>Displays the variable</strong> on the stage (top-left by default).</p>
+<h3 id="hide-variable">Hide Variable<a class="headerlink" href="#hide-variable" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>hide variable [score v]
+</span></code></pre></div>
+<p><strong>Removes from stage</strong> — but value still exists!</p>
+<hr />
+<h3 id="when-to-showhide">When to Show/Hide<a class="headerlink" href="#when-to-showhide" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Game starts</td>
+<td><code>show variable [score]</code>, <code>show variable [lives]</code></td>
+</tr>
+<tr>
+<td>Menu screen</td>
+<td><code>hide variable [score]</code>, <code>show variable [high-score]</code></td>
+</tr>
+<tr>
+<td>Game over</td>
+<td><code>hide variable [lives]</code>, <code>show variable [final-score]</code></td>
+</tr>
+<tr>
+<td>Pause menu</td>
+<td><code>hide variable [timer]</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">👁️ Show What Matters!</p>
+<p>Only show variables the player <strong>needs to see right now</strong>. Too many = clutter!</p>
+</div>
+<hr />
+<h2 id="lists-collections-of-values">Lists — Collections of Values!<a class="headerlink" href="#lists-collections-of-values" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-list">What Is a List?<a class="headerlink" href="#what-is-a-list" title="Permanent link">&para;</a></h3>
+<p>A <strong>list</strong> is like a variable, but holds <strong>MULTIPLE values</strong> in order — like a shopping list!</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>List: inventory
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>[0] &quot;sword&quot;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>[1] &quot;shield&quot;
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>[2] &quot;potion&quot;
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>[3] &quot;key&quot;
+</span></code></pre></div>
+<hr />
+<h3 id="creating-a-list">Creating a List<a class="headerlink" href="#creating-a-list" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Variables</strong> (🔴 Red)</li>
+<li>Click <strong>Make a List</strong></li>
+<li>Name it: <code>inventory</code>, <code>high-scores</code>, <code>level-codes</code>, <code>player-names</code></li>
+<li>Choose scope: <strong>For all sprites</strong> or <strong>For this sprite only</strong></li>
+<li>Click OK!</li>
+</ol>
+<hr />
+<h3 id="list-blocks-variables-dark-red">List Blocks (Variables → Dark Red)<a class="headerlink" href="#list-blocks-variables-dark-red" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add [thing v] to [list v]</code></td>
+<td>Append to end</td>
+</tr>
+<tr>
+<td><code>delete (1) of [list v]</code></td>
+<td>Remove item at position</td>
+</tr>
+<tr>
+<td><code>insert [thing v] at (1) of [list v]</code></td>
+<td>Insert at position</td>
+</tr>
+<tr>
+<td><code>replace item (1) of [list v] with [thing v]</code></td>
+<td>Change existing</td>
+</tr>
+<tr>
+<td><code>item (1) of [list v]</code></td>
+<td>Reporter: get value at position</td>
+</tr>
+<tr>
+<td><code>length of [list v]</code></td>
+<td>Reporter: how many items</td>
+</tr>
+<tr>
+<td><code>list contains [thing v]?</code></td>
+<td>Boolean: is it in list?</td>
+</tr>
+<tr>
+<td><code>show list [name]</code></td>
+<td>Display on stage</td>
+</tr>
+<tr>
+<td><code>hide list [name]</code></td>
+<td>Hide from stage</td>
+</tr>
+<tr>
+<td><code>delete all of [list v]</code></td>
+<td>Clear everything</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="list-examples">List Examples<a class="headerlink" href="#list-examples" title="Permanent link">&para;</a></h3>
+<h4 id="inventory-system">Inventory System<a class="headerlink" href="#inventory-system" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>when green flag clicked
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>delete all of [inventory v]
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>add [sword] to [inventory v]
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>add [shield] to [inventory v]
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>show list [inventory v]
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>when I receive [found-potion v]
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>add [potion] to [inventory v]
+</span></code></pre></div>
+<h4 id="high-score-list">High Score List<a class="headerlink" href="#high-score-list" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>when green flag clicked
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>delete all of [high-scores v]
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>repeat 5
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    add (0) to [high-scores v]
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>end
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>when I receive [new-score v]
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>if &lt; (score) &gt; (item (1) of [high-scores v]) &gt; then
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    insert (score) at (1) of [high-scores v]
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    delete (6) of [high-scores v]  // Keep top 5
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="block-parameters-custom-block-inputs">Block Parameters — Custom Block Inputs!<a class="headerlink" href="#block-parameters-custom-block-inputs" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-parameters">What Are Parameters?<a class="headerlink" href="#what-are-parameters" title="Permanent link">&para;</a></h3>
+<p><strong>Parameters</strong> are <strong>inputs</strong> for your custom blocks — like function arguments!</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>define jump (height)
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>change y by (height)
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>wait 0.2 secs
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>change y by (height * -1)
+</span></code></pre></div>
+<p><strong>Use it:</strong> <code>jump (100)</code> → jumps high! <code>jump (20)</code> → small hop!</p>
+<hr />
+<h3 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Make a Block</strong> in My Blocks (🩷 Pink)</li>
+<li>Click <strong>Options</strong> (gear icon)</li>
+<li>Click <strong>Add number input</strong> or <strong>Add string input</strong></li>
+<li>Name it: <code>height</code>, <code>speed</code>, <code>name</code>, <code>color</code></li>
+<li>Click OK — parameter appears in <code>define</code> hat!</li>
+</ol>
+<hr />
+<h3 id="parameter-types">Parameter Types<a class="headerlink" href="#parameter-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Accepts</th>
+<th>Example Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Number input</strong></td>
+<td>Numbers</td>
+<td><code>jump (height)</code>, <code>move (steps)</code></td>
+</tr>
+<tr>
+<td><strong>String input</strong></td>
+<td>Text</td>
+<td><code>say (message)</code>, <code>set name to (name)</code></td>
+</tr>
+<tr>
+<td><strong>Boolean input</strong></td>
+<td>True/false</td>
+<td><code>if (condition) then</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="parameter-examples">Parameter Examples<a class="headerlink" href="#parameter-examples" title="Permanent link">&para;</a></h3>
+<h4 id="jump-with-height">Jump with Height<a class="headerlink" href="#jump-with-height" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>define jump (height)
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>change y by (height)
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>wait 0.2 secs
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>change y by (height * -1)
+</span></code></pre></div>
+<p><strong>Use:</strong> <code>jump (100)</code> = high jump, <code>jump (20)</code> = small hop</p>
+<h4 id="draw-polygon">Draw Polygon<a class="headerlink" href="#draw-polygon" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>define polygon (sides) (size)
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>repeat (sides)
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    move (size) steps
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    turn (360 / sides) degrees
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>end
+</span></code></pre></div>
+<p><strong>Use:</strong> <code>polygon (5) (100)</code> = pentagon, <code>polygon (8) (50)</code> = octagon!</p>
+<h4 id="glide-to-position">Glide to Position<a class="headerlink" href="#glide-to-position" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>define glide-to (target-x) (target-y) (seconds)
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>glide (seconds) secs to x: (target-x) y: (target-y)
+</span></code></pre></div>
+<p><strong>Use:</strong> <code>glide-to (100) (50) (2)</code> — smooth move to (100, 50) in 2 secs!</p>
+<hr />
+<h2 id="abstraction-hiding-complexity">Abstraction — Hiding Complexity!<a class="headerlink" href="#abstraction-hiding-complexity" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-abstraction">What Is Abstraction?<a class="headerlink" href="#what-is-abstraction" title="Permanent link">&para;</a></h3>
+<p><strong>Abstraction</strong> = hiding complex details behind a simple name.</p>
+<p><strong>Analogy:</strong> You press "Start" on a microwave. You don't need to know how magnetrons work — you just press "Start"!</p>
+<h3 id="in-scratch-custom-blocks-abstraction">In Scratch: Custom Blocks = Abstraction!<a class="headerlink" href="#in-scratch-custom-blocks-abstraction" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>define draw-house (size)
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>repeat 4
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    move (size) steps
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    turn 90 degrees
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>end
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>move (size) steps
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>turn 30 degrees
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>repeat 3
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    move (size) steps
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>    turn 120 degrees
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>end
+</span></code></pre></div>
+<p><strong>User just types:</strong> <code>draw-house (100)</code> — doesn't need to know the math!</p>
+<hr />
+<h3 id="why-abstraction-helps">Why Abstraction Helps<a class="headerlink" href="#why-abstraction-helps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Less repetition</strong></td>
+<td>Write once, use many times</td>
+</tr>
+<tr>
+<td><strong>Easier to read</strong></td>
+<td><code>draw-house</code> vs 20 motion blocks</td>
+</tr>
+<tr>
+<td><strong>Easy to fix</strong></td>
+<td>Change once, fixes everywhere</td>
+</tr>
+<tr>
+<td><strong>Shareable</strong></td>
+<td>Backpack your blocks to other projects</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pen-extension-deep-dive-drawing-details">Pen Extension Deep Dive — Drawing Details!<a class="headerlink" href="#pen-extension-deep-dive-drawing-details" title="Permanent link">&para;</a></h2>
+<h3 id="pen-blocks-review-pen-green">Pen Blocks Review (Pen → Green)<a class="headerlink" href="#pen-blocks-review-pen-green" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pen down</code></td>
+<td>Start drawing trail</td>
+</tr>
+<tr>
+<td><code>pen up</code></td>
+<td>Stop drawing</td>
+</tr>
+<tr>
+<td><code>erase all</code></td>
+<td>Clear all pen marks</td>
+</tr>
+<tr>
+<td><code>set pen color to [color]</code></td>
+<td>Set exact color</td>
+</tr>
+<tr>
+<td><code>change pen color by (10)</code></td>
+<td>Cycle through colors</td>
+</tr>
+<tr>
+<td><code>set pen size to (5)</code></td>
+<td>Line thickness</td>
+</tr>
+<tr>
+<td><code>change pen size by (5)</code></td>
+<td>Thicker/thinner</td>
+</tr>
+<tr>
+<td><code>stamp</code></td>
+<td>Leave costume copy as drawing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="pen-down-pen-up">Pen Down / Pen Up<a class="headerlink" href="#pen-down-pen-up" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>pen down      // Start drawing
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>move 100 steps
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>pen up        // Stop drawing
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>move 50 steps // No trail
+</span></code></pre></div>
+<p><strong>Only draws when pen is DOWN!</strong></p>
+<hr />
+<h3 id="pen-color">Pen Color<a class="headerlink" href="#pen-color" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set pen color to [color]</code></td>
+<td>Pick exact color</td>
+</tr>
+<tr>
+<td><code>change pen color by (10)</code></td>
+<td>Cycle through spectrum (0-200)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pen-size">Pen Size<a class="headerlink" href="#pen-size" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>set pen size to (10)     // Thick line
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>change pen size by (5)   // Thicker
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>set pen size to (1)      // Thin line
+</span></code></pre></div>
+<hr />
+<h3 id="clear-graphics">Clear Graphics<a class="headerlink" href="#clear-graphics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>erase all</code></td>
+<td>Clear ALL pen marks</td>
+</tr>
+<tr>
+<td><code>clear graphics</code></td>
+<td>Same as erase all</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="pen-examples">Pen Examples<a class="headerlink" href="#pen-examples" title="Permanent link">&para;</a></h3>
+<h4 id="rainbow-spiral">Rainbow Spiral<a class="headerlink" href="#rainbow-spiral" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>when green flag clicked
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>erase all
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>pen down
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>set pen size to 5
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>repeat 360
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    move 5 steps
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    turn 1 degrees
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    change pen color by 1
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>end
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>pen up
+</span></code></pre></div>
+<h4 id="stamp-circle">Stamp Circle<a class="headerlink" href="#stamp-circle" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>when green flag clicked
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>erase all
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>pen up
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>repeat 12
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    go to x: 0 y: 0
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>    move 100 steps
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>    stamp
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>    turn 30 degrees
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="motion-detection-camera-magic">Motion Detection — Camera Magic!<a class="headerlink" href="#motion-detection-camera-magic" title="Permanent link">&para;</a></h2>
+<h3 id="video-sensing-recap-extensions-video-sensing">Video Sensing Recap (Extensions → Video Sensing)<a class="headerlink" href="#video-sensing-recap-extensions-video-sensing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>turn video [on v]</code></td>
+<td>Start/stop camera</td>
+</tr>
+<tr>
+<td><code>video [on v] on [stage v]</code></td>
+<td>Show/hide video</td>
+</tr>
+<tr>
+<td><code>video transparency (50)</code></td>
+<td>See-through amount</td>
+</tr>
+<tr>
+<td><code>video [motion v] on [this sprite v]</code></td>
+<td>Motion amount (0-100)</td>
+</tr>
+<tr>
+<td><code>when video [motion] &gt; (50)</code></td>
+<td>Hat: triggers on motion</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="motion-detection-example">Motion Detection Example<a class="headerlink" href="#motion-detection-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>when green flag clicked
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>turn video on
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>set video transparency to 50
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>forever
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    if &lt;video [motion] on [this sprite] &gt; 30&gt; then
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>        change color effect by 10
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>        play sound [pop v]
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    end
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>end
+</span></code></pre></div>
+<p><strong>Wave at camera → sprite reacts!</strong></p>
+<hr />
+<h2 id="talking-sprites-text-to-speech">Talking Sprites — Text to Speech!<a class="headerlink" href="#talking-sprites-text-to-speech" title="Permanent link">&para;</a></h2>
+<h3 id="text-to-speech-recap-extensions-text-to-speech">Text to Speech Recap (Extensions → Text to Speech)<a class="headerlink" href="#text-to-speech-recap-extensions-text-to-speech" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>speak [Hello!]</code></td>
+<td>Speaks immediately</td>
+</tr>
+<tr>
+<td><code>speak [Hello!] and wait</code></td>
+<td>Speaks, waits for finish</td>
+</tr>
+<tr>
+<td><code>set voice to [alto v]</code></td>
+<td>Choose voice</td>
+</tr>
+<tr>
+<td><code>set language to [English v]</code></td>
+<td>Choose language</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voices-alto-tenor-soprano-random">Voices: <code>alto</code>, <code>tenor</code>, <code>soprano</code>, <code>random</code><a class="headerlink" href="#voices-alto-tenor-soprano-random" title="Permanent link">&para;</a></h3>
+<h3 id="languages-english-spanish-french-german-chinese-japanese-korean">Languages: English, Spanish, French, German, Chinese, Japanese, Korean...<a class="headerlink" href="#languages-english-spanish-french-german-chinese-japanese-korean" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="text-to-speech-example">Text to Speech Example<a class="headerlink" href="#text-to-speech-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>when green flag clicked
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>set voice to [tenor v]
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>set language to [English v]
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>speak [Welcome to my game!] and wait
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>speak [Use arrow keys to move.]
+</span></code></pre></div>
+<hr />
+<h2 id="accessibility-features-making-games-for-everyone">Accessibility Features — Making Games for Everyone!<a class="headerlink" href="#accessibility-features-making-games-for-everyone" title="Permanent link">&para;</a></h2>
+<h3 id="why-accessibility-matters">Why Accessibility Matters<a class="headerlink" href="#why-accessibility-matters" title="Permanent link">&para;</a></h3>
+<p>Games should be <strong>fun for everyone</strong> — including players with different abilities!</p>
+<h3 id="scratch-accessibility-features">Scratch Accessibility Features<a class="headerlink" href="#scratch-accessibility-features" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>How It Helps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High contrast</strong></td>
+<td>Use bright colors on dark backgrounds</td>
+</tr>
+<tr>
+<td><strong>Text to Speech</strong></td>
+<td>Read text aloud for visually impaired</td>
+</tr>
+<tr>
+<td><strong>Large text</strong></td>
+<td>Big speech bubbles, large variable displays</td>
+</tr>
+<tr>
+<td><strong>Simple controls</strong></td>
+<td>One key per action, no complex combos</td>
+</tr>
+<tr>
+<td><strong>Visual cues</strong></td>
+<td>Flash, color change, not just sound</td>
+</tr>
+<tr>
+<td><strong>Adjustable speed</strong></td>
+<td>Variable for game speed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="accessible-design-tips">Accessible Design Tips<a class="headerlink" href="#accessible-design-tips" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color + Shape</strong></td>
+<td>Red X (color) + X mark (shape) for "wrong"</td>
+</tr>
+<tr>
+<td><strong>Sound + Visual</strong></td>
+<td>Flash screen AND play sound for hit</td>
+</tr>
+<tr>
+<td><strong>Adjustable text</strong></td>
+<td>Let player choose font size</td>
+</tr>
+<tr>
+<td><strong>No time limits</strong></td>
+<td>Or make them optional</td>
+</tr>
+<tr>
+<td><strong>Remappable keys</strong></td>
+<td>Let player choose controls</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="multilingual-projects-games-for-the-world">Multilingual Projects — Games for the World!<a class="headerlink" href="#multilingual-projects-games-for-the-world" title="Permanent link">&para;</a></h2>
+<h3 id="translate-text-to-speech-polyglot-games">Translate + Text to Speech = Polyglot Games!<a class="headerlink" href="#translate-text-to-speech-polyglot-games" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>when green flag clicked
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>set language to [Spanish v]
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>speak (translate [Welcome!] to [Spanish v]) and wait
+</span></code></pre></div>
+<h3 id="supported-languages">Supported Languages<a class="headerlink" href="#supported-languages" title="Permanent link">&para;</a></h3>
+<p>English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Russian, Arabic, Hindi, and many more!</p>
+<hr />
+<h3 id="multilingual-example">Multilingual Example<a class="headerlink" href="#multilingual-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>when green flag clicked
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>set language to [Spanish v]
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>speak (translate [Welcome to my game!] to [Spanish v]) and wait
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>wait 1 secs
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>set language to [French v]
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>speak (translate [Bienvenue dans mon jeu!] to [French v]) and wait
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>wait 1 secs
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>set language to [Japanese v]
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>speak (translate [ようこそ！] to [Japanese v]) and wait
+</span></code></pre></div>
+<hr />
+<h2 id="block-mechanics-snap-together">Block Mechanics — Snap Together!<a class="headerlink" href="#block-mechanics-snap-together" title="Permanent link">&para;</a></h2>
+<h3 id="how-blocks-connect">How Blocks Connect<a class="headerlink" href="#how-blocks-connect" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vertical snap</strong></td>
+<td>Top/bottom notches click</td>
+</tr>
+<tr>
+<td><strong>Horizontal insert</strong></td>
+<td>White/hex holes accept reporters/booleans</td>
+</tr>
+<tr>
+<td><strong>Drag to insert</strong></td>
+<td>Drag between blocks — white line shows where</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="snap-rules">Snap Rules<a class="headerlink" href="#snap-rules" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hat only at top</strong></td>
+<td>Nothing above hat block</td>
+</tr>
+<tr>
+<td><strong>Cap only at bottom</strong></td>
+<td>Nothing below cap block</td>
+</tr>
+<tr>
+<td><strong>Reporters in white holes</strong></td>
+<td>Number/text inputs</td>
+</tr>
+<tr>
+<td><strong>Booleans in hex holes</strong></td>
+<td>True/false inputs</td>
+</tr>
+<tr>
+<td><strong>Stacks stack vertically</strong></td>
+<td>Top to bottom order</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="remix-exploration-learn-from-others">Remix Exploration — Learn from Others!<a class="headerlink" href="#remix-exploration-learn-from-others" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-remixing">What Is Remixing?<a class="headerlink" href="#what-is-remixing" title="Permanent link">&para;</a></h3>
+<p><strong>Remixing</strong> = taking someone's project, making changes, sharing as your own!</p>
+<h3 id="how-to-remix">How to Remix<a class="headerlink" href="#how-to-remix" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Find a project you like</li>
+<li>Click <strong>See Inside</strong> (view code)</li>
+<li>Click <strong>Remix</strong> (creates your copy)</li>
+<li>Make changes</li>
+<li><strong>Share</strong> — automatically credits original!</li>
+</ol>
+<h3 id="learning-from-remixes">Learning from Remixes<a class="headerlink" href="#learning-from-remixes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>What to Look For</th>
+<th>What to Learn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>How they did movement</strong></td>
+<td>Player controller patterns</td>
+</tr>
+<tr>
+<td><strong>How they did collisions</strong></td>
+<td><code>touching color?</code>, <code>distance to</code></td>
+</tr>
+<tr>
+<td><strong>How they managed state</strong></td>
+<td>Variables, lists, broadcasts</td>
+</tr>
+<tr>
+<td><strong>How they organized code</strong></td>
+<td>Custom blocks, comments, clean up</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Remix = Free Tutorial!</p>
+<p>Every remixed project is a <strong>free masterclass</strong> — see exactly how they did it!</p>
+</div>
+<hr />
+<h3 id="remix-etiquette">Remix Etiquette<a class="headerlink" href="#remix-etiquette" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Credit original</strong> (auto-added)</td>
+<td>Claim as 100% yours</td>
+</tr>
+<tr>
+<td><strong>Make meaningful changes</strong></td>
+<td>Just change title/colors</td>
+</tr>
+<tr>
+<td><strong>Thank creator</strong> in notes</td>
+<td>Claim their code as yours</td>
+</tr>
+<tr>
+<td><strong>Add your twist</strong></td>
+<td>Copy-paste without understanding</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="project-tags-help-others-find-your-game">Project Tags — Help Others Find Your Game!<a class="headerlink" href="#project-tags-help-others-find-your-game" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-tags">What Are Tags?<a class="headerlink" href="#what-are-tags" title="Permanent link">&para;</a></h3>
+<p><strong>Tags</strong> are keywords that help people <strong>find your project</strong> in search!</p>
+<h3 id="good-tags">Good Tags<a class="headerlink" href="#good-tags" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Genre</strong></td>
+<td><code>platformer</code>, <code>rpg</code>, <code>puzzle</code>, <code>shooter</code>, <code>racing</code></td>
+</tr>
+<tr>
+<td><strong>Style</strong></td>
+<td><code>pixel-art</code>, <code>hand-drawn</code>, <code>3d</code>, <code>anime</code>, <code>retro</code></td>
+</tr>
+<tr>
+<td><strong>Theme</strong></td>
+<td><code>space</code>, <code>fantasy</code>, <code>horror</code>, <code>cute</code>, <code>educational</code></td>
+</tr>
+<tr>
+<td><strong>Tech</strong></td>
+<td><code>pen</code>, <code>clones</code>, <code>lists</code>, <code>video-sensing</code>, <code>microbit</code></td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td><code>beginner</code>, <code>kids</code>, <code>all-ages</code>, <code>challenging</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tagging-tips">Tagging Tips<a class="headerlink" href="#tagging-tips" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5-10 tags max</strong></td>
+<td>Too many = spammy</td>
+</tr>
+<tr>
+<td><strong>Be specific</strong></td>
+<td><code>platformer</code> better than <code>game</code></td>
+</tr>
+<tr>
+<td><strong>Use popular tags</strong></td>
+<td>Check what similar projects use</td>
+</tr>
+<tr>
+<td><strong>Update tags</strong></td>
+<td>Add new tags when you add features</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this chapter, you learned:</p>
+<ul>
+<li>✅ <strong>Comparison operators</strong> — <code>&gt;</code>, <code>&lt;</code>, <code>=</code> for smart decisions</li>
+<li>✅ <strong>Random numbers</strong> — <code>pick random</code> for dice, spawns, chance</li>
+<li>✅ <strong>Counted repetition</strong> — <code>repeat (N)</code> for exact loops</li>
+<li>✅ <strong>Variables</strong> — Create, set, change, show/hide, scope</li>
+<li>✅ <strong>Lists</strong> — Create, add, delete, insert, length, contains</li>
+<li>✅ <strong>Block parameters</strong> — Custom blocks with inputs</li>
+<li>✅ <strong>Abstraction</strong> — Hide complexity in custom blocks</li>
+<li>✅ <strong>Pen details</strong> — Down/up, color, size, clear, stamp</li>
+<li>✅ <strong>Motion detection</strong> — Camera-based games</li>
+<li>✅ <strong>Text to Speech</strong> — Talking sprites</li>
+<li>✅ <strong>Accessibility</strong> — Games for everyone</li>
+<li>✅ <strong>Multilingual</strong> — Translate + Speech = world-ready</li>
+<li>✅ <strong>Block snapping</strong> — How connections work</li>
+<li>✅ <strong>Remixing</strong> — Learn by modifying others' work</li>
+<li>✅ <strong>Project tags</strong> — Help players find your game</li>
+</ul>
+<hr />
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Greater Than (&gt;)</strong></td>
+<td>Left bigger than right</td>
+</tr>
+<tr>
+<td><strong>Equal (=)</strong></td>
+<td>Left exactly equals right</td>
+</tr>
+<tr>
+<td><strong>Pick Random</strong></td>
+<td>Random integer in range</td>
+</tr>
+<tr>
+<td><strong>Counted Repetition</strong></td>
+<td><code>repeat (N)</code> exact loop</td>
+</tr>
+<tr>
+<td><strong>Set Variable</strong></td>
+<td>Put exact value in box</td>
+</tr>
+<tr>
+<td><strong>Show/Hide Variable</strong></td>
+<td>Display or hide on stage</td>
+</tr>
+<tr>
+<td><strong>Variable Scope</strong></td>
+<td>For all sprites vs this sprite only</td>
+</tr>
+<tr>
+<td><strong>List Creation</strong></td>
+<td><code>make a list</code> for collections</td>
+</tr>
+<tr>
+<td><strong>Block Parameters</strong></td>
+<td>Inputs for custom blocks</td>
+</tr>
+<tr>
+<td><strong>Abstraction</strong></td>
+<td>Hide complexity behind simple name</td>
+</tr>
+<tr>
+<td><strong>Pen Down/Up</strong></td>
+<td>Start/stop drawing trail</td>
+</tr>
+<tr>
+<td><strong>Pen Color/Size</strong></td>
+<td>Drawing appearance</td>
+</tr>
+<tr>
+<td><strong>Erase All/Clear</strong></td>
+<td>Remove pen marks</td>
+</tr>
+<tr>
+<td><strong>Motion Detection</strong></td>
+<td>Camera-based movement sensing</td>
+</tr>
+<tr>
+<td><strong>Text to Speech</strong></td>
+<td>Synthetic voice from text</td>
+</tr>
+<tr>
+<td><strong>Accessibility</strong></td>
+<td>Design for all abilities</td>
+</tr>
+<tr>
+<td><strong>Multilingual</strong></td>
+<td>Multiple languages in one project</td>
+</tr>
+<tr>
+<td><strong>Snap Together</strong></td>
+<td>How blocks connect</td>
+</tr>
+<tr>
+<td><strong>Remix</strong></td>
+<td>Modify and share someone's project</td>
+</tr>
+<tr>
+<td><strong>Project Tags</strong></td>
+<td>Keywords for discoverability</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge 1:</strong> Create a <strong>high score list</strong> (list) that saves top 5 scores</p>
+<p><strong>Challenge 2:</strong> Make a <strong>custom block</strong> <code>draw-star (size) (points)</code> using Pen</p>
+<p><strong>Challenge 3:</strong> Build a <strong>shop system</strong> — list <code>inventory</code>, variable <code>coins</code>, buy/sell items</p>
+<p><strong>Challenge 4:</strong> Add <strong>Text to Speech</strong> to make your game <strong>accessible</strong> (reads instructions)</p>
+<p><strong>Challenge 5:</strong> <strong>Remix a project</strong> from the Scratch community — add your own feature</p>
+<p><strong>Challenge 6:</strong> Add <strong>tags</strong> to your best project and share it</p>
+<p><strong>Challenge 6:</strong> Make your game <strong>multilingual</strong> — at least 3 languages</p>
+<hr />
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>In <strong>Chapter 8</strong>, you'll explore <strong>Animation, Parallelism, and Debugging</strong> — bringing your games to life with smooth animations, multiple things happening at once, and fixing bugs like a pro!</p>
+<p><a href="../08-animation-parallelism-debugging/"><strong>→ Next Chapter: Animation, Parallelism, and Debugging</strong></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../06-broadcasting-conditionals-sensing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. Broadcasting, Conditionals, and Sensing">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                6. Broadcasting, Conditionals, and Sensing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../08-animation-parallelism-debugging/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Animation, Parallelism, and Debugging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                8. Animation, Parallelism, and Debugging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

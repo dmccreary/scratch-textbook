@@ -1,0 +1,20 @@
+{
+  "FOUND": "SteelBlue",
+  "SCRATCH_ACC": "DarkSlateBlue",
+  "MOTION": "DarkGreen",
+  "LOOKS": "LimeGreen",
+  "SOUND": "Gold",
+  "PEN": "DarkGoldenrod",
+  "CONTROL": "Teal",
+  "EVENTS": "DodgerBlue",
+  "SENSING": "LightSkyBlue",
+  "OPERATORS": "Crimson",
+  "DATA": "DarkRed",
+  "CLONING": "MediumPurple",
+  "EXTENSIONS": "Indigo",
+  "CUSTOM_BLOCKS": "DarkOrchid",
+  "DESIGN": "HotPink",
+  "DEBUGGING": "Tomato",
+  "BLOCK_TYPES": "DimGray",
+  "MISC": "DimGray"
+}

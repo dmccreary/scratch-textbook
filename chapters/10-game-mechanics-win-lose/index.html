@@ -1,0 +1,4504 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Builds complete game mechanics with collision detection, scoring, lives, and win/lose states for young learners">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/10-game-mechanics-win-lose/">
+      
+      
+        <link rel="prev" href="../09-advanced-control-operators/">
+      
+      
+        <link rel="next" href="../11-design-process-capstone/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Game Mechanics and Win/Lose Conditions - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#game-mechanics-and-winlose-conditions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Game Mechanics and Win/Lose Conditions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-welcome-to-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-variables-lists-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-item-access-getting-specific-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Access — Getting Specific Items! 📋
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item Access — Getting Specific Items! 📋">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-item-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-position-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Position Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-specific-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Specific Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-all-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Through All Items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-last-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Last Item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-in-game-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item in Game Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item in Game Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-item-from-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Item from Inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equip-best-weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equip Best Weapon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-from-list-removing-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete From List — Removing Items! 🗑️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete From List — Removing Items! 🗑️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-used-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Used Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-specific-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Specific Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-entire-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Entire List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-by-value-search-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove by Value (Search + Delete)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete + High Score List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-contains-is-it-in-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Contains — Is It In There? 🔍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Contains — Is It In There? 🔍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-contains-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Contains Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contains Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-duplicate-before-adding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Duplicate Before Adding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-quest-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Quest Item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-vs-item-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains vs Item Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-score-list-top-players" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List — Top Players! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High Score List — Top Players! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategies-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Strategies — Quality Assurance! 🧪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Strategies — Quality Assurance! 🧪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-testing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Testing Strategies?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing-custom-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Testing (Custom Blocks)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-strategies-fix-bugs-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies — Fix Bugs Like a Pro! 🐛
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Strategies — Fix Bugs Like a Pro! 🐛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-tools-in-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Tools in Scratch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-say-live-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with say (Live Values!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-bug-patterns-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Bug Patterns &amp; Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storytelling-flow-games-that-tell-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Flow — Games That Tell Stories! 📖
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storytelling Flow — Games That Tell Stories! 📖">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-storytelling-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Storytelling Flow?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#story-structure-in-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Story Structure in Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storytelling-through-gameplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Through Gameplay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storytelling-through-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Through Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronous-broadcast-wait-for-everyone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronous Broadcast — Wait for Everyone! 🤝
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synchronous Broadcast — Wait for Everyone! 🤝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-and-wait-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait Recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-synchronous-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Synchronous Broadcast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-broadcast-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronous Broadcast Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-storm-too-many-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm — Too Many Messages! ⚡
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast Storm — Too Many Messages! ⚡">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-broadcast-storm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Broadcast Storm?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causes-of-broadcast-storms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Causes of Broadcast Storms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventing-broadcast-storms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing Broadcast Storms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-storm-example-bad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm Example (BAD!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-storm-fix-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm Fix (GOOD!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-termination-exiting-loops-properly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination — Exiting Loops Properly! 🛑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Termination — Exiting Loops Properly! 🛑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-loops-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Loops End
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Termination Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-out-of-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break Out of Forever
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-nested-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Nested Loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-all-game-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop All (Game Over)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-combination-complex-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Combination — Complex Conditions! 🧠
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Combination — Complex Conditions! 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-booleans-andornot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Booleans (And/Or/Not)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-boolean-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Boolean Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Boolean Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-conditions-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Conditions (AND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-laws-simplify" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Laws (Simplify!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-combination-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Combination Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Combination Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complex-jump-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Jump Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-ai-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy AI Decision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win-condition-victory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Condition — Victory! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Win Condition — Victory! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-win-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Win Condition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-win-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Win Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#win-condition-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Condition Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#win-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-win-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Win Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lose-condition-game-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition — Game Over! 💀
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lose Condition — Game Over! 💀">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-lose-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Lose Condition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-lose-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Lose Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lose-condition-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-over-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Over Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lose-condition-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-system-players-bag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System — Player's Bag! 🎒
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory System — Player's Bag! 🎒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Inventory System?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-list-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory List Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-inventory-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Inventory (Stack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorized-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorized Inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weightslot-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weight/Slot Limit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-design-process-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-item-access-getting-specific-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Access — Getting Specific Items! 📋
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item Access — Getting Specific Items! 📋">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-item-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-position-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Position Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-specific-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Specific Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-all-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Through All Items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-last-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Last Item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item Safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-item-in-game-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Item in Game Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Item in Game Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-item-from-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Item from Inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equip-best-weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equip Best Weapon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-from-list-removing-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete From List — Removing Items! 🗑️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete From List — Removing Items! 🗑️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-used-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Used Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-specific-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Specific Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-entire-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Entire List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-by-value-search-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove by Value (Search + Delete)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-high-score-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete + High Score List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-contains-is-it-in-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Contains — Is It In There? 🔍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List Contains — Is It In There? 🔍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-contains-block-variables-dark-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Contains Block (Variables → Dark Red)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contains Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-duplicate-before-adding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Duplicate Before Adding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-quest-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Quest Item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-vs-item-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains vs Item Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-score-list-top-players" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List — Top Players! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High Score List — Top Players! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-score-list-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score List Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-score-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Score Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategies-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Strategies — Quality Assurance! 🧪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Strategies — Quality Assurance! 🧪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-testing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Testing Strategies?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing-custom-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Testing (Custom Blocks)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-strategies-fix-bugs-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies — Fix Bugs Like a Pro! 🐛
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Strategies — Fix Bugs Like a Pro! 🐛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-tools-in-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Tools in Scratch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-say-live-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with say (Live Values!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-bug-patterns-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Bug Patterns &amp; Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storytelling-flow-games-that-tell-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Flow — Games That Tell Stories! 📖
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storytelling Flow — Games That Tell Stories! 📖">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-storytelling-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Storytelling Flow?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#story-structure-in-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Story Structure in Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storytelling-through-gameplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Through Gameplay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storytelling-through-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storytelling Through Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronous-broadcast-wait-for-everyone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronous Broadcast — Wait for Everyone! 🤝
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synchronous Broadcast — Wait for Everyone! 🤝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-and-wait-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast And Wait Recap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-synchronous-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Synchronous Broadcast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-broadcast-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronous Broadcast Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-storm-too-many-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm — Too Many Messages! ⚡
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast Storm — Too Many Messages! ⚡">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-broadcast-storm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Broadcast Storm?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causes-of-broadcast-storms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Causes of Broadcast Storms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventing-broadcast-storms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing Broadcast Storms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-storm-example-bad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm Example (BAD!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-storm-fix-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast Storm Fix (GOOD!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-termination-exiting-loops-properly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination — Exiting Loops Properly! 🛑
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Termination — Exiting Loops Properly! 🛑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-loops-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Loops End
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Termination Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-out-of-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break Out of Forever
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit-nested-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Nested Loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-all-game-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop All (Game Over)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-termination-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Termination Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-combination-complex-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Combination — Complex Conditions! 🧠
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Combination — Complex Conditions! 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combining-booleans-andornot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Booleans (And/Or/Not)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-boolean-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Boolean Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Boolean Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-conditions-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Conditions (AND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-morgans-laws-simplify" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan's Laws (Simplify!)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-combination-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Combination Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean Combination Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complex-jump-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Jump Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-ai-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy AI Decision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#win-condition-victory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Condition — Victory! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Win Condition — Victory! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-win-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Win Condition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-win-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Win Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#win-condition-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Condition Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#win-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Win Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-win-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Win Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lose-condition-game-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition — Game Over! 💀
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lose Condition — Game Over! 💀">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-lose-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Lose Condition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-lose-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Lose Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lose-condition-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-over-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Over Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lose-condition-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lose Condition Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-system-players-bag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System — Player's Bag! 🎒
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory System — Player's Bag! 🎒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Inventory System?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-list-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory List Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-inventory-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Inventory (Stack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorized-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorized Inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weightslot-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weight/Slot Limit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/10-game-mechanics-win-lose/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="game-mechanics-and-winlose-conditions">Game Mechanics and Win/Lose Conditions<a class="headerlink" href="#game-mechanics-and-winlose-conditions" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Builds complete game mechanics with collision detection, scoring, lives, and win/lose states. This chapter covers 20 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<ol>
+<li>List Item Access</li>
+<li>Testing Strategies</li>
+<li>Debugging Strategies</li>
+<li>Storytelling Flow</li>
+<li>Synchronous Broadcast</li>
+<li>Broadcast Storm</li>
+<li>Loop Termination</li>
+<li>Boolean Combination</li>
+<li>Win Condition</li>
+<li>Lose Condition</li>
+<li>Delete From List</li>
+<li>List Contains</li>
+<li>High Score List</li>
+<li>Storyboarding</li>
+<li>Clone Performance</li>
+<li>Inventory System</li>
+<li>Pair Programming</li>
+<li>Scene Planning</li>
+<li>Imagine Phase</li>
+<li>Flowchart</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
+<li><a href="../07-variables-lists-data/">7. Variables, Lists, and Data Management</a></li>
+<li><a href="../08-animation-parallelism-debugging/">8. Animation, Parallelism, and Debugging</a></li>
+<li><a href="../09-advanced-control-operators/">9. Advanced Control and Operators</a></li>
+</ul>
+<hr />
+<h2 id="list-item-access-getting-specific-items">List Item Access — Getting Specific Items! 📋<a class="headerlink" href="#list-item-access-getting-specific-items" title="Permanent link">&para;</a></h2>
+<h3 id="list-item-block-variables-dark-red">List Item Block (Variables → Dark Red)<a class="headerlink" href="#list-item-block-variables-dark-red" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>item (1) of [inventory v]
+</span></code></pre></div>
+<p><strong>Reporter: gets the value at a specific position in the list.</strong></p>
+<h3 id="list-position-numbers">List Position Numbers<a class="headerlink" href="#list-position-numbers" title="Permanent link">&para;</a></h3>
+<p><strong>Lists are 1-indexed</strong> — first item is position 1, not 0!</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>First item</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Second item</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Third item</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>(length of list)</td>
+<td>Last item</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-item-examples">List Item Examples<a class="headerlink" href="#list-item-examples" title="Permanent link">&para;</a></h3>
+<h4 id="access-specific-item">Access Specific Item<a class="headerlink" href="#access-specific-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>say (item (1) of [inventory v]) for 2 secs  // Says first item
+</span></code></pre></div>
+<h4 id="loop-through-all-items">Loop Through All Items<a class="headerlink" href="#loop-through-all-items" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>repeat (length of [inventory v])
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    say (item (loop-counter) of [inventory v]) for 1 secs
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>end
+</span></code></pre></div>
+<h4 id="get-last-item">Get Last Item<a class="headerlink" href="#get-last-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>set [last-item v] to (item (length of [list v]) of [list v])
+</span></code></pre></div>
+<hr />
+<h3 id="list-item-safety">List Item Safety<a class="headerlink" href="#list-item-safety" title="Permanent link">&para;</a></h3>
+<p><strong>Always check bounds before accessing!</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>if &lt; (index) &gt; (length of [list v]) &gt; then
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    say [Invalid index!] for 2 secs
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>else
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    say (item (index) of [list v]) for 2 secs
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="list-item-in-game-mechanics">List Item in Game Mechanics<a class="headerlink" href="#list-item-in-game-mechanics" title="Permanent link">&para;</a></h3>
+<h4 id="use-item-from-inventory">Use Item from Inventory<a class="headerlink" href="#use-item-from-inventory" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when I receive [use-item v]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>if &lt; (length of [inventory v]) &gt; 0 &gt; then
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    set [item-to-use v] to (item (1) of [inventory v])
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    delete (1) of [inventory v]
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    // Use the item...
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>end
+</span></code></pre></div>
+<h4 id="equip-best-weapon">Equip Best Weapon<a class="headerlink" href="#equip-best-weapon" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>set [best-damage v] to (0)
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>repeat (length of [weapons v])
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    if &lt; (item (loop-counter) of [weapons v]) &gt; (best-damage) &gt; then
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        set [best-damage v] to (item (loop-counter) of [weapons v])
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        set [best-weapon-index v] to (loop-counter)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    end
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="delete-from-list-removing-items">Delete From List — Removing Items! 🗑️<a class="headerlink" href="#delete-from-list-removing-items" title="Permanent link">&para;</a></h2>
+<h3 id="delete-block-variables-dark-red">Delete Block (Variables → Dark Red)<a class="headerlink" href="#delete-block-variables-dark-red" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>delete (1) of [inventory v]
+</span></code></pre></div>
+<p><strong>Removes item at specified position</strong> — remaining items shift down!</p>
+<h3 id="delete-examples">Delete Examples<a class="headerlink" href="#delete-examples" title="Permanent link">&para;</a></h3>
+<h4 id="remove-used-item">Remove Used Item<a class="headerlink" href="#remove-used-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when I receive [use-potion v]
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>delete (1) of [inventory v]  // Remove first item
+</span></code></pre></div>
+<h4 id="remove-specific-item">Remove Specific Item<a class="headerlink" href="#remove-specific-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>delete (3) of [inventory v]  // Remove 3rd item
+</span></code></pre></div>
+<h4 id="clear-entire-list">Clear Entire List<a class="headerlink" href="#clear-entire-list" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>delete all of [inventory v]
+</span></code></pre></div>
+<h4 id="remove-by-value-search-delete">Remove by Value (Search + Delete)<a class="headerlink" href="#remove-by-value-search-delete" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>repeat (length of [inventory v])
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    if &lt; (item (loop-counter) of [inventory v]) = [rotten-apple] &gt; then
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        delete (loop-counter) of [inventory v]
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    end
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="delete-high-score-list">Delete + High Score List<a class="headerlink" href="#delete-high-score-list" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>when I receive [new-score v]
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>if &lt; (score) &gt; (item (1) of [high-scores v]) &gt; then
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    insert (score) at (1) of [high-scores v]
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    if &lt; (length of [high-scores v]) &gt; 5 &gt; then
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        delete (6) of [high-scores v]  // Keep top 5
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    end
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="list-contains-is-it-in-there">List Contains — Is It In There? 🔍<a class="headerlink" href="#list-contains-is-it-in-there" title="Permanent link">&para;</a></h2>
+<h3 id="list-contains-block-variables-dark-red">List Contains Block (Variables → Dark Red)<a class="headerlink" href="#list-contains-block-variables-dark-red" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[apple v] in [inventory v]?
+</span></code></pre></div>
+<p><strong>Boolean: TRUE if item exists in list, FALSE otherwise.</strong></p>
+<h3 id="contains-examples">Contains Examples<a class="headerlink" href="#contains-examples" title="Permanent link">&para;</a></h3>
+<h4 id="check-for-item">Check for Item<a class="headerlink" href="#check-for-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>if &lt; [key v] in [inventory v]? &gt; then
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    say [Door unlocked!] for 2 secs
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    broadcast [door-open v]
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>else
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    say [You need a key!] for 2 secs
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>end
+</span></code></pre></div>
+<h4 id="check-for-duplicate-before-adding">Check for Duplicate Before Adding<a class="headerlink" href="#check-for-duplicate-before-adding" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>if &lt;not &lt; [sword v] in [inventory v]? &gt;&gt; then
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    add [sword] to [inventory v]
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    say [Got a sword!] for 2 secs
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>else
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    say [Already have a sword!] for 2 secs
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>end
+</span></code></pre></div>
+<h4 id="check-for-quest-item">Check for Quest Item<a class="headerlink" href="#check-for-quest-item" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>if &lt; [ancient-scroll v] in [inventory v]? &gt; then
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    broadcast [quest-complete v]
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="contains-vs-item-access">Contains vs Item Access<a class="headerlink" href="#contains-vs-item-access" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Returns</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>item (1) of [list]</code></td>
+<td><strong>Value</strong> at position</td>
+<td>Get the actual item</td>
+</tr>
+<tr>
+<td><code>[item] in [list]?</code></td>
+<td><strong>True/False</strong></td>
+<td>Check existence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="high-score-list-top-players">High Score List — Top Players! 🏆<a class="headerlink" href="#high-score-list-top-players" title="Permanent link">&para;</a></h2>
+<h3 id="high-score-list-structure">High Score List Structure<a class="headerlink" href="#high-score-list-structure" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>high-scores list:
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>[0] 10500  (1st place)
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>[1] 9800   (2nd place)
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>[2] 8750   (3rd place)
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>[2] 7200   (4th place)
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>[3] 5500   (5th place)
+</span></code></pre></div>
+<h3 id="high-score-logic">High Score Logic<a class="headerlink" href="#high-score-logic" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>when green flag clicked
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>delete all of [high-scores v]
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>repeat 5
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    add (0) to [high-scores v]
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>end
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>show list [high-scores v]
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>when I receive [game-over v]
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>if &lt; (score) &gt; (item (1) of [high-scores v]) &gt; then
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    // New high score!
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    insert (score) at (1) of [high-scores v]
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    delete (6) of [high-scores v]  // Keep top 5
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    say [NEW HIGH SCORE!] for 3 secs
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="high-score-display">High Score Display<a class="headerlink" href="#high-score-display" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Display Method</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>List on stage</strong></td>
+<td><code>show list [high-scores]</code></td>
+</tr>
+<tr>
+<td><strong>Custom display</strong></td>
+<td><code>repeat 5: say (join [#] (join (loop-counter) (join [: ] (item (loop-counter) of [high-scores])))) for 2 secs</code></td>
+</tr>
+<tr>
+<td><strong>With names</strong></td>
+<td>Store <code>join [name] (join [: ] (score))</code> in list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="high-score-features">High Score Features<a class="headerlink" href="#high-score-features" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top 5/10</strong></td>
+<td><code>delete (6) of [list]</code> to trim</td>
+</tr>
+<tr>
+<td><strong>Names + Scores</strong></td>
+<td>Store <code>join [name] (join [: ] (score))</code></td>
+</tr>
+<tr>
+<td><strong>Date achieved</strong></td>
+<td>Add timestamp to entry</td>
+</tr>
+<tr>
+<td><strong>Level-specific</strong></td>
+<td>Separate list per level</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="testing-strategies-quality-assurance">Testing Strategies — Quality Assurance! 🧪<a class="headerlink" href="#testing-strategies-quality-assurance" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-testing-strategies">What Are Testing Strategies?<a class="headerlink" href="#what-are-testing-strategies" title="Permanent link">&para;</a></h3>
+<p><strong>Testing strategies</strong> = systematic ways to <strong>find bugs</strong> and <strong>verify your game works</strong>!</p>
+<h3 id="testing-levels">Testing Levels<a class="headerlink" href="#testing-levels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What It Tests</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit test</strong></td>
+<td>Single script/block</td>
+<td>While coding</td>
+</tr>
+<tr>
+<td><strong>Integration test</strong></td>
+<td>Multiple scripts together</td>
+<td>After adding feature</td>
+</tr>
+<tr>
+<td><strong>Playtest</strong></td>
+<td>Full game experience</td>
+<td>Before sharing</td>
+</tr>
+<tr>
+<td><strong>Regression test</strong></td>
+<td>Old features still work</td>
+<td>After changes</td>
+</tr>
+<tr>
+<td><strong>Edge case test</strong></td>
+<td>Extreme/unusual inputs</td>
+<td>Before release</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="testing-strategies">Testing Strategies<a class="headerlink" href="#testing-strategies" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>How To Do It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Boundary testing</strong></td>
+<td>Test edges: 0, 1, max, min, -1</td>
+</tr>
+<tr>
+<td><strong>Invalid input</strong></td>
+<td>Wrong keys, empty lists, divide by 0</td>
+</tr>
+<tr>
+<td><strong>Stress test</strong></td>
+<td>Spawn 100 clones, run 10 minutes</td>
+</tr>
+<tr>
+<td><strong>Permutation test</strong></td>
+<td>Try all key combinations</td>
+</tr>
+<tr>
+<td><strong>Save/load test</strong></td>
+<td>Save, reload, continue game</td>
+</tr>
+<tr>
+<td><strong>Multiplayer test</strong></td>
+<td>Two keyboards, two players</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="testing-checklist">Testing Checklist<a class="headerlink" href="#testing-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movement</strong></td>
+<td>All directions, edges, collisions, jumping</td>
+</tr>
+<tr>
+<td><strong>Controls</strong></td>
+<td>All keys, key combos, rapid presses</td>
+</tr>
+<tr>
+<td><strong>Physics</strong></td>
+<td>Gravity, jumping, falling, slopes</td>
+</tr>
+<tr>
+<td><strong>Combat</strong></td>
+<td>Damage, knockback, invincibility, death</td>
+</tr>
+<tr>
+<td><strong>Scoring</strong></td>
+<td>Points, high scores, combos, multipliers</td>
+</tr>
+<tr>
+<td><strong>Lives</strong></td>
+<td>Lose, gain, game over, invincibility</td>
+</tr>
+<tr>
+<td><strong>Levels</strong></td>
+<td>Transitions, spawns, completion, secrets</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>Menus, pause, menus, displays</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>Music, SFX, volume, mute</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>100 clones, 10 min play, save/load</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="automated-testing-custom-blocks">Automated Testing (Custom Blocks)<a class="headerlink" href="#automated-testing-custom-blocks" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>define test-movement
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>// Test: Player moves right
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>go to x: 0 y: 0
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>repeat 10
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    change x by 5
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>end
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>if &lt; (x position) = 50 &gt; then
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    say [TEST PASS: Movement] for 2 secs
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>else
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    say [TEST FAIL: Movement] for 2 secs
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>end
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>define test-collision
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>// Test: Wall collision
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>go to x: 220 y: 0
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>if &lt;touching color [#FF0000]? &gt; then
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>    say [TEST PASS: Collision] for 2 secs
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>else
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>    say [TEST FAIL: Collision] for 2 secs
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="debugging-strategies-fix-bugs-like-a-pro">Debugging Strategies — Fix Bugs Like a Pro! 🐛<a class="headerlink" href="#debugging-strategies-fix-bugs-like-a-pro" title="Permanent link">&para;</a></h2>
+<h3 id="debugging-workflow">Debugging Workflow<a class="headerlink" href="#debugging-workflow" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>1. REPRODUCE → Make bug happen every time
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2. ISOLATE → Which script? Which block?
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>3. HYPOTHESIZE → &quot;I think the &#39;change x by&#39; is wrong&quot;
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>4. TEST → Change ONE thing, test again
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>5. FIX → Apply correction
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>6. VERIFY → Test thoroughly, check for new bugs
+</span></code></pre></div>
+<hr />
+<h3 id="debugging-tools-in-scratch">Debugging Tools in Scratch<a class="headerlink" href="#debugging-tools-in-scratch" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>How to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Block Highlighting</strong></td>
+<td>Watch which block glows during execution</td>
+</tr>
+<tr>
+<td><strong>Variable Watchers</strong></td>
+<td><code>show variable</code> — see values live on stage</td>
+</tr>
+<tr>
+<td><strong><code>say</code> Debugging</strong></td>
+<td><code>say (variable) for 0.1 secs</code> — live values</td>
+</tr>
+<tr>
+<td><strong><code>wait</code> for Timing</strong></td>
+<td><code>wait 1 secs</code> to slow down and observe</td>
+</tr>
+<tr>
+<td><strong>Single Step</strong></td>
+<td>Some Scratch versions: step through blocks</td>
+</tr>
+<tr>
+<td><strong>Clean Up</strong></td>
+<td>Right-click → "Clean up" — aligns blocks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="debugging-with-say-live-values">Debugging with <code>say</code> (Live Values!)<a class="headerlink" href="#debugging-with-say-live-values" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>forever
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    say (join [x: ] (x position)) for 0.1 secs
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    say (join [y: ] (y position)) for 0.1 secs
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    say (join [vel-x: ] (velocity-x)) for 0.1 secs
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    say (join [onGround: ] (touching [ground v]?)) for 0.1 secs
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    wait 0.1 secs
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>end
+</span></code></pre></div>
+<p><strong>Live dashboard of all important values!</strong> 📊</p>
+<hr />
+<h3 id="common-bug-patterns-fixes">Common Bug Patterns &amp; Fixes<a class="headerlink" href="#common-bug-patterns-fixes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bug Symptom</th>
+<th>Likely Cause</th>
+<th>Debug Steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprite frozen</strong></td>
+<td><code>forever</code> without <code>wait</code></td>
+<td>Add <code>wait 0.01 secs</code></td>
+</tr>
+<tr>
+<td><strong>Moves wrong way</strong></td>
+<td>Wrong sign (+/-)</td>
+<td>Check <code>change x by</code> sign</td>
+</tr>
+<tr>
+<td><strong>Jumps infinitely</strong></td>
+<td>No ground check</td>
+<td>Add <code>touching ground?</code></td>
+</tr>
+<tr>
+<td><strong>Stuck in wall</strong></td>
+<td>No collision check</td>
+<td>Add <code>touching color?</code></td>
+</tr>
+<tr>
+<td><strong>Score not updating</strong></td>
+<td>Wrong variable name</td>
+<td>Check <code>score</code> vs <code>Score</code></td>
+</tr>
+<tr>
+<td><strong>Clone explosion</strong></td>
+<td>No spawn limit</td>
+<td>Add cooldown/limit</td>
+</tr>
+<tr>
+<td><strong>Lag/freeze</strong></td>
+<td>Too many loops</td>
+<td>Combine loops, add <code>wait</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="debugging-strategies">Debugging Strategies<a class="headerlink" href="#debugging-strategies" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>How To Apply</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Divide and conquer</strong></td>
+<td>Disable half the code, test, narrow down</td>
+</tr>
+<tr>
+<td><strong>Rubber duck debugging</strong></td>
+<td>Explain code to a rubber duck (or friend)</td>
+</tr>
+<tr>
+<td><strong>Binary search</strong></td>
+<td>Disable half scripts, test, narrow to one script</td>
+</tr>
+<tr>
+<td><strong>Minimal reproduction</strong></td>
+<td>Create new project with just the buggy part</td>
+</tr>
+<tr>
+<td><strong>Print everything</strong></td>
+<td><code>say</code> all variables at each step</td>
+</tr>
+<tr>
+<td><strong>Check assumptions</strong></td>
+<td>"Is this variable actually 0?" — verify with <code>say</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="storytelling-flow-games-that-tell-stories">Storytelling Flow — Games That Tell Stories! 📖<a class="headerlink" href="#storytelling-flow-games-that-tell-stories" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-storytelling-flow">What Is Storytelling Flow?<a class="headerlink" href="#what-is-storytelling-flow" title="Permanent link">&para;</a></h3>
+<p><strong>Storytelling flow</strong> = how your game <strong>guides the player</strong> through a narrative experience!</p>
+<h3 id="story-structure-in-games">Story Structure in Games<a class="headerlink" href="#story-structure-in-games" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Act</th>
+<th>Purpose</th>
+<th>Game Elements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Setup (Act 1)</strong></td>
+<td>Introduce world, character, goal</td>
+<td>Tutorial, first level, intro cutscene</td>
+</tr>
+<tr>
+<td><strong>Confrontation (Act 2)</strong></td>
+<td>Challenges, rising action</td>
+<td>Harder levels, new mechanics, mid-boss</td>
+</tr>
+<tr>
+<td><strong>Climax (Act 3)</strong></td>
+<td>Final challenge, resolution</td>
+<td>Final boss, final level, ending cutscene</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="storytelling-through-gameplay">Storytelling Through Gameplay<a class="headerlink" href="#storytelling-through-gameplay" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Story Element</th>
+<th>Game Mechanic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Character</strong></td>
+<td>Player sprite, customization</td>
+</tr>
+<tr>
+<td><strong>Setting</strong></td>
+<td>Backdrops, level design</td>
+</tr>
+<tr>
+<td><strong>Conflict</strong></td>
+<td>Enemies, obstacles, puzzles</td>
+</tr>
+<tr>
+<td><strong>Progression</strong></td>
+<td>Levels, upgrades, new abilities</td>
+</tr>
+<tr>
+<td><strong>Resolution</strong></td>
+<td>Win screen, credits, epilogue</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="storytelling-through-code">Storytelling Through Code<a class="headerlink" href="#storytelling-through-code" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>when green flag clicked
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>broadcast [chapter1 v] and wait    // Setup
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>broadcast [chapter2 v] and wait    // Rising action
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>broadcast [chapter3 v] and wait    // Climax
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>broadcast [ending v]               // Resolution
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>when I receive [chapter1 v]
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>switch backdrop to [village v]
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>speak [Our village was peaceful...] and wait
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>speak [Until the Shadow King came...] and wait
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>broadcast [chapter1-done v]
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>when I receive [chapter2 v]
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>switch backdrop to [forest v]
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>speak [You must find the three crystals...] and wait
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>// Gameplay: collect 3 crystals
+</span></code></pre></div>
+<hr />
+<h2 id="synchronous-broadcast-wait-for-everyone">Synchronous Broadcast — Wait for Everyone! 🤝<a class="headerlink" href="#synchronous-broadcast-wait-for-everyone" title="Permanent link">&para;</a></h2>
+<h3 id="broadcast-and-wait-recap">Broadcast And Wait Recap<a class="headerlink" href="#broadcast-and-wait-recap" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>broadcast [message v] and wait
+</span></code></pre></div>
+<p><strong>Pauses sender until ALL <code>when I receive</code> scripts FINISH.</strong></p>
+<hr />
+<h3 id="when-to-use-synchronous-broadcast">When to Use Synchronous Broadcast<a class="headerlink" href="#when-to-use-synchronous-broadcast" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Why Sync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level start</strong></td>
+<td>All sprites initialized before gameplay</td>
+</tr>
+<tr>
+<td><strong>Cutscene steps</strong></td>
+<td>Each line finishes before next</td>
+</tr>
+<tr>
+<td><strong>Save game</strong></td>
+<td>All data saved before continuing</td>
+</tr>
+<tr>
+<td><strong>Multi-phase boss</strong></td>
+<td>Phase 1 done before phase 2 starts</td>
+</tr>
+<tr>
+<td><strong>Cutscene dialogue</strong></td>
+<td>Each character finishes speaking</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="synchronous-broadcast-example">Synchronous Broadcast Example<a class="headerlink" href="#synchronous-broadcast-example" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>when green flag clicked
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>broadcast [initialize v] and wait
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>wait 1 secs
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>broadcast [spawn-player v] and wait
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>broadcast [spawn-enemies v] and wait
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>broadcast [spawn-ui v] and wait
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>broadcast [game-ready v]
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>when I receive [initialize v]
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>set [score v] to (0)
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>set [lives v] to (3)
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>when I receive [spawn-player v]
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>go to x: -200 y: -100
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>show
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>when I receive [spawn-enemies v]
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>repeat 5
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>    create clone of [enemy v]
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>    wait 0.2 secs
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="broadcast-storm-too-many-messages">Broadcast Storm — Too Many Messages! ⚡<a class="headerlink" href="#broadcast-storm-too-many-messages" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-broadcast-storm">What Is a Broadcast Storm?<a class="headerlink" href="#what-is-a-broadcast-storm" title="Permanent link">&para;</a></h3>
+<p><strong>Broadcast storm</strong> = too many broadcasts sent <strong>too quickly</strong> = lag, crashes, unpredictable behavior!</p>
+<h3 id="causes-of-broadcast-storms">Causes of Broadcast Storms<a class="headerlink" href="#causes-of-broadcast-storms" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Broadcast in forever loop</strong></td>
+<td><code>forever { broadcast [update] }</code></td>
+</tr>
+<tr>
+<td><strong>Recursive broadcasts</strong></td>
+<td>A → B, B → A, A → B...</td>
+</tr>
+<tr>
+<td><strong>Too many clones broadcasting</strong></td>
+<td>100 clones each broadcast</td>
+</tr>
+<tr>
+<td><strong>Broadcast in <code>when I receive</code></strong></td>
+<td>Chain reaction</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="preventing-broadcast-storms">Preventing Broadcast Storms<a class="headerlink" href="#preventing-broadcast-storms" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Prevention</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rate limit</strong></td>
+<td><code>wait 0.1 secs</code> between broadcasts</td>
+</tr>
+<tr>
+<td><strong>Flags</strong></td>
+<td><code>if &lt;not &lt;broadcasting&gt;&gt; then broadcast</code></td>
+</tr>
+<tr>
+<td><strong>Cooldown</strong></td>
+<td><code>set [cooldown v] to (10), change by -1 each frame</code></td>
+</tr>
+<tr>
+<td><strong>Single broadcaster</strong></td>
+<td>One "manager" sprite handles all broadcasts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="broadcast-storm-example-bad">Broadcast Storm Example (BAD!)<a class="headerlink" href="#broadcast-storm-example-bad" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>forever
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    broadcast [update v]    // STORM! Thousands per second
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>end
+</span></code></pre></div>
+<h3 id="broadcast-storm-fix-good">Broadcast Storm Fix (GOOD!)<a class="headerlink" href="#broadcast-storm-fix-good" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>forever
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    broadcast [update v]
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    wait 0.1 secs   // Rate limited!
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="loop-termination-exiting-loops-properly">Loop Termination — Exiting Loops Properly! 🛑<a class="headerlink" href="#loop-termination-exiting-loops-properly" title="Permanent link">&para;</a></h2>
+<h3 id="how-loops-end">How Loops End<a class="headerlink" href="#how-loops-end" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Loop Type</th>
+<th>Terminates When...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repeat (N)</code></td>
+<td>After N iterations</td>
+</tr>
+<tr>
+<td><code>forever</code></td>
+<td><code>stop [this script]</code> or <code>stop [all]</code></td>
+</tr>
+<tr>
+<td><code>repeat until &lt;cond&gt;</code></td>
+<td>Condition becomes TRUE</td>
+</tr>
+<tr>
+<td><code>repeat while</code> (custom)</td>
+<td>Condition becomes FALSE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="loop-termination-blocks">Loop Termination Blocks<a class="headerlink" href="#loop-termination-blocks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Stops</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stop [this script v]</code></td>
+<td>Current script only</td>
+</tr>
+<tr>
+<td><code>stop [all v]</code></td>
+<td>EVERYTHING in project</td>
+</tr>
+<tr>
+<td><code>stop [other scripts in sprite v]</code></td>
+<td>Other scripts in same sprite</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="loop-termination-examples">Loop Termination Examples<a class="headerlink" href="#loop-termination-examples" title="Permanent link">&para;</a></h3>
+<h4 id="break-out-of-forever">Break Out of Forever<a class="headerlink" href="#break-out-of-forever" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>forever
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    if &lt;key [escape] pressed?&gt; then
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>        stop [this script v]
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    end
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    // Game loop code
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>end
+</span></code></pre></div>
+<h4 id="exit-nested-loop">Exit Nested Loop<a class="headerlink" href="#exit-nested-loop" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>repeat (10)
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    repeat (10)
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>        if &lt;touching [target v]?&gt; then
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>            stop [this script v]  // Exits BOTH loops!
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>        end
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    end
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>end
+</span></code></pre></div>
+<h4 id="stop-all-game-over">Stop All (Game Over)<a class="headerlink" href="#stop-all-game-over" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>when I receive [game-over v]
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>stop [all v]
+</span></code></pre></div>
+<hr />
+<h3 id="loop-termination-best-practices">Loop Termination Best Practices<a class="headerlink" href="#loop-termination-best-practices" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Always have exit condition</strong></td>
+<td><code>forever</code> must have <code>stop</code> or <code>broadcast [stop]</code></td>
+</tr>
+<tr>
+<td><strong>Use <code>stop [this script]</code></strong></td>
+<td>Prefer over <code>stop [all]</code></td>
+</tr>
+<tr>
+<td><strong>Clean up before stop</strong></td>
+<td><code>hide</code>, <code>delete this clone</code>, <code>stop sounds</code></td>
+</tr>
+<tr>
+<td><strong>Avoid <code>stop [all]</code> in libraries</strong></td>
+<td>Kills everything including UI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="boolean-combination-complex-conditions">Boolean Combination — Complex Conditions! 🧠<a class="headerlink" href="#boolean-combination-complex-conditions" title="Permanent link">&para;</a></h2>
+<h3 id="combining-booleans-andornot">Combining Booleans (And/Or/Not)<a class="headerlink" href="#combining-booleans-andornot" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Block</th>
+<th>True When...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AND</strong></td>
+<td><code>&lt; &gt; and &lt; &gt;</code></td>
+<td>BOTH true</td>
+</tr>
+<tr>
+<td><strong>OR</strong></td>
+<td><code>&lt; &gt; or &lt; &gt;</code></td>
+<td>AT LEAST ONE true</td>
+</tr>
+<tr>
+<td><strong>NOT</strong></td>
+<td><code>not &lt; &gt;</code></td>
+<td>Flips true/false</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="complex-boolean-combinations">Complex Boolean Combinations<a class="headerlink" href="#complex-boolean-combinations" title="Permanent link">&para;</a></h3>
+<h4 id="three-conditions-and">Three Conditions (AND)<a class="headerlink" href="#three-conditions-and" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>if &lt; (score) &gt; 100 &gt; and &lt; (lives) &gt; 0 &gt; and &lt;not &lt;touching [spike v]?&gt;&gt; then
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    broadcast [bonus-level v]
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>end
+</span></code></pre></div>
+<h4 id="complex-condition">Complex Condition<a class="headerlink" href="#complex-condition" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>if &lt; &lt; (distance) &lt; 50 &gt; or &lt;touching [player v]?&gt; &gt; and &lt;not &lt; (invincible) &gt;&gt; then
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    broadcast [player-hit v]
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>end
+</span></code></pre></div>
+<h4 id="de-morgans-laws-simplify">De Morgan's Laws (Simplify!)<a class="headerlink" href="#de-morgans-laws-simplify" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Original</th>
+<th>Equivalent (Simplified)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>not (A or B)</code></td>
+<td><code>(not A) and (not B)</code></td>
+</tr>
+<tr>
+<td><code>not (A and B)</code></td>
+<td><code>(not A) or (not B)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="boolean-combination-examples">Boolean Combination Examples<a class="headerlink" href="#boolean-combination-examples" title="Permanent link">&para;</a></h3>
+<h4 id="complex-jump-condition">Complex Jump Condition<a class="headerlink" href="#complex-jump-condition" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>if &lt;key [space] pressed?&gt; and &lt;touching [ground v]?&gt; and &lt;not &lt; (in-air) &gt;&gt; then
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    set [velocity-y v] to (15)
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>end
+</span></code></pre></div>
+<h4 id="enemy-ai-decision">Enemy AI Decision<a class="headerlink" href="#enemy-ai-decision" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>if &lt; (distance to player) &lt; 100 &gt; and &lt;not &lt; (stunned) &gt;&gt; then
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    if &lt; (player-x) &gt; (x position) &gt; then
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>        set [velocity-x v] to (3)
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    else
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>        set [velocity-x v] to (-3)
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    end
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="win-condition-victory">Win Condition — Victory! 🏆<a class="headerlink" href="#win-condition-victory" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-win-condition">What Is a Win Condition?<a class="headerlink" href="#what-is-a-win-condition" title="Permanent link">&para;</a></h3>
+<p><strong>Win condition</strong> = the specific goal that makes the player <strong>win the game</strong>!</p>
+<h3 id="common-win-conditions">Common Win Conditions<a class="headerlink" href="#common-win-conditions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Condition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Score target</strong></td>
+<td><code>score &gt; 1000</code></td>
+<td>Collect 100 coins</td>
+</tr>
+<tr>
+<td><strong>All collected</strong></td>
+<td><code>length of [coins] = 0</code></td>
+<td>Get all items</td>
+</tr>
+<tr>
+<td><strong>Reach location</strong></td>
+<td><code>x &gt; 200 and y &gt; 150</code></td>
+<td>Reach exit</td>
+</tr>
+<tr>
+<td><strong>Defeat boss</strong></td>
+<td><code>boss-health = 0</code></td>
+<td>Defeat final boss</td>
+</tr>
+<tr>
+<td><strong>Survive time</strong></td>
+<td><code>timer &gt; 300</code></td>
+<td>Survive 5 minutes</td>
+</tr>
+<tr>
+<td><strong>All enemies gone</strong></td>
+<td><code>length of [enemies] = 0</code></td>
+<td>Clear room</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="win-condition-implementation">Win Condition Implementation<a class="headerlink" href="#win-condition-implementation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>forever
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    // Check win conditions each frame
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>    if &lt; (score) &gt; 1000 &gt; then
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>        broadcast [win v]
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>        stop [this script v]
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>    end
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>    if &lt; (length of [coins v]) = 0 &gt; then
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>        broadcast [win v]
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>        stop [this script v]
+</span><span id="__span-34-11"><a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>    end
+</span><span id="__span-34-12"><a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>
+</span><span id="__span-34-13"><a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>    if &lt; (boss-health) = 0 &gt; then
+</span><span id="__span-34-14"><a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a>        broadcast [win v]
+</span><span id="__span-34-15"><a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a>        stop [this script v]
+</span><span id="__span-34-16"><a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a>    end
+</span><span id="__span-34-17"><a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="win-sequence">Win Sequence<a class="headerlink" href="#win-sequence" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>when I receive [win v]
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>stop [all v]
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>switch backdrop to [victory v]
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>play sound [fanfare v]
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>say [YOU WIN!] for 5 secs
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>wait 3 secs
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>show variable [final-score v]
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>wait 5 secs
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>broadcast [return-to-menu v]
+</span></code></pre></div>
+<hr />
+<h3 id="multiple-win-paths">Multiple Win Paths<a class="headerlink" href="#multiple-win-paths" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Game Type</th>
+<th>Win Conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platformer</strong></td>
+<td>Reach flag, all coins, defeat boss</td>
+</tr>
+<tr>
+<td><strong>Puzzle</strong></td>
+<td>All pieces placed, all switches hit</td>
+</tr>
+<tr>
+<td><strong>Survival</strong></td>
+<td>Timer reaches target</td>
+</tr>
+<tr>
+<td><strong>RPG</strong></td>
+<td>Defeat final boss, complete main quest</td>
+</tr>
+<tr>
+<td><strong>Racing</strong></td>
+<td>Cross finish line first</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lose-condition-game-over">Lose Condition — Game Over! 💀<a class="headerlink" href="#lose-condition-game-over" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-lose-condition">What Is a Lose Condition?<a class="headerlink" href="#what-is-a-lose-condition" title="Permanent link">&para;</a></h3>
+<p><strong>Lose condition</strong> = specific situation where the player <strong>fails</strong> and game ends!</p>
+<h3 id="common-lose-conditions">Common Lose Conditions<a class="headerlink" href="#common-lose-conditions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Condition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No lives</strong></td>
+<td><code>lives = 0</code></td>
+<td>3 hits = game over</td>
+</tr>
+<tr>
+<td><strong>Time out</strong></td>
+<td><code>timer = 0</code></td>
+<td>Didn't finish in time</td>
+</tr>
+<tr>
+<td><strong>Fall off world</strong></td>
+<td><code>y &lt; -200</code></td>
+<td>Fell in pit</td>
+</tr>
+<tr>
+<td><strong>Touch hazard</strong></td>
+<td><code>touching lava/spikes</code></td>
+<td>Instant death</td>
+</tr>
+<tr>
+<td><strong>Fail objective</strong></td>
+<td><code>failed to protect NPC</code></td>
+<td>Escort mission failed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="lose-condition-implementation">Lose Condition Implementation<a class="headerlink" href="#lose-condition-implementation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>forever
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    // Check lose conditions
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    if &lt; (lives) = 0 &gt; then
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>        broadcast [game-over v]
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>        stop [this script v]
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>    end
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>    if &lt; (timer) = 0 &gt; then
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>        broadcast [game-over v]
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>        stop [this script v]
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>    end
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>    if &lt; (y position) &lt; -200 &gt; then
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>        broadcast [game-over v]
+</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>        stop [this script v]
+</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>    end
+</span><span id="__span-36-17"><a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>
+</span><span id="__span-36-18"><a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a>    if &lt;touching [lava v]?&gt; then
+</span><span id="__span-36-19"><a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a>        broadcast [game-over v]
+</span><span id="__span-36-20"><a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a>        stop [this script v]
+</span><span id="__span-36-21"><a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a>    end
+</span><span id="__span-36-22"><a id="__codelineno-36-22" name="__codelineno-36-22" href="#__codelineno-36-22"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="game-over-sequence">Game Over Sequence<a class="headerlink" href="#game-over-sequence" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>when I receive [game-over v]
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>stop [all v]
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>switch backdrop to [game-over v]
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>play sound [game-over-sound v]
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>say [GAME OVER] for 3 secs
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>wait 2 secs
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>say (join [Final Score: ] (score)) for 5 secs
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>wait 3 secs
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>broadcast [return-to-menu v]
+</span></code></pre></div>
+<hr />
+<h3 id="lose-condition-best-practices">Lose Condition Best Practices<a class="headerlink" href="#lose-condition-best-practices" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clear feedback</strong></td>
+<td>Show WHY player lost</td>
+</tr>
+<tr>
+<td><strong>Quick restart</strong></td>
+<td>One click to try again</td>
+</tr>
+<tr>
+<td><strong>Progress saving</strong></td>
+<td>Don't lose all progress</td>
+</tr>
+<tr>
+<td><strong>Fair warning</strong></td>
+<td>"Low health!" before death</td>
+</tr>
+<tr>
+<td><strong>Learn from failure</strong></td>
+<td>Show what killed you</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="inventory-system-players-bag">Inventory System — Player's Bag! 🎒<a class="headerlink" href="#inventory-system-players-bag" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-an-inventory-system">What Is an Inventory System?<a class="headerlink" href="#what-is-an-inventory-system" title="Permanent link">&para;</a></h3>
+<p><strong>Inventory</strong> = a <strong>list</strong> that holds <strong>items the player collects</strong>!</p>
+<h3 id="inventory-list-structure">Inventory List Structure<a class="headerlink" href="#inventory-list-structure" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>inventory list:
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>[0] &quot;health-potion&quot;
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>[1] &quot;iron-sword&quot;
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>[2] &quot;gold-key&quot;
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>[3] &quot;magic-scroll&quot;
+</span></code></pre></div>
+<hr />
+<h3 id="inventory-operations">Inventory Operations<a class="headerlink" href="#inventory-operations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Add item</strong></td>
+<td><code>add [potion] to [inventory v]</code></td>
+</tr>
+<tr>
+<td><strong>Remove item</strong></td>
+<td><code>delete (1) of [inventory v]</code></td>
+</tr>
+<tr>
+<td><strong>Use item</strong></td>
+<td><code>item (1) of [inventory v]</code>, then <code>delete (1)</code></td>
+</tr>
+<tr>
+<td><strong>Check item</strong></td>
+<td><code>[potion] in [inventory v]?</code></td>
+</tr>
+<tr>
+<td><strong>Count items</strong></td>
+<td><code>length of [inventory v]</code></td>
+</tr>
+<tr>
+<td><strong>Show inventory</strong></td>
+<td><code>show list [inventory v]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="inventory-systems">Inventory Systems<a class="headerlink" href="#inventory-systems" title="Permanent link">&para;</a></h3>
+<h4 id="simple-inventory-stack">Simple Inventory (Stack)<a class="headerlink" href="#simple-inventory-stack" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>when I receive [pickup-item v]
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>add [item-name] to [inventory v]
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>say (join [Got: ] (item-name)) for 2 secs
+</span></code></pre></div>
+<h4 id="categorized-inventory">Categorized Inventory<a class="headerlink" href="#categorized-inventory" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Categories: weapons, potions, keys, quest
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>when I receive [pickup v]
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>if &lt; (item-type) = [weapon] &gt; then
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>    add (item) to [weapons v]
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>else
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>    if &lt; (item-type) = [potion] &gt; then
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>        add (item) to [potions v]
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>    end
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>end
+</span></code></pre></div>
+<h4 id="weightslot-limit">Weight/Slot Limit<a class="headerlink" href="#weightslot-limit" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>if &lt; (length of [inventory v]) &lt; 20 &gt; then
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>    add [item] to [inventory v]
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>else
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>    say [Inventory full!] for 2 secs
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>end
+</span></code></pre></div>
+<hr />
+<h3 id="inventory-ui">Inventory UI<a class="headerlink" href="#inventory-ui" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>when green flag clicked
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>hide list [inventory v]
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>when [i] key pressed
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>if &lt; (showing-inventory) &gt; then
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>    hide list [inventory v]
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>    set [showing-inventory v] to (false)
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>else
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>    show list [inventory v]
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>    set [showing-inventory v] to (true)
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>end
+</span></code></pre></div>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this chapter, you learned:</p>
+<ul>
+<li>✅ <strong>List Item Access</strong> — <code>item (N) of [list]</code> for specific items</li>
+<li>✅ <strong>Delete From List</strong> — Remove items, trim lists</li>
+<li>✅ <strong>List Contains</strong> — Check if item exists</li>
+<li>✅ <strong>High Score List</strong> — Top scores with trimming</li>
+<li>✅ <strong>Testing Strategies</strong> — Unit, integration, playtest, regression</li>
+<li>✅ <strong>Debugging Strategies</strong> — Reproduce, isolate, hypothesize, test, fix</li>
+<li>✅ <strong>Storytelling Flow</strong> — Three-act structure in games</li>
+<li>✅ <strong>Synchronous Broadcast</strong> — <code>broadcast and wait</code> for coordination</li>
+<li>✅ <strong>Broadcast Storm</strong> — Prevention and fixes</li>
+<li>✅ <strong>Loop Termination</strong> — <code>stop</code> blocks for clean exits</li>
+<li>✅ <strong>Boolean Combination</strong> — And/Or/Not for complex logic</li>
+<li>✅ <strong>Win Condition</strong> — Score, collection, boss, survival, location</li>
+<li>✅ <strong>Lose Condition</strong> — Lives, time, hazards, objectives</li>
+<li>✅ <strong>Inventory System</strong> — Lists for items, categories, limits</li>
+<li>✅ <strong>Testing Strategies</strong> — Unit, integration, playtest, edge cases</li>
+<li>✅ <strong>Debugging Strategies</strong> — Reproduce, isolate, hypothesize, test, fix</li>
+<li>✅ <strong>Storytelling Flow</strong> — Three-act game narrative</li>
+<li>✅ <strong>Synchronous Broadcast</strong> — Coordinated multi-sprite starts</li>
+<li>✅ <strong>Broadcast Storm</strong> — Rate limiting, cooldowns</li>
+<li>✅ <strong>Loop Termination</strong> — Clean <code>stop</code> usage</li>
+<li>✅ <strong>Boolean Combination</strong> — And/Or/Not for complex conditions</li>
+</ul>
+<hr />
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>List Item Access</strong></td>
+<td><code>item (N) of [list]</code> — get specific value</td>
+</tr>
+<tr>
+<td><strong>Delete From List</strong></td>
+<td>Remove item at position</td>
+</tr>
+<tr>
+<td><strong>List Contains</strong></td>
+<td>Boolean check for item existence</td>
+</tr>
+<tr>
+<td><strong>High Score List</strong></td>
+<td>Sorted top scores list</td>
+</tr>
+<tr>
+<td><strong>Testing Strategies</strong></td>
+<td>Systematic bug-finding approaches</td>
+</tr>
+<tr>
+<td><strong>Debugging Strategies</strong></td>
+<td>Reproduce, isolate, hypothesize, test, fix</td>
+</tr>
+<tr>
+<td><strong>Storytelling Flow</strong></td>
+<td>Narrative structure in gameplay</td>
+</tr>
+<tr>
+<td><strong>Synchronous Broadcast</strong></td>
+<td><code>broadcast and wait</code> coordination</td>
+</tr>
+<tr>
+<td><strong>Broadcast Storm</strong></td>
+<td>Message overload, prevention methods</td>
+</tr>
+<tr>
+<td><strong>Loop Termination</strong></td>
+<td><code>stop this script/all/other scripts</code></td>
+</tr>
+<tr>
+<td><strong>Boolean Combination</strong></td>
+<td>And/Or/Not for complex conditions</td>
+</tr>
+<tr>
+<td><strong>Win Condition</strong></td>
+<td>Goal that ends game in victory</td>
+</tr>
+<tr>
+<td><strong>Lose Condition</strong></td>
+<td>Condition that ends game in defeat</td>
+</tr>
+<tr>
+<td><strong>Inventory System</strong></td>
+<td>List-based item management</td>
+</tr>
+<tr>
+<td><strong>List Item Access</strong></td>
+<td>Getting specific list values</td>
+</tr>
+<tr>
+<td><strong>Delete From List</strong></td>
+<td>Removing items from collections</td>
+</tr>
+<tr>
+<td><strong>List Contains</strong></td>
+<td>Boolean membership check</td>
+</tr>
+<tr>
+<td><strong>High Score List</strong></td>
+<td>Persistent top scores</td>
+</tr>
+<tr>
+<td><strong>Testing Strategies</strong></td>
+<td>Quality assurance methodologies</td>
+</tr>
+<tr>
+<td><strong>Debugging Strategies</strong></td>
+<td>Systematic bug fixing</td>
+</tr>
+<tr>
+<td><strong>Storytelling Flow</strong></td>
+<td>Narrative pacing in games</td>
+</tr>
+<tr>
+<td><strong>Synchronous Broadcast</strong></td>
+<td>Coordinated multi-sprite messaging</td>
+</tr>
+<tr>
+<td><strong>Broadcast Storm</strong></td>
+<td>Message flooding prevention</td>
+</tr>
+<tr>
+<td><strong>Loop Termination</strong></td>
+<td>Clean script exit patterns</td>
+</tr>
+<tr>
+<td><strong>Boolean Combination</strong></td>
+<td>Compound logical conditions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge 1:</strong> Build a <strong>complete platformer</strong> with win (reach flag) and lose (3 lives) conditions</p>
+<p><strong>Challenge 2:</strong> Create an <strong>inventory system</strong> with categories (weapons, potions, keys)</p>
+<p><strong>Challenge 3:</strong> Implement <strong>high score list</strong> that saves top 10 scores</p>
+<p><strong>Challenge 4:</strong> Write <strong>test cases</strong> for your movement, collision, and scoring systems</p>
+<p><strong>Challenge 5:</strong> Debug a <strong>broken script</strong> using <code>say</code> to watch variable values</p>
+<p><strong>Challenge 6:</strong> Design a <strong>game story</strong> with 3 acts and implement with broadcasts</p>
+<p><strong>Challenge 7:</strong> Create a <strong>broadcast system</strong> for level loading without storms</p>
+<p><strong>Challenge 8:</strong> Design <strong>complex boolean conditions</strong> for enemy AI decisions</p>
+<p><strong>Challenge 9:</strong> Implement <strong>multiple win/lose conditions</strong> in one game</p>
+<p><strong>Challenge 10:</strong> Build a <strong>complete playable game</strong> with all mechanics learned!</p>
+<hr />
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>In <strong>Chapter 11</strong>, you'll master the <strong>Design Process and Capstone Project</strong> — the complete creative journey from idea to polished game, including planning, iteration, testing, polishing, and sharing your masterpiece!</p>
+<p><a href="../11-design-process-capstone/"><strong>→ Next Chapter: Design Process and Capstone Project</strong></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../09-advanced-control-operators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Advanced Control and Operators">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Advanced Control and Operators
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11-design-process-capstone/" class="md-footer__link md-footer__link--next" aria-label="Next: 11. Design Process and Capstone Project">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11. Design Process and Capstone Project
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

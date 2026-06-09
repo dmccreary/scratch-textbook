@@ -1,0 +1,3730 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive textbook teaching Scratch programming to young learners (ages 8-12) through games, stories, and creative projects">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/11-design-process-capstone/">
+      
+      
+        <link rel="prev" href="../10-game-mechanics-win-lose/">
+      
+      
+        <link rel="next" href="../../learning-graph/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>11. Design Process and Capstone Project - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-process-and-capstone-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11. Design Process and Capstone Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-welcome-to-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-variables-lists-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-design-process-your-creative-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Design Process — Your Creative Roadmap! 🗺️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Design Process — Your Creative Roadmap! 🗺️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is the Design Process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-6-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 6 Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-1-imagine-dream-big" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1: IMAGINE — Dream Big! 💭
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1: IMAGINE — Dream Big! 💭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-imagine" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Imagine?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-2-plan-blueprint-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2: PLAN — Blueprint Your Game! 📐
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2: PLAN — Blueprint Your Game! 📐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Plan?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-design-document-gdd-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Design Document (GDD) Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storyboard-visual-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storyboard — Visual Script! 🎬
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-list-shopping-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset List — Shopping List! 🛒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowchart-logic-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowchart — Logic Map! 🗺️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-list-prioritized-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task List — Prioritized Steps!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-3-create-build-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3: CREATE — Build It! 🛠️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 3: CREATE — Build It! 🛠️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Create?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-order-suggested" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Order (Suggested)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-4-test-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 4: TEST — Does It Work? 🧪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 4: TEST — Does It Work? 🧪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Test?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-5-improve-make-it-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 5: IMPROVE — Make It Better! ⬆️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 5: IMPROVE — Make It Better! ⬆️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Improve?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvement-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-juice-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Juice" Checklist 🍹
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-difficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Difficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-development-cycle-until-perfect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Development — Cycle Until Perfect! 🔄
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-6-share-show-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 6: SHARE — Show the World! 🌍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 6: SHARE — Show the World! 🌍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Share?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-sharing-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Sharing Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      After Sharing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-polish-the-final-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Polish: The Final 10%! ✨
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extra Polish: The Final 10%! ✨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-teach-the-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen — Teach the Player! 📋
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits-honor-your-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits — Honor Your Sources! 🙏
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-effects-audio-polish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Effects — Audio Polish! 🔊
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-effect-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Effect Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-design-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Design Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-juice-eye-candy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Juice — Eye Candy! 👁️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is "Juice"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juice-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juice Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juice-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juice Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Juice Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coin-collect-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coin Collect Juice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-hit-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Hit Juice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-shake-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen Shake (Broadcast)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-learn-and-grow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection — Learn and Grow! 🧠
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection — Learn and Grow! 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Reflection?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-capstone-project-your-masterpiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Capstone Project — Your Masterpiece! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Capstone Project — Your Masterpiece! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is the Capstone?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone-project-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Project Ideas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-capstone-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Capstone Journey
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-a-game-developer-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Are a Game Developer Now! 🎮
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="You Are a Game Developer Now! 🎮">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skills-youve-mastered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills You've Mastered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-challenge-your-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Challenge: Your Capstone! 🏁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Challenge: Your Capstone! 🏁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Mission
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submission Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Congratulations! 🎉
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Congratulations! 🎉">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank You! 🙏
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-design-process-your-creative-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Design Process — Your Creative Roadmap! 🗺️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Design Process — Your Creative Roadmap! 🗺️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is the Design Process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-6-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 6 Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-1-imagine-dream-big" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1: IMAGINE — Dream Big! 💭
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1: IMAGINE — Dream Big! 💭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-imagine" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Imagine?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagine-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagine Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-2-plan-blueprint-your-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2: PLAN — Blueprint Your Game! 📐
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2: PLAN — Blueprint Your Game! 📐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Plan?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-design-document-gdd-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Design Document (GDD) Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storyboard-visual-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storyboard — Visual Script! 🎬
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-list-shopping-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset List — Shopping List! 🛒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowchart-logic-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowchart — Logic Map! 🗺️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-list-prioritized-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task List — Prioritized Steps!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-3-create-build-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3: CREATE — Build It! 🛠️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 3: CREATE — Build It! 🛠️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Create?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-order-suggested" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Order (Suggested)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-4-test-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 4: TEST — Does It Work? 🧪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 4: TEST — Does It Work? 🧪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Test?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-5-improve-make-it-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 5: IMPROVE — Make It Better! ⬆️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 5: IMPROVE — Make It Better! ⬆️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Improve?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvement-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-juice-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Juice" Checklist 🍹
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-difficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Difficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-development-cycle-until-perfect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Development — Cycle Until Perfect! 🔄
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-6-share-show-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 6: SHARE — Show the World! 🌍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 6: SHARE — Show the World! 🌍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Share?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-sharing-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Sharing Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      After Sharing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-polish-the-final-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra Polish: The Final 10%! ✨
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extra Polish: The Final 10%! ✨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-teach-the-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen — Teach the Player! 📋
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-screen-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions Screen Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits-honor-your-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits — Honor Your Sources! 🙏
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-effects-audio-polish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Effects — Audio Polish! 🔊
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-effect-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Effect Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-design-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Design Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-juice-eye-candy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Juice — Eye Candy! 👁️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is "Juice"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juice-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juice Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juice-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Juice Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Juice Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coin-collect-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coin Collect Juice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enemy-hit-juice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enemy Hit Juice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-shake-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen Shake (Broadcast)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-learn-and-grow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection — Learn and Grow! 🧠
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection — Learn and Grow! 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Reflection?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-capstone-project-your-masterpiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Capstone Project — Your Masterpiece! 🏆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Capstone Project — Your Masterpiece! 🏆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is the Capstone?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone-project-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Project Ideas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-capstone-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Capstone Journey
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-a-game-developer-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Are a Game Developer Now! 🎮
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="You Are a Game Developer Now! 🎮">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skills-youve-mastered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills You've Mastered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-challenge-your-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Challenge: Your Capstone! 🏁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Challenge: Your Capstone! 🏁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Mission
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submission Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Congratulations! 🎉
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Congratulations! 🎉">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank You! 🙏
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/11-design-process-capstone/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<hr />
+<p>title: Design Process and Capstone Project
+description: Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect for young learners
+generated_by: claude skill chapter-content-generator
+date: 2026-06-10 14:00:00
+version: 0.08</p>
+<hr />
+<h1 id="design-process-and-capstone-project">Design Process and Capstone Project<a class="headerlink" href="#design-process-and-capstone-project" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect. This chapter covers 16 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 16 concepts from the learning graph:</p>
+<ol>
+<li>Storyboard</li>
+<li>Plan Phase</li>
+<li>Create Phase</li>
+<li>Asset List</li>
+<li>Test Phase</li>
+<li>Improve Phase</li>
+<li>Design Journal</li>
+<li>Share Phase</li>
+<li>Polishing</li>
+<li>Design Process</li>
+<li>Iterative Development</li>
+<li>Reflection</li>
+<li>Instructions Screen</li>
+<li>Credits</li>
+<li>Sound Effects</li>
+<li>Visual Juice</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../03-motion-blocks-categories/">3. Motion Blocks and Block Categories</a></li>
+<li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
+<li><a href="../05-sounds-extensions-sharing/">5. Sounds, Extensions, and Sharing Projects</a></li>
+<li><a href="../06-broadcasting-conditionals-sensing/">6. Broadcasting, Conditionals, and Sensing</a></li>
+<li><a href="../08-animation-parallelism-debugging/">8. Animation, Parallelism, and Debugging</a></li>
+<li><a href="../09-advanced-control-operators/">9. Advanced Control and Operators</a></li>
+<li><a href="../10-game-mechanics-win-lose/">10. Game Mechanics and Win/Lose Conditions</a></li>
+</ul>
+<hr />
+<h2 id="the-design-process-your-creative-roadmap">The Design Process — Your Creative Roadmap! 🗺️<a class="headerlink" href="#the-design-process-your-creative-roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-the-design-process">What Is the Design Process?<a class="headerlink" href="#what-is-the-design-process" title="Permanent link">&para;</a></h3>
+<p><strong>The Design Process</strong> = a <strong>step-by-step method</strong> for turning ideas into finished projects. Professional game developers, engineers, artists, and inventors ALL use it!</p>
+<h3 id="the-6-stages">The 6 Stages<a class="headerlink" href="#the-6-stages" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>IMAGINE → PLAN → CREATE → TEST → IMPROVE → SHARE
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     ↑_____________REFLECT_____________↓
+</span></code></pre></div>
+<p><strong>Reflection happens at EVERY stage!</strong> 🔄</p>
+<hr />
+<h2 id="stage-1-imagine-dream-big">Stage 1: IMAGINE — Dream Big! 💭<a class="headerlink" href="#stage-1-imagine-dream-big" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-imagine">What Is Imagine?<a class="headerlink" href="#what-is-imagine" title="Permanent link">&para;</a></h3>
+<p><strong>Imagine</strong> = let your creativity run wild! No limits, no "that's impossible" — just pure ideas!</p>
+<h3 id="imagine-activities">Imagine Activities<a class="headerlink" href="#imagine-activities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Brainstorm</strong></td>
+<td>Write 20 game ideas in 5 minutes</td>
+</tr>
+<tr>
+<td><strong>Mind Map</strong></td>
+<td>Central idea → branches of features</td>
+</tr>
+<tr>
+<td><strong>Mashup</strong></td>
+<td>Combine two games: "Mario + Tetris"</td>
+</tr>
+<tr>
+<td><strong>What If?</strong></td>
+<td>"What if gravity reversed?" "What if you played as the villain?"</td>
+</tr>
+<tr>
+<td><strong>Inspiration Board</strong></td>
+<td>Collect images, colors, music that inspire you</td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagine-questions">Imagine Questions<a class="headerlink" href="#imagine-questions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What's the core fun?</strong></td>
+<td>What makes the player smile?</td>
+</tr>
+<tr>
+<td><strong>Who is the player?</strong></td>
+<td>Kid, teen, adult, family?</td>
+</tr>
+<tr>
+<td><strong>What's the hook?</strong></td>
+<td>Why keep playing after 5 minutes?</td>
+</tr>
+<tr>
+<td><strong>What's unique?</strong></td>
+<td>What makes YOUR game special?</td>
+</tr>
+<tr>
+<td><strong>What's the feeling?</strong></td>
+<td>Joy, tension, wonder, mastery?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="imagine-output">Imagine Output<a class="headerlink" href="#imagine-output" title="Permanent link">&para;</a></h3>
+<p><strong>One-sentence Game Concept:</strong></p>
+<blockquote>
+<p>"A [genre] game where you [core action] to [goal] while [challenge], featuring [unique twist]."</p>
+</blockquote>
+<p><strong>Example:</strong></p>
+<blockquote>
+<p>"A platformer where you <strong>dash through time</strong> to <strong>collect chrono-shards</strong> while <strong>avoiding paradox monsters</strong>, featuring <strong>past/future world switching</strong>."</p>
+</blockquote>
+<hr />
+<h2 id="stage-2-plan-blueprint-your-game">Stage 2: PLAN — Blueprint Your Game! 📐<a class="headerlink" href="#stage-2-plan-blueprint-your-game" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-plan">What Is Plan?<a class="headerlink" href="#what-is-plan" title="Permanent link">&para;</a></h3>
+<p><strong>Plan</strong> = turn your wild idea into a <strong>buildable blueprint</strong> with clear steps!</p>
+<h3 id="plan-deliverables">Plan Deliverables<a class="headerlink" href="#plan-deliverables" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Game Design Document (GDD)</strong></td>
+<td>Complete game specification</td>
+</tr>
+<tr>
+<td><strong>Storyboard</strong></td>
+<td>Visual scene-by-scene plan</td>
+</tr>
+<tr>
+<td><strong>Asset List</strong></td>
+<td>Every sprite, sound, backdrop needed</td>
+</tr>
+<tr>
+<td><strong>Flowchart</strong></td>
+<td>Logic flow for complex systems</td>
+</tr>
+<tr>
+<td><strong>Task List</strong></td>
+<td>Ordered steps with priorities</td>
+</tr>
+<tr>
+<td><strong>Milestones</strong></td>
+<td>Checkpoints: v0.1, v1.0, v2.0...</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="game-design-document-gdd-template">Game Design Document (GDD) Template<a class="headerlink" href="#game-design-document-gdd-template" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GAME DESIGN DOCUMENT
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>====================
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Title: [Game Name]
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Genre: [Platformer/Puzzle/RPG/etc.]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Target Audience: [Ages 8-12 / All Ages]
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Core Mechanic: [One-sentence description]
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Win Condition: [How to win]
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Lose Condition: [How to lose]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Controls: [Key mappings]
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Levels: [Number, themes, progression]
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Sprites: [Player, enemies, items, UI]
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Sounds: [Music, SFX, voice]
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Extensions: [Pen, Video, micro:bit, etc.]
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Milestones:
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  v0.1 - Core movement
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  v0.5 - First playable level
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  v1.0 - Complete game
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  v1.1 - Polish &amp; bug fixes
+</span></code></pre></div>
+<hr />
+<h3 id="storyboard-visual-script">Storyboard — Visual Script! 🎬<a class="headerlink" href="#storyboard-visual-script" title="Permanent link">&para;</a></h3>
+<p><strong>Storyboard</strong> = comic-strip style plan of your game's scenes!</p>
+<table>
+<thead>
+<tr>
+<th>Panel</th>
+<th>What to Draw</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Title screen</td>
+<td>"Press SPACE to start"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Level 1 start</td>
+<td>"Tutorial: Move with arrows"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>First challenge</td>
+<td>"Jump over spikes"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>First reward</td>
+<td>"Coin gives 10 points"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mid-level twist</td>
+<td>"New enemy type appears"</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Level complete</td>
+<td>"All coins collected!"</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Level 2 start</td>
+<td>"New mechanic: Double jump"</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>Victory screen</td>
+<td>"YOU WIN! Final score: ___"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="asset-list-shopping-list">Asset List — Shopping List! 🛒<a class="headerlink" href="#asset-list-shopping-list" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Assets Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprites</strong></td>
+<td>Player (idle, walk1-4, jump), Enemy1, Enemy2, Coin, Spike, Platform, UI hearts</td>
+</tr>
+<tr>
+<td><strong>Backdrops</strong></td>
+<td>Title, Level1, Level2, Boss, GameOver, Victory</td>
+</tr>
+<tr>
+<td><strong>Sounds</strong></td>
+<td>Jump, Coin, Hit, Music-L1, Music-L2, GameOver, Victory</td>
+</tr>
+<tr>
+<td><strong>Costumes</strong></td>
+<td>Player idle, walk1-4, jump, hurt; Enemy walk1-2, hurt</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>Score display, Lives hearts, Timer, Pause menu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="flowchart-logic-map">Flowchart — Logic Map! 🗺️<a class="headerlink" href="#flowchart-logic-map" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>START → Initialize Variables → MAIN LOOP
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                    ↓
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            Check Input (Keys)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                    ↓
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            Update Physics (Gravity, Velocity)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                    ↓
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            Check Collisions (Ground, Enemies, Coins)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                    ↓
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            Update Animations
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                    ↓
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            Check Win/Lose
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                    ↓
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            Update UI
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                    ↓
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            WAIT 0.01s → LOOP
+</span></code></pre></div>
+<hr />
+<h3 id="task-list-prioritized-steps">Task List — Prioritized Steps!<a class="headerlink" href="#task-list-prioritized-steps" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Task</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 Critical</td>
+<td>Player movement (left/right/jump)</td>
+<td>v0.1</td>
+</tr>
+<tr>
+<td>🔴 Critical</td>
+<td>Ground collision</td>
+<td>v0.1</td>
+</tr>
+<tr>
+<td>🔴 Critical</td>
+<td>Camera follow</td>
+<td>v0.1</td>
+</tr>
+<tr>
+<td>🟡 High</td>
+<td>Coin collection + score</td>
+<td>v0.2</td>
+</tr>
+<tr>
+<td>🟡 High</td>
+<td>Enemy patrol AI</td>
+<td>v0.2</td>
+</tr>
+<tr>
+<td>🟡 High</td>
+<td>Level design (3 levels)</td>
+<td>v0.5</td>
+</tr>
+<tr>
+<td>🟢 Medium</td>
+<td>Boss fight</td>
+<td>v0.8</td>
+</tr>
+<tr>
+<td>🟢 Medium</td>
+<td>Sound effects + music</td>
+<td>v0.9</td>
+</tr>
+<tr>
+<td>🔵 Low</td>
+<td>Particle effects</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>🔵 Low</td>
+<td>Unlockable skins</td>
+<td>v1.1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="stage-3-create-build-it">Stage 3: CREATE — Build It! 🛠️<a class="headerlink" href="#stage-3-create-build-it" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-create">What Is Create?<a class="headerlink" href="#what-is-create" title="Permanent link">&para;</a></h3>
+<p><strong>Create</strong> = write the code, draw the art, record the sounds — <strong>make it real!</strong></p>
+<h3 id="create-best-practices">Create Best Practices<a class="headerlink" href="#create-best-practices" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>One thing at a time</strong></td>
+<td>Build movement, test, THEN add coins</td>
+</tr>
+<tr>
+<td><strong>Test constantly</strong></td>
+<td>Run after EVERY change</td>
+</tr>
+<tr>
+<td><strong>Use versioning</strong></td>
+<td>Save v0.1, v0.2, v0.3...</td>
+</tr>
+<tr>
+<td><strong>Comment your code</strong></td>
+<td>Future you will thank you</td>
+</tr>
+<tr>
+<td><strong>Clean up regularly</strong></td>
+<td>Right-click → Clean up</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-order-suggested">Create Order (Suggested)<a class="headerlink" href="#create-order-suggested" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Core movement</strong> (player controller)</li>
+<li><strong>Camera follow</strong> (if scrolling)</li>
+<li><strong>Ground collision</strong> (platforms)</li>
+<li><strong>Collectibles</strong> (coins, score)</li>
+<li><strong>Enemies</strong> (patrol, chase)</li>
+<li><strong>Hazards</strong> (spikes, lava)</li>
+<li><strong>Lives/Game Over</strong> (health system)</li>
+<li><strong>Level transitions</strong> (broadcasts)</li>
+<li><strong>UI</strong> (score, lives, timer)</li>
+<li><strong>Sound effects</strong> (jump, coin, hit)</li>
+<li><strong>Music</strong> (level themes)</li>
+<li><strong>Polish</strong> (particles, juice, menus)</li>
+</ol>
+<hr />
+<h2 id="stage-4-test-does-it-work">Stage 4: TEST — Does It Work? 🧪<a class="headerlink" href="#stage-4-test-does-it-work" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-test">What Is Test?<a class="headerlink" href="#what-is-test" title="Permanent link">&para;</a></h3>
+<p><strong>Test</strong> = systematically verify <strong>every feature works</strong> and <strong>find bugs</strong>!</p>
+<h3 id="test-phases">Test Phases<a class="headerlink" href="#test-phases" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Focus</th>
+<th>Who</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Self-test</strong></td>
+<td>You play your own game</td>
+<td>You</td>
+</tr>
+<tr>
+<td><strong>Target audience test</strong></td>
+<td>Kids play your game</td>
+<td>Friends/siblings</td>
+</tr>
+<tr>
+<td><strong>Stress test</strong></td>
+<td>Push limits (100 clones, 30 min)</td>
+<td>You</td>
+</tr>
+<tr>
+<td><strong>Edge case test</strong></td>
+<td>Weird inputs, rapid clicks</td>
+<td>You</td>
+</tr>
+<tr>
+<td><strong>Regression test</strong></td>
+<td>Old features after changes</td>
+<td>You</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="test-checklist">Test Checklist<a class="headerlink" href="#test-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Specific Tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movement</strong></td>
+<td>All directions, speeds, jumping, edges</td>
+</tr>
+<tr>
+<td><strong>Collision</strong></td>
+<td>Ground, walls, ceilings, slopes, enemies</td>
+</tr>
+<tr>
+<td><strong>Collectibles</strong></td>
+<td>Score adds, sound plays, item disappears</td>
+</tr>
+<tr>
+<td><strong>Enemies</strong></td>
+<td>Patrol, chase, damage, defeat</td>
+</tr>
+<tr>
+<td><strong>Hazards</strong></td>
+<td>Spikes, lava, pits, falling</td>
+</tr>
+<tr>
+<td><strong>Lives</strong></td>
+<td>Lose life, invincibility, game over</td>
+</tr>
+<tr>
+<td><strong>Levels</strong></td>
+<td>Transitions, spawns, completion</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>Score, lives, timer, menus, pause</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>Music loops, SFX volume, mute</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>100 clones, 30 min, save/load</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="test-documentation">Test Documentation<a class="headerlink" href="#test-documentation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>TEST LOG - v0.5
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>===============
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Date: 2026-06-10
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Tester: Me
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>PASSED:
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>✅ Player moves left/right smoothly
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>✅ Jump works from ground only
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>✅ Coin collection adds 10 points
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>✅ Enemy patrol turns at edges
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>FAILED:
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>❌ Player gets stuck in wall corner
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>❌ Enemy sometimes walks through platform
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>❌ Music doesn&#39;t loop properly
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>NOTES:
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>- Wall sticking: need better corner collision
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>- Enemy: check ground detection
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>- Music: check loop points
+</span></code></pre></div>
+<hr />
+<h2 id="stage-5-improve-make-it-better">Stage 5: IMPROVE — Make It Better! ⬆️<a class="headerlink" href="#stage-5-improve-make-it-better" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-improve">What Is Improve?<a class="headerlink" href="#what-is-improve" title="Permanent link">&para;</a></h3>
+<p><strong>Improve</strong> = fix bugs, add polish, balance difficulty, add "juice"!</p>
+<h3 id="improvement-categories">Improvement Categories<a class="headerlink" href="#improvement-categories" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bug Fixes</strong></td>
+<td>Wall sticking, enemy clipping, music loops</td>
+</tr>
+<tr>
+<td><strong>Balance</strong></td>
+<td>Enemy speed, jump height, coin values</td>
+</tr>
+<tr>
+<td><strong>Juice</strong></td>
+<td>Screen shake, particle effects, screen flash</td>
+</tr>
+<tr>
+<td><strong>Accessibility</strong></td>
+<td>Colorblind mode, adjustable speed</td>
+</tr>
+<tr>
+<td><strong>Quality of Life</strong></td>
+<td>Checkpoints, level select, skip cutscene</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Reduce clones, optimize loops</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="the-juice-checklist">The "Juice" Checklist 🍹<a class="headerlink" href="#the-juice-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Juice Element</th>
+<th>Implementation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Screen shake</strong></td>
+<td><code>change x by (pick random -5 to 5)</code> on hit</td>
+<td>Impact feel</td>
+</tr>
+<tr>
+<td><strong>Screen flash</strong></td>
+<td><code>change color effect by 50, wait, clear</code></td>
+<td>Damage feedback</td>
+</tr>
+<tr>
+<td><strong>Particle burst</strong></td>
+<td>Clones + stamp + fade on collect/hit</td>
+<td>Satisfaction</td>
+</tr>
+<tr>
+<td><strong>Sound variation</strong></td>
+<td><code>pick random pitch</code> on repeated SFX</td>
+<td>Less repetition</td>
+</tr>
+<tr>
+<td><strong>Screen pause</strong></td>
+<td><code>wait 0.05 secs</code> on big events</td>
+<td>Weight/impact</td>
+</tr>
+<tr>
+<td><strong>Coyote time</strong></td>
+<td>Allow jump 0.1s after leaving ground</td>
+<td>Forgiving jumps</td>
+</tr>
+<tr>
+<td><strong>Jump buffering</strong></td>
+<td>Queue jump if pressed slightly early</td>
+<td>Responsive feel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="balancing-difficulty">Balancing Difficulty<a class="headerlink" href="#balancing-difficulty" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Too Easy</th>
+<th>Too Hard</th>
+<th>Just Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enemies never hit</td>
+<td>Instant death traps</td>
+<td>Fair challenge</td>
+</tr>
+<tr>
+<td>Infinite lives</td>
+<td>One-hit kills</td>
+<td>3 lives + checkpoints</td>
+</tr>
+<tr>
+<td>No time pressure</td>
+<td>Impossible time limits</td>
+<td>Generous but present</td>
+</tr>
+<tr>
+<td>Boring repetition</td>
+<td>Impossible jumps</td>
+<td>Variety + progression</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="iterative-development-cycle-until-perfect">Iterative Development — Cycle Until Perfect! 🔄<a class="headerlink" href="#iterative-development-cycle-until-perfect" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>PLAN → CREATE → TEST → IMPROVE → TEST → IMPROVE → TEST...
+</span></code></pre></div>
+<p><strong>Each cycle makes the game better!</strong> Most pro games go through 50+ iterations.</p>
+<hr />
+<h2 id="stage-6-share-show-the-world">Stage 6: SHARE — Show the World! 🌍<a class="headerlink" href="#stage-6-share-show-the-world" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-share">What Is Share?<a class="headerlink" href="#what-is-share" title="Permanent link">&para;</a></h3>
+<p><strong>Share</strong> = publish your game so others can play, enjoy, and remix!</p>
+<h3 id="before-sharing-checklist">Before Sharing Checklist<a class="headerlink" href="#before-sharing-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>✅ Ready to Share?</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No game-breaking bugs</strong></td>
+<td>Played 10 min without crash</td>
+</tr>
+<tr>
+<td><strong>Clear instructions</strong></td>
+<td>"Arrows move, Space jumps"</td>
+</tr>
+<tr>
+<td><strong>Credits included</strong></td>
+<td>Art, music, code sources</td>
+</tr>
+<tr>
+<td><strong>Tags added</strong></td>
+<td>"platformer, pixel-art, fun"</td>
+</tr>
+<tr>
+<td><strong>Thumbnail set</strong></td>
+<td>Eye-catching project image</td>
+</tr>
+<tr>
+<td><strong>Notes complete</strong></td>
+<td>Changelog, controls, credits</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sharing-steps">Sharing Steps<a class="headerlink" href="#sharing-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Share</strong> (📤) in toolbar</li>
+<li>Add <strong>clear title</strong>: "Super Coin Collector v1.2"</li>
+<li>Write <strong>instructions</strong>: "Arrows move, Space jumps, Collect all coins!"</li>
+<li>Add <strong>credits</strong>: "Music by Kevin MacLeod. Art by me."</li>
+<li>Add <strong>tags</strong>: "platformer, pixel-art, coin-collector, fun"</li>
+<li>Choose <strong>visibility</strong>: Anyone / Link only / Private</li>
+<li>Click <strong>Share</strong>!</li>
+</ol>
+<hr />
+<h3 id="after-sharing">After Sharing<a class="headerlink" href="#after-sharing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Send to friends</strong></td>
+<td>Get first players</td>
+</tr>
+<tr>
+<td><strong>Post in studios</strong></td>
+<td>"Cool Platformers" studio</td>
+</tr>
+<tr>
+<td><strong>Ask for feedback</strong></td>
+<td>"What's too hard/easy?"</td>
+</tr>
+<tr>
+<td><strong>Watch remixes</strong></td>
+<td>See how others extend your game</td>
+</tr>
+<tr>
+<td><strong>Respond to comments</strong></td>
+<td>Build community</td>
+</tr>
+<tr>
+<td><strong>Update based on feedback</strong></td>
+<td>v1.1, v1.2, v1.3...</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extra-polish-the-final-10">Extra Polish: The Final 10%! ✨<a class="headerlink" href="#extra-polish-the-final-10" title="Permanent link">&para;</a></h2>
+<h3 id="instructions-screen-teach-the-player">Instructions Screen — Teach the Player! 📋<a class="headerlink" href="#instructions-screen-teach-the-player" title="Permanent link">&para;</a></h3>
+<p><strong>Instructions Screen</strong> = first thing player sees — teaches controls!</p>
+<h3 id="instructions-screen-elements">Instructions Screen Elements<a class="headerlink" href="#instructions-screen-elements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>"SUPER COIN COLLECTOR"</td>
+</tr>
+<tr>
+<td><strong>Controls</strong></td>
+<td>"← → Move    SPACE Jump    I Inventory"</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>"Collect all 20 coins to win!"</td>
+</tr>
+<tr>
+<td><strong>Hazards</strong></td>
+<td>"Avoid spikes ⚡ and enemies 👾"</td>
+</tr>
+<tr>
+<td><strong>Tips</strong></td>
+<td>"Hold SPACE for higher jump!"</td>
+</tr>
+<tr>
+<td><strong>Start Button</strong></td>
+<td>"Press SPACE to Begin"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instructions-screen-code">Instructions Screen Code<a class="headerlink" href="#instructions-screen-code" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when I receive [show-instructions v]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>switch costume to [instructions-screen v]
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>show
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>when [space] key pressed
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>hide
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>broadcast [game-start v]
+</span></code></pre></div>
+<hr />
+<h3 id="credits-honor-your-sources">Credits — Honor Your Sources! 🙏<a class="headerlink" href="#credits-honor-your-sources" title="Permanent link">&para;</a></h3>
+<p><strong>Credits Screen</strong> = thank everyone who helped!</p>
+<h3 id="credits-template">Credits Template<a class="headerlink" href="#credits-template" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>CREDITS
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>=======
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>PROGRAMMING
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>- [Your Name] - All code
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>ART &amp; ANIMATION
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>- [Your Name] - Player, enemies, UI
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>- @PixelArtist - Background tiles (CC BY 4.0)
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>- @SpriteMaster - Enemy sprites (remixed)
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>MUSIC
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>- &quot;Adventure Theme&quot; by Kevin MacLeod (incompetech.com) - CC BY 4.0
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>- &quot;Boss Battle&quot; by Eric Matyas (soundimage.org) - CC BY 4.0
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>SOUND EFFECTS
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>- Coin, Jump, Hit - freesound.org users
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>- Explosion - Generated with Bfxr
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>TOOLS
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>- Scratch 3.0 (scratch.mit.edu)
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>- Bfxr (sound generator)
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>- Piskel (sprite editor)
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>SPECIAL THANKS
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>- @CoderJane for platformer physics tutorial
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>- @GameDevPro for enemy AI patterns
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>- My playtesters: Alex, Sam, Jordan
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>THANK YOU FOR PLAYING!
+</span></code></pre></div>
+<hr />
+<h3 id="sound-effects-audio-polish">Sound Effects — Audio Polish! 🔊<a class="headerlink" href="#sound-effects-audio-polish" title="Permanent link">&para;</a></h3>
+<h3 id="sound-effect-categories">Sound Effect Categories<a class="headerlink" href="#sound-effect-categories" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Tips</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Player</strong></td>
+<td>Jump, Land, Hurt, Death, Dash</td>
+<td>Short, distinct</td>
+</tr>
+<tr>
+<td><strong>Collectibles</strong></td>
+<td>Coin, Gem, Power-up, Heart</td>
+<td>Satisfying "ping"</td>
+</tr>
+<tr>
+<td><strong>Enemies</strong></td>
+<td>Spawn, Hurt, Death, Attack</td>
+<td>Threatening</td>
+</tr>
+<tr>
+<td><strong>Environment</strong></td>
+<td>Water, Wind, Fire, Door</td>
+<td>Atmospheric</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>Menu select, Pause, Error, Success</td>
+<td>Subtle, clear</td>
+</tr>
+<tr>
+<td><strong>Music</strong></td>
+<td>Level themes, Boss, Menu, Game Over</td>
+<td>Loopable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sound-design-tips">Sound Design Tips<a class="headerlink" href="#sound-design-tips" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pitch variation</strong></td>
+<td><code>change pitch by (pick random -10 to 10)</code> — less repetitive</td>
+</tr>
+<tr>
+<td><strong>Layer sounds</strong></td>
+<td>Jump + land = two sounds = more impact</td>
+</tr>
+<tr>
+<td><strong>Volume balance</strong></td>
+<td>Music quieter than SFX</td>
+</tr>
+<tr>
+<td><strong>Silence is powerful</strong></td>
+<td>Pause music for tension</td>
+</tr>
+<tr>
+<td><strong>Test on phone speaker</strong></td>
+<td>Many kids play on tablets</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="visual-juice-eye-candy">Visual Juice — Eye Candy! 👁️<a class="headerlink" href="#visual-juice-eye-candy" title="Permanent link">&para;</a></h3>
+<h3 id="what-is-juice">What Is "Juice"?<a class="headerlink" href="#what-is-juice" title="Permanent link">&para;</a></h3>
+<p><strong>Juice</strong> = visual/audio feedback that makes actions feel <strong>satisfying, powerful, alive!</strong></p>
+<h3 id="juice-techniques">Juice Techniques<a class="headerlink" href="#juice-techniques" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Code</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Screen shake</strong></td>
+<td><code>repeat 5: change x by (pick random -5 to 5), wait 0.02, end</code></td>
+<td>Impact</td>
+</tr>
+<tr>
+<td><strong>Screen flash</strong></td>
+<td><code>change color effect by 50, wait 0.05, clear graphic effects</code></td>
+<td>Hit flash</td>
+</tr>
+<tr>
+<td><strong>Scale pop</strong></td>
+<td><code>set size to 120%, wait 0.05, set size to 100%</code></td>
+<td>Bounce feel</td>
+</tr>
+<tr>
+<td><strong>Color flash</strong></td>
+<td><code>change color effect by 50, wait 0.05, clear</code></td>
+<td>Damage/collect</td>
+</tr>
+<tr>
+<td><strong>Particles</strong></td>
+<td>Clones + stamp + <code>change ghost by 5</code> + delete</td>
+<td>Explosion</td>
+</tr>
+<tr>
+<td><strong>Screen pause</strong></td>
+<td><code>wait 0.05 secs</code> on big events</td>
+<td>Weight</td>
+</tr>
+<tr>
+<td><strong>Trail effect</strong></td>
+<td><code>pen down</code> on fast movement</td>
+<td>Speed feel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="juice-examples">Juice Examples<a class="headerlink" href="#juice-examples" title="Permanent link">&para;</a></h3>
+<h4 id="coin-collect-juice">Coin Collect Juice<a class="headerlink" href="#coin-collect-juice" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when I receive [coin-collected v]
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>change [score v] by (10)
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>play sound [coin v]
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>create clone of [coin-particle v]
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>change color effect by 50
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>wait 0.05 secs
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>clear graphic effects
+</span></code></pre></div>
+<h4 id="enemy-hit-juice">Enemy Hit Juice<a class="headerlink" href="#enemy-hit-juice" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when I receive [enemy-hit v]
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>broadcast [screen-shake v]
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>change color effect by 100
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>play sound [hit v]
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>wait 0.1 secs
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>clear graphic effects
+</span></code></pre></div>
+<h4 id="screen-shake-broadcast">Screen Shake (Broadcast)<a class="headerlink" href="#screen-shake-broadcast" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>when I receive [screen-shake v]
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>repeat 5
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    change x by (pick random -5 to 5)
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    change y by (pick random -5 to 5)
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    wait 0.02 secs
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>end
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>go to x: (original-x) y: (original-y)
+</span></code></pre></div>
+<hr />
+<h2 id="reflection-learn-and-grow">Reflection — Learn and Grow! 🧠<a class="headerlink" href="#reflection-learn-and-grow" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-reflection">What Is Reflection?<a class="headerlink" href="#what-is-reflection" title="Permanent link">&para;</a></h3>
+<p><strong>Reflection</strong> = looking back at your project to <strong>learn what worked, what didn't, and how to improve next time!</strong></p>
+<h3 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What am I most proud of?</strong></td>
+<td>Celebrate success</td>
+</tr>
+<tr>
+<td><strong>What was hardest?</strong></td>
+<td>Identify learning gaps</td>
+</tr>
+<tr>
+<td><strong>What would I do differently?</strong></td>
+<td>Improve process</td>
+</tr>
+<tr>
+<td><strong>What did I learn?</strong></td>
+<td>Cement knowledge</td>
+</tr>
+<tr>
+<td><strong>What's next?</strong></td>
+<td>Plan future projects</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reflection-template">Reflection Template<a class="headerlink" href="#reflection-template" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>PROJECT REFLECTION
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>==================
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Game: [Name]
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Version: [v1.2]
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Date Completed: [Date]
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>WHAT WENT WELL:
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>- Smooth player movement felt great
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>- Enemy AI was challenging but fair
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>- Juice effects made collecting coins satisfying
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>- Music fit the theme perfectly
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>CHALLENGES OVERCOME:
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>- Wall sticking bug → fixed with raycast collision
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>- Enemy AI too aggressive → tuned detection radius
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>- Music looping click → fixed with seamless loop points
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>WHAT I LEARNED:
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>- Broadcast and wait is essential for level loading
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>- Variable scope (global vs local) matters a lot
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>- Juice effects make huge difference in feel
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>- Testing with actual kids reveals real issues
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>NEXT TIME I&#39;LL:
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>- Plan asset list more carefully upfront
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>- Use versioning from day 1 (lost v0.3!)
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>- Add automated tests for core mechanics
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>- Design juice effects earlier in process
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>NEXT PROJECT IDEAS:
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>- Metroidvania with map system
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>- Multiplayer co-op platformer
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>- Level editor for players
+</span></code></pre></div>
+<hr />
+<h2 id="the-capstone-project-your-masterpiece">The Capstone Project — Your Masterpiece! 🏆<a class="headerlink" href="#the-capstone-project-your-masterpiece" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-the-capstone">What Is the Capstone?<a class="headerlink" href="#what-is-the-capstone" title="Permanent link">&para;</a></h3>
+<p><strong>Capstone Project</strong> = your <strong>final, polished game</strong> that demonstrates <strong>everything you've learned!</strong></p>
+<h3 id="capstone-requirements">Capstone Requirements<a class="headerlink" href="#capstone-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Core mechanics</strong></td>
+<td>Movement, collision, physics</td>
+</tr>
+<tr>
+<td><strong>At least 3 levels</strong></td>
+<td>Progressive difficulty</td>
+</tr>
+<tr>
+<td><strong>Win + Lose conditions</strong></td>
+<td>Clear goals, fair failure</td>
+</tr>
+<tr>
+<td><strong>Score/Lives/Timer</strong></td>
+<td>At least 2 systems</td>
+</tr>
+<tr>
+<td><strong>Enemies + Hazards</strong></td>
+<td>At least 2 enemy types</td>
+</tr>
+<tr>
+<td><strong>Collectibles</strong></td>
+<td>Coins, gems, power-ups</td>
+</tr>
+<tr>
+<td><strong>Sound + Music</strong></td>
+<td>SFX + at least 1 music track</td>
+</tr>
+<tr>
+<td><strong>Polish</strong></td>
+<td>Juice, UI, instructions, credits</td>
+</tr>
+<tr>
+<td><strong>No major bugs</strong></td>
+<td>Tested 30+ minutes</td>
+</tr>
+<tr>
+<td><strong>Shared publicly</strong></td>
+<td>On Scratch with tags</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="capstone-project-ideas">Capstone Project Ideas<a class="headerlink" href="#capstone-project-ideas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Idea</th>
+<th>Core Mechanic</th>
+<th>Unique Twist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time Dash</strong></td>
+<td>Platformer</td>
+<td>Switch past/future worlds</td>
+</tr>
+<tr>
+<td><strong>Color Shift</strong></td>
+<td>Puzzle-platformer</td>
+<td>Change color to pass obstacles</td>
+</tr>
+<tr>
+<td><strong>Gravity Flip</strong></td>
+<td>Platformer</td>
+<td>Reverse gravity on command</td>
+</tr>
+<tr>
+<td><strong>Shadow Clone</strong></td>
+<td>Puzzle</td>
+<td>Record/replay your moves</td>
+</tr>
+<tr>
+<td><strong>Neon Runner</strong></td>
+<td>Endless runner</td>
+<td>Rhythm-based obstacles</td>
+</tr>
+<tr>
+<td><strong>Tiny World</strong></td>
+<td>Exploration</td>
+<td>Shrink/grow to explore</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="your-capstone-journey">Your Capstone Journey<a class="headerlink" href="#your-capstone-journey" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WEEK 1: IMAGINE + PLAN
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  - Brainstorm 10 ideas → pick 1
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  - Write GDD, storyboard, asset list
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  - Set up Scratch project, versioning
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>WEEK 2: CREATE (Core)
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  - Player movement + camera
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  - Collision system
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  - Level 1 layout
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>WEEK 3: CREATE (Systems)
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>  - Enemies, hazards, collectibles
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  - Score, lives, timer
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  - Level 2 &amp; 3
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>WEEK 4: TEST + IMPROVE + POLISH
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>  - Playtest with friends
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>  - Fix bugs, balance difficulty
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>  - Add juice, UI, sound, music
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>WEEK 5: SHARE + REFLECT
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>  - Write instructions, credits
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>  - Share on Scratch with tags
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>  - Write reflection
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>  - Submit capstone!
+</span></code></pre></div>
+<hr />
+<h2 id="you-are-a-game-developer-now">You Are a Game Developer Now! 🎮<a class="headerlink" href="#you-are-a-game-developer-now" title="Permanent link">&para;</a></h2>
+<h3 id="skills-youve-mastered">Skills You've Mastered<a class="headerlink" href="#skills-youve-mastered" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Skills</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Programming</strong></td>
+<td>Variables, loops, conditionals, events, clones, lists</td>
+</tr>
+<tr>
+<td><strong>Game Design</strong></td>
+<td>Mechanics, balance, level design, progression</td>
+</tr>
+<tr>
+<td><strong>Art &amp; Animation</strong></td>
+<td>Sprites, costumes, backdrops, animation</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>SFX, music, voice, dynamic audio</td>
+</tr>
+<tr>
+<td><strong>Engineering</strong></td>
+<td>Debugging, testing, versioning, optimization</td>
+</tr>
+<tr>
+<td><strong>Design Process</strong></td>
+<td>Imagine, plan, create, test, improve, share, reflect</td>
+</tr>
+<tr>
+<td><strong>Collaboration</strong></td>
+<td>Remixing, crediting, feedback, community</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keep making games!</strong></td>
+<td>Scratch, then GameMaker, Unity, Godot</td>
+</tr>
+<tr>
+<td><strong>Learn coding</strong></td>
+<td>Python, JavaScript, C#</td>
+</tr>
+<tr>
+<td><strong>Game jams</strong></td>
+<td>Ludum Dare, GMTK, Brackeys</td>
+</tr>
+<tr>
+<td><strong>Communities</strong></td>
+<td>Scratch forums, r/gamedev, Discord</td>
+</tr>
+<tr>
+<td><strong>Education</strong></td>
+<td>CS degrees, game design programs</td>
+</tr>
+<tr>
+<td><strong>Career</strong></td>
+<td>Game dev, software eng, UX design, art</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-challenge-your-capstone">Final Challenge: Your Capstone! 🏁<a class="headerlink" href="#final-challenge-your-capstone" title="Permanent link">&para;</a></h2>
+<h3 id="your-mission">Your Mission<a class="headerlink" href="#your-mission" title="Permanent link">&para;</a></h3>
+<p><strong>Create, polish, and share a complete, original game on Scratch that demonstrates everything you've learned.</strong></p>
+<h3 id="submission-checklist">Submission Checklist<a class="headerlink" href="#submission-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Game Design Document completed</li>
+<li>[ ] Storyboard drawn</li>
+<li>[ ] Asset list created</li>
+<li>[ ] Core movement + collision working</li>
+<li>[ ] 3+ levels with progression</li>
+<li>[ ] Win condition implemented</li>
+<li>[ ] Lose condition implemented</li>
+<li>[ ] Score + Lives + Timer systems</li>
+<li>[ ] 2+ enemy types with AI</li>
+<li>[ ] Collectibles + hazards</li>
+<li>[ ] Sound effects for all actions</li>
+<li>[ ] Background music (loops properly)</li>
+<li>[ ] Instructions screen</li>
+<li>[ ] Credits screen</li>
+<li>[ ] Juice effects (shake, flash, particles)</li>
+<li>[ ] Tested 30+ minutes without crashes</li>
+<li>[ ] Playtested by 2+ people</li>
+<li>[ ] Shared on Scratch with tags</li>
+<li>[ ] Reflection written</li>
+</ul>
+<hr />
+<h2 id="congratulations">Congratulations! 🎉<a class="headerlink" href="#congratulations" title="Permanent link">&para;</a></h2>
+<p><strong>You've completed the Scratch Programming for Kids textbook!</strong></p>
+<p>You've journeyed from:
+- <strong>Hello World</strong> → <strong>Capstone Game Developer</strong></p>
+<h3 id="remember">Remember:<a class="headerlink" href="#remember" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>"The best way to learn game development is to make games."</strong></p>
+</blockquote>
+<p>So keep making games. Keep learning. Keep sharing. Keep having fun!</p>
+<hr />
+<h2 id="thank-you">Thank You! 🙏<a class="headerlink" href="#thank-you" title="Permanent link">&para;</a></h2>
+<p>Thank you for joining this journey through Scratch programming. </p>
+<p><strong>Keep creating. Keep coding. Keep playing.</strong></p>
+<hr />
+<p><em>The Scratch Programming for Kids Team</em></p>
+<hr />
+<p><em>This textbook was created with love for young creators everywhere. May your code be bug-free, your frame rates high, and your imagination limitless!</em></p>
+<hr />
+<p><em>Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab. Scratch is a trademark of MIT. This textbook is not affiliated with MIT or the Scratch Team.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../10-game-mechanics-win-lose/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. Game Mechanics and Win/Lose Conditions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                10. Game Mechanics and Win/Lose Conditions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../learning-graph/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

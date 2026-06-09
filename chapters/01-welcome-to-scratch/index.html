@@ -1,0 +1,2990 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduces the Scratch interface, visual programming basics, and community features for young learners">
+      
+      
+        <meta name="author" content="Arun Batchu">
+      
+      
+        <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/01-welcome-to-scratch/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-sprites-stage-coordinates/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Welcome to Scratch - Scratch Programming for Kids</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-scratch" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scratch Programming for Kids
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Welcome to Scratch
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scratch Programming for Kids
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Welcome to Scratch
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Scratch?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is Scratch?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-visual-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Visual Programming?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scratch-editor-your-creative-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scratch Editor — Your Creative Workspace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Scratch Editor — Your Creative Workspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-scratch-editor-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Scratch Editor Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tabs-code-costumes-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Tabs — Code, Costumes, Sounds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Tabs — Code, Costumes, Sounds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-tabs-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three Tabs Explained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-sprite-and-the-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your First Sprite and the Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Sprite and the Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Sprite?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-stage-coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Stage Coordinate System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-blocks-palette-your-programming-toolbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Blocks Palette — Your Programming Toolbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Blocks Palette — Your Programming Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-block-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Block Categories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-shapes-what-shape-means-what-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Shapes — What Shape Means What Job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Shapes — What Shape Means What Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-block-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Block Shapes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-script-lets-make-the-cat-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your First Script — Let's Make the Cat Move!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Script — Let's Make the Cat Move!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-make-the-cat-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Make the Cat Walk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-these-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try These Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Try These Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-script-anatomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Script Anatomy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-toolbar-save-share-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Toolbar — Save, Share, and More
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-scratch-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Scratch Account
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Scratch Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Create an Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-have-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Have an Account?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-guidelines-be-kind-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Guidelines — Be Kind Online
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Guidelines — Be Kind Online">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-scratch-community-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scratch Community Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#studios-collaborate-and-curate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Studios — Collaborate and Curate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Studios — Collaborate and Curate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do-in-studios" class="md-nav__link">
+    <span class="md-ellipsis">
+      What You Can Do in Studios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studio-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Studio Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commenting-share-your-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commenting — Share Your Thoughts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commenting — Share Your Thoughts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-commenting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Commenting Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remixing-build-on-others-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remixing — Build on Others' Ideas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remixing — Build on Others' Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Remix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Remix?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-and-sharing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving and Sharing Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving and Sharing Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saving-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving Your Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Your Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-you-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens When You Share?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file-menu-more-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      The File Menu — More Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoom-controls-see-more-or-see-closer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zoom Controls — See More or See Closer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-highlighting-see-your-code-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Highlighting — See Your Code Run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Sprites, Stage, and the Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-motion-blocks-categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Motion Blocks and Block Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Events, Sequences, and First Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Sounds, Extensions, and Sharing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Broadcasting, Conditionals, and Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-variables-lists-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Variables, Lists, and Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Animation, Parallelism, and Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-advanced-control-operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Advanced Control and Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Game Mechanics and Win/Lose Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-design-process-capstone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Design Process and Capstone Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Scratch?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is Scratch?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-visual-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Visual Programming?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scratch-editor-your-creative-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scratch Editor — Your Creative Workspace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Scratch Editor — Your Creative Workspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-scratch-editor-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Scratch Editor Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tabs-code-costumes-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Tabs — Code, Costumes, Sounds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Tabs — Code, Costumes, Sounds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-tabs-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three Tabs Explained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-sprite-and-the-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your First Sprite and the Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Sprite and the Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Sprite?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-stage-coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Stage Coordinate System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-blocks-palette-your-programming-toolbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Blocks Palette — Your Programming Toolbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Blocks Palette — Your Programming Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-block-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Block Categories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-shapes-what-shape-means-what-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Shapes — What Shape Means What Job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Shapes — What Shape Means What Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-block-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Block Shapes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-script-lets-make-the-cat-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your First Script — Let's Make the Cat Move!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Script — Let's Make the Cat Move!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-make-the-cat-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Make the Cat Walk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-these-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try These Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Try These Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-script-anatomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Script Anatomy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-toolbar-save-share-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Toolbar — Save, Share, and More
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-scratch-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Scratch Account
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Scratch Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-create-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Create an Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-have-an-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Have an Account?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-guidelines-be-kind-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Guidelines — Be Kind Online
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Guidelines — Be Kind Online">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-scratch-community-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scratch Community Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#studios-collaborate-and-curate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Studios — Collaborate and Curate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Studios — Collaborate and Curate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do-in-studios" class="md-nav__link">
+    <span class="md-ellipsis">
+      What You Can Do in Studios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studio-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Studio Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commenting-share-your-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commenting — Share Your Thoughts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commenting — Share Your Thoughts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-commenting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Commenting Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remixing-build-on-others-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remixing — Build on Others' Ideas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remixing — Build on Others' Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Remix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-remix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Remix?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-and-sharing-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving and Sharing Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Saving and Sharing Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saving-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving Your Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Your Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-you-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens When You Share?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file-menu-more-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      The File Menu — More Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoom-controls-see-more-or-see-closer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zoom Controls — See More or See Closer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-highlighting-see-your-code-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Highlighting — See Your Code Run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms to Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Yourself! 🎯
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/01-welcome-to-scratch/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="welcome-to-scratch">Welcome to Scratch<a class="headerlink" href="#welcome-to-scratch" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Introduces the Scratch interface, visual programming basics, and community features. This chapter covers 17 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
+<ol>
+<li>Visual Programming</li>
+<li>Scratch Account</li>
+<li>Block Highlighting</li>
+<li>Sprite</li>
+<li>Stage</li>
+<li>Blocks Palette</li>
+<li>Code Tab</li>
+<li>Costumes Tab</li>
+<li>Sounds Tab</li>
+<li>Toolbar</li>
+<li>Zoom Controls</li>
+<li>File Menu</li>
+<li>Community Guidelines</li>
+<li>Studio</li>
+<li>Commenting</li>
+<li>Remixing</li>
+<li>Saving Projects</li>
+<li>Sharing Projects</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="what-is-scratch">What Is Scratch?<a class="headerlink" href="#what-is-scratch" title="Permanent link">&para;</a></h2>
+<p>Scratch is a <strong>visual programming language</strong> designed especially for kids like you! Instead of typing complicated text code, you snap together colorful blocks — like LEGO® bricks — to create your own interactive stories, games, and animations.</p>
+<h3 id="why-visual-programming">Why Visual Programming?<a class="headerlink" href="#why-visual-programming" title="Permanent link">&para;</a></h3>
+<p>Think about how you build with LEGO® bricks. You don't need to know how plastic is made — you just snap bricks together to build something amazing. <strong>Visual programming</strong> works the same way:</p>
+<ul>
+<li><strong>No typing code</strong> — You drag and drop blocks instead of typing</li>
+<li><strong>No syntax errors</strong> — Blocks only fit together in ways that work</li>
+<li><strong>See your program run</strong> — Watch your creation come to life instantly</li>
+<li><strong>Learn real concepts</strong> — The ideas you learn here are used by professional programmers!</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Did You Know?</p>
+<p>Scratch was created by the <strong>MIT Media Lab</strong> — the same people who work on robots, new kinds of computers, and cool inventions! Over <strong>100 million</strong> people around the world use Scratch.</p>
+</div>
+<hr />
+<h2 id="the-scratch-editor-your-creative-workspace">The Scratch Editor — Your Creative Workspace<a class="headerlink" href="#the-scratch-editor-your-creative-workspace" title="Permanent link">&para;</a></h2>
+<p>When you open Scratch at <a href="https://scratch.mit.edu">scratch.mit.edu</a>, you'll see the <strong>editor</strong>. Think of it as your digital art studio where you build programs.</p>
+<h4 id="diagram-scratch-editor-overview">Diagram: Scratch Editor Overview<a class="headerlink" href="#diagram-scratch-editor-overview" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/editor-overview/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Scratch Editor Overview</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> editor-overview<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Help students identify the main parts of the Scratch editor before they start building</p>
+<p>Components to show:
+- <strong>Stage area</strong> (top right) — Where your project runs
+- <strong>Sprite pane</strong> (below stage) — Shows all your characters
+- <strong>Blocks palette</strong> (left) — Color-coded categories of blocks
+- <strong>Code area</strong> (center) — Where you snap blocks together
+- <strong>Tabs</strong> (top of code area) — Code / Costumes / Sounds
+- <strong>Toolbar</strong> (top) — File menu, save, share, green flag, stop sign</p>
+<p>Connections:
+- Arrows from blocks palette to code area showing "drag blocks here"
+- Arrows from code area to stage showing "run your program"
+- Arrows from sprite pane to code area showing "select sprite to program"</p>
+<p>Style: Clean labeled diagram with color-coded regions matching Scratch's actual colors</p>
+<p>Labels:
+- "Stage (480 × 360 pixels)" on stage area
+- "Drag blocks from here →" on blocks palette
+- "Snap blocks together here" on code area
+- "Code / Costumes / Sounds tabs" on tab bar</p>
+<p>Color scheme: Match Scratch's actual UI colors (blue Motion, purple Looks, pink Sound, yellow Events, orange Control, light blue Sensing, green Operators, red Variables, dark red Lists, pink My Blocks)</p>
+<p>Implementation: p5.js diagram with hover tooltips on each region. Click a region to highlight it and show a brief definition in a side panel.</p>
+</details>
+<hr />
+<h3 id="the-three-main-areas">The Three Main Areas<a class="headerlink" href="#the-three-main-areas" title="Permanent link">&para;</a></h3>
+<p>The editor has <strong>three big sections</strong> you'll use all the time:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What It Does</th>
+<th>How to Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blocks Palette</strong> (left)</td>
+<td>Holds all the programming blocks, organized by color and category</td>
+<td>Click a category to see its blocks. Drag blocks into the code area.</td>
+</tr>
+<tr>
+<td><strong>Code Area</strong> (center)</td>
+<td>Where you build scripts by snapping blocks together</td>
+<td>Click a sprite first, then drag blocks here to program that sprite.</td>
+</tr>
+<tr>
+<td><strong>Stage</strong> (top right)</td>
+<td>Where your project runs and you see the action</td>
+<td>Click the green flag to start. Click the stop sign to stop.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">💡 Pro Tip</p>
+<p>The <strong>Stage</strong> is 480 pixels wide by 360 pixels tall. The exact center is position <strong>(0, 0)</strong>. X goes from -240 (left) to +240 (right). Y goes from -180 (bottom) to +180 (top).</p>
+</div>
+<hr />
+<h3 id="the-three-tabs-code-costumes-sounds">The Three Tabs — Code, Costumes, Sounds<a class="headerlink" href="#the-three-tabs-code-costumes-sounds" title="Permanent link">&para;</a></h3>
+<p>At the top of the code area, you'll see <strong>three tabs</strong>. Each tab lets you work on a different part of your sprite:</p>
+<h4 id="diagram-three-tabs-explained">Diagram: Three Tabs Explained<a class="headerlink" href="#diagram-three-tabs-explained" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/three-tabs/main.html" width="100%" height="400px" scrolling="no"></iframe>
+
+<details>
+<summary>Three Tabs Explained</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> three-tabs<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Show the three tabs (Code, Costumes, Sounds) and what each is for</p>
+<p>Components to show:
+- <strong>Code tab</strong> (selected by default) — Scripts area, blocks palette visible
+- <strong>Costumes tab</strong> — Costume editor with drawing tools, costume list on left
+- <strong>Sounds tab</strong> — Sound editor with waveform, recording, and library</p>
+<p>Connections:
+- Arrow from sprite in sprite pane to each tab showing "each sprite has its own"
+- Arrows between tabs showing "click to switch"</p>
+<p>Style: Side-by-side comparison of the three tab views</p>
+<p>Labels:
+- "Program your sprite here" on Code tab
+- "Draw and animate your sprite here" on Costumes tab
+- "Add and edit sounds here" on Sounds tab</p>
+<p>Color scheme: Match Scratch tab colors (Code=gray, Costumes=purple, Sounds=pink)</p>
+<p>Implementation: p5.js interactive diagram. Click each tab to see a detailed view with labels. Hover over tools in Costumes/Sounds tabs to see tool names.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Purpose</th>
+<th>What You'll Do Here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>Program your sprite's behavior</td>
+<td>Snap blocks together to make your sprite move, talk, react</td>
+</tr>
+<tr>
+<td><strong>Costumes</strong></td>
+<td>Draw and edit how your sprite looks</td>
+<td>Draw new costumes, edit existing ones, create animations</td>
+</tr>
+<tr>
+<td><strong>Sounds</strong></td>
+<td>Add and edit audio</td>
+<td>Record your voice, choose from library, edit sound clips</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="your-first-sprite-and-the-stage">Your First Sprite and the Stage<a class="headerlink" href="#your-first-sprite-and-the-stage" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-sprite">What Is a Sprite?<a class="headerlink" href="#what-is-a-sprite" title="Permanent link">&para;</a></h3>
+<p>A <strong>sprite</strong> is a character or object in your Scratch project. Every sprite can:</p>
+<ul>
+<li><strong>Move</strong> around the stage</li>
+<li><strong>Change appearance</strong> (switch costumes)</li>
+<li><strong>Make sounds</strong></li>
+<li><strong>React to events</strong> (like being clicked or a key pressed)</li>
+<li><strong>Remember things</strong> (using variables)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">🎭 Sprite Fact</p>
+<p>A Scratch project can have <strong>many sprites</strong> — each with its own scripts, costumes, and sounds. They all share the same stage!</p>
+</div>
+<h3 id="the-stage">The Stage<a class="headerlink" href="#the-stage" title="Permanent link">&para;</a></h3>
+<p>The <strong>stage</strong> is the background where all your sprites perform. You can:</p>
+<ul>
+<li><strong>Change backdrops</strong> to set different scenes</li>
+<li><strong>Add backdrops</strong> from the library or draw your own</li>
+<li><strong>Program the stage</strong> itself (it can have scripts too!)</li>
+</ul>
+<h4 id="diagram-stage-coordinate-system">Diagram: Stage Coordinate System<a class="headerlink" href="#diagram-stage-coordinate-system" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/stage-coordinates/main.html" width="100%" height="450px" scrolling="no"></iframe>
+
+<details>
+<summary>Stage Coordinate System</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> stage-coordinates<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Understand the Scratch coordinate system (x from -240 to 240, y from -180 to 180, center at 0,0)</p>
+<p>Canvas layout:
+- Full stage area (480×360) with grid overlay
+- Movable sprite that shows current (x, y) coordinates
+- Click anywhere on stage to move sprite and see coordinates</p>
+<p>Visual elements:
+- Stage rectangle with grid lines every 60 pixels
+- X axis labeled from -240 to 240
+- Y axis labeled from -180 to 180
+- Center point (0, 0) marked clearly
+- Sprite (cat or custom) that follows mouse or clicks
+- Live coordinate display: "x: ___ y: ___"</p>
+<p>Interactive controls:
+- Click on stage to teleport sprite and see coordinates
+- Toggle grid on/off
+- Toggle axis labels on/off
+- "Go to center" button (0, 0)
+- "Go to corner" buttons (-240, 180), (240, 180), (-240, -180), (240, -180)</p>
+<p>Default parameters:
+- Grid: ON
+- Labels: ON
+- Sprite: Scratch cat</p>
+<p>Data Visibility Requirements:
+  Stage 1: Show empty stage with grid and axes
+  Stage 2: Show sprite at center (0, 0) with coordinates displayed
+  Stage 3: Show sprite at various positions with coordinate updates</p>
+<p>Instructional Rationale: Step-through with concrete coordinate values is appropriate because the Remember/Identify objective requires learners to associate positions with specific x,y values. Interactive exploration with immediate feedback reinforces the coordinate mapping.</p>
+<p>Implementation notes:
+- Use p5.js for rendering
+- Draw grid and axes with light gray lines
+- Coordinate display in top-left corner
+- Responsive canvas that resizes with window</p>
+</details>
+<hr />
+<h2 id="the-blocks-palette-your-programming-toolbox">The Blocks Palette — Your Programming Toolbox<a class="headerlink" href="#the-blocks-palette-your-programming-toolbox" title="Permanent link">&para;</a></h2>
+<p>The <strong>blocks palette</strong> on the left holds all the blocks you'll use to program. Blocks are organized into <strong>10 categories</strong> by color:</p>
+<h4 id="diagram-block-categories">Diagram: Block Categories<a class="headerlink" href="#diagram-block-categories" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/block-categories/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Block Categories</summary>
+<p>Type: infographic
+<strong>sim-id:</strong> block-categories<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Show all 10 block categories with their colors, names, and example blocks</p>
+<p>Layout: Vertical list of category cards, each showing:
+- Category color bar
+- Category name
+- 3-4 example blocks with icons
+- Brief description of what the category does</p>
+<p>Categories:
+1. <strong>Motion</strong> (medium blue) — Move, turn, glide, go to position
+2. <strong>Looks</strong> (purple) — Say, think, switch costume, size, effects
+3. <strong>Sound</strong> (pink) — Play sound, change tempo, volume
+4. <strong>Events</strong> (yellow) — When green flag clicked, when key pressed, broadcast
+5. <strong>Control</strong> (orange) — Loops, if/else, wait, stop
+6. <strong>Sensing</strong> (light blue) — Touching, distance, key pressed, timer
+7. <strong>Operators</strong> (green) — Math, comparison, boolean logic, random
+8. <strong>Variables</strong> (red) — Make variable, set, change, show/hide
+9. <strong>Lists</strong> (dark red) — Make list, add, delete, item, length
+10. <strong>My Blocks</strong> (pink) — Define custom blocks with parameters</p>
+<p>Interactive elements:
+- Hover a category to highlight it and show more example blocks
+- Click a category to expand/collapse details
+- Search box to filter categories by keyword</p>
+<p>Visual style: Modern card layout matching Scratch's actual colors
+Color scheme: Exact Scratch category colors</p>
+</details>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Color</th>
+<th>What It Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Motion</strong></td>
+<td>🔵 Medium Blue</td>
+<td>Moving, turning, positioning sprites</td>
+</tr>
+<tr>
+<td><strong>Looks</strong></td>
+<td>🟣 Purple</td>
+<td>Speech bubbles, costumes, size, visual effects</td>
+</tr>
+<tr>
+<td><strong>Sound</strong></td>
+<td>🩷 Pink</td>
+<td>Playing sounds, changing tempo, volume</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>🟡 Yellow</td>
+<td>Starting scripts (green flag, clicks, keys, messages)</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>🟠 Orange</td>
+<td>Loops, decisions (if/else), waiting, stopping</td>
+</tr>
+<tr>
+<td><strong>Sensing</strong></td>
+<td>🔷 Light Blue</td>
+<td>Detecting touches, keys, distances, timers</td>
+</tr>
+<tr>
+<td><strong>Operators</strong></td>
+<td>🟢 Green</td>
+<td>Math, comparisons, true/false logic, random numbers</td>
+</tr>
+<tr>
+<td><strong>Variables</strong></td>
+<td>🔴 Red</td>
+<td>Storing numbers (score, lives, timer)</td>
+</tr>
+<tr>
+<td><strong>Lists</strong></td>
+<td>🟤 Dark Red</td>
+<td>Storing collections of items (inventory, high scores)</td>
+</tr>
+<tr>
+<td><strong>My Blocks</strong></td>
+<td>🩷 Dark Pink</td>
+<td>Creating your own custom blocks</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🎯 Color Coding Helps You!</p>
+<p>The <strong>colors aren't just for looks</strong> — they help you find blocks fast. When you see an orange block, you know it controls <strong>program flow</strong> (loops, decisions). When you see a green block, you know it does <strong>math or logic</strong>.</p>
+</div>
+<hr />
+<h2 id="block-shapes-what-shape-means-what-job">Block Shapes — What Shape Means What Job<a class="headerlink" href="#block-shapes-what-shape-means-what-job" title="Permanent link">&para;</a></h2>
+<p>Blocks come in <strong>different shapes</strong> that tell you how they work:</p>
+<h4 id="diagram-block-shapes">Diagram: Block Shapes<a class="headerlink" href="#diagram-block-shapes" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/block-shapes/main.html" width="100%" height="450px" scrolling="no"></iframe>
+
+<details>
+<summary>Block Shapes</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> block-shapes<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Show the 5 block shapes and what each shape means</p>
+<p>Components to show:
+- <strong>Hat blocks</strong> (rounded top, flat bottom) — "When something happens, start this script"
+- <strong>Stack blocks</strong> (puzzle piece top and bottom) — "Do this action, then go to next block"
+- <strong>Reporter blocks</strong> (rounded rectangle, output a value) — "Give me a number or text"
+- <strong>Boolean blocks</strong> (hexagon, output true/false) — "Answer a yes/no question"
+- <strong>Cap blocks</strong> (flat top, rounded bottom) — "Stop this script or all scripts"</p>
+<p>Connections:
+- Arrows showing hat → stack → stack → cap (typical script flow)
+- Arrows showing reporter/boolean fitting into slots in other blocks</p>
+<p>Style: Large clear illustrations of each shape with labels</p>
+<p>Labels:
+- "Hat = STARTS a script" with examples (when green flag clicked, when key pressed)
+- "Stack = DOES an action" with examples (move 10 steps, say Hello)
+- "Reporter = GIVES a value" with examples (x position, pick random 1 to 10)
+- "Boolean = ANSWERS true/false" with examples (touching mouse-pointer?, 5 &gt; 3)
+- "Cap = ENDS a script" with examples (stop all, stop this script)</p>
+<p>Color scheme: Match block colors from actual Scratch</p>
+<p>Implementation: p5.js diagram. Hover a block shape to see explanation and examples. Click to enlarge.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th>Shape</th>
+<th>Name</th>
+<th>Job</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⌢▔▔▔</td>
+<td><strong>Hat block</strong></td>
+<td><strong>Starts</strong> a script when something happens</td>
+<td><code>when green flag clicked</code>, <code>when this sprite clicked</code></td>
+</tr>
+<tr>
+<td>▔▔▔▁</td>
+<td><strong>Stack block</strong></td>
+<td><strong>Does</strong> an action, then passes to next block</td>
+<td><code>move 10 steps</code>, <code>say Hello!</code>, <code>change x by 5</code></td>
+</tr>
+<tr>
+<td>⬭</td>
+<td><strong>Reporter block</strong></td>
+<td><strong>Gives</strong> a value (number or text)</td>
+<td><code>x position</code>, <code>pick random 1 to 10</code>, <code>timer</code></td>
+</tr>
+<tr>
+<td>⬡</td>
+<td><strong>Boolean block</strong></td>
+<td><strong>Answers</strong> true or false</td>
+<td><code>touching mouse-pointer?</code>, <code>5 &gt; 3</code>, <code>key space pressed?</code></td>
+</tr>
+<tr>
+<td>▔▔▔⌣</td>
+<td><strong>Cap block</strong></td>
+<td><strong>Ends</strong> a script</td>
+<td><code>stop all</code>, <code>stop this script</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">🧩 Puzzle Pieces Fit Together</p>
+<ul>
+<li><strong>Hat blocks</strong> only go at the <strong>top</strong> of a script</li>
+<li><strong>Stack blocks</strong> snap <strong>together</strong> in a chain</li>
+<li><strong>Reporter</strong> and <strong>Boolean</strong> blocks fit <strong>inside</strong> the white holes of other blocks</li>
+<li><strong>Cap blocks</strong> only go at the <strong>bottom</strong></li>
+</ul>
+</div>
+<hr />
+<h2 id="your-first-script-lets-make-the-cat-move">Your First Script — Let's Make the Cat Move!<a class="headerlink" href="#your-first-script-lets-make-the-cat-move" title="Permanent link">&para;</a></h2>
+<h3 id="step-by-step-make-the-cat-walk">Step-by-Step: Make the Cat Walk<a class="headerlink" href="#step-by-step-make-the-cat-walk" title="Permanent link">&para;</a></h3>
+<p>Let's build your very first program together!</p>
+<ol>
+<li><strong>Open Scratch</strong> at <a href="https://scratch.mit.edu">scratch.mit.edu</a> and click <strong>Create</strong></li>
+<li><strong>Find the Events category</strong> (yellow) and drag <code>when green flag clicked</code> into the code area</li>
+<li><strong>Find the Motion category</strong> (blue) and drag <code>move 10 steps</code> under the hat block</li>
+<li><strong>Click the green flag</strong> 🟢 at the top of the stage</li>
+<li><strong>Watch the cat move!</strong> 🐱</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">🎉 You Did It!</p>
+<p>You just wrote your first computer program! The cat moved 10 steps to the right because <code>move 10 steps</code> means "move forward 10 pixels in the direction you're facing."</p>
+</div>
+<h3 id="try-these-variations">Try These Variations<a class="headerlink" href="#try-these-variations" title="Permanent link">&para;</a></h3>
+<p>Now experiment! Try changing your script:</p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change <code>10</code> to <code>50</code></td>
+<td>Cat moves farther each click</td>
+</tr>
+<tr>
+<td>Add <code>turn 15 degrees</code> after move</td>
+<td>Cat walks in a circle!</td>
+</tr>
+<tr>
+<td>Add <code>wait 1 seconds</code> between blocks</td>
+<td>Cat moves... pauses... moves...</td>
+</tr>
+<tr>
+<td>Wrap in <code>forever</code> loop (Control)</td>
+<td>Cat keeps walking forever!</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-script-anatomy">Diagram: Script Anatomy<a class="headerlink" href="#diagram-script-anatomy" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/script-anatomy/main.html" width="100%" height="400px" scrolling="no"></iframe>
+
+<details>
+<summary>Script Anatomy</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> script-anatomy<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Label the parts of a simple script so students learn the vocabulary</p>
+<p>Components to show:
+- A simple script: when green flag clicked → move 10 steps → turn 15 degrees → wait 1 seconds
+- Labels pointing to each part:
+  - "Hat block (starts the script)"
+  - "Stack block (does an action)"
+  - "Stack block (does another action)"
+  - "Stack block (waits)"
+  - "White bumps/holes show where blocks snap"
+- Numbered order: 1, 2, 3, 4 (top to bottom)</p>
+<p>Connections:
+- Vertical flow arrows showing execution order
+- Highlight showing "blocks run top to bottom"</p>
+<p>Style: Clean annotation overlay on actual-looking Scratch blocks</p>
+<p>Labels:
+- "1. Hat block — STARTS the script"
+- "2. Stack block — first action"
+- "3. Stack block — second action"
+- "4. Stack block — third action"
+- "Blocks run in ORDER from top to bottom"</p>
+<p>Color scheme: Match actual Scratch block colors</p>
+</details>
+<hr />
+<h2 id="the-toolbar-save-share-and-more">The Toolbar — Save, Share, and More<a class="headerlink" href="#the-toolbar-save-share-and-more" title="Permanent link">&para;</a></h2>
+<p>At the very top of the editor, the <strong>toolbar</strong> has important buttons:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File</strong></td>
+<td>New project, save, save as, load from computer</td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td>Undo, redo, find blocks</td>
+</tr>
+<tr>
+<td><strong>Tutorials</strong></td>
+<td>Step-by-step guides for beginners</td>
+</tr>
+<tr>
+<td><strong>🟢 Green Flag</strong></td>
+<td>Start your project (runs all hat blocks)</td>
+</tr>
+<tr>
+<td><strong>🛑 Stop Sign</strong></td>
+<td>Stop everything immediately</td>
+</tr>
+<tr>
+<td><strong>👁️ Presentation Mode</strong></td>
+<td>Full-screen view for showing off</td>
+</tr>
+<tr>
+<td><strong>💾 Save Now</strong></td>
+<td>Save your work to Scratch servers</td>
+</tr>
+<tr>
+<td><strong>📤 Share</strong></td>
+<td>Publish your project for the world to see</td>
+</tr>
+<tr>
+<td><strong>📁 Folder Icon</strong></td>
+<td>See your projects</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Save Often!</p>
+<p>Scratch auto-saves sometimes, but <strong>always click "Save Now" (💾)</strong> before you close the browser or take a break. You don't want to lose your hard work!</p>
+</div>
+<hr />
+<h2 id="creating-a-scratch-account">Creating a Scratch Account<a class="headerlink" href="#creating-a-scratch-account" title="Permanent link">&para;</a></h2>
+<p>To save projects online, share them with the world, and join the community, you need a <strong>free Scratch account</strong>:</p>
+<h3 id="how-to-create-an-account">How to Create an Account<a class="headerlink" href="#how-to-create-an-account" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Join Scratch</strong> at the top right of the website</li>
+<li>Choose a <strong>username</strong> (don't use your real name!)</li>
+<li>Create a <strong>password</strong> (make it strong and memorable)</li>
+<li>Enter your <strong>birth month and year</strong> (for safety)</li>
+<li>Choose your <strong>country</strong></li>
+<li>Enter a <strong>parent/guardian email</strong> (for account recovery)</li>
+<li>Click <strong>Create Account</strong></li>
+<li>Check your email and <strong>confirm your account</strong></li>
+</ol>
+<h3 id="why-have-an-account">Why Have an Account?<a class="headerlink" href="#why-have-an-account" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>What You Can Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save automatically</strong></td>
+<td>Projects save to the cloud</td>
+</tr>
+<tr>
+<td><strong>Access anywhere</strong></td>
+<td>Log in from any computer</td>
+</tr>
+<tr>
+<td><strong>Share projects</strong></td>
+<td>Let others play and remix your work</td>
+</tr>
+<tr>
+<td><strong>Join studios</strong></td>
+<td>Collaborate with other creators</td>
+</tr>
+<tr>
+<td><strong>Comment &amp; heart</strong></td>
+<td>Give feedback on projects you like</td>
+</tr>
+<tr>
+<td><strong>Remix</strong></td>
+<td>Build on other people's projects</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">🎨 Your Profile</p>
+<p>Your profile page shows projects you've shared, studios you follow, and projects you've favorited. You can also write an "About Me" to tell people about yourself!</p>
+</div>
+<hr />
+<h2 id="community-guidelines-be-kind-online">Community Guidelines — Be Kind Online<a class="headerlink" href="#community-guidelines-be-kind-online" title="Permanent link">&para;</a></h2>
+<p>The Scratch community is <strong>friendly, creative, and respectful</strong>. When you join, you agree to follow these guidelines:</p>
+<h4 id="the-scratch-community-guidelines">The Scratch Community Guidelines<a class="headerlink" href="#the-scratch-community-guidelines" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Be respectful</strong></td>
+<td>Treat others how you want to be treated. No bullying, teasing, or mean comments.</td>
+</tr>
+<tr>
+<td><strong>Be constructive</strong></td>
+<td>Give helpful feedback. Instead of "this is bad," try "I like this part, maybe you could add..."</td>
+</tr>
+<tr>
+<td><strong>Share and credit</strong></td>
+<td>If you remix someone's project, Scratch adds credit automatically. Always give thanks!</td>
+</tr>
+<tr>
+<td><strong>Keep it appropriate</strong></td>
+<td>No scary, violent, or inappropriate content. Scratch is for all ages.</td>
+</tr>
+<tr>
+<td><strong>Protect privacy</strong></td>
+<td>Don't share real names, addresses, phone numbers, passwords, or school names.</td>
+</tr>
+<tr>
+<td><strong>Be honest</strong></td>
+<td>Don't pretend to be someone else. Don't claim others' work as your own.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🛡️ Stay Safe</p>
+<p>If someone makes you feel uncomfortable, <strong>tell a trusted adult</strong> and <strong>report</strong> the user using the "Report" button. The Scratch Team reviews all reports.</p>
+</div>
+<hr />
+<h2 id="studios-collaborate-and-curate">Studios — Collaborate and Curate<a class="headerlink" href="#studios-collaborate-and-curate" title="Permanent link">&para;</a></h2>
+<p>A <strong>studio</strong> is like a gallery or a club where people collect projects around a theme.</p>
+<h3 id="what-you-can-do-in-studios">What You Can Do in Studios<a class="headerlink" href="#what-you-can-do-in-studios" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Add your projects</strong> to studios you like</li>
+<li><strong>Follow studios</strong> to see new projects in your "What's Happening" feed</li>
+<li><strong>Curate studios</strong> (if you're a manager) by adding/removing projects</li>
+<li><strong>Start discussions</strong> in the studio comments</li>
+</ul>
+<h3 id="studio-roles">Studio Roles<a class="headerlink" href="#studio-roles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Can Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Everything — delete studio, promote/demote managers</td>
+</tr>
+<tr>
+<td><strong>Manager</strong></td>
+<td>Add/remove projects, invite curators, edit studio description</td>
+</tr>
+<tr>
+<td><strong>Curator</strong></td>
+<td>Add projects, comment, follow</td>
+</tr>
+<tr>
+<td><strong>Follower</strong></td>
+<td>See updates, comment</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">🎨 Studio Ideas</p>
+<ul>
+<li>"Best Platformer Games"</li>
+<li>"Animations About Space"</li>
+<li>"Projects Using Clones"</li>
+<li>"My School's Coding Club"</li>
+</ul>
+</div>
+<hr />
+<h2 id="commenting-share-your-thoughts">Commenting — Share Your Thoughts<a class="headerlink" href="#commenting-share-your-thoughts" title="Permanent link">&para;</a></h2>
+<p>You can <strong>comment</strong> on projects and studios to:</p>
+<ul>
+<li><strong>Give compliments</strong> — "I love how you made the cat jump!"</li>
+<li><strong>Ask questions</strong> — "How did you make the score counter?"</li>
+<li><strong>Give suggestions</strong> — "Maybe add a high score list?"</li>
+<li><strong>Report bugs</strong> — "The game freezes when I press space"</li>
+</ul>
+<h3 id="good-commenting-tips">Good Commenting Tips<a class="headerlink" href="#good-commenting-tips" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Do</th>
+<th>Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Be specific about what you liked</td>
+<td>Say "cool" without details</td>
+</tr>
+<tr>
+<td>Ask polite questions</td>
+<td>Demand features</td>
+</tr>
+<tr>
+<td>Suggest ideas kindly</td>
+<td>Criticize harshly</td>
+</tr>
+<tr>
+<td>Use emojis to show tone 😊</td>
+<td>Use all caps (IT LOOKS LIKE SHOUTING)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">🚫 No Spam</p>
+<p>Don't post the same comment many times. Don't advertise your projects in other people's comments. That's called "spam" and it's not allowed.</p>
+</div>
+<hr />
+<h2 id="remixing-build-on-others-ideas">Remixing — Build on Others' Ideas<a class="headerlink" href="#remixing-build-on-others-ideas" title="Permanent link">&para;</a></h2>
+<p><strong>Remixing</strong> means taking someone else's project, making your own changes, and sharing it as a new project. It's how programmers learn from each other!</p>
+<h3 id="how-to-remix">How to Remix<a class="headerlink" href="#how-to-remix" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Find a project you like</li>
+<li>Click <strong>See Inside</strong> to view the code</li>
+<li>Click <strong>Remix</strong> (creates your own copy)</li>
+<li>Make changes — add levels, change sprites, fix bugs, add features</li>
+<li><strong>Share</strong> your remix with a new name</li>
+<li><strong>Credit automatically added</strong> — Scratch adds "Remixed from [original project]" </li>
+</ol>
+<h3 id="why-remix">Why Remix?<a class="headerlink" href="#why-remix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Learn by example</strong></td>
+<td>See how a platformer game works, then build your own</td>
+</tr>
+<tr>
+<td><strong>Add your twist</strong></td>
+<td>Turn a maze game into a space adventure</td>
+</tr>
+<tr>
+<td><strong>Fix bugs</strong></td>
+<td>Found a glitch? Fix it and share the improvement</td>
+</tr>
+<tr>
+<td><strong>Collaborate</strong></td>
+<td>Take turns adding features with friends</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">⚖️ Remixing Etiquette</p>
+<ul>
+<li>Always <strong>credit the original creator</strong> (Scratch does this automatically)</li>
+<li>Make <strong>meaningful changes</strong> — don't just change the name</li>
+<li><strong>Thank the creator</strong> in your project notes</li>
+<li>Check if the creator allows remixing (most do!)</li>
+</ul>
+</div>
+<hr />
+<h2 id="saving-and-sharing-projects">Saving and Sharing Projects<a class="headerlink" href="#saving-and-sharing-projects" title="Permanent link">&para;</a></h2>
+<h3 id="saving-your-work">Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How To</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save Now</strong> (💾)</td>
+<td>Click the save icon in toolbar</td>
+<td>Every 10-15 minutes, before closing browser</td>
+</tr>
+<tr>
+<td><strong>File → Save Now</strong></td>
+<td>Menu option</td>
+<td>Same as above</td>
+</tr>
+<tr>
+<td><strong>File → Save As</strong></td>
+<td>Save a copy with new name</td>
+<td>Before making big changes, so you have a backup</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">💾 Keyboard Shortcut</p>
+<p>Press <strong>Ctrl+S</strong> (Windows/Linux) or <strong>Cmd+S</strong> (Mac) to save quickly!</p>
+</div>
+<h3 id="sharing-your-project">Sharing Your Project<a class="headerlink" href="#sharing-your-project" title="Permanent link">&para;</a></h3>
+<p>When your project is ready for the world:</p>
+<ol>
+<li>Click <strong>Share</strong> (📤) in the toolbar</li>
+<li>Add a <strong>title</strong> and <strong>instructions</strong> (how to play/use)</li>
+<li>Add <strong>tags</strong> (like "game", "animation", "music") so people can find it</li>
+<li>Choose <strong>visibility</strong> (anyone, only people with link, or private)</li>
+<li>Click <strong>Share</strong></li>
+</ol>
+<h3 id="what-happens-when-you-share">What Happens When You Share?<a class="headerlink" href="#what-happens-when-you-share" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Your project gets its own <strong>project page</strong> with a unique URL</li>
+<li>Others can <strong>play, heart, comment, and remix</strong> it</li>
+<li>It appears in <strong>search results</strong> and <strong>category pages</strong></li>
+<li>You can <strong>embed it</strong> on websites with the embed code</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">🌟 You're a Creator Now!</p>
+<p>Sharing your first project is a big moment. Be proud! Every expert programmer started with a simple "Hello World" project.</p>
+</div>
+<hr />
+<h2 id="the-file-menu-more-options">The File Menu — More Options<a class="headerlink" href="#the-file-menu-more-options" title="Permanent link">&para;</a></h2>
+<p>Click <strong>File</strong> in the toolbar for these options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New</strong></td>
+<td>Start a fresh project (clears current)</td>
+</tr>
+<tr>
+<td><strong>Save Now</strong></td>
+<td>Save to Scratch servers</td>
+</tr>
+<tr>
+<td><strong>Save As</strong></td>
+<td>Save a copy with a new name</td>
+</tr>
+<tr>
+<td><strong>Load from Computer</strong></td>
+<td>Open a <code>.sb3</code> file you downloaded</td>
+</tr>
+<tr>
+<td><strong>Download to Computer</strong></td>
+<td>Save project as <code>.sb3</code> file (backup!)</td>
+</tr>
+<tr>
+<td><strong>Project Info</strong></td>
+<td>Edit title, description, tags, visibility</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">📥 Backup Your Work</p>
+<p>Use <strong>File → Download to Computer</strong> to save a <code>.sb3</code> file on your computer. If something happens to your online account, you still have your project!</p>
+</div>
+<hr />
+<h2 id="zoom-controls-see-more-or-see-closer">Zoom Controls — See More or See Closer<a class="headerlink" href="#zoom-controls-see-more-or-see-closer" title="Permanent link">&para;</a></h2>
+<p>In the bottom-right of the code area, you'll see <strong>zoom controls</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>+ (plus)</strong></td>
+<td>Zoom in (blocks get bigger)</td>
+</tr>
+<tr>
+<td><strong>− (minus)</strong></td>
+<td>Zoom out (see more blocks at once)</td>
+</tr>
+<tr>
+<td><strong>Reset (100%)</strong></td>
+<td>Back to normal size</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Zoom Tips</p>
+<ul>
+<li><strong>Zoom in</strong> when building detailed scripts</li>
+<li><strong>Zoom out</strong> when you have lots of blocks and want to see the whole script</li>
+<li>Double-click empty space in code area to <strong>center</strong> your script</li>
+</ul>
+</div>
+<hr />
+<h2 id="block-highlighting-see-your-code-run">Block Highlighting — See Your Code Run<a class="headerlink" href="#block-highlighting-see-your-code-run" title="Permanent link">&para;</a></h2>
+<p>When you click the green flag, Scratch <strong>highlights each block</strong> as it runs:</p>
+<ul>
+<li>The <strong>current block</strong> glows bright yellow</li>
+<li>You can <strong>see the flow</strong> of your program</li>
+<li>If something goes wrong, you can <strong>spot where it stopped</strong></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">🐞 Debugging Superpower</p>
+<p>Block highlighting is your best debugging tool! If your sprite doesn't do what you expect, watch the highlighting. The bug is usually at the last highlighted block or the one right after it.</p>
+</div>
+<hr />
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<p>In this chapter, you learned:</p>
+<ul>
+<li>✅ <strong>What Scratch is</strong> — visual programming with colorful blocks</li>
+<li>✅ <strong>The editor layout</strong> — stage, sprite pane, blocks palette, code area, toolbar</li>
+<li>✅ <strong>Three tabs</strong> — Code (program), Costumes (draw), Sounds (audio)</li>
+<li>✅ <strong>Sprites and Stage</strong> — characters and background with x,y coordinates</li>
+<li>✅ <strong>10 block categories</strong> — color-coded by function</li>
+<li>✅ <strong>5 block shapes</strong> — hat, stack, reporter, boolean, cap</li>
+<li>✅ <strong>Your first script</strong> — make the cat move with green flag + move block</li>
+<li>✅ <strong>Toolbar</strong> — save, share, green flag, stop sign, zoom</li>
+<li>✅ <strong>Scratch account</strong> — save online, share, join community</li>
+<li>✅ <strong>Community guidelines</strong> — be kind, constructive, safe</li>
+<li>✅ <strong>Studios</strong> — curated collections for collaboration</li>
+<li>✅ <strong>Commenting</strong> — give helpful feedback</li>
+<li>✅ <strong>Remixing</strong> — learn by building on others' work</li>
+<li>✅ <strong>Saving &amp; sharing</strong> — save often, share when proud</li>
+<li>✅ <strong>File menu</strong> — new, save as, download backup</li>
+<li>✅ <strong>Zoom &amp; highlighting</strong> — see your code up close and running</li>
+</ul>
+<hr />
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual Programming</strong></td>
+<td>Programming by snapping blocks instead of typing text</td>
+</tr>
+<tr>
+<td><strong>Sprite</strong></td>
+<td>A character or object you can program in Scratch</td>
+</tr>
+<tr>
+<td><strong>Stage</strong></td>
+<td>The background area where sprites perform (480×360 pixels)</td>
+</tr>
+<tr>
+<td><strong>Block</strong></td>
+<td>A puzzle-piece command that does something</td>
+</tr>
+<tr>
+<td><strong>Script</strong></td>
+<td>A stack of blocks that runs from top to bottom</td>
+</tr>
+<tr>
+<td><strong>Hat Block</strong></td>
+<td>Starts a script when an event happens</td>
+</tr>
+<tr>
+<td><strong>Stack Block</strong></td>
+<td>Does an action and passes to the next block</td>
+</tr>
+<tr>
+<td><strong>Costume</strong></td>
+<td>A picture that shows how a sprite looks</td>
+</tr>
+<tr>
+<td><strong>Backdrop</strong></td>
+<td>A picture that shows the stage background</td>
+</tr>
+<tr>
+<td><strong>Remix</strong></td>
+<td>Make your own version of someone else's project</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge 1:</strong> Make the cat move in a <strong>square</strong> (hint: move, turn 90°, repeat 4 times)</p>
+<p><strong>Challenge 2:</strong> Make the cat <strong>say your name</strong> when you click the green flag (hint: Looks → <code>say</code> block)</p>
+<p><strong>Challenge 3:</strong> <strong>Draw a new costume</strong> for the cat in the Costumes tab (hint: click "Convert to Bitmap" to use paint tools)</p>
+<p><strong>Challenge 4:</strong> <strong>Create a Scratch account</strong> and save your first project</p>
+<hr />
+<details class="note">
+<summary>🤔 Quick Quiz - Click to Check Answers</summary>
+<p><strong>Q1:</strong> What shape is a block that <em>starts</em> a script?
+<strong>A:</strong> Hat block (rounded top)</p>
+<p><strong>Q2:</strong> What color are Motion blocks?
+<strong>A:</strong> Medium blue 🔵</p>
+<p><strong>Q3:</strong> Where is the center of the stage?
+<strong>A:</strong> x: 0, y: 0</p>
+<p><strong>Q4:</strong> What block shape gives a true/false answer?
+<strong>A:</strong> Boolean block (hexagon ⬡)</p>
+<p><strong>Q5:</strong> What does the green flag do?
+<strong>A:</strong> Starts all scripts that begin with "when green flag clicked"</p>
+</details>
+<hr />
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>In <strong>Chapter 2</strong>, you'll learn about <strong>sprites, the stage, and the coordinate system</strong> in detail. You'll discover how to position sprites exactly where you want them, make them glide smoothly, and understand the x,y coordinate system that makes all motion possible!</p>
+<p><a href="../02-sprites-stage-coordinates/"><strong>→ Next Chapter: Sprites, Stage, and the Coordinate System</strong></a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of Chapters">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                List of Chapters
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-sprites-stage-coordinates/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Sprites, Stage, and the Coordinate System">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Sprites, Stage, and the Coordinate System
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

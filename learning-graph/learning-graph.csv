@@ -1,0 +1,227 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Visual Programming,,FOUND
+2,Sprite,1,FOUND
+3,Stage,1,FOUND
+4,Blocks Palette,1,FOUND
+5,Code Tab,1,FOUND
+6,Costumes Tab,1,FOUND
+7,Sounds Tab,1,FOUND
+8,Toolbar,1,FOUND
+9,Zoom Controls,1,FOUND
+10,Scratch Account,,SCRATCH_ACC
+11,Community Guidelines,10,SCRATCH_ACC
+12,Studio,10,SCRATCH_ACC
+13,Commenting,10,SCRATCH_ACC
+14,Remixing,10,SCRATCH_ACC
+15,Green Flag,2|3,EVENTS
+16,Stop Sign,15,EVENTS
+17,Saving Projects,10,FOUND
+18,Sharing Projects,10|17,SCRATCH_ACC
+19,Project Page,18,SCRATCH_ACC
+20,File Menu,1,FOUND
+21,Sequence,15,CONTROL
+22,Step By Step Thinking,21,CONTROL
+23,Motion Blocks,4|2,MOTION
+24,Move Steps,23|30,MOTION
+25,Turn Degrees,23|30,MOTION
+26,Go To Position,23|28|29,MOTION
+27,Glide To Position,23|28|29,MOTION
+28,X Coordinate,3|30,MOTION
+29,Y Coordinate,3|30,MOTION
+30,Coordinate System,3,MOTION
+31,Green Flag Event,15|75,EVENTS
+32,Multiple Sprites,2,EVENTS
+33,Looks Blocks,4|2,LOOKS
+34,Say Block,33,LOOKS
+35,Think Block,33,LOOKS
+36,Switch Costume,33|6,LOOKS
+37,Next Costume,33|6,LOOKS
+38,Change Size,33,LOOKS
+39,Costume Animation,37|45,LOOKS
+40,Costume Center,6,LOOKS
+41,Debugging Basics,42|43,DEBUGGING
+42,Script Reading Order,21|31,DEBUGGING
+43,Block Highlighting,,DEBUGGING
+44,Error Detection,41|42,DEBUGGING
+45,Forever Loop,203|21,CONTROL
+46,Continuous Motion,45|24,CONTROL
+47,Scrolling Background,45|85,CONTROL
+48,Repeat Loop,203,CONTROL
+49,Counted Repetition,48|117,CONTROL
+50,Repeat Until Loop,203|52,CONTROL
+51,Condition Controlled Loop,50|108,CONTROL
+52,Boolean Introduction,108,CONTROL
+53,Parallelism,32|31,CONTROL
+54,Concurrent Scripts,53|94,CONTROL
+55,Sound Blocks,4|7,SOUND
+56,Play Sound,55,SOUND
+57,Start Sound,55,SOUND
+58,Change Tempo,55,SOUND
+59,Beat Synchronization,45|56|58,SOUND
+60,Lip Sync Animation,39|56|82,SOUND
+61,Pen Extension,222|23,PEN
+62,Drawing Trails,61|65,PEN
+63,Rainbow Lines,61|67|48,PEN
+64,Geometric Patterns,61|24|25|48,PEN
+65,Pen Down,61,PEN
+66,Pen Up,61,PEN
+67,Pen Color,61,PEN
+68,Pen Size,61,PEN
+69,Clear Graphics,61,PEN
+70,Stamp,61|39,PEN
+71,Erase All,61,PEN
+72,Loop Nesting,45|48,CONTROL
+73,Infinite Loop Detection,45|41,DEBUGGING
+74,Loop Termination,48|50|51,CONTROL
+75,Event Blocks,4,EVENTS
+76,Sprite Clicked Event,75|2,EVENTS
+77,Key Pressed Event,75|204,EVENTS
+78,Backdrop Switch Event,75|85,EVENTS
+79,Broadcast Message,75,EVENTS
+80,When I Receive,75|79,EVENTS
+81,Sprite Communication,32|79,EVENTS
+82,Broadcast And Wait,79|80,EVENTS
+83,Scene Coordination,82|85,EVENTS
+84,Dialogue Timing,82|34,EVENTS
+85,Switch Backdrop,33,LOOKS
+86,Next Backdrop,85,LOOKS
+87,Storytelling Flow,83|84,EVENTS
+88,Remix Exploration,14|19,SCRATCH_ACC
+89,Credit Attribution,88|11,SCRATCH_ACC
+90,Pair Programming,88|91,SCRATCH_ACC
+91,Storyboarding,93|87,DESIGN
+92,Scene Planning,91|85,DESIGN
+93,Algorithmic Thinking,21|22,DESIGN
+94,Event Driven Programming,75|31|77,CONTROL
+95,Message Passing,79|80,EVENTS
+96,Synchronous Broadcast,82|84,EVENTS
+97,Asynchronous Broadcast,79|80,EVENTS
+98,Broadcast Storm,79|97|99,EVENTS
+99,Event Queue,94|54,CONTROL
+100,If Block,203,CONTROL
+101,If Else Block,100,CONTROL
+102,Decision Making,100|101,CONTROL
+103,Conditional Branching,100|101,CONTROL
+104,Touching Sensor,204|2,SENSING
+105,Touching Color Sensor,204|3,SENSING
+106,Key Pressed Sensor,204|77,SENSING
+107,Distance To Sensor,204|28|29,SENSING
+108,Comparison Operators,205,OPERATORS
+109,Less Than Operator,108,OPERATORS
+110,Greater Than Operator,108,OPERATORS
+111,Equal Operator,108,OPERATORS
+112,Boolean Logic,205|52,OPERATORS
+113,And Operator,112,OPERATORS
+114,Or Operator,112,OPERATORS
+115,Not Operator,112,OPERATORS
+116,Boolean Combination,113|114|115,OPERATORS
+117,Variable Creation,206,DATA
+118,Set Variable,117,DATA
+119,Change Variable,117|118,DATA
+120,Show Variable,117,DATA
+121,Hide Variable,117,DATA
+122,Score Variable,117|118|119,DATA
+123,Lives Variable,117|118|119,DATA
+124,Timer Variable,117|118|119|45,DATA
+125,Variable Scope,117,DATA
+126,For All Sprites,125,DATA
+127,For This Sprite Only,125,DATA
+128,Random Number,205,OPERATORS
+129,Pick Random,128,OPERATORS
+130,Dice Roll,129|128,OPERATORS
+131,Unpredictable Gameplay,128|129|133,OPERATORS
+132,Player Control,77|23|100,SENSING
+133,Enemy Movement,45|23|128,SENSING
+134,Collision Detection,104|100|105,SENSING
+135,Win Condition,100|122|108,DATA
+136,Lose Condition,100|123|108,DATA
+137,Cloning,203,CLONING
+138,Create Clone,137|2,CLONING
+139,When I Start As Clone,137|138,CLONING
+140,Delete This Clone,137|139,CLONING
+141,Clone Behavior,139|23|33,CLONING
+142,Clone Performance,137|140|98,CLONING
+143,List Creation,207|117,DATA
+144,Add To List,143,DATA
+145,Delete From List,143|146,DATA
+146,List Item Access,143|147,DATA
+147,List Length,143,DATA
+148,List Contains,143|146,DATA
+149,Inventory System,143|144|145|148,DATA
+150,High Score List,143|147|146|122,DATA
+151,Video Sensing,222|204,EXTENSIONS
+152,Motion Detection,151|100,SENSING
+153,Camera Games,152|132|76,SENSING
+154,Text To Speech,222|200,EXTENSIONS
+155,Talking Sprites,154|34|36,EXTENSIONS
+156,Accessibility Features,154|157,EXTENSIONS
+157,Translate Extension,222|205,EXTENSIONS
+158,Multilingual Projects,157|154,EXTENSIONS
+159,Micro Bit Extension,222,EXTENSIONS
+160,Makey Makey Extension,222|77,EXTENSIONS
+161,Physical Computing,159|160|204,EXTENSIONS
+162,Custom Block Definition,208,CUSTOM_BLOCKS
+163,Block Parameters,162|117,CUSTOM_BLOCKS
+164,Run Without Screen Refresh,162|61|64,CUSTOM_BLOCKS
+165,Abstraction,162,CUSTOM_BLOCKS
+166,Reusability,165|163,CUSTOM_BLOCKS
+167,Design Process,168|169|170|171|172|173,DESIGN
+168,Imagine Phase,93|91,DESIGN
+169,Plan Phase,168|174|175|176,DESIGN
+170,Create Phase,169|132|133|134,DESIGN
+171,Test Phase,170,DESIGN
+172,Improve Phase,171,DESIGN
+173,Share Phase,172,DESIGN
+174,Pseudocode,93|21,DESIGN
+175,Flowchart,93|91,DESIGN
+176,Storyboard,91|92,DESIGN
+177,Asset List,169|39|55,DESIGN
+178,Iterative Development,173,DESIGN
+179,Versioning,17,DESIGN
+180,Testing Strategies,41|44,DEBUGGING
+181,Debugging Strategies,41|73,DEBUGGING
+182,Polishing,172,DESIGN
+183,Instructions Screen,182|34|85,DESIGN
+184,Credits,182|89|190,DESIGN
+185,Sound Effects,182|55|56,SOUND
+186,Visual Juice,182|39|61,PEN
+187,Project Tags,18|19,SCRATCH_ACC
+188,Project Description,18|19,SCRATCH_ACC
+189,Remix Tree,18|88,SCRATCH_ACC
+190,Community Feedback,18|13|12,SCRATCH_ACC
+191,Design Journal,168|169|171,DESIGN
+192,Reflection,173|191,DESIGN
+193,Stage Size,3,MOTION
+194,Stage Center,3|30,MOTION
+195,Positive X,28|30,MOTION
+196,Negative X,28|30,MOTION
+197,Positive Y,29|30,MOTION
+198,Negative Y,29|30,MOTION
+199,Motion Block Category,4,BLOCK_TYPES
+200,Looks Block Category,4,BLOCK_TYPES
+201,Sound Block Category,4,BLOCK_TYPES
+202,Events Block Category,4,BLOCK_TYPES
+203,Control Block Category,4,CONTROL
+204,Sensing Block Category,4,BLOCK_TYPES
+205,Operators Block Category,4,OPERATORS
+206,Variables Block Category,4,BLOCK_TYPES
+207,List Block Category,4,BLOCK_TYPES
+208,My Blocks Category,4,BLOCK_TYPES
+209,Block Color Coding,4,BLOCK_TYPES
+210,Hat Block Shape,4,BLOCK_TYPES
+211,Stack Block Shape,4,BLOCK_TYPES
+212,Reporter Block Shape,4,BLOCK_TYPES
+213,Boolean Block Shape,4,BLOCK_TYPES
+214,Cap Block Shape,4,BLOCK_TYPES
+215,Drag And Drop,4|217,FOUND
+216,Snap Together,215|217,FOUND
+217,Script Area,5,FOUND
+218,Delete Block,217,FOUND
+219,Duplicate Block,217,FOUND
+220,Comment Block,217,FOUND
+221,Clean Up Blocks,217,FOUND
+222,Add Extension,4,EXTENSIONS
+223,Extension Management,222,EXTENSIONS
+224,Backpack,20,FOUND
+225,Copy To Backpack,224|217,FOUND
+226,Paste From Backpack,224|217,FOUND
