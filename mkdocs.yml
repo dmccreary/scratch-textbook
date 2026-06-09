@@ -38,8 +38,17 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      # Add chapter entries here as content is generated, e.g.:
-      # - 1. Introduction: chapters/01-introduction/index.md
+      - 1. Welcome to Scratch: chapters/01-welcome-to-scratch/index.md
+      - 2. Sprites, Stage, and the Coordinate System: chapters/02-sprites-stage-coordinates/index.md
+      - 3. Motion Blocks and Block Categories: chapters/03-motion-blocks-categories/index.md
+      - 4. Events, Sequences, and First Scripts: chapters/04-events-sequences-first-scripts/index.md
+      - 5. Sounds, Extensions, and Sharing Projects: chapters/05-sounds-extensions-sharing/index.md
+      - 6. Broadcasting, Conditionals, and Sensing: chapters/06-broadcasting-conditionals-sensing/index.md
+      - 7. Variables, Lists, and Data Management: chapters/07-variables-lists-data/index.md
+      - 8. Animation, Parallelism, and Debugging: chapters/08-animation-parallelism-debugging/index.md
+      - 9. Advanced Control and Operators: chapters/09-advanced-control-operators/index.md
+      - 10. Game Mechanics and Win/Lose Conditions: chapters/10-game-mechanics-win-lose/index.md
+      - 11. Design Process and Capstone Project: chapters/11-design-process-capstone/index.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
