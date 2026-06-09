@@ -4,28 +4,27 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 400;
-let controlHeight = 60;
+let controlHeight = 130;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let defaultTextSize = 16;
 
 // Sprites in the broadcast system
 const sprites = [
-  { id: 'sender', name: 'Controller', x: 50, y: 150, w: 90, h: 80, color: '#4C97FF', role: 'broadcasts' },
+  { id: 'sender', name: 'Controller', x: 50, y: 250, w: 90, h: 80, color: '#4C97FF', role: 'broadcasts' },
   { id: 'receiver1', name: 'Player', x: 200, y: 60, w: 90, h: 80, color: '#9966FF', role: 'receives' },
   { id: 'receiver2', name: 'Enemy', x: 350, y: 60, w: 90, h: 80, color: '#FF6666', role: 'receives' },
   { id: 'receiver3', name: 'UI', x: 350, y: 240, w: 90, h: 80, color: '#FFD700', role: 'receives' },
-  { id: 'receiver4', name: 'UI', x: 350, y: 240, w: 90, h: 80, color: '#FFD700', role: 'receives' },
   { id: 'receiver5', name: 'Sound', x: 200, y: 240, w: 90, h: 80, color: '#FF66FF', role: 'receives' }
 ];
 
 // Broadcast messages
 const broadcasts = [
-  { name: 'game-start', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver4','receiver5'], sync: true },
-  { name: 'player-hit', from: 'receiver2', to: ['sender','receiver3','receiver4','receiver5'], sync: false },
-  { name: 'coin-collected', from: 'receiver1', to: ['receiver3','receiver4','receiver5'], sync: false },
-  { name: 'level-complete', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver4','receiver5'], sync: true },
-  { name: 'game-over', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver4','receiver5'], sync: true }
+  { name: 'game-start', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver5'], sync: true },
+  { name: 'player-hit', from: 'receiver2', to: ['sender','receiver3','receiver5'], sync: false },
+  { name: 'coin-collected', from: 'receiver1', to: ['receiver3','receiver5'], sync: false },
+  { name: 'level-complete', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver5'], sync: true },
+  { name: 'game-over', from: 'sender', to: ['receiver1','receiver2','receiver3','receiver5'], sync: true }
 ];
 
 // State
@@ -41,35 +40,35 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive broadcast flow diagram. Select a broadcast message to see how it flows from sender to receivers. Toggle sync/async mode.', LABEL);
+  describe('Interactive broadcast flow diagram. Select a broadcast message to see how it flows from sender to receivers. Toggle sync/async mode.');
 
   createControls();
 }
 
 function createControls() {
-  // Broadcast selector
+  // Broadcast selector (row 1)
   for (let i = 0; i < broadcasts.length; i++) {
     const btn = createButton(broadcasts[i].name);
-    btn.position(margin + i * 78, drawHeight + 10);
-    btn.style('width', '75px');
-    btn.style('font-size', '10px');
-    btn.style('padding', '2px 4px');
+    btn.position(margin + i * 122, drawHeight + 12);
+    btn.style('width', '116px');
+    btn.style('font-size', '11px');
+    btn.style('padding', '4px 4px');
     btn.mousePressed(() => { selectedBroadcast = i; triggerAnimation(); });
     if (i === 0) btn.style('background', '#ff9800');
   }
 
-  // Sync/Async toggle
+  // Sync/Async toggle (row 2)
   syncCheckbox = createCheckbox('Show "and wait" sync', false);
-  syncCheckbox.position(margin, drawHeight + 40);
+  syncCheckbox.position(margin, drawHeight + 50);
 
-  // Show code checkbox
+  // Show code checkbox (row 2)
   codeCheckbox = createCheckbox('Show code snippets', true);
-  codeCheckbox.position(margin + 180, drawHeight + 40);
+  codeCheckbox.position(margin + 200, drawHeight + 50);
   codeCheckbox.changed(() => showCode = codeCheckbox.checked());
 
-  // Trigger button
+  // Trigger button (row 3)
   triggerBtn = createButton('Trigger Broadcast');
-  triggerBtn.position(margin, drawHeight + 70);
+  triggerBtn.position(margin, drawHeight + 88);
   triggerBtn.mousePressed(() => triggerAnimation());
 }
 
@@ -93,11 +92,6 @@ function draw() {
   textAlign(CENTER, TOP);
   text('Broadcast Flow', canvasWidth / 2, 10);
 
-  // Subtitle
-  textSize(11);
-  fill('#666');
-  text('Select a broadcast message to see how it flows between sprites', canvasWidth / 2, 32);
-
   // Draw sprites
   drawSprites();
 
@@ -115,8 +109,6 @@ function draw() {
 
 function drawSprites() {
   for (let s of sprites) {
-    const isActive = s.id === animFrom || sprites.filter(r => !r.includes(s.id)).some(r => r === s.id && false);
-    
     // Sprite box
     fill(s.color);
     stroke(isAnimating(s.id) ? '#ff9800' : '#aaa');
@@ -258,17 +250,13 @@ function drawBroadcastInfo() {
   }
 }
 
-function byId(id) {
-  return sprites.find(s => s.id === id);
-}
-
 function drawControlLabels() {
+  // Hint rendered inside the draw area, near its bottom edge
   fill('#666');
   noStroke();
   textSize(11);
-  textAlign(LEFT, TOP);
-  text('Select a broadcast message, then click "Trigger Broadcast" to see the flow.', margin, drawHeight + 10);
-  text('Use "Show code snippets" to see the Scratch block representation.', margin, drawHeight + 22);
+  textAlign(CENTER, BOTTOM);
+  text('Pick a broadcast message, then click "Trigger Broadcast" to watch the flow.', canvasWidth / 2, drawHeight - 10);
 }
 
 function windowResized() {

@@ -4,7 +4,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 560;
-let controlHeight = 60;
+let controlHeight = 90;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let defaultTextSize = 16;
@@ -31,34 +31,45 @@ const motionBlocks = [
 // State
 let filterCategory = 'all';
 let searchQuery = '';
+let catBtns = [];
 
 function setup() {
   updateCanvasSize();
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Visual reference for all Scratch Motion blocks with categories (basic, position, direction, change, reporter) and parameter descriptions.', LABEL);
+  describe('Visual reference for all Scratch Motion blocks with categories (basic, position, direction, change, reporter) and parameter descriptions.');
 
   createControls();
 }
 
 function createControls() {
-  // Category filter buttons
+  // Row 1: category filter buttons (offsets sized for styled button widths)
   const categories = ['all', 'basic', 'position', 'direction', 'change', 'reporter'];
-  let btnX = margin;
-  for (let cat of categories) {
+  const offsets = [0, 60, 135, 233, 339, 422];
+  catBtns = [];
+  for (let i = 0; i < categories.length; i++) {
+    const cat = categories[i];
     const btn = createButton(cat.charAt(0).toUpperCase() + cat.slice(1));
-    btn.position(margin + (categories.indexOf(cat) * 65), drawHeight + 10);
-    btn.mousePressed(() => { filterCategory = cat; });
-    if (cat === 'all') btn.style('background', '#ff9800');
+    btn.position(margin + offsets[i], drawHeight + 12);
+    btn.mousePressed(() => { selectCategory(cat); });
+    catBtns.push({ cat: cat, btn: btn });
   }
+  selectCategory('all');
 
-  // Search input
+  // Row 2: search input
   searchInput = createInput('');
   searchInput.attribute('placeholder', 'Search blocks...');
-  searchInput.position(margin + 20, drawHeight + 45);
+  searchInput.position(margin, drawHeight + 50);
   searchInput.size(200);
   searchInput.input(() => { searchQuery = searchInput.value().toLowerCase(); });
+}
+
+function selectCategory(cat) {
+  filterCategory = cat;
+  for (let entry of catBtns) {
+    entry.btn.style('background', entry.cat === cat ? '#ffd9a0' : '');
+  }
 }
 
 function draw() {
@@ -96,29 +107,19 @@ function draw() {
 
   drawBlocks(filtered);
 
-  // Controls area
-  fill('white');
-  rect(0, drawHeight, canvasWidth, controlHeight);
-
-  // Legends
-  fill('#666');
-  noStroke();
-  textSize(11);
-  textAlign(LEFT, TOP);
-  text('Categories: basic (blue)  position (green)  direction (purple)  change (orange)  reporter (gray)', margin, drawHeight + 10);
-  text('Search by block name or description. Blocks with parameters show expected inputs.', margin, drawHeight + 22);
+  // Hint line
+  drawControlLabels();
 }
 
 function drawBlocks(blocks) {
   const cardW = 360;
   const cardX = (canvasWidth - cardW) / 2;
+  const cardH = 28;
+  const pitch = 33;
   let cardY = 50;
-  const baseH = 40;
-  const gap = 8;
 
   for (let i = 0; i < blocks.length; i++) {
     const b = blocks[i];
-    const h = 36;
 
     // Category color indicator
     let catColor = '#888';
@@ -132,55 +133,44 @@ function drawBlocks(blocks) {
     fill('white');
     stroke(catColor);
     strokeWeight(1);
-    rect((canvasWidth - 360)/2, cardY, 360, 36, 4);
+    rect(cardX, cardY, cardW, cardH, 4);
     noStroke();
 
     // Category color bar
     fill(catColor);
-    rect((canvasWidth - 360)/2, cardY, 6, 36, 4, 0, 0, 4);
+    rect(cardX, cardY, 6, cardH, 4, 0, 0, 4);
 
     // Block name
     fill('black');
     noStroke();
     textSize(12);
     textAlign(LEFT, CENTER);
-    text(b.name, (canvasWidth - 360)/2 + 20, cardY + 18);
+    text(b.name, cardX + 14, cardY + cardH / 2);
 
     // Parameters
     if (b.params.length > 0) {
       fill('#666');
       textSize(10);
-      text('Params: ' + b.params.join(', '), canvasWidth/2 + 50, cardY + 18);
+      text('Params: ' + b.params.join(', '), cardX + 205, cardY + cardH / 2);
     }
 
     // Category label
     fill(catColor);
     textSize(10);
     textAlign(RIGHT, CENTER);
-    text(b.cat.toUpperCase(), canvasWidth/2 + 170, cardY + 18);
+    text(b.cat.toUpperCase(), cardX + cardW - 8, cardY + cardH / 2);
 
-    // Description (hover would show - simplified for display)
-    if (i % 3 === 0) { // Show desc for every 3rd block to save space
-      fill('#888');
-      textSize(9);
-      textAlign(LEFT, CENTER);
-      text(b.desc, 20, cardY + 2, 320, 30);
-    }
-
-    cardY += 42;
+    cardY += pitch;
   }
-
-  // Draw category buttons highlight
-  drawFilterButtons();
 }
 
 function drawControlLabels() {
+  // Single hint line inside the drawing area, near its bottom edge
   fill('#666');
   noStroke();
   textSize(11);
-  textAlign(LEFT, TOP);
-  text('Motion blocks are BLUE in Scratch. Use these for all sprite movement and positioning.', margin, drawHeight + 10);
-  text('Reporter blocks (rounded) give values. Stack blocks (puzzle) do actions.', margin, drawHeight + 22);
+  textAlign(CENTER, BOTTOM);
+  text('Filter with the category buttons, or search by block name or description.', canvasWidth / 2, drawHeight - 6);
 }
 
 function windowResized() {

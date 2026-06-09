@@ -5,7 +5,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 400;
-let controlHeight = 80;
+let controlHeight = 90;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -34,48 +34,43 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive simulation of Scratch stage boundaries. Move the sprite and see how different boundary behaviors work: bounce, stop, or wrap around.', LABEL);
+  describe('Interactive simulation of Scratch stage boundaries. Move the sprite and see how different boundary behaviors work: bounce, stop, or wrap around.');
 
   // Controls
   createControls();
 }
 
 function createControls() {
-  // Row 1
+  // Row 1: buttons + boundary mode dropdown
   startPauseButton = createButton('⏸ Pause');
-  startPauseButton.position(margin, drawHeight + 10);
+  startPauseButton.position(margin, drawHeight + 12);
   startPauseButton.mousePressed(toggleRun);
 
   resetButton = createButton('Reset Position');
-  resetButton.position(margin + 100, drawHeight + 10);
+  resetButton.position(margin + 105, drawHeight + 12);
   resetButton.mousePressed(resetPosition);
 
-  // Boundary mode dropdown
   boundarySelect = createSelect();
-  boundarySelect.position(margin + 220, drawHeight + 10);
+  boundarySelect.position(margin + 255, drawHeight + 12);
   boundarySelect.option('bounce', 'Bounce');
   boundarySelect.option('stop', 'Stop at Edge');
   boundarySelect.option('wrap', 'Wrap Around');
   boundarySelect.selected('bounce');
   boundarySelect.changed(() => bounceMode = boundarySelect.value());
 
-  // Row 2
+  // Row 2: checkboxes on the left, speed slider on the right
   showGridCheckbox = createCheckbox('Show Grid', true);
-  showGridCheckbox.position(margin, drawHeight + 45);
+  showGridCheckbox.position(margin, drawHeight + 50);
   showGridCheckbox.changed(() => showGrid = showGridCheckbox.checked());
 
   showCoordCheckbox = createCheckbox('Show Coordinates', true);
-  showCoordCheckbox.position(margin + 150, drawHeight + 45);
+  showCoordCheckbox.position(margin + 120, drawHeight + 50);
   showCoordCheckbox.changed(() => showCoordinates = showCoordCheckbox.checked());
 
-  // Speed slider
+  // Speed slider (row 2, right side; drawn label to its left)
   speedSlider = createSlider(0.5, 5, 1, 0.5);
-  speedSlider.position(margin, drawHeight + 45);
-  speedSlider.style('display', 'none'); // hidden initially
-
-  // Speed label
-  speedLabel = createDiv('Speed: 1.0x');
-  speedLabel.style('display', 'none');
+  speedSlider.position(sliderLeftMargin + 240, drawHeight + 50);
+  speedSlider.size(min(220, canvasWidth - sliderLeftMargin - 240 - margin));
 }
 
 function draw() {
@@ -173,8 +168,8 @@ function drawCoordinates() {
 
   // Y axis labels
   for (let y = -180; y <= 180; y += 90) {
-    const sy = stageY + (y + 180) * SCALE;
-    text(y, stageX - 30, stageY + (y + 180) * SCALE);
+    const sy = stageY + (180 - y) * SCALE;
+    text(y, stageX - 30, sy);
   }
   text('Y', stageX + STAGE_W * SCALE / 2, stageY - 15);
 }
@@ -300,12 +295,19 @@ function resetPosition() {
 }
 
 function drawControlLabels() {
-  fill('#666');
+  // Speed label for the slider (row 2, just left of the slider)
+  fill('#333');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Boundary: ' + bounceMode, margin + 330, drawHeight + 15);
-  text('Speed: ' + (typeof speedSlider !== 'undefined' ? speedSlider.value() : 1) + 'x', margin + 330, drawHeight + 50);
+  textSize(13);
+  textAlign(LEFT, CENTER);
+  const speedVal = typeof speedSlider !== 'undefined' ? speedSlider.value() : 1;
+  text('Speed: ' + nf(speedVal, 1, 1) + 'x', margin + 280, drawHeight + 58);
+
+  // Single-line hint inside the draw area, near its bottom edge
+  fill('#666');
+  textSize(11);
+  textAlign(CENTER, BOTTOM);
+  text('Click the stage to place the sprite — hover the stage to make it move', canvasWidth / 2, drawHeight - 6);
 }
 
 function windowResized() {
@@ -317,8 +319,14 @@ function updateCanvasSize() {
   const container = document.querySelector('main');
   if (container) {
     canvasWidth = container.offsetWidth;
-    if (typeof speedSlider !== 'undefined') {
-      speedSlider.size(canvasWidth - sliderLeftMargin - margin);
+    if (typeof startPauseButton !== 'undefined') {
+      startPauseButton.position(margin, drawHeight + 12);
+      resetButton.position(margin + 105, drawHeight + 12);
+      boundarySelect.position(margin + 255, drawHeight + 12);
+      showGridCheckbox.position(margin, drawHeight + 50);
+      showCoordCheckbox.position(margin + 120, drawHeight + 50);
+      speedSlider.position(sliderLeftMargin + 240, drawHeight + 50);
+      speedSlider.size(min(220, canvasWidth - sliderLeftMargin - 240 - margin));
     }
   }
 }

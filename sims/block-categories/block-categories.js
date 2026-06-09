@@ -1,10 +1,10 @@
 // Block Categories Infographic
-// CANVAS_HEIGHT: 650
+// CANVAS_HEIGHT: 785
 
 // Canvas dimensions - responsive
 let canvasWidth = 400;
-let drawHeight = 620;
-let controlHeight = 60;
+let drawHeight = 735; // dynamic: recomputed in draw() to fit expanded cards
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -33,7 +33,7 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive infographic showing all 10 Scratch block categories with colors, descriptions, and example blocks. Hover to highlight, click to expand.', LABEL);
+  describe('Interactive infographic showing all 10 Scratch block categories with colors, descriptions, and example blocks. Hover to highlight, click to expand.');
 
   // Controls
   createControls();
@@ -42,25 +42,50 @@ function setup() {
 function createControls() {
   // Reset button
   resetButton = createButton('Collapse All');
-  resetButton.position(margin, drawHeight + 10);
   resetButton.mousePressed(() => { expandedCategory = -1; });
 
   // Search input (simulated)
   searchInput = createInput('');
   searchInput.attribute('placeholder', 'Search categories...');
-  searchInput.position(margin + 120, drawHeight + 10);
   searchInput.size(200);
-  
+
   // Expand all button
   expandAllButton = createButton('Expand All');
-  expandAllButton.position(margin + 330, drawHeight + 10);
   expandAllButton.mousePressed(() => {
     expandedCategory = -2; // Special value for expand all
   });
+
+  positionControls();
+}
+
+function positionControls() {
+  // Row 1 of the control strip
+  resetButton.position(margin, drawHeight + 12);
+  searchInput.position(margin + 135, drawHeight + 12);
+  expandAllButton.position(margin + 390, drawHeight + 12);
+}
+
+// Height needed so every card (collapsed or expanded) fits in the draw area
+function computeDrawHeight() {
+  let y = 60;
+  for (let i = 0; i < categories.length; i++) {
+    const h = (expandedCategory === i || expandedCategory === -2) ? 100 : 50;
+    y += h + 15;
+  }
+  return y + 25; // room for the hint line at the bottom
 }
 
 function draw() {
   updateCanvasSize();
+
+  // Grow/shrink the draw area so cards never spill into the control strip
+  const neededDrawHeight = computeDrawHeight();
+  if (neededDrawHeight !== drawHeight) {
+    drawHeight = neededDrawHeight;
+    canvasHeight = drawHeight + controlHeight;
+    resizeCanvas(canvasWidth, canvasHeight);
+    positionControls();
+  }
 
   // Drawing area background
   fill('aliceblue');
@@ -151,22 +176,18 @@ function draw() {
     cardY += h + cardGap;
   }
 
-  // Control area
-  fill('white');
-  rect(0, drawHeight, canvasWidth, controlHeight);
-
-  // Instructions
+  // Hint line at the bottom of the draw area
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Hover a category to highlight. Click to expand/collapse. "Expand All" shows all details.', margin, drawHeight + 10);
-  text('Categories are color-coded to match Scratch\'s actual editor colors.', margin, drawHeight + 25);
+  textSize(11);
+  textAlign(LEFT, CENTER);
+  text('Colors match the real Scratch editor.', margin, drawHeight - 10);
 }
 
 function windowResized() {
   updateCanvasSize();
   resizeCanvas(canvasWidth, canvasHeight);
+  positionControls();
 }
 
 function updateCanvasSize() {

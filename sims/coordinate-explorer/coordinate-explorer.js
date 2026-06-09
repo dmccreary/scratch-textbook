@@ -5,7 +5,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 450;
-let controlHeight = 80;
+let controlHeight = 90;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -36,7 +36,7 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive Scratch coordinate explorer. Click on the stage to place a sprite and see its coordinates. Learn the Scratch coordinate system with quadrants.', LABEL);
+  describe('Interactive Scratch coordinate explorer. Click on the stage to place a sprite and see its coordinates. Learn the Scratch coordinate system with quadrants.');
 
   // Generate first quiz target
   generateQuizTarget();
@@ -48,20 +48,20 @@ function setup() {
 function createControls() {
   // Row 1
   showGridCheckbox = createCheckbox('Show Grid', true);
-  showGridCheckbox.position(margin, drawHeight + 10);
+  showGridCheckbox.position(margin, drawHeight + 12);
   showGridCheckbox.changed(() => showGrid = showGridCheckbox.checked());
 
   showQuadrantsCheckbox = createCheckbox('Show Quadrants', true);
-  showQuadrantsCheckbox.position(margin + 130, drawHeight + 10);
+  showQuadrantsCheckbox.position(margin + 130, drawHeight + 12);
   showQuadrantsCheckbox.changed(() => showQuadrants = showQuadrantsCheckbox.checked());
 
   showAxesCheckbox = createCheckbox('Show Axes', true);
-  showAxesCheckbox.position(margin + 280, drawHeight + 10);
+  showAxesCheckbox.position(margin + 290, drawHeight + 12);
   showAxesCheckbox.changed(() => showAxes = showAxesCheckbox.checked());
 
   // Row 2
   quizModeCheckbox = createCheckbox('Quiz Mode', false);
-  quizModeCheckbox.position(margin, drawHeight + 40);
+  quizModeCheckbox.position(margin, drawHeight + 50);
   quizModeCheckbox.changed(() => {
     showQuiz = quizModeCheckbox.checked();
     if (showQuiz) generateQuizTarget();
@@ -69,12 +69,12 @@ function createControls() {
   });
 
   quizTargetButton = createButton('New Target');
-  quizTargetButton.position(margin + 130, drawHeight + 40);
+  quizTargetButton.position(margin + 130, drawHeight + 50);
   quizTargetButton.style('display', 'none');
   quizTargetButton.mousePressed(generateQuizTarget);
 
   showQuizCheckbox = createCheckbox('Show Target', false);
-  showQuizCheckbox.position(margin + 230, drawHeight + 40);
+  showQuizCheckbox.position(margin + 250, drawHeight + 50);
   showQuizCheckbox.changed(() => showQuiz = showQuizCheckbox.checked());
 }
 
@@ -247,16 +247,19 @@ function drawTarget() {
 }
 
 function drawCoordinateDisplay() {
-  const stageX = (canvasWidth - STAGE_W * SCALE) / 2;
-  const stageY = (drawHeight - STAGE_H * SCALE) / 2;
+  // Info panel drawn ABOVE the stage (stage starts at y = 81),
+  // as an opaque white rounded box so it never collides with quadrant labels.
+  fill('white');
+  stroke('#ccc');
+  strokeWeight(1);
+  rect(10, 8, 180, 66, 6);
 
-  // Live coordinate display top-left
   fill('black');
   noStroke();
   textSize(16);
   textAlign(LEFT, TOP);
-  text(`x: ${targetX}`, stageX + 10, stageY + 10);
-  text(`y: ${targetY}`, stageX + 10, stageY + 35);
+  text(`x: ${targetX}`, 20, 14);
+  text(`y: ${targetY}`, 100, 14);
 
   // Quadrant indicator
   let quad = '';
@@ -269,7 +272,7 @@ function drawCoordinateDisplay() {
   else quad = 'X-axis';
 
   textSize(14);
-  text(`Quadrant: ${quad}`, stageX + 10, stageY + 60);
+  text(`Quadrant: ${quad}`, 20, 44);
 }
 
 function drawQuizTarget() {
@@ -297,17 +300,18 @@ function drawQuizMessage() {
 }
 
 function drawControlLabels() {
+  // Hint rendered inside the draw area, near its bottom edge (stage ends at y = 369)
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  const stageX = (canvasWidth - STAGE_W * SCALE) / 2;
-  const stageY = (drawHeight - STAGE_H * SCALE) / 2;
-
-  text('Click on stage to place target. Quiz mode: click target to score!', margin, drawHeight + 10);
+  textSize(11);
+  textAlign(CENTER, BOTTOM);
+  text('Click on stage to place the target. Quiz mode: click the pulsing target to score!', canvasWidth / 2, drawHeight - 10);
 
   if (showQuiz) {
-    text(`Score: ${quizScore} / ${quizAttempts}`, margin, drawHeight + 30);
+    textSize(14);
+    textAlign(RIGHT, TOP);
+    fill('#333');
+    text(`Score: ${quizScore} / ${quizAttempts}`, canvasWidth - margin, 14);
   }
 }
 

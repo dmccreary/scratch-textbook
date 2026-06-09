@@ -6,14 +6,21 @@
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Scratch Editor Overview using p5.js</title>
     <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #ffffff; }
+        button { font-family: inherit; font-size: 13px; padding: 4px 12px; border: 1px solid #d0d4dc; border-radius: 14px; background: linear-gradient(#ffffff, #f1f3f7); color: #333; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+        button:hover { background: #ffe3bd; border-color: #e8a33d; }
+        input[type="text"] { font-family: inherit; font-size: 13px; padding: 4px 8px; border: 1px solid #d0d4dc; border-radius: 6px; }
+        select { font-family: inherit; font-size: 13px; padding: 3px 6px; border: 1px solid #d0d4dc; border-radius: 6px; background: #fff; }
+        label { font-size: 13px; color: #333; }
+        input[type="checkbox"], input[type="range"] { accent-color: #e8871e; }
+        .back-link { display: inline-block; margin: 10px 12px; font-size: 13px; color: #e8871e; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <script src="editor-overview.js"></script>
 </head>
 <body>
     <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+    <a class="back-link" href=".">← Back to Lesson Plan</a>
 </body>
 </html>
