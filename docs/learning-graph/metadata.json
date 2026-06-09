@@ -1,0 +1,10 @@
+{
+  "title": "Scratch Programming for Kids",
+  "description": "An interactive textbook teaching Scratch programming to young learners (ages 8-12) through games, stories, and creative projects. Covers sequences, loops, events, conditionals, variables, clones, lists, and extensions with project-based learning.",
+  "creator": "Arun Batchu",
+  "date": "2026-06-08",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

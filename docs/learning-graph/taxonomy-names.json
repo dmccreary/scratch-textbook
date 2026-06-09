@@ -1,0 +1,20 @@
+{
+  "FOUND": "Foundation Concepts",
+  "SCRATCH_ACC": "Scratch Account & Community",
+  "MOTION": "Motion & Coordinates",
+  "LOOKS": "Looks & Animation",
+  "SOUND": "Sound & Music",
+  "PEN": "Pen & Drawing",
+  "CONTROL": "Control Structures",
+  "EVENTS": "Events & Broadcasting",
+  "SENSING": "Sensing & Input",
+  "OPERATORS": "Operators & Logic",
+  "DATA": "Variables & Lists",
+  "CLONING": "Cloning",
+  "EXTENSIONS": "Extensions & Hardware",
+  "CUSTOM_BLOCKS": "Custom Blocks & Abstraction",
+  "DESIGN": "Design Process",
+  "DEBUGGING": "Debugging & Testing",
+  "BLOCK_TYPES": "Block Types & Shapes",
+  "MISC": "Miscellaneous Concepts"
+}
