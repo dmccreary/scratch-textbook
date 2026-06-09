@@ -1,23 +1,23 @@
 // Block Shape Flow - Interactive Diagram
-// CANVAS_HEIGHT: 450
+// CANVAS_HEIGHT: 470
 
 // Canvas dimensions - responsive
 let canvasWidth = 400;
-let drawHeight = 350;
-let controlHeight = 60;
+let drawHeight = 420;
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let defaultTextSize = 16;
 
 // Flow steps
 const flowSteps = [
-  { id: 1, label: 'Hat Block', desc: 'Starts script when event occurs', color: '#FFD500', shape: 'hat', x: 150, y: 30, w: 120, h: 40 },
-  { id: 2, label: 'Stack Block 1', desc: 'First action (e.g., move)', color: '#4C97FF', shape: 'stack', x: 150, y: 90, w: 120, h: 35 },
-  { id: 3, label: 'Stack Block 2', desc: 'Second action (e.g., turn)', color: '#4C97FF', shape: 'stack', x: 150, y: 140, w: 120, h: 35 },
-  { id: 4, label: 'Stack Block 3', desc: 'Third action (e.g., wait)', color: '#FF9900', shape: 'stack', x: 150, y: 190, w: 120, h: 35 },
-  { id: 5, label: 'Reporter', desc: 'Value for parameter', color: '#00CC00', shape: 'reporter', x: 290, y: 140, w: 70, h: 30 },
-  { id: 6, label: 'Boolean', desc: 'True/False condition', color: '#FF9900', shape: 'boolean', x: 290, y: 190, w: 70, h: 30 },
-  { id: 7, label: 'Cap Block', desc: 'Ends the script', color: '#FF9900', shape: 'cap', x: 150, y: 240, w: 120, h: 40 }
+  { id: 1, label: 'Hat Block', desc: 'Starts script when event occurs', color: '#FFD500', shape: 'hat', x: 150, y: 65, w: 120, h: 40 },
+  { id: 2, label: 'Stack Block 1', desc: 'First action (e.g., move)', color: '#4C97FF', shape: 'stack', x: 150, y: 125, w: 120, h: 35 },
+  { id: 3, label: 'Stack Block 2', desc: 'Second action (e.g., turn)', color: '#4C97FF', shape: 'stack', x: 150, y: 175, w: 120, h: 35 },
+  { id: 4, label: 'Stack Block 3', desc: 'Third action (e.g., wait)', color: '#FF9900', shape: 'stack', x: 150, y: 225, w: 120, h: 35 },
+  { id: 5, label: 'Reporter', desc: 'Value for parameter', color: '#00CC00', shape: 'reporter', x: 290, y: 175, w: 70, h: 30 },
+  { id: 6, label: 'Boolean', desc: 'True/False condition', color: '#FF9900', shape: 'boolean', x: 290, y: 225, w: 70, h: 30 },
+  { id: 7, label: 'Cap Block', desc: 'Ends the script', color: '#FF9900', shape: 'cap', x: 150, y: 275, w: 120, h: 40 }
 ];
 
 // Connections between steps
@@ -38,19 +38,25 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive flow diagram showing how Scratch blocks connect: Hat → Stack → Stack → Stack, with Reporter and Boolean blocks fitting into slots.', LABEL);
+  describe('Interactive flow diagram showing how Scratch blocks connect: Hat → Stack → Stack → Stack, with Reporter and Boolean blocks fitting into slots.');
 
   createControls();
 }
 
 function createControls() {
   showTypesCheckbox = createCheckbox('Show Block Types', true);
-  showTypesCheckbox.position(margin, drawHeight + 10);
   showTypesCheckbox.changed(() => showTypes = showTypesCheckbox.checked());
 
   resetButton = createButton('Reset Highlight');
-  resetButton.position(margin + 180, drawHeight + 10);
   resetButton.mousePressed(() => { hoveredStep = -1; });
+
+  positionControls();
+}
+
+function positionControls() {
+  // Row 1 of the control strip
+  showTypesCheckbox.position(margin, drawHeight + 12);
+  resetButton.position(margin + 190, drawHeight + 12);
 }
 
 function draw() {
@@ -216,18 +222,20 @@ function drawHexagon(cx, cy, r) {
 
 function drawLegend() {
   const legendX = margin;
-  const legendY = drawHeight - 60;
-  
+  const legendY = drawHeight - 85;
+  const legendW = max(canvasWidth - 2 * margin, 480);
+
   fill('#f0f0f0');
   stroke('#ddd');
-  rect(legendX, legendY, 360, 35, 5);
-  
+  strokeWeight(1);
+  rect(legendX, legendY, legendW, 60, 5);
+
   fill('black');
   noStroke();
   textSize(11);
   textAlign(LEFT, TOP);
   text('Block Types:', legendX + 10, legendY + 5);
-  
+
   const types = [
     { label: 'Hat: Starts script', color: '#FFD500' },
     { label: 'Stack: Does action', color: '#4C97FF' },
@@ -235,29 +243,35 @@ function drawLegend() {
     { label: 'Boolean: True/False', color: '#FF9900' },
     { label: 'Cap: Ends script', color: '#FF9900' }
   ];
-  
-  let tx = legendX + 80;
-  for (let t of types) {
+
+  // Grid: 3 columns x 2 rows so items never overflow the box
+  const colW = (legendW - 20) / 3;
+  for (let i = 0; i < types.length; i++) {
+    const t = types[i];
+    const tx = legendX + 10 + (i % 3) * colW;
+    const ty = legendY + 20 + floor(i / 3) * 19;
     fill(t.color);
-    rect(tx, legendY + 18, 16, 16, 3);
+    noStroke();
+    rect(tx, ty, 14, 14, 3);
     fill('black');
     textSize(10);
-    text(t.label, tx + 22, legendY + 20);
-    tx += textWidth(t.label) + 30;
+    text(t.label, tx + 20, ty + 2);
   }
 }
 
 function drawControlLabels() {
+  // Hint line at the bottom of the draw area
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Hover blocks for details. Flow: Hat → Stacks → Cap. Reporters/Booleans fit in white/hex slots.', margin, drawHeight + 10);
+  textSize(11);
+  textAlign(LEFT, CENTER);
+  text('Hover blocks for details. Flow: Hat → Stacks → Cap.', margin, drawHeight - 10);
 }
 
 function windowResized() {
   updateCanvasSize();
   resizeCanvas(canvasWidth, canvasHeight);
+  positionControls();
 }
 
 function updateCanvasSize() {

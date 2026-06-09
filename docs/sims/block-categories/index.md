@@ -11,7 +11,7 @@ quality_score: 0
 
 # Block Categories
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="800px" width="100%"></iframe>
 
 [Run the Block Categories MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -31,9 +31,9 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-categories/main.html"
-        height="450px"
+        height="800px"
         width="100%"
-        scrolling="no"></iframe>
+       ></iframe>
 ```
 
 ## Lesson Plan

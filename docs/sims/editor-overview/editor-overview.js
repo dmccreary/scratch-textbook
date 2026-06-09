@@ -4,8 +4,8 @@
 
 // Canvas dimensions - responsive
 let canvasWidth = 400;
-let drawHeight = 400;
-let controlHeight = 60;
+let drawHeight = 455;
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -17,7 +17,7 @@ const regions = [
     id: 'stage',
     name: 'Stage Area',
     desc: 'Where your project runs (480 × 360 pixels). Sprites perform here.',
-    x: 200, y: 20, w: 320, h: 260,
+    x: 200, y: 50, w: 320, h: 260,
     color: '#f0f0f0',
     borderColor: '#888',
     label: 'Stage (480 × 360 px)'
@@ -26,7 +26,7 @@ const regions = [
     id: 'spritePane',
     name: 'Sprite Pane',
     desc: 'Shows all your sprites. Click to select, right-click for options.',
-    x: 20, y: 290, w: 160, h: 100,
+    x: 20, y: 320, w: 160, h: 100,
     color: '#e0e0e0',
     borderColor: '#999',
     label: 'Sprite Pane'
@@ -35,7 +35,7 @@ const regions = [
     id: 'blocksPalette',
     name: 'Blocks Palette',
     desc: 'Color-coded categories of blocks. Drag blocks from here into the code area.',
-    x: 20, y: 20, w: 160, h: 260,
+    x: 20, y: 50, w: 160, h: 260,
     color: '#e8e8e8',
     borderColor: '#999',
     label: 'Blocks Palette'
@@ -44,7 +44,7 @@ const regions = [
     id: 'codeArea',
     name: 'Code Area',
     desc: 'Snap blocks together here to program the selected sprite.',
-    x: 200, y: 290, w: 320, h: 100,
+    x: 200, y: 320, w: 320, h: 100,
     color: '#f5f5f5',
     borderColor: '#aaa',
     label: 'Code Area'
@@ -53,7 +53,7 @@ const regions = [
     id: 'tabs',
     name: 'Tabs',
     desc: 'Switch between Code, Costumes, and Sounds editors for the selected sprite.',
-    x: 200, y: 260, w: 320, h: 30,
+    x: 200, y: 290, w: 320, h: 30,
     color: '#e0e0e0',
     borderColor: '#888',
     label: 'Tabs: Code / Costumes / Sounds'
@@ -62,7 +62,7 @@ const regions = [
     id: 'toolbar',
     name: 'Toolbar',
     desc: 'File menu, save, share, green flag (start), stop sign (stop).',
-    x: 420, y: 0, w: 100, h: 20,
+    x: 420, y: 30, w: 100, h: 20,
     color: '#f0f0f0',
     borderColor: '#aaa',
     label: 'Toolbar'
@@ -89,7 +89,7 @@ function setup() {
   canvas.parent(document.querySelector('main'));
 
   // Accessibility
-  describe('Interactive diagram of the Scratch editor showing six main regions: Stage, Sprite Pane, Blocks Palette, Code Area, Tabs, and Toolbar. Hover over regions to see descriptions. Click to highlight and see details in the side panel.', LABEL);
+  describe('Interactive diagram of the Scratch editor showing six main regions: Stage, Sprite Pane, Blocks Palette, Code Area, Tabs, and Toolbar. Hover over regions to see descriptions. Click to highlight and see details in the side panel.');
 
   // Create controls
   createControls();
@@ -98,17 +98,17 @@ function setup() {
 function createControls() {
   // Row 1: Show Labels checkbox
   showLabelsCheckbox = createCheckbox('Show Labels', true);
-  showLabelsCheckbox.position(margin, drawHeight + 10);
+  showLabelsCheckbox.position(margin, drawHeight + 12);
   showLabelsCheckbox.changed(() => showLabels = showLabelsCheckbox.checked());
 
   // Show Connections checkbox
   showConnectionsCheckbox = createCheckbox('Show Connections', true);
-  showConnectionsCheckbox.position(margin + 150, drawHeight + 10);
+  showConnectionsCheckbox.position(margin + 130, drawHeight + 12);
   showConnectionsCheckbox.changed(() => showConnections = showConnectionsCheckbox.checked());
 
   // Reset button
   resetButton = createButton('Reset Highlights');
-  resetButton.position(margin + 320, drawHeight + 8);
+  resetButton.position(margin + 310, drawHeight + 12);
   resetButton.mousePressed(() => {
     clickedRegion = null;
   });
@@ -143,7 +143,7 @@ function draw() {
   noStroke();
   textSize(20);
   textAlign(CENTER, TOP);
-  text('Scratch Editor Overview', canvasWidth / 2, 10);
+  text('Scratch Editor Overview', canvasWidth / 2, 8);
 
   // Draw side panel for clicked region
   if (clickedRegion) {
@@ -273,17 +273,12 @@ function wrapText(text, maxWidth) {
 }
 
 function drawControlLabels() {
-  // Instructions at bottom
+  // Single hint line inside the drawing area, near its bottom edge
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Hover over regions for details. Click to pin and see full description.', margin, drawHeight + 10);
-
-  // Legend
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('💡 Tip: Click a region to pin its description. Click "Reset" to clear.', margin, drawHeight + 30);
+  textSize(11);
+  textAlign(CENTER, BOTTOM);
+  text('Hover over a region for details; click to pin its description.', canvasWidth / 2, drawHeight - 10);
 }
 
 function windowResized() {
@@ -297,9 +292,9 @@ function updateCanvasSize() {
     canvasWidth = container.offsetWidth;
     // Reposition controls
     if (typeof showLabelsCheckbox !== 'undefined') {
-      showLabelsCheckbox.position(margin, drawHeight + 10);
-      showConnectionsCheckbox.position(margin + 150, drawHeight + 10);
-      resetButton.position(margin + 320, drawHeight + 8);
+      showLabelsCheckbox.position(margin, drawHeight + 12);
+      showConnectionsCheckbox.position(margin + 130, drawHeight + 12);
+      resetButton.position(margin + 310, drawHeight + 12);
     }
   }
 }

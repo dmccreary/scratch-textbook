@@ -65,7 +65,7 @@ When you open Scratch at [scratch.mit.edu](https://scratch.mit.edu), you'll see 
 
 #### Diagram: Scratch Editor Overview
 
-<iframe src="../../sims/editor-overview/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/editor-overview/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Scratch Editor Overview</summary>
@@ -125,7 +125,7 @@ At the top of the code area, you'll see **three tabs**. Each tab lets you work o
 
 #### Diagram: Three Tabs Explained
 
-<iframe src="../../sims/three-tabs/main.html" width="100%" height="400px" scrolling="no"></iframe>
+<iframe src="../../sims/three-tabs/main.html" width="100%" height="415px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Three Tabs Explained</summary>
@@ -190,7 +190,7 @@ The **stage** is the background where all your sprites perform. You can:
 
 #### Diagram: Stage Coordinate System
 
-<iframe src="../../sims/stage-coordinates/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/stage-coordinates/main.html" width="100%" height="525px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Stage Coordinate System</summary>
@@ -248,7 +248,7 @@ The **blocks palette** on the left holds all the blocks you'll use to program. B
 
 #### Diagram: Block Categories
 
-<iframe src="../../sims/block-categories/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/block-categories/main.html" width="100%" height="800px"></iframe>
 
 <details markdown="1">
 <summary>Block Categories</summary>
@@ -312,7 +312,7 @@ Blocks come in **different shapes** that tell you how they work:
 
 #### Diagram: Block Shapes
 
-<iframe src="../../sims/block-shapes/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/block-shapes/main.html" width="100%" height="495px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Block Shapes</summary>
@@ -392,7 +392,7 @@ Now experiment! Try changing your script:
 
 #### Diagram: Script Anatomy
 
-<iframe src="../../sims/script-anatomy/main.html" width="100%" height="400px" scrolling="no"></iframe>
+<iframe src="../../sims/script-anatomy/main.html" width="100%" height="415px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Script Anatomy</summary>

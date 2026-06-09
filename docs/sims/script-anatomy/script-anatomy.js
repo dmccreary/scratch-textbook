@@ -4,7 +4,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 350;
-let controlHeight = 60;
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let defaultTextSize = 16;
@@ -27,14 +27,14 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive diagram showing the anatomy of a Scratch script. Each block type has a specific shape and purpose. Hover blocks to see description.', LABEL);
+  describe('Interactive diagram showing the anatomy of a Scratch script. Each block type has a specific shape and purpose. Hover blocks to see description.');
 
   createControls();
 }
 
 function createControls() {
   showLabelsCheckbox = createCheckbox('Show Descriptions', true);
-  showLabelsCheckbox.position(margin, drawHeight + 10);
+  showLabelsCheckbox.position(margin, drawHeight + 12);
   showLabelsCheckbox.changed(() => showLabels = showLabelsCheckbox.checked());
 }
 
@@ -169,12 +169,20 @@ function drawBlock(block, x, y, isHovered) {
 }
 
 function drawControlLabels() {
+  // Hovered block description (toggled by checkbox), shown in empty space below the blocks
+  if (showLabels && hoveredBlock >= 0) {
+    fill('#333');
+    noStroke();
+    textSize(13);
+    textAlign(CENTER, BOTTOM);
+    text(scriptBlocks[hoveredBlock].desc, canvasWidth / 2, drawHeight - 28);
+  }
+  // Single-line hint inside the draw area, near its bottom edge
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Hover a block to see its description. Blocks snap together like puzzle pieces.', margin, drawHeight + 10);
-  text('Hat blocks start scripts. Stack blocks do actions. Reporters give values. Booleans answer true/false.', margin, drawHeight + 25);
+  textSize(11);
+  textAlign(CENTER, BOTTOM);
+  text('Hover a block to see its description — blocks snap together like puzzle pieces.', canvasWidth / 2, drawHeight - 10);
 }
 
 function windowResized() {

@@ -1,14 +1,18 @@
 // Block Shapes - Interactive Diagram
-// CANVAS_HEIGHT: 500
+// CANVAS_HEIGHT: 480
 
 // Canvas dimensions - responsive
-let canvasWidth = 400;
-let drawHeight = 400;
-let controlHeight = 60;
+let canvasWidth = 650;
+let drawHeight = 430;
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
 let defaultTextSize = 16;
+
+// Card dimensions
+const cardW = 170;
+const cardH = 150;
 
 // Block shapes data
 const shapes = [
@@ -19,7 +23,7 @@ const shapes = [
     shape: 'hat',
     examples: ['when green flag clicked', 'when this sprite clicked', 'when I receive message'],
     color: '#FFD500',
-    x: 60, y: 80
+    x: 20, y: 70
   },
   {
     id: 'stack',
@@ -28,7 +32,7 @@ const shapes = [
     shape: 'stack',
     examples: ['move 10 steps', 'say Hello!', 'play sound pop'],
     color: '#4C97FF',
-    x: 180, y: 80
+    x: 240, y: 70
   },
   {
     id: 'reporter',
@@ -37,7 +41,7 @@ const shapes = [
     shape: 'reporter',
     examples: ['x position', 'pick random 1 to 10', 'timer'],
     color: '#00CC00',
-    x: 60, y: 220
+    x: 460, y: 70
   },
   {
     id: 'boolean',
@@ -46,7 +50,7 @@ const shapes = [
     shape: 'boolean',
     examples: ['touching mouse?', '5 > 3', 'key space pressed?'],
     color: '#FF9900',
-    x: 180, y: 220
+    x: 130, y: 250
   },
   {
     id: 'cap',
@@ -55,7 +59,7 @@ const shapes = [
     shape: 'cap',
     examples: ['stop all', 'stop this script'],
     color: '#FF9900',
-    x: 120, y: 340
+    x: 350, y: 250
   }
 ];
 
@@ -68,15 +72,20 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive diagram of the 5 Scratch block shapes: Hat, Stack, Reporter, Boolean, and Cap. Hover to see details, click to learn more.', LABEL);
+  describe('Interactive diagram of the 5 Scratch block shapes: Hat, Stack, Reporter, Boolean, and Cap. Hover to see details, click to learn more.');
 
   createControls();
 }
 
 function createControls() {
   resetButton = createButton('Reset');
-  resetButton.position(margin, drawHeight + 10);
   resetButton.mousePressed(() => { clickedShape = null; });
+  positionControls();
+}
+
+function positionControls() {
+  // Row 1 of the control strip
+  resetButton.position(margin, drawHeight + 12);
 }
 
 function draw() {
@@ -110,8 +119,12 @@ function draw() {
     drawShape(shape);
   }
 
-  // Control labels
-  drawControlLabels();
+  // Hint line at the bottom of the draw area
+  fill('#666');
+  noStroke();
+  textSize(11);
+  textAlign(LEFT, CENTER);
+  text('Hover a shape to see example blocks. Click to pin it open.', margin, drawHeight - 10);
 }
 
 function drawShape(shape) {
@@ -119,64 +132,54 @@ function drawShape(shape) {
   const isClicked = clickedShape === shape.id;
   const x = shape.x;
   const y = shape.y;
-  const w = 120;
-  const h = 120;
+  const w = cardW;
+  const h = cardH;
 
   // Card background
   fill(isClicked ? '#fff8e1' : (isHovered ? '#fffde7' : 'white'));
   stroke(isClicked ? '#ff9800' : (isHovered ? '#ff9800' : '#ddd'));
   strokeWeight(isClicked ? 3 : (isHovered ? 2 : 1));
-  rect(shape.x, shape.y, w, h, 8);
+  rect(x, y, w, h, 8);
   noStroke();
-
-  // Draw shape illustration
-  drawShapeIllustration(shape);
 
   // Shape name
   fill('black');
   noStroke();
   textSize(14);
   textAlign(CENTER, TOP);
-  text(shape.name, shape.x + w/2, shape.y + 5);
+  text(shape.name, x + w/2, y + 8);
 
   // Description
   fill('#666');
   textSize(11);
   textAlign(LEFT, TOP);
-  const descLines = wrapText(shape.desc, 110);
-  let dy = shape.y + 25;
+  const descLines = wrapText(shape.desc, w - 16);
+  let dy = y + 28;
   for (let line of descLines) {
-    text(line, shape.x + 5, dy);
+    text(line, x + 8, dy);
     dy += 14;
   }
 
-  // Examples (when clicked/hovered)
+  // Examples replace the illustration when hovered/clicked (avoids overlap)
   if (isHovered || isClicked) {
     fill('#666');
     textSize(10);
     textAlign(LEFT, TOP);
-    let exY = shape.y + 70;
-    text('Examples:', shape.x + 5, exY);
+    let exY = y + 75;
+    text('Examples:', x + 8, exY);
     exY += 14;
     for (let ex of shape.examples) {
-      text('• ' + ex, shape.x + 5, exY);
-      exY += 12;
+      text('• ' + ex, x + 8, exY);
+      exY += 13;
     }
-  }
-
-  // Click indicator
-  if (isClicked) {
-    noFill();
-    stroke('#ff9800');
-    strokeWeight(3);
-    rect(shape.x, shape.y, w, h, 8);
+  } else {
+    drawShapeIllustration(shape);
   }
 }
 
 function drawShapeIllustration(shape) {
-  const cx = shape.x + 60;
-  const cy = shape.y + shape.h - 30;
-  const scale = 0.7;
+  const cx = shape.x + cardW / 2;
+  const cy = shape.y + cardH - 35;
 
   stroke(shape.color);
   strokeWeight(2);
@@ -247,6 +250,7 @@ function drawShapeIllustration(shape) {
     vertex(cx - 40, cy - 10);
     endShape(CLOSE);
   }
+  noStroke();
 }
 
 function wrapText(text, maxWidth) {
@@ -267,17 +271,31 @@ function wrapText(text, maxWidth) {
   return lines;
 }
 
-function drawControlLabels() {
-  fill('#666');
-  noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Hover for details. Click to expand and see examples. Each shape = specific job!', margin, drawHeight + 10);
+function mouseMoved() {
+  hoveredShape = null;
+  for (let shape of shapes) {
+    if (mouseX >= shape.x && mouseX <= shape.x + cardW &&
+        mouseY >= shape.y && mouseY <= shape.y + cardH) {
+      hoveredShape = shape.id;
+      break;
+    }
+  }
+}
+
+function mouseClicked() {
+  for (let shape of shapes) {
+    if (mouseX >= shape.x && mouseX <= shape.x + cardW &&
+        mouseY >= shape.y && mouseY <= shape.y + cardH) {
+      clickedShape = (clickedShape === shape.id) ? null : shape.id;
+      return;
+    }
+  }
 }
 
 function windowResized() {
   updateCanvasSize();
   resizeCanvas(canvasWidth, canvasHeight);
+  positionControls();
 }
 
 function updateCanvasSize() {

@@ -11,7 +11,7 @@ quality_score: 0
 
 # Block Shapes
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="495px" width="100%" scrolling="no"></iframe>
 
 [Run the Block Shapes MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -31,7 +31,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-shapes/main.html"
-        height="450px"
+        height="495px"
         width="100%"
         scrolling="no"></iframe>
 ```

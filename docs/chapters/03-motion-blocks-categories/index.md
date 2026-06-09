@@ -172,7 +172,7 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 
 #### Diagram: Block Shape Flow
 
-<iframe src="../../sims/block-shape-flow/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/block-shape-flow/main.html" width="100%" height="485px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Block Shape Flow</summary>

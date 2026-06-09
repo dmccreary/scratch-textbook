@@ -4,7 +4,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 380;
-let controlHeight = 80;
+let controlHeight = 90;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let defaultTextSize = 16;
@@ -48,58 +48,68 @@ let maxIterations = 10;
 let spriteX = 0;
 let spriteY = 0;
 let angle = 0;
+let loopBtns = [];
 
 function setup() {
   updateCanvasSize();
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive comparison of three Scratch loop types: repeat (counted), forever (continuous), and repeat until (conditional). Select a loop to see it in action.', LABEL);
+  describe('Interactive comparison of three Scratch loop types: repeat (counted), forever (continuous), and repeat until (conditional). Select a loop to see it in action.');
 
   createControls();
 }
 
 function createControls() {
-  // Loop selector buttons
+  // Row 1: loop selector buttons
+  loopBtns = [];
   for (let i = 0; i < 3; i++) {
     const btn = createButton(loopTypes[i].icon + ' ' + loopTypes[i].name);
-    btn.position(margin + i * 130, drawHeight + 10);
-    btn.style('width', '125px');
+    btn.position(margin + i * 155, drawHeight + 12);
+    btn.style('width', '145px');
     btn.style('font-size', '11px');
-    btn.style('padding', '4px 8px');
-    btn.mousePressed(() => { selectedLoop = i; resetAnimation(); });
-    if (i === 0) btn.style('background', '#ff9800');
+    btn.mousePressed(() => { selectLoop(i); });
+    loopBtns.push(btn);
   }
+  selectLoop(0);
 
-  // Control buttons
+  // Row 2: control buttons
   startBtn = createButton('▶ Start');
   startBtn.position(margin, drawHeight + 50);
   startBtn.mousePressed(() => { animating = true; });
 
   pauseBtn = createButton('⏸ Pause');
-  pauseBtn.position(margin + 80, drawHeight + 50);
+  pauseBtn.position(margin + 85, drawHeight + 50);
   pauseBtn.mousePressed(() => { animating = false; });
 
   resetBtn = createButton('🔄 Reset');
-  resetBtn.position(margin + 160, drawHeight + 50);
+  resetBtn.position(margin + 180, drawHeight + 50);
   resetBtn.mousePressed(() => resetAnimation());
 
-  // Speed slider
+  // Row 2: speed slider
   speedLabel = createDiv('Speed:');
-  speedLabel.position(margin + 250, drawHeight + 10);
-  speedLabel.style('font-size', '11px');
+  speedLabel.position(margin + 280, drawHeight + 54);
+  speedLabel.style('font-size', '12px');
   speedLabel.style('color', '#666');
 
   speedSlider = createSlider(1, 10, 5, 1);
-  speedSlider.position(margin + 290, drawHeight + 10);
+  speedSlider.position(margin + 325, drawHeight + 54);
   speedSlider.style('width', '80px');
 
-  // Iteration counter
+  // Row 2: iteration counter
   iterDisplay = createDiv('Iteration: 0 / 10');
-  iterDisplay.position(margin + 280, drawHeight + 50);
+  iterDisplay.position(margin + 425, drawHeight + 54);
   iterDisplay.style('font-family', 'monospace');
   iterDisplay.style('font-size', '12px');
   iterDisplay.style('color', '#666');
+}
+
+function selectLoop(i) {
+  selectedLoop = i;
+  resetAnimation();
+  for (let j = 0; j < loopBtns.length; j++) {
+    loopBtns[j].style('background', j === i ? '#ffd9a0' : '');
+  }
 }
 
 function draw() {
@@ -122,16 +132,8 @@ function draw() {
   textAlign(CENTER, TOP);
   text('Loop Comparison', canvasWidth / 2, 10);
 
-  // Subtitle
-  textSize(11);
-  fill('#666');
-  text('Compare three Scratch loop types. Select one to see it animate!', canvasWidth / 2, 32);
-
   // Draw selected loop visualization
   drawLoopVisualization();
-
-  // Selected loop info
-  drawLoopInfo();
 
   // Update iteration display
   iterDisplay.html('Iteration: ' + iteration + ' / ' + maxIterations);
@@ -341,12 +343,12 @@ function animateLoop() {
 }
 
 function drawControlLabels() {
+  // Single hint line inside the drawing area, near its bottom edge
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Use Start/Pause/Reset to control animation. Adjust speed with slider.', margin, drawHeight + 10);
-  text('Speed slider controls animation speed. Max 10 iterations per run.', margin, drawHeight + 22);
+  textSize(11);
+  textAlign(CENTER, BOTTOM);
+  text('Pick a loop type, then press Start. The slider sets the speed (max 10 iterations).', canvasWidth / 2, drawHeight - 10);
 }
 
 function windowResized() {
@@ -361,42 +363,3 @@ function updateCanvasSize() {
   }
 }
 
-function createControls() {
-  // Loop selector
-  for (let i = 0; i < 3; i++) {
-    const btn = createButton(loopTypes[i].icon + ' ' + loopTypes[i].name);
-    btn.position(margin + i * 130, drawHeight + 10);
-    btn.style('width', '125px');
-    btn.style('font-size', '11px');
-    btn.style('padding', '4px 8px');
-    btn.mousePressed(() => { selectedLoop = i; resetAnimation(); });
-    if (i === 0) btn.style('background', '#ff9800');
-  }
-
-  startBtn = createButton('▶ Start');
-  startBtn.position(margin, drawHeight + 50);
-  startBtn.mousePressed(() => { animating = true; });
-
-  pauseBtn = createButton('⏸ Pause');
-  pauseBtn.position(margin + 80, drawHeight + 50);
-  pauseBtn.mousePressed(() => { animating = false; });
-
-  resetBtn = createButton('🔄 Reset');
-  resetBtn.position(margin + 160, drawHeight + 50);
-  resetBtn.mousePressed(resetAnimation);
-
-  speedLabel = createDiv('Speed:');
-  speedLabel.position(margin + 250, drawHeight + 10);
-  speedLabel.style('font-size', '11px');
-  speedLabel.style('color', '#666');
-
-  speedSlider = createSlider(1, 10, 5, 1);
-  speedSlider.position(margin + 290, drawHeight + 10);
-  speedSlider.style('width', '80px');
-
-  iterDisplay = createDiv('Iteration: 0 / 10');
-  iterDisplay.position(margin + 280, drawHeight + 50);
-  iterDisplay.style('font-family', 'monospace');
-  iterDisplay.style('font-size', '12px');
-  iterDisplay.style('color', '#666');
-}

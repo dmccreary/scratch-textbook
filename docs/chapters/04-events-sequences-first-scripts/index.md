@@ -313,7 +313,7 @@ end
 
 #### Diagram: Loop Comparison
 
-<iframe src="../../sims/loop-comparison/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/loop-comparison/main.html" width="100%" height="485px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Loop Comparison</summary>
@@ -529,7 +529,7 @@ broadcast [start-game v]
 
 #### Diagram: Broadcast Flow
 
-<iframe src="../../sims/broadcast-flow/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/broadcast-flow/main.html" width="100%" height="545px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Broadcast Flow</summary>
@@ -679,7 +679,7 @@ end
 
 #### Diagram: Coordinate Reporters in Action
 
-<iframe src="../../sims/coordinate-reporters/main.html" width="100%" height="400px" scrolling="no"></iframe>
+<iframe src="../../sims/coordinate-reporters/main.html" width="100%" height="455px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Coordinate Reporters in Action</summary>

@@ -4,7 +4,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 350;
-let controlHeight = 60;
+let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -16,7 +16,7 @@ const tabs = [
     id: 'code',
     name: 'Code Tab',
     desc: 'Program your sprite here. Snap blocks together to create scripts.',
-    x: 30, y: 50, w: 110, h: 150,
+    x: 30, y: 110, w: 110, h: 150,
     color: '#e0e0e0',
     borderColor: '#aaa',
     iconColor: '#888',
@@ -26,7 +26,7 @@ const tabs = [
     id: 'costumes',
     name: 'Costumes Tab',
     desc: 'Draw and animate your sprite. Create frames for animation.',
-    x: 150, y: 50, w: 110, h: 150,
+    x: 150, y: 110, w: 110, h: 150,
     color: '#e8d0f8',
     borderColor: '#b19cd9',
     iconColor: '#9b59b6',
@@ -36,7 +36,7 @@ const tabs = [
     id: 'sounds',
     name: 'Sounds Tab',
     desc: 'Add and edit sounds. Record, trim, or choose from library.',
-    x: 270, y: 50, w: 110, h: 150,
+    x: 270, y: 110, w: 110, h: 150,
     color: '#f8d0e8',
     borderColor: '#d98cb8',
     iconColor: '#e91e63',
@@ -54,7 +54,7 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive diagram showing the three Scratch editor tabs: Code, Costumes, and Sounds. Hover to see details, click to explore each tab.', LABEL);
+  describe('Interactive diagram showing the three Scratch editor tabs: Code, Costumes, and Sounds. Hover to see details, click to explore each tab.');
 
   // Controls
   createControls();
@@ -63,7 +63,7 @@ function setup() {
 function createControls() {
   // Reset button
   resetButton = createButton('Reset View');
-  resetButton.position(margin, drawHeight + 10);
+  resetButton.position(margin, drawHeight + 12);
   resetButton.mousePressed(() => {
     clickedTab = null;
     activeView = 'overview';
@@ -71,19 +71,19 @@ function createControls() {
 
   // View radio buttons (simulated with buttons)
   viewOverviewBtn = createButton('Overview');
-  viewOverviewBtn.position(margin + 100, drawHeight + 10);
+  viewOverviewBtn.position(margin + 115, drawHeight + 12);
   viewOverviewBtn.mousePressed(() => { activeView = 'overview'; clickedTab = null; });
 
   viewCodeBtn = createButton('Code Tab');
-  viewCodeBtn.position(margin + 180, drawHeight + 10);
+  viewCodeBtn.position(margin + 215, drawHeight + 12);
   viewCodeBtn.mousePressed(() => { activeView = 'code'; clickedTab = 'code'; });
 
   viewCostumesBtn = createButton('Costumes Tab');
-  viewCostumesBtn.position(margin + 260, drawHeight + 10);
+  viewCostumesBtn.position(margin + 315, drawHeight + 12);
   viewCostumesBtn.mousePressed(() => { activeView = 'costumes'; clickedTab = 'costumes'; });
 
   viewSoundsBtn = createButton('Sounds Tab');
-  viewSoundsBtn.position(margin + 340, drawHeight + 10);
+  viewSoundsBtn.position(margin + 445, drawHeight + 12);
   viewSoundsBtn.mousePressed(() => { activeView = 'sounds'; clickedTab = 'sounds'; });
 }
 
@@ -158,21 +158,37 @@ function drawOverview() {
     }
   }
 
+  // Sprite node that owns the three tabs
+  const spriteCenterX = canvasWidth / 2;
+  const spriteBottomY = 72;
+  fill('#ffab19');
+  stroke('#e8871e');
+  strokeWeight(2);
+  circle(spriteCenterX, 45, 46);
+  // ears
+  triangle(spriteCenterX - 16, 30, spriteCenterX - 22, 12, spriteCenterX - 4, 24);
+  triangle(spriteCenterX + 16, 30, spriteCenterX + 22, 12, spriteCenterX + 4, 24);
+  // eyes
+  fill('white'); noStroke();
+  circle(spriteCenterX - 8, 42, 12); circle(spriteCenterX + 8, 42, 12);
+  fill('#333');
+  circle(spriteCenterX - 8, 43, 5); circle(spriteCenterX + 8, 43, 5);
+  fill('#555');
+  textSize(12);
+  textAlign(CENTER, TOP);
+  text('Your Sprite', spriteCenterX, 74);
+
   // Connection arrows
   stroke('#ff9800');
   strokeWeight(2);
   noFill();
-  
-  // Arrow from sprite to tabs
-  const spriteCenterX = canvasWidth / 2;
-  const spriteBottomY = 20;
   for (let tab of tabs) {
     const tabTopY = tab.y;
     const tabCenterX = tab.x + tab.w / 2;
     
     // Curved line from sprite to tab
     beginShape();
-    vertex(spriteCenterX, spriteBottomY);
+    vertex(spriteCenterX, spriteBottomY + 18);
     quadraticVertex(spriteCenterX, (spriteBottomY + tabTopY) / 2, tabCenterX, tabTopY);
     endShape();
     
@@ -239,12 +255,14 @@ function drawTabDetail(tab) {
 }
 
 function drawControlLabels() {
-  fill('#666');
-  noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Click a tab button above or click a panel in overview to explore.', margin, drawHeight + 10);
-  text('Each sprite has its own Code, Costumes, and Sounds tabs.', margin, drawHeight + 30);
+  // Single-line hint inside the draw area (overview only — detail view has its own back prompt there)
+  if (activeView === 'overview') {
+    fill('#666');
+    noStroke();
+    textSize(11);
+    textAlign(CENTER, BOTTOM);
+    text('Click a button below to explore — each sprite has its own Code, Costumes, and Sounds tabs.', canvasWidth / 2, drawHeight - 10);
+  }
 }
 
 function windowResized() {
@@ -256,12 +274,16 @@ function updateCanvasSize() {
   const container = document.querySelector('main');
   if (container) {
     canvasWidth = container.offsetWidth;
+    const startX = Math.max(20, (canvasWidth - 370) / 2);
+    tabs[0].x = startX;
+    tabs[1].x = startX + 130;
+    tabs[2].x = startX + 260;
     if (typeof viewOverviewBtn !== 'undefined') {
-      viewOverviewBtn.position(margin + 100, drawHeight + 10);
-      viewCodeBtn.position(margin + 180, drawHeight + 10);
-      viewCostumesBtn.position(margin + 260, drawHeight + 10);
-      viewSoundsBtn.position(margin + 340, drawHeight + 10);
-      resetButton.position(margin, drawHeight + 10);
+      resetButton.position(margin, drawHeight + 12);
+      viewOverviewBtn.position(margin + 115, drawHeight + 12);
+      viewCodeBtn.position(margin + 215, drawHeight + 12);
+      viewCostumesBtn.position(margin + 315, drawHeight + 12);
+      viewSoundsBtn.position(margin + 445, drawHeight + 12);
     }
   }
 }

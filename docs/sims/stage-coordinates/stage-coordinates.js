@@ -4,7 +4,7 @@
 // Canvas dimensions - responsive
 let canvasWidth = 400;
 let drawHeight = 380;
-let controlHeight = 80;
+let controlHeight = 130;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 let sliderLeftMargin = 140;
@@ -31,7 +31,7 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  describe('Interactive coordinate system explorer. Click anywhere on the stage to move the sprite and see its coordinates. Toggle grid, labels, and quadrants.', LABEL);
+  describe('Interactive coordinate system explorer. Click anywhere on the stage to move the sprite and see its coordinates. Toggle grid, labels, and quadrants.');
 
   // Controls
   createControls();
@@ -44,44 +44,42 @@ function setup() {
 let mouseOverCanvas = false;
 
 function createControls() {
-  // Show Grid checkbox
+  // Row 1: checkboxes
   showGridCheckbox = createCheckbox('Show Grid', true);
-  showGridCheckbox.position(margin, drawHeight + 10);
+  showGridCheckbox.position(margin, drawHeight + 12);
   showGridCheckbox.changed(() => showGrid = showGridCheckbox.checked());
 
-  // Show Labels checkbox
   showLabelsCheckbox = createCheckbox('Show Axis Labels', true);
-  showLabelsCheckbox.position(margin + 150, drawHeight + 10);
+  showLabelsCheckbox.position(margin + 130, drawHeight + 12);
   showLabelsCheckbox.changed(() => showLabels = showLabelsCheckbox.checked());
 
-  // Show Quadrants checkbox
   showQuadrantsCheckbox = createCheckbox('Show Quadrants', true);
-  showQuadrantsCheckbox.position(margin + 300, drawHeight + 10);
+  showQuadrantsCheckbox.position(margin + 300, drawHeight + 12);
   showQuadrantsCheckbox.changed(() => showQuadrants = showQuadrantsCheckbox.checked());
 
-  // Go to Center button
-  centerButton = createButton('Go to Center (0,0)');
-  centerButton.position(margin, drawHeight + 45);
+  // Row 2: center + top corner buttons
+  centerButton = createButton('Center (0,0)');
+  centerButton.position(margin, drawHeight + 50);
   centerButton.mousePressed(() => {
     targetX = 0;
     targetY = 0;
   });
 
-  // Go to Corner buttons
   cornerTL = createButton('Top-Left (-240,180)');
-  cornerTL.position(margin + 150, drawHeight + 45);
+  cornerTL.position(margin + 130, drawHeight + 50);
   cornerTL.mousePressed(() => { targetX = -240; targetY = 180; });
 
   cornerTR = createButton('Top-Right (240,180)');
-  cornerTR.position(margin + 270, drawHeight + 45);
+  cornerTR.position(margin + 315, drawHeight + 50);
   cornerTR.mousePressed(() => { targetX = 240; targetY = 180; });
 
+  // Row 3: bottom corner buttons
   cornerBL = createButton('Bottom-Left (-240,-180)');
-  cornerBL.position(margin, drawHeight + 75);
+  cornerBL.position(margin, drawHeight + 88);
   cornerBL.mousePressed(() => { targetX = -240; targetY = -180; });
 
   cornerBR = createButton('Bottom-Right (240,-180)');
-  cornerBR.position(margin + 200, drawHeight + 75);
+  cornerBR.position(margin + 215, drawHeight + 88);
   cornerBR.mousePressed(() => { targetX = 240; targetY = -180; });
 }
 
@@ -285,12 +283,12 @@ function drawCoordinateDisplay() {
 }
 
 function drawControlLabels() {
+  // Single-line hint inside the draw area, right-aligned to avoid the coordinate readout on the left
   fill('#666');
   noStroke();
-  textSize(12);
-  textAlign(LEFT, TOP);
-  text('Click anywhere on stage to move sprite. Use buttons to jump to corners.', margin, drawHeight + 5);
-  text('X: -240 (left) to 240 (right)  |  Y: 180 (top) to -180 (bottom)', margin, drawHeight + 20);
+  textSize(11);
+  textAlign(RIGHT, BOTTOM);
+  text('Click the stage to move the sprite', canvasWidth - margin, drawHeight - 10);
 }
 
 function windowResized() {
@@ -303,14 +301,14 @@ function updateCanvasSize() {
   if (container) {
     canvasWidth = container.offsetWidth;
     if (typeof showGridCheckbox !== 'undefined') {
-      showGridCheckbox.position(margin, drawHeight + 10);
-      showLabelsCheckbox.position(margin + 150, drawHeight + 10);
-      showQuadrantsCheckbox.position(margin + 300, drawHeight + 10);
-      centerButton.position(margin, drawHeight + 45);
-      cornerTL.position(margin + 150, drawHeight + 45);
-      cornerTR.position(margin + 270, drawHeight + 45);
-      cornerBL.position(margin, drawHeight + 75);
-      cornerBR.position(margin + 200, drawHeight + 75);
+      showGridCheckbox.position(margin, drawHeight + 12);
+      showLabelsCheckbox.position(margin + 130, drawHeight + 12);
+      showQuadrantsCheckbox.position(margin + 300, drawHeight + 12);
+      centerButton.position(margin, drawHeight + 50);
+      cornerTL.position(margin + 130, drawHeight + 50);
+      cornerTR.position(margin + 315, drawHeight + 50);
+      cornerBL.position(margin, drawHeight + 88);
+      cornerBR.position(margin + 215, drawHeight + 88);
     }
   }
 }

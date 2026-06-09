@@ -122,7 +122,7 @@ The stage has **edges** — sprites can't go past them (unless you write code to
 
 #### Diagram: Stage Layout and Boundaries
 
-<iframe src="../../sims/stage-layout/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/stage-layout/main.html" width="100%" height="505px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Stage Layout and Boundaries</summary>
@@ -231,7 +231,7 @@ A position is written as **(x, y)** — always **X first, then Y**!
 
 #### Diagram: Interactive Coordinate Explorer
 
-<iframe src="../../sims/coordinate-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/coordinate-explorer/main.html" width="100%" height="555px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Interactive Coordinate Explorer</summary>
@@ -343,7 +343,7 @@ Now for the fun part — **making things move!** The **Motion category** (🔵 b
 
 #### Diagram: Motion Blocks Visual Guide
 
-<iframe src="../../sims/motion-blocks-guide/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/motion-blocks-guide/main.html" width="100%" height="665px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Motion Blocks Visual Guide</summary>

@@ -126,7 +126,7 @@ broadcast [phase3-go v]
 
 #### Diagram: Broadcast Flow
 
-<iframe src="../../sims/broadcast-flow/main.html" width="100%" height="450px" scrolling="no"></iframe>
+<iframe src="../../sims/broadcast-flow/main.html" width="100%" height="545px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Broadcast Flow</summary>
