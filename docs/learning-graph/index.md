@@ -1,5 +1,9 @@
 # Learning Graph for Scratch Programming for Kids
 
+[Open Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
+
+<iframe src="../sims/graph-viewer/main.html" width="100%" height="600px" frameborder="0"></iframe>
+
 This section contains the learning graph for this textbook. A learning graph is
 a graph of concepts used in this textbook. Each concept is represented by a
 node in a network graph. Concepts are connected by directed edges that indicate
@@ -97,7 +101,9 @@ over 30% of our concepts.
 ### Interactive Graph Viewer
 
 The learning graph can be explored interactively using the vis-network.js viewer.
-After installing the graph viewer via the `book-installer` skill (option 23),
-you can navigate to the MicroSims section to view the interactive graph.
 
-*(Graph viewer will be available after running the book-installer skill with option 23)*
+[Open Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
+
+<iframe src="../sims/graph-viewer/main.html" width="100%" height="600px" frameborder="0"></iframe>
+
+The graph viewer is installed and ready to use!
