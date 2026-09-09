@@ -1,6 +1,6 @@
 ---
-title: Block Shape Flow
-description: Interactive p5.js MicroSim for block shape flow.
+title: "Block Shape Flow"
+description: "Interactive p5.js MicroSim for block shape flow."
 image: /sims/block-shape-flow/block-shape-flow.png
 og:image: /sims/block-shape-flow/block-shape-flow.png
 twitter:image: /sims/block-shape-flow/block-shape-flow.png

@@ -1,6 +1,6 @@
 ---
-title: Stage Layout and Boundaries
-description: Interactive p5.js MicroSim for stage layout and boundaries.
+title: "Stage Layout and Boundaries"
+description: "Interactive p5.js MicroSim for stage layout and boundaries."
 image: /sims/stage-layout/stage-layout.png
 og:image: /sims/stage-layout/stage-layout.png
 twitter:image: /sims/stage-layout/stage-layout.png

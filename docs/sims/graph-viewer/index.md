@@ -1,6 +1,6 @@
 ---
-title: Learning Graph Viewer
-description: Interactive learning graph viewer that lets users explore all concepts in the course and how they are related. Used by AI to recommend personalized learning paths.
+title: "Learning Graph Viewer"
+description: "Interactive learning graph viewer that lets users explore all concepts in the course and how they are related. Used by AI to recommend personalized learning paths."
 hide:
    toc
 ---

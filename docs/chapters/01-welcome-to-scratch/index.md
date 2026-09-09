@@ -414,6 +414,14 @@ Now experiment! Try changing your script:
 
 <iframe src="../../sims/script-anatomy/main.html" width="100%" height="415px" scrolling="no"></iframe>
 
+<div class="scratch">
+when green flag clicked
+move (10) steps
+turn right (15) degrees
+say [Hello!] for (2) seconds
+wait (1) seconds
+</div>
+
 <details markdown="1">
 <summary>Script Anatomy</summary>
 Type: diagram

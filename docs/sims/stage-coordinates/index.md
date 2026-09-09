@@ -1,6 +1,6 @@
 ---
-title: Stage Coordinate System
-description: Interactive p5.js MicroSim for stage coordinate system.
+title: "Stage Coordinate System"
+description: "Interactive p5.js MicroSim for stage coordinate system."
 image: /sims/stage-coordinates/stage-coordinates.png
 og:image: /sims/stage-coordinates/stage-coordinates.png
 twitter:image: /sims/stage-coordinates/stage-coordinates.png

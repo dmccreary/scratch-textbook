@@ -1,6 +1,6 @@
 ---
-title: Interactive Coordinate Explorer
-description: Interactive p5.js MicroSim for interactive coordinate explorer.
+title: "Interactive Coordinate Explorer"
+description: "Interactive p5.js MicroSim for interactive coordinate explorer."
 image: /sims/coordinate-explorer/coordinate-explorer.png
 og:image: /sims/coordinate-explorer/coordinate-explorer.png
 twitter:image: /sims/coordinate-explorer/coordinate-explorer.png

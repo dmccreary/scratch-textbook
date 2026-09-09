@@ -58,12 +58,26 @@ nav:
       - Graph Quality Analysis: learning-graph/quality-metrics.md
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Test Page: learning-graph/mascot-test.md
+      - Scratchblocks Test Page: learning-graph/scratchblocks-test.md
       - FAQ Quality Report: learning-graph/faq-quality-report.md
       - FAQ Coverage Gaps: learning-graph/faq-coverage-gaps.md
 
   - MicroSims:
       - List of MicroSims: sims/index.md
+      - Block Categories: sims/block-categories/index.md
+      - Block Shape Flow: sims/block-shape-flow/index.md
+      - Block Shapes: sims/block-shapes/index.md
+      - Broadcast Flow: sims/broadcast-flow/index.md
+      - Coordinate Reporters in Action: sims/coordinate-reporters/index.md
+      - Interactive Coordinate Explorer: sims/coordinate-explorer/index.md
       - Learning Graph Viewer: sims/graph-viewer/index.md
+      - Loop Comparison: sims/loop-comparison/index.md
+      - Motion Blocks Visual Guide: sims/motion-blocks-guide/index.md
+      - Scratch Editor Overview: sims/editor-overview/index.md
+      - Script Anatomy: sims/script-anatomy/index.md
+      - Stage Coordinate System: sims/stage-coordinates/index.md
+      - Stage Layout and Boundaries: sims/stage-layout/index.md
+      - Three Tabs Explained: sims/three-tabs/index.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
@@ -75,7 +89,7 @@ theme:
   name: material
   # Once a logo is generated, point this at docs/img/logo.png or a mascot pose:
   # logo: img/logo.png
-  # favicon: img/favicon.ico
+  favicon: img/favicon.ico
   palette:
     primary: 'orange'
     accent: 'deep-orange'
@@ -138,10 +152,14 @@ markdown_extensions:
 extra_css:
   - css/extra.css
   - css/mascot.css
+  - css/scratchblocks.css
 
-# Custom JavaScript — uncomment once a corresponding file exists
-# extra_javascript:
-#   - js/extra.js
+# Custom JavaScript.
+# Pin the scratchblocks version — @latest will eventually ship a change
+# that breaks every diagram in the book at once.
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js
+  - js/scratchblocks-init.js
 
 # Exclude prompt scratch files and TODOs from build/search/sitemap
 exclude_docs: |

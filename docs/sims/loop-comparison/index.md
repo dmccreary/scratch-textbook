@@ -1,6 +1,6 @@
 ---
-title: Loop Comparison
-description: Interactive p5.js MicroSim for loop comparison.
+title: "Loop Comparison"
+description: "Interactive p5.js MicroSim for loop comparison."
 image: /sims/loop-comparison/loop-comparison.png
 og:image: /sims/loop-comparison/loop-comparison.png
 twitter:image: /sims/loop-comparison/loop-comparison.png

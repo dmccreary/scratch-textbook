@@ -1,6 +1,6 @@
 ---
-title: Coordinate Reporters in Action
-description: Interactive p5.js MicroSim for coordinate reporters in action.
+title: "Coordinate Reporters in Action"
+description: "Interactive p5.js MicroSim for coordinate reporters in action."
 image: /sims/coordinate-reporters/coordinate-reporters.png
 og:image: /sims/coordinate-reporters/coordinate-reporters.png
 twitter:image: /sims/coordinate-reporters/coordinate-reporters.png

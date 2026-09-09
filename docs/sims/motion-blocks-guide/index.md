@@ -1,6 +1,6 @@
 ---
-title: Motion Blocks Visual Guide
-description: Interactive p5.js MicroSim for motion blocks visual guide.
+title: "Motion Blocks Visual Guide"
+description: "Interactive p5.js MicroSim for motion blocks visual guide."
 image: /sims/motion-blocks-guide/motion-blocks-guide.png
 og:image: /sims/motion-blocks-guide/motion-blocks-guide.png
 twitter:image: /sims/motion-blocks-guide/motion-blocks-guide.png

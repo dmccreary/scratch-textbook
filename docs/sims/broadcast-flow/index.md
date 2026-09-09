@@ -1,6 +1,6 @@
 ---
-title: Broadcast Flow
-description: Interactive p5.js MicroSim for broadcast flow.
+title: "Broadcast Flow"
+description: "Interactive p5.js MicroSim for broadcast flow."
 image: /sims/broadcast-flow/broadcast-flow.png
 og:image: /sims/broadcast-flow/broadcast-flow.png
 twitter:image: /sims/broadcast-flow/broadcast-flow.png

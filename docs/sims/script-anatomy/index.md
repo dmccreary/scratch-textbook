@@ -1,6 +1,6 @@
 ---
-title: Script Anatomy
-description: Interactive p5.js MicroSim for script anatomy.
+title: "Script Anatomy"
+description: "Interactive p5.js MicroSim for script anatomy."
 image: /sims/script-anatomy/script-anatomy.png
 og:image: /sims/script-anatomy/script-anatomy.png
 twitter:image: /sims/script-anatomy/script-anatomy.png

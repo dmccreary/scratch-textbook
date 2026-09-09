@@ -1,6 +1,6 @@
 ---
-title: Three Tabs Explained
-description: Interactive p5.js MicroSim for three tabs explained.
+title: "Three Tabs Explained"
+description: "Interactive p5.js MicroSim for three tabs explained."
 image: /sims/three-tabs/three-tabs.png
 og:image: /sims/three-tabs/three-tabs.png
 twitter:image: /sims/three-tabs/three-tabs.png

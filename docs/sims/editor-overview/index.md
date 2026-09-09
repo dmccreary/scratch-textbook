@@ -1,6 +1,6 @@
 ---
-title: Scratch Editor Overview
-description: Interactive p5.js MicroSim for scratch editor overview.
+title: "Scratch Editor Overview"
+description: "Interactive p5.js MicroSim for scratch editor overview."
 image: /sims/editor-overview/editor-overview.png
 og:image: /sims/editor-overview/editor-overview.png
 twitter:image: /sims/editor-overview/editor-overview.png

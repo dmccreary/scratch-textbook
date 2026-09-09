@@ -1,6 +1,6 @@
 ---
-title: Block Shapes
-description: Interactive p5.js MicroSim for block shapes.
+title: "Block Shapes"
+description: "Interactive p5.js MicroSim for block shapes."
 image: /sims/block-shapes/block-shapes.png
 og:image: /sims/block-shapes/block-shapes.png
 twitter:image: /sims/block-shapes/block-shapes.png

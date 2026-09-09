@@ -1,0 +1,20 @@
+/* Presentation for rendered Scratch block diagrams embedded via
+   <div class="scratch">...</div>. */
+
+/* Before scratchblocks.js runs, a div.scratch holds raw scratchblocks
+   source text. Preserve line breaks so it doesn't flash as a single
+   run-on line, and keep it from looking like a styled code block. */
+div.scratch {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.4rem 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: var(--md-code-font, monospace);
+}
+
+div.scratch .scratchblocks svg {
+  max-width: 100%;
+  height: auto;
+}

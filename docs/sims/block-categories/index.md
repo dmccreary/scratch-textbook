@@ -1,6 +1,6 @@
 ---
-title: Block Categories
-description: Interactive p5.js MicroSim for block categories.
+title: "Block Categories"
+description: "Interactive p5.js MicroSim for block categories."
 image: /sims/block-categories/block-categories.png
 og:image: /sims/block-categories/block-categories.png
 twitter:image: /sims/block-categories/block-categories.png
