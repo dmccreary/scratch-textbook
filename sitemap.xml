@@ -2,158 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/about/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/contact/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/course-description/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://arunbatchu.github.io/scratch-textbook/glossary/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/license/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/01-welcome-to-scratch/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/02-sprites-stage-coordinates/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/03-motion-blocks-categories/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/04-events-sequences-first-scripts/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/05-sounds-extensions-sharing/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/06-broadcasting-conditionals-sensing/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/07-variables-lists-data/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/08-animation-parallelism-debugging/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/09-advanced-control-operators/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/10-game-mechanics-win-lose/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/chapters/11-design-process-capstone/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://arunbatchu.github.io/scratch-textbook/img/mascot/character-sheet/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/concept-list/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/glossary-quality-report/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/learning-graph-generator-v0.05-2026-06-09/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/mascot-test/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/block-categories/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/block-shape-flow/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/block-shapes/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/broadcast-flow/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/coordinate-explorer/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/coordinate-reporters/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/editor-overview/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/graph-viewer/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/loop-comparison/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/motion-blocks-guide/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/script-anatomy/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/stage-coordinates/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/stage-layout/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://arunbatchu.github.io/scratch-textbook/sims/three-tabs/</loc>
-         <lastmod>2026-06-09</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
 </urlset>
