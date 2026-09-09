@@ -4,23 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Block Shapes using p5.js</title>
+    <title>Block Shapes using scratchblocks.js</title>
     <style>
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #ffffff; }
         button { font-family: inherit; font-size: 13px; padding: 4px 12px; border: 1px solid #d0d4dc; border-radius: 14px; background: linear-gradient(#ffffff, #f1f3f7); color: #333; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
         button:hover { background: #ffe3bd; border-color: #e8a33d; }
-        input[type="text"] { font-family: inherit; font-size: 13px; padding: 4px 8px; border: 1px solid #d0d4dc; border-radius: 6px; }
-        select { font-family: inherit; font-size: 13px; padding: 3px 6px; border: 1px solid #d0d4dc; border-radius: 6px; background: #fff; }
-        label { font-size: 13px; color: #333; }
-        input[type="checkbox"], input[type="range"] { accent-color: #e8871e; }
         .back-link { display: inline-block; margin: 10px 12px; font-size: 13px; color: #e8871e; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
+
+        /* --- Diagram --- */
+        #diagram-wrap { box-sizing: border-box; padding: 12px 16px 8px; background: aliceblue; border: 1px solid silver; }
+        .title { text-align: center; font-size: 18px; font-weight: 600; margin: 0 0 2px; color: #111; }
+        .subtitle { text-align: center; font-size: 11px; color: #666; margin: 0 0 10px; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 16px;
+            max-width: 760px;
+            margin: 4px auto 10px;
+        }
+
+        .shape-card {
+            position: relative;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px 12px 12px;
+            cursor: pointer;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .shape-card:hover,
+        .shape-card.active,
+        .shape-card:focus-visible {
+            border-color: #ff9800;
+            box-shadow: 0 0 8px rgba(255, 152, 0, 0.35);
+            outline: none;
+        }
+
+        .shape-name { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 2px; }
+        .shape-desc { font-size: 11px; color: #666; margin-bottom: 8px; min-height: 28px; }
+
+        .preview .scratch { line-height: 0; }
+        .default-preview { display: flex; }
+        .examples-preview { display: none; flex-direction: column; gap: 6px; }
+        .shape-card.active .default-preview { display: none; }
+        .shape-card.active .examples-preview { display: flex; }
+
+        .examples-hint { font-size: 9px; color: #999; margin-top: 6px; }
+
+        .info-line { min-height: 16px; text-align: center; font-size: 11px; color: #666; margin-top: 2px; }
+
+        .controls-row { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 8px 0 2px; }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
-    <script src="block-shapes.js"></script>
+    <link rel="stylesheet" href="../../css/scratchblocks.css">
+    <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+    <script src="../../js/scratchblocks-init.js"></script>
 </head>
 <body>
-    <main></main>
+<main>
+    <div id="diagram-wrap">
+        <div class="title">Scratch Block Shapes</div>
+        <div class="subtitle">Each shape has a specific job. Blocks only fit where their shape allows.</div>
+
+        <div class="gallery" id="gallery">
+            <div class="shape-card" data-id="hat" data-desc="Starts a script when an event happens.">
+                <div class="shape-name">Hat Block</div>
+                <div class="shape-desc">Starts a script when an event happens</div>
+                <div class="preview default-preview">
+                    <div class="scratch">when green flag clicked</div>
+                </div>
+                <div class="preview examples-preview">
+                    <div class="scratch">when green flag clicked</div>
+                    <div class="scratch">when this sprite clicked</div>
+                    <div class="scratch">when I receive [message1 v]</div>
+                </div>
+                <div class="examples-hint">Hover or tap for more examples</div>
+            </div>
+
+            <div class="shape-card" data-id="stack" data-desc="Does an action, then passes control to the next block.">
+                <div class="shape-name">Stack Block</div>
+                <div class="shape-desc">Does an action, then passes to next block</div>
+                <div class="preview default-preview">
+                    <div class="scratch">move (10) steps</div>
+                </div>
+                <div class="preview examples-preview">
+                    <div class="scratch">move (10) steps</div>
+                    <div class="scratch">say [Hello!]</div>
+                    <div class="scratch">play sound [pop v] until done</div>
+                </div>
+                <div class="examples-hint">Hover or tap for more examples</div>
+            </div>
+
+            <div class="shape-card" data-id="reporter" data-desc="Gives a value (number or text) to other blocks.">
+                <div class="shape-name">Reporter Block</div>
+                <div class="shape-desc">Gives a value (number or text) to other blocks</div>
+                <div class="preview default-preview">
+                    <div class="scratch">x position</div>
+                </div>
+                <div class="preview examples-preview">
+                    <div class="scratch">x position</div>
+                    <div class="scratch">pick random (1) to (10)</div>
+                    <div class="scratch">timer</div>
+                </div>
+                <div class="examples-hint">Hover or tap for more examples</div>
+            </div>
+
+            <div class="shape-card" data-id="boolean" data-desc="Answers true/false &mdash; fits only in hexagonal slots.">
+                <div class="shape-name">Boolean Block</div>
+                <div class="shape-desc">Answers true/false &mdash; fits in hexagonal holes</div>
+                <div class="preview default-preview">
+                    <div class="scratch">touching [mouse-pointer v]?</div>
+                </div>
+                <div class="preview examples-preview">
+                    <div class="scratch">touching [mouse-pointer v]?</div>
+                    <div class="scratch">(5) > (3)</div>
+                    <div class="scratch">key (space v) pressed?</div>
+                </div>
+                <div class="examples-hint">Hover or tap for more examples</div>
+            </div>
+
+            <div class="shape-card" data-id="cap" data-desc="Ends a script &mdash; nothing can connect below it.">
+                <div class="shape-name">Cap Block</div>
+                <div class="shape-desc">Ends a script &mdash; nothing goes below it</div>
+                <div class="preview default-preview">
+                    <div class="scratch">stop [all v]</div>
+                </div>
+                <div class="preview examples-preview">
+                    <div class="scratch">stop [all v]</div>
+                    <div class="scratch">stop [this script v]</div>
+                </div>
+                <div class="examples-hint">Hover or tap for more examples</div>
+            </div>
+        </div>
+
+        <div class="info-line" id="info-line">Hover or tap a card to see more example blocks with that shape.</div>
+
+        <div class="controls-row">
+            <button id="reset-button" type="button">Reset</button>
+        </div>
+    </div>
     <a class="back-link" href=".">← Back to Lesson Plan</a>
+</main>
+<script src="block-shapes.js"></script>
 </body>
 </html>

@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +21,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
@@ -49,8 +46,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,13 +56,25 @@
     
       <link rel="stylesheet" href="../../css/mascot.css">
     
+      <link rel="stylesheet" href="../../css/scratchblocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -100,13 +109,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -134,29 +142,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -164,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -182,7 +190,7 @@
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -206,7 +214,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -217,8 +225,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Scratch Programming for Kids
@@ -228,7 +235,7 @@
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -236,7 +243,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -366,7 +373,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -403,7 +410,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -611,7 +618,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -2172,6 +2179,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2228,6 +2241,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2265,6 +2304,33 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2358,7 +2424,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2374,7 +2440,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -3772,7 +3838,7 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
         
@@ -3821,16 +3887,16 @@
   
     <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/06-broadcasting-conditionals-sensing/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="broadcasting-conditionals-and-sensing">Broadcasting, Conditionals, and Sensing<a class="headerlink" href="#broadcasting-conditionals-and-sensing" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="broadcasting-conditionals-and-sensing">Broadcasting, Conditionals, and Sensing<a class="headerlink" href="#broadcasting-conditionals-and-sensing" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Introduces sprite communication via broadcasts, if/else conditionals, and sensor-based interactions. This chapter covers 20 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 20 concepts from the learning graph:</p>
 <ol>
 <li>Go To Position</li>
@@ -3854,7 +3920,7 @@
 <li>Boolean Introduction</li>
 <li>Less Than Operator</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../01-welcome-to-scratch/">1. Welcome to Scratch</a></li>
@@ -3863,11 +3929,11 @@
 <li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
 <li><a href="../05-sounds-extensions-sharing/">5. Sounds, Extensions, and Sharing Projects</a></li>
 </ul>
-<hr />
-<h2 id="broadcast-messages-sprites-talking-to-each-other">Broadcast Messages — Sprites Talking to Each Other!<a class="headerlink" href="#broadcast-messages-sprites-talking-to-each-other" title="Permanent link">&para;</a></h2>
-<h3 id="what-are-broadcasts">What Are Broadcasts?<a class="headerlink" href="#what-are-broadcasts" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="broadcast-messages-sprites-talking-to-each-other">Broadcast Messages — Sprites Talking to Each Other!<a class="headerlink" href="#broadcast-messages-sprites-talking-to-each-other" title="Permanent link">¶</a></h2>
+<h3 id="what-are-broadcasts">What Are Broadcasts?<a class="headerlink" href="#what-are-broadcasts" title="Permanent link">¶</a></h3>
 <p><strong>Broadcasts</strong> are messages that one sprite sends and <strong>all other sprites can hear</strong>. Think of it like a school announcement over the PA system — everyone hears it at the same time!</p>
-<h3 id="broadcast-blocks">Broadcast Blocks<a class="headerlink" href="#broadcast-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="broadcast-blocks">Broadcast Blocks<a class="headerlink" href="#broadcast-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3890,28 +3956,28 @@
 </tr>
 </tbody>
 </table>
-<h3 id="creating-a-broadcast-message">Creating a Broadcast Message<a class="headerlink" href="#creating-a-broadcast-message" title="Permanent link">&para;</a></h3>
+<h3 id="creating-a-broadcast-message">Creating a Broadcast Message<a class="headerlink" href="#creating-a-broadcast-message" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click the <strong>broadcast block</strong> dropdown</li>
 <li>Click <strong>New message</strong></li>
 <li>Type a name: <code>game-start</code>, <code>level-complete</code>, <code>player-hit</code>, <code>coin-collected</code></li>
 <li>Click <strong>OK</strong></li>
 </ol>
-<hr />
-<h3 id="sending-a-broadcast">Sending a Broadcast<a class="headerlink" href="#sending-a-broadcast" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="sending-a-broadcast">Sending a Broadcast<a class="headerlink" href="#sending-a-broadcast" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>when green flag clicked
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>broadcast [game-start v] and wait
 </span></code></pre></div>
 <p><strong>Sends the message to ALL sprites</strong> (including the stage!).</p>
-<hr />
-<h3 id="receiving-a-broadcast">Receiving a Broadcast<a class="headerlink" href="#receiving-a-broadcast" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="receiving-a-broadcast">Receiving a Broadcast<a class="headerlink" href="#receiving-a-broadcast" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>when I receive [game-start v]
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>go to x: -200 y: -100
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>show
 </span></code></pre></div>
 <p><strong>Every sprite that has this hat block runs</strong> when the message is sent.</p>
-<hr />
-<h3 id="broadcast-and-wait-synchronized-start">Broadcast and Wait — Synchronized Start<a class="headerlink" href="#broadcast-and-wait-synchronized-start" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="broadcast-and-wait-synchronized-start">Broadcast and Wait — Synchronized Start<a class="headerlink" href="#broadcast-and-wait-synchronized-start" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>when green flag clicked
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>broadcast [reset-all v] and wait
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>broadcast [spawn-player v] and wait
@@ -3919,8 +3985,8 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>broadcast [start-game v]
 </span></code></pre></div>
 <p><strong>Pauses this script until ALL sprites finish their <code>when I receive</code> scripts.</strong> Perfect for coordinated level starts!</p>
-<hr />
-<h3 id="broadcast-chains-step-by-step-coordination">Broadcast Chains — Step-by-Step Coordination<a class="headerlink" href="#broadcast-chains-step-by-step-coordination" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="broadcast-chains-step-by-step-coordination">Broadcast Chains — Step-by-Step Coordination<a class="headerlink" href="#broadcast-chains-step-by-step-coordination" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when green flag clicked
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>broadcast [phase1-setup v] and wait
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>wait 1 secs
@@ -3929,15 +3995,15 @@
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>broadcast [phase3-go v]
 </span></code></pre></div>
 <p><strong>Each phase completes before the next begins</strong> — great for cutscenes, level loading, tutorials!</p>
-<hr />
-<h4 id="diagram-broadcast-flow">Diagram: Broadcast Flow<a class="headerlink" href="#diagram-broadcast-flow" title="Permanent link">&para;</a></h4>
+<hr>
+<h4 id="diagram-broadcast-flow">Diagram: Broadcast Flow<a class="headerlink" href="#diagram-broadcast-flow" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/broadcast-flow/main.html" width="100%" height="545px" scrolling="no"></iframe>
 
 <details>
 <summary>Broadcast Flow</summary>
 <p>Type: diagram
-<strong>sim-id:</strong> broadcast-flow<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> broadcast-flow<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Visualize how broadcasts coordinate multiple sprites</p>
 <p>Components to show:
@@ -3956,10 +4022,10 @@
 - "Broadcast waits for ALL to finish"</p>
 <p>Color scheme: Events yellow for broadcast, sprite-specific colors for receivers</p>
 </details>
-<hr />
-<h2 id="when-i-receive-the-listening-hat">When I Receive — The Listening Hat<a class="headerlink" href="#when-i-receive-the-listening-hat" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="when-i-receive-the-listening-hat">When I Receive — The Listening Hat<a class="headerlink" href="#when-i-receive-the-listening-hat" title="Permanent link">¶</a></h2>
 <p><code>when I receive [message v]</code> is a <strong>hat block</strong> that starts a script when a specific broadcast is received.</p>
-<h3 id="multiple-scripts-can-listen-to-same-message">Multiple Scripts Can Listen to Same Message<a class="headerlink" href="#multiple-scripts-can-listen-to-same-message" title="Permanent link">&para;</a></h3>
+<h3 id="multiple-scripts-can-listen-to-same-message">Multiple Scripts Can Listen to Same Message<a class="headerlink" href="#multiple-scripts-can-listen-to-same-message" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when I receive [game-start v]
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>go to x: -200 y: -100
 </span></code></pre></div>
@@ -3968,8 +4034,8 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>show variable [score]
 </span></code></pre></div>
 <p><strong>Both run at the same time</strong> when <code>game-start</code> is broadcast!</p>
-<hr />
-<h3 id="naming-broadcast-messages">Naming Broadcast Messages<a class="headerlink" href="#naming-broadcast-messages" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="naming-broadcast-messages">Naming Broadcast Messages<a class="headerlink" href="#naming-broadcast-messages" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4001,9 +4067,9 @@
 </tbody>
 </table>
 <p><strong>Use descriptive names</strong> — you'll thank yourself later!</p>
-<hr />
-<h2 id="sprite-communication-working-together">Sprite Communication — Working Together<a class="headerlink" href="#sprite-communication-working-together" title="Permanent link">&para;</a></h2>
-<h3 id="direct-commands-vs-broadcasts">Direct Commands vs. Broadcasts<a class="headerlink" href="#direct-commands-vs-broadcasts" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="sprite-communication-working-together">Sprite Communication — Working Together<a class="headerlink" href="#sprite-communication-working-together" title="Permanent link">¶</a></h2>
+<h3 id="direct-commands-vs-broadcasts">Direct Commands vs. Broadcasts<a class="headerlink" href="#direct-commands-vs-broadcasts" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4026,8 +4092,8 @@
 </tbody>
 </table>
 <p><strong>Broadcasts are better for games</strong> — sprites don't need to know about each other!</p>
-<hr />
-<h3 id="common-communication-patterns">Common Communication Patterns<a class="headerlink" href="#common-communication-patterns" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="common-communication-patterns">Common Communication Patterns<a class="headerlink" href="#common-communication-patterns" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4064,9 +4130,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="if-else-block-two-paths">If Else Block — Two Paths!<a class="headerlink" href="#if-else-block-two-paths" title="Permanent link">&para;</a></h2>
-<h3 id="if-vs-if-else">If vs. If-Else<a class="headerlink" href="#if-vs-if-else" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="if-else-block-two-paths">If Else Block — Two Paths!<a class="headerlink" href="#if-else-block-two-paths" title="Permanent link">¶</a></h2>
+<h3 id="if-vs-if-else">If vs. If-Else<a class="headerlink" href="#if-vs-if-else" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4085,22 +4151,22 @@
 </tr>
 </tbody>
 </table>
-<h3 id="if-else-structure">If-Else Structure<a class="headerlink" href="#if-else-structure" title="Permanent link">&para;</a></h3>
+<h3 id="if-else-structure">If-Else Structure<a class="headerlink" href="#if-else-structure" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>if &lt;condition&gt; then
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    // Runs if TRUE
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>else
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    // Runs if FALSE
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>end
 </span></code></pre></div>
-<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
-<h4 id="simple-if-else">Simple If-Else<a class="headerlink" href="#simple-if-else" title="Permanent link">&para;</a></h4>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h3>
+<h4 id="simple-if-else">Simple If-Else<a class="headerlink" href="#simple-if-else" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>if &lt;touching [edge v]?&gt; then
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    turn 180 degrees    // Bounce back
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>else
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    move 5 steps        // Keep moving
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>end
 </span></code></pre></div>
-<h4 id="nested-if-else">Nested If-Else<a class="headerlink" href="#nested-if-else" title="Permanent link">&para;</a></h4>
+<h4 id="nested-if-else">Nested If-Else<a class="headerlink" href="#nested-if-else" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>if &lt;touching [coin v]?&gt; then
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    change score by 10
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    play sound [coin v]
@@ -4112,8 +4178,8 @@
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    end
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>end
 </span></code></pre></div>
-<hr />
-<h3 id="if-else-if-chain-multiple-conditions">If-Else If (Chain) — Multiple Conditions<a class="headerlink" href="#if-else-if-chain-multiple-conditions" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="if-else-if-chain-multiple-conditions">If-Else If (Chain) — Multiple Conditions<a class="headerlink" href="#if-else-if-chain-multiple-conditions" title="Permanent link">¶</a></h3>
 <p>Scratch doesn't have "else if" block, but you can chain:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>if &lt;condition1&gt; then
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    // Do A
@@ -4125,13 +4191,13 @@
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    end
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>end
 </span></code></pre></div>
-<hr />
-<h2 id="distance-to-sensor-how-far-away">Distance To Sensor — How Far Away?<a class="headerlink" href="#distance-to-sensor-how-far-away" title="Permanent link">&para;</a></h2>
-<h3 id="distance-to-block-sensing-light-blue">Distance To Block (Sensing → Light Blue)<a class="headerlink" href="#distance-to-block-sensing-light-blue" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="distance-to-sensor-how-far-away">Distance To Sensor — How Far Away?<a class="headerlink" href="#distance-to-sensor-how-far-away" title="Permanent link">¶</a></h2>
+<h3 id="distance-to-block-sensing-light-blue">Distance To Block (Sensing → Light Blue)<a class="headerlink" href="#distance-to-block-sensing-light-blue" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>distance to [mouse-pointer v]
 </span></code></pre></div>
 <p><strong>Reports the distance</strong> (in pixels) from this sprite to the target.</p>
-<h3 id="targets">Targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h3>
+<h3 id="targets">Targets<a class="headerlink" href="#targets" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4154,8 +4220,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="distance-examples">Distance Examples<a class="headerlink" href="#distance-examples" title="Permanent link">&para;</a></h3>
-<h4 id="follow-at-a-distance">Follow at a Distance<a class="headerlink" href="#follow-at-a-distance" title="Permanent link">&para;</a></h4>
+<h3 id="distance-examples">Distance Examples<a class="headerlink" href="#distance-examples" title="Permanent link">¶</a></h3>
+<h4 id="follow-at-a-distance">Follow at a Distance<a class="headerlink" href="#follow-at-a-distance" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>forever
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    point towards [mouse-pointer v]
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    if &lt;distance to [mouse-pointer v] &gt; 50&gt; then
@@ -4164,7 +4230,7 @@
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>end
 </span></code></pre></div>
 <p><strong>Follows mouse but stops when close!</strong></p>
-<h4 id="proximity-alert">Proximity Alert<a class="headerlink" href="#proximity-alert" title="Permanent link">&para;</a></h4>
+<h4 id="proximity-alert">Proximity Alert<a class="headerlink" href="#proximity-alert" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>forever
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    if &lt;distance to [enemy v] &lt; 50&gt; then
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        broadcast [danger-close v]
@@ -4172,9 +4238,9 @@
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>end
 </span></code></pre></div>
 <p><strong>Warns when enemy gets too close!</strong></p>
-<hr />
-<h2 id="positive-y-and-negative-y-up-and-down">Positive Y and Negative Y — Up and Down!<a class="headerlink" href="#positive-y-and-negative-y-up-and-down" title="Permanent link">&para;</a></h2>
-<h3 id="y-coordinate-review">Y Coordinate Review<a class="headerlink" href="#y-coordinate-review" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="positive-y-and-negative-y-up-and-down">Positive Y and Negative Y — Up and Down!<a class="headerlink" href="#positive-y-and-negative-y-up-and-down" title="Permanent link">¶</a></h2>
+<h3 id="y-coordinate-review">Y Coordinate Review<a class="headerlink" href="#y-coordinate-review" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4201,7 +4267,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="y-coordinate-shortcuts">Y Coordinate Shortcuts<a class="headerlink" href="#y-coordinate-shortcuts" title="Permanent link">&para;</a></h3>
+<h3 id="y-coordinate-shortcuts">Y Coordinate Shortcuts<a class="headerlink" href="#y-coordinate-shortcuts" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4232,7 +4298,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="y-in-code">Y in Code<a class="headerlink" href="#y-in-code" title="Permanent link">&para;</a></h3>
+<h3 id="y-in-code">Y in Code<a class="headerlink" href="#y-in-code" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>when [up arrow] key pressed
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>change y by 10        // Move UP (positive)
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
@@ -4247,7 +4313,7 @@
 </span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    set y to -150     // Stop at bottom
 </span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>end
 </span></code></pre></div>
-<h3 id="jumping-physics-simple">Jumping Physics (Simple)<a class="headerlink" href="#jumping-physics-simple" title="Permanent link">&para;</a></h3>
+<h3 id="jumping-physics-simple">Jumping Physics (Simple)<a class="headerlink" href="#jumping-physics-simple" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>when [space] key pressed
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>repeat 10
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    change y by 10    // Go up
@@ -4259,14 +4325,14 @@
 </span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>end
 </span></code></pre></div>
 <p><strong>Creates a smooth arc jump!</strong></p>
-<hr />
-<h2 id="backdrop-switch-event-scene-changes">Backdrop Switch Event — Scene Changes!<a class="headerlink" href="#backdrop-switch-event-scene-changes" title="Permanent link">&para;</a></h2>
-<h3 id="backdrop-switch-block">Backdrop Switch Block<a class="headerlink" href="#backdrop-switch-block" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="backdrop-switch-event-scene-changes">Backdrop Switch Event — Scene Changes!<a class="headerlink" href="#backdrop-switch-event-scene-changes" title="Permanent link">¶</a></h2>
+<h3 id="backdrop-switch-block">Backdrop Switch Block<a class="headerlink" href="#backdrop-switch-block" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>when backdrop switches to [level2 v]
 </span></code></pre></div>
 <p><strong>Runs when the stage backdrop changes</strong> to the specified one.</p>
-<hr />
-<h3 id="changing-backdrops">Changing Backdrops<a class="headerlink" href="#changing-backdrops" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="changing-backdrops">Changing Backdrops<a class="headerlink" href="#changing-backdrops" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4285,21 +4351,21 @@
 </tr>
 </tbody>
 </table>
-<h3 id="backdrop-switch-examples">Backdrop Switch Examples<a class="headerlink" href="#backdrop-switch-examples" title="Permanent link">&para;</a></h3>
-<h4 id="level-transition">Level Transition<a class="headerlink" href="#level-transition" title="Permanent link">&para;</a></h4>
+<h3 id="backdrop-switch-examples">Backdrop Switch Examples<a class="headerlink" href="#backdrop-switch-examples" title="Permanent link">¶</a></h3>
+<h4 id="level-transition">Level Transition<a class="headerlink" href="#level-transition" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>when I receive [level-complete v]
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>switch backdrop to [level2 v]
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>broadcast [level2-start v]
 </span></code></pre></div>
-<h4 id="scene-transition-in-story">Scene Transition in Story<a class="headerlink" href="#scene-transition-in-story" title="Permanent link">&para;</a></h4>
+<h4 id="scene-transition-in-story">Scene Transition in Story<a class="headerlink" href="#scene-transition-in-story" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>when I receive [scene-2 v]
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>switch backdrop to [forest v]
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>play sound [forest-ambience v]
 </span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>broadcast [scene-2-ready v]
 </span></code></pre></div>
-<hr />
-<h3 id="backdrop-switch-event-examples">Backdrop Switch Event Examples<a class="headerlink" href="#backdrop-switch-event-examples" title="Permanent link">&para;</a></h3>
-<h4 id="level-specific-setup">Level-Specific Setup<a class="headerlink" href="#level-specific-setup" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="backdrop-switch-event-examples">Backdrop Switch Event Examples<a class="headerlink" href="#backdrop-switch-event-examples" title="Permanent link">¶</a></h3>
+<h4 id="level-specific-setup">Level-Specific Setup<a class="headerlink" href="#level-specific-setup" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>when backdrop switches to [level1 v]
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>broadcast [spawn-level1-enemies v]
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
@@ -4309,7 +4375,7 @@
 </span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>when backdrop switches to [boss-level v]
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>broadcast [spawn-boss v]
 </span></code></pre></div>
-<h4 id="ui-updates">UI Updates<a class="headerlink" href="#ui-updates" title="Permanent link">&para;</a></h4>
+<h4 id="ui-updates">UI Updates<a class="headerlink" href="#ui-updates" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>when backdrop switches to [menu v]
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>show variable [high-score]
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>hide variable [score]
@@ -4318,14 +4384,14 @@
 </span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>show variable [score]
 </span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>show variable [lives]
 </span></code></pre></div>
-<hr />
-<h2 id="next-backdrop-cycle-through-scenes">Next Backdrop — Cycle Through Scenes<a class="headerlink" href="#next-backdrop-cycle-through-scenes" title="Permanent link">&para;</a></h2>
-<h3 id="next-backdrop-block">Next Backdrop Block<a class="headerlink" href="#next-backdrop-block" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="next-backdrop-cycle-through-scenes">Next Backdrop — Cycle Through Scenes<a class="headerlink" href="#next-backdrop-cycle-through-scenes" title="Permanent link">¶</a></h2>
+<h3 id="next-backdrop-block">Next Backdrop Block<a class="headerlink" href="#next-backdrop-block" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>next backdrop
 </span></code></pre></div>
 <p><strong>Switches to the next backdrop</strong> in the stage's backdrop list (loops back to first).</p>
-<hr />
-<h3 id="uses-for-next-backdrop">Uses for Next Backdrop<a class="headerlink" href="#uses-for-next-backdrop" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="uses-for-next-backdrop">Uses for Next Backdrop<a class="headerlink" href="#uses-for-next-backdrop" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4348,9 +4414,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="script-reading-order-top-to-bottom">Script Reading Order — Top to Bottom!<a class="headerlink" href="#script-reading-order-top-to-bottom" title="Permanent link">&para;</a></h2>
-<h3 id="the-golden-rule">The Golden Rule<a class="headerlink" href="#the-golden-rule" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="script-reading-order-top-to-bottom">Script Reading Order — Top to Bottom!<a class="headerlink" href="#script-reading-order-top-to-bottom" title="Permanent link">¶</a></h2>
+<h3 id="the-golden-rule">The Golden Rule<a class="headerlink" href="#the-golden-rule" title="Permanent link">¶</a></h3>
 <p><strong>Scratch ALWAYS reads blocks from TOP to BOTTOM</strong> in a script stack.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>when green flag clicked        ← 1. FIRST
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>say [Hello!] for 2 secs        ← 2. SECOND
@@ -4358,7 +4424,7 @@
 </span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>move 100 steps                 ← 4. FOURTH
 </span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>turn 90 degrees                ← 5. FIFTH
 </span></code></pre></div>
-<h3 id="why-order-matters">Why Order Matters<a class="headerlink" href="#why-order-matters" title="Permanent link">&para;</a></h3>
+<h3 id="why-order-matters">Why Order Matters<a class="headerlink" href="#why-order-matters" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4377,7 +4443,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parallel-scripts-same-time">Parallel Scripts — Same Time!<a class="headerlink" href="#parallel-scripts-same-time" title="Permanent link">&para;</a></h3>
+<h3 id="parallel-scripts-same-time">Parallel Scripts — Same Time!<a class="headerlink" href="#parallel-scripts-same-time" title="Permanent link">¶</a></h3>
 <p><strong>Multiple scripts starting with the same hat block run SIMULTANEOUSLY!</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>when green flag clicked
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>forever
@@ -4390,12 +4456,12 @@
 </span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>end
 </span></code></pre></div>
 <p><strong>Both run at the same time</strong> — sprite moves AND checks edges at the same time!</p>
-<hr />
-<h2 id="parallelism-doing-multiple-things-at-once">Parallelism — Doing Multiple Things at Once!<a class="headerlink" href="#parallelism-doing-multiple-things-at-once" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-parallelism">What Is Parallelism?<a class="headerlink" href="#what-is-parallelism" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="parallelism-doing-multiple-things-at-once">Parallelism — Doing Multiple Things at Once!<a class="headerlink" href="#parallelism-doing-multiple-things-at-once" title="Permanent link">¶</a></h2>
+<h3 id="what-is-parallelism">What Is Parallelism?<a class="headerlink" href="#what-is-parallelism" title="Permanent link">¶</a></h3>
 <p><strong>Parallelism</strong> = multiple scripts running <strong>at the same time</strong>.</p>
 <p>In Scratch, <strong>every hat block starts a separate "thread"</strong> that runs independently.</p>
-<h3 id="examples-of-parallelism">Examples of Parallelism<a class="headerlink" href="#examples-of-parallelism" title="Permanent link">&para;</a></h3>
+<h3 id="examples-of-parallelism">Examples of Parallelism<a class="headerlink" href="#examples-of-parallelism" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4422,7 +4488,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="managing-parallelism">Managing Parallelism<a class="headerlink" href="#managing-parallelism" title="Permanent link">&para;</a></h3>
+<h3 id="managing-parallelism">Managing Parallelism<a class="headerlink" href="#managing-parallelism" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4449,9 +4515,9 @@
 <p class="admonition-title">🧠 Think About Timing!</p>
 <p>When two scripts might change the same variable, <strong>who runs first matters</strong>. Use <code>broadcast and wait</code> to control order!</p>
 </div>
-<hr />
-<h2 id="boolean-introduction-true-or-false">Boolean Introduction — True or False!<a class="headerlink" href="#boolean-introduction-true-or-false" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-a-boolean">What Is a Boolean?<a class="headerlink" href="#what-is-a-boolean" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="boolean-introduction-true-or-false">Boolean Introduction — True or False!<a class="headerlink" href="#boolean-introduction-true-or-false" title="Permanent link">¶</a></h2>
+<h3 id="what-is-a-boolean">What Is a Boolean?<a class="headerlink" href="#what-is-a-boolean" title="Permanent link">¶</a></h3>
 <p>A <strong>Boolean</strong> is a value that can only be <strong>TRUE</strong> or <strong>FALSE</strong> — like a light switch!</p>
 <table>
 <thead>
@@ -4471,7 +4537,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="boolean-blocks-hexagon-shape">Boolean Blocks (Hexagon Shape ⬡)<a class="headerlink" href="#boolean-blocks-hexagon-shape" title="Permanent link">&para;</a></h3>
+<h3 id="boolean-blocks-hexagon-shape">Boolean Blocks (Hexagon Shape ⬡)<a class="headerlink" href="#boolean-blocks-hexagon-shape" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4513,16 +4579,16 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="if-else-block-two-way-decisions">If Else Block — Two-Way Decisions!<a class="headerlink" href="#if-else-block-two-way-decisions" title="Permanent link">&para;</a></h2>
-<h3 id="if-else-structure-review">If-Else Structure (Review)<a class="headerlink" href="#if-else-structure-review" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="if-else-block-two-way-decisions">If Else Block — Two-Way Decisions!<a class="headerlink" href="#if-else-block-two-way-decisions" title="Permanent link">¶</a></h2>
+<h3 id="if-else-structure-review">If-Else Structure (Review)<a class="headerlink" href="#if-else-structure-review" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>if &lt;condition&gt; then
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    // TRUE path
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>else
 </span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    // FALSE path
 </span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>end
 </span></code></pre></div>
-<h3 id="boolean-if-else-smart-decisions">Boolean + If-Else = Smart Decisions!<a class="headerlink" href="#boolean-if-else-smart-decisions" title="Permanent link">&para;</a></h3>
+<h3 id="boolean-if-else-smart-decisions">Boolean + If-Else = Smart Decisions!<a class="headerlink" href="#boolean-if-else-smart-decisions" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>if &lt;touching [enemy v]?&gt; then
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    change lives by -1
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    play sound [hurt v]
@@ -4530,7 +4596,7 @@
 </span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    // Safe! Keep playing
 </span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>end
 </span></code></pre></div>
-<h3 id="boolean-operators-andornot">Boolean Operators (And/Or/Not)<a class="headerlink" href="#boolean-operators-andornot" title="Permanent link">&para;</a></h3>
+<h3 id="boolean-operators-andornot">Boolean Operators (And/Or/Not)<a class="headerlink" href="#boolean-operators-andornot" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4557,13 +4623,13 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="key-pressed-sensor-player-input">Key Pressed Sensor — Player Input!<a class="headerlink" href="#key-pressed-sensor-player-input" title="Permanent link">&para;</a></h2>
-<h3 id="key-pressed-block-sensing">Key Pressed Block (Sensing)<a class="headerlink" href="#key-pressed-block-sensing" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="key-pressed-sensor-player-input">Key Pressed Sensor — Player Input!<a class="headerlink" href="#key-pressed-sensor-player-input" title="Permanent link">¶</a></h2>
+<h3 id="key-pressed-block-sensing">Key Pressed Block (Sensing)<a class="headerlink" href="#key-pressed-block-sensing" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>key [space v] pressed?
 </span></code></pre></div>
 <p><strong>True while key is held down</strong>, false when released.</p>
-<h3 id="common-keys-for-games">Common Keys for Games<a class="headerlink" href="#common-keys-for-games" title="Permanent link">&para;</a></h3>
+<h3 id="common-keys-for-games">Common Keys for Games<a class="headerlink" href="#common-keys-for-games" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4602,8 +4668,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="smooth-movement-pattern-best-practice">Smooth Movement Pattern (Best Practice!)<a class="headerlink" href="#smooth-movement-pattern-best-practice" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="smooth-movement-pattern-best-practice">Smooth Movement Pattern (Best Practice!)<a class="headerlink" href="#smooth-movement-pattern-best-practice" title="Permanent link">¶</a></h3>
 <p><strong>Don't use hat blocks for continuous movement!</strong> Use <code>forever + if</code>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>when green flag clicked
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>forever
@@ -4623,9 +4689,9 @@
 </span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>end
 </span></code></pre></div>
 <p><strong>Why?</strong> Hat blocks (<code>when key pressed</code>) only trigger <strong>once per press</strong>. <code>forever + if</code> checks <strong>every frame</strong> for smooth movement!</p>
-<hr />
-<h2 id="player-control-building-a-controller">Player Control — Building a Controller!<a class="headerlink" href="#player-control-building-a-controller" title="Permanent link">&para;</a></h2>
-<h3 id="complete-player-controller">Complete Player Controller<a class="headerlink" href="#complete-player-controller" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="player-control-building-a-controller">Player Control — Building a Controller!<a class="headerlink" href="#player-control-building-a-controller" title="Permanent link">¶</a></h2>
+<h3 id="complete-player-controller">Complete Player Controller<a class="headerlink" href="#complete-player-controller" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>when green flag clicked
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>go to x: -200 y: -100
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>set rotation style [left-right v]
@@ -4659,7 +4725,7 @@
 </span><span id="__span-27-31"><a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>    if &lt; (x position) &lt; -220 &gt; then set x to -220 end
 </span><span id="__span-27-32"><a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>end
 </span></code></pre></div>
-<h3 id="key-concepts-in-this-controller">Key Concepts in This Controller<a class="headerlink" href="#key-concepts-in-this-controller" title="Permanent link">&para;</a></h3>
+<h3 id="key-concepts-in-this-controller">Key Concepts in This Controller<a class="headerlink" href="#key-concepts-in-this-controller" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4690,9 +4756,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="makey-makey-extension-real-world-controllers">Makey Makey Extension — Real World Controllers!<a class="headerlink" href="#makey-makey-extension-real-world-controllers" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-makey-makey">What Is Makey Makey?<a class="headerlink" href="#what-is-makey-makey" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="makey-makey-extension-real-world-controllers">Makey Makey Extension — Real World Controllers!<a class="headerlink" href="#makey-makey-extension-real-world-controllers" title="Permanent link">¶</a></h2>
+<h3 id="what-is-makey-makey">What Is Makey Makey?<a class="headerlink" href="#what-is-makey-makey" title="Permanent link">¶</a></h3>
 <p><strong>Makey Makey</strong> is a circuit board that turns <strong>everyday objects into keyboard keys</strong>!</p>
 <ul>
 <li>Bananas → arrow keys</li>
@@ -4700,9 +4766,9 @@
 <li>Aluminum foil → click</li>
 <li>Your body → ground connection</li>
 </ul>
-<h3 id="adding-makey-makey">Adding Makey Makey<a class="headerlink" href="#adding-makey-makey" title="Permanent link">&para;</a></h3>
+<h3 id="adding-makey-makey">Adding Makey Makey<a class="headerlink" href="#adding-makey-makey" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → Makey Makey → Add</strong> → <strong>Makey Makey</strong> category (🟠 Orange)!</p>
-<h3 id="makey-makey-blocks">Makey Makey Blocks<a class="headerlink" href="#makey-makey-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="makey-makey-blocks">Makey Makey Blocks<a class="headerlink" href="#makey-makey-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4721,7 +4787,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="makey-makey-ideas">Makey Makey Ideas<a class="headerlink" href="#makey-makey-ideas" title="Permanent link">&para;</a></h3>
+<h3 id="makey-makey-ideas">Makey Makey Ideas<a class="headerlink" href="#makey-makey-ideas" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4762,9 +4828,9 @@
 <p class="admonition-title">🍌 Anything Conductive = Button!</p>
 <p><strong>Anything that conducts electricity</strong> can be a game controller — fruit, foil, pencil graphite, plants, people!</p>
 </div>
-<hr />
-<h2 id="collision-detection-when-things-touch">Collision Detection — When Things Touch!<a class="headerlink" href="#collision-detection-when-things-touch" title="Permanent link">&para;</a></h2>
-<h3 id="types-of-collision">Types of Collision<a class="headerlink" href="#types-of-collision" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="collision-detection-when-things-touch">Collision Detection — When Things Touch!<a class="headerlink" href="#collision-detection-when-things-touch" title="Permanent link">¶</a></h2>
+<h3 id="types-of-collision">Types of Collision<a class="headerlink" href="#types-of-collision" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4791,8 +4857,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="sprite-vs-sprite-collision">Sprite vs Sprite Collision<a class="headerlink" href="#sprite-vs-sprite-collision" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="sprite-vs-sprite-collision">Sprite vs Sprite Collision<a class="headerlink" href="#sprite-vs-sprite-collision" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>forever
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    if &lt;touching [coin v]?&gt; then
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>        change score by 10
@@ -4804,7 +4870,7 @@
 </span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>    end
 </span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>end
 </span></code></pre></div>
-<h3 id="color-based-collision-maze-walls">Color-Based Collision (Maze Walls)<a class="headerlink" href="#color-based-collision-maze-walls" title="Permanent link">&para;</a></h3>
+<h3 id="color-based-collision-maze-walls">Color-Based Collision (Maze Walls)<a class="headerlink" href="#color-based-collision-maze-walls" title="Permanent link">¶</a></h3>
 <ol>
 <li>Draw walls in <strong>pure red</strong> (#FF0000)</li>
 <li>Use color picker to get exact red</li>
@@ -4816,7 +4882,7 @@
 </span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    end
 </span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>end
 </span></code></pre></div>
-<h3 id="precise-collision-hitboxes">Precise Collision (Hitboxes)<a class="headerlink" href="#precise-collision-hitboxes" title="Permanent link">&para;</a></h3>
+<h3 id="precise-collision-hitboxes">Precise Collision (Hitboxes)<a class="headerlink" href="#precise-collision-hitboxes" title="Permanent link">¶</a></h3>
 <p>For precise collisions, use a <strong>small invisible "hitbox" sprite</strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Forever:
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    set hitbox to player position
@@ -4824,13 +4890,13 @@
 </span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>        player takes damage
 </span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    end
 </span></code></pre></div>
-<hr />
-<h2 id="less-than-operator-comparing-numbers">Less Than Operator — Comparing Numbers!<a class="headerlink" href="#less-than-operator-comparing-numbers" title="Permanent link">&para;</a></h2>
-<h3 id="less-than-block-operators-green">Less Than Block (Operators → Green)<a class="headerlink" href="#less-than-block-operators-green" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="less-than-operator-comparing-numbers">Less Than Operator — Comparing Numbers!<a class="headerlink" href="#less-than-operator-comparing-numbers" title="Permanent link">¶</a></h2>
+<h3 id="less-than-block-operators-green">Less Than Block (Operators → Green)<a class="headerlink" href="#less-than-block-operators-green" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>&lt; (10) &lt; (20) &gt;
 </span></code></pre></div>
 <p><strong>True if left number is SMALLER than right number.</strong></p>
-<h3 id="comparison-operators-summary">Comparison Operators Summary<a class="headerlink" href="#comparison-operators-summary" title="Permanent link">&para;</a></h3>
+<h3 id="comparison-operators-summary">Comparison Operators Summary<a class="headerlink" href="#comparison-operators-summary" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4857,36 +4923,36 @@
 </tr>
 </tbody>
 </table>
-<h3 id="using-less-than">Using Less Than<a class="headerlink" href="#using-less-than" title="Permanent link">&para;</a></h3>
-<h4 id="boundary-check">Boundary Check<a class="headerlink" href="#boundary-check" title="Permanent link">&para;</a></h4>
+<h3 id="using-less-than">Using Less Than<a class="headerlink" href="#using-less-than" title="Permanent link">¶</a></h3>
+<h4 id="boundary-check">Boundary Check<a class="headerlink" href="#boundary-check" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>if &lt; (x position) &lt; -220 &gt; then
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    set x to -220
 </span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>end
 </span></code></pre></div>
-<h4 id="timer-urgency">Timer Urgency<a class="headerlink" href="#timer-urgency" title="Permanent link">&para;</a></h4>
+<h4 id="timer-urgency">Timer Urgency<a class="headerlink" href="#timer-urgency" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>if &lt; (timer) &lt; 10 &gt; then
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    say [Hurry!] for 1 secs
 </span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>end
 </span></code></pre></div>
-<h4 id="distance-check">Distance Check<a class="headerlink" href="#distance-check" title="Permanent link">&para;</a></h4>
+<h4 id="distance-check">Distance Check<a class="headerlink" href="#distance-check" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>if &lt;distance to [enemy] &lt; 50&gt; then
 </span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    broadcast [danger v]
 </span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>end
 </span></code></pre></div>
-<h4 id="score-thresholds">Score Thresholds<a class="headerlink" href="#score-thresholds" title="Permanent link">&para;</a></h4>
+<h4 id="score-thresholds">Score Thresholds<a class="headerlink" href="#score-thresholds" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>if &lt; (score) &lt; 100 &gt; then
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    say [Keep going!]
 </span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>else
 </span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>    say [Great job!]
 </span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>end
 </span></code></pre></div>
-<hr />
-<h2 id="go-to-position-instant-teleport">Go To Position — Instant Teleport!<a class="headerlink" href="#go-to-position-instant-teleport" title="Permanent link">&para;</a></h2>
-<h3 id="go-to-block-motion-blue">Go To Block (Motion → Blue)<a class="headerlink" href="#go-to-block-motion-blue" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="go-to-position-instant-teleport">Go To Position — Instant Teleport!<a class="headerlink" href="#go-to-position-instant-teleport" title="Permanent link">¶</a></h2>
+<h3 id="go-to-block-motion-blue">Go To Block (Motion → Blue)<a class="headerlink" href="#go-to-block-motion-blue" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>go to x: (100) y: (50)
 </span></code></pre></div>
 <p><strong>Instantly moves</strong> sprite to exact coordinates.</p>
-<h3 id="go-to-targets">Go To Targets<a class="headerlink" href="#go-to-targets" title="Permanent link">&para;</a></h3>
+<h3 id="go-to-targets">Go To Targets<a class="headerlink" href="#go-to-targets" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4909,13 +4975,13 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="glide-to-position-smooth-movement">Glide To Position — Smooth Movement!<a class="headerlink" href="#glide-to-position-smooth-movement" title="Permanent link">&para;</a></h2>
-<h3 id="glide-block-motion-blue">Glide Block (Motion → Blue)<a class="headerlink" href="#glide-block-motion-blue" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="glide-to-position-smooth-movement">Glide To Position — Smooth Movement!<a class="headerlink" href="#glide-to-position-smooth-movement" title="Permanent link">¶</a></h2>
+<h3 id="glide-block-motion-blue">Glide Block (Motion → Blue)<a class="headerlink" href="#glide-block-motion-blue" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>glide (1) secs to x: (100) y: (50)
 </span></code></pre></div>
 <p><strong>Smoothly slides</strong> to position over specified time.</p>
-<h3 id="glide-targets">Glide Targets<a class="headerlink" href="#glide-targets" title="Permanent link">&para;</a></h3>
+<h3 id="glide-targets">Glide Targets<a class="headerlink" href="#glide-targets" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4938,8 +5004,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="go-to-vs-glide">Go To vs Glide<a class="headerlink" href="#go-to-vs-glide" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="go-to-vs-glide">Go To vs Glide<a class="headerlink" href="#go-to-vs-glide" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4961,33 +5027,33 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="glide-examples">Glide Examples<a class="headerlink" href="#glide-examples" title="Permanent link">&para;</a></h3>
-<h4 id="smooth-return-to-center">Smooth Return to Center<a class="headerlink" href="#smooth-return-to-center" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="glide-examples">Glide Examples<a class="headerlink" href="#glide-examples" title="Permanent link">¶</a></h3>
+<h4 id="smooth-return-to-center">Smooth Return to Center<a class="headerlink" href="#smooth-return-to-center" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>when I receive [return-to-center v]
 </span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>glide 2 secs to x: 0 y: 0
 </span></code></pre></div>
-<h4 id="chase-player">Chase Player<a class="headerlink" href="#chase-player" title="Permanent link">&para;</a></h4>
+<h4 id="chase-player">Chase Player<a class="headerlink" href="#chase-player" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>forever
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>    if &lt;distance to [player] &gt; 50&gt; then
 </span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>        glide 0.5 secs to [player v]
 </span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>    end
 </span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>end
 </span></code></pre></div>
-<h4 id="cutscene-movement">Cutscene Movement<a class="headerlink" href="#cutscene-movement" title="Permanent link">&para;</a></h4>
+<h4 id="cutscene-movement">Cutscene Movement<a class="headerlink" href="#cutscene-movement" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>when I receive [cutscene-start v]
 </span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>glide 3 secs to x: -200 y: 100
 </span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>wait 1 secs
 </span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>glide 2 secs to x: 200 y: 100
 </span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>glide 2 secs to x: 0 y: 0
 </span></code></pre></div>
-<hr />
-<h2 id="create-clone-make-copies-at-runtime">Create Clone — Make Copies at Runtime!<a class="headerlink" href="#create-clone-make-copies-at-runtime" title="Permanent link">&para;</a></h2>
-<h3 id="create-clone-block">Create Clone Block<a class="headerlink" href="#create-clone-block" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="create-clone-make-copies-at-runtime">Create Clone — Make Copies at Runtime!<a class="headerlink" href="#create-clone-make-copies-at-runtime" title="Permanent link">¶</a></h2>
+<h3 id="create-clone-block">Create Clone Block<a class="headerlink" href="#create-clone-block" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>create clone of [myself v]
 </span></code></pre></div>
 <p><strong>Makes a copy of a sprite</strong> while the project is running!</p>
-<h3 id="clone-targets">Clone Targets<a class="headerlink" href="#clone-targets" title="Permanent link">&para;</a></h3>
+<h3 id="clone-targets">Clone Targets<a class="headerlink" href="#clone-targets" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5006,11 +5072,11 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="event-driven-programming-react-to-events">Event-Driven Programming — React to Events!<a class="headerlink" href="#event-driven-programming-react-to-events" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-event-driven-programming">What Is Event-Driven Programming?<a class="headerlink" href="#what-is-event-driven-programming" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="event-driven-programming-react-to-events">Event-Driven Programming — React to Events!<a class="headerlink" href="#event-driven-programming-react-to-events" title="Permanent link">¶</a></h2>
+<h3 id="what-is-event-driven-programming">What Is Event-Driven Programming?<a class="headerlink" href="#what-is-event-driven-programming" title="Permanent link">¶</a></h3>
 <p><strong>Code runs in response to events</strong> (clicks, key presses, broadcasts, sensor triggers) rather than running top-to-bottom once.</p>
-<h3 id="scratch-is-event-driven">Scratch Is Event-Driven!<a class="headerlink" href="#scratch-is-event-driven" title="Permanent link">&para;</a></h3>
+<h3 id="scratch-is-event-driven">Scratch Is Event-Driven!<a class="headerlink" href="#scratch-is-event-driven" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5057,8 +5123,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="benefits-of-event-driven">Benefits of Event-Driven<a class="headerlink" href="#benefits-of-event-driven" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="benefits-of-event-driven">Benefits of Event-Driven<a class="headerlink" href="#benefits-of-event-driven" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5085,8 +5151,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">¶</a></h2>
 <p>In this chapter, you learned:</p>
 <ul>
 <li>✅ <strong>Broadcasts</strong> — Send messages, coordinate sprites (<code>broadcast</code>, <code>when I receive</code>)</li>
@@ -5109,8 +5175,8 @@
 <li>✅ <strong>Cloning</strong> — Runtime copies for particles, enemies</li>
 <li>✅ <strong>Event-Driven Programming</strong> — React to events, not just run once</li>
 </ul>
-<hr />
-<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5213,8 +5279,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">¶</a></h2>
 <p><strong>Challenge 1:</strong> Create a <strong>broadcast system</strong> — green flag → broadcast <code>start</code> → 3 sprites respond differently</p>
 <p><strong>Challenge 2:</strong> Build a <strong>complete player controller</strong> with smooth movement, jump, and screen bounds</p>
 <p><strong>Challenge 3:</strong> Make a <strong>maze game</strong> using <code>touching color red?</code> for walls</p>
@@ -5222,8 +5288,8 @@
 <p><strong>Challenge 5:</strong> Create <strong>enemy clones</strong> that spawn randomly and chase the player</p>
 <p><strong>Challenge 6:</strong> Build a <strong>cutscene</strong> using <code>glide</code> and <code>broadcast and wait</code> for coordination</p>
 <p><strong>Challenge 7:</strong> Add <strong>collision detection</strong> to your platformer — coins, enemies, spikes</p>
-<hr />
-<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>In <strong>Chapter 7</strong>, you'll dive into <strong>Variables, Lists, and Game Data</strong> — the backbone of game state! You'll master variables for score/lives, lists for inventories/high scores, and variable scope.</p>
 <p><a href="../07-variables-lists-data/"><strong>→ Next Chapter: Variables, Lists, and Game Data</strong></a></p>
 
@@ -5249,9 +5315,9 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -5261,13 +5327,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../05-sounds-extensions-sharing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Sounds, Extensions, and Sharing Projects">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -5292,7 +5358,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -5304,7 +5370,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -5328,6 +5394,12 @@
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+      
+        <script src="../../js/scratchblocks-init.js"></script>
+      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

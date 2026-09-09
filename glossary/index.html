@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,7 +12,7 @@
         <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/glossary/">
       
       
-        <link rel="prev" href="../sims/graph-viewer/">
+        <link rel="prev" href="../faq/">
       
       
         <link rel="next" href="../license/">
@@ -24,7 +21,7 @@
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
@@ -49,8 +46,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,13 +56,25 @@
     
       <link rel="stylesheet" href="../css/mascot.css">
     
+      <link rel="stylesheet" href="../css/scratchblocks.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -100,13 +109,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -134,29 +142,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -164,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -182,7 +190,7 @@
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -206,7 +214,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -217,8 +225,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../img/mascot/welcome.png" alt="logo">
 
     </a>
     Scratch Programming for Kids
@@ -228,7 +235,7 @@
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -236,7 +243,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -420,6 +427,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -476,6 +489,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -513,6 +552,33 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -581,7 +647,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#abstraction" class="md-nav__link">
@@ -3139,7 +3205,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3155,7 +3221,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#abstraction" class="md-nav__link">
@@ -5670,875 +5736,875 @@
   
     <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/glossary.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="glossary-of-terms">Glossary of Terms<a class="headerlink" href="#glossary-of-terms" title="Permanent link">&para;</a></h1>
-<h4 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">&para;</a></h4>
+<h1 id="glossary-of-terms">Glossary of Terms<a class="headerlink" href="#glossary-of-terms" title="Permanent link">¶</a></h1>
+<h4 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">¶</a></h4>
 <p>Hiding the small details of how something works behind a simple name or block, so it can be reused without rethinking every step.</p>
 <p><strong>Example:</strong> A custom "draw a star" block hides all the turn and move blocks needed to draw one shape.</p>
 <p><strong>See also:</strong> Custom Block Definition, Reusability</p>
-<h4 id="accessibility-features">Accessibility Features<a class="headerlink" href="#accessibility-features" title="Permanent link">&para;</a></h4>
+<h4 id="accessibility-features">Accessibility Features<a class="headerlink" href="#accessibility-features" title="Permanent link">¶</a></h4>
 <p>Tools built into Scratch, such as text-to-speech and translate, that help more people use and understand a project regardless of ability or language.</p>
 <p><strong>Example:</strong> Turning on text-to-speech lets a player who cannot read yet still understand what a story sprite is saying.</p>
 <p><strong>See also:</strong> Text To Speech, Translate Extension</p>
-<h4 id="add-extension">Add Extension<a class="headerlink" href="#add-extension" title="Permanent link">&para;</a></h4>
+<h4 id="add-extension">Add Extension<a class="headerlink" href="#add-extension" title="Permanent link">¶</a></h4>
 <p>The button in the Scratch editor used to add extra blocks, such as pen, music, or micro:bit, to a project.</p>
 <p><strong>Example:</strong> Clicking the Add Extension button and choosing Pen adds the pen blocks needed to draw shapes on the stage.</p>
 <p><strong>See also:</strong> Extension Management, Pen Extension</p>
-<h4 id="add-to-list">Add To List<a class="headerlink" href="#add-to-list" title="Permanent link">&para;</a></h4>
+<h4 id="add-to-list">Add To List<a class="headerlink" href="#add-to-list" title="Permanent link">¶</a></h4>
 <p>A list block that puts a new item onto the end of a chosen list.</p>
 <p><strong>Example:</strong> An "add thing to myList" block can add the word "sword" to a player's inventory list after they pick it up.</p>
 <p><strong>See also:</strong> Delete From List, List Length</p>
-<h4 id="algorithmic-thinking">Algorithmic Thinking<a class="headerlink" href="#algorithmic-thinking" title="Permanent link">&para;</a></h4>
+<h4 id="algorithmic-thinking">Algorithmic Thinking<a class="headerlink" href="#algorithmic-thinking" title="Permanent link">¶</a></h4>
 <p>Planning a clear, ordered set of steps that will solve a problem or complete a task, before or while writing the actual code.</p>
 <p><strong>Example:</strong> Planning "turn on the game, wait for a key press, move the sprite, then check for a collision" before coding it is algorithmic thinking.</p>
 <p><strong>See also:</strong> Step By Step Thinking, Sequence</p>
-<h4 id="and-operator">And Operator<a class="headerlink" href="#and-operator" title="Permanent link">&para;</a></h4>
+<h4 id="and-operator">And Operator<a class="headerlink" href="#and-operator" title="Permanent link">¶</a></h4>
 <p>A boolean operator block that reports true only when both of the conditions plugged into it are true.</p>
 <p><strong>Example:</strong> "Key up pressed and not touching wall" lets a sprite move up only when it is not blocked by a wall.</p>
 <p><strong>See also:</strong> Or Operator, Boolean Logic</p>
-<h4 id="asset-list">Asset List<a class="headerlink" href="#asset-list" title="Permanent link">&para;</a></h4>
+<h4 id="asset-list">Asset List<a class="headerlink" href="#asset-list" title="Permanent link">¶</a></h4>
 <p>A written list of the sprites, costumes, sounds, and backdrops a project will need, made during planning.</p>
 <p><strong>Example:</strong> An asset list for a space game might include a rocket sprite, an asteroid sprite, a starfield backdrop, and a laser sound.</p>
 <p><strong>See also:</strong> Plan Phase</p>
-<h4 id="asynchronous-broadcast">Asynchronous Broadcast<a class="headerlink" href="#asynchronous-broadcast" title="Permanent link">&para;</a></h4>
+<h4 id="asynchronous-broadcast">Asynchronous Broadcast<a class="headerlink" href="#asynchronous-broadcast" title="Permanent link">¶</a></h4>
 <p>A broadcast that lets the sending script keep running immediately, without waiting for the scripts that respond to the message to finish.</p>
 <p><strong>See also:</strong> Broadcast Message, Synchronous Broadcast</p>
-<h4 id="backdrop-switch-event">Backdrop Switch Event<a class="headerlink" href="#backdrop-switch-event" title="Permanent link">&para;</a></h4>
+<h4 id="backdrop-switch-event">Backdrop Switch Event<a class="headerlink" href="#backdrop-switch-event" title="Permanent link">¶</a></h4>
 <p>An event that happens the instant the stage's backdrop changes to a specific one, which can start a script beginning with "when backdrop switches to."</p>
 <p><strong>Example:</strong> A "when backdrop switches to level2" block can start new enemy scripts as soon as the game moves to the next level.</p>
 <p><strong>See also:</strong> Switch Backdrop</p>
-<h4 id="backpack">Backpack<a class="headerlink" href="#backpack" title="Permanent link">&para;</a></h4>
+<h4 id="backpack">Backpack<a class="headerlink" href="#backpack" title="Permanent link">¶</a></h4>
 <p>A storage tray in the Scratch editor where sprites, scripts, costumes, and sounds can be dragged for reuse across different projects.</p>
 <p><strong>Example:</strong> Dragging a finished "jump" script into the backpack lets a student reuse it in a completely different project later.</p>
 <p><strong>See also:</strong> Copy To Backpack, Paste From Backpack</p>
-<h4 id="beat-synchronization">Beat Synchronization<a class="headerlink" href="#beat-synchronization" title="Permanent link">&para;</a></h4>
+<h4 id="beat-synchronization">Beat Synchronization<a class="headerlink" href="#beat-synchronization" title="Permanent link">¶</a></h4>
 <p>Timing a sprite's motion or costume changes so they line up with the rhythm of music playing in a project.</p>
 <p><strong>Example:</strong> A dancer sprite switches costumes every time a drum beat plays, making it look like it is dancing to the music.</p>
 <p><strong>See also:</strong> Change Tempo, Lip Sync Animation</p>
-<h4 id="block-color-coding">Block Color Coding<a class="headerlink" href="#block-color-coding" title="Permanent link">&para;</a></h4>
+<h4 id="block-color-coding">Block Color Coding<a class="headerlink" href="#block-color-coding" title="Permanent link">¶</a></h4>
 <p>The Scratch design choice of giving every block category its own distinct color, so a block's type can be recognized at a glance.</p>
 <p><strong>See also:</strong> Motion Block Category, Looks Block Category</p>
-<h4 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Permanent link">&para;</a></h4>
+<h4 id="block-highlighting">Block Highlighting<a class="headerlink" href="#block-highlighting" title="Permanent link">¶</a></h4>
 <p>A yellow glow Scratch draws around a block while it is currently running, helping a user see which part of a script is active.</p>
 <p>This is useful for debugging a slow or confusing script by watching exactly where the highlight goes.</p>
 <p><strong>Example:</strong> Watching the yellow glow move from a wait block to a move block shows exactly when a sprite pauses before moving again.</p>
 <p><strong>See also:</strong> Debugging Basics</p>
-<h4 id="block-parameters">Block Parameters<a class="headerlink" href="#block-parameters" title="Permanent link">&para;</a></h4>
+<h4 id="block-parameters">Block Parameters<a class="headerlink" href="#block-parameters" title="Permanent link">¶</a></h4>
 <p>Extra input slots added to a custom block so it can receive different values, such as a name or number, each time it is used.</p>
 <p><strong>Example:</strong> A custom "jump" block with a height parameter can make a sprite jump higher or lower depending on the number given.</p>
 <p><strong>See also:</strong> Custom Block Definition</p>
-<h4 id="blocks-palette">Blocks Palette<a class="headerlink" href="#blocks-palette" title="Permanent link">&para;</a></h4>
+<h4 id="blocks-palette">Blocks Palette<a class="headerlink" href="#blocks-palette" title="Permanent link">¶</a></h4>
 <p>The panel in the Scratch editor that shows all the coding blocks a user can drag into a script, grouped by colored category.</p>
 <p><strong>Example:</strong> Dragging a "move 10 steps" block from the palette into the script area adds it to a sprite's code.</p>
 <p><strong>See also:</strong> Motion Block Category, Drag And Drop</p>
-<h4 id="boolean-block-shape">Boolean Block Shape<a class="headerlink" href="#boolean-block-shape" title="Permanent link">&para;</a></h4>
+<h4 id="boolean-block-shape">Boolean Block Shape<a class="headerlink" href="#boolean-block-shape" title="Permanent link">¶</a></h4>
 <p>A hexagonal, pointed-end block shape that reports only a true or false value and fits into matching hexagonal slots.</p>
 <p><strong>Example:</strong> The hexagonal "touching Cat1?" block only fits into the hexagon-shaped slot of an if block, not a rounded number slot.</p>
 <p><strong>See also:</strong> Reporter Block Shape, Boolean Logic</p>
-<h4 id="boolean-combination">Boolean Combination<a class="headerlink" href="#boolean-combination" title="Permanent link">&para;</a></h4>
+<h4 id="boolean-combination">Boolean Combination<a class="headerlink" href="#boolean-combination" title="Permanent link">¶</a></h4>
 <p>Joining two or more true or false conditions together with and, or, or not blocks to build a single, more detailed condition.</p>
 <p><strong>Example:</strong> "If key up pressed and not touching wall" combines two conditions into one decision.</p>
 <p><strong>See also:</strong> Boolean Logic, And Operator</p>
-<h4 id="boolean-introduction">Boolean Introduction<a class="headerlink" href="#boolean-introduction" title="Permanent link">&para;</a></h4>
+<h4 id="boolean-introduction">Boolean Introduction<a class="headerlink" href="#boolean-introduction" title="Permanent link">¶</a></h4>
 <p>A first look at values that can only ever be true or false, used in Scratch to make decisions and control loops.</p>
 <p><strong>See also:</strong> Boolean Logic, If Block</p>
-<h4 id="boolean-logic">Boolean Logic<a class="headerlink" href="#boolean-logic" title="Permanent link">&para;</a></h4>
+<h4 id="boolean-logic">Boolean Logic<a class="headerlink" href="#boolean-logic" title="Permanent link">¶</a></h4>
 <p>Combining true and false values using operators like and, or, and not to build more detailed conditions.</p>
 <p><strong>Example:</strong> Combining blocks to check "lives = 0 or timer = 0" can end a game when either running out of lives or running out of time happens.</p>
 <p><strong>See also:</strong> And Operator, Or Operator, Not Operator</p>
-<h4 id="broadcast-and-wait">Broadcast And Wait<a class="headerlink" href="#broadcast-and-wait" title="Permanent link">&para;</a></h4>
+<h4 id="broadcast-and-wait">Broadcast And Wait<a class="headerlink" href="#broadcast-and-wait" title="Permanent link">¶</a></h4>
 <p>A block that sends a broadcast message and then pauses its own script until every script responding to that message has finished running.</p>
 <p>Unlike a plain broadcast, this block waits, which is useful when one action must fully finish before the next one starts.</p>
 <p><strong>Example:</strong> Broadcasting "introScene" and waiting makes sure a whole opening animation finishes before the game's controls turn on.</p>
 <p><strong>See also:</strong> Broadcast Message, Synchronous Broadcast</p>
-<h4 id="broadcast-message">Broadcast Message<a class="headerlink" href="#broadcast-message" title="Permanent link">&para;</a></h4>
+<h4 id="broadcast-message">Broadcast Message<a class="headerlink" href="#broadcast-message" title="Permanent link">¶</a></h4>
 <p>A named signal sent to every sprite and the stage in a project, used to start scripts that are waiting for that signal.</p>
 <p><strong>Example:</strong> Broadcasting a message called "game over" can tell every sprite to stop moving and show an ending screen.</p>
 <p><strong>See also:</strong> When I Receive, Message Passing</p>
-<h4 id="broadcast-storm">Broadcast Storm<a class="headerlink" href="#broadcast-storm" title="Permanent link">&para;</a></h4>
+<h4 id="broadcast-storm">Broadcast Storm<a class="headerlink" href="#broadcast-storm" title="Permanent link">¶</a></h4>
 <p>A problem where a message is broadcast repeatedly and rapidly, often from inside a loop, causing so many responses that a project slows down or acts unpredictably.</p>
 <p><strong>Example:</strong> Putting a "broadcast attack" block inside a forever loop can flood a game with so many messages that it starts to lag.</p>
 <p><strong>See also:</strong> Broadcast Message, Debugging Strategies</p>
-<h4 id="camera-games">Camera Games<a class="headerlink" href="#camera-games" title="Permanent link">&para;</a></h4>
+<h4 id="camera-games">Camera Games<a class="headerlink" href="#camera-games" title="Permanent link">¶</a></h4>
 <p>Games that use the video sensing extension so a player's real movement in front of a camera controls the game.</p>
 <p><strong>Example:</strong> A player waves an arm in front of the camera to pop bubbles on the screen without touching a keyboard.</p>
 <p><strong>See also:</strong> Video Sensing, Motion Detection</p>
-<h4 id="cap-block-shape">Cap Block Shape<a class="headerlink" href="#cap-block-shape" title="Permanent link">&para;</a></h4>
+<h4 id="cap-block-shape">Cap Block Shape<a class="headerlink" href="#cap-block-shape" title="Permanent link">¶</a></h4>
 <p>A block shape with a flat bottom and no bump, used for blocks such as "stop all" that end a script and cannot have another block snapped beneath them.</p>
 <p><strong>Example:</strong> A "stop all" block has a flat bottom because it ends a script, so no other block can snap beneath it.</p>
 <p><strong>See also:</strong> Stack Block Shape</p>
-<h4 id="change-size">Change Size<a class="headerlink" href="#change-size" title="Permanent link">&para;</a></h4>
+<h4 id="change-size">Change Size<a class="headerlink" href="#change-size" title="Permanent link">¶</a></h4>
 <p>A looks block that makes a sprite bigger or smaller by a chosen percentage compared to its original size.</p>
 <p><strong>Example:</strong> Changing size by negative 10 repeatedly inside a loop makes a sprite shrink until it disappears.</p>
-<h4 id="change-tempo">Change Tempo<a class="headerlink" href="#change-tempo" title="Permanent link">&para;</a></h4>
+<h4 id="change-tempo">Change Tempo<a class="headerlink" href="#change-tempo" title="Permanent link">¶</a></h4>
 <p>A sound block that speeds up or slows down how fast music blocks play, measured in beats per minute.</p>
 <p><strong>Example:</strong> Setting tempo to 200 makes a drum block play much faster than the default tempo of 60.</p>
 <p><strong>See also:</strong> Beat Synchronization</p>
-<h4 id="change-variable">Change Variable<a class="headerlink" href="#change-variable" title="Permanent link">&para;</a></h4>
+<h4 id="change-variable">Change Variable<a class="headerlink" href="#change-variable" title="Permanent link">¶</a></h4>
 <p>A variables block that adds a chosen amount to a variable's current value, increasing or decreasing it instead of replacing it.</p>
 <p><strong>Example:</strong> A "change score by 1" block run each time a sprite is clicked slowly raises the score.</p>
 <p><strong>See also:</strong> Set Variable, Score Variable</p>
-<h4 id="clean-up-blocks">Clean Up Blocks<a class="headerlink" href="#clean-up-blocks" title="Permanent link">&para;</a></h4>
+<h4 id="clean-up-blocks">Clean Up Blocks<a class="headerlink" href="#clean-up-blocks" title="Permanent link">¶</a></h4>
 <p>A code tab option that automatically rearranges every script in the script area into a neat, non-overlapping layout.</p>
 <p><strong>See also:</strong> Script Area</p>
-<h4 id="clear-graphics">Clear Graphics<a class="headerlink" href="#clear-graphics" title="Permanent link">&para;</a></h4>
+<h4 id="clear-graphics">Clear Graphics<a class="headerlink" href="#clear-graphics" title="Permanent link">¶</a></h4>
 <p>The general action of wiping all pen drawings and stamps off the stage so it looks blank again, often done at the start of a script.</p>
 <p><strong>See also:</strong> Erase All, Pen Extension</p>
-<h4 id="clone-behavior">Clone Behavior<a class="headerlink" href="#clone-behavior" title="Permanent link">&para;</a></h4>
+<h4 id="clone-behavior">Clone Behavior<a class="headerlink" href="#clone-behavior" title="Permanent link">¶</a></h4>
 <p>How a clone acts once it is created, including which scripts it runs and how its costume and variables start out matching the original sprite.</p>
 <p><strong>See also:</strong> Cloning, When I Start As Clone</p>
-<h4 id="clone-performance">Clone Performance<a class="headerlink" href="#clone-performance" title="Permanent link">&para;</a></h4>
+<h4 id="clone-performance">Clone Performance<a class="headerlink" href="#clone-performance" title="Permanent link">¶</a></h4>
 <p>How smoothly a project keeps running as more clones are created, since having too many clones on stage at once can slow a project down.</p>
 <p><strong>Example:</strong> A game that creates hundreds of clones at once without ever deleting them can start to slow down or freeze.</p>
 <p><strong>See also:</strong> Delete This Clone, Cloning</p>
-<h4 id="cloning">Cloning<a class="headerlink" href="#cloning" title="Permanent link">&para;</a></h4>
+<h4 id="cloning">Cloning<a class="headerlink" href="#cloning" title="Permanent link">¶</a></h4>
 <p>Making a temporary copy of a sprite while a project is running, starting out with the same costumes and scripts as the original.</p>
 <p><strong>Example:</strong> A single bullet sprite can make many temporary clones of itself, one each time the player shoots.</p>
 <p><strong>See also:</strong> Create Clone, When I Start As Clone</p>
-<h4 id="code-tab">Code Tab<a class="headerlink" href="#code-tab" title="Permanent link">&para;</a></h4>
+<h4 id="code-tab">Code Tab<a class="headerlink" href="#code-tab" title="Permanent link">¶</a></h4>
 <p>The section of the Scratch editor where a user builds scripts by dragging blocks from the blocks palette into the script area.</p>
 <p><strong>Example:</strong> Clicking the Code tab shows the blocks palette and script area for whichever sprite is currently selected.</p>
 <p><strong>See also:</strong> Blocks Palette, Script Area</p>
-<h4 id="collision-detection">Collision Detection<a class="headerlink" href="#collision-detection" title="Permanent link">&para;</a></h4>
+<h4 id="collision-detection">Collision Detection<a class="headerlink" href="#collision-detection" title="Permanent link">¶</a></h4>
 <p>Checking whether two sprites are touching each other, usually to trigger an action like losing a life or scoring a point.</p>
 <p><strong>Example:</strong> Checking "if touching Ghost then change lives by -1" takes away a life whenever the player's sprite touches a ghost sprite.</p>
 <p><strong>See also:</strong> Touching Sensor, Win Condition, Lose Condition</p>
-<h4 id="comment-block">Comment Block<a class="headerlink" href="#comment-block" title="Permanent link">&para;</a></h4>
+<h4 id="comment-block">Comment Block<a class="headerlink" href="#comment-block" title="Permanent link">¶</a></h4>
 <p>A small note attached to a script in the code tab that explains what the code does, without affecting how the script runs.</p>
 <p>This is different from commenting on a project page, which is a message left for other Scratch members rather than a note in the code.</p>
 <p><strong>Example:</strong> A comment saying "this makes the cat jump" attached above a script helps remind a student what that code does later.</p>
 <p><strong>See also:</strong> Script Area, Commenting</p>
-<h4 id="commenting">Commenting<a class="headerlink" href="#commenting" title="Permanent link">&para;</a></h4>
+<h4 id="commenting">Commenting<a class="headerlink" href="#commenting" title="Permanent link">¶</a></h4>
 <p>Leaving a short written message on someone's Scratch project page or in a studio to give feedback or ask a question.</p>
 <p>This is different from a comment block, which is a note written inside the code itself rather than on a webpage.</p>
 <p><strong>Example:</strong> A viewer might write "I love the music in your game!" as a comment on a shared project's page.</p>
 <p><strong>See also:</strong> Community Feedback, Comment Block</p>
-<h4 id="community-feedback">Community Feedback<a class="headerlink" href="#community-feedback" title="Permanent link">&para;</a></h4>
+<h4 id="community-feedback">Community Feedback<a class="headerlink" href="#community-feedback" title="Permanent link">¶</a></h4>
 <p>Comments and reactions from other Scratch members about a shared project, which can point out bugs or suggest new ideas.</p>
 <p><strong>Example:</strong> A comment saying "the jump is a little too slow, maybe speed it up?" is community feedback a creator could use to improve their game.</p>
 <p><strong>See also:</strong> Commenting, Reflection</p>
-<h4 id="community-guidelines">Community Guidelines<a class="headerlink" href="#community-guidelines" title="Permanent link">&para;</a></h4>
+<h4 id="community-guidelines">Community Guidelines<a class="headerlink" href="#community-guidelines" title="Permanent link">¶</a></h4>
 <p>The rules on the Scratch website that explain how members should treat each other and what kinds of projects and comments are allowed.</p>
 <p>Following these rules keeps the Scratch community a safe and welcoming place for young creators to share their work.</p>
 <p><strong>Example:</strong> The guidelines ask members to be respectful, such as not posting mean comments on someone else's shared project.</p>
 <p><strong>See also:</strong> Commenting, Sharing Projects</p>
-<h4 id="comparison-operators">Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permanent link">&para;</a></h4>
+<h4 id="comparison-operators">Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permanent link">¶</a></h4>
 <p>Blocks that compare two values and report true or false, such as checking whether one number is less than, greater than, or equal to another.</p>
 <p><strong>Example:</strong> "Score &gt; 10" compares the score variable to the number 10 and reports true once the player passes ten points.</p>
 <p><strong>See also:</strong> Less Than Operator, Greater Than Operator, Equal Operator</p>
-<h4 id="concurrent-scripts">Concurrent Scripts<a class="headerlink" href="#concurrent-scripts" title="Permanent link">&para;</a></h4>
+<h4 id="concurrent-scripts">Concurrent Scripts<a class="headerlink" href="#concurrent-scripts" title="Permanent link">¶</a></h4>
 <p>Two or more scripts in the same project that are running during the same stretch of time, instead of one after another.</p>
 <p><strong>See also:</strong> Parallelism</p>
-<h4 id="condition-controlled-loop">Condition Controlled Loop<a class="headerlink" href="#condition-controlled-loop" title="Permanent link">&para;</a></h4>
+<h4 id="condition-controlled-loop">Condition Controlled Loop<a class="headerlink" href="#condition-controlled-loop" title="Permanent link">¶</a></h4>
 <p>A loop whose number of repeats is decided by whether a condition is true or false, rather than by a fixed count.</p>
 <p><strong>See also:</strong> Repeat Until Loop, Boolean Introduction</p>
-<h4 id="conditional-branching">Conditional Branching<a class="headerlink" href="#conditional-branching" title="Permanent link">&para;</a></h4>
+<h4 id="conditional-branching">Conditional Branching<a class="headerlink" href="#conditional-branching" title="Permanent link">¶</a></h4>
 <p>The general idea that a program can follow different paths depending on a condition, instead of always doing the same thing in the same order.</p>
 <p><strong>See also:</strong> If Block, If Else Block, Decision Making</p>
-<h4 id="continuous-motion">Continuous Motion<a class="headerlink" href="#continuous-motion" title="Permanent link">&para;</a></h4>
+<h4 id="continuous-motion">Continuous Motion<a class="headerlink" href="#continuous-motion" title="Permanent link">¶</a></h4>
 <p>Movement that keeps happening without pausing, often made in Scratch by placing a motion block inside a forever loop.</p>
 <p><strong>See also:</strong> Forever Loop, Scrolling Background</p>
-<h4 id="control-block-category">Control Block Category<a class="headerlink" href="#control-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="control-block-category">Control Block Category<a class="headerlink" href="#control-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded orange, holding blocks for loops, conditionals, waiting, and cloning.</p>
 <p><strong>See also:</strong> Forever Loop, If Block, Cloning</p>
-<h4 id="coordinate-system">Coordinate System<a class="headerlink" href="#coordinate-system" title="Permanent link">&para;</a></h4>
+<h4 id="coordinate-system">Coordinate System<a class="headerlink" href="#coordinate-system" title="Permanent link">¶</a></h4>
 <p>The grid of x and y numbers used to describe every location on the Scratch stage, with the point (0, 0) at the very center.</p>
 <p><strong>Example:</strong> The point (0, 0) is the exact center of the stage, and (100, -50) is a bit to the right and below center.</p>
 <p><strong>See also:</strong> X Coordinate, Y Coordinate, Stage Center</p>
-<h4 id="copy-to-backpack">Copy To Backpack<a class="headerlink" href="#copy-to-backpack" title="Permanent link">&para;</a></h4>
+<h4 id="copy-to-backpack">Copy To Backpack<a class="headerlink" href="#copy-to-backpack" title="Permanent link">¶</a></h4>
 <p>Dragging a sprite, script, costume, or sound into the backpack so it is saved for use in another project.</p>
 <p><strong>See also:</strong> Backpack, Paste From Backpack</p>
-<h4 id="costume-animation">Costume Animation<a class="headerlink" href="#costume-animation" title="Permanent link">&para;</a></h4>
+<h4 id="costume-animation">Costume Animation<a class="headerlink" href="#costume-animation" title="Permanent link">¶</a></h4>
 <p>Making a sprite appear to move or act by rapidly switching between several similar costumes, much like flipping through a picture flip book.</p>
 <p><strong>Example:</strong> A bird sprite with wings-up and wings-down costumes can flap its wings by switching between them every few steps.</p>
 <p><strong>See also:</strong> Switch Costume, Next Costume, Lip Sync Animation</p>
-<h4 id="costume-center">Costume Center<a class="headerlink" href="#costume-center" title="Permanent link">&para;</a></h4>
+<h4 id="costume-center">Costume Center<a class="headerlink" href="#costume-center" title="Permanent link">¶</a></h4>
 <p>The fixed point within a costume image that stays lined up with the sprite's x and y position when the costume rotates or changes size.</p>
 <p><strong>Example:</strong> Setting a spinning top's costume center to its middle point makes it spin in place instead of swinging around a corner.</p>
-<h4 id="costumes-tab">Costumes Tab<a class="headerlink" href="#costumes-tab" title="Permanent link">&para;</a></h4>
+<h4 id="costumes-tab">Costumes Tab<a class="headerlink" href="#costumes-tab" title="Permanent link">¶</a></h4>
 <p>The section of the Scratch editor where a user views, edits, and adds the images a sprite can wear to change how it looks.</p>
 <p><strong>Example:</strong> A cat sprite might have two costumes, "cat-a" and "cat-b," that alternate to make it look like it is walking.</p>
 <p><strong>See also:</strong> Switch Costume, Costume Animation</p>
-<h4 id="counted-repetition">Counted Repetition<a class="headerlink" href="#counted-repetition" title="Permanent link">&para;</a></h4>
+<h4 id="counted-repetition">Counted Repetition<a class="headerlink" href="#counted-repetition" title="Permanent link">¶</a></h4>
 <p>Repeating a set of actions a known, exact number of times, such as ten, instead of repeating forever or until something happens.</p>
 <p><strong>See also:</strong> Repeat Loop</p>
-<h4 id="create-clone">Create Clone<a class="headerlink" href="#create-clone" title="Permanent link">&para;</a></h4>
+<h4 id="create-clone">Create Clone<a class="headerlink" href="#create-clone" title="Permanent link">¶</a></h4>
 <p>A control block that makes a new clone of a chosen sprite, which then runs its own "when I start as a clone" scripts.</p>
 <p><strong>Example:</strong> A "create clone of myself" block run inside a forever loop can keep spawning new enemy sprites over time.</p>
 <p><strong>See also:</strong> Cloning, When I Start As Clone</p>
-<h4 id="create-phase">Create Phase<a class="headerlink" href="#create-phase" title="Permanent link">&para;</a></h4>
+<h4 id="create-phase">Create Phase<a class="headerlink" href="#create-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator actually builds a project by adding sprites, sounds, and scripts.</p>
 <p><strong>See also:</strong> Plan Phase, Test Phase</p>
-<h4 id="credit-attribution">Credit Attribution<a class="headerlink" href="#credit-attribution" title="Permanent link">&para;</a></h4>
+<h4 id="credit-attribution">Credit Attribution<a class="headerlink" href="#credit-attribution" title="Permanent link">¶</a></h4>
 <p>Publicly thanking or naming the original creator of a project, image, sound, or idea that was reused in a new project.</p>
 <p><strong>Example:</strong> A project's credits might say "background music by TunesKid, used with thanks" to recognize someone else's work.</p>
 <p><strong>See also:</strong> Remixing, Credits</p>
-<h4 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h4>
+<h4 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">¶</a></h4>
 <p>A list at the end of a project or on its project page naming the people who made it and anyone whose work was reused.</p>
 <p><strong>Example:</strong> A project's ending screen might list "Coded by Maya, Music by FreeSound, Idea from a remix of SpaceRun."</p>
 <p><strong>See also:</strong> Credit Attribution</p>
-<h4 id="custom-block-definition">Custom Block Definition<a class="headerlink" href="#custom-block-definition" title="Permanent link">&para;</a></h4>
+<h4 id="custom-block-definition">Custom Block Definition<a class="headerlink" href="#custom-block-definition" title="Permanent link">¶</a></h4>
 <p>The script that runs whenever a custom block a user created is used elsewhere in a project.</p>
 <p><strong>Example:</strong> Defining a custom "jump" block once means every sprite that uses "jump" runs the same script stored in that definition.</p>
 <p><strong>See also:</strong> Block Parameters, Abstraction</p>
-<h4 id="debugging-basics">Debugging Basics<a class="headerlink" href="#debugging-basics" title="Permanent link">&para;</a></h4>
+<h4 id="debugging-basics">Debugging Basics<a class="headerlink" href="#debugging-basics" title="Permanent link">¶</a></h4>
 <p>The general skill of finding and fixing a mistake in a program that makes it behave differently than expected.</p>
 <p><strong>Example:</strong> If a sprite is supposed to jump but instead disappears, a student checks each block in order to find where things went wrong.</p>
 <p><strong>See also:</strong> Error Detection, Debugging Strategies</p>
-<h4 id="debugging-strategies">Debugging Strategies<a class="headerlink" href="#debugging-strategies" title="Permanent link">&para;</a></h4>
+<h4 id="debugging-strategies">Debugging Strategies<a class="headerlink" href="#debugging-strategies" title="Permanent link">¶</a></h4>
 <p>Organized methods for finding the cause of a problem in a script, such as running it one block at a time or checking a variable's value.</p>
 <p><strong>Example:</strong> A student can click blocks one at a time in a script to run just part of it and see which piece causes the problem.</p>
 <p><strong>See also:</strong> Debugging Basics, Testing Strategies</p>
-<h4 id="decision-making">Decision Making<a class="headerlink" href="#decision-making" title="Permanent link">&para;</a></h4>
+<h4 id="decision-making">Decision Making<a class="headerlink" href="#decision-making" title="Permanent link">¶</a></h4>
 <p>Choosing between different actions in a program based on whether a condition is true or false.</p>
 <p><strong>See also:</strong> If Block, If Else Block</p>
-<h4 id="delete-block">Delete Block<a class="headerlink" href="#delete-block" title="Permanent link">&para;</a></h4>
+<h4 id="delete-block">Delete Block<a class="headerlink" href="#delete-block" title="Permanent link">¶</a></h4>
 <p>Removing a block from a script, usually by dragging it back into the blocks palette or right-clicking it and choosing delete.</p>
-<h4 id="delete-from-list">Delete From List<a class="headerlink" href="#delete-from-list" title="Permanent link">&para;</a></h4>
+<h4 id="delete-from-list">Delete From List<a class="headerlink" href="#delete-from-list" title="Permanent link">¶</a></h4>
 <p>A list block that removes one item from a chosen list at a specific position.</p>
 <p><strong>Example:</strong> "Delete 1 of myList" removes the very first item stored in a list, shifting the others up.</p>
 <p><strong>See also:</strong> Add To List</p>
-<h4 id="delete-this-clone">Delete This Clone<a class="headerlink" href="#delete-this-clone" title="Permanent link">&para;</a></h4>
+<h4 id="delete-this-clone">Delete This Clone<a class="headerlink" href="#delete-this-clone" title="Permanent link">¶</a></h4>
 <p>A control block that removes the clone running the current script from the project, freeing up computer memory.</p>
 <p><strong>Example:</strong> A bullet clone can delete itself as soon as it goes off the edge of the stage so it does not keep using memory.</p>
 <p><strong>See also:</strong> When I Start As Clone, Clone Performance</p>
-<h4 id="design-journal">Design Journal<a class="headerlink" href="#design-journal" title="Permanent link">&para;</a></h4>
+<h4 id="design-journal">Design Journal<a class="headerlink" href="#design-journal" title="Permanent link">¶</a></h4>
 <p>A written or drawn record a creator keeps while building a project, noting ideas, problems, and changes along the way.</p>
 <p><strong>See also:</strong> Reflection, Plan Phase</p>
-<h4 id="design-process">Design Process<a class="headerlink" href="#design-process" title="Permanent link">&para;</a></h4>
+<h4 id="design-process">Design Process<a class="headerlink" href="#design-process" title="Permanent link">¶</a></h4>
 <p>A repeatable set of stages creators move through to turn an idea into a finished project, including imagining, planning, creating, testing, and improving it.</p>
 <p><strong>Example:</strong> A student might imagine a fishing game, plan its sprites, create the scripts, test it with a friend, improve the confusing parts, then share it.</p>
 <p><strong>See also:</strong> Imagine Phase, Plan Phase, Test Phase</p>
-<h4 id="dialogue-timing">Dialogue Timing<a class="headerlink" href="#dialogue-timing" title="Permanent link">&para;</a></h4>
+<h4 id="dialogue-timing">Dialogue Timing<a class="headerlink" href="#dialogue-timing" title="Permanent link">¶</a></h4>
 <p>Controlling how long each character's speech bubble stays on screen and when the next one begins, so a conversation feels natural to follow.</p>
 <p><strong>Example:</strong> Giving each character's say block about 2 seconds keeps a conversation from flashing by too fast to read.</p>
 <p><strong>See also:</strong> Say Block, Broadcast And Wait</p>
-<h4 id="dice-roll">Dice Roll<a class="headerlink" href="#dice-roll" title="Permanent link">&para;</a></h4>
+<h4 id="dice-roll">Dice Roll<a class="headerlink" href="#dice-roll" title="Permanent link">¶</a></h4>
 <p>A common project example that uses the pick random block to choose a whole number between one and six, imitating a real die.</p>
 <p><strong>See also:</strong> Pick Random, Unpredictable Gameplay</p>
-<h4 id="distance-to-sensor">Distance To Sensor<a class="headerlink" href="#distance-to-sensor" title="Permanent link">&para;</a></h4>
+<h4 id="distance-to-sensor">Distance To Sensor<a class="headerlink" href="#distance-to-sensor" title="Permanent link">¶</a></h4>
 <p>A sensing block that reports the number of steps between a sprite and a chosen point, such as another sprite or the mouse pointer.</p>
 <p><strong>Example:</strong> "Distance to Cat2" can tell an enemy sprite how close it is getting to the player's sprite.</p>
-<h4 id="drag-and-drop">Drag And Drop<a class="headerlink" href="#drag-and-drop" title="Permanent link">&para;</a></h4>
+<h4 id="drag-and-drop">Drag And Drop<a class="headerlink" href="#drag-and-drop" title="Permanent link">¶</a></h4>
 <p>Clicking a block, moving the mouse while holding the click, and releasing it in a new spot — the main way blocks are added to a script.</p>
 <p><strong>See also:</strong> Snap Together, Script Area</p>
-<h4 id="drawing-trails">Drawing Trails<a class="headerlink" href="#drawing-trails" title="Permanent link">&para;</a></h4>
+<h4 id="drawing-trails">Drawing Trails<a class="headerlink" href="#drawing-trails" title="Permanent link">¶</a></h4>
 <p>Lines a sprite leaves behind as it moves across the stage after its pen has been put down.</p>
 <p><strong>Example:</strong> A sprite with its pen down that moves in a circle leaves behind a circular trail on the stage.</p>
 <p><strong>See also:</strong> Pen Down, Pen Extension</p>
-<h4 id="duplicate-block">Duplicate Block<a class="headerlink" href="#duplicate-block" title="Permanent link">&para;</a></h4>
+<h4 id="duplicate-block">Duplicate Block<a class="headerlink" href="#duplicate-block" title="Permanent link">¶</a></h4>
 <p>Making an exact copy of a block or a whole stack of blocks, usually by right-clicking it and choosing duplicate.</p>
 <p><strong>Example:</strong> Right-clicking a "move 10 steps" block and choosing duplicate creates an identical copy that can be dragged into another script.</p>
 <p><strong>See also:</strong> Clean Up Blocks</p>
-<h4 id="enemy-movement">Enemy Movement<a class="headerlink" href="#enemy-movement" title="Permanent link">&para;</a></h4>
+<h4 id="enemy-movement">Enemy Movement<a class="headerlink" href="#enemy-movement" title="Permanent link">¶</a></h4>
 <p>Scripts that move an opposing sprite in a game, often using loops, random numbers, or sensing blocks so it does not move the exact same way every time.</p>
 <p><strong>Example:</strong> An enemy sprite might use "point towards Cat1" and "move 3 steps" inside a forever loop to slowly chase the player.</p>
 <p><strong>See also:</strong> Unpredictable Gameplay, Collision Detection</p>
-<h4 id="equal-operator">Equal Operator<a class="headerlink" href="#equal-operator" title="Permanent link">&para;</a></h4>
+<h4 id="equal-operator">Equal Operator<a class="headerlink" href="#equal-operator" title="Permanent link">¶</a></h4>
 <p>An operator block that reports true when two entered values are exactly the same.</p>
 <p><strong>Example:</strong> "Answer = cat" reports true only if a player types exactly the word "cat" into an answer box.</p>
 <p><strong>See also:</strong> Less Than Operator, Greater Than Operator</p>
-<h4 id="erase-all">Erase All<a class="headerlink" href="#erase-all" title="Permanent link">&para;</a></h4>
+<h4 id="erase-all">Erase All<a class="headerlink" href="#erase-all" title="Permanent link">¶</a></h4>
 <p>The specific pen block labeled "erase all" that removes every drawn line and stamp from the stage in one step.</p>
 <p><strong>Example:</strong> Clicking "erase all" at the start of a drawing project clears any lines left over from the last time it ran.</p>
 <p><strong>See also:</strong> Clear Graphics</p>
-<h4 id="error-detection">Error Detection<a class="headerlink" href="#error-detection" title="Permanent link">&para;</a></h4>
+<h4 id="error-detection">Error Detection<a class="headerlink" href="#error-detection" title="Permanent link">¶</a></h4>
 <p>Noticing that a script is not producing the result a user expected, which is the first step toward fixing it.</p>
 <p><strong>Example:</strong> Noticing that a sprite always starts in the wrong spot is the first clue that a "go to" block might be missing.</p>
 <p><strong>See also:</strong> Debugging Basics, Debugging Strategies</p>
-<h4 id="event-blocks">Event Blocks<a class="headerlink" href="#event-blocks" title="Permanent link">&para;</a></h4>
+<h4 id="event-blocks">Event Blocks<a class="headerlink" href="#event-blocks" title="Permanent link">¶</a></h4>
 <p>The yellow-colored group of blocks that start scripts in response to something happening, such as a click, a key press, or a message.</p>
 <p><strong>Example:</strong> A "when green flag clicked" block and a "when space key pressed" block can each start their own separate script.</p>
 <p><strong>See also:</strong> Green Flag Event, Broadcast Message</p>
-<h4 id="event-driven-programming">Event Driven Programming<a class="headerlink" href="#event-driven-programming" title="Permanent link">&para;</a></h4>
+<h4 id="event-driven-programming">Event Driven Programming<a class="headerlink" href="#event-driven-programming" title="Permanent link">¶</a></h4>
 <p>A way of writing programs where scripts wait and then run in response to things happening, such as clicks or messages, instead of always running straight through from top to bottom.</p>
 <p><strong>Example:</strong> A game character does nothing until the player presses an arrow key, at which point its "when key pressed" script runs.</p>
 <p><strong>See also:</strong> Event Blocks, Broadcast Message</p>
-<h4 id="event-queue">Event Queue<a class="headerlink" href="#event-queue" title="Permanent link">&para;</a></h4>
+<h4 id="event-queue">Event Queue<a class="headerlink" href="#event-queue" title="Permanent link">¶</a></h4>
 <p>The list Scratch keeps of triggered events and messages that are waiting to start the scripts that respond to them.</p>
 <p><strong>See also:</strong> Broadcast Message, Event Blocks</p>
-<h4 id="events-block-category">Events Block Category<a class="headerlink" href="#events-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="events-block-category">Events Block Category<a class="headerlink" href="#events-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded yellow, holding hat blocks that start scripts when something happens.</p>
 <p><strong>See also:</strong> Event Blocks, Block Color Coding</p>
-<h4 id="extension-management">Extension Management<a class="headerlink" href="#extension-management" title="Permanent link">&para;</a></h4>
+<h4 id="extension-management">Extension Management<a class="headerlink" href="#extension-management" title="Permanent link">¶</a></h4>
 <p>Adding, viewing, or removing the extensions loaded into a project.</p>
 <p><strong>See also:</strong> Add Extension</p>
-<h4 id="file-menu">File Menu<a class="headerlink" href="#file-menu" title="Permanent link">&para;</a></h4>
+<h4 id="file-menu">File Menu<a class="headerlink" href="#file-menu" title="Permanent link">¶</a></h4>
 <p>The menu in the Scratch editor's toolbar with options for starting a new project, loading a file, and saving work.</p>
 <p><strong>Example:</strong> Choosing "New" from the File menu starts a brand new, empty project.</p>
 <p><strong>See also:</strong> Toolbar, Saving Projects</p>
-<h4 id="flowchart">Flowchart<a class="headerlink" href="#flowchart" title="Permanent link">&para;</a></h4>
+<h4 id="flowchart">Flowchart<a class="headerlink" href="#flowchart" title="Permanent link">¶</a></h4>
 <p>A diagram made of shapes and arrows that shows the order of steps and decisions a program will make.</p>
 <p><strong>Example:</strong> A flowchart for a quiz game might show a diamond shape asking "Correct?" with arrows leading to "add point" or "try again."</p>
 <p><strong>See also:</strong> Pseudocode, Decision Making</p>
-<h4 id="for-all-sprites">For All Sprites<a class="headerlink" href="#for-all-sprites" title="Permanent link">&para;</a></h4>
+<h4 id="for-all-sprites">For All Sprites<a class="headerlink" href="#for-all-sprites" title="Permanent link">¶</a></h4>
 <p>A variable setting that makes a variable's value shared, so every sprite in the project can see and change it.</p>
 <p>Unlike a variable set "for this sprite only," a shared variable has one single value used by the whole project.</p>
 <p><strong>Example:</strong> A shared "score" variable set "for all sprites" updates the same total no matter which sprite changes it.</p>
 <p><strong>See also:</strong> For This Sprite Only, Variable Scope</p>
-<h4 id="for-this-sprite-only">For This Sprite Only<a class="headerlink" href="#for-this-sprite-only" title="Permanent link">&para;</a></h4>
+<h4 id="for-this-sprite-only">For This Sprite Only<a class="headerlink" href="#for-this-sprite-only" title="Permanent link">¶</a></h4>
 <p>A variable setting that keeps a variable private, so only the sprite that owns it can see or change its value.</p>
 <p><strong>Example:</strong> Each enemy sprite can have its own private health variable, separate from every other enemy's health.</p>
 <p><strong>See also:</strong> For All Sprites, Variable Scope</p>
-<h4 id="forever-loop">Forever Loop<a class="headerlink" href="#forever-loop" title="Permanent link">&para;</a></h4>
+<h4 id="forever-loop">Forever Loop<a class="headerlink" href="#forever-loop" title="Permanent link">¶</a></h4>
 <p>A control block that repeats the blocks placed inside it without stopping, until the project itself is stopped.</p>
 <p>Unlike a repeat loop, which stops after a set number of times, a forever loop keeps going the whole time a project runs.</p>
 <p><strong>Example:</strong> A "forever" loop containing a move block makes a sprite drift across the stage the entire time a project runs.</p>
 <p><strong>See also:</strong> Repeat Loop, Repeat Until Loop</p>
-<h4 id="geometric-patterns">Geometric Patterns<a class="headerlink" href="#geometric-patterns" title="Permanent link">&para;</a></h4>
+<h4 id="geometric-patterns">Geometric Patterns<a class="headerlink" href="#geometric-patterns" title="Permanent link">¶</a></h4>
 <p>Shapes such as stars, spirals, or polygons drawn with the pen extension by repeating move and turn blocks a set number of times.</p>
 <p><strong>Example:</strong> A script with "repeat 5 [move 100 steps, turn 144 degrees]" draws a five-pointed star.</p>
 <p><strong>See also:</strong> Pen Extension, Repeat Loop, Loop Nesting</p>
-<h4 id="glide-to-position">Glide To Position<a class="headerlink" href="#glide-to-position" title="Permanent link">&para;</a></h4>
+<h4 id="glide-to-position">Glide To Position<a class="headerlink" href="#glide-to-position" title="Permanent link">¶</a></h4>
 <p>A motion block that smoothly moves a sprite to a specific coordinate over a chosen number of seconds, instead of jumping there instantly.</p>
 <p><strong>Example:</strong> Gliding a sprite for 2 seconds makes it slide smoothly across the stage rather than teleporting.</p>
 <p><strong>See also:</strong> Go To Position</p>
-<h4 id="go-to-position">Go To Position<a class="headerlink" href="#go-to-position" title="Permanent link">&para;</a></h4>
+<h4 id="go-to-position">Go To Position<a class="headerlink" href="#go-to-position" title="Permanent link">¶</a></h4>
 <p>A motion block that instantly moves a sprite to a specific x and y coordinate on the stage.</p>
 <p>It jumps a sprite there right away, unlike a glide block, which takes time to arrive.</p>
 <p><strong>Example:</strong> A "go to x: 0 y: 0" block snaps a sprite instantly back to the center of the stage.</p>
 <p><strong>See also:</strong> Glide To Position, Coordinate System</p>
-<h4 id="greater-than-operator">Greater Than Operator<a class="headerlink" href="#greater-than-operator" title="Permanent link">&para;</a></h4>
+<h4 id="greater-than-operator">Greater Than Operator<a class="headerlink" href="#greater-than-operator" title="Permanent link">¶</a></h4>
 <p>An operator block that reports true when the first value entered is larger than the second value.</p>
 <p><strong>Example:</strong> "Timer &gt; 30" reports true once thirty seconds have passed, which could end a timed level.</p>
 <p><strong>See also:</strong> Less Than Operator, Equal Operator</p>
-<h4 id="green-flag">Green Flag<a class="headerlink" href="#green-flag" title="Permanent link">&para;</a></h4>
+<h4 id="green-flag">Green Flag<a class="headerlink" href="#green-flag" title="Permanent link">¶</a></h4>
 <p>The green flag icon above the stage that a user clicks to start every script that begins with a "when green flag clicked" block.</p>
 <p><strong>See also:</strong> Green Flag Event, Stop Sign</p>
-<h4 id="green-flag-event">Green Flag Event<a class="headerlink" href="#green-flag-event" title="Permanent link">&para;</a></h4>
+<h4 id="green-flag-event">Green Flag Event<a class="headerlink" href="#green-flag-event" title="Permanent link">¶</a></h4>
 <p>The moment a user clicks the green flag, which triggers every script in a project that starts with a "when green flag clicked" hat block.</p>
 <p><strong>See also:</strong> Green Flag, Event Blocks</p>
-<h4 id="hat-block-shape">Hat Block Shape<a class="headerlink" href="#hat-block-shape" title="Permanent link">&para;</a></h4>
+<h4 id="hat-block-shape">Hat Block Shape<a class="headerlink" href="#hat-block-shape" title="Permanent link">¶</a></h4>
 <p>A rounded-top block shape used for blocks that start a script, such as event blocks, which cannot have another block snapped above them.</p>
 <p><strong>Example:</strong> A "when green flag clicked" block has a rounded top because it is a hat block that starts a script.</p>
 <p><strong>See also:</strong> Stack Block Shape, Event Blocks</p>
-<h4 id="hide-variable">Hide Variable<a class="headerlink" href="#hide-variable" title="Permanent link">&para;</a></h4>
+<h4 id="hide-variable">Hide Variable<a class="headerlink" href="#hide-variable" title="Permanent link">¶</a></h4>
 <p>A variables block that removes a variable's display box from the stage, without deleting the variable or its stored value.</p>
 <p><strong>See also:</strong> Show Variable</p>
-<h4 id="high-score-list">High Score List<a class="headerlink" href="#high-score-list" title="Permanent link">&para;</a></h4>
+<h4 id="high-score-list">High Score List<a class="headerlink" href="#high-score-list" title="Permanent link">¶</a></h4>
 <p>A list used to keep and display several top scores from a game, instead of just the single most recent score.</p>
 <p><strong>Example:</strong> A high score list might show the top five scores, like 120, 95, 80, 75, and 60, from everyone who has played.</p>
 <p><strong>See also:</strong> Score Variable, List Creation</p>
-<h4 id="if-block">If Block<a class="headerlink" href="#if-block" title="Permanent link">&para;</a></h4>
+<h4 id="if-block">If Block<a class="headerlink" href="#if-block" title="Permanent link">¶</a></h4>
 <p>A control block that runs the blocks inside it only when a chosen condition is true, and otherwise does nothing.</p>
 <p>Unlike an if-else block, a plain if block has no alternate set of actions for when the condition is false.</p>
 <p><strong>Example:</strong> "If touching edge, then turn 180 degrees" makes a sprite bounce back only when it reaches the side of the stage.</p>
 <p><strong>See also:</strong> If Else Block, Conditional Branching</p>
-<h4 id="if-else-block">If Else Block<a class="headerlink" href="#if-else-block" title="Permanent link">&para;</a></h4>
+<h4 id="if-else-block">If Else Block<a class="headerlink" href="#if-else-block" title="Permanent link">¶</a></h4>
 <p>A control block that runs one set of blocks when a condition is true and a different set of blocks when it is false.</p>
 <p><strong>Example:</strong> "If touching color red, then say 'Ouch!', else say 'Safe!'" reacts differently depending on what the sprite touches.</p>
 <p><strong>See also:</strong> If Block, Decision Making</p>
-<h4 id="imagine-phase">Imagine Phase<a class="headerlink" href="#imagine-phase" title="Permanent link">&para;</a></h4>
+<h4 id="imagine-phase">Imagine Phase<a class="headerlink" href="#imagine-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator comes up with an idea for a project before building anything.</p>
 <p><strong>See also:</strong> Plan Phase, Design Process</p>
-<h4 id="improve-phase">Improve Phase<a class="headerlink" href="#improve-phase" title="Permanent link">&para;</a></h4>
+<h4 id="improve-phase">Improve Phase<a class="headerlink" href="#improve-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator fixes problems found during testing and adds new ideas to make a project better.</p>
 <p><strong>See also:</strong> Test Phase, Share Phase</p>
-<h4 id="infinite-loop-detection">Infinite Loop Detection<a class="headerlink" href="#infinite-loop-detection" title="Permanent link">&para;</a></h4>
+<h4 id="infinite-loop-detection">Infinite Loop Detection<a class="headerlink" href="#infinite-loop-detection" title="Permanent link">¶</a></h4>
 <p>Recognizing when a loop will never stop on its own, either because it is a forever loop or because its ending condition can never become true.</p>
 <p><strong>Example:</strong> A "repeat until score = 10" loop will never stop if nothing in the script ever changes the score.</p>
 <p><strong>See also:</strong> Forever Loop, Loop Termination</p>
-<h4 id="instructions-screen">Instructions Screen<a class="headerlink" href="#instructions-screen" title="Permanent link">&para;</a></h4>
+<h4 id="instructions-screen">Instructions Screen<a class="headerlink" href="#instructions-screen" title="Permanent link">¶</a></h4>
 <p>A backdrop or sprite in a project that explains to a player how to use or play it before the action starts.</p>
 <p><strong>Example:</strong> A backdrop showing "Use arrow keys to move and space to jump" can appear before a platformer game begins.</p>
-<h4 id="inventory-system">Inventory System<a class="headerlink" href="#inventory-system" title="Permanent link">&para;</a></h4>
+<h4 id="inventory-system">Inventory System<a class="headerlink" href="#inventory-system" title="Permanent link">¶</a></h4>
 <p>A list used in a game to keep track of items a player has collected, such as keys, coins, or tools.</p>
 <p><strong>Example:</strong> A list called "inventory" might hold the items "sword," "shield," and "potion" that a player has picked up.</p>
 <p><strong>See also:</strong> List Creation, Add To List</p>
-<h4 id="iterative-development">Iterative Development<a class="headerlink" href="#iterative-development" title="Permanent link">&para;</a></h4>
+<h4 id="iterative-development">Iterative Development<a class="headerlink" href="#iterative-development" title="Permanent link">¶</a></h4>
 <p>Building a project in small, repeated cycles of creating, testing, and improving instead of trying to finish everything at once.</p>
 <p><strong>See also:</strong> Design Process, Improve Phase</p>
-<h4 id="key-pressed-event">Key Pressed Event<a class="headerlink" href="#key-pressed-event" title="Permanent link">&para;</a></h4>
+<h4 id="key-pressed-event">Key Pressed Event<a class="headerlink" href="#key-pressed-event" title="Permanent link">¶</a></h4>
 <p>An event that happens the instant a user presses a chosen keyboard key, which can start a script beginning with "when key pressed."</p>
 <p>This hat block fires once at the moment of the key press, unlike the sensing block that can be checked repeatedly.</p>
 <p><strong>Example:</strong> A "when up arrow key pressed" block can make a sprite jump the instant a player presses that key.</p>
 <p><strong>See also:</strong> Key Pressed Sensor</p>
-<h4 id="key-pressed-sensor">Key Pressed Sensor<a class="headerlink" href="#key-pressed-sensor" title="Permanent link">&para;</a></h4>
+<h4 id="key-pressed-sensor">Key Pressed Sensor<a class="headerlink" href="#key-pressed-sensor" title="Permanent link">¶</a></h4>
 <p>A sensing block that reports true while a chosen keyboard key is currently held down, checked at any moment a script asks.</p>
 <p>Unlike the key pressed event, which fires once, this block can be checked over and over inside a loop.</p>
 <p><strong>Example:</strong> Checking "key space pressed?" inside a forever loop lets a sprite jump for as long as the space bar stays held down.</p>
 <p><strong>See also:</strong> Key Pressed Event, Player Control</p>
-<h4 id="less-than-operator">Less Than Operator<a class="headerlink" href="#less-than-operator" title="Permanent link">&para;</a></h4>
+<h4 id="less-than-operator">Less Than Operator<a class="headerlink" href="#less-than-operator" title="Permanent link">¶</a></h4>
 <p>An operator block that reports true when the first value entered is smaller than the second value.</p>
 <p><strong>Example:</strong> "Lives &lt; 1" reports true once a player's lives variable drops to zero, which can trigger a game over.</p>
 <p><strong>See also:</strong> Greater Than Operator, Equal Operator</p>
-<h4 id="lip-sync-animation">Lip Sync Animation<a class="headerlink" href="#lip-sync-animation" title="Permanent link">&para;</a></h4>
+<h4 id="lip-sync-animation">Lip Sync Animation<a class="headerlink" href="#lip-sync-animation" title="Permanent link">¶</a></h4>
 <p>Switching a sprite's mouth costumes in time with recorded speech or singing so it looks like the sprite is talking.</p>
 <p><strong>Example:</strong> A singing sprite can switch between mouth-open and mouth-closed costumes in time with a recorded song.</p>
 <p><strong>See also:</strong> Costume Animation, Beat Synchronization</p>
-<h4 id="list-block-category">List Block Category<a class="headerlink" href="#list-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="list-block-category">List Block Category<a class="headerlink" href="#list-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded a darker reddish-orange, holding blocks that create and manage lists.</p>
 <p><strong>See also:</strong> List Creation, Variables Block Category</p>
-<h4 id="list-contains">List Contains<a class="headerlink" href="#list-contains" title="Permanent link">&para;</a></h4>
+<h4 id="list-contains">List Contains<a class="headerlink" href="#list-contains" title="Permanent link">¶</a></h4>
 <p>A list block that reports true or false depending on whether a chosen value appears anywhere in a list.</p>
 <p><strong>Example:</strong> "Inventory contains key?" reports true only if the word "key" has been added to that list.</p>
 <p><strong>See also:</strong> List Length</p>
-<h4 id="list-creation">List Creation<a class="headerlink" href="#list-creation" title="Permanent link">&para;</a></h4>
+<h4 id="list-creation">List Creation<a class="headerlink" href="#list-creation" title="Permanent link">¶</a></h4>
 <p>Making a new named storage spot that can hold many values in order, instead of just the single value a variable holds.</p>
 <p><strong>Example:</strong> Creating a list called "highScores" gives a project a place to store many players' scores instead of just one.</p>
 <p><strong>See also:</strong> List Item Access, Variable Creation</p>
-<h4 id="list-item-access">List Item Access<a class="headerlink" href="#list-item-access" title="Permanent link">&para;</a></h4>
+<h4 id="list-item-access">List Item Access<a class="headerlink" href="#list-item-access" title="Permanent link">¶</a></h4>
 <p>Getting or using the value stored at a specific position in a list, such as the third item.</p>
 <p><strong>Example:</strong> "Item 3 of highScores" gets whatever score is stored in the third spot of that list.</p>
 <p><strong>See also:</strong> List Creation, List Length</p>
-<h4 id="list-length">List Length<a class="headerlink" href="#list-length" title="Permanent link">&para;</a></h4>
+<h4 id="list-length">List Length<a class="headerlink" href="#list-length" title="Permanent link">¶</a></h4>
 <p>A list block that reports how many items are currently stored in a chosen list.</p>
 <p><strong>Example:</strong> "Length of inventory" reports 4 if a player has collected exactly four items.</p>
 <p><strong>See also:</strong> List Contains, List Item Access</p>
-<h4 id="lives-variable">Lives Variable<a class="headerlink" href="#lives-variable" title="Permanent link">&para;</a></h4>
+<h4 id="lives-variable">Lives Variable<a class="headerlink" href="#lives-variable" title="Permanent link">¶</a></h4>
 <p>A variable commonly created in games to keep track of how many chances a player has left before losing.</p>
 <p><strong>Example:</strong> A game might start with a lives variable set to 3, subtracting one each time the player's sprite touches an enemy.</p>
 <p><strong>See also:</strong> Lose Condition</p>
-<h4 id="looks-block-category">Looks Block Category<a class="headerlink" href="#looks-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="looks-block-category">Looks Block Category<a class="headerlink" href="#looks-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded purple, holding blocks that change a sprite's costume, size, and speech.</p>
 <p><strong>See also:</strong> Looks Blocks, Block Color Coding</p>
-<h4 id="looks-blocks">Looks Blocks<a class="headerlink" href="#looks-blocks" title="Permanent link">&para;</a></h4>
+<h4 id="looks-blocks">Looks Blocks<a class="headerlink" href="#looks-blocks" title="Permanent link">¶</a></h4>
 <p>The purple-colored group of blocks used to change how a sprite appears, such as its costume, size, or spoken words.</p>
 <p><strong>Example:</strong> Combining "say Hello for 2 seconds" with "change size by 10" makes a sprite talk and grow at the same time.</p>
 <p><strong>See also:</strong> Say Block, Switch Costume, Change Size</p>
-<h4 id="loop-nesting">Loop Nesting<a class="headerlink" href="#loop-nesting" title="Permanent link">&para;</a></h4>
+<h4 id="loop-nesting">Loop Nesting<a class="headerlink" href="#loop-nesting" title="Permanent link">¶</a></h4>
 <p>Placing one loop entirely inside another loop, so the inner loop finishes completely each time before the outer loop continues.</p>
 <p><strong>Example:</strong> A loop that repeats 4 times, with a loop that repeats 5 times inside it, can draw five squares in a row.</p>
 <p><strong>See also:</strong> Repeat Loop, Geometric Patterns</p>
-<h4 id="loop-termination">Loop Termination<a class="headerlink" href="#loop-termination" title="Permanent link">&para;</a></h4>
+<h4 id="loop-termination">Loop Termination<a class="headerlink" href="#loop-termination" title="Permanent link">¶</a></h4>
 <p>The point at which a loop stops repeating, either because it reached its set number of repeats or because its condition became true.</p>
 <p><strong>Example:</strong> A "repeat 10" loop stops the moment it finishes its tenth repeat and moves on to the next block below it.</p>
 <p><strong>See also:</strong> Repeat Loop, Repeat Until Loop</p>
-<h4 id="lose-condition">Lose Condition<a class="headerlink" href="#lose-condition" title="Permanent link">&para;</a></h4>
+<h4 id="lose-condition">Lose Condition<a class="headerlink" href="#lose-condition" title="Permanent link">¶</a></h4>
 <p>The specific situation a program checks for that means a player has failed, such as running out of lives or time.</p>
 <p><strong>Example:</strong> A game might check "if lives = 0, then broadcast game over" to end the game once a player runs out of lives.</p>
 <p><strong>See also:</strong> Win Condition, Lives Variable</p>
-<h4 id="makey-makey-extension">Makey Makey Extension<a class="headerlink" href="#makey-makey-extension" title="Permanent link">&para;</a></h4>
+<h4 id="makey-makey-extension">Makey Makey Extension<a class="headerlink" href="#makey-makey-extension" title="Permanent link">¶</a></h4>
 <p>An extension that lets everyday conductive objects, connected to a Makey Makey device, act like keyboard keys to control a Scratch project.</p>
 <p><strong>Example:</strong> Bananas connected to a Makey Makey can be tapped like piano keys to play sounds in Scratch.</p>
 <p><strong>See also:</strong> Physical Computing, Micro Bit Extension</p>
-<h4 id="message-passing">Message Passing<a class="headerlink" href="#message-passing" title="Permanent link">&para;</a></h4>
+<h4 id="message-passing">Message Passing<a class="headerlink" href="#message-passing" title="Permanent link">¶</a></h4>
 <p>Sending information from one part of a program to another, in Scratch most often done by broadcasting a named message.</p>
 <p><strong>See also:</strong> Broadcast Message, Sprite Communication</p>
-<h4 id="micro-bit-extension">Micro Bit Extension<a class="headerlink" href="#micro-bit-extension" title="Permanent link">&para;</a></h4>
+<h4 id="micro-bit-extension">Micro Bit Extension<a class="headerlink" href="#micro-bit-extension" title="Permanent link">¶</a></h4>
 <p>An extension that lets a Scratch project send and receive signals to and from a micro:bit, a small physical computer with buttons, lights, and sensors.</p>
 <p><strong>Example:</strong> Pressing a button on a connected micro:bit can trigger a "when micro:bit button A pressed" script in Scratch.</p>
 <p><strong>See also:</strong> Physical Computing, Makey Makey Extension</p>
-<h4 id="motion-block-category">Motion Block Category<a class="headerlink" href="#motion-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="motion-block-category">Motion Block Category<a class="headerlink" href="#motion-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded blue, holding blocks that move, turn, and position sprites on the stage.</p>
 <p><strong>See also:</strong> Motion Blocks, Block Color Coding</p>
-<h4 id="motion-blocks">Motion Blocks<a class="headerlink" href="#motion-blocks" title="Permanent link">&para;</a></h4>
+<h4 id="motion-blocks">Motion Blocks<a class="headerlink" href="#motion-blocks" title="Permanent link">¶</a></h4>
 <p>The blue-colored group of blocks used to move a sprite, turn it, or change where it sits on the stage.</p>
 <p><strong>Example:</strong> Snapping together "move 10 steps" and "turn 15 degrees" makes a sprite walk forward and curve to one side.</p>
 <p><strong>See also:</strong> Move Steps, Turn Degrees, Go To Position</p>
-<h4 id="motion-detection">Motion Detection<a class="headerlink" href="#motion-detection" title="Permanent link">&para;</a></h4>
+<h4 id="motion-detection">Motion Detection<a class="headerlink" href="#motion-detection" title="Permanent link">¶</a></h4>
 <p>Measuring how much movement the video sensing extension sees in front of the camera, either across the whole stage or in one sprite's area.</p>
 <p><strong>See also:</strong> Video Sensing</p>
-<h4 id="move-steps">Move Steps<a class="headerlink" href="#move-steps" title="Permanent link">&para;</a></h4>
+<h4 id="move-steps">Move Steps<a class="headerlink" href="#move-steps" title="Permanent link">¶</a></h4>
 <p>A motion block that moves a sprite forward a chosen number of steps in the direction it is currently facing.</p>
 <p><strong>Example:</strong> A "move 10 steps" block placed inside a forever loop makes a sprite glide continuously across the stage.</p>
 <p><strong>See also:</strong> Turn Degrees, Continuous Motion</p>
-<h4 id="multilingual-projects">Multilingual Projects<a class="headerlink" href="#multilingual-projects" title="Permanent link">&para;</a></h4>
+<h4 id="multilingual-projects">Multilingual Projects<a class="headerlink" href="#multilingual-projects" title="Permanent link">¶</a></h4>
 <p>Projects built to work in more than one language, often using the translate extension so text and speech change for different players.</p>
 <p><strong>See also:</strong> Translate Extension</p>
-<h4 id="multiple-sprites">Multiple Sprites<a class="headerlink" href="#multiple-sprites" title="Permanent link">&para;</a></h4>
+<h4 id="multiple-sprites">Multiple Sprites<a class="headerlink" href="#multiple-sprites" title="Permanent link">¶</a></h4>
 <p>Having more than one sprite in a project at the same time, each with its own costumes, sounds, and scripts.</p>
 <p><strong>Example:</strong> A game might have a cat sprite the player controls and a separate mouse sprite that runs away from it.</p>
 <p><strong>See also:</strong> Sprite, Parallelism</p>
-<h4 id="my-blocks-category">My Blocks Category<a class="headerlink" href="#my-blocks-category" title="Permanent link">&para;</a></h4>
+<h4 id="my-blocks-category">My Blocks Category<a class="headerlink" href="#my-blocks-category" title="Permanent link">¶</a></h4>
 <p>The category in the blocks palette, color-coded pink-red, where custom blocks a user has made appear so they can be reused.</p>
 <p><strong>See also:</strong> Custom Block Definition, Abstraction</p>
-<h4 id="negative-x">Negative X<a class="headerlink" href="#negative-x" title="Permanent link">&para;</a></h4>
+<h4 id="negative-x">Negative X<a class="headerlink" href="#negative-x" title="Permanent link">¶</a></h4>
 <p>An x coordinate value less than zero, which places a point to the left of the stage's center.</p>
 <p><strong>Example:</strong> An x coordinate of -150 places a sprite to the left of center, toward the left edge of the stage.</p>
 <p><strong>See also:</strong> Positive X, X Coordinate</p>
-<h4 id="negative-y">Negative Y<a class="headerlink" href="#negative-y" title="Permanent link">&para;</a></h4>
+<h4 id="negative-y">Negative Y<a class="headerlink" href="#negative-y" title="Permanent link">¶</a></h4>
 <p>A y coordinate value less than zero, which places a point below the stage's center.</p>
 <p><strong>Example:</strong> A y coordinate of -120 places a sprite below center, toward the bottom of the stage.</p>
 <p><strong>See also:</strong> Positive Y, Y Coordinate</p>
-<h4 id="next-backdrop">Next Backdrop<a class="headerlink" href="#next-backdrop" title="Permanent link">&para;</a></h4>
+<h4 id="next-backdrop">Next Backdrop<a class="headerlink" href="#next-backdrop" title="Permanent link">¶</a></h4>
 <p>A looks block that changes the stage's background to whichever backdrop comes right after the current one in the backdrop list.</p>
 <p><strong>See also:</strong> Switch Backdrop</p>
-<h4 id="next-costume">Next Costume<a class="headerlink" href="#next-costume" title="Permanent link">&para;</a></h4>
+<h4 id="next-costume">Next Costume<a class="headerlink" href="#next-costume" title="Permanent link">¶</a></h4>
 <p>A looks block that changes a sprite's appearance to whichever costume comes right after its current one in the costume list, looping back to the first after the last.</p>
 <p><strong>Example:</strong> Placing "next costume" inside a loop with a short wait cycles a walking sprite through its walking costumes.</p>
 <p><strong>See also:</strong> Switch Costume, Costume Animation</p>
-<h4 id="not-operator">Not Operator<a class="headerlink" href="#not-operator" title="Permanent link">&para;</a></h4>
+<h4 id="not-operator">Not Operator<a class="headerlink" href="#not-operator" title="Permanent link">¶</a></h4>
 <p>A boolean operator block that flips a condition's value, reporting true when the condition inside it is false, and false when it is true.</p>
 <p><strong>Example:</strong> "Not touching edge" reports true whenever a sprite is safely away from the border of the stage.</p>
 <p><strong>See also:</strong> And Operator, Or Operator</p>
-<h4 id="operators-block-category">Operators Block Category<a class="headerlink" href="#operators-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="operators-block-category">Operators Block Category<a class="headerlink" href="#operators-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded green, holding blocks for math, text, comparisons, and boolean logic.</p>
 <p><strong>See also:</strong> Comparison Operators, Boolean Logic</p>
-<h4 id="or-operator">Or Operator<a class="headerlink" href="#or-operator" title="Permanent link">&para;</a></h4>
+<h4 id="or-operator">Or Operator<a class="headerlink" href="#or-operator" title="Permanent link">¶</a></h4>
 <p>A boolean operator block that reports true when at least one of the two conditions plugged into it is true.</p>
 <p><strong>Example:</strong> "Touching Enemy1 or touching Enemy2" triggers a lose condition if a sprite touches either enemy.</p>
 <p><strong>See also:</strong> And Operator, Boolean Logic</p>
-<h4 id="pair-programming">Pair Programming<a class="headerlink" href="#pair-programming" title="Permanent link">&para;</a></h4>
+<h4 id="pair-programming">Pair Programming<a class="headerlink" href="#pair-programming" title="Permanent link">¶</a></h4>
 <p>Two people working together at one computer to build a project, with one dragging blocks while the other watches, checks, and suggests ideas.</p>
 <p><strong>Example:</strong> One student drags blocks together while their partner watches the stage and calls out "that block should come first!"</p>
 <p><strong>See also:</strong> Community Feedback</p>
-<h4 id="parallelism">Parallelism<a class="headerlink" href="#parallelism" title="Permanent link">&para;</a></h4>
+<h4 id="parallelism">Parallelism<a class="headerlink" href="#parallelism" title="Permanent link">¶</a></h4>
 <p>The ability of a Scratch project to run more than one script at the same time, so multiple things can happen together.</p>
 <p><strong>Example:</strong> One script makes a sprite move while a second script, running at the same time, plays background music.</p>
 <p><strong>See also:</strong> Concurrent Scripts, Multiple Sprites</p>
-<h4 id="paste-from-backpack">Paste From Backpack<a class="headerlink" href="#paste-from-backpack" title="Permanent link">&para;</a></h4>
+<h4 id="paste-from-backpack">Paste From Backpack<a class="headerlink" href="#paste-from-backpack" title="Permanent link">¶</a></h4>
 <p>Dragging a sprite, script, costume, or sound out of the backpack into the current project to reuse it.</p>
 <p><strong>See also:</strong> Backpack, Copy To Backpack</p>
-<h4 id="pen-color">Pen Color<a class="headerlink" href="#pen-color" title="Permanent link">&para;</a></h4>
+<h4 id="pen-color">Pen Color<a class="headerlink" href="#pen-color" title="Permanent link">¶</a></h4>
 <p>A pen block setting that controls what color the line is that a sprite draws while its pen is down.</p>
 <p><strong>Example:</strong> Setting the pen color to blue before drawing makes a sprite leave behind a blue trail instead of the default color.</p>
 <p><strong>See also:</strong> Pen Size, Rainbow Lines</p>
-<h4 id="pen-down">Pen Down<a class="headerlink" href="#pen-down" title="Permanent link">&para;</a></h4>
+<h4 id="pen-down">Pen Down<a class="headerlink" href="#pen-down" title="Permanent link">¶</a></h4>
 <p>A pen block that turns on drawing, so a sprite leaves a trail behind it as it moves.</p>
 <p><strong>Example:</strong> Putting the pen down before a sprite moves in a square pattern draws the outline of a square on the stage.</p>
 <p><strong>See also:</strong> Pen Up, Drawing Trails</p>
-<h4 id="pen-extension">Pen Extension<a class="headerlink" href="#pen-extension" title="Permanent link">&para;</a></h4>
+<h4 id="pen-extension">Pen Extension<a class="headerlink" href="#pen-extension" title="Permanent link">¶</a></h4>
 <p>An add-on set of blocks that lets a sprite draw lines and stamps on the stage as it moves.</p>
 <p><strong>Example:</strong> Adding the pen extension lets a sprite draw a trail behind it as it moves in a spiral.</p>
 <p><strong>See also:</strong> Add Extension, Drawing Trails, Pen Down</p>
-<h4 id="pen-size">Pen Size<a class="headerlink" href="#pen-size" title="Permanent link">&para;</a></h4>
+<h4 id="pen-size">Pen Size<a class="headerlink" href="#pen-size" title="Permanent link">¶</a></h4>
 <p>A pen block setting that controls how thick or thin the line is that a sprite draws while its pen is down.</p>
 <p><strong>Example:</strong> Setting pen size to 10 draws a thick, bold line instead of a thin one.</p>
 <p><strong>See also:</strong> Pen Color</p>
-<h4 id="pen-up">Pen Up<a class="headerlink" href="#pen-up" title="Permanent link">&para;</a></h4>
+<h4 id="pen-up">Pen Up<a class="headerlink" href="#pen-up" title="Permanent link">¶</a></h4>
 <p>A pen block that turns off drawing, so a sprite can move around without leaving a trail behind it.</p>
 <p><strong>Example:</strong> Lifting the pen up lets a sprite move back to its starting spot without drawing a line across the stage.</p>
 <p><strong>See also:</strong> Pen Down</p>
-<h4 id="physical-computing">Physical Computing<a class="headerlink" href="#physical-computing" title="Permanent link">&para;</a></h4>
+<h4 id="physical-computing">Physical Computing<a class="headerlink" href="#physical-computing" title="Permanent link">¶</a></h4>
 <p>Connecting a computer program to real objects and devices, such as buttons, sensors, or fruit, so they can send input to or receive output from the program.</p>
 <p><strong>See also:</strong> Micro Bit Extension, Makey Makey Extension</p>
-<h4 id="pick-random">Pick Random<a class="headerlink" href="#pick-random" title="Permanent link">&para;</a></h4>
+<h4 id="pick-random">Pick Random<a class="headerlink" href="#pick-random" title="Permanent link">¶</a></h4>
 <p>An operator block that reports a random number between two chosen values each time it is checked.</p>
 <p><strong>Example:</strong> "Pick random -240 to 240" can choose a random x coordinate to make a sprite appear in a different spot each time.</p>
 <p><strong>See also:</strong> Random Number, Dice Roll</p>
-<h4 id="plan-phase">Plan Phase<a class="headerlink" href="#plan-phase" title="Permanent link">&para;</a></h4>
+<h4 id="plan-phase">Plan Phase<a class="headerlink" href="#plan-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator decides what sprites, backdrops, and scripts a project will need before building it.</p>
 <p><strong>See also:</strong> Imagine Phase, Storyboarding</p>
-<h4 id="play-sound">Play Sound<a class="headerlink" href="#play-sound" title="Permanent link">&para;</a></h4>
+<h4 id="play-sound">Play Sound<a class="headerlink" href="#play-sound" title="Permanent link">¶</a></h4>
 <p>A sound block that plays a chosen sound and waits until it finishes before the script moves on to the next block.</p>
 <p>Unlike the start sound block, this one pauses the script until the sound is done playing.</p>
 <p><strong>Example:</strong> Using "play sound explosion until done" makes a script wait for the whole explosion sound before showing a game over message.</p>
 <p><strong>See also:</strong> Start Sound</p>
-<h4 id="player-control">Player Control<a class="headerlink" href="#player-control" title="Permanent link">&para;</a></h4>
+<h4 id="player-control">Player Control<a class="headerlink" href="#player-control" title="Permanent link">¶</a></h4>
 <p>Scripts that let a person steer or move a sprite using inputs like arrow keys, the mouse, or other sensors.</p>
 <p><strong>Example:</strong> Scripts with "when up arrow key pressed, change y by 10," repeated for each arrow key, let a player steer a sprite around the stage.</p>
 <p><strong>See also:</strong> Key Pressed Sensor, Collision Detection</p>
-<h4 id="polishing">Polishing<a class="headerlink" href="#polishing" title="Permanent link">&para;</a></h4>
+<h4 id="polishing">Polishing<a class="headerlink" href="#polishing" title="Permanent link">¶</a></h4>
 <p>Making small improvements to a mostly finished project, such as adding sound effects or fixing awkward timing, so it feels more complete.</p>
 <p><strong>Example:</strong> Adding a sound effect when a coin is collected and smoothing out a jerky jump animation are both ways of polishing a finished game.</p>
 <p><strong>See also:</strong> Improve Phase, Visual Juice</p>
-<h4 id="positive-x">Positive X<a class="headerlink" href="#positive-x" title="Permanent link">&para;</a></h4>
+<h4 id="positive-x">Positive X<a class="headerlink" href="#positive-x" title="Permanent link">¶</a></h4>
 <p>An x coordinate value greater than zero, which places a point to the right of the stage's center.</p>
 <p><strong>Example:</strong> An x coordinate of 150 places a sprite to the right of center, toward the right edge of the stage.</p>
 <p><strong>See also:</strong> Negative X, X Coordinate</p>
-<h4 id="positive-y">Positive Y<a class="headerlink" href="#positive-y" title="Permanent link">&para;</a></h4>
+<h4 id="positive-y">Positive Y<a class="headerlink" href="#positive-y" title="Permanent link">¶</a></h4>
 <p>A y coordinate value greater than zero, which places a point above the stage's center.</p>
 <p><strong>Example:</strong> A y coordinate of 120 places a sprite above center, toward the top of the stage.</p>
 <p><strong>See also:</strong> Negative Y, Y Coordinate</p>
-<h4 id="project-description">Project Description<a class="headerlink" href="#project-description" title="Permanent link">&para;</a></h4>
+<h4 id="project-description">Project Description<a class="headerlink" href="#project-description" title="Permanent link">¶</a></h4>
 <p>The written text on a project page that explains what a project is about and, often, how to use it.</p>
 <p><strong>See also:</strong> Instructions Screen, Project Tags</p>
-<h4 id="project-page">Project Page<a class="headerlink" href="#project-page" title="Permanent link">&para;</a></h4>
+<h4 id="project-page">Project Page<a class="headerlink" href="#project-page" title="Permanent link">¶</a></h4>
 <p>The webpage on the Scratch website that shows a shared project along with its title, instructions, credits, and comments.</p>
 <p><strong>Example:</strong> A project page for a racing game shows its title, a green flag to play it, and comments from other players.</p>
 <p><strong>See also:</strong> Project Description, Credits</p>
-<h4 id="project-tags">Project Tags<a class="headerlink" href="#project-tags" title="Permanent link">&para;</a></h4>
+<h4 id="project-tags">Project Tags<a class="headerlink" href="#project-tags" title="Permanent link">¶</a></h4>
 <p>Short keywords added to a shared project so it turns up in related searches on the Scratch website.</p>
 <p><strong>Example:</strong> Adding the tags "game," "maze," and "tutorial" helps other members find a project when they search for maze games.</p>
 <p><strong>See also:</strong> Project Description, Sharing Projects</p>
-<h4 id="pseudocode">Pseudocode<a class="headerlink" href="#pseudocode" title="Permanent link">&para;</a></h4>
+<h4 id="pseudocode">Pseudocode<a class="headerlink" href="#pseudocode" title="Permanent link">¶</a></h4>
 <p>A plain-language description of what a program should do, written in ordinary sentences instead of actual code blocks.</p>
 <p><strong>Example:</strong> "When the flag is clicked, move the cat until it hits the wall" is pseudocode for a simple script.</p>
 <p><strong>See also:</strong> Flowchart, Algorithmic Thinking</p>
-<h4 id="rainbow-lines">Rainbow Lines<a class="headerlink" href="#rainbow-lines" title="Permanent link">&para;</a></h4>
+<h4 id="rainbow-lines">Rainbow Lines<a class="headerlink" href="#rainbow-lines" title="Permanent link">¶</a></h4>
 <p>Pen trails that gradually shift through different colors, usually made by changing the pen color block repeatedly inside a loop.</p>
 <p><strong>Example:</strong> A spinning sprite with its pen down and its color changing each step can draw a rainbow spiral.</p>
 <p><strong>See also:</strong> Pen Color, Drawing Trails</p>
-<h4 id="random-number">Random Number<a class="headerlink" href="#random-number" title="Permanent link">&para;</a></h4>
+<h4 id="random-number">Random Number<a class="headerlink" href="#random-number" title="Permanent link">¶</a></h4>
 <p>A number chosen unpredictably from a set range, produced in Scratch by the "pick random" operator block.</p>
 <p><strong>Example:</strong> "Pick random 1 to 10" can produce a different number, such as 7 or 3, each time a script runs.</p>
 <p><strong>See also:</strong> Pick Random</p>
-<h4 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h4>
+<h4 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">¶</a></h4>
 <p>Thinking back on a finished or in-progress project to consider what worked well, what was hard, and what could be done differently.</p>
 <p><strong>Example:</strong> A student might write "next time I would add a start screen and make the enemies move faster" after finishing a project.</p>
 <p><strong>See also:</strong> Design Journal, Share Phase</p>
-<h4 id="remix-exploration">Remix Exploration<a class="headerlink" href="#remix-exploration" title="Permanent link">&para;</a></h4>
+<h4 id="remix-exploration">Remix Exploration<a class="headerlink" href="#remix-exploration" title="Permanent link">¶</a></h4>
 <p>Looking through different remixes of a shared project to see the variety of ways other members changed and improved it.</p>
 <p><strong>Example:</strong> A student can browse several remixes of a popular maze game to see how other kids added new obstacles.</p>
 <p><strong>See also:</strong> Remixing, Remix Tree</p>
-<h4 id="remix-tree">Remix Tree<a class="headerlink" href="#remix-tree" title="Permanent link">&para;</a></h4>
+<h4 id="remix-tree">Remix Tree<a class="headerlink" href="#remix-tree" title="Permanent link">¶</a></h4>
 <p>A diagram on the Scratch website showing how a project and its remixes are related, tracing back to the original creator.</p>
 <p><strong>Example:</strong> A remix tree might show an original maze game with three branches leading to different students' remade versions.</p>
 <p><strong>See also:</strong> Remixing, Credit Attribution</p>
-<h4 id="remixing">Remixing<a class="headerlink" href="#remixing" title="Permanent link">&para;</a></h4>
+<h4 id="remixing">Remixing<a class="headerlink" href="#remixing" title="Permanent link">¶</a></h4>
 <p>Making a copy of someone else's shared Scratch project and changing it to create a new version.</p>
 <p>Remixing lets creators learn from each other's code and build on good ideas instead of starting from nothing.</p>
 <p><strong>Example:</strong> A student remixes a maze game to add new levels and a different main character.</p>
 <p><strong>See also:</strong> Remix Tree, Credit Attribution</p>
-<h4 id="repeat-loop">Repeat Loop<a class="headerlink" href="#repeat-loop" title="Permanent link">&para;</a></h4>
+<h4 id="repeat-loop">Repeat Loop<a class="headerlink" href="#repeat-loop" title="Permanent link">¶</a></h4>
 <p>A control block that runs the blocks inside it a specific number of times before moving on to the next block in the script.</p>
 <p>Unlike a forever loop, a repeat loop stops on its own once it reaches its set count.</p>
 <p><strong>Example:</strong> A "repeat 4" loop containing a turn and move block can draw a square shape.</p>
 <p><strong>See also:</strong> Forever Loop, Repeat Until Loop, Counted Repetition</p>
-<h4 id="repeat-until-loop">Repeat Until Loop<a class="headerlink" href="#repeat-until-loop" title="Permanent link">&para;</a></h4>
+<h4 id="repeat-until-loop">Repeat Until Loop<a class="headerlink" href="#repeat-until-loop" title="Permanent link">¶</a></h4>
 <p>A control block that repeats the blocks inside it until a chosen condition becomes true, then stops and moves on.</p>
 <p>Unlike a repeat loop, it does not use a fixed count; unlike a forever loop, it always has a way to stop.</p>
 <p><strong>Example:</strong> A "repeat until touching edge" loop keeps moving a sprite forward until it reaches the side of the stage.</p>
 <p><strong>See also:</strong> Repeat Loop, Forever Loop, Condition Controlled Loop</p>
-<h4 id="reporter-block-shape">Reporter Block Shape<a class="headerlink" href="#reporter-block-shape" title="Permanent link">&para;</a></h4>
+<h4 id="reporter-block-shape">Reporter Block Shape<a class="headerlink" href="#reporter-block-shape" title="Permanent link">¶</a></h4>
 <p>A rounded, oval block shape that holds a value, such as a number or piece of text, and fits into the input slots of other blocks.</p>
 <p>Unlike a boolean block, a reporter block can hold many kinds of values, not just true or false.</p>
 <p><strong>Example:</strong> The oval "x position" block can be dropped into the input slot of a "say" block to show a sprite's current x value.</p>
 <p><strong>See also:</strong> Boolean Block Shape</p>
-<h4 id="reusability">Reusability<a class="headerlink" href="#reusability" title="Permanent link">&para;</a></h4>
+<h4 id="reusability">Reusability<a class="headerlink" href="#reusability" title="Permanent link">¶</a></h4>
 <p>Building a script, block, or sprite so it can be used again in other parts of a project or in different projects.</p>
 <p><strong>See also:</strong> Abstraction, Custom Block Definition</p>
-<h4 id="run-without-screen-refresh">Run Without Screen Refresh<a class="headerlink" href="#run-without-screen-refresh" title="Permanent link">&para;</a></h4>
+<h4 id="run-without-screen-refresh">Run Without Screen Refresh<a class="headerlink" href="#run-without-screen-refresh" title="Permanent link">¶</a></h4>
 <p>A custom block setting that lets its whole script finish before the stage visually updates, useful for drawing many pen lines quickly.</p>
 <p><strong>Example:</strong> Turning this on for a custom drawing block lets a whole spiral finish drawing before it appears, instead of drawing bit by bit.</p>
 <p><strong>See also:</strong> Custom Block Definition, Pen Extension</p>
-<h4 id="saving-projects">Saving Projects<a class="headerlink" href="#saving-projects" title="Permanent link">&para;</a></h4>
+<h4 id="saving-projects">Saving Projects<a class="headerlink" href="#saving-projects" title="Permanent link">¶</a></h4>
 <p>Storing the current state of a Scratch project, either on the Scratch website or as a file on a computer, so the work is not lost.</p>
 <p><strong>Example:</strong> Choosing File then Save keeps a maze game's current sprites and scripts so they are not lost after closing the browser.</p>
 <p><strong>See also:</strong> Versioning, File Menu</p>
-<h4 id="say-block">Say Block<a class="headerlink" href="#say-block" title="Permanent link">&para;</a></h4>
+<h4 id="say-block">Say Block<a class="headerlink" href="#say-block" title="Permanent link">¶</a></h4>
 <p>A looks block that shows a speech bubble with chosen text above a sprite, either for a set number of seconds or until changed.</p>
 <p>This is different from the think block, which shows a thought bubble instead of speech.</p>
 <p><strong>Example:</strong> A cat sprite can say "Hello!" for two seconds when the green flag is clicked.</p>
 <p><strong>See also:</strong> Think Block, Talking Sprites</p>
-<h4 id="scene-coordination">Scene Coordination<a class="headerlink" href="#scene-coordination" title="Permanent link">&para;</a></h4>
+<h4 id="scene-coordination">Scene Coordination<a class="headerlink" href="#scene-coordination" title="Permanent link">¶</a></h4>
 <p>Using broadcast messages and backdrop changes together to control the order in which different parts of a story or game happen.</p>
 <p><strong>Example:</strong> Broadcasting "scene2" can switch the backdrop and start new dialogue scripts at the same time to move a story forward.</p>
 <p><strong>See also:</strong> Scene Planning, Switch Backdrop</p>
-<h4 id="scene-planning">Scene Planning<a class="headerlink" href="#scene-planning" title="Permanent link">&para;</a></h4>
+<h4 id="scene-planning">Scene Planning<a class="headerlink" href="#scene-planning" title="Permanent link">¶</a></h4>
 <p>Deciding ahead of time what backdrops, sprites, and events will appear in each part of a project.</p>
 <p><strong>Example:</strong> A student decides ahead of time that scene one needs a bedroom backdrop and a cat sprite, and scene two needs a park backdrop.</p>
 <p><strong>See also:</strong> Storyboarding, Storytelling Flow</p>
-<h4 id="score-variable">Score Variable<a class="headerlink" href="#score-variable" title="Permanent link">&para;</a></h4>
+<h4 id="score-variable">Score Variable<a class="headerlink" href="#score-variable" title="Permanent link">¶</a></h4>
 <p>A variable commonly created in games to keep track of a player's points as they play.</p>
 <p><strong>Example:</strong> A "change score by 1" block run every time a coin sprite is touched slowly builds up a player's score.</p>
 <p><strong>See also:</strong> Change Variable, High Score List</p>
-<h4 id="scratch-account">Scratch Account<a class="headerlink" href="#scratch-account" title="Permanent link">&para;</a></h4>
+<h4 id="scratch-account">Scratch Account<a class="headerlink" href="#scratch-account" title="Permanent link">¶</a></h4>
 <p>A personal login on the Scratch website that lets a person save projects online, join studios, and leave comments on other members' work.</p>
 <p><strong>Example:</strong> Signing in to a Scratch account lets a student save a half-finished game and come back to it the next day.</p>
 <p><strong>See also:</strong> Saving Projects, Studio</p>
-<h4 id="script-area">Script Area<a class="headerlink" href="#script-area" title="Permanent link">&para;</a></h4>
+<h4 id="script-area">Script Area<a class="headerlink" href="#script-area" title="Permanent link">¶</a></h4>
 <p>The large workspace in the code tab where blocks are dragged and connected to build scripts.</p>
 <p><strong>See also:</strong> Code Tab, Drag And Drop</p>
-<h4 id="script-reading-order">Script Reading Order<a class="headerlink" href="#script-reading-order" title="Permanent link">&para;</a></h4>
+<h4 id="script-reading-order">Script Reading Order<a class="headerlink" href="#script-reading-order" title="Permanent link">¶</a></h4>
 <p>The practice of reading a script starting at its top hat block and moving downward, in the same order the blocks will actually run.</p>
 <p><strong>See also:</strong> Sequence, Debugging Basics</p>
-<h4 id="scrolling-background">Scrolling Background<a class="headerlink" href="#scrolling-background" title="Permanent link">&para;</a></h4>
+<h4 id="scrolling-background">Scrolling Background<a class="headerlink" href="#scrolling-background" title="Permanent link">¶</a></h4>
 <p>A visual trick where a backdrop or image seems to slide across the stage, often used to make a sprite look like it is running or flying a long distance.</p>
 <p><strong>Example:</strong> A road backdrop can slide backward inside a forever loop to make a car sprite look like it is driving forward forever.</p>
 <p><strong>See also:</strong> Continuous Motion</p>
-<h4 id="sensing-block-category">Sensing Block Category<a class="headerlink" href="#sensing-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="sensing-block-category">Sensing Block Category<a class="headerlink" href="#sensing-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded light blue, holding blocks that detect touching, key presses, and other inputs.</p>
 <p><strong>See also:</strong> Touching Sensor, Key Pressed Sensor</p>
-<h4 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">&para;</a></h4>
+<h4 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">¶</a></h4>
 <p>The order in which coding blocks run, one after another from top to bottom, within a single script.</p>
 <p>Changing the order of blocks can completely change what a program does, so getting the sequence right matters.</p>
 <p><strong>Example:</strong> Turning a sprite before moving it makes it walk in a new direction, but moving then turning does not.</p>
 <p><strong>See also:</strong> Script Reading Order, Step By Step Thinking</p>
-<h4 id="set-variable">Set Variable<a class="headerlink" href="#set-variable" title="Permanent link">&para;</a></h4>
+<h4 id="set-variable">Set Variable<a class="headerlink" href="#set-variable" title="Permanent link">¶</a></h4>
 <p>A variables block that gives a variable a specific value, replacing whatever value it held before.</p>
 <p>Unlike the change variable block, which adds or subtracts, this block always replaces the old value completely.</p>
 <p><strong>Example:</strong> "Set score to 0" resets a player's score back to zero at the very start of a game.</p>
 <p><strong>See also:</strong> Change Variable</p>
-<h4 id="share-phase">Share Phase<a class="headerlink" href="#share-phase" title="Permanent link">&para;</a></h4>
+<h4 id="share-phase">Share Phase<a class="headerlink" href="#share-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator publishes a finished project for others to see, play, and give feedback on.</p>
 <p><strong>See also:</strong> Improve Phase, Sharing Projects</p>
-<h4 id="sharing-projects">Sharing Projects<a class="headerlink" href="#sharing-projects" title="Permanent link">&para;</a></h4>
+<h4 id="sharing-projects">Sharing Projects<a class="headerlink" href="#sharing-projects" title="Permanent link">¶</a></h4>
 <p>Publishing a Scratch project on the Scratch website so other members can view, play, and remix it.</p>
 <p><strong>Example:</strong> Clicking the Share button lets a student's classmates play and comment on their finished cat game.</p>
 <p><strong>See also:</strong> Project Page, Share Phase</p>
-<h4 id="show-variable">Show Variable<a class="headerlink" href="#show-variable" title="Permanent link">&para;</a></h4>
+<h4 id="show-variable">Show Variable<a class="headerlink" href="#show-variable" title="Permanent link">¶</a></h4>
 <p>A variables block that displays a variable's current value in a small box on the stage.</p>
 <p><strong>Example:</strong> Checking the box next to the score variable displays a small scoreboard in the corner of the stage.</p>
 <p><strong>See also:</strong> Hide Variable</p>
-<h4 id="snap-together">Snap Together<a class="headerlink" href="#snap-together" title="Permanent link">&para;</a></h4>
+<h4 id="snap-together">Snap Together<a class="headerlink" href="#snap-together" title="Permanent link">¶</a></h4>
 <p>The way two compatible blocks click into place and connect when dragged close to each other.</p>
 <p><strong>See also:</strong> Drag And Drop, Stack Block Shape</p>
-<h4 id="sound-block-category">Sound Block Category<a class="headerlink" href="#sound-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="sound-block-category">Sound Block Category<a class="headerlink" href="#sound-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded pink, holding blocks that play sounds and adjust volume and tempo.</p>
 <p><strong>See also:</strong> Sound Blocks, Block Color Coding</p>
-<h4 id="sound-blocks">Sound Blocks<a class="headerlink" href="#sound-blocks" title="Permanent link">&para;</a></h4>
+<h4 id="sound-blocks">Sound Blocks<a class="headerlink" href="#sound-blocks" title="Permanent link">¶</a></h4>
 <p>The pink-colored group of blocks used to play, start, and adjust audio in a Scratch project.</p>
 <p><strong>Example:</strong> Snapping together "play sound pop" with "change volume by -10" makes a sound play while also getting quieter over time.</p>
 <p><strong>See also:</strong> Play Sound, Start Sound, Change Tempo</p>
-<h4 id="sound-effects">Sound Effects<a class="headerlink" href="#sound-effects" title="Permanent link">&para;</a></h4>
+<h4 id="sound-effects">Sound Effects<a class="headerlink" href="#sound-effects" title="Permanent link">¶</a></h4>
 <p>Short audio clips added to a project to react to actions, such as a pop when a sprite is clicked or a chime when points are scored.</p>
 <p><strong>Example:</strong> A short "ding" sound played whenever a coin is collected makes collecting feel more rewarding.</p>
 <p><strong>See also:</strong> Sound Blocks, Visual Juice</p>
-<h4 id="sounds-tab">Sounds Tab<a class="headerlink" href="#sounds-tab" title="Permanent link">&para;</a></h4>
+<h4 id="sounds-tab">Sounds Tab<a class="headerlink" href="#sounds-tab" title="Permanent link">¶</a></h4>
 <p>The section of the Scratch editor where a user records, imports, and edits the audio clips a sprite can play.</p>
 <p><strong>Example:</strong> A student can click the microphone icon in the Sounds tab to record themselves saying "Ready, set, go!"</p>
 <p><strong>See also:</strong> Play Sound, Sound Effects</p>
-<h4 id="sprite">Sprite<a class="headerlink" href="#sprite" title="Permanent link">&para;</a></h4>
+<h4 id="sprite">Sprite<a class="headerlink" href="#sprite" title="Permanent link">¶</a></h4>
 <p>A character or object on the Scratch stage that can be programmed to move, change appearance, and interact with other objects.</p>
 <p>Sprites are the main actors in every Scratch project — without at least one sprite, there is nothing to animate or control.</p>
 <p><strong>Example:</strong> A cat, a spaceship, or a soccer ball can all be sprites in a Scratch project.</p>
 <p><strong>See also:</strong> Stage, Costumes Tab</p>
-<h4 id="sprite-clicked-event">Sprite Clicked Event<a class="headerlink" href="#sprite-clicked-event" title="Permanent link">&para;</a></h4>
+<h4 id="sprite-clicked-event">Sprite Clicked Event<a class="headerlink" href="#sprite-clicked-event" title="Permanent link">¶</a></h4>
 <p>An event that happens the instant a user clicks directly on a sprite, which can start a script beginning with "when this sprite clicked."</p>
 <p><strong>Example:</strong> A balloon sprite can use this block to pop and disappear the moment a player taps it.</p>
 <p><strong>See also:</strong> Event Blocks</p>
-<h4 id="sprite-communication">Sprite Communication<a class="headerlink" href="#sprite-communication" title="Permanent link">&para;</a></h4>
+<h4 id="sprite-communication">Sprite Communication<a class="headerlink" href="#sprite-communication" title="Permanent link">¶</a></h4>
 <p>Sprites sharing information or coordinating their actions with each other, most often done in Scratch through broadcast messages.</p>
 <p><strong>See also:</strong> Broadcast Message, Message Passing</p>
-<h4 id="stack-block-shape">Stack Block Shape<a class="headerlink" href="#stack-block-shape" title="Permanent link">&para;</a></h4>
+<h4 id="stack-block-shape">Stack Block Shape<a class="headerlink" href="#stack-block-shape" title="Permanent link">¶</a></h4>
 <p>A puzzle-piece block shape with a notch on top and a bump on bottom, letting it snap above and below other blocks in a sequence.</p>
 <p><strong>Example:</strong> A "move 10 steps" block has a notch on top and a bump on the bottom so it can snap between other stack blocks.</p>
 <p><strong>See also:</strong> Hat Block Shape, Snap Together</p>
-<h4 id="stage">Stage<a class="headerlink" href="#stage" title="Permanent link">&para;</a></h4>
+<h4 id="stage">Stage<a class="headerlink" href="#stage" title="Permanent link">¶</a></h4>
 <p>The rectangular area in the Scratch editor where sprites move, appear, and act out a program while it runs.</p>
 <p><strong>Example:</strong> In a game project, the stage might show a backdrop of outer space with a rocket sprite flying across it.</p>
 <p><strong>See also:</strong> Sprite, Stage Size</p>
-<h4 id="stage-center">Stage Center<a class="headerlink" href="#stage-center" title="Permanent link">&para;</a></h4>
+<h4 id="stage-center">Stage Center<a class="headerlink" href="#stage-center" title="Permanent link">¶</a></h4>
 <p>The middle point of the stage, located at x coordinate 0 and y coordinate 0.</p>
 <p><strong>Example:</strong> Using "go to x: 0 y: 0" sends a sprite straight to the exact middle of the stage.</p>
 <p><strong>See also:</strong> Coordinate System, Stage Size</p>
-<h4 id="stage-size">Stage Size<a class="headerlink" href="#stage-size" title="Permanent link">&para;</a></h4>
+<h4 id="stage-size">Stage Size<a class="headerlink" href="#stage-size" title="Permanent link">¶</a></h4>
 <p>The fixed width and height of the Scratch stage, 480 steps wide and 360 steps tall, measured in the coordinate system.</p>
 <p><strong>Example:</strong> A sprite placed at x: 300 would be pushed off the right edge of the stage, since the stage only spans from -240 to 240.</p>
 <p><strong>See also:</strong> Coordinate System, Stage Center</p>
-<h4 id="stamp">Stamp<a class="headerlink" href="#stamp" title="Permanent link">&para;</a></h4>
+<h4 id="stamp">Stamp<a class="headerlink" href="#stamp" title="Permanent link">¶</a></h4>
 <p>A pen block that leaves a permanent, unmoving copy of a sprite's current costume on the stage at its current position.</p>
 <p>Unlike cloning, a stamp is just a picture — it cannot run scripts or move on its own afterward.</p>
 <p><strong>Example:</strong> A paintbrush sprite can stamp its costume across the stage to leave a trail of unmoving copies, like a rubber stamp.</p>
 <p><strong>See also:</strong> Pen Extension, Cloning</p>
-<h4 id="start-sound">Start Sound<a class="headerlink" href="#start-sound" title="Permanent link">&para;</a></h4>
+<h4 id="start-sound">Start Sound<a class="headerlink" href="#start-sound" title="Permanent link">¶</a></h4>
 <p>A sound block that begins playing a chosen sound and immediately moves on to the next block, without waiting for the sound to finish.</p>
 <p><strong>Example:</strong> Using "start sound footstep" as a sprite walks lets the next block run right away instead of waiting for the sound to finish.</p>
 <p><strong>See also:</strong> Play Sound</p>
-<h4 id="step-by-step-thinking">Step By Step Thinking<a class="headerlink" href="#step-by-step-thinking" title="Permanent link">&para;</a></h4>
+<h4 id="step-by-step-thinking">Step By Step Thinking<a class="headerlink" href="#step-by-step-thinking" title="Permanent link">¶</a></h4>
 <p>Breaking a task into a list of small, ordered actions that happen one at a time, the way a recipe lists cooking steps.</p>
 <p><strong>Example:</strong> Making a peanut butter sandwich can be broken into steps: get bread, open the jar, spread peanut butter, then put the slices together.</p>
 <p><strong>See also:</strong> Sequence, Algorithmic Thinking</p>
-<h4 id="stop-sign">Stop Sign<a class="headerlink" href="#stop-sign" title="Permanent link">&para;</a></h4>
+<h4 id="stop-sign">Stop Sign<a class="headerlink" href="#stop-sign" title="Permanent link">¶</a></h4>
 <p>The red octagon icon above the stage that immediately stops every script currently running in a project.</p>
 <p><strong>Example:</strong> Clicking the stop sign instantly freezes a sprite mid-jump if a script has a bug that makes it fly off the stage.</p>
 <p><strong>See also:</strong> Green Flag</p>
-<h4 id="storyboard">Storyboard<a class="headerlink" href="#storyboard" title="Permanent link">&para;</a></h4>
+<h4 id="storyboard">Storyboard<a class="headerlink" href="#storyboard" title="Permanent link">¶</a></h4>
 <p>A series of small drawings, usually arranged in a grid, that lays out the scenes and action of a project in order before it is built.</p>
 <p><strong>See also:</strong> Storyboarding, Scene Planning</p>
-<h4 id="storyboarding">Storyboarding<a class="headerlink" href="#storyboarding" title="Permanent link">&para;</a></h4>
+<h4 id="storyboarding">Storyboarding<a class="headerlink" href="#storyboarding" title="Permanent link">¶</a></h4>
 <p>Sketching a series of small pictures that show the main scenes of a story or game in order, before building it in Scratch.</p>
 <p><strong>Example:</strong> A student draws four boxes showing a cat waking up, eating, playing, and sleeping before building the animation in Scratch.</p>
 <p><strong>See also:</strong> Storyboard, Scene Planning</p>
-<h4 id="storytelling-flow">Storytelling Flow<a class="headerlink" href="#storytelling-flow" title="Permanent link">&para;</a></h4>
+<h4 id="storytelling-flow">Storytelling Flow<a class="headerlink" href="#storytelling-flow" title="Permanent link">¶</a></h4>
 <p>The order in which scenes, dialogue, and actions unfold in an animated story so it makes sense from beginning to end.</p>
 <p><strong>See also:</strong> Scene Coordination, Storyboarding</p>
-<h4 id="studio">Studio<a class="headerlink" href="#studio" title="Permanent link">&para;</a></h4>
+<h4 id="studio">Studio<a class="headerlink" href="#studio" title="Permanent link">¶</a></h4>
 <p>A shared collection of Scratch projects that different members can add to, gathered around a common theme or purpose.</p>
 <p><strong>Example:</strong> A class might create a studio called "Our Space Games" where every student adds their own rocket game.</p>
 <p><strong>See also:</strong> Sharing Projects, Remixing</p>
-<h4 id="switch-backdrop">Switch Backdrop<a class="headerlink" href="#switch-backdrop" title="Permanent link">&para;</a></h4>
+<h4 id="switch-backdrop">Switch Backdrop<a class="headerlink" href="#switch-backdrop" title="Permanent link">¶</a></h4>
 <p>A looks block that changes the stage's background image to a specific backdrop, chosen by name or number.</p>
 <p><strong>Example:</strong> A "switch backdrop to forest" block changes the stage's background to a forest scene right away.</p>
 <p><strong>See also:</strong> Next Backdrop, Backdrop Switch Event</p>
-<h4 id="switch-costume">Switch Costume<a class="headerlink" href="#switch-costume" title="Permanent link">&para;</a></h4>
+<h4 id="switch-costume">Switch Costume<a class="headerlink" href="#switch-costume" title="Permanent link">¶</a></h4>
 <p>A looks block that changes a sprite's appearance to a specific costume, chosen by name or number from its costume list.</p>
 <p><strong>Example:</strong> A "switch costume to costume2" block instantly changes a sprite's outfit, like flipping a light switch.</p>
 <p><strong>See also:</strong> Next Costume, Costume Animation</p>
-<h4 id="synchronous-broadcast">Synchronous Broadcast<a class="headerlink" href="#synchronous-broadcast" title="Permanent link">&para;</a></h4>
+<h4 id="synchronous-broadcast">Synchronous Broadcast<a class="headerlink" href="#synchronous-broadcast" title="Permanent link">¶</a></h4>
 <p>A broadcast that pauses the sending script until every script responding to the message finishes running, created with the "broadcast and wait" block.</p>
 <p><strong>See also:</strong> Broadcast And Wait, Asynchronous Broadcast</p>
-<h4 id="talking-sprites">Talking Sprites<a class="headerlink" href="#talking-sprites" title="Permanent link">&para;</a></h4>
+<h4 id="talking-sprites">Talking Sprites<a class="headerlink" href="#talking-sprites" title="Permanent link">¶</a></h4>
 <p>Sprites that appear to speak, either by showing written text in a say block or by using the text-to-speech extension to make actual sound.</p>
 <p><strong>See also:</strong> Text To Speech, Say Block</p>
-<h4 id="test-phase">Test Phase<a class="headerlink" href="#test-phase" title="Permanent link">&para;</a></h4>
+<h4 id="test-phase">Test Phase<a class="headerlink" href="#test-phase" title="Permanent link">¶</a></h4>
 <p>The stage of the design process where a creator runs a project to see if it works the way it was planned.</p>
 <p><strong>See also:</strong> Create Phase, Improve Phase</p>
-<h4 id="testing-strategies">Testing Strategies<a class="headerlink" href="#testing-strategies" title="Permanent link">&para;</a></h4>
+<h4 id="testing-strategies">Testing Strategies<a class="headerlink" href="#testing-strategies" title="Permanent link">¶</a></h4>
 <p>Different planned ways of trying out a project, such as checking every button or trying to break it on purpose, used to find as many problems as possible.</p>
 <p><strong>Example:</strong> A student might test a maze game by trying to walk into every wall on purpose to see if the sprite ever gets stuck.</p>
 <p><strong>See also:</strong> Test Phase, Debugging Strategies</p>
-<h4 id="text-to-speech">Text To Speech<a class="headerlink" href="#text-to-speech" title="Permanent link">&para;</a></h4>
+<h4 id="text-to-speech">Text To Speech<a class="headerlink" href="#text-to-speech" title="Permanent link">¶</a></h4>
 <p>An extension that makes a sprite speak chosen written text out loud in a computer-generated voice.</p>
 <p>Unlike the say block, which only shows silent text in a bubble, this extension produces actual sound.</p>
 <p><strong>Example:</strong> A "speak Hello there" block makes a sprite say the words out loud in a computer voice, even without a recorded sound file.</p>
 <p><strong>See also:</strong> Talking Sprites, Say Block</p>
-<h4 id="think-block">Think Block<a class="headerlink" href="#think-block" title="Permanent link">&para;</a></h4>
+<h4 id="think-block">Think Block<a class="headerlink" href="#think-block" title="Permanent link">¶</a></h4>
 <p>A looks block that shows a thought bubble with chosen text above a sprite, representing what it is imagining rather than saying out loud.</p>
 <p><strong>Example:</strong> A sprite can show a thought bubble that says "Hmm, which way should I go?" while deciding what to do next.</p>
 <p><strong>See also:</strong> Say Block</p>
-<h4 id="timer-variable">Timer Variable<a class="headerlink" href="#timer-variable" title="Permanent link">&para;</a></h4>
+<h4 id="timer-variable">Timer Variable<a class="headerlink" href="#timer-variable" title="Permanent link">¶</a></h4>
 <p>A built-in value from the sensing blocks that counts seconds since a project started or was last reset, and can be shown on the stage like a variable.</p>
 <p><strong>Example:</strong> Showing the timer on stage lets players see exactly how many seconds have passed since they clicked the green flag.</p>
 <p><strong>See also:</strong> Show Variable, Test Phase</p>
-<h4 id="toolbar">Toolbar<a class="headerlink" href="#toolbar" title="Permanent link">&para;</a></h4>
+<h4 id="toolbar">Toolbar<a class="headerlink" href="#toolbar" title="Permanent link">¶</a></h4>
 <p>The row of icons and menus at the top of the Scratch editor used for tasks like naming a project, saving it, or changing its language.</p>
 <p><strong>See also:</strong> File Menu, Zoom Controls</p>
-<h4 id="touching-color-sensor">Touching Color Sensor<a class="headerlink" href="#touching-color-sensor" title="Permanent link">&para;</a></h4>
+<h4 id="touching-color-sensor">Touching Color Sensor<a class="headerlink" href="#touching-color-sensor" title="Permanent link">¶</a></h4>
 <p>A sensing block that reports true when a sprite is touching a chosen color anywhere on the stage.</p>
 <p><strong>Example:</strong> "If touching color green" can check whether a car sprite has driven off the road and onto the grass.</p>
 <p><strong>See also:</strong> Touching Sensor</p>
-<h4 id="touching-sensor">Touching Sensor<a class="headerlink" href="#touching-sensor" title="Permanent link">&para;</a></h4>
+<h4 id="touching-sensor">Touching Sensor<a class="headerlink" href="#touching-sensor" title="Permanent link">¶</a></h4>
 <p>A sensing block that reports true when a sprite is touching a chosen sprite, the edge of the stage, or the mouse pointer.</p>
 <p><strong>Example:</strong> "If touching Goalpost" can check whether a soccer ball sprite has reached the goal.</p>
 <p><strong>See also:</strong> Touching Color Sensor, Collision Detection</p>
-<h4 id="translate-extension">Translate Extension<a class="headerlink" href="#translate-extension" title="Permanent link">&para;</a></h4>
+<h4 id="translate-extension">Translate Extension<a class="headerlink" href="#translate-extension" title="Permanent link">¶</a></h4>
 <p>An extension that changes chosen text from one language into another while a project is running.</p>
 <p><strong>Example:</strong> A "translate Hello to Spanish" block can turn the word "Hello" into "Hola" while a project is running.</p>
 <p><strong>See also:</strong> Multilingual Projects, Accessibility Features</p>
-<h4 id="turn-degrees">Turn Degrees<a class="headerlink" href="#turn-degrees" title="Permanent link">&para;</a></h4>
+<h4 id="turn-degrees">Turn Degrees<a class="headerlink" href="#turn-degrees" title="Permanent link">¶</a></h4>
 <p>A motion block that rotates a sprite clockwise or counterclockwise by a chosen number of degrees.</p>
 <p><strong>Example:</strong> A "turn 90 degrees" block rotates a sprite a quarter turn clockwise, like turning a corner.</p>
 <p><strong>See also:</strong> Move Steps</p>
-<h4 id="unpredictable-gameplay">Unpredictable Gameplay<a class="headerlink" href="#unpredictable-gameplay" title="Permanent link">&para;</a></h4>
+<h4 id="unpredictable-gameplay">Unpredictable Gameplay<a class="headerlink" href="#unpredictable-gameplay" title="Permanent link">¶</a></h4>
 <p>Game behavior that changes each time it is played because it depends on random numbers rather than always following the same pattern.</p>
 <p><strong>Example:</strong> An enemy sprite that picks a random direction to move every few seconds makes a game feel different each time it is played.</p>
 <p><strong>See also:</strong> Random Number, Enemy Movement</p>
-<h4 id="variable-creation">Variable Creation<a class="headerlink" href="#variable-creation" title="Permanent link">&para;</a></h4>
+<h4 id="variable-creation">Variable Creation<a class="headerlink" href="#variable-creation" title="Permanent link">¶</a></h4>
 <p>Making a new named storage spot in a project that can hold a changing number or piece of text while a program runs.</p>
 <p><strong>Example:</strong> Creating a variable called "score" gives a project a place to store and update a player's points.</p>
 <p><strong>See also:</strong> Set Variable, Variable Scope</p>
-<h4 id="variable-scope">Variable Scope<a class="headerlink" href="#variable-scope" title="Permanent link">&para;</a></h4>
+<h4 id="variable-scope">Variable Scope<a class="headerlink" href="#variable-scope" title="Permanent link">¶</a></h4>
 <p>The range of sprites that are allowed to see and use a particular variable, set in Scratch to either every sprite or just one.</p>
 <p><strong>See also:</strong> For All Sprites, For This Sprite Only</p>
-<h4 id="variables-block-category">Variables Block Category<a class="headerlink" href="#variables-block-category" title="Permanent link">&para;</a></h4>
+<h4 id="variables-block-category">Variables Block Category<a class="headerlink" href="#variables-block-category" title="Permanent link">¶</a></h4>
 <p>One of the ten block categories in the blocks palette, color-coded orange, holding blocks that create, set, change, and display variables.</p>
 <p><strong>See also:</strong> Variable Creation, Set Variable</p>
-<h4 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h4>
+<h4 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">¶</a></h4>
 <p>Keeping track of different saved copies of a project over time so earlier versions can be compared or brought back if needed.</p>
 <p><strong>Example:</strong> Saving copies named "game_v1," "game_v2," and "game_v3" lets a student go back to an earlier version if a new idea breaks something.</p>
 <p><strong>See also:</strong> Saving Projects</p>
-<h4 id="video-sensing">Video Sensing<a class="headerlink" href="#video-sensing" title="Permanent link">&para;</a></h4>
+<h4 id="video-sensing">Video Sensing<a class="headerlink" href="#video-sensing" title="Permanent link">¶</a></h4>
 <p>An extension that lets a project detect motion seen through a computer's camera.</p>
 <p><strong>Example:</strong> The video sensing extension can detect a player waving their hand in front of the camera to control a sprite.</p>
 <p><strong>See also:</strong> Motion Detection, Camera Games</p>
-<h4 id="visual-juice">Visual Juice<a class="headerlink" href="#visual-juice" title="Permanent link">&para;</a></h4>
+<h4 id="visual-juice">Visual Juice<a class="headerlink" href="#visual-juice" title="Permanent link">¶</a></h4>
 <p>Small extra effects, like sparkles, wiggles, or flashes, added to a project to make actions feel more exciting without changing how the game actually works.</p>
 <p><strong>Example:</strong> Making a sprite briefly grow bigger and flash a different color when it scores a point adds visual juice without changing the scoring itself.</p>
 <p><strong>See also:</strong> Sound Effects, Polishing</p>
-<h4 id="visual-programming">Visual Programming<a class="headerlink" href="#visual-programming" title="Permanent link">&para;</a></h4>
+<h4 id="visual-programming">Visual Programming<a class="headerlink" href="#visual-programming" title="Permanent link">¶</a></h4>
 <p>A way of writing computer programs by dragging and snapping together colorful blocks instead of typing lines of text.</p>
 <p>It lets beginners build real programs without worrying about spelling, punctuation, or memorizing typed commands.</p>
 <p><strong>Example:</strong> Dragging a "move 10 steps" block into place is visual programming, instead of typing a line like move(10).</p>
 <p><strong>See also:</strong> Sprite, Blocks Palette</p>
-<h4 id="when-i-receive">When I Receive<a class="headerlink" href="#when-i-receive" title="Permanent link">&para;</a></h4>
+<h4 id="when-i-receive">When I Receive<a class="headerlink" href="#when-i-receive" title="Permanent link">¶</a></h4>
 <p>An event hat block that starts a script as soon as a chosen broadcast message is sent anywhere in the project.</p>
 <p><strong>Example:</strong> Every sprite with a "when I receive game over" block will react the moment any sprite broadcasts that message.</p>
 <p><strong>See also:</strong> Broadcast Message</p>
-<h4 id="when-i-start-as-clone">When I Start As Clone<a class="headerlink" href="#when-i-start-as-clone" title="Permanent link">&para;</a></h4>
+<h4 id="when-i-start-as-clone">When I Start As Clone<a class="headerlink" href="#when-i-start-as-clone" title="Permanent link">¶</a></h4>
 <p>A control hat block that starts a script the moment a new clone is created, running only on that clone rather than the original sprite.</p>
 <p><strong>Example:</strong> A bullet sprite can use this block to make each new clone fly forward on its own as soon as it is made.</p>
 <p><strong>See also:</strong> Create Clone, Delete This Clone</p>
-<h4 id="win-condition">Win Condition<a class="headerlink" href="#win-condition" title="Permanent link">&para;</a></h4>
+<h4 id="win-condition">Win Condition<a class="headerlink" href="#win-condition" title="Permanent link">¶</a></h4>
 <p>The specific situation a program checks for that means a player has succeeded, such as reaching a certain score or touching a goal.</p>
 <p><strong>Example:</strong> A game might check "if score = 10, then broadcast you win" to end the game once a player collects ten coins.</p>
 <p><strong>See also:</strong> Lose Condition, Score Variable</p>
-<h4 id="x-coordinate">X Coordinate<a class="headerlink" href="#x-coordinate" title="Permanent link">&para;</a></h4>
+<h4 id="x-coordinate">X Coordinate<a class="headerlink" href="#x-coordinate" title="Permanent link">¶</a></h4>
 <p>A number that tells how far left or right a point is from the center of the stage, with negative values to the left and positive values to the right.</p>
 <p><strong>Example:</strong> An x coordinate of 200 places a sprite near the right edge of the stage, while -200 places it near the left edge.</p>
 <p><strong>See also:</strong> Y Coordinate, Coordinate System</p>
-<h4 id="y-coordinate">Y Coordinate<a class="headerlink" href="#y-coordinate" title="Permanent link">&para;</a></h4>
+<h4 id="y-coordinate">Y Coordinate<a class="headerlink" href="#y-coordinate" title="Permanent link">¶</a></h4>
 <p>A number that tells how far up or down a point is from the center of the stage, with negative values below and positive values above.</p>
 <p><strong>Example:</strong> A y coordinate of 150 places a sprite near the top of the stage, while -150 places it near the bottom.</p>
 <p><strong>See also:</strong> X Coordinate, Coordinate System</p>
-<h4 id="zoom-controls">Zoom Controls<a class="headerlink" href="#zoom-controls" title="Permanent link">&para;</a></h4>
+<h4 id="zoom-controls">Zoom Controls<a class="headerlink" href="#zoom-controls" title="Permanent link">¶</a></h4>
 <p>The buttons near the stage that make the stage view appear larger or smaller on screen without changing the size of anything in the project itself.</p>
 
 
@@ -6560,9 +6626,9 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -6572,20 +6638,20 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../sims/graph-viewer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Learning Graph Viewer">
+          <a href="../faq/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FAQ">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
               <div class="md-ellipsis">
-                Learning Graph Viewer
+                FAQ
               </div>
             </div>
           </a>
@@ -6603,7 +6669,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -6615,7 +6681,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -6639,6 +6705,12 @@
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+      
+        <script src="../js/scratchblocks-init.js"></script>
+      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

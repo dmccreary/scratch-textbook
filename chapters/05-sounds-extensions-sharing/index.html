@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +21,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
@@ -49,8 +46,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,13 +56,25 @@
     
       <link rel="stylesheet" href="../../css/mascot.css">
     
+      <link rel="stylesheet" href="../../css/scratchblocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -100,13 +109,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -134,29 +142,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -164,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -182,7 +190,7 @@
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -206,7 +214,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -217,8 +225,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Scratch Programming for Kids
@@ -228,7 +235,7 @@
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -236,7 +243,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -366,7 +373,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -403,7 +410,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -583,7 +590,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -1655,7 +1662,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Project Page — Your Project&#39;s Home!">
+    <nav class="md-nav" aria-label="Project Page — Your Project's Home!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2138,6 +2145,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2194,6 +2207,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2231,6 +2270,33 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2324,7 +2390,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2340,7 +2406,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -3412,7 +3478,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Project Page — Your Project&#39;s Home!">
+    <nav class="md-nav" aria-label="Project Page — Your Project's Home!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3704,7 +3770,7 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
         
@@ -3753,16 +3819,16 @@
   
     <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/05-sounds-extensions-sharing/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="sounds-extensions-and-sharing-projects">Sounds, Extensions, and Sharing Projects<a class="headerlink" href="#sounds-extensions-and-sharing-projects" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="sounds-extensions-and-sharing-projects">Sounds, Extensions, and Sharing Projects<a class="headerlink" href="#sounds-extensions-and-sharing-projects" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Explores sound blocks, Scratch extensions, project sharing, and versioning basics. This chapter covers 25 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 25 concepts from the learning graph:</p>
 <ol>
 <li>Random Number</li>
@@ -3791,7 +3857,7 @@
 <li>Positive X</li>
 <li>Negative X</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../01-welcome-to-scratch/">1. Welcome to Scratch</a></li>
@@ -3799,15 +3865,15 @@
 <li><a href="../03-motion-blocks-categories/">3. Motion Blocks and Block Categories</a></li>
 <li><a href="../04-events-sequences-first-scripts/">4. Events, Sequences, and First Scripts</a></li>
 </ul>
-<hr />
-<h2 id="random-numbers-unpredictable-fun">Random Numbers — Unpredictable Fun!<a class="headerlink" href="#random-numbers-unpredictable-fun" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-a-random-number">What Is a Random Number?<a class="headerlink" href="#what-is-a-random-number" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="random-numbers-unpredictable-fun">Random Numbers — Unpredictable Fun!<a class="headerlink" href="#random-numbers-unpredictable-fun" title="Permanent link">¶</a></h2>
+<h3 id="what-is-a-random-number">What Is a Random Number?<a class="headerlink" href="#what-is-a-random-number" title="Permanent link">¶</a></h3>
 <p>A <strong>random number</strong> is a number that Scratch picks <strong>unpredictably</strong> from a range you choose. It's like rolling dice — you never know exactly what you'll get!</p>
-<h3 id="the-random-block-operators-green">The Random Block (Operators → Green)<a class="headerlink" href="#the-random-block-operators-green" title="Permanent link">&para;</a></h3>
+<h3 id="the-random-block-operators-green">The Random Block (Operators → Green)<a class="headerlink" href="#the-random-block-operators-green" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pick random (1) to (10)
 </span></code></pre></div>
 <p><strong>Gives a random integer</strong> between the two numbers (inclusive).</p>
-<h3 id="random-number-examples">Random Number Examples<a class="headerlink" href="#random-number-examples" title="Permanent link">&para;</a></h3>
+<h3 id="random-number-examples">Random Number Examples<a class="headerlink" href="#random-number-examples" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3843,33 +3909,33 @@
 <p class="admonition-title">🎲 Random = Surprise!</p>
 <p>Random numbers make games <strong>different every time</strong> — enemies spawn in new places, loot varies, levels feel fresh!</p>
 </div>
-<hr />
-<h3 id="random-number-examples-in-action">Random Number Examples in Action<a class="headerlink" href="#random-number-examples-in-action" title="Permanent link">&para;</a></h3>
-<h4 id="random-position">Random Position<a class="headerlink" href="#random-position" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="random-number-examples-in-action">Random Number Examples in Action<a class="headerlink" href="#random-number-examples-in-action" title="Permanent link">¶</a></h3>
+<h4 id="random-position">Random Position<a class="headerlink" href="#random-position" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>when I start as a clone
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>go to x: (pick random -200 to 200) y: (pick random -150 to 150)
 </span></code></pre></div>
 <p><strong>Spawns clone at random position</strong> on stage!</p>
-<h4 id="random-wait">Random Wait<a class="headerlink" href="#random-wait" title="Permanent link">&para;</a></h4>
+<h4 id="random-wait">Random Wait<a class="headerlink" href="#random-wait" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>forever
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    wait (pick random 1 to 5) secs
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    create clone of [myself v]
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>end
 </span></code></pre></div>
 <p><strong>Creates clones at random intervals</strong> — 1 to 5 seconds apart!</p>
-<h4 id="random-chance">Random Chance<a class="headerlink" href="#random-chance" title="Permanent link">&para;</a></h4>
+<h4 id="random-chance">Random Chance<a class="headerlink" href="#random-chance" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>if &lt; (pick random 1 to 10) &lt; 3 &gt; then
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    // 20% chance (2 out of 10)
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    broadcast [rare-item v]
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>end
 </span></code></pre></div>
 <p><strong>20% chance</strong> something special happens!</p>
-<hr />
-<h2 id="variables-remembering-things">Variables — Remembering Things!<a class="headerlink" href="#variables-remembering-things" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-a-variable">What Is a Variable?<a class="headerlink" href="#what-is-a-variable" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="variables-remembering-things">Variables — Remembering Things!<a class="headerlink" href="#variables-remembering-things" title="Permanent link">¶</a></h2>
+<h3 id="what-is-a-variable">What Is a Variable?<a class="headerlink" href="#what-is-a-variable" title="Permanent link">¶</a></h3>
 <p>A <strong>variable</strong> is a <strong>named container</strong> that holds <strong>one value</strong> (number or text) that can <strong>change</strong> during your program.</p>
 <p>Think of it like a <strong>labeled box</strong> — you can put something in, take it out, check what's inside, or replace it.</p>
-<h3 id="creating-a-variable">Creating a Variable<a class="headerlink" href="#creating-a-variable" title="Permanent link">&para;</a></h3>
+<h3 id="creating-a-variable">Creating a Variable<a class="headerlink" href="#creating-a-variable" title="Permanent link">¶</a></h3>
 <ol>
 <li>Go to <strong>Variables</strong> category (🔴 Red)</li>
 <li>Click <strong>Make a Variable</strong></li>
@@ -3877,7 +3943,7 @@
 <li>Choose: <strong>For all sprites</strong> (shared) or <strong>For this sprite only</strong> (private)</li>
 <li>Click <strong>OK</strong> — new blocks appear!</li>
 </ol>
-<h3 id="variable-blocks">Variable Blocks<a class="headerlink" href="#variable-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="variable-blocks">Variable Blocks<a class="headerlink" href="#variable-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3908,8 +3974,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="for-all-sprites-vs-this-sprite-only">For All Sprites vs. This Sprite Only<a class="headerlink" href="#for-all-sprites-vs-this-sprite-only" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="for-all-sprites-vs-this-sprite-only">For All Sprites vs. This Sprite Only<a class="headerlink" href="#for-all-sprites-vs-this-sprite-only" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3935,9 +4001,9 @@
 <p class="admonition-title">🔴 Red = Remember!</p>
 <p>Variables are <strong>red</strong> because they <strong>remember</strong> things for you!</p>
 </div>
-<hr />
-<h3 id="variable-examples">Variable Examples<a class="headerlink" href="#variable-examples" title="Permanent link">&para;</a></h3>
-<h4 id="score-counter">Score Counter<a class="headerlink" href="#score-counter" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="variable-examples">Variable Examples<a class="headerlink" href="#variable-examples" title="Permanent link">¶</a></h3>
+<h4 id="score-counter">Score Counter<a class="headerlink" href="#score-counter" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when green flag clicked
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>set [score v] to (0)
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>show variable [score v]
@@ -3945,7 +4011,7 @@
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>when I receive [coin-collected v]
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>change [score v] by (10)
 </span></code></pre></div>
-<h4 id="lives-system">Lives System<a class="headerlink" href="#lives-system" title="Permanent link">&para;</a></h4>
+<h4 id="lives-system">Lives System<a class="headerlink" href="#lives-system" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when green flag clicked
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>set [lives v] to (3)
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>show variable [lives v]
@@ -3956,7 +4022,7 @@
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    broadcast [game-over v]
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>end
 </span></code></pre></div>
-<h4 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">&para;</a></h4>
+<h4 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when green flag clicked
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>set [timer v] to (0)
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>show variable [timer v]
@@ -3965,11 +4031,11 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    change [timer v] by (1)
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>end
 </span></code></pre></div>
-<hr />
-<h2 id="custom-blocks-make-your-own-blocks">Custom Blocks — Make Your Own Blocks!<a class="headerlink" href="#custom-blocks-make-your-own-blocks" title="Permanent link">&para;</a></h2>
-<h3 id="what-are-custom-blocks">What Are Custom Blocks?<a class="headerlink" href="#what-are-custom-blocks" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="custom-blocks-make-your-own-blocks">Custom Blocks — Make Your Own Blocks!<a class="headerlink" href="#custom-blocks-make-your-own-blocks" title="Permanent link">¶</a></h2>
+<h3 id="what-are-custom-blocks">What Are Custom Blocks?<a class="headerlink" href="#what-are-custom-blocks" title="Permanent link">¶</a></h3>
 <p><strong>My Blocks</strong> (🩷 Pink) let you <strong>create your own blocks</strong> — like inventing new LEGO® pieces!</p>
-<h3 id="why-make-custom-blocks">Why Make Custom Blocks?<a class="headerlink" href="#why-make-custom-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="why-make-custom-blocks">Why Make Custom Blocks?<a class="headerlink" href="#why-make-custom-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3996,8 +4062,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="creating-a-custom-block">Creating a Custom Block<a class="headerlink" href="#creating-a-custom-block" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="creating-a-custom-block">Creating a Custom Block<a class="headerlink" href="#creating-a-custom-block" title="Permanent link">¶</a></h3>
 <ol>
 <li>Go to <strong>My Blocks</strong> (🩷 Pink) category</li>
 <li>Click <strong>Make a Block</strong></li>
@@ -4007,29 +4073,29 @@
 <li>Build your script under the <code>define</code> hat</li>
 <li>Use your new <code>jump</code> block anywhere!</li>
 </ol>
-<hr />
-<h3 id="custom-block-examples">Custom Block Examples<a class="headerlink" href="#custom-block-examples" title="Permanent link">&para;</a></h3>
-<h4 id="simple-custom-block-no-parameters">Simple Custom Block (No Parameters)<a class="headerlink" href="#simple-custom-block-no-parameters" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="custom-block-examples">Custom Block Examples<a class="headerlink" href="#custom-block-examples" title="Permanent link">¶</a></h3>
+<h4 id="simple-custom-block-no-parameters">Simple Custom Block (No Parameters)<a class="headerlink" href="#simple-custom-block-no-parameters" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>define jump
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>change y by 50
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>wait 0.2 secs
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>change y by -50
 </span></code></pre></div>
 <p><strong>Use it:</strong> <code>jump</code> — always jumps 50 pixels</p>
-<h4 id="custom-block-with-parameter">Custom Block with Parameter<a class="headerlink" href="#custom-block-with-parameter" title="Permanent link">&para;</a></h4>
+<h4 id="custom-block-with-parameter">Custom Block with Parameter<a class="headerlink" href="#custom-block-with-parameter" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>define jump (height)
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>change y by (height)
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>wait 0.2 secs
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>change y by (height * -1)
 </span></code></pre></div>
 <p><strong>Use it:</strong> <code>jump (100)</code> — jumps high! <code>jump (20)</code> — small hop</p>
-<h4 id="custom-block-with-multiple-parameters">Custom Block with Multiple Parameters<a class="headerlink" href="#custom-block-with-multiple-parameters" title="Permanent link">&para;</a></h4>
+<h4 id="custom-block-with-multiple-parameters">Custom Block with Multiple Parameters<a class="headerlink" href="#custom-block-with-multiple-parameters" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>define glide-to (target-x) (target-y) (seconds)
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>glide (seconds) secs to x: (target-x) y: (target-y)
 </span></code></pre></div>
 <p><strong>Use it:</strong> <code>glide-to (100) (50) (2)</code> — smooth move to (100, 50) in 2 seconds!</p>
-<hr />
-<h3 id="run-without-screen-refresh">Run Without Screen Refresh ⚡<a class="headerlink" href="#run-without-screen-refresh" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="run-without-screen-refresh">Run Without Screen Refresh ⚡<a class="headerlink" href="#run-without-screen-refresh" title="Permanent link">¶</a></h3>
 <p>In the <strong>Make a Block</strong> options, check <strong>"Run without screen refresh"</strong>.</p>
 <table>
 <thead>
@@ -4071,18 +4137,18 @@
 <p class="admonition-title">⚡ Turbo Mode for Math!</p>
 <p>Use "Run without screen refresh" for: calculations, setup scripts, instant positioning, generating levels. <strong>Don't</strong> use it for animations the player should see!</p>
 </div>
-<hr />
-<h2 id="extensions-superpowers-for-scratch">Extensions — Superpowers for Scratch!<a class="headerlink" href="#extensions-superpowers-for-scratch" title="Permanent link">&para;</a></h2>
-<h3 id="what-are-extensions">What Are Extensions?<a class="headerlink" href="#what-are-extensions" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="extensions-superpowers-for-scratch">Extensions — Superpowers for Scratch!<a class="headerlink" href="#extensions-superpowers-for-scratch" title="Permanent link">¶</a></h2>
+<h3 id="what-are-extensions">What Are Extensions?<a class="headerlink" href="#what-are-extensions" title="Permanent link">¶</a></h3>
 <p><strong>Extensions</strong> add <strong>extra block categories</strong> to Scratch — like downloading new apps for your phone!</p>
-<h3 id="how-to-add-extensions">How to Add Extensions<a class="headerlink" href="#how-to-add-extensions" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-add-extensions">How to Add Extensions<a class="headerlink" href="#how-to-add-extensions" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click the <strong>Extensions button</strong> (🧩 puzzle piece) at <strong>bottom-left</strong> of blocks palette</li>
 <li>Browse the list</li>
 <li>Click <strong>Add</strong> → new category appears!</li>
 </ol>
-<hr />
-<h3 id="the-big-extensions">The Big Extensions<a class="headerlink" href="#the-big-extensions" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="the-big-extensions">The Big Extensions<a class="headerlink" href="#the-big-extensions" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4143,11 +4209,11 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="pen-extension-draw-with-code">Pen Extension — Draw With Code!<a class="headerlink" href="#pen-extension-draw-with-code" title="Permanent link">&para;</a></h2>
-<h3 id="adding-pen">Adding Pen<a class="headerlink" href="#adding-pen" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="pen-extension-draw-with-code">Pen Extension — Draw With Code!<a class="headerlink" href="#pen-extension-draw-with-code" title="Permanent link">¶</a></h2>
+<h3 id="adding-pen">Adding Pen<a class="headerlink" href="#adding-pen" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → Pen → Add</strong> → <strong>Pen</strong> category appears (🟢 Green)!</p>
-<h3 id="pen-blocks">Pen Blocks<a class="headerlink" href="#pen-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="pen-blocks">Pen Blocks<a class="headerlink" href="#pen-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4190,8 +4256,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pen-examples">Pen Examples<a class="headerlink" href="#pen-examples" title="Permanent link">&para;</a></h3>
-<h4 id="draw-a-square">Draw a Square<a class="headerlink" href="#draw-a-square" title="Permanent link">&para;</a></h4>
+<h3 id="pen-examples">Pen Examples<a class="headerlink" href="#pen-examples" title="Permanent link">¶</a></h3>
+<h4 id="draw-a-square">Draw a Square<a class="headerlink" href="#draw-a-square" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>when green flag clicked
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>erase all
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>pen down
@@ -4201,7 +4267,7 @@
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>end
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>pen up
 </span></code></pre></div>
-<h4 id="rainbow-spiral">Rainbow Spiral<a class="headerlink" href="#rainbow-spiral" title="Permanent link">&para;</a></h4>
+<h4 id="rainbow-spiral">Rainbow Spiral<a class="headerlink" href="#rainbow-spiral" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>when green flag clicked
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>erase all
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>pen down
@@ -4213,7 +4279,7 @@
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>end
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>pen up
 </span></code></pre></div>
-<h4 id="stamp-pattern">Stamp Pattern<a class="headerlink" href="#stamp-pattern" title="Permanent link">&para;</a></h4>
+<h4 id="stamp-pattern">Stamp Pattern<a class="headerlink" href="#stamp-pattern" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>when green flag clicked
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>erase all
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>pen up
@@ -4229,11 +4295,11 @@
 <p class="admonition-title">🎨 Pen = Math Art!</p>
 <p>Combine <strong>loops + pen + math</strong> to create amazing geometric art, spirographs, fractals, and more!</p>
 </div>
-<hr />
-<h2 id="video-sensing-camera-games">Video Sensing — Camera Games!<a class="headerlink" href="#video-sensing-camera-games" title="Permanent link">&para;</a></h2>
-<h3 id="adding-video-sensing">Adding Video Sensing<a class="headerlink" href="#adding-video-sensing" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="video-sensing-camera-games">Video Sensing — Camera Games!<a class="headerlink" href="#video-sensing-camera-games" title="Permanent link">¶</a></h2>
+<h3 id="adding-video-sensing">Adding Video Sensing<a class="headerlink" href="#adding-video-sensing" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → Video Sensing → Add</strong> → <strong>Video Sensing</strong> category appears (🟣 Purple)!</p>
-<h3 id="video-sensing-blocks">Video Sensing Blocks<a class="headerlink" href="#video-sensing-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="video-sensing-blocks">Video Sensing Blocks<a class="headerlink" href="#video-sensing-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4264,8 +4330,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="video-sensing-examples">Video Sensing Examples<a class="headerlink" href="#video-sensing-examples" title="Permanent link">&para;</a></h3>
-<h4 id="motion-mirror">Motion Mirror<a class="headerlink" href="#motion-mirror" title="Permanent link">&para;</a></h4>
+<h3 id="video-sensing-examples">Video Sensing Examples<a class="headerlink" href="#video-sensing-examples" title="Permanent link">¶</a></h3>
+<h4 id="motion-mirror">Motion Mirror<a class="headerlink" href="#motion-mirror" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>when green flag clicked
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>turn video on
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>set video transparency to 50
@@ -4277,7 +4343,7 @@
 </span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>end
 </span></code></pre></div>
 <p><strong>Wave at camera → sprite reacts!</strong></p>
-<h4 id="hand-controlled-sprite">Hand-Controlled Sprite<a class="headerlink" href="#hand-controlled-sprite" title="Permanent link">&para;</a></h4>
+<h4 id="hand-controlled-sprite">Hand-Controlled Sprite<a class="headerlink" href="#hand-controlled-sprite" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>when green flag clicked
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>turn video on
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>forever
@@ -4291,11 +4357,11 @@
 <p class="admonition-title">📷 Video = Body Control!</p>
 <p>Use your <strong>body as the controller</strong> — dance, wave, jump to control the game!</p>
 </div>
-<hr />
-<h2 id="text-to-speech-talking-sprites">Text to Speech — Talking Sprites!<a class="headerlink" href="#text-to-speech-talking-sprites" title="Permanent link">&para;</a></h2>
-<h3 id="adding-text-to-speech">Adding Text to Speech<a class="headerlink" href="#adding-text-to-speech" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="text-to-speech-talking-sprites">Text to Speech — Talking Sprites!<a class="headerlink" href="#text-to-speech-talking-sprites" title="Permanent link">¶</a></h2>
+<h3 id="adding-text-to-speech">Adding Text to Speech<a class="headerlink" href="#adding-text-to-speech" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → Text to Speech → Add</strong> → <strong>Text to Speech</strong> category appears (🩷 Pink)!</p>
-<h3 id="text-to-speech-blocks">Text to Speech Blocks<a class="headerlink" href="#text-to-speech-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="text-to-speech-blocks">Text to Speech Blocks<a class="headerlink" href="#text-to-speech-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4322,7 +4388,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="voice-options">Voice Options<a class="headerlink" href="#voice-options" title="Permanent link">&para;</a></h3>
+<h3 id="voice-options">Voice Options<a class="headerlink" href="#voice-options" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4349,17 +4415,17 @@
 </tr>
 </tbody>
 </table>
-<h3 id="language-options">Language Options<a class="headerlink" href="#language-options" title="Permanent link">&para;</a></h3>
+<h3 id="language-options">Language Options<a class="headerlink" href="#language-options" title="Permanent link">¶</a></h3>
 <p>English, Spanish, French, German, Italian, Chinese, Japanese, Korean, and many more!</p>
-<h3 id="text-to-speech-examples">Text to Speech Examples<a class="headerlink" href="#text-to-speech-examples" title="Permanent link">&para;</a></h3>
-<h4 id="talking-greeter">Talking Greeter<a class="headerlink" href="#talking-greeter" title="Permanent link">&para;</a></h4>
+<h3 id="text-to-speech-examples">Text to Speech Examples<a class="headerlink" href="#text-to-speech-examples" title="Permanent link">¶</a></h3>
+<h4 id="talking-greeter">Talking Greeter<a class="headerlink" href="#talking-greeter" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>when green flag clicked
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>set voice to [tenor v]
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>set language to [English v]
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>speak [Welcome to my game!] and wait
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>speak [Use arrow keys to move.]
 </span></code></pre></div>
-<h4 id="multilingual-character">Multilingual Character<a class="headerlink" href="#multilingual-character" title="Permanent link">&para;</a></h4>
+<h4 id="multilingual-character">Multilingual Character<a class="headerlink" href="#multilingual-character" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>when this sprite clicked
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>set language to [Spanish v]
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>speak [¡Hola! ¿Cómo estás?] and wait
@@ -4370,11 +4436,11 @@
 <p class="admonition-title">🗣️ No Recording Needed!</p>
 <p>Text to Speech <strong>generates voice from text</strong> — no microphone, no recording, infinite possibilities!</p>
 </div>
-<hr />
-<h2 id="translate-extension-many-languages">Translate Extension — Many Languages!<a class="headerlink" href="#translate-extension-many-languages" title="Permanent link">&para;</a></h2>
-<h3 id="adding-translate">Adding Translate<a class="headerlink" href="#adding-translate" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="translate-extension-many-languages">Translate Extension — Many Languages!<a class="headerlink" href="#translate-extension-many-languages" title="Permanent link">¶</a></h2>
+<h3 id="adding-translate">Adding Translate<a class="headerlink" href="#adding-translate" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → Translate → Add</strong> → <strong>Translate</strong> category appears (🔵 Blue)!</p>
-<h3 id="translate-blocks">Translate Blocks<a class="headerlink" href="#translate-blocks" title="Permanent link">&para;</a></h3>
+<h3 id="translate-blocks">Translate Blocks<a class="headerlink" href="#translate-blocks" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4393,8 +4459,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="translate-example">Translate Example<a class="headerlink" href="#translate-example" title="Permanent link">&para;</a></h3>
-<h4 id="multilingual-greeting">Multilingual Greeting<a class="headerlink" href="#multilingual-greeting" title="Permanent link">&para;</a></h4>
+<h3 id="translate-example">Translate Example<a class="headerlink" href="#translate-example" title="Permanent link">¶</a></h3>
+<h4 id="multilingual-greeting">Multilingual Greeting<a class="headerlink" href="#multilingual-greeting" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>when green flag clicked
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>set language to [Spanish v]
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>speak (translate [Hello, friend!] to [Spanish v]) and wait
@@ -4403,13 +4469,13 @@
 <p class="admonition-title">🌍 Translate + Text to Speech = Polyglot Sprites!</p>
 <p>Combine both extensions for sprites that <strong>speak any language</strong>!</p>
 </div>
-<hr />
-<h2 id="microbit-extension-hardware-fun">micro:bit Extension — Hardware Fun!<a class="headerlink" href="#microbit-extension-hardware-fun" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-microbit">What Is micro:bit?<a class="headerlink" href="#what-is-microbit" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="microbit-extension-hardware-fun">micro:bit Extension — Hardware Fun!<a class="headerlink" href="#microbit-extension-hardware-fun" title="Permanent link">¶</a></h2>
+<h3 id="what-is-microbit">What Is micro:bit?<a class="headerlink" href="#what-is-microbit" title="Permanent link">¶</a></h3>
 <p>The <strong>BBC micro:bit</strong> is a tiny programmable computer with buttons, LEDs, accelerometer, compass, and radio!</p>
-<h3 id="adding-microbit">Adding micro:bit<a class="headerlink" href="#adding-microbit" title="Permanent link">&para;</a></h3>
+<h3 id="adding-microbit">Adding micro:bit<a class="headerlink" href="#adding-microbit" title="Permanent link">¶</a></h3>
 <p><strong>Extensions → micro:bit → Add</strong> → <strong>micro:bit</strong> category appears (🔵 Blue)!</p>
-<h3 id="microbit-blocks-key-ones">micro:bit Blocks (Key Ones)<a class="headerlink" href="#microbit-blocks-key-ones" title="Permanent link">&para;</a></h3>
+<h3 id="microbit-blocks-key-ones">micro:bit Blocks (Key Ones)<a class="headerlink" href="#microbit-blocks-key-ones" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4448,21 +4514,21 @@
 <p class="admonition-title">🤖 micro:bit = Physical Computing!</p>
 <p>Control Scratch with a <strong>real device in your hand</strong> — tilt to steer, press buttons to jump, shake to shake the screen!</p>
 </div>
-<hr />
-<h2 id="extension-management-keep-it-organized">Extension Management — Keep It Organized!<a class="headerlink" href="#extension-management-keep-it-organized" title="Permanent link">&para;</a></h2>
-<h3 id="adding-extensions">Adding Extensions<a class="headerlink" href="#adding-extensions" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="extension-management-keep-it-organized">Extension Management — Keep It Organized!<a class="headerlink" href="#extension-management-keep-it-organized" title="Permanent link">¶</a></h2>
+<h3 id="adding-extensions">Adding Extensions<a class="headerlink" href="#adding-extensions" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click <strong>🧩 Extensions</strong> (bottom-left of palette)</li>
 <li>Scroll or search</li>
 <li>Click <strong>Add</strong></li>
 </ol>
-<h3 id="removing-extensions">Removing Extensions<a class="headerlink" href="#removing-extensions" title="Permanent link">&para;</a></h3>
+<h3 id="removing-extensions">Removing Extensions<a class="headerlink" href="#removing-extensions" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click <strong>🧩 Extensions</strong></li>
 <li>Find the extension</li>
 <li>Click <strong>Remove</strong> (or click the ✕ on the category tab)</li>
 </ol>
-<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4485,9 +4551,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="editor-skills-drag-drop-duplicate-comment-clean">Editor Skills — Drag, Drop, Duplicate, Comment, Clean!<a class="headerlink" href="#editor-skills-drag-drop-duplicate-comment-clean" title="Permanent link">&para;</a></h2>
-<h3 id="drag-and-drop-the-basics">Drag and Drop — The Basics!<a class="headerlink" href="#drag-and-drop-the-basics" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="editor-skills-drag-drop-duplicate-comment-clean">Editor Skills — Drag, Drop, Duplicate, Comment, Clean!<a class="headerlink" href="#editor-skills-drag-drop-duplicate-comment-clean" title="Permanent link">¶</a></h2>
+<h3 id="drag-and-drop-the-basics">Drag and Drop — The Basics!<a class="headerlink" href="#drag-and-drop-the-basics" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4514,7 +4580,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="duplicate-block-copy-instantly">Duplicate Block — Copy Instantly!<a class="headerlink" href="#duplicate-block-copy-instantly" title="Permanent link">&para;</a></h3>
+<h3 id="duplicate-block-copy-instantly">Duplicate Block — Copy Instantly!<a class="headerlink" href="#duplicate-block-copy-instantly" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4537,7 +4603,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="delete-block-remove-cleanly">Delete Block — Remove Cleanly<a class="headerlink" href="#delete-block-remove-cleanly" title="Permanent link">&para;</a></h3>
+<h3 id="delete-block-remove-cleanly">Delete Block — Remove Cleanly<a class="headerlink" href="#delete-block-remove-cleanly" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4564,8 +4630,8 @@
 <p class="admonition-title">🗑️ Deleting Top Block = Whole Stack!</p>
 <p>Deleting a <strong>hat block</strong> deletes the <strong>entire stack</strong> below it. Be careful!</p>
 </div>
-<hr />
-<h3 id="comment-block-leave-notes">Comment Block — Leave Notes!<a class="headerlink" href="#comment-block-leave-notes" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="comment-block-leave-notes">Comment Block — Leave Notes!<a class="headerlink" href="#comment-block-leave-notes" title="Permanent link">¶</a></h3>
 <p><strong>Right-click any block → "Add comment"</strong> → Yellow sticky note appears!</p>
 <table>
 <thead>
@@ -4597,8 +4663,8 @@
 <p class="admonition-title">💬 Comments = Future You Thanks Present You!</p>
 <p>Your future self <strong>will forget</strong> why you wrote that weird math. Leave a comment!</p>
 </div>
-<hr />
-<h3 id="clean-up-blocks-auto-organize">Clean Up Blocks — Auto-Organize!<a class="headerlink" href="#clean-up-blocks-auto-organize" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="clean-up-blocks-auto-organize">Clean Up Blocks — Auto-Organize!<a class="headerlink" href="#clean-up-blocks-auto-organize" title="Permanent link">¶</a></h3>
 <p><strong>Right-click empty space in script area → "Clean up"</strong></p>
 <table>
 <thead>
@@ -4626,20 +4692,20 @@
 <p class="admonition-title">🧹 Clean Up = Professional Look!</p>
 <p>Before sharing your project: <strong>Right-click → Clean up</strong> on every script. Makes your code look polished!</p>
 </div>
-<hr />
-<h2 id="play-sound-vs-start-sound-timing-matters">Play Sound vs. Start Sound — Timing Matters!<a class="headerlink" href="#play-sound-vs-start-sound-timing-matters" title="Permanent link">&para;</a></h2>
-<h3 id="play-sound-until-done">Play Sound Until Done<a class="headerlink" href="#play-sound-until-done" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="play-sound-vs-start-sound-timing-matters">Play Sound vs. Start Sound — Timing Matters!<a class="headerlink" href="#play-sound-vs-start-sound-timing-matters" title="Permanent link">¶</a></h2>
+<h3 id="play-sound-until-done">Play Sound Until Done<a class="headerlink" href="#play-sound-until-done" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>play sound [jump v] until done
 </span></code></pre></div>
 <p><strong>Waits</strong> for sound to completely finish before next block.
 - Use for: <strong>Dialogue, sound effects that must finish</strong></p>
-<h3 id="start-sound">Start Sound<a class="headerlink" href="#start-sound" title="Permanent link">&para;</a></h3>
+<h3 id="start-sound">Start Sound<a class="headerlink" href="#start-sound" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>start sound [jump v]
 </span></code></pre></div>
 <p><strong>Continues immediately</strong> — sound plays in background.
 - Use for: <strong>Background music, rapid effects, overlapping sounds</strong></p>
-<hr />
-<h3 id="when-to-use-which">When to Use Which<a class="headerlink" href="#when-to-use-which" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="when-to-use-which">When to Use Which<a class="headerlink" href="#when-to-use-which" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4684,9 +4750,9 @@
 </span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>end
 </span></code></pre></div>
 </div>
-<hr />
-<h2 id="changing-tempo-speed-up-the-beat">Changing Tempo — Speed Up the Beat!<a class="headerlink" href="#changing-tempo-speed-up-the-beat" title="Permanent link">&para;</a></h2>
-<h3 id="tempo-block">Tempo Block<a class="headerlink" href="#tempo-block" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="changing-tempo-speed-up-the-beat">Changing Tempo — Speed Up the Beat!<a class="headerlink" href="#changing-tempo-speed-up-the-beat" title="Permanent link">¶</a></h2>
+<h3 id="tempo-block">Tempo Block<a class="headerlink" href="#tempo-block" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>change tempo by (20)
 </span></code></pre></div>
 <p><strong>Changes playback speed</strong> of sounds (pitch changes too!).</p>
@@ -4719,13 +4785,13 @@
 <li><strong>Slow tempo</strong> = sadness, tension, slow-motion</li>
 </ul>
 </div>
-<hr />
-<h2 id="the-backpack-your-cross-project-toolbox">The Backpack — Your Cross-Project Toolbox!<a class="headerlink" href="#the-backpack-your-cross-project-toolbox" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-the-backpack">What Is the Backpack?<a class="headerlink" href="#what-is-the-backpack" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="the-backpack-your-cross-project-toolbox">The Backpack — Your Cross-Project Toolbox!<a class="headerlink" href="#the-backpack-your-cross-project-toolbox" title="Permanent link">¶</a></h2>
+<h3 id="what-is-the-backpack">What Is the Backpack?<a class="headerlink" href="#what-is-the-backpack" title="Permanent link">¶</a></h3>
 <p>The <strong>Backpack</strong> (🎒 icon at bottom of sidebar) stores <strong>blocks, sprites, costumes, sounds</strong> to use in <strong>ANY project</strong>!</p>
-<h3 id="opening-the-backpack">Opening the Backpack<a class="headerlink" href="#opening-the-backpack" title="Permanent link">&para;</a></h3>
+<h3 id="opening-the-backpack">Opening the Backpack<a class="headerlink" href="#opening-the-backpack" title="Permanent link">¶</a></h3>
 <p>Click the <strong>🎒 icon</strong> at bottom of left sidebar (below sprite pane).</p>
-<h3 id="what-you-can-store">What You Can Store<a class="headerlink" href="#what-you-can-store" title="Permanent link">&para;</a></h3>
+<h3 id="what-you-can-store">What You Can Store<a class="headerlink" href="#what-you-can-store" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4756,7 +4822,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="using-backpack-items">Using Backpack Items<a class="headerlink" href="#using-backpack-items" title="Permanent link">&para;</a></h3>
+<h3 id="using-backpack-items">Using Backpack Items<a class="headerlink" href="#using-backpack-items" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4783,7 +4849,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="backpack-superpowers">Backpack Superpowers<a class="headerlink" href="#backpack-superpowers" title="Permanent link">&para;</a></h3>
+<h3 id="backpack-superpowers">Backpack Superpowers<a class="headerlink" href="#backpack-superpowers" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4814,9 +4880,9 @@
 <p class="admonition-title">🎒 Backpack = Code Library!</p>
 <p>Build once, use forever. <strong>Invest time making perfect reusable pieces</strong> — they pay off forever!</p>
 </div>
-<hr />
-<h2 id="project-page-your-projects-home">Project Page — Your Project's Home!<a class="headerlink" href="#project-page-your-projects-home" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-the-project-page">What Is the Project Page?<a class="headerlink" href="#what-is-the-project-page" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="project-page-your-projects-home">Project Page — Your Project's Home!<a class="headerlink" href="#project-page-your-projects-home" title="Permanent link">¶</a></h2>
+<h3 id="what-is-the-project-page">What Is the Project Page?<a class="headerlink" href="#what-is-the-project-page" title="Permanent link">¶</a></h3>
 <p>When you <strong>Share</strong> a project, it gets its own <strong>web page</strong> with:</p>
 <ul>
 <li><strong>Title &amp; Instructions</strong></li>
@@ -4826,7 +4892,7 @@
 <li><strong>Comments</strong> section</li>
 <li><strong>Stats</strong> (views, loves, favorites, remixes)</li>
 </ul>
-<h3 id="making-a-great-project-page">Making a Great Project Page<a class="headerlink" href="#making-a-great-project-page" title="Permanent link">&para;</a></h3>
+<h3 id="making-a-great-project-page">Making a Great Project Page<a class="headerlink" href="#making-a-great-project-page" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4857,9 +4923,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="community-feedback-learn-from-others">Community Feedback — Learn from Others!<a class="headerlink" href="#community-feedback-learn-from-others" title="Permanent link">&para;</a></h2>
-<h3 id="types-of-feedback">Types of Feedback<a class="headerlink" href="#types-of-feedback" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="community-feedback-learn-from-others">Community Feedback — Learn from Others!<a class="headerlink" href="#community-feedback-learn-from-others" title="Permanent link">¶</a></h2>
+<h3 id="types-of-feedback">Types of Feedback<a class="headerlink" href="#types-of-feedback" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4886,7 +4952,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="responding-to-comments">Responding to Comments<a class="headerlink" href="#responding-to-comments" title="Permanent link">&para;</a></h3>
+<h3 id="responding-to-comments">Responding to Comments<a class="headerlink" href="#responding-to-comments" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4909,7 +4975,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="giving-good-feedback">Giving Good Feedback<a class="headerlink" href="#giving-good-feedback" title="Permanent link">&para;</a></h3>
+<h3 id="giving-good-feedback">Giving Good Feedback<a class="headerlink" href="#giving-good-feedback" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4932,11 +4998,11 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="step-by-step-thinking-plan-before-you-code">Step-by-Step Thinking — Plan Before You Code!<a class="headerlink" href="#step-by-step-thinking-plan-before-you-code" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-step-by-step-thinking">What Is Step-by-Step Thinking?<a class="headerlink" href="#what-is-step-by-step-thinking" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="step-by-step-thinking-plan-before-you-code">Step-by-Step Thinking — Plan Before You Code!<a class="headerlink" href="#step-by-step-thinking-plan-before-you-code" title="Permanent link">¶</a></h2>
+<h3 id="what-is-step-by-step-thinking">What Is Step-by-Step Thinking?<a class="headerlink" href="#what-is-step-by-step-thinking" title="Permanent link">¶</a></h3>
 <p><strong>Breaking a big problem into small steps</strong> — like writing a recipe before cooking!</p>
-<h3 id="the-process">The Process<a class="headerlink" href="#the-process" title="Permanent link">&para;</a></h3>
+<h3 id="the-process">The Process<a class="headerlink" href="#the-process" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>Understand the goal</strong> — What should the project do?</li>
 <li><strong>List the parts</strong> — What sprites, scripts, variables needed?</li>
@@ -4944,7 +5010,7 @@
 <li><strong>Code one step at a time</strong> — Test each part before next</li>
 <li><strong>Test and fix</strong> — Play, find bugs, improve</li>
 </ol>
-<h3 id="example-platformer-game-plan">Example: Platformer Game Plan<a class="headerlink" href="#example-platformer-game-plan" title="Permanent link">&para;</a></h3>
+<h3 id="example-platformer-game-plan">Example: Platformer Game Plan<a class="headerlink" href="#example-platformer-game-plan" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>GOAL: Player jumps on platforms, collects coins, avoids enemies
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>PARTS:
@@ -4968,15 +5034,15 @@
 <p class="admonition-title">📝 Plan on Paper First!</p>
 <p><strong>Sketch your game</strong> — draw sprites, map levels, list variables. <strong>Planning saves hours of recoding!</strong></p>
 </div>
-<hr />
-<h2 id="forever-loop-the-game-engine">Forever Loop — The Game Engine!<a class="headerlink" href="#forever-loop-the-game-engine" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-forever">What Is Forever?<a class="headerlink" href="#what-is-forever" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="forever-loop-the-game-engine">Forever Loop — The Game Engine!<a class="headerlink" href="#forever-loop-the-game-engine" title="Permanent link">¶</a></h2>
+<h3 id="what-is-forever">What Is Forever?<a class="headerlink" href="#what-is-forever" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>forever
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    // These blocks run OVER AND OVER
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>end
 </span></code></pre></div>
 <p><strong>Runs until stopped</strong> — the heartbeat of your game!</p>
-<h3 id="forever-loop-patterns">Forever Loop Patterns<a class="headerlink" href="#forever-loop-patterns" title="Permanent link">&para;</a></h3>
+<h3 id="forever-loop-patterns">Forever Loop Patterns<a class="headerlink" href="#forever-loop-patterns" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5008,8 +5074,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="forever-loop-wait-smooth">Forever Loop + Wait = Smooth!<a class="headerlink" href="#forever-loop-wait-smooth" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="forever-loop-wait-smooth">Forever Loop + Wait = Smooth!<a class="headerlink" href="#forever-loop-wait-smooth" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>forever
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    // Do something
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    wait 0.01 secs   // ← CRITICAL!
@@ -5020,9 +5086,9 @@
 <p class="admonition-title">⏱️ Forever Needs a Break!</p>
 <p><strong>Always</strong> put a tiny <code>wait</code> (even 0.01 secs) in a <code>forever</code> loop, or use <code>forever if</code> pattern!</p>
 </div>
-<hr />
-<h2 id="positive-x-and-negative-x-left-and-right">Positive X and Negative X — Left and Right!<a class="headerlink" href="#positive-x-and-negative-x-left-and-right" title="Permanent link">&para;</a></h2>
-<h3 id="x-coordinate-review">X Coordinate Review<a class="headerlink" href="#x-coordinate-review" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="positive-x-and-negative-x-left-and-right">Positive X and Negative X — Left and Right!<a class="headerlink" href="#positive-x-and-negative-x-left-and-right" title="Permanent link">¶</a></h2>
+<h3 id="x-coordinate-review">X Coordinate Review<a class="headerlink" href="#x-coordinate-review" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5049,7 +5115,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="x-coordinate-shortcuts">X Coordinate Shortcuts<a class="headerlink" href="#x-coordinate-shortcuts" title="Permanent link">&para;</a></h3>
+<h3 id="x-coordinate-shortcuts">X Coordinate Shortcuts<a class="headerlink" href="#x-coordinate-shortcuts" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5080,7 +5146,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="x-in-code">X in Code<a class="headerlink" href="#x-in-code" title="Permanent link">&para;</a></h3>
+<h3 id="x-in-code">X in Code<a class="headerlink" href="#x-in-code" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>when [right arrow] key pressed
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>change x by 10        // Move RIGHT (positive)
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
@@ -5099,8 +5165,8 @@
 <p class="admonition-title">➡️ Right = Positive, ⬅️ Left = Negative</p>
 <p><strong>Remember:</strong> Number line! Positive right, negative left. Just like math class!</p>
 </div>
-<hr />
-<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">¶</a></h2>
 <p>In this chapter, you learned:</p>
 <ul>
 <li>✅ <strong>Random numbers</strong> — <code>pick random</code> for dice, spawns, chance</li>
@@ -5122,8 +5188,8 @@
 <li>✅ <strong>Forever loop</strong> — Game engine, always with wait!</li>
 <li>✅ <strong>Positive/Negative X</strong> — Right/left movement</li>
 </ul>
-<hr />
-<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5206,8 +5272,8 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">¶</a></h2>
 <p><strong>Challenge 1:</strong> Create a <strong>dice roller</strong> — press space, sprite says random 1-6</p>
 <p><strong>Challenge 2:</strong> Make a <strong>variable</strong> called <code>high-score</code> that saves the highest score ever</p>
 <p><strong>Challenge 3:</strong> Create a <strong>custom block</strong> <code>draw-polygon (sides) (size)</code> using Pen extension</p>
@@ -5216,8 +5282,8 @@
 <p><strong>Challenge 5:</strong> Save your <strong>perfect player movement script</strong> to the <strong>Backpack</strong></p>
 <p><strong>Challenge 6:</strong> <strong>Plan a game</strong> on paper using step-by-step thinking, then build v1.0</p>
 <p><strong>Challenge 7:</strong> <strong>Share a project</strong> with clear instructions, credits, and tags</p>
-<hr />
-<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>In <strong>Chapter 6</strong>, you'll dive into <strong>Broadcasting, Conditionals, and Sensing</strong> — the core of interactive games! You'll master sprite communication, complex decision-making, and detecting the world around your sprites.</p>
 <p><a href="../06-broadcasting-conditionals-sensing/"><strong>→ Next Chapter: Broadcasting, Conditionals, and Sensing</strong></a></p>
 
@@ -5243,9 +5309,9 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -5255,13 +5321,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../04-events-sequences-first-scripts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Events, Sequences, and First Scripts">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -5286,7 +5352,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -5298,7 +5364,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -5322,6 +5388,12 @@
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+      
+        <script src="../../js/scratchblocks-init.js"></script>
+      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

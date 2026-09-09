@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +21,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
@@ -49,8 +46,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,13 +56,25 @@
     
       <link rel="stylesheet" href="../../css/mascot.css">
     
+      <link rel="stylesheet" href="../../css/scratchblocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -100,13 +109,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -134,29 +142,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -164,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -182,7 +190,7 @@
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -206,7 +214,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -217,8 +225,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Scratch Programming for Kids
@@ -228,7 +235,7 @@
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -236,7 +243,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -366,7 +373,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -403,7 +410,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -471,7 +478,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -722,7 +729,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Your First Script — Let&#39;s Make the Cat Move!">
+    <nav class="md-nav" aria-label="Your First Script — Let's Make the Cat Move!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -923,7 +930,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Remixing — Build on Others&#39; Ideas">
+    <nav class="md-nav" aria-label="Remixing — Build on Others' Ideas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1401,6 +1408,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1457,6 +1470,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1494,6 +1533,33 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1587,7 +1653,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1603,7 +1669,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -1854,7 +1920,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Your First Script — Let&#39;s Make the Cat Move!">
+    <nav class="md-nav" aria-label="Your First Script — Let's Make the Cat Move!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2055,7 +2121,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Remixing — Build on Others&#39; Ideas">
+    <nav class="md-nav" aria-label="Remixing — Build on Others' Ideas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2230,7 +2296,7 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
         
@@ -2279,16 +2345,16 @@
   
     <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/01-welcome-to-scratch/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="welcome-to-scratch">Welcome to Scratch<a class="headerlink" href="#welcome-to-scratch" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="welcome-to-scratch">Welcome to Scratch<a class="headerlink" href="#welcome-to-scratch" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Introduces the Scratch interface, visual programming basics, and community features. This chapter covers 17 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 17 concepts from the learning graph:</p>
 <ol>
 <li>Visual Programming</li>
@@ -2310,12 +2376,26 @@
 <li>Saving Projects</li>
 <li>Sharing Projects</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
-<hr />
-<h2 id="what-is-scratch">What Is Scratch?<a class="headerlink" href="#what-is-scratch" title="Permanent link">&para;</a></h2>
+<hr>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Hi, I'm Scratch the Cat!</p>
+<p><img alt="Scratch the Cat waving hello" class="mascot-admonition-img" src="../../img/mascot/welcome.png">
+Hi! I'm <strong>Scratch the Cat</strong>, and I'm playful and curious about every block, every bug, and every idea you try. I'll be popping up in the margins of this whole book, so here's how to read me:</p>
+<ol>
+<li><strong>Welcome</strong> — I open a chapter and tell you why it's worth your time.</li>
+<li><strong>Thinking</strong> — I slow down for the big "aha!" ideas worth restructuring your thinking around.</li>
+<li><strong>Tip</strong> — I whisper a shortcut an expert would use.</li>
+<li><strong>Warning</strong> — I flag a trap almost everyone falls into, plus how to climb out.</li>
+<li><strong>Encourage</strong> — I remind you that the hard parts are hard for everyone, not just you.</li>
+<li><strong>Celebrate</strong> — I cheer for a real milestone and name exactly what you just learned.</li>
+</ol>
+<p>If I'm not doing one of those six things, I'm not in the chapter. Let's build something purr-fect!</p>
+</div>
+<h2 id="what-is-scratch">What Is Scratch?<a class="headerlink" href="#what-is-scratch" title="Permanent link">¶</a></h2>
 <p>Scratch is a <strong>visual programming language</strong> designed especially for kids like you! Instead of typing complicated text code, you snap together colorful blocks — like LEGO® bricks — to create your own interactive stories, games, and animations.</p>
-<h3 id="why-visual-programming">Why Visual Programming?<a class="headerlink" href="#why-visual-programming" title="Permanent link">&para;</a></h3>
+<h3 id="why-visual-programming">Why Visual Programming?<a class="headerlink" href="#why-visual-programming" title="Permanent link">¶</a></h3>
 <p>Think about how you build with LEGO® bricks. You don't need to know how plastic is made — you just snap bricks together to build something amazing. <strong>Visual programming</strong> works the same way:</p>
 <ul>
 <li><strong>No typing code</strong> — You drag and drop blocks instead of typing</li>
@@ -2323,21 +2403,26 @@
 <li><strong>See your program run</strong> — Watch your creation come to life instantly</li>
 <li><strong>Learn real concepts</strong> — The ideas you learn here are used by professional programmers!</li>
 </ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Blocks Instead of Text</p>
+<p><img alt="Scratch the Cat thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png">
+Notice what just changed: instead of memorizing exact spelling and punctuation, you're recognizing shapes that only fit together correctly. That's the same logic every professional programmer uses — you're just seeing the structure instead of typing it from memory.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Did You Know?</p>
 <p>Scratch was created by the <strong>MIT Media Lab</strong> — the same people who work on robots, new kinds of computers, and cool inventions! Over <strong>100 million</strong> people around the world use Scratch.</p>
 </div>
-<hr />
-<h2 id="the-scratch-editor-your-creative-workspace">The Scratch Editor — Your Creative Workspace<a class="headerlink" href="#the-scratch-editor-your-creative-workspace" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="the-scratch-editor-your-creative-workspace">The Scratch Editor — Your Creative Workspace<a class="headerlink" href="#the-scratch-editor-your-creative-workspace" title="Permanent link">¶</a></h2>
 <p>When you open Scratch at <a href="https://scratch.mit.edu">scratch.mit.edu</a>, you'll see the <strong>editor</strong>. Think of it as your digital art studio where you build programs.</p>
-<h4 id="diagram-scratch-editor-overview">Diagram: Scratch Editor Overview<a class="headerlink" href="#diagram-scratch-editor-overview" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-scratch-editor-overview">Diagram: Scratch Editor Overview<a class="headerlink" href="#diagram-scratch-editor-overview" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/editor-overview/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
 <details>
 <summary>Scratch Editor Overview</summary>
 <p>Type: diagram
-<strong>sim-id:</strong> editor-overview<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> editor-overview<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Help students identify the main parts of the Scratch editor before they start building</p>
 <p>Components to show:
@@ -2360,8 +2445,8 @@
 <p>Color scheme: Match Scratch's actual UI colors (blue Motion, purple Looks, pink Sound, yellow Events, orange Control, light blue Sensing, green Operators, red Variables, dark red Lists, pink My Blocks)</p>
 <p>Implementation: p5.js diagram with hover tooltips on each region. Click a region to highlight it and show a brief definition in a side panel.</p>
 </details>
-<hr />
-<h3 id="the-three-main-areas">The Three Main Areas<a class="headerlink" href="#the-three-main-areas" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="the-three-main-areas">The Three Main Areas<a class="headerlink" href="#the-three-main-areas" title="Permanent link">¶</a></h3>
 <p>The editor has <strong>three big sections</strong> you'll use all the time:</p>
 <table>
 <thead>
@@ -2393,17 +2478,17 @@
 <p class="admonition-title">💡 Pro Tip</p>
 <p>The <strong>Stage</strong> is 480 pixels wide by 360 pixels tall. The exact center is position <strong>(0, 0)</strong>. X goes from -240 (left) to +240 (right). Y goes from -180 (bottom) to +180 (top).</p>
 </div>
-<hr />
-<h3 id="the-three-tabs-code-costumes-sounds">The Three Tabs — Code, Costumes, Sounds<a class="headerlink" href="#the-three-tabs-code-costumes-sounds" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="the-three-tabs-code-costumes-sounds">The Three Tabs — Code, Costumes, Sounds<a class="headerlink" href="#the-three-tabs-code-costumes-sounds" title="Permanent link">¶</a></h3>
 <p>At the top of the code area, you'll see <strong>three tabs</strong>. Each tab lets you work on a different part of your sprite:</p>
-<h4 id="diagram-three-tabs-explained">Diagram: Three Tabs Explained<a class="headerlink" href="#diagram-three-tabs-explained" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-three-tabs-explained">Diagram: Three Tabs Explained<a class="headerlink" href="#diagram-three-tabs-explained" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/three-tabs/main.html" width="100%" height="415px" scrolling="no"></iframe>
 
 <details>
 <summary>Three Tabs Explained</summary>
 <p>Type: diagram
-<strong>sim-id:</strong> three-tabs<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> three-tabs<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Show the three tabs (Code, Costumes, Sounds) and what each is for</p>
 <p>Components to show:
@@ -2447,9 +2532,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="your-first-sprite-and-the-stage">Your First Sprite and the Stage<a class="headerlink" href="#your-first-sprite-and-the-stage" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-a-sprite">What Is a Sprite?<a class="headerlink" href="#what-is-a-sprite" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="your-first-sprite-and-the-stage">Your First Sprite and the Stage<a class="headerlink" href="#your-first-sprite-and-the-stage" title="Permanent link">¶</a></h2>
+<h3 id="what-is-a-sprite">What Is a Sprite?<a class="headerlink" href="#what-is-a-sprite" title="Permanent link">¶</a></h3>
 <p>A <strong>sprite</strong> is a character or object in your Scratch project. Every sprite can:</p>
 <ul>
 <li><strong>Move</strong> around the stage</li>
@@ -2462,21 +2547,21 @@
 <p class="admonition-title">🎭 Sprite Fact</p>
 <p>A Scratch project can have <strong>many sprites</strong> — each with its own scripts, costumes, and sounds. They all share the same stage!</p>
 </div>
-<h3 id="the-stage">The Stage<a class="headerlink" href="#the-stage" title="Permanent link">&para;</a></h3>
+<h3 id="the-stage">The Stage<a class="headerlink" href="#the-stage" title="Permanent link">¶</a></h3>
 <p>The <strong>stage</strong> is the background where all your sprites perform. You can:</p>
 <ul>
 <li><strong>Change backdrops</strong> to set different scenes</li>
 <li><strong>Add backdrops</strong> from the library or draw your own</li>
 <li><strong>Program the stage</strong> itself (it can have scripts too!)</li>
 </ul>
-<h4 id="diagram-stage-coordinate-system">Diagram: Stage Coordinate System<a class="headerlink" href="#diagram-stage-coordinate-system" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-stage-coordinate-system">Diagram: Stage Coordinate System<a class="headerlink" href="#diagram-stage-coordinate-system" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/stage-coordinates/main.html" width="100%" height="525px" scrolling="no"></iframe>
 
 <details>
 <summary>Stage Coordinate System</summary>
 <p>Type: microsim
-<strong>sim-id:</strong> stage-coordinates<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> stage-coordinates<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Learning objective: Understand the Scratch coordinate system (x from -240 to 240, y from -180 to 180, center at 0,0)</p>
 <p>Canvas layout:
@@ -2511,17 +2596,22 @@
 - Coordinate display in top-left corner
 - Responsive canvas that resizes with window</p>
 </details>
-<hr />
-<h2 id="the-blocks-palette-your-programming-toolbox">The Blocks Palette — Your Programming Toolbox<a class="headerlink" href="#the-blocks-palette-your-programming-toolbox" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Coordinates Feel Tricky at First</p>
+<p><img alt="Scratch the Cat giving an encouraging thumbs-up" class="mascot-admonition-img" src="../../img/mascot/encouraging.png">
+If negative numbers and "which way is positive" feel confusing right now, that's completely normal — most coders need to click around the stage a few times before x and y click into place. Try the diagram above and watch the numbers change as you move; it sinks in faster than reading about it ever will.</p>
+</div>
+<hr>
+<h2 id="the-blocks-palette-your-programming-toolbox">The Blocks Palette — Your Programming Toolbox<a class="headerlink" href="#the-blocks-palette-your-programming-toolbox" title="Permanent link">¶</a></h2>
 <p>The <strong>blocks palette</strong> on the left holds all the blocks you'll use to program. Blocks are organized into <strong>10 categories</strong> by color:</p>
-<h4 id="diagram-block-categories">Diagram: Block Categories<a class="headerlink" href="#diagram-block-categories" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-block-categories">Diagram: Block Categories<a class="headerlink" href="#diagram-block-categories" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/block-categories/main.html" width="100%" height="800px"></iframe>
 
 <details>
 <summary>Block Categories</summary>
 <p>Type: infographic
-<strong>sim-id:</strong> block-categories<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> block-categories<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Show all 10 block categories with their colors, names, and example blocks</p>
 <p>Layout: Vertical list of category cards, each showing:
@@ -2547,7 +2637,7 @@
 <p>Visual style: Modern card layout matching Scratch's actual colors
 Color scheme: Exact Scratch category colors</p>
 </details>
-<hr />
+<hr>
 <table>
 <thead>
 <tr>
@@ -2609,21 +2699,22 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">🎯 Color Coding Helps You!</p>
-<p>The <strong>colors aren't just for looks</strong> — they help you find blocks fast. When you see an orange block, you know it controls <strong>program flow</strong> (loops, decisions). When you see a green block, you know it does <strong>math or logic</strong>.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Let Color Do the Searching</p>
+<p><img alt="Scratch the Cat pointing at a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png">
+Skip the hunting — just remember the color. Orange means program flow like loops and if/else, and green means math or comparisons, so you can jump straight to the right category.</p>
 </div>
-<hr />
-<h2 id="block-shapes-what-shape-means-what-job">Block Shapes — What Shape Means What Job<a class="headerlink" href="#block-shapes-what-shape-means-what-job" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="block-shapes-what-shape-means-what-job">Block Shapes — What Shape Means What Job<a class="headerlink" href="#block-shapes-what-shape-means-what-job" title="Permanent link">¶</a></h2>
 <p>Blocks come in <strong>different shapes</strong> that tell you how they work:</p>
-<h4 id="diagram-block-shapes">Diagram: Block Shapes<a class="headerlink" href="#diagram-block-shapes" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-block-shapes">Diagram: Block Shapes<a class="headerlink" href="#diagram-block-shapes" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/block-shapes/main.html" width="100%" height="495px" scrolling="no"></iframe>
 
 <details>
 <summary>Block Shapes</summary>
 <p>Type: diagram
-<strong>sim-id:</strong> block-shapes<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> block-shapes<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Show the 5 block shapes and what each shape means</p>
 <p>Components to show:
@@ -2687,18 +2778,14 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">🧩 Puzzle Pieces Fit Together</p>
-<ul>
-<li><strong>Hat blocks</strong> only go at the <strong>top</strong> of a script</li>
-<li><strong>Stack blocks</strong> snap <strong>together</strong> in a chain</li>
-<li><strong>Reporter</strong> and <strong>Boolean</strong> blocks fit <strong>inside</strong> the white holes of other blocks</li>
-<li><strong>Cap blocks</strong> only go at the <strong>bottom</strong></li>
-</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Shape Is a Contract</p>
+<p><img alt="Scratch the Cat thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png">
+Look at how the shapes constrain each other: a hat only sits at the top, a cap only sits at the bottom, and reporters and booleans only fit into the white holes carved for them. Scratch designed the shapes so a script that snaps together correctly is automatically a script that makes sense.</p>
 </div>
-<hr />
-<h2 id="your-first-script-lets-make-the-cat-move">Your First Script — Let's Make the Cat Move!<a class="headerlink" href="#your-first-script-lets-make-the-cat-move" title="Permanent link">&para;</a></h2>
-<h3 id="step-by-step-make-the-cat-walk">Step-by-Step: Make the Cat Walk<a class="headerlink" href="#step-by-step-make-the-cat-walk" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="your-first-script-lets-make-the-cat-move">Your First Script — Let's Make the Cat Move!<a class="headerlink" href="#your-first-script-lets-make-the-cat-move" title="Permanent link">¶</a></h2>
+<h3 id="step-by-step-make-the-cat-walk">Step-by-Step: Make the Cat Walk<a class="headerlink" href="#step-by-step-make-the-cat-walk" title="Permanent link">¶</a></h3>
 <p>Let's build your very first program together!</p>
 <ol>
 <li><strong>Open Scratch</strong> at <a href="https://scratch.mit.edu">scratch.mit.edu</a> and click <strong>Create</strong></li>
@@ -2711,7 +2798,7 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🎉 You Did It!</p>
 <p>You just wrote your first computer program! The cat moved 10 steps to the right because <code>move 10 steps</code> means "move forward 10 pixels in the direction you're facing."</p>
 </div>
-<h3 id="try-these-variations">Try These Variations<a class="headerlink" href="#try-these-variations" title="Permanent link">&para;</a></h3>
+<h3 id="try-these-variations">Try These Variations<a class="headerlink" href="#try-these-variations" title="Permanent link">¶</a></h3>
 <p>Now experiment! Try changing your script:</p>
 <table>
 <thead>
@@ -2739,14 +2826,22 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<h4 id="diagram-script-anatomy">Diagram: Script Anatomy<a class="headerlink" href="#diagram-script-anatomy" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-script-anatomy">Diagram: Script Anatomy<a class="headerlink" href="#diagram-script-anatomy" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/script-anatomy/main.html" width="100%" height="415px" scrolling="no"></iframe>
+
+<div class="scratch">
+when green flag clicked
+move (10) steps
+turn right (15) degrees
+say [Hello!] for (2) seconds
+wait (1) seconds
+</div>
 
 <details>
 <summary>Script Anatomy</summary>
 <p>Type: diagram
-<strong>sim-id:</strong> script-anatomy<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> script-anatomy<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Label the parts of a simple script so students learn the vocabulary</p>
 <p>Components to show:
@@ -2770,8 +2865,8 @@ Color scheme: Exact Scratch category colors</p>
 - "Blocks run in ORDER from top to bottom"</p>
 <p>Color scheme: Match actual Scratch block colors</p>
 </details>
-<hr />
-<h2 id="the-toolbar-save-share-and-more">The Toolbar — Save, Share, and More<a class="headerlink" href="#the-toolbar-save-share-and-more" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="the-toolbar-save-share-and-more">The Toolbar — Save, Share, and More<a class="headerlink" href="#the-toolbar-save-share-and-more" title="Permanent link">¶</a></h2>
 <p>At the very top of the editor, the <strong>toolbar</strong> has important buttons:</p>
 <table>
 <thead>
@@ -2819,14 +2914,15 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Save Often!</p>
-<p>Scratch auto-saves sometimes, but <strong>always click "Save Now" (💾)</strong> before you close the browser or take a break. You don't want to lose your hard work!</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">The Auto-Save Trap</p>
+<p><img alt="Scratch the Cat waving a warning" class="mascot-admonition-img" src="../../img/mascot/warning.png">
+Scratch only auto-saves sometimes, so closing the browser right after a big change can wipe it out. Get in the habit of clicking <strong>Save Now</strong> (💾) before every break, so nothing you built ever disappears.</p>
 </div>
-<hr />
-<h2 id="creating-a-scratch-account">Creating a Scratch Account<a class="headerlink" href="#creating-a-scratch-account" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="creating-a-scratch-account">Creating a Scratch Account<a class="headerlink" href="#creating-a-scratch-account" title="Permanent link">¶</a></h2>
 <p>To save projects online, share them with the world, and join the community, you need a <strong>free Scratch account</strong>:</p>
-<h3 id="how-to-create-an-account">How to Create an Account<a class="headerlink" href="#how-to-create-an-account" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-create-an-account">How to Create an Account<a class="headerlink" href="#how-to-create-an-account" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click <strong>Join Scratch</strong> at the top right of the website</li>
 <li>Choose a <strong>username</strong> (don't use your real name!)</li>
@@ -2837,7 +2933,7 @@ Color scheme: Exact Scratch category colors</p>
 <li>Click <strong>Create Account</strong></li>
 <li>Check your email and <strong>confirm your account</strong></li>
 </ol>
-<h3 id="why-have-an-account">Why Have an Account?<a class="headerlink" href="#why-have-an-account" title="Permanent link">&para;</a></h3>
+<h3 id="why-have-an-account">Why Have an Account?<a class="headerlink" href="#why-have-an-account" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -2876,10 +2972,10 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🎨 Your Profile</p>
 <p>Your profile page shows projects you've shared, studios you follow, and projects you've favorited. You can also write an "About Me" to tell people about yourself!</p>
 </div>
-<hr />
-<h2 id="community-guidelines-be-kind-online">Community Guidelines — Be Kind Online<a class="headerlink" href="#community-guidelines-be-kind-online" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="community-guidelines-be-kind-online">Community Guidelines — Be Kind Online<a class="headerlink" href="#community-guidelines-be-kind-online" title="Permanent link">¶</a></h2>
 <p>The Scratch community is <strong>friendly, creative, and respectful</strong>. When you join, you agree to follow these guidelines:</p>
-<h4 id="the-scratch-community-guidelines">The Scratch Community Guidelines<a class="headerlink" href="#the-scratch-community-guidelines" title="Permanent link">&para;</a></h4>
+<h4 id="the-scratch-community-guidelines">The Scratch Community Guidelines<a class="headerlink" href="#the-scratch-community-guidelines" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -2918,17 +3014,17 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🛡️ Stay Safe</p>
 <p>If someone makes you feel uncomfortable, <strong>tell a trusted adult</strong> and <strong>report</strong> the user using the "Report" button. The Scratch Team reviews all reports.</p>
 </div>
-<hr />
-<h2 id="studios-collaborate-and-curate">Studios — Collaborate and Curate<a class="headerlink" href="#studios-collaborate-and-curate" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="studios-collaborate-and-curate">Studios — Collaborate and Curate<a class="headerlink" href="#studios-collaborate-and-curate" title="Permanent link">¶</a></h2>
 <p>A <strong>studio</strong> is like a gallery or a club where people collect projects around a theme.</p>
-<h3 id="what-you-can-do-in-studios">What You Can Do in Studios<a class="headerlink" href="#what-you-can-do-in-studios" title="Permanent link">&para;</a></h3>
+<h3 id="what-you-can-do-in-studios">What You Can Do in Studios<a class="headerlink" href="#what-you-can-do-in-studios" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Add your projects</strong> to studios you like</li>
 <li><strong>Follow studios</strong> to see new projects in your "What's Happening" feed</li>
 <li><strong>Curate studios</strong> (if you're a manager) by adding/removing projects</li>
 <li><strong>Start discussions</strong> in the studio comments</li>
 </ul>
-<h3 id="studio-roles">Studio Roles<a class="headerlink" href="#studio-roles" title="Permanent link">&para;</a></h3>
+<h3 id="studio-roles">Studio Roles<a class="headerlink" href="#studio-roles" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -2964,8 +3060,8 @@ Color scheme: Exact Scratch category colors</p>
 <li>"My School's Coding Club"</li>
 </ul>
 </div>
-<hr />
-<h2 id="commenting-share-your-thoughts">Commenting — Share Your Thoughts<a class="headerlink" href="#commenting-share-your-thoughts" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="commenting-share-your-thoughts">Commenting — Share Your Thoughts<a class="headerlink" href="#commenting-share-your-thoughts" title="Permanent link">¶</a></h2>
 <p>You can <strong>comment</strong> on projects and studios to:</p>
 <ul>
 <li><strong>Give compliments</strong> — "I love how you made the cat jump!"</li>
@@ -2973,7 +3069,7 @@ Color scheme: Exact Scratch category colors</p>
 <li><strong>Give suggestions</strong> — "Maybe add a high score list?"</li>
 <li><strong>Report bugs</strong> — "The game freezes when I press space"</li>
 </ul>
-<h3 id="good-commenting-tips">Good Commenting Tips<a class="headerlink" href="#good-commenting-tips" title="Permanent link">&para;</a></h3>
+<h3 id="good-commenting-tips">Good Commenting Tips<a class="headerlink" href="#good-commenting-tips" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3004,10 +3100,10 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🚫 No Spam</p>
 <p>Don't post the same comment many times. Don't advertise your projects in other people's comments. That's called "spam" and it's not allowed.</p>
 </div>
-<hr />
-<h2 id="remixing-build-on-others-ideas">Remixing — Build on Others' Ideas<a class="headerlink" href="#remixing-build-on-others-ideas" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="remixing-build-on-others-ideas">Remixing — Build on Others' Ideas<a class="headerlink" href="#remixing-build-on-others-ideas" title="Permanent link">¶</a></h2>
 <p><strong>Remixing</strong> means taking someone else's project, making your own changes, and sharing it as a new project. It's how programmers learn from each other!</p>
-<h3 id="how-to-remix">How to Remix<a class="headerlink" href="#how-to-remix" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-remix">How to Remix<a class="headerlink" href="#how-to-remix" title="Permanent link">¶</a></h3>
 <ol>
 <li>Find a project you like</li>
 <li>Click <strong>See Inside</strong> to view the code</li>
@@ -3016,7 +3112,7 @@ Color scheme: Exact Scratch category colors</p>
 <li><strong>Share</strong> your remix with a new name</li>
 <li><strong>Credit automatically added</strong> — Scratch adds "Remixed from [original project]" </li>
 </ol>
-<h3 id="why-remix">Why Remix?<a class="headerlink" href="#why-remix" title="Permanent link">&para;</a></h3>
+<h3 id="why-remix">Why Remix?<a class="headerlink" href="#why-remix" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3052,9 +3148,9 @@ Color scheme: Exact Scratch category colors</p>
 <li>Check if the creator allows remixing (most do!)</li>
 </ul>
 </div>
-<hr />
-<h2 id="saving-and-sharing-projects">Saving and Sharing Projects<a class="headerlink" href="#saving-and-sharing-projects" title="Permanent link">&para;</a></h2>
-<h3 id="saving-your-work">Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="saving-and-sharing-projects">Saving and Sharing Projects<a class="headerlink" href="#saving-and-sharing-projects" title="Permanent link">¶</a></h2>
+<h3 id="saving-your-work">Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3085,7 +3181,7 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">💾 Keyboard Shortcut</p>
 <p>Press <strong>Ctrl+S</strong> (Windows/Linux) or <strong>Cmd+S</strong> (Mac) to save quickly!</p>
 </div>
-<h3 id="sharing-your-project">Sharing Your Project<a class="headerlink" href="#sharing-your-project" title="Permanent link">&para;</a></h3>
+<h3 id="sharing-your-project">Sharing Your Project<a class="headerlink" href="#sharing-your-project" title="Permanent link">¶</a></h3>
 <p>When your project is ready for the world:</p>
 <ol>
 <li>Click <strong>Share</strong> (📤) in the toolbar</li>
@@ -3094,7 +3190,7 @@ Color scheme: Exact Scratch category colors</p>
 <li>Choose <strong>visibility</strong> (anyone, only people with link, or private)</li>
 <li>Click <strong>Share</strong></li>
 </ol>
-<h3 id="what-happens-when-you-share">What Happens When You Share?<a class="headerlink" href="#what-happens-when-you-share" title="Permanent link">&para;</a></h3>
+<h3 id="what-happens-when-you-share">What Happens When You Share?<a class="headerlink" href="#what-happens-when-you-share" title="Permanent link">¶</a></h3>
 <ul>
 <li>Your project gets its own <strong>project page</strong> with a unique URL</li>
 <li>Others can <strong>play, heart, comment, and remix</strong> it</li>
@@ -3105,8 +3201,8 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🌟 You're a Creator Now!</p>
 <p>Sharing your first project is a big moment. Be proud! Every expert programmer started with a simple "Hello World" project.</p>
 </div>
-<hr />
-<h2 id="the-file-menu-more-options">The File Menu — More Options<a class="headerlink" href="#the-file-menu-more-options" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="the-file-menu-more-options">The File Menu — More Options<a class="headerlink" href="#the-file-menu-more-options" title="Permanent link">¶</a></h2>
 <p>Click <strong>File</strong> in the toolbar for these options:</p>
 <table>
 <thead>
@@ -3146,8 +3242,8 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">📥 Backup Your Work</p>
 <p>Use <strong>File → Download to Computer</strong> to save a <code>.sb3</code> file on your computer. If something happens to your online account, you still have your project!</p>
 </div>
-<hr />
-<h2 id="zoom-controls-see-more-or-see-closer">Zoom Controls — See More or See Closer<a class="headerlink" href="#zoom-controls-see-more-or-see-closer" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="zoom-controls-see-more-or-see-closer">Zoom Controls — See More or See Closer<a class="headerlink" href="#zoom-controls-see-more-or-see-closer" title="Permanent link">¶</a></h2>
 <p>In the bottom-right of the code area, you'll see <strong>zoom controls</strong>:</p>
 <table>
 <thead>
@@ -3171,16 +3267,13 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">🔍 Zoom Tips</p>
-<ul>
-<li><strong>Zoom in</strong> when building detailed scripts</li>
-<li><strong>Zoom out</strong> when you have lots of blocks and want to see the whole script</li>
-<li>Double-click empty space in code area to <strong>center</strong> your script</li>
-</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Zoom to Match the Job</p>
+<p><img alt="Scratch the Cat pointing at a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png">
+Zoom in when you're wiring up a tricky detail, and zoom out the moment your script gets tall enough that you lose track of it. Stuck a script off in a corner? Double-click empty space to snap it back to center.</p>
 </div>
-<hr />
-<h2 id="block-highlighting-see-your-code-run">Block Highlighting — See Your Code Run<a class="headerlink" href="#block-highlighting-see-your-code-run" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="block-highlighting-see-your-code-run">Block Highlighting — See Your Code Run<a class="headerlink" href="#block-highlighting-see-your-code-run" title="Permanent link">¶</a></h2>
 <p>When you click the green flag, Scratch <strong>highlights each block</strong> as it runs:</p>
 <ul>
 <li>The <strong>current block</strong> glows bright yellow</li>
@@ -3191,8 +3284,8 @@ Color scheme: Exact Scratch category colors</p>
 <p class="admonition-title">🐞 Debugging Superpower</p>
 <p>Block highlighting is your best debugging tool! If your sprite doesn't do what you expect, watch the highlighting. The bug is usually at the last highlighted block or the one right after it.</p>
 </div>
-<hr />
-<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">¶</a></h2>
 <p>In this chapter, you learned:</p>
 <ul>
 <li>✅ <strong>What Scratch is</strong> — visual programming with colorful blocks</li>
@@ -3212,8 +3305,13 @@ Color scheme: Exact Scratch category colors</p>
 <li>✅ <strong>File menu</strong> — new, save as, download backup</li>
 <li>✅ <strong>Zoom &amp; highlighting</strong> — see your code up close and running</li>
 </ul>
-<hr />
-<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Just Learned the Whole Editor!</p>
+<p><img alt="Scratch the Cat celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png">
+Look at what you can do now: you can read the stage, palette, and code area, tell blocks apart by shape and color, and you already wrote and ran your first script. That's the entire Scratch workspace — everything from here is just new blocks in a toolbox you already know how to use.</p>
+</div>
+<hr>
+<h2 id="key-terms-to-remember">Key Terms to Remember<a class="headerlink" href="#key-terms-to-remember" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3264,13 +3362,13 @@ Color scheme: Exact Scratch category colors</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="try-it-yourself">Try It Yourself! 🎯<a class="headerlink" href="#try-it-yourself" title="Permanent link">¶</a></h2>
 <p><strong>Challenge 1:</strong> Make the cat move in a <strong>square</strong> (hint: move, turn 90°, repeat 4 times)</p>
 <p><strong>Challenge 2:</strong> Make the cat <strong>say your name</strong> when you click the green flag (hint: Looks → <code>say</code> block)</p>
 <p><strong>Challenge 3:</strong> <strong>Draw a new costume</strong> for the cat in the Costumes tab (hint: click "Convert to Bitmap" to use paint tools)</p>
 <p><strong>Challenge 4:</strong> <strong>Create a Scratch account</strong> and save your first project</p>
-<hr />
+<hr>
 <details class="note">
 <summary>🤔 Quick Quiz - Click to Check Answers</summary>
 <p><strong>Q1:</strong> What shape is a block that <em>starts</em> a script?
@@ -3284,8 +3382,8 @@ Color scheme: Exact Scratch category colors</p>
 <p><strong>Q5:</strong> What does the green flag do?
 <strong>A:</strong> Starts all scripts that begin with "when green flag clicked"</p>
 </details>
-<hr />
-<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>In <strong>Chapter 2</strong>, you'll learn about <strong>sprites, the stage, and the coordinate system</strong> in detail. You'll discover how to position sprites exactly where you want them, make them glide smoothly, and understand the x,y coordinate system that makes all motion possible!</p>
 <p><a href="../02-sprites-stage-coordinates/"><strong>→ Next Chapter: Sprites, Stage, and the Coordinate System</strong></a></p>
 
@@ -3311,9 +3409,9 @@ Color scheme: Exact Scratch category colors</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -3323,13 +3421,13 @@ Color scheme: Exact Scratch category colors</p>
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of Chapters">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -3354,7 +3452,7 @@ Color scheme: Exact Scratch category colors</p>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -3366,7 +3464,7 @@ Color scheme: Exact Scratch category colors</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -3390,6 +3488,12 @@ Color scheme: Exact Scratch category colors</p>
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+      
+        <script src="../../js/scratchblocks-init.js"></script>
+      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

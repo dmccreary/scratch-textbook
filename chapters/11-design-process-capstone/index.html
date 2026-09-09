@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +21,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
@@ -49,8 +46,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,13 +56,25 @@
     
       <link rel="stylesheet" href="../../css/mascot.css">
     
+      <link rel="stylesheet" href="../../css/scratchblocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -100,13 +109,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -134,29 +142,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -164,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -182,7 +190,7 @@
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -206,7 +214,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -217,8 +225,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Scratch Programming for Kids
@@ -228,7 +235,7 @@
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -236,7 +243,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -366,7 +373,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -403,7 +410,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -751,7 +758,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -1681,6 +1688,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1737,6 +1750,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1774,6 +1813,33 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1867,7 +1933,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1883,7 +1949,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
@@ -2790,7 +2856,7 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
         
@@ -2839,23 +2905,23 @@
   
     <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/11-design-process-capstone/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<hr />
+<hr>
 <p>title: Design Process and Capstone Project
 description: Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect for young learners
 generated_by: claude skill chapter-content-generator
 date: 2026-06-10 14:00:00
 version: 0.08</p>
-<hr />
-<h1 id="design-process-and-capstone-project">Design Process and Capstone Project<a class="headerlink" href="#design-process-and-capstone-project" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<hr>
+<h1 id="design-process-and-capstone-project">Design Process and Capstone Project<a class="headerlink" href="#design-process-and-capstone-project" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect. This chapter covers 16 concepts from the learning graph, building on prerequisite concepts from earlier chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 16 concepts from the learning graph:</p>
 <ol>
 <li>Storyboard</li>
@@ -2875,7 +2941,7 @@ version: 0.08</p>
 <li>Sound Effects</li>
 <li>Visual Juice</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../03-motion-blocks-categories/">3. Motion Blocks and Block Categories</a></li>
@@ -2886,20 +2952,20 @@ version: 0.08</p>
 <li><a href="../09-advanced-control-operators/">9. Advanced Control and Operators</a></li>
 <li><a href="../10-game-mechanics-win-lose/">10. Game Mechanics and Win/Lose Conditions</a></li>
 </ul>
-<hr />
-<h2 id="the-design-process-your-creative-roadmap">The Design Process — Your Creative Roadmap! 🗺️<a class="headerlink" href="#the-design-process-your-creative-roadmap" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-the-design-process">What Is the Design Process?<a class="headerlink" href="#what-is-the-design-process" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="the-design-process-your-creative-roadmap">The Design Process — Your Creative Roadmap! 🗺️<a class="headerlink" href="#the-design-process-your-creative-roadmap" title="Permanent link">¶</a></h2>
+<h3 id="what-is-the-design-process">What Is the Design Process?<a class="headerlink" href="#what-is-the-design-process" title="Permanent link">¶</a></h3>
 <p><strong>The Design Process</strong> = a <strong>step-by-step method</strong> for turning ideas into finished projects. Professional game developers, engineers, artists, and inventors ALL use it!</p>
-<h3 id="the-6-stages">The 6 Stages<a class="headerlink" href="#the-6-stages" title="Permanent link">&para;</a></h3>
+<h3 id="the-6-stages">The 6 Stages<a class="headerlink" href="#the-6-stages" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>IMAGINE → PLAN → CREATE → TEST → IMPROVE → SHARE
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     ↑_____________REFLECT_____________↓
 </span></code></pre></div>
 <p><strong>Reflection happens at EVERY stage!</strong> 🔄</p>
-<hr />
-<h2 id="stage-1-imagine-dream-big">Stage 1: IMAGINE — Dream Big! 💭<a class="headerlink" href="#stage-1-imagine-dream-big" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-imagine">What Is Imagine?<a class="headerlink" href="#what-is-imagine" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-1-imagine-dream-big">Stage 1: IMAGINE — Dream Big! 💭<a class="headerlink" href="#stage-1-imagine-dream-big" title="Permanent link">¶</a></h2>
+<h3 id="what-is-imagine">What Is Imagine?<a class="headerlink" href="#what-is-imagine" title="Permanent link">¶</a></h3>
 <p><strong>Imagine</strong> = let your creativity run wild! No limits, no "that's impossible" — just pure ideas!</p>
-<h3 id="imagine-activities">Imagine Activities<a class="headerlink" href="#imagine-activities" title="Permanent link">&para;</a></h3>
+<h3 id="imagine-activities">Imagine Activities<a class="headerlink" href="#imagine-activities" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -2930,7 +2996,7 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<h3 id="imagine-questions">Imagine Questions<a class="headerlink" href="#imagine-questions" title="Permanent link">&para;</a></h3>
+<h3 id="imagine-questions">Imagine Questions<a class="headerlink" href="#imagine-questions" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -2961,7 +3027,7 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<h3 id="imagine-output">Imagine Output<a class="headerlink" href="#imagine-output" title="Permanent link">&para;</a></h3>
+<h3 id="imagine-output">Imagine Output<a class="headerlink" href="#imagine-output" title="Permanent link">¶</a></h3>
 <p><strong>One-sentence Game Concept:</strong></p>
 <blockquote>
 <p>"A [genre] game where you [core action] to [goal] while [challenge], featuring [unique twist]."</p>
@@ -2970,11 +3036,11 @@ version: 0.08</p>
 <blockquote>
 <p>"A platformer where you <strong>dash through time</strong> to <strong>collect chrono-shards</strong> while <strong>avoiding paradox monsters</strong>, featuring <strong>past/future world switching</strong>."</p>
 </blockquote>
-<hr />
-<h2 id="stage-2-plan-blueprint-your-game">Stage 2: PLAN — Blueprint Your Game! 📐<a class="headerlink" href="#stage-2-plan-blueprint-your-game" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-plan">What Is Plan?<a class="headerlink" href="#what-is-plan" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-2-plan-blueprint-your-game">Stage 2: PLAN — Blueprint Your Game! 📐<a class="headerlink" href="#stage-2-plan-blueprint-your-game" title="Permanent link">¶</a></h2>
+<h3 id="what-is-plan">What Is Plan?<a class="headerlink" href="#what-is-plan" title="Permanent link">¶</a></h3>
 <p><strong>Plan</strong> = turn your wild idea into a <strong>buildable blueprint</strong> with clear steps!</p>
-<h3 id="plan-deliverables">Plan Deliverables<a class="headerlink" href="#plan-deliverables" title="Permanent link">&para;</a></h3>
+<h3 id="plan-deliverables">Plan Deliverables<a class="headerlink" href="#plan-deliverables" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3009,8 +3075,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="game-design-document-gdd-template">Game Design Document (GDD) Template<a class="headerlink" href="#game-design-document-gdd-template" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="game-design-document-gdd-template">Game Design Document (GDD) Template<a class="headerlink" href="#game-design-document-gdd-template" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GAME DESIGN DOCUMENT
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>====================
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Title: [Game Name]
@@ -3030,8 +3096,8 @@ version: 0.08</p>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  v1.0 - Complete game
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  v1.1 - Polish &amp; bug fixes
 </span></code></pre></div>
-<hr />
-<h3 id="storyboard-visual-script">Storyboard — Visual Script! 🎬<a class="headerlink" href="#storyboard-visual-script" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="storyboard-visual-script">Storyboard — Visual Script! 🎬<a class="headerlink" href="#storyboard-visual-script" title="Permanent link">¶</a></h3>
 <p><strong>Storyboard</strong> = comic-strip style plan of your game's scenes!</p>
 <table>
 <thead>
@@ -3089,8 +3155,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="asset-list-shopping-list">Asset List — Shopping List! 🛒<a class="headerlink" href="#asset-list-shopping-list" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="asset-list-shopping-list">Asset List — Shopping List! 🛒<a class="headerlink" href="#asset-list-shopping-list" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3121,8 +3187,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="flowchart-logic-map">Flowchart — Logic Map! 🗺️<a class="headerlink" href="#flowchart-logic-map" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="flowchart-logic-map">Flowchart — Logic Map! 🗺️<a class="headerlink" href="#flowchart-logic-map" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>START → Initialize Variables → MAIN LOOP
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                    ↓
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            Check Input (Keys)
@@ -3139,8 +3205,8 @@ version: 0.08</p>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                    ↓
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            WAIT 0.01s → LOOP
 </span></code></pre></div>
-<hr />
-<h3 id="task-list-prioritized-steps">Task List — Prioritized Steps!<a class="headerlink" href="#task-list-prioritized-steps" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="task-list-prioritized-steps">Task List — Prioritized Steps!<a class="headerlink" href="#task-list-prioritized-steps" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3202,11 +3268,11 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="stage-3-create-build-it">Stage 3: CREATE — Build It! 🛠️<a class="headerlink" href="#stage-3-create-build-it" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-create">What Is Create?<a class="headerlink" href="#what-is-create" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-3-create-build-it">Stage 3: CREATE — Build It! 🛠️<a class="headerlink" href="#stage-3-create-build-it" title="Permanent link">¶</a></h2>
+<h3 id="what-is-create">What Is Create?<a class="headerlink" href="#what-is-create" title="Permanent link">¶</a></h3>
 <p><strong>Create</strong> = write the code, draw the art, record the sounds — <strong>make it real!</strong></p>
-<h3 id="create-best-practices">Create Best Practices<a class="headerlink" href="#create-best-practices" title="Permanent link">&para;</a></h3>
+<h3 id="create-best-practices">Create Best Practices<a class="headerlink" href="#create-best-practices" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3237,7 +3303,7 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<h3 id="create-order-suggested">Create Order (Suggested)<a class="headerlink" href="#create-order-suggested" title="Permanent link">&para;</a></h3>
+<h3 id="create-order-suggested">Create Order (Suggested)<a class="headerlink" href="#create-order-suggested" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>Core movement</strong> (player controller)</li>
 <li><strong>Camera follow</strong> (if scrolling)</li>
@@ -3252,11 +3318,11 @@ version: 0.08</p>
 <li><strong>Music</strong> (level themes)</li>
 <li><strong>Polish</strong> (particles, juice, menus)</li>
 </ol>
-<hr />
-<h2 id="stage-4-test-does-it-work">Stage 4: TEST — Does It Work? 🧪<a class="headerlink" href="#stage-4-test-does-it-work" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-test">What Is Test?<a class="headerlink" href="#what-is-test" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-4-test-does-it-work">Stage 4: TEST — Does It Work? 🧪<a class="headerlink" href="#stage-4-test-does-it-work" title="Permanent link">¶</a></h2>
+<h3 id="what-is-test">What Is Test?<a class="headerlink" href="#what-is-test" title="Permanent link">¶</a></h3>
 <p><strong>Test</strong> = systematically verify <strong>every feature works</strong> and <strong>find bugs</strong>!</p>
-<h3 id="test-phases">Test Phases<a class="headerlink" href="#test-phases" title="Permanent link">&para;</a></h3>
+<h3 id="test-phases">Test Phases<a class="headerlink" href="#test-phases" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3293,8 +3359,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="test-checklist">Test Checklist<a class="headerlink" href="#test-checklist" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="test-checklist">Test Checklist<a class="headerlink" href="#test-checklist" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3345,8 +3411,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="test-documentation">Test Documentation<a class="headerlink" href="#test-documentation" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="test-documentation">Test Documentation<a class="headerlink" href="#test-documentation" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>TEST LOG - v0.5
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>===============
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Date: 2026-06-10
@@ -3368,11 +3434,11 @@ version: 0.08</p>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>- Enemy: check ground detection
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>- Music: check loop points
 </span></code></pre></div>
-<hr />
-<h2 id="stage-5-improve-make-it-better">Stage 5: IMPROVE — Make It Better! ⬆️<a class="headerlink" href="#stage-5-improve-make-it-better" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-improve">What Is Improve?<a class="headerlink" href="#what-is-improve" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-5-improve-make-it-better">Stage 5: IMPROVE — Make It Better! ⬆️<a class="headerlink" href="#stage-5-improve-make-it-better" title="Permanent link">¶</a></h2>
+<h3 id="what-is-improve">What Is Improve?<a class="headerlink" href="#what-is-improve" title="Permanent link">¶</a></h3>
 <p><strong>Improve</strong> = fix bugs, add polish, balance difficulty, add "juice"!</p>
-<h3 id="improvement-categories">Improvement Categories<a class="headerlink" href="#improvement-categories" title="Permanent link">&para;</a></h3>
+<h3 id="improvement-categories">Improvement Categories<a class="headerlink" href="#improvement-categories" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3407,8 +3473,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="the-juice-checklist">The "Juice" Checklist 🍹<a class="headerlink" href="#the-juice-checklist" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="the-juice-checklist">The "Juice" Checklist 🍹<a class="headerlink" href="#the-juice-checklist" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3455,8 +3521,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="balancing-difficulty">Balancing Difficulty<a class="headerlink" href="#balancing-difficulty" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="balancing-difficulty">Balancing Difficulty<a class="headerlink" href="#balancing-difficulty" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3488,16 +3554,16 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="iterative-development-cycle-until-perfect">Iterative Development — Cycle Until Perfect! 🔄<a class="headerlink" href="#iterative-development-cycle-until-perfect" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="iterative-development-cycle-until-perfect">Iterative Development — Cycle Until Perfect! 🔄<a class="headerlink" href="#iterative-development-cycle-until-perfect" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>PLAN → CREATE → TEST → IMPROVE → TEST → IMPROVE → TEST...
 </span></code></pre></div>
 <p><strong>Each cycle makes the game better!</strong> Most pro games go through 50+ iterations.</p>
-<hr />
-<h2 id="stage-6-share-show-the-world">Stage 6: SHARE — Show the World! 🌍<a class="headerlink" href="#stage-6-share-show-the-world" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-share">What Is Share?<a class="headerlink" href="#what-is-share" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="stage-6-share-show-the-world">Stage 6: SHARE — Show the World! 🌍<a class="headerlink" href="#stage-6-share-show-the-world" title="Permanent link">¶</a></h2>
+<h3 id="what-is-share">What Is Share?<a class="headerlink" href="#what-is-share" title="Permanent link">¶</a></h3>
 <p><strong>Share</strong> = publish your game so others can play, enjoy, and remix!</p>
-<h3 id="before-sharing-checklist">Before Sharing Checklist<a class="headerlink" href="#before-sharing-checklist" title="Permanent link">&para;</a></h3>
+<h3 id="before-sharing-checklist">Before Sharing Checklist<a class="headerlink" href="#before-sharing-checklist" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3532,8 +3598,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="sharing-steps">Sharing Steps<a class="headerlink" href="#sharing-steps" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="sharing-steps">Sharing Steps<a class="headerlink" href="#sharing-steps" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click <strong>Share</strong> (📤) in toolbar</li>
 <li>Add <strong>clear title</strong>: "Super Coin Collector v1.2"</li>
@@ -3543,8 +3609,8 @@ version: 0.08</p>
 <li>Choose <strong>visibility</strong>: Anyone / Link only / Private</li>
 <li>Click <strong>Share</strong>!</li>
 </ol>
-<hr />
-<h3 id="after-sharing">After Sharing<a class="headerlink" href="#after-sharing" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="after-sharing">After Sharing<a class="headerlink" href="#after-sharing" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3579,11 +3645,11 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="extra-polish-the-final-10">Extra Polish: The Final 10%! ✨<a class="headerlink" href="#extra-polish-the-final-10" title="Permanent link">&para;</a></h2>
-<h3 id="instructions-screen-teach-the-player">Instructions Screen — Teach the Player! 📋<a class="headerlink" href="#instructions-screen-teach-the-player" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="extra-polish-the-final-10">Extra Polish: The Final 10%! ✨<a class="headerlink" href="#extra-polish-the-final-10" title="Permanent link">¶</a></h2>
+<h3 id="instructions-screen-teach-the-player">Instructions Screen — Teach the Player! 📋<a class="headerlink" href="#instructions-screen-teach-the-player" title="Permanent link">¶</a></h3>
 <p><strong>Instructions Screen</strong> = first thing player sees — teaches controls!</p>
-<h3 id="instructions-screen-elements">Instructions Screen Elements<a class="headerlink" href="#instructions-screen-elements" title="Permanent link">&para;</a></h3>
+<h3 id="instructions-screen-elements">Instructions Screen Elements<a class="headerlink" href="#instructions-screen-elements" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3618,7 +3684,7 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<h3 id="instructions-screen-code">Instructions Screen Code<a class="headerlink" href="#instructions-screen-code" title="Permanent link">&para;</a></h3>
+<h3 id="instructions-screen-code">Instructions Screen Code<a class="headerlink" href="#instructions-screen-code" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when I receive [show-instructions v]
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>switch costume to [instructions-screen v]
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>show
@@ -3626,10 +3692,10 @@ version: 0.08</p>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>hide
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>broadcast [game-start v]
 </span></code></pre></div>
-<hr />
-<h3 id="credits-honor-your-sources">Credits — Honor Your Sources! 🙏<a class="headerlink" href="#credits-honor-your-sources" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="credits-honor-your-sources">Credits — Honor Your Sources! 🙏<a class="headerlink" href="#credits-honor-your-sources" title="Permanent link">¶</a></h3>
 <p><strong>Credits Screen</strong> = thank everyone who helped!</p>
-<h3 id="credits-template">Credits Template<a class="headerlink" href="#credits-template" title="Permanent link">&para;</a></h3>
+<h3 id="credits-template">Credits Template<a class="headerlink" href="#credits-template" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>CREDITS
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>=======
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
@@ -3661,9 +3727,9 @@ version: 0.08</p>
 </span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
 </span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>THANK YOU FOR PLAYING!
 </span></code></pre></div>
-<hr />
-<h3 id="sound-effects-audio-polish">Sound Effects — Audio Polish! 🔊<a class="headerlink" href="#sound-effects-audio-polish" title="Permanent link">&para;</a></h3>
-<h3 id="sound-effect-categories">Sound Effect Categories<a class="headerlink" href="#sound-effect-categories" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="sound-effects-audio-polish">Sound Effects — Audio Polish! 🔊<a class="headerlink" href="#sound-effects-audio-polish" title="Permanent link">¶</a></h3>
+<h3 id="sound-effect-categories">Sound Effect Categories<a class="headerlink" href="#sound-effect-categories" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3705,8 +3771,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="sound-design-tips">Sound Design Tips<a class="headerlink" href="#sound-design-tips" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="sound-design-tips">Sound Design Tips<a class="headerlink" href="#sound-design-tips" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3737,11 +3803,11 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="visual-juice-eye-candy">Visual Juice — Eye Candy! 👁️<a class="headerlink" href="#visual-juice-eye-candy" title="Permanent link">&para;</a></h3>
-<h3 id="what-is-juice">What Is "Juice"?<a class="headerlink" href="#what-is-juice" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="visual-juice-eye-candy">Visual Juice — Eye Candy! 👁️<a class="headerlink" href="#visual-juice-eye-candy" title="Permanent link">¶</a></h3>
+<h3 id="what-is-juice">What Is "Juice"?<a class="headerlink" href="#what-is-juice" title="Permanent link">¶</a></h3>
 <p><strong>Juice</strong> = visual/audio feedback that makes actions feel <strong>satisfying, powerful, alive!</strong></p>
-<h3 id="juice-techniques">Juice Techniques<a class="headerlink" href="#juice-techniques" title="Permanent link">&para;</a></h3>
+<h3 id="juice-techniques">Juice Techniques<a class="headerlink" href="#juice-techniques" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3788,9 +3854,9 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="juice-examples">Juice Examples<a class="headerlink" href="#juice-examples" title="Permanent link">&para;</a></h3>
-<h4 id="coin-collect-juice">Coin Collect Juice<a class="headerlink" href="#coin-collect-juice" title="Permanent link">&para;</a></h4>
+<hr>
+<h3 id="juice-examples">Juice Examples<a class="headerlink" href="#juice-examples" title="Permanent link">¶</a></h3>
+<h4 id="coin-collect-juice">Coin Collect Juice<a class="headerlink" href="#coin-collect-juice" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when I receive [coin-collected v]
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>change [score v] by (10)
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>play sound [coin v]
@@ -3799,7 +3865,7 @@ version: 0.08</p>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>wait 0.05 secs
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>clear graphic effects
 </span></code></pre></div>
-<h4 id="enemy-hit-juice">Enemy Hit Juice<a class="headerlink" href="#enemy-hit-juice" title="Permanent link">&para;</a></h4>
+<h4 id="enemy-hit-juice">Enemy Hit Juice<a class="headerlink" href="#enemy-hit-juice" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when I receive [enemy-hit v]
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>broadcast [screen-shake v]
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>change color effect by 100
@@ -3807,7 +3873,7 @@ version: 0.08</p>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>wait 0.1 secs
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>clear graphic effects
 </span></code></pre></div>
-<h4 id="screen-shake-broadcast">Screen Shake (Broadcast)<a class="headerlink" href="#screen-shake-broadcast" title="Permanent link">&para;</a></h4>
+<h4 id="screen-shake-broadcast">Screen Shake (Broadcast)<a class="headerlink" href="#screen-shake-broadcast" title="Permanent link">¶</a></h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>when I receive [screen-shake v]
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>repeat 5
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    change x by (pick random -5 to 5)
@@ -3816,11 +3882,11 @@ version: 0.08</p>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>end
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>go to x: (original-x) y: (original-y)
 </span></code></pre></div>
-<hr />
-<h2 id="reflection-learn-and-grow">Reflection — Learn and Grow! 🧠<a class="headerlink" href="#reflection-learn-and-grow" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-reflection">What Is Reflection?<a class="headerlink" href="#what-is-reflection" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="reflection-learn-and-grow">Reflection — Learn and Grow! 🧠<a class="headerlink" href="#reflection-learn-and-grow" title="Permanent link">¶</a></h2>
+<h3 id="what-is-reflection">What Is Reflection?<a class="headerlink" href="#what-is-reflection" title="Permanent link">¶</a></h3>
 <p><strong>Reflection</strong> = looking back at your project to <strong>learn what worked, what didn't, and how to improve next time!</strong></p>
-<h3 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">&para;</a></h3>
+<h3 id="reflection-questions">Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3851,7 +3917,7 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<h3 id="reflection-template">Reflection Template<a class="headerlink" href="#reflection-template" title="Permanent link">&para;</a></h3>
+<h3 id="reflection-template">Reflection Template<a class="headerlink" href="#reflection-template" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>PROJECT REFLECTION
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>==================
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Game: [Name]
@@ -3886,11 +3952,11 @@ version: 0.08</p>
 </span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>- Multiplayer co-op platformer
 </span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>- Level editor for players
 </span></code></pre></div>
-<hr />
-<h2 id="the-capstone-project-your-masterpiece">The Capstone Project — Your Masterpiece! 🏆<a class="headerlink" href="#the-capstone-project-your-masterpiece" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-the-capstone">What Is the Capstone?<a class="headerlink" href="#what-is-the-capstone" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="the-capstone-project-your-masterpiece">The Capstone Project — Your Masterpiece! 🏆<a class="headerlink" href="#the-capstone-project-your-masterpiece" title="Permanent link">¶</a></h2>
+<h3 id="what-is-the-capstone">What Is the Capstone?<a class="headerlink" href="#what-is-the-capstone" title="Permanent link">¶</a></h3>
 <p><strong>Capstone Project</strong> = your <strong>final, polished game</strong> that demonstrates <strong>everything you've learned!</strong></p>
-<h3 id="capstone-requirements">Capstone Requirements<a class="headerlink" href="#capstone-requirements" title="Permanent link">&para;</a></h3>
+<h3 id="capstone-requirements">Capstone Requirements<a class="headerlink" href="#capstone-requirements" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3941,8 +4007,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="capstone-project-ideas">Capstone Project Ideas<a class="headerlink" href="#capstone-project-ideas" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="capstone-project-ideas">Capstone Project Ideas<a class="headerlink" href="#capstone-project-ideas" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -3984,8 +4050,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="your-capstone-journey">Your Capstone Journey<a class="headerlink" href="#your-capstone-journey" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="your-capstone-journey">Your Capstone Journey<a class="headerlink" href="#your-capstone-journey" title="Permanent link">¶</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WEEK 1: IMAGINE + PLAN
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  - Brainstorm 10 ideas → pick 1
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  - Write GDD, storyboard, asset list
@@ -4012,9 +4078,9 @@ version: 0.08</p>
 </span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>  - Write reflection
 </span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>  - Submit capstone!
 </span></code></pre></div>
-<hr />
-<h2 id="you-are-a-game-developer-now">You Are a Game Developer Now! 🎮<a class="headerlink" href="#you-are-a-game-developer-now" title="Permanent link">&para;</a></h2>
-<h3 id="skills-youve-mastered">Skills You've Mastered<a class="headerlink" href="#skills-youve-mastered" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="you-are-a-game-developer-now">You Are a Game Developer Now! 🎮<a class="headerlink" href="#you-are-a-game-developer-now" title="Permanent link">¶</a></h2>
+<h3 id="skills-youve-mastered">Skills You've Mastered<a class="headerlink" href="#skills-youve-mastered" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4053,8 +4119,8 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -4089,11 +4155,11 @@ version: 0.08</p>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="final-challenge-your-capstone">Final Challenge: Your Capstone! 🏁<a class="headerlink" href="#final-challenge-your-capstone" title="Permanent link">&para;</a></h2>
-<h3 id="your-mission">Your Mission<a class="headerlink" href="#your-mission" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="final-challenge-your-capstone">Final Challenge: Your Capstone! 🏁<a class="headerlink" href="#final-challenge-your-capstone" title="Permanent link">¶</a></h2>
+<h3 id="your-mission">Your Mission<a class="headerlink" href="#your-mission" title="Permanent link">¶</a></h3>
 <p><strong>Create, polish, and share a complete, original game on Scratch that demonstrates everything you've learned.</strong></p>
-<h3 id="submission-checklist">Submission Checklist<a class="headerlink" href="#submission-checklist" title="Permanent link">&para;</a></h3>
+<h3 id="submission-checklist">Submission Checklist<a class="headerlink" href="#submission-checklist" title="Permanent link">¶</a></h3>
 <ul>
 <li>[ ] Game Design Document completed</li>
 <li>[ ] Storyboard drawn</li>
@@ -4115,25 +4181,25 @@ version: 0.08</p>
 <li>[ ] Shared on Scratch with tags</li>
 <li>[ ] Reflection written</li>
 </ul>
-<hr />
-<h2 id="congratulations">Congratulations! 🎉<a class="headerlink" href="#congratulations" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="congratulations">Congratulations! 🎉<a class="headerlink" href="#congratulations" title="Permanent link">¶</a></h2>
 <p><strong>You've completed the Scratch Programming for Kids textbook!</strong></p>
 <p>You've journeyed from:
 - <strong>Hello World</strong> → <strong>Capstone Game Developer</strong></p>
-<h3 id="remember">Remember:<a class="headerlink" href="#remember" title="Permanent link">&para;</a></h3>
+<h3 id="remember">Remember:<a class="headerlink" href="#remember" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><strong>"The best way to learn game development is to make games."</strong></p>
 </blockquote>
 <p>So keep making games. Keep learning. Keep sharing. Keep having fun!</p>
-<hr />
-<h2 id="thank-you">Thank You! 🙏<a class="headerlink" href="#thank-you" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="thank-you">Thank You! 🙏<a class="headerlink" href="#thank-you" title="Permanent link">¶</a></h2>
 <p>Thank you for joining this journey through Scratch programming. </p>
 <p><strong>Keep creating. Keep coding. Keep playing.</strong></p>
-<hr />
+<hr>
 <p><em>The Scratch Programming for Kids Team</em></p>
-<hr />
+<hr>
 <p><em>This textbook was created with love for young creators everywhere. May your code be bug-free, your frame rates high, and your imagination limitless!</em></p>
-<hr />
+<hr>
 <p><em>Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab. Scratch is a trademark of MIT. This textbook is not affiliated with MIT or the Scratch Team.</em></p>
 
 
@@ -4155,9 +4221,9 @@ version: 0.08</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -4167,13 +4233,13 @@ version: 0.08</p>
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../10-game-mechanics-win-lose/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. Game Mechanics and Win/Lose Conditions">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -4198,7 +4264,7 @@ version: 0.08</p>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -4210,7 +4276,7 @@ version: 0.08</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -4234,6 +4300,12 @@ version: 0.08</p>
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
+      
+        <script src="../../js/scratchblocks-init.js"></script>
+      
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
