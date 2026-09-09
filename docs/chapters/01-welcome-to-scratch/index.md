@@ -41,6 +41,19 @@ This chapter assumes only the prerequisites listed in the [course description](.
 
 ---
 
+!!! mascot-welcome "Hi, I'm Scratch the Cat!"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Hi! I'm **Scratch the Cat**, and I'm playful and curious about every block, every bug, and every idea you try. I'll be popping up in the margins of this whole book, so here's how to read me:
+
+    1. **Welcome** — I open a chapter and tell you why it's worth your time.
+    2. **Thinking** — I slow down for the big "aha!" ideas worth restructuring your thinking around.
+    3. **Tip** — I whisper a shortcut an expert would use.
+    4. **Warning** — I flag a trap almost everyone falls into, plus how to climb out.
+    5. **Encourage** — I remind you that the hard parts are hard for everyone, not just you.
+    6. **Celebrate** — I cheer for a real milestone and name exactly what you just learned.
+
+    If I'm not doing one of those six things, I'm not in the chapter. Let's build something purr-fect!
+
 ## What Is Scratch?
 
 Scratch is a **visual programming language** designed especially for kids like you! Instead of typing complicated text code, you snap together colorful blocks — like LEGO® bricks — to create your own interactive stories, games, and animations.
@@ -53,6 +66,10 @@ Think about how you build with LEGO® bricks. You don't need to know how plastic
 - **No syntax errors** — Blocks only fit together in ways that work
 - **See your program run** — Watch your creation come to life instantly
 - **Learn real concepts** — The ideas you learn here are used by professional programmers!
+
+!!! mascot-thinking "Blocks Instead of Text"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice what just changed: instead of memorizing exact spelling and punctuation, you're recognizing shapes that only fit together correctly. That's the same logic every professional programmer uses — you're just seeing the structure instead of typing it from memory.
 
 !!! tip "Did You Know?"
     Scratch was created by the **MIT Media Lab** — the same people who work on robots, new kinds of computers, and cool inventions! Over **100 million** people around the world use Scratch.
@@ -240,6 +257,10 @@ Implementation notes:
 - Responsive canvas that resizes with window
 </details>
 
+!!! mascot-encourage "Coordinates Feel Tricky at First"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If negative numbers and "which way is positive" feel confusing right now, that's completely normal — most coders need to click around the stage a few times before x and y click into place. Try the diagram above and watch the numbers change as you move; it sinks in faster than reading about it ever will.
+
 ---
 
 ## The Blocks Palette — Your Programming Toolbox
@@ -301,8 +322,9 @@ Color scheme: Exact Scratch category colors
 | **Lists** | 🟤 Dark Red | Storing collections of items (inventory, high scores) |
 | **My Blocks** | 🩷 Dark Pink | Creating your own custom blocks |
 
-!!! tip "🎯 Color Coding Helps You!"
-    The **colors aren't just for looks** — they help you find blocks fast. When you see an orange block, you know it controls **program flow** (loops, decisions). When you see a green block, you know it does **math or logic**.
+!!! mascot-tip "Let Color Do the Searching"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Skip the hunting — just remember the color. Orange means program flow like loops and if/else, and green means math or comparisons, so you can jump straight to the right category.
 
 ---
 
@@ -356,11 +378,9 @@ Implementation: p5.js diagram. Hover a block shape to see explanation and exampl
 | ⬡ | **Boolean block** | **Answers** true or false | `touching mouse-pointer?`, `5 > 3`, `key space pressed?` |
 | ▔▔▔⌣ | **Cap block** | **Ends** a script | `stop all`, `stop this script` |
 
-!!! note "🧩 Puzzle Pieces Fit Together"
-    - **Hat blocks** only go at the **top** of a script
-    - **Stack blocks** snap **together** in a chain
-    - **Reporter** and **Boolean** blocks fit **inside** the white holes of other blocks
-    - **Cap blocks** only go at the **bottom**
+!!! mascot-thinking "Shape Is a Contract"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Look at how the shapes constrain each other: a hat only sits at the top, a cap only sits at the bottom, and reporters and booleans only fit into the white holes carved for them. Scratch designed the shapes so a script that snaps together correctly is automatically a script that makes sense.
 
 ---
 
@@ -447,8 +467,9 @@ At the very top of the editor, the **toolbar** has important buttons:
 | **📤 Share** | Publish your project for the world to see |
 | **📁 Folder Icon** | See your projects |
 
-!!! warning "⚠️ Save Often!"
-    Scratch auto-saves sometimes, but **always click "Save Now" (💾)** before you close the browser or take a break. You don't want to lose your hard work!
+!!! mascot-warning "The Auto-Save Trap"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Scratch only auto-saves sometimes, so closing the browser right after a big change can wipe it out. Get in the habit of clicking **Save Now** (💾) before every break, so nothing you built ever disappears.
 
 ---
 
@@ -647,10 +668,9 @@ In the bottom-right of the code area, you'll see **zoom controls**:
 | **− (minus)** | Zoom out (see more blocks at once) |
 | **Reset (100%)** | Back to normal size |
 
-!!! tip "🔍 Zoom Tips"
-    - **Zoom in** when building detailed scripts
-    - **Zoom out** when you have lots of blocks and want to see the whole script
-    - Double-click empty space in code area to **center** your script
+!!! mascot-tip "Zoom to Match the Job"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Zoom in when you're wiring up a tricky detail, and zoom out the moment your script gets tall enough that you lose track of it. Stuck a script off in a corner? Double-click empty space to snap it back to center.
 
 ---
 
@@ -687,6 +707,10 @@ In this chapter, you learned:
 - ✅ **Saving & sharing** — save often, share when proud
 - ✅ **File menu** — new, save as, download backup
 - ✅ **Zoom & highlighting** — see your code up close and running
+
+!!! mascot-celebration "You Just Learned the Whole Editor!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Look at what you can do now: you can read the stage, palette, and code area, tell blocks apart by shape and color, and you already wrote and ran your first script. That's the entire Scratch workspace — everything from here is just new blocks in a toolbox you already know how to use.
 
 ---
 

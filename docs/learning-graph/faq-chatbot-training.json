@@ -1,0 +1,2333 @@
+{
+  "faq_version": "1.0",
+  "generated_date": "2026-09-09",
+  "source_textbook": "Scratch Programming for Kids",
+  "total_questions": 97,
+  "questions": [
+    {
+      "id": "faq-001",
+      "category": "Getting Started",
+      "question": "What is Scratch Programming for Kids about?",
+      "answer": "This book teaches you how to make your own games, animated stories, and interactive art using **Scratch**, a free visual programming language created by the MIT Media Lab. **Visual programming** means you build programs by snapping together colorful blocks instead of typing lines of code \u2014 like building with LEGO bricks. The book is organized into 7 units that each end in a real project, moving from simple animations up through a full game you design and build yourself. Along the way you'll learn ideas real programmers use, like sequences, loops, events, and variables, explained in plain language with lots of pictures and practice. See the [Course Description](course-description.md) for the complete topic list, and browse the [Chapters](chapters/index.md) to see how everything fits together.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Visual Programming"
+      ],
+      "keywords": [
+        "overview",
+        "scratch",
+        "course",
+        "visual programming",
+        "introduction"
+      ],
+      "source_links": [
+        "docs/course-description.md",
+        "docs/chapters/index.md"
+      ],
+      "has_example": false,
+      "word_count": 123
+    },
+    {
+      "id": "faq-002",
+      "category": "Getting Started",
+      "question": "Who is this Scratch textbook written for?",
+      "answer": "This book is written for children ages 8 to 12 (grades 3 to 6) who have never programmed before \u2014 no coding experience needed at all. It's also a great guide for parents, teachers, and mentors who want to learn alongside a young creator, and for absolute beginners of any age who are curious about visual programming. The only things you need going in are comfort using a mouse and keyboard, being able to read short sentences on your own, and a willingness to experiment and make mistakes \u2014 that's how everyone learns Scratch. You can read the full description of the intended audience in [About](about.md) and [Course Description](course-description.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [],
+      "keywords": [
+        "audience",
+        "kids",
+        "parents",
+        "teachers",
+        "beginners"
+      ],
+      "source_links": [
+        "docs/about.md",
+        "docs/course-description.md"
+      ],
+      "has_example": false,
+      "word_count": 109
+    },
+    {
+      "id": "faq-003",
+      "category": "Getting Started",
+      "question": "Do I need to know how to code before starting?",
+      "answer": "No. This book assumes zero prior programming experience. You don't need to know about loops, variables, or any coding vocabulary before you begin \u2014 every idea is introduced step by step, starting from the very basics in Chapter 1. You also don't need advanced math (just basic arithmetic), and you don't need to understand x/y coordinates or true/false logic ahead of time; both are introduced gently as you go. The only real requirements are basic computer skills (using a mouse, keyboard, and web browser), being comfortable reading short sentences on your own, and curiosity. If you can click, drag, and type a little, you're ready to begin. See the [Course Description](course-description.md) for the full list of assumed skills.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [],
+      "keywords": [
+        "prerequisites",
+        "no experience",
+        "beginner",
+        "requirements"
+      ],
+      "source_links": [
+        "docs/course-description.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-004",
+      "category": "Getting Started",
+      "question": "What software or account do I need to begin?",
+      "answer": "You need a computer or tablet with a web browser and, ideally, an internet connection, so you can use the free Scratch editor at scratch.mit.edu. You don't need to install anything, though an offline editor is also available if you don't have steady internet. To try blocks and build small scripts, you don't need an account right away \u2014 but to save your projects online, share them, and join the Scratch community, you'll want a free **Scratch Account**, a personal login that lets you save projects to the cloud, comment on others' work, and join studios. Creating one takes just a few minutes and needs a parent or guardian email for account recovery. See [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md) for step-by-step account creation instructions.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Scratch Account"
+      ],
+      "keywords": [
+        "software",
+        "account",
+        "internet",
+        "scratch editor",
+        "setup"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": false,
+      "word_count": 122
+    },
+    {
+      "id": "faq-005",
+      "category": "Getting Started",
+      "question": "How is this textbook organized?",
+      "answer": "The book is organized into chapters that build on each other in order, so ideas you learn early (like sprites and blocks) get reused later (like in games with variables and clones). Behind the scenes, the content is grouped into 7 bigger units, each ending in a hands-on project \u2014 starting with 'Welcome to Scratch' and finishing with a capstone project you design yourself. Each chapter lists exactly which concepts it covers, so you always know what you're about to learn and what to review if something feels unfamiliar. The best approach is to read chapters in the order they're listed rather than skipping around, since later chapters assume you already know the earlier ones. See the full list in [Chapters](chapters/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [],
+      "keywords": [
+        "organization",
+        "structure",
+        "chapters",
+        "units",
+        "navigation"
+      ],
+      "source_links": [
+        "docs/chapters/index.md"
+      ],
+      "has_example": false,
+      "word_count": 121
+    },
+    {
+      "id": "faq-006",
+      "category": "Getting Started",
+      "question": "How long will it take to finish this book?",
+      "answer": "There's no single right answer, because Scratch is meant to be explored at your own pace \u2014 this isn't a race. The book covers 7 units made up of 45 topics, moving from simple ideas (like making a sprite move) to more advanced ones (like games with variables, clones, and custom blocks). Some topics, like learning the editor's tabs, might take just a few minutes to read and try. Others, like building your own game in a later unit, might take several sessions of tinkering, testing, and improving before you're happy with the result. A student working through one unit at a time, a little each week, might finish the whole book over a school semester, while someone building for an hour every day could move faster. What matters more than speed is understanding each idea before moving on, since later units depend on earlier ones \u2014 for example, you can't build game logic with variables in Unit 4 until you're comfortable with the events and loops from Units 2 and 3. Go at whatever pace lets you actually understand, and enjoy, what you're building. See the unit breakdown in [Course Description](course-description.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [],
+      "keywords": [
+        "time commitment",
+        "pace",
+        "how long",
+        "difficulty",
+        "self-paced"
+      ],
+      "source_links": [
+        "docs/course-description.md"
+      ],
+      "has_example": true,
+      "word_count": 192
+    },
+    {
+      "id": "faq-007",
+      "category": "Getting Started",
+      "question": "What will I be able to build by the end of this book?",
+      "answer": "By the end of this book, you'll be able to design and build your own original projects from scratch. You'll be able to explain core computer science ideas like sequences, loops, events, conditionals, and variables in your own words, not just use them. You'll know how to debug a project that isn't working by reading your script and watching which blocks light up as they run. You'll also know how to plan a project before building it, and how to share and remix projects within the Scratch community. For example, partway through the book you'll build a game with a scoring system, a player-controlled sprite, obstacles, and a win-or-lose screen, then keep improving it based on your own testing and other people's feedback. The final unit is a capstone project where you choose your own idea \u2014 a game, story, or animation \u2014 and carry it through the whole design process: imagine, plan, create, test, improve, and share. See the full list of learning outcomes in the [Course Description](course-description.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [],
+      "keywords": [
+        "learning outcomes",
+        "projects",
+        "games",
+        "capstone",
+        "skills"
+      ],
+      "source_links": [
+        "docs/course-description.md"
+      ],
+      "has_example": true,
+      "word_count": 169
+    },
+    {
+      "id": "faq-008",
+      "category": "Getting Started",
+      "question": "What is the Scratch editor and what are its main parts?",
+      "answer": "The **Scratch editor** is the workspace you use to build projects at scratch.mit.edu \u2014 think of it as your digital art-and-code studio. It has a few key parts: the **stage**, in the top area, where your project actually runs and you watch the action; the sprite pane below it, showing all the characters (called **sprites**) in your project; the **blocks palette** on the left, holding all the coding blocks sorted by color and category; and the code area in the middle, where you drag blocks from the palette and snap them together into scripts. Above all of this sits the **toolbar**, with buttons for saving, sharing, starting your project with the green flag, and stopping it with the stop sign. Each sprite also has three tabs \u2014 Code, Costumes, and Sounds \u2014 for programming, drawing, and adding audio. See the full editor tour in [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Stage",
+        "Sprite",
+        "Blocks Palette",
+        "Toolbar"
+      ],
+      "keywords": [
+        "scratch editor",
+        "stage",
+        "blocks palette",
+        "toolbar",
+        "layout"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": false,
+      "word_count": 147
+    },
+    {
+      "id": "faq-009",
+      "category": "Getting Started",
+      "question": "Do I need my own Scratch account to start learning?",
+      "answer": "Not right away. You can open the Scratch editor and try dragging blocks around without logging in \u2014 it's a great way to explore. But to save your projects so you can come back to them later, share them with friends or family, and join in community features like studios and comments, you'll need a free **Scratch Account**. Creating one is simple: click 'Join Scratch,' pick a username that isn't your real name, choose a password, and enter a parent or guardian's email for safety and account recovery. Once your account is confirmed, your projects save automatically to the cloud and you can log in from any computer. If you don't have an account yet, that's okay \u2014 just make one before you get too far into your first project, so you don't lose your work. Full steps are in [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Scratch Account"
+      ],
+      "keywords": [
+        "scratch account",
+        "sign up",
+        "join scratch",
+        "login"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": false,
+      "word_count": 143
+    },
+    {
+      "id": "faq-010",
+      "category": "Getting Started",
+      "question": "What is a sprite, and what is the stage?",
+      "answer": "A **sprite** is any character or object in a Scratch project that you can program \u2014 it can move, change how it looks, make sounds, and react to things like clicks or key presses. A project can have many sprites at once, each with its own scripts, costumes, and sounds. The **stage** is the rectangular area, 480 pixels wide and 360 pixels tall, where every sprite performs and where you watch your project run. The stage can have its own backdrops (background images) and can even run its own scripts. Think of the stage as the set of a play and the sprites as the actors on it \u2014 they share the same space, but each actor follows its own script. Learn more in [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md) and the [Glossary](glossary.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Sprite",
+        "Stage"
+      ],
+      "keywords": [
+        "sprite",
+        "stage",
+        "characters",
+        "coordinates",
+        "vocabulary"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 130
+    },
+    {
+      "id": "faq-011",
+      "category": "Getting Started",
+      "question": "What's the difference between saving and sharing a project?",
+      "answer": "**Saving** a project keeps your current work stored \u2014 either on Scratch's servers, if you click 'Save Now' while logged in, or as a file on your own computer \u2014 so you don't lose your sprites and scripts when you close the browser. Saving is private: only you can see a saved-but-unshared project. **Sharing** a project is a separate, bigger step: it publishes your project on the Scratch website with its own project page, so other members can play it, comment on it, heart it, and even remix it. You have to save a project before you can share it, but you can save a project many times without ever sharing it, if you're still working on it or want to keep it private. For example, you might save your maze game every ten minutes while building it, but only click 'Share' once it's finished, has clear instructions, and you're proud enough to show the world. See [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md) for exactly how to do both.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Saving Projects",
+        "Sharing Projects"
+      ],
+      "keywords": [
+        "saving",
+        "sharing",
+        "publish project",
+        "difference",
+        "save now"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": true,
+      "word_count": 166
+    },
+    {
+      "id": "faq-012",
+      "category": "Getting Started",
+      "question": "What is a Scratch Studio, and how is it different from a project?",
+      "answer": "A single Scratch project is one game, story, or animation that one creator (or a small team) builds. A **studio** is something different: it's a shared collection where many members' separate projects get gathered together around a common theme, almost like a gallery or a club. Anyone invited can add their own projects to a studio, follow it to see new additions, or comment in its discussions. Studios have different roles \u2014 an owner controls everything, managers can add or remove projects and invite curators, curators can add projects and comment, and followers can watch and comment. For example, a classroom might create a studio called 'Our Space Games,' where every student adds their own original space-themed game, so everyone's work lives in one place that's easy to browse together. Studios are a great way to see many different takes on the same idea and to build a sense of community around your creations. Read more in [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Studio"
+      ],
+      "keywords": [
+        "studio",
+        "community",
+        "collaboration",
+        "collection",
+        "roles"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": true,
+      "word_count": 160
+    },
+    {
+      "id": "faq-013",
+      "category": "Getting Started",
+      "question": "What happens if I make a mistake while coding?",
+      "answer": "Nothing bad happens \u2014 mistakes are a normal, expected part of learning Scratch, and they're easy to fix. Because Scratch is a **visual programming** language, you can't make typing mistakes like a misspelled command; blocks only snap together in ways that make sense. If a script doesn't do what you expected, click the green flag and watch **block highlighting**: Scratch glows each block bright yellow as it runs, so you can watch your program's flow and see exactly where it stops behaving the way you wanted. To fix a mistake, you can drag a wrong block back into the blocks palette to delete it, rearrange blocks by pulling them apart and reconnecting them, or use Edit then Undo to step backward. For example, if your sprite is supposed to move but stays still, the highlighting will often show that the script never started \u2014 maybe the hat block at the top wasn't a 'when green flag clicked' block. Reading the highlighted blocks is one of the best debugging tricks for a beginner. See [Welcome to Scratch](chapters/01-welcome-to-scratch/index.md) for more.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Block Highlighting",
+        "Visual Programming"
+      ],
+      "keywords": [
+        "mistakes",
+        "debugging",
+        "block highlighting",
+        "undo",
+        "fixing errors"
+      ],
+      "source_links": [
+        "docs/chapters/01-welcome-to-scratch/index.md"
+      ],
+      "has_example": true,
+      "word_count": 178
+    },
+    {
+      "id": "faq-014",
+      "category": "Core Concepts",
+      "question": "What is the coordinate system on the Scratch stage?",
+      "answer": "The Scratch **stage** is 480 steps wide and 360 steps tall, and every spot on it can be described with two numbers. Together these numbers make up the **coordinate system** \u2014 like a map for the stage. The **x coordinate** tells how far left or right a point is, from -240 to 240. The **y coordinate** tells how far up or down it is, from -180 to 180. A position is always written as (x, y), with x first. The very center of the stage is (0, 0). For example, (100, 50) is 100 steps right of center and 50 steps up, while (-200, -100) is far to the left and down. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Coordinate System",
+        "X Coordinate",
+        "Y Coordinate",
+        "Stage Size"
+      ],
+      "keywords": [
+        "coordinate",
+        "x y position",
+        "stage grid",
+        "coordinate system"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": true,
+      "word_count": 121
+    },
+    {
+      "id": "faq-015",
+      "category": "Core Concepts",
+      "question": "What are event blocks and what do they do?",
+      "answer": "**Event blocks** are the yellow, rounded-top blocks that start a script whenever something happens. They always sit at the very top of a stack, since no block can snap above them. The most common event block is `when green flag clicked`, which starts a script the instant a player clicks the green flag. Other event blocks start scripts when a sprite is clicked, when a key is pressed, when the backdrop switches, or when a message arrives. All of these live together in the yellow **Events block category**. Without an event block on top, a script has no way of knowing when to begin. Read more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Event Blocks",
+        "Events Block Category",
+        "Green Flag Event"
+      ],
+      "keywords": [
+        "event blocks",
+        "hat block",
+        "when green flag clicked",
+        "trigger"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 112
+    },
+    {
+      "id": "faq-016",
+      "category": "Core Concepts",
+      "question": "What is a sequence in a Scratch script?",
+      "answer": "A **sequence** is the order that blocks run in \u2014 one after another, from the top of a stack down to the bottom. Scratch always follows this order, called **script reading order**, and never skips a block or jumps around. Think of a sequence like a recipe: crack the eggs, then add flour, then mix, then bake. Doing the steps out of order ruins the recipe, and the same is true in Scratch. Putting `move 10 steps` before `turn 90 degrees` makes a sprite walk forward and then turn, but swapping the order makes it turn first and walk in a new direction. See [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md) for more.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Sequence",
+        "Script Reading Order"
+      ],
+      "keywords": [
+        "sequence",
+        "order of blocks",
+        "top to bottom",
+        "script"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 111
+    },
+    {
+      "id": "faq-017",
+      "category": "Core Concepts",
+      "question": "What is the repeat loop block used for?",
+      "answer": "A **repeat loop** is a block from the orange **Control block category** that runs the blocks inside it an exact number of times before moving on. Instead of copying and pasting the same blocks over and over, a coder snaps them inside a `repeat (10)` block once, and Scratch handles running them that many times automatically. This kind of counted repetition is perfect whenever you already know exactly how many times something should happen, such as a fixed number of shape sides or a set number of bounces. A repeat loop always stops on its own once it reaches its count \u2014 it never runs forever unless you tell it to, which is what sets it apart from a forever loop. Learn more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Repeat Loop",
+        "Control Block Category"
+      ],
+      "keywords": [
+        "repeat loop",
+        "counted loop",
+        "control blocks",
+        "iteration"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 129
+    },
+    {
+      "id": "faq-018",
+      "category": "Core Concepts",
+      "question": "What is a Boolean value in Scratch?",
+      "answer": "A **Boolean** is a value that can only ever be **true** or **false** \u2014 nothing in between, like a light switch that is either on or off. In Scratch, Boolean blocks are shaped like hexagons with pointed ends, so they only fit into hexagon-shaped slots, such as the slot inside an `if` block. Blocks like `touching [mouse-pointer]?`, `key [space] pressed?`, and comparison blocks such as `score > 100` are all Booleans, because each one reports either true or false. Booleans are what let Scratch scripts make decisions and control loops, since an `if` block or a `repeat until` loop always needs a true-or-false answer to work with. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for more.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Boolean Introduction",
+        "Comparison Operators"
+      ],
+      "keywords": [
+        "boolean",
+        "true false",
+        "hexagon block",
+        "condition"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 114
+    },
+    {
+      "id": "faq-019",
+      "category": "Core Concepts",
+      "question": "What is cloning, and what is a clone?",
+      "answer": "A **clone** is a temporary copy of a sprite that Scratch creates while a project is running, made with the **create clone** block. A clone starts out with the exact same costumes, position, and scripts as the original sprite, but it can then move and act on its own. Clones run their own scripts starting with `when I start as a clone`, instead of the `when green flag clicked` scripts the original uses. Cloning is perfect for things you need many of at once, like raindrops, enemy swarms, or bullets in a shooting game. Clones disappear automatically when the project stops, or sooner if a script uses `delete this clone`. Learn more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Cloning",
+        "Create Clone"
+      ],
+      "keywords": [
+        "clone",
+        "create clone",
+        "runtime copy",
+        "cloning"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-020",
+      "category": "Core Concepts",
+      "question": "How does the if block let scripts make decisions?",
+      "answer": "An **if block** is a puzzle-piece-shaped block from the orange **Control block category** that checks a condition before running any code. If the condition \u2014 a **Boolean** true-or-false value \u2014 is true, Scratch runs the blocks tucked inside the if block. If it is false, Scratch skips right over them and moves on to whatever comes next in the script. This is how a program can react differently depending on what is happening, instead of always doing the exact same thing every time it runs. This means a sprite can bounce back only at the exact moment it touches the edge of the stage, while continuing to do whatever it was already doing the rest of the time it is not touching anything. If blocks can also be nested inside each other to check several things in a row, like first checking if a sprite touched a coin, and then separately checking if it touched an enemy. Without if blocks, every script would run the same way no matter what the player did, which would make games boring and predictable. Read more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "If Block",
+        "Boolean Introduction",
+        "Control Block Category"
+      ],
+      "keywords": [
+        "if block",
+        "condition",
+        "decision",
+        "boolean"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 188
+    },
+    {
+      "id": "faq-021",
+      "category": "Core Concepts",
+      "question": "What's the difference between the if block and the if-else block?",
+      "answer": "A plain **if block** only has one path: it runs its blocks when the condition is true, and does nothing at all when the condition is false. An **if-else block** always has two paths \u2014 one set of blocks for when the condition is true, and a completely different set for when it is false \u2014 so something always happens no matter what. This means an if-else block always produces a visible reaction, such as bouncing back in one situation and continuing to move normally in every other situation, instead of a sprite doing nothing at all on the frames where the condition happens to be false, which is exactly what a plain if block would do. Programmers reach for if-else whenever both outcomes matter, and a plain if whenever only the true case needs a reaction. Chaining several if-else blocks together also lets a script handle more than two possible situations, one condition at a time. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for the full picture.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "If Else Block",
+        "If Block"
+      ],
+      "keywords": [
+        "if else",
+        "conditional",
+        "two paths",
+        "decision"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 166
+    },
+    {
+      "id": "faq-022",
+      "category": "Core Concepts",
+      "question": "How do motion blocks like move and turn work together?",
+      "answer": "**Motion blocks** are the blue blocks in the **Motion block category** that move a sprite around the stage or point it in a new direction. `move (10) steps` sends a sprite forward in whatever direction it is currently facing, while `turn cw (15) degrees` or `turn ccw (15) degrees` rotates the sprite clockwise or counter-clockwise without moving it at all. Used one after another, these two blocks let a sprite walk a path and change direction along the way, the same way a person might walk forward, turn a corner, and keep walking. Because `move` always uses the sprite's current facing direction, the order matters: turning first changes which way the next move block will travel, but moving first and turning after sends the sprite in the original direction and only changes where it faces afterward. This pairing of move and turn is also the foundation of drawing shapes with the Pen extension \u2014 a `repeat` loop full of move and turn blocks can trace out a square, triangle, or star. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Motion Blocks",
+        "Move Steps",
+        "Turn Degrees",
+        "Motion Block Category"
+      ],
+      "keywords": [
+        "motion blocks",
+        "move steps",
+        "turn degrees",
+        "direction"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": false,
+      "word_count": 180
+    },
+    {
+      "id": "faq-023",
+      "category": "Core Concepts",
+      "question": "How do looks blocks change a sprite's appearance?",
+      "answer": "**Looks blocks** are the purple blocks that control how a sprite appears on the stage \u2014 its costume, size, speech, and visual effects. `switch costume to [costume1 v]` and `next costume` change which picture a sprite is currently wearing, which is how walking, flying, and blinking animations are made. `change size by (10)` or `set size to (100%)` makes a sprite grow or shrink, which is handy for power-ups or objects that fade away. `say` and `think` pop speech and thought bubbles above a sprite so it can talk or wonder about something. Looks blocks also include seven graphic effects \u2014 color, fisheye, whirl, pixelate, mosaic, brightness, and ghost \u2014 that can be layered on with `change [effect] by`, though it is good practice to clear them with `clear graphic effects` once they are no longer needed, since leftover effects can stack up and slow a project down. All of these blocks belong to the **Looks block category**, colored purple in the blocks palette so they are easy to spot. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Looks Blocks",
+        "Looks Block Category",
+        "Switch Costume",
+        "Change Size"
+      ],
+      "keywords": [
+        "looks blocks",
+        "costume",
+        "appearance",
+        "graphic effects"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": false,
+      "word_count": 179
+    },
+    {
+      "id": "faq-024",
+      "category": "Core Concepts",
+      "question": "What's the difference between the say block and the think block?",
+      "answer": "The **say block** shows a rounded speech bubble with a pointed corner, as if the sprite is actually talking out loud. The **think block** shows a cloud-shaped bubble instead, as if the sprite is quietly wondering something to itself rather than speaking. Both blocks come in two versions: `say [Hello!] for (2) secs`, which shows the bubble for a set amount of time and then removes it automatically, and a plain `say [Hello!]`, which keeps the bubble on screen until another block changes or clears it. Choosing between them is really about the situation in the story: use say for dialogue characters are speaking out loud, and think for a private thought, like a character deciding what to do next. Both blocks belong to the purple Looks block category, and both are commonly placed right after a `when this sprite clicked` or `when green flag clicked` event so the sprite reacts the moment something happens.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Say Block",
+        "Think Block"
+      ],
+      "keywords": [
+        "say block",
+        "think block",
+        "speech bubble",
+        "thought bubble"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 155
+    },
+    {
+      "id": "faq-025",
+      "category": "Core Concepts",
+      "question": "Why is the green flag important to every Scratch project?",
+      "answer": "The **green flag** is the universal \"start\" button in Scratch, and clicking it triggers the **green flag event** \u2014 every single script in the project that begins with `when green flag clicked` starts running at exactly the same moment. This matters because most Scratch projects have many sprites, and a game only feels right if the player, the enemies, the score, and the background all wake up together instead of starting at random times. The green flag is also how a project resets: scripts under the green flag hat block typically set sprites back to their starting position, set variables like score back to zero, and switch to the first costume, all so a project behaves the same way every time it runs, whether it is played once or a hundred times. Because so much depends on a proper **sequence** of setup steps, most programmers keep their green flag scripts simple \u2014 just positioning and resetting things \u2014 and save the more complicated gameplay logic for loops and other events. Skipping a green flag script entirely often means a sprite starts in the wrong spot or with the wrong costume the second time a project runs. See [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md) for a sample green flag script.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Green Flag",
+        "Green Flag Event",
+        "Sequence"
+      ],
+      "keywords": [
+        "green flag",
+        "start button",
+        "green flag event",
+        "reset"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": false,
+      "word_count": 208
+    },
+    {
+      "id": "faq-026",
+      "category": "Core Concepts",
+      "question": "How do broadcast messages let sprites talk to each other?",
+      "answer": "A **broadcast message** is a named signal that one sprite sends to every other sprite and the stage at once, similar to an announcement over a school's loudspeaker. The sending sprite uses a `broadcast [message v]` block, and any sprite that has a matching **when I receive** hat block will start its own script the moment that message goes out \u2014 this is a form of **sprite communication** that does not require sprites to know anything about each other directly. Several sprites can even listen for the exact same message and all react differently: one might change position, another might show a variable, and a third might play a sound, and all of them start at once. This loose way of coordinating is one of the biggest advantages broadcasts have over having one sprite directly control another, since a project stays easy to expand \u2014 adding a brand-new sprite that reacts to `game-start` never requires changing any existing script. Naming messages clearly, like `game-start` or `player-hit` instead of `msg1`, also makes a project's flow much easier to follow later on. Read more in [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Broadcast Message",
+        "When I Receive",
+        "Sprite Communication"
+      ],
+      "keywords": [
+        "broadcast",
+        "when i receive",
+        "sprite communication",
+        "message"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 187
+    },
+    {
+      "id": "faq-027",
+      "category": "Core Concepts",
+      "question": "What's the difference between comparison operators and the less than operator?",
+      "answer": "**Comparison operators** are a whole family of green, hexagon-shaped blocks that compare two values and report a true-or-false answer \u2014 this family includes less than, greater than, and equal to. The **less than operator**, written as `< (first) < (second) >`, is just one member of that family, and it reports true only when the first value is smaller than the second. So `10 < 20` reports true, but `20 < 10` reports false. All comparison operators work the same basic way and all belong to the green **Operators block category**, but each one checks a different relationship between the two values being compared. In practice, less than is especially common for checking boundaries and thresholds, keeping a sprite from sliding past the edge of the stage or warning a player once very little time is left on a countdown. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for more.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Comparison Operators",
+        "Less Than Operator",
+        "Operators Block Category"
+      ],
+      "keywords": [
+        "comparison operators",
+        "less than",
+        "greater than",
+        "boolean"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 147
+    },
+    {
+      "id": "faq-028",
+      "category": "Core Concepts",
+      "question": "How does the Sensing block category help sprites detect the world?",
+      "answer": "The **Sensing block category**, colored light blue in the blocks palette, holds every block a sprite uses to notice things happening around it \u2014 touching, distance, keys, and more. The **touching sensor**, `touching [Ball v]?`, reports true the instant any part of a sprite overlaps any part of another sprite, the mouse pointer, or the edge of the stage. The **distance to sensor**, `distance to [mouse-pointer v]`, works differently \u2014 instead of a true-or-false answer, it reports a number, the distance in steps between a sprite and a chosen target, which is handy for things like an enemy that only chases once the player gets close. A **key pressed sensor**, `key [space v] pressed?`, reports true for as long as a key is held down, which is different from the events block `when key pressed`, since the sensor can be checked again and again inside a loop rather than firing just once. Sensing blocks almost always show up as the condition inside an `if` block, because they report the Boolean true-or-false values that if blocks and repeat-until loops need to make their decisions. Without sensing, a sprite would have no way to react to the stage, the player, or other sprites at all. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for the full set of sensing blocks.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Sensing Block Category",
+        "Touching Sensor",
+        "Distance To Sensor",
+        "Key Pressed Sensor"
+      ],
+      "keywords": [
+        "sensing blocks",
+        "touching sensor",
+        "distance to",
+        "key pressed"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 215
+    },
+    {
+      "id": "faq-029",
+      "category": "Core Concepts",
+      "question": "What does the Stop Sign button do in Scratch?",
+      "answer": "The **Stop Sign** is the red octagon icon above the stage, right next to the green flag, and clicking it immediately stops every script currently running in the project. It works like a big \"pause everything\" button: if a sprite is mid-turn, mid-glide, or stuck in a loop, the stop sign freezes it exactly where it is. This is different from the **Green Flag**, which starts scripts running \u2014 the stop sign only stops them. Coders use it constantly while testing: if a script has a bug that sends a sprite spinning forever or flying off the stage, clicking stop halts the runaway behavior right away without having to close and reopen the project. Some projects also use a stop sign inside a script itself (a \"stop this script\" or \"stop all\" block) to end an action on purpose, such as ending a game when a player loses. Learning to reach for the stop sign quickly is one of the first debugging habits every Scratch coder builds. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Stop Sign",
+        "Green Flag"
+      ],
+      "keywords": [
+        "stop sign",
+        "stop button",
+        "green flag",
+        "stop all scripts"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": true,
+      "word_count": 176
+    },
+    {
+      "id": "faq-030",
+      "category": "Core Concepts",
+      "question": "How does next costume create the illusion of animation?",
+      "answer": "The **next costume** block switches a sprite to whichever costume comes right after its current one in its costume list, and loops back to the very first costume once it reaches the end. On its own, one `next costume` block only changes the picture once, but placed inside a loop with a short `wait` block between each step, it flips through a sprite's costumes quickly enough to look like real movement \u2014 the same trick a flip book uses with drawings on separate pages. A walking sprite with separate costumes for each leg position will look like it is actually walking whenever a script keeps repeating next costume with a short wait between each change while the sprite moves forward. This is different from **switch costume**, which jumps straight to one named costume instead of stepping through the list, and is better for instant changes like a light turning on rather than a smooth walking cycle. Both blocks belong to the purple **Looks blocks** category, and both rely on a sprite having more than one costume drawn or uploaded in its Costumes tab to begin with.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Next Costume",
+        "Switch Costume",
+        "Looks Blocks"
+      ],
+      "keywords": [
+        "next costume",
+        "costume animation",
+        "switch costume",
+        "animation"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 186
+    },
+    {
+      "id": "faq-031",
+      "category": "Core Concepts",
+      "question": "How do I position a sprite exactly using x and y coordinates?",
+      "answer": "To put a sprite at an exact spot on the stage, use the Motion block `go to x: () y: ()` and type in the numbers you want. Remember that the **x coordinate** controls left and right, from -240 on the far left to 240 on the far right, and the **y coordinate** controls up and down, from -180 at the very bottom to 180 at the very top. The **stage center** is always (0, 0), so that is a great, easy position to remember when you want a sprite to start in the middle. Say you are making a game where a player sprite should start on a platform near the bottom-left of the stage: you would snap a `go to x: (-200) y: (-100)` block under a `when green flag clicked` hat block, which sends the sprite 200 steps left of center and 100 steps below center every time the project starts. If you only want to change one coordinate and leave the other alone, use `set x to ()` or `set y to ()` instead of `go to x: y:`, or even `go to x: (x position) y: (100)`, which keeps the sprite's current x position but moves its y position up to 100. Checking a sprite's current spot works the same way, using the `x position` and `y position` reporter blocks. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "X Coordinate",
+        "Y Coordinate",
+        "Go To Position",
+        "Stage Center"
+      ],
+      "keywords": [
+        "go to x y",
+        "coordinates",
+        "position sprite",
+        "stage center"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": true,
+      "word_count": 234
+    },
+    {
+      "id": "faq-032",
+      "category": "Core Concepts",
+      "question": "When should I use go to position instead of glide to position?",
+      "answer": "Use `go to x: () y: ()` whenever a sprite needs to appear at a new spot instantly, with no travel time at all \u2014 perfect for spawning a sprite at the start of a level, resetting it after it loses a life, or teleporting it the moment a level begins. Use `glide () secs to x: () y: ()` whenever you want the sprite to visibly slide from where it is now to a new spot over a chosen number of seconds, which looks much more natural for cutscenes, a character returning to its seat, or a sprite smoothly chasing something. For example, in a simple platformer you might use `go to x: (-200) y: (-100)` under `when green flag clicked` to place the player at the start line instantly, but use `glide (2) secs to x: (0) y: (0)` when a `when I receive [return-to-center v]` script needs the same sprite to visibly float back to the middle of the stage after a cutscene. Picking the wrong one is a common beginner mistake \u2014 a glide block used for fast game responses like jumping will feel sluggish and delayed, while a go to block used for a scene transition will look like a jarring jump-cut instead of a smooth motion. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for more glide examples.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Go To Position",
+        "Glide To Position"
+      ],
+      "keywords": [
+        "go to position",
+        "glide to position",
+        "instant vs smooth",
+        "teleport"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 221
+    },
+    {
+      "id": "faq-033",
+      "category": "Core Concepts",
+      "question": "How do I make a sprite move smoothly with arrow keys?",
+      "answer": "The best way to control a sprite with arrow keys is not with a `when [right arrow] key pressed` **key pressed event** hat block, but with a `forever` loop that keeps checking the **key pressed sensor** every single frame. Start with `when green flag clicked`, then add a `forever` loop, and inside it place four `if` blocks, one for each arrow key: `if <key [right arrow v] pressed?> then change x by (5)`, and similarly for left, up, and down with the opposite sign for x or y. This pattern is called **player control**, and it feels far smoother than hat blocks because a key pressed event only fires once per press, while checking the sensor inside a loop reacts continuously for as long as the key stays held down. For example, holding the right arrow key down with this pattern moves the sprite five steps every single frame \u2014 dozens of times a second \u2014 producing smooth continuous motion, whereas the hat-block version would only nudge the sprite once no matter how long the key was held. Because the `forever` loop and any other scripts, like an enemy's own movement loop, all run at the same time thanks to **parallelism**, a player-controlled sprite and computer-controlled sprites can move independently without any script waiting for another one to finish. Learn more in [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Key Pressed Sensor",
+        "Player Control",
+        "Parallelism",
+        "Key Pressed Event"
+      ],
+      "keywords": [
+        "arrow keys",
+        "player control",
+        "smooth movement",
+        "forever loop"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 226
+    },
+    {
+      "id": "faq-034",
+      "category": "Core Concepts",
+      "question": "How do I detect collisions between two sprites?",
+      "answer": "To find out when two sprites touch, drop a **touching sensor** block, like `touching [Coin v]?`, into the condition slot of an `if` block, usually inside a `forever` loop so it keeps checking every frame. For example, a coin-collecting script might read: `forever` containing `if <touching [Coin v]?> then change score by (10), play sound [coin v] until done, hide` \u2014 every frame, the sprite checks whether it is touching the Coin sprite, and the moment it is, the score goes up, a sound plays, and the coin disappears. **Collision detection** against a solid color works almost the same way but uses the **touching color sensor** instead, such as `touching color [#FF0000]?`, which is great for maze walls or lava painted a single, exact color rather than checking against one specific sprite. For very precise collisions, like a tight hitbox on an animated character, some projects use a small, invisible extra sprite shaped like just the important part of the character, and check touching on that instead of the whole costume. Whichever sensor you use, always place the check inside a loop that runs continuously, since a collision check inside a script that only runs once will only ever notice a touch at that one instant. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for more collision patterns.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Collision Detection",
+        "Touching Sensor",
+        "Touching Color Sensor"
+      ],
+      "keywords": [
+        "collision detection",
+        "touching sensor",
+        "touching color",
+        "coin script"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 215
+    },
+    {
+      "id": "faq-035",
+      "category": "Core Concepts",
+      "question": "How do I switch the stage backdrop to change scenes?",
+      "answer": "To change the scene in a project, use the Looks block `switch backdrop to [level2 v]`, which instantly swaps the stage's background image to whichever backdrop you pick from the dropdown list. For example, a story project might have a `when I receive [scene-2 v]` script that runs `switch backdrop to [forest v]` followed by `play sound [forest-ambience v]`, so the whole scene \u2014 picture and sound \u2014 changes together the moment that message arrives. If you just want to cycle through backdrops in order, like a slideshow or a storybook, use `next backdrop` instead, which moves to whichever backdrop comes after the current one and loops back to the first after the last. You can also make other scripts react automatically to a scene change by using the **backdrop switch event** block, `when backdrop switches to [level2 v]`, which is handy for spawning that level's enemies or updating which variables are shown on screen without needing a separate broadcast message at all. Combining backdrop switches with broadcasts, such as broadcasting `level2-start` right after switching, is a common pattern for making sure every sprite updates together when a new scene begins. Learn more in [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Switch Backdrop",
+        "Backdrop Switch Event",
+        "Next Backdrop"
+      ],
+      "keywords": [
+        "switch backdrop",
+        "scene change",
+        "next backdrop",
+        "backdrop switch event"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 198
+    },
+    {
+      "id": "faq-036",
+      "category": "Core Concepts",
+      "question": "How do I make a sprite react when a player clicks it?",
+      "answer": "Snap a `when this sprite clicked` **event block** onto the start of a script, and every block underneath it will run the instant a player clicks or taps directly on that sprite \u2014 this is called the **sprite clicked event**. For example, a simple clicker-game button might use: `when this sprite clicked` followed by `change score by (1)`, `play sound [pop v] until done`, and a **say block** like `say [Nice click!] for (1) secs` so the sprite gives quick feedback every time it is tapped. Because `when this sprite clicked` only affects the one sprite it is attached to, each sprite in a project needs its own copy of this script if you want several clickable objects \u2014 clicking a coin sprite will not do anything to a separate enemy sprite unless the enemy has its own click script too. This event pairs especially well with `change [color v] effect by (25)` followed by `wait (0.2) secs` and `clear graphic effects`, which makes a sprite briefly flash color as visual feedback for the click before returning to normal. Learn more in [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Sprite Clicked Event",
+        "Event Blocks",
+        "Say Block"
+      ],
+      "keywords": [
+        "sprite clicked",
+        "click event",
+        "clicker game",
+        "when this sprite clicked"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md"
+      ],
+      "has_example": true,
+      "word_count": 188
+    },
+    {
+      "id": "faq-037",
+      "category": "Core Concepts",
+      "question": "How do I spawn multiple clones of a sprite at once?",
+      "answer": "Use the **create clone** block, `create clone of [myself v]`, inside a loop to make several copies of a sprite while the project runs. For example: `when green flag clicked`, `repeat (10)`, and inside the repeat, `create clone of [myself v]` followed by `wait (0.5) secs` \u2014 this creates ten clones spaced half a second apart instead of all crowding onto the stage at the exact same instant. Each clone then needs its own `when I start as a clone` script to tell it what to do, since clones do not run `when green flag clicked` scripts at all. A wandering-particle example might give each clone `go to x: (pick random -200 to 200) y: (pick random -150 to 150)` followed by a `forever` loop that moves it a few steps and checks `if <touching [edge v]?> then delete this clone`, so each clone starts somewhere random, wanders briefly, and cleans itself up once it reaches the edge. This combination of **cloning** to make copies and `delete this clone` to remove them is exactly how effects like falling snow, enemy swarms, or a shower of coins are built without needing to hand-place dozens of separate sprites. Learn more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "Create Clone",
+        "Cloning"
+      ],
+      "keywords": [
+        "create clone",
+        "spawn clones",
+        "when i start as a clone",
+        "particle effect"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": true,
+      "word_count": 204
+    },
+    {
+      "id": "faq-038",
+      "category": "Core Concepts",
+      "question": "How do I share my finished Scratch project with friends?",
+      "answer": "Before sharing, save a few numbered copies of your project as you build \u2014 this is called **versioning** \u2014 so you can always go back to a working version if a new change breaks something, such as saving \"My Game v1.0,\" then \"v1.1\" after adding enemies, and so on. When the project is ready, click the **Share** button in the editor toolbar, which is how **sharing projects** works on the Scratch website. Before clicking Share, add clear instructions explaining how to play, such as \"Arrow keys to move, space to jump, collect all the coins,\" and add a few tags like \"game\" or \"platformer\" so other Scratchers can find it in search. It also helps to add credits crediting anyone whose music, art, or code you reused, for example \"Music by Kevin MacLeod, art by me.\" After sharing, the project gets its own page with a link you can send to friends, and other members can view it, love it, favorite it, comment on it, and even remix it into their own new project. Keep your saved version history even after sharing, since it stays useful any time you want to fix a bug in a later update. Learn more in [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Sharing Projects",
+        "Versioning"
+      ],
+      "keywords": [
+        "share project",
+        "publish scratch",
+        "versioning",
+        "project page"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md"
+      ],
+      "has_example": true,
+      "word_count": 206
+    },
+    {
+      "id": "faq-039",
+      "category": "Core Concepts",
+      "question": "How does the coordinate system relate to motion blocks like go-to and glide?",
+      "answer": "The **coordinate system** gives every spot on the stage a precise (x, y) address, and Scratch's motion blocks are really just different tools for moving a sprite between those addresses. `go to x: () y: ()` and `glide () secs to x: () y: ()` both take an exact coordinate as their destination, so understanding that x runs from -240 to 240 and y runs from -180 to 180 is what lets a coder predict exactly where a sprite will end up before ever running the script. The two blocks differ only in how they travel between coordinates: `go to` jumps there in a single instant, while `glide` calculates and animates every point along the straight line between the sprite's current coordinate and its target coordinate over the number of seconds given, which is why glide looks smooth and go-to looks like teleporting. Other motion blocks connect to coordinates too \u2014 `change x by ()` and `change y by ()` nudge a sprite's current coordinate up or down without needing to know the destination in advance, while the `x position` and `y position` reporter blocks read a sprite's current coordinate back out, which is exactly what lets a script like `go to x: (x position) y: (100)` keep one coordinate the same while only changing the other. Even `move () steps`, which does not mention x or y at all, is secretly changing both coordinates together based on the sprite's current direction. In every case, the coordinate system is the shared address book that all of these motion blocks read from and write to, which is why learning coordinates first makes every motion block easier to reason about afterward. See [Sprites, Stage, and the Coordinate System](chapters/02-sprites-stage-coordinates/index.md) and [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for both halves of this picture.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Coordinate System",
+        "Motion Blocks",
+        "Go To Position",
+        "Glide To Position"
+      ],
+      "keywords": [
+        "coordinate system",
+        "motion blocks",
+        "go to",
+        "glide"
+      ],
+      "source_links": [
+        "docs/chapters/02-sprites-stage-coordinates/index.md",
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 297
+    },
+    {
+      "id": "faq-040",
+      "category": "Core Concepts",
+      "question": "How does parallelism connect to event-driven programming in Scratch?",
+      "answer": "**Event-driven programming** means a script waits quietly and only runs in response to something happening, rather than running once straight through from beginning to end, and **parallelism** is what makes many of those responses possible at the same time instead of one at a time. Every hat block \u2014 `when green flag clicked`, `when this sprite clicked`, `when I receive [message v]` \u2014 starts its own independent thread of execution, and Scratch runs all of those threads together rather than forcing one script to fully finish before the next one begins. This connection matters most in projects with **multiple sprites**: clicking the green flag might trigger a player's movement script, an enemy's patrol script, and a background music script all at the exact same **green flag event**, and because of parallelism none of them has to wait in line behind the others. Without parallelism, event-driven programming would be far less useful, since only one event could ever be handled at a time and a slow-running script would freeze every other part of the project until it finished. The tradeoff is that parallel scripts can occasionally conflict, such as two scripts changing the same variable at once, which is why coordinating tools like `broadcast and wait` exist \u2014 they let a project keep the responsiveness of parallelism while still controlling the order of events when the order truly matters. In short, event-driven programming decides what triggers a script, while parallelism decides how many triggered scripts can be running together, and Scratch relies on both at once to feel alive and responsive. See [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md) for more on parallelism.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Parallelism",
+        "Event Driven Programming",
+        "Multiple Sprites",
+        "Green Flag Event"
+      ],
+      "keywords": [
+        "parallelism",
+        "event driven programming",
+        "multiple sprites",
+        "concurrent scripts"
+      ],
+      "source_links": [
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 269
+    },
+    {
+      "id": "faq-041",
+      "category": "Core Concepts",
+      "question": "How does broadcast and wait affect sequence timing across scripts?",
+      "answer": "Inside a single script, **sequence** guarantees that blocks run top to bottom in a fixed **script reading order**, but a **broadcast message** crosses over into a completely different script, possibly on a different sprite, which normally runs in parallel with no guaranteed timing at all. A plain `broadcast [message v]` sends its message and immediately continues to the very next block in its own sequence, without caring whether the receiving scripts have even started yet, let alone finished \u2014 this is useful when the sender genuinely does not need to wait. `broadcast [message v] and wait`, however, pauses the sending script's own sequence until every single `when I receive` script listening for that message has completely finished running, which stitches together two otherwise-parallel timelines into one predictable order. This matters most when a later step truly depends on an earlier one finishing first: a chain like `broadcast [reset-all v] and wait`, then `broadcast [spawn-player v] and wait`, then `broadcast [spawn-enemies v] and wait`, then `broadcast [start-game v]` forces four separate groups of parallel scripts to run in phases, one phase fully completing before the next phase's broadcast even goes out, even though every sprite's individual script inside a phase is still running in parallel with the others in that same phase. Leaving out \"and wait\" in a case like this could let a player-spawning script and an enemy-spawning script race each other, with no way to guarantee which one the player sees finish first. Broadcast and wait is therefore the main tool for imposing sequence-like order onto the otherwise timing-independent world of parallel, event-driven scripts. See [Events, Sequences, and First Scripts](chapters/04-events-sequences-first-scripts/index.md) and [Broadcasting, Conditionals, and Sensing](chapters/06-broadcasting-conditionals-sensing/index.md).",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Broadcast Message",
+        "Sequence",
+        "Parallelism",
+        "Script Reading Order"
+      ],
+      "keywords": [
+        "broadcast and wait",
+        "sequence timing",
+        "parallelism",
+        "synchronization"
+      ],
+      "source_links": [
+        "docs/chapters/04-events-sequences-first-scripts/index.md",
+        "docs/chapters/06-broadcasting-conditionals-sensing/index.md"
+      ],
+      "has_example": false,
+      "word_count": 276
+    },
+    {
+      "id": "faq-042",
+      "category": "Technical Details",
+      "question": "What is a hat block, and where does it go in a script?",
+      "answer": "A **hat block** is a block shape with a rounded top and a flat bottom, so it looks a little like a hat. Its job is to **start a script** \u2014 nothing happens until the event on the hat block occurs. A hat block always sits at the very top of a stack, and no other block can ever snap above it. Common hat blocks include `when green flag clicked`, `when this sprite clicked`, and `when [space] key pressed`. Every separate script in your project needs its own hat block, and you can never put two hat blocks together in the same stack \u2014 each one starts its own separate script.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Hat Block Shape"
+      ],
+      "keywords": [
+        "hat block",
+        "block shape",
+        "script starter",
+        "green flag",
+        "event block"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 111
+    },
+    {
+      "id": "faq-043",
+      "category": "Technical Details",
+      "question": "What shape is a Boolean block and what does it report?",
+      "answer": "A **Boolean block** has a **hexagon shape** \u2014 six sides with pointed ends. Its job is to answer a yes-or-no question by reporting either **true** or **false**, and nothing else \u2014 never a number or a word. Because of its pointy hexagon shape, a Boolean block only fits into matching hexagon-shaped slots in other blocks, such as the condition slot inside an `if` block or a `repeat until` block. For example, `touching [mouse-pointer]?` is a Boolean block \u2014 it reports true if the sprite is touching the mouse-pointer, and false if it is not. You will usually see Boolean blocks used to make decisions or to control when a loop should stop.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Boolean Block Shape"
+      ],
+      "keywords": [
+        "boolean block",
+        "hexagon",
+        "true false",
+        "if block",
+        "block shape"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 112
+    },
+    {
+      "id": "faq-044",
+      "category": "Technical Details",
+      "question": "What is a cap block, and where does it belong in a script?",
+      "answer": "A **cap block** has a flat top and a rounded bottom, with no bump for another block to snap onto below it. Its job is to **end a script** \u2014 once a cap block runs, nothing after it can ever execute, because nothing can attach beneath it. Cap blocks always sit at the very bottom of a stack. Examples include `stop [this script]`, which ends just that one stack, and `stop [all]`, which stops every script in the whole project at once. Think of a cap block as the period at the end of a sentence \u2014 it signals that the script is completely finished, so nothing more should be read after it.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Cap Block Shape"
+      ],
+      "keywords": [
+        "cap block",
+        "stop all",
+        "end script",
+        "block shape"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 113
+    },
+    {
+      "id": "faq-045",
+      "category": "Technical Details",
+      "question": "What are Scratch's block categories and their colors?",
+      "answer": "Scratch organizes its blocks into **ten color-coded categories** in the blocks palette, so a block's type can be recognized at a glance. They are: **Motion** (blue), **Looks** (purple), **Sound** (pink), **Events** (yellow), **Control** (orange), **Sensing** (light blue), **Operators** (green), **Variables** (orange), **My Blocks** for custom blocks (pink-red), and **List** (a darker reddish-orange). Each category groups together blocks with a similar purpose \u2014 every block that moves or turns a sprite lives in the blue Motion category, while every block that plays or changes sound lives in the pink Sound category. When you add an extension, it appears as an extra category with a brand-new color of its own.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Block Color Coding",
+        "Motion Block Category",
+        "Sound Block Category"
+      ],
+      "keywords": [
+        "block categories",
+        "block colors",
+        "blocks palette",
+        "color coding"
+      ],
+      "source_links": [
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 108
+    },
+    {
+      "id": "faq-046",
+      "category": "Technical Details",
+      "question": "What is the Backpack, and what can it store?",
+      "answer": "The **Backpack** is a storage tray in the Scratch editor, opened with the backpack icon at the bottom of the sidebar, that lets you save scripts, sprites, costumes, and sounds so you can reuse them in a **completely different project**. To save something, you drag it onto the backpack; to use it later, you drag it back out into any project you have open, even a brand-new one. If you build the perfect jumping script for a platformer game, you can drag it into the backpack and then drag it into every future platformer you create, instead of rebuilding that script from scratch each time.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Backpack"
+      ],
+      "keywords": [
+        "backpack",
+        "reuse blocks",
+        "save blocks",
+        "cross-project storage"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 105
+    },
+    {
+      "id": "faq-047",
+      "category": "Technical Details",
+      "question": "What is the script area in the Scratch editor?",
+      "answer": "The **script area** is the large gray workspace in the middle of the Code tab where you drag blocks from the blocks palette and snap them together to build scripts. It can hold many separate script stacks at once, has faint grid lines to help line blocks up neatly, and includes zoom controls in the bottom-right corner so you can zoom the view in or out. Right-clicking inside the script area also opens a menu with handy options, such as duplicating a stack, deleting a stack, adding a comment, or cleaning up the whole layout at once.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Script Area"
+      ],
+      "keywords": [
+        "script area",
+        "code tab",
+        "workspace",
+        "blocks palette"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 97
+    },
+    {
+      "id": "faq-048",
+      "category": "Technical Details",
+      "question": "What does the clean up blocks option do?",
+      "answer": "**Clean up blocks** is an option you get by right-clicking an empty spot in the script area. Choosing it automatically rearranges every script stack in your project into a neat, non-overlapping layout \u2014 each stack gets aligned into its own straight column, with even spacing between the blocks, instead of being scattered or piled on top of each other. It does not change how any script runs; it only tidies up how the scripts look. Many Scratch creators run Clean Up right before sharing a project, so that anyone who clicks See Inside finds organized, easy-to-follow code instead of a messy tangle of overlapping stacks.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Clean Up Blocks"
+      ],
+      "keywords": [
+        "clean up blocks",
+        "script area",
+        "organize blocks",
+        "layout"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 105
+    },
+    {
+      "id": "faq-049",
+      "category": "Technical Details",
+      "question": "What is the difference between a hat block and a stack block?",
+      "answer": "A **hat block** and a **stack block** are both puzzle-piece shapes, but they do very different jobs. A hat block has a rounded top and a flat bottom, and its only job is to **start** a script \u2014 it must sit at the very top, and nothing can ever snap above it. Examples include `when green flag clicked` and `when this sprite clicked`. A **stack block**, on the other hand, has a notch on top and a bump on the bottom, so it can snap both above and below other stack blocks. Its job is to **do something** \u2014 move a sprite, play a sound, wait, or change a variable \u2014 and it belongs in the middle of a script, chained together with other stack blocks that run in order from top to bottom. In short: a script always begins with exactly one hat block, followed by however many stack blocks are needed to make the action happen. Without a hat block, a stack of action blocks has no way to ever start running.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Hat Block Shape",
+        "Stack Block Shape"
+      ],
+      "keywords": [
+        "hat block",
+        "stack block",
+        "block shapes",
+        "script structure"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 174
+    },
+    {
+      "id": "faq-050",
+      "category": "Technical Details",
+      "question": "How is a reporter block different from a Boolean block?",
+      "answer": "Both **reporter blocks** and **Boolean blocks** give back a value that other blocks can use, but they differ in shape and in what kind of value they give. A reporter block is shaped like a rounded oval, or pill, and it can report **many kinds of values** \u2014 a number like `x position`, a piece of text, or the result of `pick random 1 to 10`. It snaps into the plain oval-shaped input slots found inside other blocks. A Boolean block, by contrast, is shaped like a hexagon with pointed ends, and it can only ever report **true or false** \u2014 nothing else. Because of its distinct pointy shape, a Boolean block only fits into matching hexagon-shaped slots, such as the condition slot of an `if` block, and a reporter block will not fit there no matter how you try to drag it in. So the shape itself is a clue: rounded slots want a value, hexagon slots want a yes-or-no answer.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Reporter Block Shape",
+        "Boolean Block Shape"
+      ],
+      "keywords": [
+        "reporter block",
+        "boolean block",
+        "block shapes",
+        "true false"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 162
+    },
+    {
+      "id": "faq-051",
+      "category": "Technical Details",
+      "question": "Why does Scratch color-code its block categories?",
+      "answer": "Scratch gives every block category its own distinct color so a block's type can be recognized **at a glance**, without needing to read every word printed on it. This is especially helpful for young learners who are still building reading speed and vocabulary \u2014 a flash of blue instantly signals 'this is a Motion block,' and a flash of pink signals 'this is a Sound block,' even before the label has been read. Color-coding also makes it much faster to find a needed block inside a busy blocks palette: knowing you want to change a costume lets you jump straight to the purple Looks section instead of scanning through ten colors of blocks one at a time. It also helps when reading someone else's script \u2014 a stack that suddenly changes from blue Motion blocks to orange Control blocks visually signals a shift from 'moving the sprite' to 'making a decision,' which makes the whole program much easier to follow just from its colors.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Block Color Coding"
+      ],
+      "keywords": [
+        "block color coding",
+        "blocks palette",
+        "categories",
+        "why colors matter"
+      ],
+      "source_links": [
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 164
+    },
+    {
+      "id": "faq-052",
+      "category": "Technical Details",
+      "question": "What is the difference between the Pen extension and the Video Sensing extension?",
+      "answer": "The **Pen extension** and the **Video Sensing extension** both add new blocks to Scratch, but they work in almost opposite directions. Pen lets a sprite **draw** on the stage \u2014 blocks like `pen down`, `set pen color to`, and `stamp` turn a sprite into a paintbrush that leaves trails or copies of its costume as it moves, which is great for drawing shapes, spirals, or geometric art using loops and math. Video Sensing, on the other hand, lets Scratch **watch** the real world through a computer's camera \u2014 blocks like `turn video on` and `video [motion] on [this sprite]` detect how much movement the camera sees, so a player can control a game by waving an arm or dancing in front of the screen instead of pressing keys. For example, a Pen script might use `repeat 4 [move 100 steps, turn 90 degrees]` to draw a square, while a Video Sensing script might check `video [motion] > 30` to make a sprite react whenever someone waves at the camera. In short, Pen creates visible output on the stage, while Video Sensing receives live input from outside the screen.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Pen Extension",
+        "Video Sensing"
+      ],
+      "keywords": [
+        "pen extension",
+        "video sensing",
+        "extensions",
+        "drawing",
+        "camera"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 188
+    },
+    {
+      "id": "faq-053",
+      "category": "Technical Details",
+      "question": "What is the difference between play sound until done and start sound?",
+      "answer": "Both blocks belong to the pink Sound category and both play a sound, but they handle **timing** differently. `play sound [name] until done` **pauses** the script and waits for the entire sound to finish before letting the next block run \u2014 this matters for dialogue or sound effects where the timing must line up exactly, like a character finishing a sentence before walking away. `start sound [name]` plays the sound and **immediately** moves on to the next block, without waiting at all, so the sound plays in the background while the rest of the script keeps going. This makes it perfect for background music or rapid-fire effects, like footsteps or overlapping jump sounds, that should not freeze the rest of the action. Picking the wrong one can cause a real bug: using `play sound until done` for background music would freeze the whole game until that song finished playing, which is almost never what a creator wants.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Play Sound",
+        "Start Sound"
+      ],
+      "keywords": [
+        "play sound",
+        "start sound",
+        "sound blocks",
+        "timing"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 157
+    },
+    {
+      "id": "faq-054",
+      "category": "Technical Details",
+      "question": "What is the difference between duplicating and deleting a block?",
+      "answer": "**Duplicating** and **deleting** are opposite editing actions available from the same right-click menu in the script area. Duplicating a block \u2014 or a whole stack, if you duplicate the top block \u2014 makes an **exact copy** that appears next to the original, ready to be dragged wherever it is needed; it is a fast way to reuse a script that has already been built instead of recreating it block by block. Deleting a block **removes** it from the script entirely, either by dragging it out of the script area, right-clicking and choosing Delete, or selecting it and pressing the Delete key. One important detail is worth remembering: deleting a hat block deletes the **whole stack** beneath it, since every block below was attached to it \u2014 so it is worth double-checking before deleting a stack's very top block.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Duplicate Block",
+        "Delete Block"
+      ],
+      "keywords": [
+        "duplicate block",
+        "delete block",
+        "right-click menu",
+        "editing scripts"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 138
+    },
+    {
+      "id": "faq-055",
+      "category": "Technical Details",
+      "question": "What is the difference between Text to Speech and Translate?",
+      "answer": "**Text to Speech** and **Translate** are both extensions that work with language, but they solve different problems. Text to Speech takes written text and turns it into an actual **spoken voice** coming out of the speakers \u2014 the `speak [Hello!]` block makes a sprite talk out loud using a computer-generated voice, with no microphone or recording needed, and lets a creator choose different voice styles such as alto or tenor. Translate, by contrast, takes text in one language and changes it into **written text in another language** \u2014 the `translate [Hello] to [Spanish]` block reports back the word Hola, but it does not say anything out loud by itself. The two extensions are often combined: a script might first translate a greeting into Spanish and then feed that translated text into a speak block, so the sprite actually speaks the translated words aloud in a synthetic voice.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Text To Speech",
+        "Translate Extension"
+      ],
+      "keywords": [
+        "text to speech",
+        "translate extension",
+        "language",
+        "extensions"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 147
+    },
+    {
+      "id": "faq-056",
+      "category": "Technical Details",
+      "question": "What's the difference between the Backpack and duplicating a block?",
+      "answer": "Duplicating a block **within** a single project only works inside that one project \u2014 the copy exists just in that project file, alongside the original. The **Backpack** is different: it is a storage tray that exists **outside** any single project, so anything dragged into it \u2014 scripts, sprites, costumes, or sounds \u2014 stays saved to a Scratch account and can be dragged **into any other project** opened later, even one that has not been started yet. Duplicating is like making a second copy on the same desk, while the Backpack is more like a shelf that travels with a creator between different desks. A common workflow is to perfect a script inside one project, drag it to the Backpack once it is polished, and then reuse that same script across every future project instead of rebuilding it from nothing each time.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Backpack",
+        "Copy To Backpack",
+        "Duplicate Block"
+      ],
+      "keywords": [
+        "backpack",
+        "duplicate block",
+        "reuse across projects",
+        "copy blocks"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 141
+    },
+    {
+      "id": "faq-057",
+      "category": "Technical Details",
+      "question": "Why does the costume center matter for rotation and touching?",
+      "answer": "The **costume center** is a fixed crosshair point marked on a costume image, and it always stays lined up with the sprite's x and y position no matter how the costume rotates or resizes. This matters for two reasons. First, when a sprite turns, it **spins around its costume center** \u2014 if the center is set to the middle of the image, the sprite spins smoothly in place, but if the center sits off in one corner, the sprite will wobble or swing around like a lopsided top. Second, Scratch uses the costume center as the sprite's exact reference point for blocks like `touching`, so where the center sits affects exactly where a collision gets detected. For a walking character, setting the center to the feet keeps those feet planted on the ground as the sprite turns; for a spinning coin, centering it in the middle keeps the spin looking clean instead of wobbly.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Costume Center"
+      ],
+      "keywords": [
+        "costume center",
+        "rotation",
+        "touching",
+        "pivot point"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 154
+    },
+    {
+      "id": "faq-058",
+      "category": "Technical Details",
+      "question": "When should I use start sound instead of play sound?",
+      "answer": "Use **`start sound`** whenever a sound should play **without stopping** the rest of a script \u2014 the moment something else needs to happen at the exact same time as the sound. Good examples are background music that should keep playing no matter what else the sprite does, footstep sounds during running, or a jump sound effect that should not pause the sprite's movement. Use **`play sound [name] until done`** instead whenever the timing of the next action truly depends on the sound finishing first \u2014 for example, a character's line of dialogue that another sprite should only respond to after it has fully finished, or a short game-over fanfare that should complete before the ending screen appears.\n\nHere is a worked example combining both, from a simple platformer:\n```\nwhen green flag clicked\nstart sound [background-music]\nforever\n    if <key [space] pressed?> then\n        start sound [jump]\n        change y by 50\n        wait 0.3 secs\n        change y by -50\n    end\nend\n```\nThe background music starts once and keeps looping underneath everything else, while each jump sound overlaps on top of it using `start sound`. If this script had used `play sound until done` for the jump instead, the whole game would freeze every single time the player jumped, waiting for that short sound to finish before anything else could happen.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Start Sound",
+        "Play Sound"
+      ],
+      "keywords": [
+        "start sound",
+        "play sound until done",
+        "background music",
+        "when to use"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 218
+    },
+    {
+      "id": "faq-059",
+      "category": "Technical Details",
+      "question": "What's an example of drawing a shape with the Pen extension?",
+      "answer": "After adding the **Pen extension** \u2014 click the Extensions button, choose Pen, and click Add \u2014 a new green Pen category appears with blocks like `pen down`, `pen up`, and `erase all`. To draw a simple square, combine Pen blocks with Motion blocks inside a loop:\n```\nwhen green flag clicked\nerase all\npen down\nrepeat 4\n    move 100 steps\n    turn 90 degrees\nend\npen up\n```\nHere, `erase all` clears any old drawing, `pen down` starts the trail, and the `repeat 4` loop moves the sprite forward 100 steps and turns it a quarter turn, four times in a row. Since four 90-degree turns add up to a full 360-degree circle, the sprite ends up facing its original direction, having traced out the four sides of a square along the way. `pen up` at the end stops the drawing so the sprite can move around afterward without leaving more lines behind it. Fancier art follows the same pattern: changing the numbers to `repeat 360`, moving 5 steps and turning 1 degree each time, while also adding `change pen color by 1`, draws a smooth, colorful spiral instead of a plain square.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Pen Extension",
+        "Add Extension"
+      ],
+      "keywords": [
+        "pen extension",
+        "draw square",
+        "pen down",
+        "worked example"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 192
+    },
+    {
+      "id": "faq-060",
+      "category": "Technical Details",
+      "question": "How would I use Video Sensing to control a game?",
+      "answer": "After adding **Video Sensing** from the Extensions menu, new blocks appear that turn a webcam into a game controller. A common pattern is a motion-reaction game, where a sprite reacts whenever it detects enough movement in front of the camera:\n```\nwhen green flag clicked\nturn video on\nset video transparency to 50\nforever\n    if <video [motion] on [this sprite] > 30> then\n        change color effect by 10\n        play sound [pop]\n    end\nend\n```\nHere, `turn video on` switches on the camera feed, and setting transparency to 50 makes the camera image see-through so the player can still clearly see the sprite and stage behind it. Inside the `forever` loop, `video [motion] on [this sprite] > 30` checks whether the amount of motion detected over that sprite's area is bigger than 30, a threshold that filters out tiny accidental twitches. When someone waves an arm or jumps in front of the camera, the condition becomes true, the sprite's color changes, and a pop sound plays, giving instant feedback that the camera noticed the movement. The same basic idea can drive a bubble-popping game, a dance-along game, or a hands-free steering control, just by changing what happens inside that `if` block.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Video Sensing",
+        "Add Extension"
+      ],
+      "keywords": [
+        "video sensing",
+        "camera game",
+        "motion detection",
+        "worked example"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md"
+      ],
+      "has_example": true,
+      "word_count": 200
+    },
+    {
+      "id": "faq-061",
+      "category": "Technical Details",
+      "question": "When should I add a comment block to my script?",
+      "answer": "Add a **comment block** any time future-you, or someone else reading a project, would need help understanding a script that is not obvious just from reading the blocks. Good moments to add one include: right above a tricky bit of math, such as a custom jump-height formula, to explain what it is calculating; at the top of a long script, to label its purpose like PLAYER MOVEMENT; as a TODO reminder for something planned for later, like 'add double jump here'; or to give credit, such as noting an idea borrowed from a friend's project. To add one, right-click any block and choose Add Comment \u2014 a small yellow sticky note appears attached to that block, ready to be typed into. Comments do not affect how the script runs at all; they exist purely for humans reading the code. For example, a student building a platformer game might comment their gravity script with 'this pulls the player down each frame \u2014 increase the number to make gravity feel stronger,' so that when they come back to tweak the game weeks later, they do not have to puzzle out their own math from scratch all over again.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Comment Block"
+      ],
+      "keywords": [
+        "comment block",
+        "add comment",
+        "documenting scripts",
+        "sticky note"
+      ],
+      "source_links": [
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": true,
+      "word_count": 196
+    },
+    {
+      "id": "faq-062",
+      "category": "Technical Details",
+      "question": "How do the five block shapes work together in a script?",
+      "answer": "Scratch's five block shapes \u2014 hat, stack, reporter, Boolean, and cap \u2014 act like different puzzle-piece types that only connect in specific, matching ways, and together they guarantee that a script makes logical sense. A script always begins with exactly one **hat block** (rounded top), since only a hat block can sit at the very top and trigger the script to run. Beneath it, **stack blocks** (notch on top, bump on bottom) snap together vertically and run in order, one after another, carrying out actions like moving a sprite or playing a sound. Some stack blocks \u2014 like `if` or `go to x: y:` \u2014 have empty slots built into them: rounded, oval slots expect a **reporter block** holding a value, such as a number or a piece of text, while pointy hexagon slots expect a **Boolean block** holding a true-or-false answer. Because the shapes physically only fit their matching slot shape, Scratch prevents whole categories of mistakes before a project is even run \u2014 a true-or-false Boolean simply cannot be dropped into a slot meant for a number. Finally, if a script needs to stop cleanly, a **cap block** (flat top, rounded bottom) goes at the very bottom, since nothing can ever attach beneath it. Put together \u2014 hat, then stacks holding reporters or Booleans in their slots, then optionally a cap \u2014 the shapes form a visual grammar that lets a beginner see, just from the outlines, whether a script is even possible to build.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Hat Block Shape",
+        "Stack Block Shape",
+        "Reporter Block Shape",
+        "Boolean Block Shape",
+        "Cap Block Shape"
+      ],
+      "keywords": [
+        "block shapes",
+        "script structure",
+        "hat block",
+        "reporter block",
+        "boolean block"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 247
+    },
+    {
+      "id": "faq-063",
+      "category": "Technical Details",
+      "question": "How does adding an extension change the blocks palette?",
+      "answer": "Adding an extension changes the **blocks palette** by creating a brand-new colored category that sits alongside the ten built-in ones, filled with blocks the extension provides. Before anything is added, clicking the Extensions button at the bottom-left of the palette opens a menu of available extensions, such as Pen, Video Sensing, Text to Speech, Translate, and micro:bit. Once Add is clicked on one of them, a new category tab appears \u2014 adding Pen creates a green Pen section holding blocks like `pen down` and `stamp`, while adding micro:bit creates a blue section holding hardware blocks like `when [button A] pressed`. This connects directly to why block categories are color-coded in the first place: an extension's blocks get their own distinct color so a creator can instantly tell they came from an add-on rather than from one of Scratch's original ten categories. Because extensions save along with the project, anyone who opens or remixes a shared project automatically sees the same extra categories in their own palette too. It is worth removing extensions that are no longer needed, though \u2014 every added category makes the palette longer and can make it slower to find the block actually wanted among the built-in categories.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Extension Management",
+        "Add Extension",
+        "Block Color Coding"
+      ],
+      "keywords": [
+        "extension management",
+        "blocks palette",
+        "add extension",
+        "block categories"
+      ],
+      "source_links": [
+        "docs/chapters/03-motion-blocks-categories/index.md",
+        "docs/chapters/05-sounds-extensions-sharing/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 201
+    },
+    {
+      "id": "faq-064",
+      "category": "Common Challenges",
+      "question": "What do the words bug and debugging mean?",
+      "answer": "A **bug** is any part of your code that doesn't do what you wanted it to do \u2014 maybe your sprite moves the wrong way, or your score never changes. **Debugging** is the skill of finding that bug and fixing it. Every programmer gets bugs, even professionals who have coded for thirty years \u2014 bugs are a normal, expected part of making anything, not a sign that you did something wrong. The word comes from a real moth that got stuck inside an early computer and caused a problem! When you debug, you become a detective: you look for clues, test one idea at a time, and stay calm even when your project does something silly. The [Debugging Basics section](chapters/08-animation-parallelism-debugging/index.md) has a whole table of tools to get you started, and the [glossary](glossary.md) defines related terms like Debugging Strategies and Error Detection.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "Debugging Basics"
+      ],
+      "keywords": [
+        "bug",
+        "debugging",
+        "error",
+        "mistake",
+        "fix"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 142
+    },
+    {
+      "id": "faq-065",
+      "category": "Common Challenges",
+      "question": "Why didn't my sprite move when I clicked the green flag?",
+      "answer": "This is one of the most common Scratch problems, and it almost always comes down to which **hat block** (the rounded block at the top of a script) your movement code is attached to. If nothing happens at all, check that your script actually starts with `when green flag clicked` \u2014 a script that starts with `when this sprite clicked` or `when space key pressed` will never run just from clicking the flag. If the sprite moves only a tiny bit and then stops, the problem is usually different: a `change x by 10` block attached directly to a key-pressed hat block only runs once per press, so movement looks choppy or seems to not happen at all if you tap the key quickly. For smooth, continuous movement, wrap your movement blocks inside a `forever` loop attached to `when green flag clicked`, and check the key with an `if <key pressed?> then` block inside that loop. That way Scratch checks the key every frame instead of only once per press. The [Continuous Motion section](chapters/08-animation-parallelism-debugging/index.md) of the Animation, Parallelism, and Debugging chapter shows this exact fix side by side with the broken version.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Debugging Basics",
+        "Continuous Motion"
+      ],
+      "keywords": [
+        "green flag",
+        "sprite not moving",
+        "hat block",
+        "forever loop",
+        "continuous motion"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 192
+    },
+    {
+      "id": "faq-066",
+      "category": "Common Challenges",
+      "question": "What's the difference between broadcast and broadcast and wait?",
+      "answer": "Both blocks send a **broadcast message** \u2014 a signal that every sprite and the stage can listen for with a `when I receive` block. The difference is all about timing. Plain `broadcast [message]` is like shouting something and immediately walking away: your script keeps running the very next block without checking whether anyone heard you. `broadcast [message] and wait` is like shouting something and then standing still until everyone who heard has finished reacting \u2014 your script pauses until every script that received the message has run all the way to its end. Use plain `broadcast` for things that don't need to block anything else, like triggering an explosion effect or sound while gameplay keeps going. Use `broadcast and wait` when order really matters, such as making sure a whole intro cutscene finishes before turning on player controls, or making sure every sprite resets before a new level starts. Mixing them up is a common bug source: if you use plain `broadcast` for a setup sequence, later scripts may start running before setup is actually finished. See the [Broadcast And Wait section](chapters/08-animation-parallelism-debugging/index.md) for worked examples of both.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Broadcast And Wait",
+        "Asynchronous Broadcast",
+        "Message Passing"
+      ],
+      "keywords": [
+        "broadcast",
+        "broadcast and wait",
+        "message passing",
+        "synchronization"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": false,
+      "word_count": 187
+    },
+    {
+      "id": "faq-067",
+      "category": "Common Challenges",
+      "question": "What's the difference between forever, repeat, and repeat until loops?",
+      "answer": "All three blocks repeat the code inside them, but they stop for different reasons, and picking the wrong one is a classic source of bugs. A `repeat (10)` loop runs its contents exactly 10 times (or however many you set) and then automatically moves on \u2014 great for things you know the exact count of, like drawing a 5-sided shape. A `forever` loop never stops on its own; it keeps running for as long as the project runs, which is perfect for something that should always be happening, like checking for key presses every frame. A `repeat until <condition>` loop checks a condition before each pass \u2014 as long as the condition is false it keeps looping, and the moment the condition becomes true, it stops and moves on to the next block. This is the right choice when you don't know in advance how many times something needs to happen, like moving a sprite until it touches the edge. A common bug is using `forever` when you actually wanted `repeat until` \u2014 the script never reaches the blocks after the loop, because `forever` never lets go. If your code after a loop never seems to run, check whether you meant to use `repeat until` instead. See the [Repeat Until Loop section](chapters/08-animation-parallelism-debugging/index.md) for a full comparison table.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Repeat Until Loop",
+        "Loop Nesting"
+      ],
+      "keywords": [
+        "forever loop",
+        "repeat loop",
+        "repeat until",
+        "loop types"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": false,
+      "word_count": 217
+    },
+    {
+      "id": "faq-068",
+      "category": "Common Challenges",
+      "question": "Why does my forever loop make my whole project freeze or lag?",
+      "answer": "A `forever` loop by itself doesn't cause freezing \u2014 Scratch is built to run forever loops constantly, which is exactly how continuous motion works. What actually causes freezing is usually something happening *inside* the loop. First, if your loop does a huge amount of work with no `wait` block at all \u2014 for example, running a nested loop that stamps thousands of copies, or adding hundreds of items to a list in one go \u2014 Scratch tries to finish it all in a single frame, and the whole stage appears to lock up until it's done. The fix is to add a short `wait (0.01) secs` inside heavy loops, so the work spreads across many frames instead of one. Second, watch out for a loop like `repeat until <key pressed?>` with no `wait` inside it \u2014 Scratch checks the condition thousands of times per second, which can make the whole project sluggish; a small `wait 0.01 secs` fixes this without making it feel less responsive. If your entire project (not just one sprite) seems frozen, also check for a `broadcast and wait` sent to a script that itself contains a `forever` loop that never finishes \u2014 the sender will wait forever for a script that will never end. The [Debugging Basics section](chapters/08-animation-parallelism-debugging/index.md) lists this exact fix in its common bugs table.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Debugging Basics",
+        "Continuous Motion"
+      ],
+      "keywords": [
+        "forever loop",
+        "freeze",
+        "lag",
+        "wait block",
+        "infinite loop"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": false,
+      "word_count": 221
+    },
+    {
+      "id": "faq-069",
+      "category": "Common Challenges",
+      "question": "How do I use block highlighting to find a stuck script?",
+      "answer": "**Block highlighting** is the yellow glow Scratch draws around whichever block is currently running \u2014 one of the best free debugging tools you have, because you can literally watch your code think. Here's how to use it. First, click the green flag and immediately watch the script \u2014 the glow should move smoothly from block to block, following the order they're connected in. Second, if the glow gets stuck on one block and stays there, that block is your bug. A `wait until <condition>` or `repeat until <condition>` that stays highlighted forever usually means the condition inside it can never become true \u2014 double-check your comparison, like a `score = 10` check when score actually jumped straight from 9 to 11 and skipped past 10 entirely. Third, if the glow never appears at all, the script isn't starting \u2014 check that the hat block at the top matches what you're actually doing (green flag, key press, and so on). Fourth, if the glow jumps around too fast to follow, add a temporary `wait 1 secs` block right where you want to pause and look, then delete it once you've found the problem. Block highlighting works on every sprite at once too, so with several sprites you can click each one's code tab in turn to see which sprite's script is the one stuck. The [glossary entry for Block Highlighting](glossary.md) explains this tool in one sentence, and the [Debugging Basics section](chapters/08-animation-parallelism-debugging/index.md) lists it alongside other tools like variable watchers and the say block.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Debugging Basics"
+      ],
+      "keywords": [
+        "block highlighting",
+        "debugging",
+        "stuck script",
+        "yellow glow"
+      ],
+      "source_links": [
+        "docs/glossary.md",
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": false,
+      "word_count": 252
+    },
+    {
+      "id": "faq-070",
+      "category": "Common Challenges",
+      "question": "What should I check if my score variable isn't going up?",
+      "answer": "When a score (or any variable) refuses to change, work through these checks in order. First, **spelling and capitalization** \u2014 Scratch treats `score` and `Score` as two completely different variables, so a `change [score v] by (10)` block on one sprite and a `change [Score v] by (10)` block on another update two different boxes, and only one of them shows on your scoreboard. Second, check **variable scope**: if you created `score` as 'for this sprite only,' every sprite actually gets its own private copy, so a coin sprite's score and the displayed score on a scoreboard sprite aren't the same value at all \u2014 recreate the variable and choose 'for all sprites' instead so every sprite shares one number. Third, make sure the block that increases the score is actually connected to a script that runs; it's easy to accidentally leave a `change [score v] by (10)` block sitting loose in the coding area, disconnected from any hat block, where it will never run. Fourth, add a temporary `say (score)` block right after the change block to watch the value live and confirm the block is even running. For example, if collecting a coin should add 10 points but nothing happens, checking scope is usually the fix \u2014 the [Variable Scope section](chapters/08-animation-parallelism-debugging/index.md) explains for-all-sprites versus for-this-sprite-only in detail.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Change Variable",
+        "For All Sprites",
+        "For This Sprite Only"
+      ],
+      "keywords": [
+        "variable",
+        "score",
+        "variable scope",
+        "change variable",
+        "for all sprites"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 219
+    },
+    {
+      "id": "faq-071",
+      "category": "Common Challenges",
+      "question": "How do I fix a walking sprite that sinks or floats?",
+      "answer": "This bug happens when a sprite's different costumes don't have their **costume center** (the fixed point that stays lined up with the sprite's x,y position) set to the same spot on the character. If costume 'walk1' has its center at the character's belly button but costume 'walk2' has its center at the character's head, then every time `next costume` switches between them, the sprite visibly jumps up or down even though its x,y position never changed. To fix it: first, open the Costumes tab and select each costume one at a time. Second, find the costume center tool (usually a crosshair icon) and set the center to the exact same landmark on every costume \u2014 for a walking character, the feet work well, since that keeps the character's feet planted on the ground line no matter which costume is showing. Third, test by clicking through costumes manually with the costume dropdown before adding your animation loop back in. Once every costume shares the same center point, switching between them with `next costume` will look smooth instead of jittery. The [Costume Animation section](chapters/08-animation-parallelism-debugging/index.md) has a reminder about setting the costume center to the feet for exactly this reason.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Costume Animation"
+      ],
+      "keywords": [
+        "costume center",
+        "animation",
+        "sinking sprite",
+        "costume animation"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 197
+    },
+    {
+      "id": "faq-072",
+      "category": "Common Challenges",
+      "question": "What should I check if my clones all show the wrong costume?",
+      "answer": "A clone starts out with an exact copy of whatever costume the **original** sprite happened to be showing at the exact moment `create clone of myself` ran \u2014 it does not automatically know which costume you 'meant' for it to have. So if your original sprite is cycling through a walking animation and a clone gets created while it happens to be on 'walk3,' every new clone will start on 'walk3' too, even if you wanted them all to start on 'idle.' The fix is to explicitly set the costume inside the `when I start as a clone` script, instead of relying on whatever the original was showing at that instant. For example: `when I start as a clone`, then `switch costume to [idle v]`, and only then run the clone's own behavior. This guarantees every clone starts from the same known costume no matter what the original sprite was doing when it spawned. The same idea applies to any variable you care about too \u2014 set position, size, and 'for this sprite only' variables explicitly inside the clone-start script rather than assuming the clone inherited the values you wanted. Check the [When I Start As Clone section](chapters/08-animation-parallelism-debugging/index.md) for the full clone initialization pattern, including position and variable setup.",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "When I Start As Clone",
+        "Costume Animation"
+      ],
+      "keywords": [
+        "clone",
+        "when i start as a clone",
+        "costume",
+        "clone bug"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 209
+    },
+    {
+      "id": "faq-073",
+      "category": "Common Challenges",
+      "question": "How do I debug a script by reading it top to bottom?",
+      "answer": "Scratch runs the blocks in a script in **sequence** \u2014 top to bottom, one after another \u2014 so reading your script in that exact order, out loud if it helps, is one of the fastest ways to catch a bug without even running the project. Here's a simple process. First, start at the hat block and ask 'when does this even start?' Second, move to the next block down and say out loud exactly what it does, using real values if you know them, like 'set score to 0' or 'change x by 10.' Third, when you reach an `if` or `repeat`, pause and check the condition carefully before assuming what's inside it will run. Fourth, keep going block by block until the very end, then compare what you predicted would happen to what you're actually seeing on stage. Most of the time, reading it this way reveals the bug immediately \u2014 like discovering two blocks are in the wrong order, so a sprite turns after it moves instead of before it moves. This method costs nothing and needs no extra tools, which makes it a great first step before reaching for `say` blocks or variable watchers. The [Debugging Basics section](chapters/08-animation-parallelism-debugging/index.md) and the [glossary](glossary.md) both describe this practice as Script Reading Order.",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Debugging Basics"
+      ],
+      "keywords": [
+        "script reading order",
+        "debugging",
+        "sequence",
+        "top to bottom"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md",
+        "docs/glossary.md"
+      ],
+      "has_example": false,
+      "word_count": 212
+    },
+    {
+      "id": "faq-074",
+      "category": "Common Challenges",
+      "question": "What causes a race condition between two scripts?",
+      "answer": "A **race condition** happens because Scratch is naturally **concurrent** \u2014 every hat block starts its own independent script, and all of those scripts run in parallel, taking turns extremely quickly rather than one fully finishing before the next starts. A race condition specifically happens when two or more scripts read and change the *same shared variable* at almost the same moment, and the final result ends up depending on which script happens to get its turn first \u2014 which can be different every single time you run the project. Imagine two enemy sprites each running `forever { if touching player then change health by -10 }`. If the player touches both enemies in the same instant, both scripts might read health as 100 at the same time, both calculate 100 minus 10 equals 90, and both set health to 90 \u2014 even though the player should have lost 20 points total, not 10. That 'lost' change is the classic sign of a race condition: two scripts overwrote each other instead of stacking their effects. The fix is to give one script sole responsibility for a shared value instead of letting many scripts change it directly. For instance, have the enemies broadcast a `[player-hit]` message, and let one single 'player manager' script, living on the player sprite, be the only script that actually runs `change health by -10` in response. With only one script ever doing the changing, there is nothing left to race between. The [Concurrent Scripts section](chapters/08-animation-parallelism-debugging/index.md) covers this exact single-manager-script solution.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Concurrent Scripts",
+        "For All Sprites"
+      ],
+      "keywords": [
+        "race condition",
+        "concurrent scripts",
+        "shared variable",
+        "parallelism"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": false,
+      "word_count": 253
+    },
+    {
+      "id": "faq-075",
+      "category": "Common Challenges",
+      "question": "What is a broadcast storm and how do I avoid one?",
+      "answer": "A **broadcast storm** happens when a message gets broadcast over and over, extremely rapidly, usually because a `broadcast` block got placed inside a `forever` loop with a very short or missing `wait`. Every time that broadcast fires, every sprite listening for it with a matching `when I receive` block starts a brand new script \u2014 so if the broadcast fires hundreds of times per second, hundreds of overlapping scripts end up trying to run at once. The project usually reacts by lagging badly, sounds stacking on top of each other into noise, or animations flickering unpredictably. For example, imagine a forever loop on an enemy sprite that reads `if touching player then broadcast [attack]`. While the enemy and player stay touching, which could easily last several frames in a row, that broadcast fires dozens of times a second, and dozens of 'attack' scripts pile up trying to run together, even though you only wanted one attack per touch. To avoid a broadcast storm, only broadcast a message once per event, not once per frame. A common fix is to add a short cooldown variable, similar to the shooting cooldown pattern in this chapter, or to briefly disable the check right after broadcasting so the same touch can't trigger the message again until the cooldown resets. See the [glossary entry for Broadcast Storm](glossary.md) and the [Broadcast And Wait section](chapters/08-animation-parallelism-debugging/index.md) of the chapter for related fixes.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Message Passing",
+        "Asynchronous Broadcast"
+      ],
+      "keywords": [
+        "broadcast storm",
+        "broadcast",
+        "lag",
+        "message passing"
+      ],
+      "source_links": [
+        "docs/glossary.md",
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 234
+    },
+    {
+      "id": "faq-076",
+      "category": "Common Challenges",
+      "question": "How do I trace a variable's value through a loop?",
+      "answer": "Tracing a variable means watching its value change, one step at a time, as a loop runs \u2014 instead of staring at the final wrong number and guessing why. Scratch gives you two main tools for this. The first is a **variable watcher**: check the box next to a variable's name in the Variables palette, and a small box appears right on the stage showing its live value the whole time the project runs, which is perfect for slow-moving bugs you can watch happen naturally. The second is the `say` block: adding `say (join [value: ] (myVariable)) for 0.1 secs` right inside your loop prints the value as a speech bubble on every single pass, and it works even better than a watcher when a loop runs very fast, because you can also add a `wait 1 secs` right after it to slow things down enough to actually read each value. For example, imagine a `repeat (10)` loop that's supposed to add 1 to a counter each time but somehow ends at 8 instead of 10. Adding `say (counter)` inside the loop, right after `change [counter v] by (1)`, shows you 1, 2, 3, and lets you spot exactly which pass skipped a number or ran twice. Once you can see the whole sequence of values instead of just the final one, most 'off by a few' bugs become obvious \u2014 often the counter is being changed in two different places, or reset partway through by another script. The [Debugging Basics section](chapters/08-animation-parallelism-debugging/index.md) shows this live-display pattern using the say block.",
+      "bloom_level": "Analyze",
+      "difficulty": "medium",
+      "concepts": [
+        "Change Variable",
+        "Debugging Basics"
+      ],
+      "keywords": [
+        "variable watcher",
+        "say block",
+        "debugging",
+        "trace variable",
+        "loop"
+      ],
+      "source_links": [
+        "docs/chapters/08-animation-parallelism-debugging/index.md"
+      ],
+      "has_example": true,
+      "word_count": 260
+    },
+    {
+      "id": "faq-077",
+      "category": "Best Practices",
+      "question": "Why do creators follow a design process instead of just coding right away?",
+      "answer": "A **design process** is a repeatable set of stages \u2014 Imagine, Plan, Create, Test, Improve, and Share \u2014 with **reflection** happening at every step along the way. Professional game developers, engineers, and artists all use some version of this cycle because it catches problems early instead of after everything is already built.\n\nIf you skip straight to snapping blocks together with no plan, you can still make something, but you'll often hit trouble halfway through: you forget what your goal was, you rebuild the same script more than once, or you finish the coding and realize you never decided how the player wins or loses. Following the stages in order helps because each one answers a different question \u2014 Imagine asks \"what's fun about this?\", Plan asks \"what do I need to build it?\", Test asks \"does it actually work?\", and Improve asks \"how can it be better?\"\n\nThe process isn't a strict rulebook you follow once in a straight line \u2014 you'll loop back and forth between stages constantly \u2014 but it's a map so you don't get lost along the way. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for all six stages explained in detail.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Design Process",
+        "Reflection"
+      ],
+      "keywords": [
+        "design process",
+        "imagine plan create",
+        "reflection",
+        "workflow",
+        "planning ahead"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": false,
+      "word_count": 196
+    },
+    {
+      "id": "faq-078",
+      "category": "Best Practices",
+      "question": "How do I decide whether a variable should be shared or private?",
+      "answer": "Scratch lets you set a variable's scope to **for all sprites** (one shared box that every sprite can read and change) or **for this sprite only** (a private box that belongs to just one sprite). The decision comes down to one question: does this value describe the *whole game*, or does it describe *one sprite's own individual state*?\n\nValues that describe the whole game \u2014 total points earned, how much time has passed, how many lives remain \u2014 usually belong in a shared, for-all-sprites variable, because it wouldn't make sense for different sprites to disagree about a single running total. Values that describe one sprite's own situation \u2014 its own health, its own speed, which direction it's currently facing \u2014 usually belong in a private, for-this-sprite-only variable, so each sprite, and each clone of that sprite, tracks its own version without interfering with anyone else's.\n\nA useful test to run in your head: imagine ten copies of this sprite on stage at once. If they'd each need their own separate value, make it private. If they'd all need to agree on one shared value, make it shared. Getting this choice right from the start avoids a whole category of confusing bugs later on, where a variable seems to change \"randomly\" or affects sprites it shouldn't touch at all. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for the full scope comparison table.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Variable Scope",
+        "Set Variable"
+      ],
+      "keywords": [
+        "variable scope",
+        "for all sprites",
+        "for this sprite only",
+        "shared variable",
+        "private variable"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": false,
+      "word_count": 230
+    },
+    {
+      "id": "faq-079",
+      "category": "Best Practices",
+      "question": "When should I turn repeated blocks into a custom block with parameters?",
+      "answer": "Turn a repeated group of blocks into a **custom block** as soon as you notice yourself copying, pasting, or rebuilding the *same* set of blocks in more than one place \u2014 especially when the only thing that changes each time is a number or a piece of text. That's exactly what **block parameters** are for: they let a custom block accept inputs, the way a recipe accepts \"how many servings\" instead of only ever making one fixed batch.\n\n**Concrete example:** if you've written `change y by 100`, `wait 0.2 secs`, `change y by -100` to make a sprite jump, and then copied that same pattern to make a smaller hop and a bigger leap, stop and build a custom block instead: `define jump (height)` then `change y by (height)`, `wait 0.2 secs`, `change y by (height * -1)`. Now `jump (100)` makes a big jump and `jump (20)` makes a tiny hop, using one script instead of three separate copies.\n\nIf a sequence of blocks is only ever going to run once, in one place, a plain script is perfectly fine \u2014 turning everything into a custom block when there's nothing to reuse just adds extra clicking for no benefit. The real signal to switch is repetition *plus* variation: the same shape of blocks, showing up more than once, with different numbers or text each time. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for more parameter examples like drawing polygons.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Block Parameters",
+        "Abstraction",
+        "Counted Repetition"
+      ],
+      "keywords": [
+        "custom block",
+        "block parameters",
+        "abstraction",
+        "repeated blocks",
+        "reusability"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": true,
+      "word_count": 239
+    },
+    {
+      "id": "faq-080",
+      "category": "Best Practices",
+      "question": "What's the best way to test a Scratch game before sharing it?",
+      "answer": "Testing before you share isn't just playing through once and hoping it's fun \u2014 a solid **test phase** covers several different kinds of checks, and skipping any one of them tends to let a different category of bug slip through unnoticed. Start with a self-test, where you play your own game from start to finish and deliberately try to misuse it rather than only playing it the \"nice\" way it was designed for. Follow that with a target-audience test, handing the project to someone who has never seen it before, since they'll get stuck in places you can't predict, because you already understand your own game too well.\n\nAdd a stress test for anything involving clones or long play sessions, since slowdown and memory problems often only appear after extended play rather than in the first few minutes. Finish with a regression test after every bug fix or new feature, replaying the parts that already worked, because a change in one script can quietly break another part that seemed completely unrelated.\n\nKeep a running test log of what passed, what failed, and why, instead of relying on memory, and treat \"no crashes yet\" as different from \"thoroughly tested.\" Share only once you've gone through a full, deliberate pass without a game-breaking problem. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for the complete test checklist and test phases.",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Test Phase",
+        "Share Phase",
+        "Reflection"
+      ],
+      "keywords": [
+        "test phase",
+        "testing strategies",
+        "share phase",
+        "playtesting",
+        "before sharing"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": false,
+      "word_count": 226
+    },
+    {
+      "id": "faq-081",
+      "category": "Best Practices",
+      "question": "How do I properly credit someone whose project I remixed?",
+      "answer": "When you remix a project, Scratch automatically adds a line crediting the original creator \u2014 but that's the minimum, not the whole story of good **credit attribution**. Real credit means being specific about what you borrowed from someone else and what you actually added yourself.\n\n**Concrete example:** instead of leaving only the automatic note, add your own line in the project notes or a **credits** screen, something like \"Background music by TunesKid, used with thanks\" or \"Enemy movement pattern learned from a tutorial, code rewritten by me.\" That tells players exactly which parts are borrowed and which parts are your own original work.\n\nGood remix etiquette also means making **meaningful changes** rather than just swapping the title or recoloring a sprite and calling it new \u2014 remixing is meant to be a real transformation, a way to learn from someone's approach and then build your own idea on top of it, not a shortcut for skipping your own work entirely. If you use someone's sound, art, or code idea even without formally remixing their whole project, still name them in your credits. When in doubt, credit more rather than less \u2014 nobody has ever complained about getting *too much* thanks. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for a full credits template.",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Remix Exploration",
+        "Credits"
+      ],
+      "keywords": [
+        "credit attribution",
+        "remixing",
+        "credits",
+        "remix etiquette",
+        "give credit"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": true,
+      "word_count": 211
+    },
+    {
+      "id": "faq-082",
+      "category": "Best Practices",
+      "question": "How can I keep a design journal that actually helps?",
+      "answer": "A **design journal** only helps if you actually write in it *while* you're building, not after the project is already finished. Keep it open next to Scratch and jot down entries as you go, covering three kinds of things: ideas you don't want to forget, problems you run into and how you eventually solved them, and decisions you made along with your reasoning at the time \u2014 because \"why did I do it this way?\" is much harder to answer three weeks later than it is right now.\n\nThe biggest benefit shows up later in the project: when you hit a bug that feels familiar, you can check your journal instead of re-debugging from scratch, and when it's time to write your final **reflection**, you already have real notes instead of trying to reconstruct a month of work from memory alone. It also naturally documents your **iterative development** \u2014 the repeated cycle of testing and improving \u2014 so you can look back and see how many versions your project actually went through and what changed at each step along the way.\n\nA habit that keeps a journal useful without turning it into a chore: write one short line at the start of a work session describing what you're about to try, and one line at the end describing what actually happened. It costs almost no time and turns into a genuinely useful record by the time you reach the Share stage. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for a reflection template you can adapt into journal entries.",
+      "bloom_level": "Apply",
+      "difficulty": "easy",
+      "concepts": [
+        "Design Journal",
+        "Reflection",
+        "Iterative Development"
+      ],
+      "keywords": [
+        "design journal",
+        "reflection",
+        "iterative development",
+        "keeping notes",
+        "capstone project"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": false,
+      "word_count": 257
+    },
+    {
+      "id": "faq-083",
+      "category": "Best Practices",
+      "question": "What's the relationship between iterative development and the test-improve cycle?",
+      "answer": "**Iterative development** is the practice of cycling through Plan, Create, **Test Phase**, and **Improve Phase** repeatedly, instead of moving through each stage exactly one time. The relationship is that Test and Improve act as the *engine* of iteration \u2014 every lap around that loop counts as one iteration, and each lap is supposed to leave the project a little better than the one before it.\n\nHere's how the two stages connect in practice: Test surfaces a concrete problem, Improve addresses that specific problem, and then \u2014 this is the part beginners often skip \u2014 you return to Test *again* to confirm both that the fix worked and that it didn't quietly break something else nearby. Skipping that second pass is exactly how \"fixed\" bugs have a habit of reappearing later, sometimes in a different form.\n\nWithout iteration, Test and Improve would each happen exactly once, and most projects would ship with rough edges, since a first version of anything is rarely its best version. Professional games commonly go through fifty or more iterations before release, not because their developers are careless, but because that many small test-and-improve cycles is genuinely what produces a polished result. The practical takeaway: budget time for several rounds of testing and improving rather than one big push right before sharing, and treat each newly discovered bug as an expected part of the cycle rather than a sign that something has gone wrong. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for the iteration diagram.",
+      "bloom_level": "Analyze",
+      "difficulty": "medium",
+      "concepts": [
+        "Iterative Development",
+        "Test Phase",
+        "Improve Phase"
+      ],
+      "keywords": [
+        "iterative development",
+        "test phase",
+        "improve phase",
+        "design cycle",
+        "bug fixing"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": false,
+      "word_count": 247
+    },
+    {
+      "id": "faq-084",
+      "category": "Best Practices",
+      "question": "How do sound effects and visual juice affect a game's polish?",
+      "answer": "**Sound effects** and **visual juice** both feed into **polishing**, but they affect a player's experience in slightly different ways, and understanding that difference helps you use them well instead of just sprinkling them everywhere. Sound effects mostly confirm that something *happened* \u2014 a coin ping tells the player \"yes, that counted,\" even if they weren't looking at that part of the screen. Visual juice (a screen shake, a quick flash, a brief size pop) mostly makes an action *feel* powerful or satisfying, even when the underlying rule hasn't changed at all.\n\n**Concrete example:** a coin that increases the score variable, plays a short \"ping\" sound, flashes briefly, and pops slightly bigger feels far more rewarding to collect than a coin that silently disappears while a number changes in the corner \u2014 even though the actual game rule, adding ten to the score, is identical in both cases. That's the key relationship: juice and sound don't change what the game *does*, they change how doing it *feels*, and feel is a huge part of whether players actually enjoy playing.\n\nThe risk is overdoing it: if every single action triggers a screen shake, shakes stop feeling special and start feeling exhausting, and if background music is louder than sound effects, important feedback gets buried under it. Save the biggest juice for the biggest moments \u2014 level complete, boss defeated \u2014 and keep small, frequent actions like footsteps or tiny pickups more subtle. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) for a full juice technique checklist.",
+      "bloom_level": "Analyze",
+      "difficulty": "medium",
+      "concepts": [
+        "Sound Effects",
+        "Visual Juice",
+        "Polishing"
+      ],
+      "keywords": [
+        "sound effects",
+        "visual juice",
+        "polishing",
+        "game feel",
+        "player feedback"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md"
+      ],
+      "has_example": true,
+      "word_count": 252
+    },
+    {
+      "id": "faq-085",
+      "category": "Best Practices",
+      "question": "How does getting variable scope wrong break a score or health system?",
+      "answer": "Getting **variable scope** wrong is one of the sneakiest bugs in Scratch, because the code runs without any error message at all \u2014 it just quietly produces the wrong numbers. The relationship is direct: scope decides whether a variable's value is shared across every copy of a sprite or split into separate boxes, and picking the wrong option breaks whichever behavior actually depended on the *other* choice.\n\n**Concrete example:** if a `health` variable is accidentally set **for all sprites** instead of **for this sprite only**, every clone of an enemy ends up sharing one health value \u2014 hit any single enemy, and *all* of them take damage or die at once, because there's really only one health number being shared by several sprites that each assume it belongs only to them. Flip the mistake around: if a `score` variable is set **for this sprite only** instead of **for all sprites**, each sprite keeps its own separate score, so a coin sprite's `change score by 10` never shows up on the copy of the variable the player's sprite is displaying, and the score on screen seems to randomly stop updating.\n\nBoth bugs look confusing at first because the *blocks* themselves are completely correct \u2014 `change [health] by (-10)` is exactly the right block to use \u2014 the mistake is invisible, hidden in a dropdown choice made back when the variable was first created. Whenever a variable behaves strangely across multiple sprites or clones, checking its scope should be one of the very first debugging steps, before assuming the block logic itself must be wrong. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for the scope comparison table.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Variable Scope",
+        "Set Variable"
+      ],
+      "keywords": [
+        "variable scope",
+        "debugging strategies",
+        "health system",
+        "score variable",
+        "clones"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": true,
+      "word_count": 274
+    },
+    {
+      "id": "faq-086",
+      "category": "Best Practices",
+      "question": "What's the relationship between abstraction and a custom block's parameters?",
+      "answer": "**Abstraction** and **block parameters** work together as a pair: abstraction is the *goal* \u2014 hide complicated details behind one simple name \u2014 and parameters are the *tool* that makes that hidden logic flexible enough to be truly reusable, rather than reusable-but-frozen.\n\nA custom block with no parameters is already a form of abstraction \u2014 it hides a whole stack of blocks behind one name \u2014 but it can only ever do exactly one thing, because every value inside it is fixed in place. Adding a parameter keeps that same abstraction (the block's user still just calls it by name and never has to think about what's hidden inside) while letting the hidden logic adapt to different situations, since each new value passed in changes the outcome without changing the underlying script at all.\n\nThis is why the two ideas appear together so often: abstraction without parameters is limited, since one version of the block has to fit every situation it's used in, and parameters without abstraction wouldn't make much sense, since there would be no hidden complexity left to feed values into in the first place. The more a custom block gets reused \u2014 across different sprites, different sizes, different situations \u2014 the more valuable its parameters become, because each parameter is one more kind of variation the same hidden script can now handle without being rewritten. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for the parameter types Scratch supports.",
+      "bloom_level": "Analyze",
+      "difficulty": "medium",
+      "concepts": [
+        "Abstraction",
+        "Block Parameters"
+      ],
+      "keywords": [
+        "abstraction",
+        "block parameters",
+        "custom block definition",
+        "reusability",
+        "hiding complexity"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": false,
+      "word_count": 239
+    },
+    {
+      "id": "faq-087",
+      "category": "Best Practices",
+      "question": "How do I choose between a variable and a list for tracking data?",
+      "answer": "For tracking a player's inventory and score together, the honest answer is: use *both*, because they're solving different problems, not competing to solve the same one.\n\n**Score** is a single number that goes up and down \u2014 it never needs to be more than one value at a time, so it belongs in a **variable**: `set [score v] to (0)`, then `change [score v] by (10)` each time something is collected. Putting score in a list would be overkill, since you'd be managing a whole collection just to hold one thing.\n\n**Inventory**, on the other hand, is a *collection* \u2014 a player might be holding a sword, a shield, and a key all at once, and that collection needs to grow, shrink, and be checked, like \"does the player have the key?\" That's exactly what a **list** is built for: `add [key] to [inventory v]`, `list contains [key v]`, `delete (1) of [inventory v]`. A variable can't naturally hold \"several unknown-in-advance things\" \u2014 you'd need a separate variable for every possible item, which falls apart the moment a new item type gets added.\n\nThe trade-off to weigh: variables are simpler to read and slightly faster to check (`if score > 100`), while lists cost a little more setup \u2014 creating the list, remembering block names like `item (1) of` \u2014 but handle anything that comes in a *changing quantity*. A solid pattern for a shop system: keep `coins` as a variable, `inventory` as a list, and use a custom block that checks `coins >= price` before running `change [coins v] by (price * -1)` and `add [item v] to [inventory v]`. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for both block reference tables.",
+      "bloom_level": "Evaluate",
+      "difficulty": "medium",
+      "concepts": [
+        "List Creation",
+        "Set Variable",
+        "Variable Scope"
+      ],
+      "keywords": [
+        "variable vs list",
+        "list creation",
+        "inventory system",
+        "score variable",
+        "data tracking"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": true,
+      "word_count": 282
+    },
+    {
+      "id": "faq-088",
+      "category": "Best Practices",
+      "question": "What are the trade-offs of many small custom blocks versus one script?",
+      "answer": "Both approaches work, and most real projects end up somewhere in between, so it helps to weigh the actual trade-offs rather than searching for a single correct answer.\n\n**One long script** is faster to write the first time, since you never stop to name anything \u2014 you just keep adding blocks downward as you think of them. The cost shows up later: a long script is hard to scan at a glance, hard to explain to someone else, and riskier to edit, because changing one part means scrolling through a lot of unrelated blocks to make sure nothing nearby gets accidentally broken.\n\n**Many small custom blocks**, built with **abstraction** and **block parameters**, cost more time upfront, since each one needs a name and often a parameter or two before it does anything \u2014 but that cost gets paid back through readability, since a script built from a handful of well-named custom blocks reads almost like a list of steps in plain language. It also pays back through safer editing, because fixing a bug inside one custom block automatically fixes it everywhere that block gets used, instead of requiring a hunt through every copy-pasted version of the same logic scattered across a project.\n\nThe trade-off tips toward many small blocks as a project grows larger, gets shared across more than one sprite, or gets revisited weeks after it was first written. It tips toward one script for something short, used only once, and never touched again, where the overhead of naming and defining a block isn't worth paying. A reasonable rule of thumb: if a script needs scrolling to see all at once, or if you're about to copy-paste it somewhere else, that's the moment to consider splitting it into custom blocks instead. See [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for how abstraction and parameters work together.",
+      "bloom_level": "Evaluate",
+      "difficulty": "hard",
+      "concepts": [
+        "Abstraction",
+        "Block Parameters"
+      ],
+      "keywords": [
+        "abstraction",
+        "custom blocks",
+        "long script",
+        "trade-offs",
+        "code organization"
+      ],
+      "source_links": [
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": false,
+      "word_count": 305
+    },
+    {
+      "id": "faq-089",
+      "category": "Best Practices",
+      "question": "How would I design an accessible, multilingual capstone game from scratch?",
+      "answer": "Here's one way to design a capstone game \u2014 call it **\"Signal\"**, a puzzle-platformer \u2014 that's genuinely playable by kids with different abilities and different first languages, built in from the start rather than patched on at the end.\n\n**Core idea:** the player guides a robot through levels using color-coded signal panels, but every signal is designed with **accessibility features** doubled up from day one \u2014 a red panel isn't just red, it's red *and* marked with an X-shape, and a green panel is green *and* marked with a checkmark, so a colorblind player reads the shape while everyone else reads the color too. Every panel also triggers a distinct sound *and* a screen flash, so a player who can't hear the audio cue still sees it happen.\n\n**Multilingual by design:** rather than writing instructions once in English, I'd build the **instructions screen** around the translate extension from the start: `set language to (player-choice)`, then `speak (translate [instructions text] to (player-choice)) and wait`, with a language-picker as the very first screen the player sees, before the title screen even loads. That way adding a new language later means adding one dropdown option, not rewriting every screen.\n\n**Accessible controls:** instead of hard-coding arrow keys and space, I'd store the jump, move, and interact keys in variables and let the player remap them from a settings menu, and I'd add a variable for game speed so a player who needs more reaction time can slow the whole game down without it feeling like \"easy mode\" \u2014 it's just a setting, like text size.\n\n**Plan for it early, not late:** in the storyboard and asset list, I'd mark every panel and instruction line with both a color-plus-shape pair and a text-plus-speech pair, so accessibility and multiple languages are requirements from the Plan stage, not an afterthought squeezed into the Improve stage. I'd test it by asking a friend to play with the sound off, and another to play with a temporary color filter on their screen, before ever sharing it publicly. See [Design Process and Capstone Project](chapters/11-design-process-capstone/index.md) and [Variables, Lists, and Data Management](chapters/07-variables-lists-data/index.md) for the design stages and the accessibility and multilingual blocks this idea builds on.",
+      "bloom_level": "Create",
+      "difficulty": "hard",
+      "concepts": [
+        "Accessibility Features",
+        "Multilingual Projects",
+        "Design Process",
+        "Instructions Screen"
+      ],
+      "keywords": [
+        "accessibility features",
+        "multilingual projects",
+        "capstone project",
+        "instructions screen",
+        "inclusive design"
+      ],
+      "source_links": [
+        "docs/chapters/11-design-process-capstone/index.md",
+        "docs/chapters/07-variables-lists-data/index.md"
+      ],
+      "has_example": true,
+      "word_count": 364
+    },
+    {
+      "id": "faq-090",
+      "category": "Advanced Topics",
+      "question": "How can a custom block with parameters combined with turbo mode generate a level instantly?",
+      "answer": "A custom block becomes far more powerful once you add **parameters** \u2014 extra input slots that let the same block behave differently every time it runs \u2014 and combine that with **run without screen refresh** (the option Chapter 9 nicknames 'turbo mode'), a setting that lets a custom block's entire script finish in a single frame instead of animating step by step.\n\nFor example, a custom block `generate-level (width) (height)` could fill a level-data list with random platform and empty tiles:\n\n```\ndefine generate-level (width) (height)   // Run without screen refresh: ON\nrepeat (height)\n    repeat (width)\n        if <(pick random 1 to 10) < 3> then\n            add [platform] to [level-data v]\n        else\n            add [empty] to [level-data v]\n        end\n    end\nend\n```\n\nWithout turbo mode checked in the block's options (gear icon \u2192 'Run without screen refresh'), the stage would visibly flicker as each of the hundreds of tiles gets added one at a time. With it checked, the whole grid completes instantly, and the player only ever sees the finished level appear.\n\nThe rule of thumb: turn on turbo mode for math, setup, and data-processing blocks the player should never watch happening step-by-step \u2014 and leave it off for anything meant to be seen, like a jump. See [Chapter 9: Advanced Control and Operators](chapters/09-advanced-control-operators/index.md) for the full turbo-mode walkthrough.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Reusability",
+        "Run Without Screen Refresh",
+        "Unpredictable Gameplay"
+      ],
+      "keywords": [
+        "custom blocks",
+        "parameters",
+        "turbo mode",
+        "run without screen refresh",
+        "procedural generation"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md"
+      ],
+      "has_example": true,
+      "word_count": 218
+    },
+    {
+      "id": "faq-091",
+      "category": "Advanced Topics",
+      "question": "How do clones and performance interact when spawning many enemies?",
+      "answer": "Every clone created with `create clone of [sprite]` runs its own independent copy of the `when I start as a clone` script \u2014 its own forever loop, its own physics, its own sensing checks \u2014 separate from the original sprite and from every other clone. That means the performance cost of cloning scales two ways at once: how many clones are alive right now, and how much work each one's script does every single frame. A single enemy clone with a few sensing checks costs almost nothing; fifty clones each running those same checks every frame adds up fast, and the whole project can start to lag or even freeze.\n\nClone behavior and clone performance are directly connected: the more complex a per-clone script is \u2014 chasing logic, particle stamps, physics calculations \u2014 the fewer clones a project can support smoothly before things slow down. The fix is not to avoid clones; it is disciplined cleanup. Every clone-behavior script needs a clear exit, using `delete this clone` the moment a clone goes off-screen, gets hit, or its lifetime expires. Without that exit, clones pile up forever, the same way an unlimited `forever { create clone }` loop with no spawn limit causes a runaway 'clone explosion.'\n\nThis is exactly why Chapter 10's testing strategies recommend deliberately stress-testing performance: spawn 100 clones and play for ten minutes before shipping a game, specifically to find where clone performance breaks down. See [Delete This Clone and Clone Behavior](chapters/09-advanced-control-operators/index.md) in Chapter 9, and the performance testing checklist in [Chapter 10](chapters/10-game-mechanics-win-lose/index.md).",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Clone Performance",
+        "Clone Behavior",
+        "Delete This Clone",
+        "Testing Strategies"
+      ],
+      "keywords": [
+        "clones",
+        "clone performance",
+        "delete this clone",
+        "optimization",
+        "stress testing"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md",
+        "docs/chapters/10-game-mechanics-win-lose/index.md"
+      ],
+      "has_example": false,
+      "word_count": 256
+    },
+    {
+      "id": "faq-092",
+      "category": "Advanced Topics",
+      "question": "How do the event queue and broadcast and wait work together to avoid storms?",
+      "answer": "Scratch keeps an internal event queue \u2014 a list of triggered events and messages waiting their turn \u2014 and processes them in the order they arrive: green flag first, then key presses and clicks, then broadcasts, then clone-related events. A plain `broadcast [message]` fires and forgets: the sender's script keeps going immediately while every `when I receive` script for that message gets added to the queue and runs when its turn comes. A synchronous broadcast \u2014 the `broadcast [message] and wait` block \u2014 works differently: it pauses the sender's own script until every script responding to that message has completely finished, which makes the queue's processing orderly and visible instead of overlapping in the background.\n\nThis relationship matters most for preventing a broadcast storm, where a message gets sent over and over, too quickly, and floods the queue with more events than the project can process \u2014 often caused by a `broadcast` sitting inside a `forever` loop with no `wait`. For example:\n\n```\nwhen green flag clicked\nbroadcast [setup v] and wait     // waits for setup to finish\nbroadcast [spawn v] and wait     // waits for spawn to finish\nbroadcast [go v]                 // fire-and-forget, game loop starts\n```\n\nBecause `setup` and `spawn` both use 'and wait,' each one fully finishes and clears out of the queue before the next broadcast is even sent \u2014 no pile-up. If that same script instead broadcast `[update]` inside a `forever` loop with no `wait`, the queue would fill with thousands of `update` events per second: a storm. See [Chapter 9](chapters/09-advanced-control-operators/index.md) for the event queue's processing order, and [Chapter 10](chapters/10-game-mechanics-win-lose/index.md) for broadcast storm prevention.",
+      "bloom_level": "Analyze",
+      "difficulty": "hard",
+      "concepts": [
+        "Event Queue",
+        "Synchronous Broadcast",
+        "Broadcast Storm"
+      ],
+      "keywords": [
+        "broadcast and wait",
+        "event queue",
+        "broadcast storm",
+        "synchronous broadcast"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md",
+        "docs/chapters/10-game-mechanics-win-lose/index.md"
+      ],
+      "has_example": true,
+      "word_count": 269
+    },
+    {
+      "id": "faq-093",
+      "category": "Advanced Topics",
+      "question": "What are the trade-offs of many clones versus many separate sprites for an enemy swarm?",
+      "answer": "Both approaches can fill the screen with enemies, but they trade off differently.\n\nClones, made with `create clone of [sprite]`, are lightweight to set up: one sprite, one `when I start as a clone` script, and Scratch spins up as many identical copies as needed while the game runs. This is ideal when every enemy shares the same behavior \u2014 patrol, chase, shoot \u2014 because fixing a bug in that one clone-behavior script fixes it for every clone at once. The cost is that clones share the parent sprite's costumes and code, so giving individual clones very different behavior means stuffing lots of conditional branches into a single script, and a careless `forever { create clone }` with no spawn limit can cause a 'clone explosion' that tanks performance.\n\nSeparate sprites give each enemy its own independent script, costumes, and even its own private variables using 'for this sprite only.' That is the better choice when enemies genuinely behave differently \u2014 a flying enemy and a ground enemy really are different programs, not variations on one idea. The cost is that every added sprite is a whole extra entry in the sprite pane, so a swarm of thirty separate sprites means thirty scripts to debug and no easy way to spawn more of them at runtime the way `create clone of` can.\n\nA good rule of thumb: use clones when enemies are copies of the same idea and need to be created and destroyed dynamically during play, relying on `delete this clone` for cleanup once they're off-screen or defeated. Use separate sprites when the cast is small and each member truly needs different rules. Many finished games mix both \u2014 a few unique boss sprites alongside clone-based grunt enemies. See [Clone Behavior and Clone Performance](chapters/09-advanced-control-operators/index.md) in Chapter 9 for the behavior patterns this decision depends on.",
+      "bloom_level": "Evaluate",
+      "difficulty": "hard",
+      "concepts": [
+        "Clone Performance",
+        "Clone Behavior"
+      ],
+      "keywords": [
+        "clones",
+        "sprites",
+        "performance",
+        "enemy swarm",
+        "trade-offs"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md"
+      ],
+      "has_example": false,
+      "word_count": 306
+    },
+    {
+      "id": "faq-094",
+      "category": "Advanced Topics",
+      "question": "How do I decide between nested if-blocks and combined boolean operators?",
+      "answer": "Both nested if blocks and one combined boolean condition can check the exact same rule; the choice is mostly about readability, not correctness.\n\nNested ifs check one thing at a time, one level inside another:\n```\nif <touching [spike v]?> then\nelse\n    if < (lives) > 0 > then\n        // safe to continue\n    end\nend\n```\nThis is easy to follow with only two conditions, but it gets hard to read fast \u2014 three or four nested levels of if blocks stack sideways across the screen, and it becomes easy to lose track of which `end` belongs to which `if`.\n\nCombined booleans using `and`, `or`, and `not` put the whole rule in one line:\n```\nif < (score) > 100 > and < (lives) > 0 > and <not <touching [spike v]?>> then\n    broadcast [bonus-level v]\nend\n```\nThis reads almost like a sentence \u2014 'if score is over 100, and lives is more than 0, and not touching a spike' \u2014 and it avoids the sideways-stacking problem of deep nesting. De Morgan's laws can also help simplify a condition that starts out confusing: `not (A or B)` always means the same thing as `(not A) and (not B)`, so a tangled double-negative can often be rewritten into something clearer.\n\nThe trade-off: combined booleans scale better for three or more conditions and read more like plain English, but each extra `and`/`or` block is one more puzzle piece to snap together, which can get visually cluttered. Nested ifs are still the better choice when the false branch needs to run entirely different actions, not just skip ahead. See [And, Or, and Not Operators and Boolean Combination](chapters/09-advanced-control-operators/index.md) in Chapter 9, and the De Morgan's laws table in [Chapter 10](chapters/10-game-mechanics-win-lose/index.md).",
+      "bloom_level": "Evaluate",
+      "difficulty": "medium",
+      "concepts": [
+        "Boolean Combination",
+        "And Operator",
+        "Or Operator",
+        "Not Operator"
+      ],
+      "keywords": [
+        "boolean logic",
+        "and operator",
+        "or operator",
+        "not operator",
+        "nested if"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md",
+        "docs/chapters/10-game-mechanics-win-lose/index.md"
+      ],
+      "has_example": true,
+      "word_count": 287
+    },
+    {
+      "id": "faq-095",
+      "category": "Advanced Topics",
+      "question": "What are the trade-offs of camera-based motion controls versus keyboard controls for a game?",
+      "answer": "The Video Sensing extension lets a player control a game just by moving in front of a camera \u2014 no keyboard needed \u2014 which turns the player's whole body into a controller. But it comes with real trade-offs against ordinary keyboard control.\n\nPrecision: keyboard input, like `when key [space] pressed?`, is exact \u2014 the sprite either receives the keypress or it doesn't, the same way every time. Camera motion is a fuzzy number between 0 and 100, reported by `video [motion] on [this sprite]`, affected by lighting, camera angle, background clutter, and how large the player's movement is. A game that needs pixel-perfect timing, like a fast platformer jump, is much harder to build reliably with motion sensing than with a keypress.\n\nAccessibility and setup: camera games need a working webcam and enough physical space to move, which not every player has, and some players may not want to be on camera at all. Keyboard controls work anywhere, instantly, with no setup required.\n\nEngagement: camera games can be more fun and physically engaging in party or exhibit settings \u2014 dodging objects or copying dance moves feels great with motion control, and that novelty is hard to replicate with a keyboard alone.\n\nDesign implication: a designer should reserve Video Sensing for games where the motion is the point \u2014 dancing, dodging, waving to pop bubbles \u2014 using forgiving trigger thresholds like `motion > 30` rather than trying to force precise, digital-style controls out of an analog camera signal. Many camera games also offer a keyboard fallback so every player can still join in. See [Camera Games](chapters/09-advanced-control-operators/index.md) in Chapter 9 for the Video Sensing block reference and example scripts.",
+      "bloom_level": "Evaluate",
+      "difficulty": "medium",
+      "concepts": [
+        "Camera Games"
+      ],
+      "keywords": [
+        "video sensing",
+        "camera games",
+        "motion control",
+        "accessibility",
+        "keyboard controls"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md"
+      ],
+      "has_example": false,
+      "word_count": 277
+    },
+    {
+      "id": "faq-096",
+      "category": "Advanced Topics",
+      "question": "How would I design a game that has an inventory, high scores, and win-or-lose endings?",
+      "answer": "Here is one way to design it, combining four systems so they communicate cleanly through a small set of shared variables and lists.\n\nScore and lives: on green flag, `set [score v] to (0)` and `set [lives v] to (3)`, both shown on stage. Score increases with `change [score v] by (10)` whenever the player collects something; lives decrease with `change [lives v] by (-1)` on taking damage.\n\nInventory: make a list called `inventory`. When the player touches a collectible, `add [item-name] to [inventory v]`. Use `[key v] in [inventory v]?` to gate a locked door, and `delete (1) of [inventory v]` when an item like a potion gets used up. Cap it with `if < (length of [inventory v]) < 20 >` so the bag can't overflow.\n\nHigh scores: make a list called `high-scores`, pre-filled with five zeros. When the game ends, compare the final score to `item (1) of [high-scores v]`; if it's higher, `insert (score) at (1) of [high-scores v]` and then `delete (6) of [high-scores v]` to keep exactly five entries, highest first.\n\nWin and lose conditions: in a `forever` loop that checks every frame, combine the other three systems with boolean logic. `if < [ancient-scroll v] in [inventory v]? > and < (lives) > 0 >` broadcasts `[win v]`; `if < (lives) = 0 > or <touching [lava v]?>` broadcasts `[game-over v]`. Both handlers `stop [all v]`, show the matching backdrop, then broadcast `[check-high-score v]` so the high-score list updates before returning to the menu.\n\nThe key design idea is that these four systems only need to talk to each other through a handful of shared variables (`score`, `lives`), lists (`inventory`, `high-scores`), and two broadcasts (`win`, `game-over`) \u2014 each system stays simple on its own, and the win/lose checker is the single place that reads all of them together. See [Win Condition, Lose Condition, and Inventory System](chapters/10-game-mechanics-win-lose/index.md) in Chapter 10 for each block pattern this design relies on.",
+      "bloom_level": "Create",
+      "difficulty": "hard",
+      "concepts": [
+        "Inventory System",
+        "High Score List",
+        "Win Condition",
+        "Lose Condition"
+      ],
+      "keywords": [
+        "inventory system",
+        "high score list",
+        "win condition",
+        "lose condition",
+        "game design"
+      ],
+      "source_links": [
+        "docs/chapters/10-game-mechanics-win-lose/index.md"
+      ],
+      "has_example": true,
+      "word_count": 323
+    },
+    {
+      "id": "faq-097",
+      "category": "Advanced Topics",
+      "question": "How would I design a multi-scene story combining scene coordination and dialogue timing?",
+      "answer": "Design it as a chain of scenes, where a scene-manager pattern keeps the story moving in order while each scene handles its own dialogue pacing.\n\nScene coordination: from the green flag, send one synchronous broadcast per scene \u2014 `broadcast [scene1 v] and wait`, then `broadcast [scene2 v] and wait`, then `broadcast [scene3 v] and wait`, then a final `broadcast [ending v]`. Because each one uses 'and wait,' the sender's script cannot move on to the next scene until every script responding to the current scene \u2014 backdrop switch, dialogue, any gameplay \u2014 has completely finished. Each scene's handler switches the backdrop with `switch backdrop to [...]` and then runs its own dialogue before its script naturally ends.\n\nDialogue timing inside each scene: within a scene's handler, alternate `speak [...] and wait` blocks with short `wait` blocks between lines so a conversation doesn't rush by \u2014 a greeting, a pause, a question, another pause, a reply. Varying the pause length with `pick random 0.5 to 1.5 secs` makes every playthrough feel slightly more natural instead of mechanically identical, and a short `speak [...] for 0.3 secs`, used instead of 'and wait,' works well for urgent, interrupting lines that shouldn't hold up the story.\n\nWhy this design holds together: because every scene-to-scene broadcast waits, the story can never accidentally jump ahead to scene 3's backdrop while scene 2's dialogue is still finishing \u2014 Scratch's event queue processes each scene's responders completely before the next broadcast is even sent. That single discipline, always wait for anything tied to story order, is what turns a pile of separate dialogue scripts into a story that flows the same correct way every time it's played. See [Scene Coordination and Dialogue Timing](chapters/09-advanced-control-operators/index.md) in Chapter 9, and [Storytelling Flow](chapters/10-game-mechanics-win-lose/index.md) in Chapter 10 for the three-act structure this pattern can support.",
+      "bloom_level": "Create",
+      "difficulty": "hard",
+      "concepts": [
+        "Scene Coordination",
+        "Dialogue Timing",
+        "Synchronous Broadcast",
+        "Storytelling Flow"
+      ],
+      "keywords": [
+        "scene coordination",
+        "dialogue timing",
+        "broadcast and wait",
+        "storytelling flow"
+      ],
+      "source_links": [
+        "docs/chapters/09-advanced-control-operators/index.md",
+        "docs/chapters/10-game-mechanics-win-lose/index.md"
+      ],
+      "has_example": false,
+      "word_count": 302
+    }
+  ]
+}
