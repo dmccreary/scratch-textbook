@@ -32,7 +32,7 @@ This MicroSim visualizes the Scratch stage as an x/y coordinate grid running fro
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/stage-coordinates/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/stage-coordinates/main.html"
         height="525px"
         width="100%"
         scrolling="no"></iframe>

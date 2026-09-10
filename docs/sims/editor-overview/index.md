@@ -33,7 +33,7 @@ This MicroSim is an interactive, labeled diagram of the Scratch editor's layout,
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/editor-overview/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/editor-overview/main.html"
         height="520px"
         width="100%"
         scrolling="no"></iframe>

@@ -32,7 +32,7 @@ This MicroSim presents the five distinct shapes used for Scratch blocks - hat, s
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-shapes/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/block-shapes/main.html"
         height="495px"
         width="100%"
         scrolling="no"></iframe>
