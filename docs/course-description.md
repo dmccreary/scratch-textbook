@@ -1,5 +1,5 @@
 ---
-title: Course Description for Scratch Programming for Kids
+title: Course Description for Scratch Programming
 description: A detailed course description for Scratch Programming for Kids including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
 quality_score: 100
 ---
@@ -8,7 +8,7 @@ quality_score: 100
 
 ## Title
 
-Scratch Programming for Kids
+Scratch Programming
 
 ## Audience
 

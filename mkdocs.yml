@@ -3,7 +3,7 @@
 # Use the book-installer skill to add features incrementally
 # (math, mascot, slides, learning graph viewer, etc.).
 
-site_name: 'Scratch Programming for Kids'
+site_name: 'Scratch Programming'
 site_description: 'An interactive textbook teaching Scratch programming to young learners (ages 8-12) through games, stories, and creative projects'
 site_author: 'Arun Batchu'
 site_url: 'https://arunbatchu.github.io/scratch-textbook/'
