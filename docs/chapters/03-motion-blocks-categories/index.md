@@ -270,13 +270,15 @@ Every costume has a **center point** (crosshair) that determines:
 
 !!! tip "🎯 Test Your Center!"
     After setting the center, go to Code tab and add:
-    ```
+
+    <div class="scratch">
     when green flag clicked
     forever
-        turn 15 degrees
-        wait 0.1 secs
+    turn (15) degrees
+    wait (0.1) secs
     end
-    ```
+    </div>
+
     Watch how it spins — if it wobbles, adjust the center!
 
 ---
@@ -306,18 +308,18 @@ The **Sound category** (🩷 pink) lets you add audio to your projects.
 | `start sound [pop]` | **Continues immediately** — sound plays in background | Background music, rapid-fire effects |
 
 !!! example "🎵 Background Music + Sound Effects"
-    ```
+    <div class="scratch">
     when green flag clicked
-    start sound [background-music v]    // Music plays continuously
+    start sound [background-music v] // Music plays continuously
     forever
-        if <key [space] pressed?> then
-            start sound [jump v]        // Jump sound overlaps music
-            change y by 50
-            wait 0.3 secs
-            change y by -50
-        end
+    if <key [space v] pressed?> then
+    start sound [jump v] // Jump sound overlaps music
+    change y by (50)
+    wait (0.3) secs
+    change y by (-50)
     end
-    ```
+    end
+    </div>
 
 ---
 
@@ -383,30 +385,30 @@ The **Pen** is one of the most fun extensions — it turns your sprite into a **
 | `stamp` | Leave a copy of costume as drawing |
 
 !!! example "🎨 Draw a Square"
-    ```
+    <div class="scratch">
     when green flag clicked
     erase all
     pen down
-    repeat 4
-        move 100 steps
-        turn 90 degrees
+    repeat (4)
+    move (100) steps
+    turn right (90) degrees
     end
     pen up
-    ```
+    </div>
 
 !!! tip "🌈 Rainbow Pen Trick"
-    ```
+    <div class="scratch">
     when green flag clicked
     erase all
     pen down
-    set pen size to 10
-    repeat 360
-        move 5 steps
-        turn 1 degrees
-        change pen color by 1
+    set pen size to (10)
+    repeat (360)
+    move (5) steps
+    turn right (1) degrees
+    change pen [color v] by (1)
     end
     pen up
-    ```
+    </div>
 
 ---
 
@@ -425,17 +427,17 @@ The **Pen** is one of the most fun extensions — it turns your sprite into a **
 | `when video [motion] > (50)` | Hat block: triggers when motion detected |
 
 !!! example "📷 Motion-Controlled Game"
-    ```
+    <div class="scratch">
     when green flag clicked
-    turn video on
-    set video transparency to 50
+    turn video [on v]
+    set video transparency to (50)
     forever
-        if <video [motion] on [this sprite] > 30> then
-            change color effect by 10
-            play sound [pop v]
-        end
+    if <(video [motion v] on [this sprite v]) > (30)> then
+    change [color v] effect by (10)
+    play sound [pop v]
     end
-    ```
+    end
+    </div>
 
 ---
 
@@ -453,13 +455,13 @@ The **Pen** is one of the most fun extensions — it turns your sprite into a **
 | `set language to [English v]` | Language (English, Spanish, French, etc.) |
 
 !!! example "🗣️ Talking Character"
-    ```
+    <div class="scratch">
     when green flag clicked
     set voice to [tenor v]
     set language to [English v]
     speak [Welcome to my game!] and wait
     speak [Press space to jump!]
-    ```
+    </div>
 
 ---
 
@@ -475,11 +477,11 @@ The **Pen** is one of the most fun extensions — it turns your sprite into a **
 | `language [Spanish v]` | Reporter: language code |
 
 !!! example "🌍 Multilingual Greeting"
-    ```
+    <div class="scratch">
     when green flag clicked
     set language to [Spanish v]
     speak (translate [Hello, friend!] to [Spanish v]) and wait
-    ```
+    </div>
 
 ---
 
