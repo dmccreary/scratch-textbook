@@ -83,6 +83,7 @@ nav:
   - Appendices:
       - Introduction: appendices/index.md
       - List of Scratch Blocks: appendices/list-of-scratch-blocks.md
+      - Block Programming for Physical Computing: appendices/physical-computing/index.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
