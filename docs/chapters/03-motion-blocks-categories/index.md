@@ -312,7 +312,7 @@ The **Sound category** (🩷 pink) lets you add audio to your projects.
     when green flag clicked
     start sound [background-music v] // Music plays continuously
     forever
-    if <key [space v] pressed?> then
+    if &lt;key [space v] pressed?&gt; then
     start sound [jump v] // Jump sound overlaps music
     change y by (50)
     wait (0.3) secs
@@ -432,7 +432,7 @@ The **Pen** is one of the most fun extensions — it turns your sprite into a **
     turn video [on v]
     set video transparency to (50)
     forever
-    if <(video [motion v] on [this sprite v]) > (30)> then
+    if &lt;(video [motion v] on [this sprite v]) &gt; (30)&gt; then
     change [color v] effect by (10)
     play sound [pop v]
     end
