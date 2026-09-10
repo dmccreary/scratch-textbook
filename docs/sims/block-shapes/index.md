@@ -11,20 +11,19 @@ quality_score: 0
 
 # Block Shapes
 
-<iframe src="main.html" height="495px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="505px" width="100%" scrolling="no"></iframe>
 
 [Run the Block Shapes MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
-<br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
 
 ## About This MicroSim
 
-This MicroSim presents the five distinct shapes used for Scratch blocks - hat, stack, reporter, boolean, and cap - each drawn as an outline alongside a short description of its job. It helps students learn to recognize, just from a block's outline, whether it starts a script, performs an action, reports a value, answers true/false, or ends a script.
+This MicroSim presents the five distinct shapes used for Scratch blocks - hat, stack, reporter, boolean, and cap - each shown as a real, rendered Scratch block alongside a short description of its job. The blocks are drawn with [scratchblocks.js](https://github.com/scratchblocks/scratchblocks) — the same renderer used throughout this site — so each example is colored by its real Scratch category (Events, Motion, Looks, Sound, Operators, Sensing, Control). Because a shape like "stack" or "reporter" shows up in several different colors across the cards, it helps students see that a block's shape (what it can connect to) and its category color are two separate things.
 
 ## How to Use
 
-- Hover over any of the five shape cards to replace its outline illustration with a list of example blocks that use that shape.
-- Click a card to pin its examples open even after the mouse moves away.
+- Hover over (or tap, on touch devices) any of the five shape cards to expand it and see two or three example blocks that share that shape.
+- Click/tap a card to pin its examples open even after the mouse moves away; click it again to unpin.
+- Every card can also be reached with the Tab key and toggled with Enter or Space, for keyboard-only use.
 - Click the "Reset" button to unpin the selected card.
 
 ## Iframe Embed Code
@@ -33,7 +32,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-shapes/main.html"
-        height="495px"
+        height="505px"
         width="100%"
         scrolling="no"></iframe>
 ```
