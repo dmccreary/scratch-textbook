@@ -1366,6 +1366,14 @@ The way two compatible blocks click into place and connect when dragged close to
 
 **See also:** Drag And Drop, Stack Block Shape
 
+#### Snek Code
+
+A tiny, Python-like programming language built to run directly on microcontrollers too small to run full MicroPython, using only a few kilobytes of flash and RAM.
+
+**Example:** BIPES can generate Snek code instead of MicroPython when the target board's memory is too limited for a full Python interpreter.
+
+**See also:** BIPES, MicroPython
+
 #### Sound Block Category
 
 One of the ten block categories in the blocks palette, color-coded pink, holding blocks that play sounds and adjust volume and tempo.
