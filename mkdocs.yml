@@ -4,8 +4,8 @@
 # (math, mascot, slides, learning graph viewer, etc.).
 
 site_name: 'Scratch Programming'
-site_description: 'An interactive textbook teaching Scratch programming to young learners (ages 8-12) through games, stories, and creative projects'
-site_author: 'Arun Batchu'
+site_description: 'An interactive intelligent textbook teaching Scratch programming to ages 8-12 through games, stories, and creative projects'
+site_author: 'Arun Batchu and Dan McCreary'
 site_url: 'https://arunbatchu.github.io/scratch-textbook/'
 
 # Hooks — runs local Python before/after page processing.
@@ -193,10 +193,10 @@ extra:
   # Intelligent-textbook URI scheme (see
   # https://dmccreary.github.io/intelligent-textbooks/uri-scheme/)
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
-  textbook_name: 'Scratch Programming for Kids'
+  textbook_name: 'Scratch Programming'
   textbook_version: '0.1'
 
-  # Google Analytics — uncomment once a property ID exists:
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
+  # Google Analytics — property ID: G-X328R30VNC
+  analytics:
+    provider: google
+    property: G-X328R30VNC
