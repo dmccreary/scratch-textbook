@@ -22,19 +22,17 @@
     "standards": []
   },
   "technical": {
-    "framework": "scratchblocks.js",
+    "framework": "p5.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 505
+      "height": 450
     },
     "responsive": true,
-    "dependencies": [
-      "scratchblocks@3.7.1"
-    ],
+    "dependencies": [],
     "accessibility": {
       "hasAltText": false,
-      "keyboardNavigable": true
+      "keyboardNavigable": false
     }
   },
   "pedagogical": {

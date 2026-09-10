@@ -6,7 +6,7 @@
         <meta name="description" content="Covers variables for game state, lists for collections, and variable scope concepts for young learners">
       
       
-        <meta name="author" content="Arun Batchu">
+        <meta name="author" content="Arun Batchu and Dan McCreary">
       
       
         <link rel="canonical" href="https://arunbatchu.github.io/scratch-textbook/chapters/07-variables-lists-data/">
@@ -18,22 +18,19 @@
         <link rel="next" href="../08-animation-parallelism-debugging/">
       
       
-        
-      
-      
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>Variables, Lists, and Data Management - Scratch Programming for Kids</title>
+        <title>Variables, Lists, and Data Management - Scratch Programming</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +43,7 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
@@ -61,7 +58,44 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
 
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-X328R30VNC"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-X328R30VNC",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-X328R30VNC",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Variables, Lists, and Data Management - Scratch Programming">
+      
+        <meta property="og:description" content="Covers variables for game state, lists for collections, and variable scope concepts for young learners">
+      
+        <meta property="og:image" content="https://arunbatchu.github.io/scratch-textbook/assets/images/social/chapters/07-variables-lists-data/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://arunbatchu.github.io/scratch-textbook/chapters/07-variables-lists-data/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Variables, Lists, and Data Management - Scratch Programming">
+      
+        <meta name="twitter:description" content="Covers variables for game state, lists for collections, and variable scope concepts for young learners">
+      
+        <meta name="twitter:image" content="https://arunbatchu.github.io/scratch-textbook/assets/images/social/chapters/07-variables-lists-data/index.png">
+      
     
     
   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
@@ -107,7 +141,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Scratch Programming for Kids" class="md-header__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+    <a href="../.." title="Scratch Programming" class="md-header__button md-logo" aria-label="Scratch Programming" data-md-component="logo">
       
   <img src="../../img/mascot/welcome.png" alt="logo">
 
@@ -120,7 +154,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Scratch Programming for Kids
+            Scratch Programming
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -138,17 +172,15 @@
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
@@ -157,7 +189,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
@@ -172,7 +204,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -183,14 +215,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -223,19 +254,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Scratch Programming for Kids" class="md-nav__button md-logo" aria-label="Scratch Programming for Kids" data-md-component="logo">
+    <a href="../.." title="Scratch Programming" class="md-nav__button md-logo" aria-label="Scratch Programming" data-md-component="logo">
       
   <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
-    Scratch Programming for Kids
+    Scratch Programming
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/arunbatchu/scratch-textbook" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -243,7 +274,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix="">
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -255,16 +286,9 @@
       <a href="../.." class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -282,16 +306,9 @@
       <a href="../../about/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     About
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -309,16 +326,9 @@
       <a href="../../course-description/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Course Description
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -342,28 +352,49 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -373,23 +404,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
+          
           
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
-  
   <span class="md-ellipsis">
-    
-  
     Chapters
-  
-
-    
   </span>
-  
   
 
             </a>
@@ -404,13 +429,9 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Chapters
-  
-
+            Chapters
           </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
             
@@ -424,16 +445,9 @@
       <a href="../01-welcome-to-scratch/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     1. Welcome to Scratch
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -452,16 +466,9 @@
       <a href="../02-sprites-stage-coordinates/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     2. Sprites, Stage, and the Coordinate System
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -480,16 +487,9 @@
       <a href="../03-motion-blocks-categories/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     3. Motion Blocks and Block Categories
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -508,16 +508,9 @@
       <a href="../04-events-sequences-first-scripts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     4. Events, Sequences, and First Scripts
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -536,16 +529,9 @@
       <a href="../05-sounds-extensions-sharing/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     5. Sounds, Extensions, and Sharing Projects
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -564,16 +550,9 @@
       <a href="../06-broadcasting-conditionals-sensing/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     6. Broadcasting, Conditionals, and Sensing
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -601,16 +580,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
-  
   <span class="md-ellipsis">
-    
-  
     7. Variables, Lists, and Data Management
-  
-
-    
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -619,16 +591,9 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     7. Variables, Lists, and Data Management
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -646,14 +611,12 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Summary
-      
+      Summary
     </span>
   </a>
   
@@ -662,9 +625,7 @@
         <li class="md-nav__item">
   <a href="#concepts-covered" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Concepts Covered
-      
+      Concepts Covered
     </span>
   </a>
   
@@ -673,9 +634,7 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Prerequisites
-      
+      Prerequisites
     </span>
   </a>
   
@@ -684,9 +643,7 @@
         <li class="md-nav__item">
   <a href="#comparison-operators-making-number-decisions" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Comparison Operators — Making Number Decisions!
-      
+      Comparison Operators — Making Number Decisions!
     </span>
   </a>
   
@@ -696,9 +653,7 @@
           <li class="md-nav__item">
   <a href="#greater-than-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Greater Than Operator (&gt;)
-      
+      Greater Than Operator (&gt;)
     </span>
   </a>
   
@@ -707,9 +662,7 @@
           <li class="md-nav__item">
   <a href="#equal-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Equal Operator (=)
-      
+      Equal Operator (=)
     </span>
   </a>
   
@@ -718,9 +671,7 @@
           <li class="md-nav__item">
   <a href="#all-three-comparison-operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        All Three Comparison Operators
-      
+      All Three Comparison Operators
     </span>
   </a>
   
@@ -734,9 +685,7 @@
         <li class="md-nav__item">
   <a href="#random-numbers-pick-random" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Numbers — Pick Random!
-      
+      Random Numbers — Pick Random!
     </span>
   </a>
   
@@ -746,9 +695,7 @@
           <li class="md-nav__item">
   <a href="#pick-random-block-operators-green" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pick Random Block (Operators → Green)
-      
+      Pick Random Block (Operators → Green)
     </span>
   </a>
   
@@ -757,9 +704,7 @@
           <li class="md-nav__item">
   <a href="#random-number-uses" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Number Uses
-      
+      Random Number Uses
     </span>
   </a>
   
@@ -768,9 +713,7 @@
           <li class="md-nav__item">
   <a href="#random-in-action" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random in Action
-      
+      Random in Action
     </span>
   </a>
   
@@ -780,9 +723,7 @@
           <li class="md-nav__item">
   <a href="#random-spawn-position" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Spawn Position
-      
+      Random Spawn Position
     </span>
   </a>
   
@@ -791,9 +732,7 @@
           <li class="md-nav__item">
   <a href="#random-chance-20-1-in-5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Chance (20% = 1 in 5)
-      
+      Random Chance (20% = 1 in 5)
     </span>
   </a>
   
@@ -802,9 +741,7 @@
           <li class="md-nav__item">
   <a href="#random-wait" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Wait
-      
+      Random Wait
     </span>
   </a>
   
@@ -823,9 +760,7 @@
         <li class="md-nav__item">
   <a href="#counted-repetition-exact-loops" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Counted Repetition — Exact Loops!
-      
+      Counted Repetition — Exact Loops!
     </span>
   </a>
   
@@ -835,9 +770,7 @@
           <li class="md-nav__item">
   <a href="#repeat-block-control-orange" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Repeat Block (Control → Orange)
-      
+      Repeat Block (Control → Orange)
     </span>
   </a>
   
@@ -846,9 +779,7 @@
           <li class="md-nav__item">
   <a href="#counted-repeat-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Counted Repeat Examples
-      
+      Counted Repeat Examples
     </span>
   </a>
   
@@ -858,9 +789,7 @@
           <li class="md-nav__item">
   <a href="#draw-a-polygon" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Draw a Polygon
-      
+      Draw a Polygon
     </span>
   </a>
   
@@ -869,9 +798,7 @@
           <li class="md-nav__item">
   <a href="#spawn-exact-number" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Spawn Exact Number
-      
+      Spawn Exact Number
     </span>
   </a>
   
@@ -880,9 +807,7 @@
           <li class="md-nav__item">
   <a href="#countdown" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Countdown
-      
+      Countdown
     </span>
   </a>
   
@@ -901,9 +826,7 @@
         <li class="md-nav__item">
   <a href="#variable-basics-your-data-boxes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Basics — Your Data Boxes!
-      
+      Variable Basics — Your Data Boxes!
     </span>
   </a>
   
@@ -913,9 +836,7 @@
           <li class="md-nav__item">
   <a href="#what-is-a-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is a Variable?
-      
+      What Is a Variable?
     </span>
   </a>
   
@@ -924,9 +845,7 @@
           <li class="md-nav__item">
   <a href="#variable-blocks-variables-red" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Blocks (Variables → Red)
-      
+      Variable Blocks (Variables → Red)
     </span>
   </a>
   
@@ -935,9 +854,7 @@
           <li class="md-nav__item">
   <a href="#creating-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Creating Variables
-      
+      Creating Variables
     </span>
   </a>
   
@@ -946,9 +863,7 @@
           <li class="md-nav__item">
   <a href="#variable-scope-who-can-see-it" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Scope — Who Can See It?
-      
+      Variable Scope — Who Can See It?
     </span>
   </a>
   
@@ -957,9 +872,7 @@
           <li class="md-nav__item">
   <a href="#variable-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Examples
-      
+      Variable Examples
     </span>
   </a>
   
@@ -969,9 +882,7 @@
           <li class="md-nav__item">
   <a href="#score-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Score System
-      
+      Score System
     </span>
   </a>
   
@@ -980,9 +891,7 @@
           <li class="md-nav__item">
   <a href="#lives-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lives System
-      
+      Lives System
     </span>
   </a>
   
@@ -991,9 +900,7 @@
           <li class="md-nav__item">
   <a href="#timer" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Timer
-      
+      Timer
     </span>
   </a>
   
@@ -1012,9 +919,7 @@
         <li class="md-nav__item">
   <a href="#showhide-variables-control-the-display" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Show/Hide Variables — Control the Display!
-      
+      Show/Hide Variables — Control the Display!
     </span>
   </a>
   
@@ -1024,9 +929,7 @@
           <li class="md-nav__item">
   <a href="#show-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Show Variable
-      
+      Show Variable
     </span>
   </a>
   
@@ -1035,9 +938,7 @@
           <li class="md-nav__item">
   <a href="#hide-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Hide Variable
-      
+      Hide Variable
     </span>
   </a>
   
@@ -1046,9 +947,7 @@
           <li class="md-nav__item">
   <a href="#when-to-showhide" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        When to Show/Hide
-      
+      When to Show/Hide
     </span>
   </a>
   
@@ -1062,9 +961,7 @@
         <li class="md-nav__item">
   <a href="#lists-collections-of-values" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lists — Collections of Values!
-      
+      Lists — Collections of Values!
     </span>
   </a>
   
@@ -1074,9 +971,7 @@
           <li class="md-nav__item">
   <a href="#what-is-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is a List?
-      
+      What Is a List?
     </span>
   </a>
   
@@ -1085,9 +980,7 @@
           <li class="md-nav__item">
   <a href="#creating-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Creating a List
-      
+      Creating a List
     </span>
   </a>
   
@@ -1096,9 +989,7 @@
           <li class="md-nav__item">
   <a href="#list-blocks-variables-dark-red" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        List Blocks (Variables → Dark Red)
-      
+      List Blocks (Variables → Dark Red)
     </span>
   </a>
   
@@ -1107,9 +998,7 @@
           <li class="md-nav__item">
   <a href="#list-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        List Examples
-      
+      List Examples
     </span>
   </a>
   
@@ -1119,9 +1008,7 @@
           <li class="md-nav__item">
   <a href="#inventory-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Inventory System
-      
+      Inventory System
     </span>
   </a>
   
@@ -1130,9 +1017,7 @@
           <li class="md-nav__item">
   <a href="#high-score-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        High Score List
-      
+      High Score List
     </span>
   </a>
   
@@ -1151,9 +1036,7 @@
         <li class="md-nav__item">
   <a href="#block-parameters-custom-block-inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Block Parameters — Custom Block Inputs!
-      
+      Block Parameters — Custom Block Inputs!
     </span>
   </a>
   
@@ -1163,9 +1046,7 @@
           <li class="md-nav__item">
   <a href="#what-are-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Are Parameters?
-      
+      What Are Parameters?
     </span>
   </a>
   
@@ -1174,9 +1055,7 @@
           <li class="md-nav__item">
   <a href="#adding-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Adding Parameters
-      
+      Adding Parameters
     </span>
   </a>
   
@@ -1185,9 +1064,7 @@
           <li class="md-nav__item">
   <a href="#parameter-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameter Types
-      
+      Parameter Types
     </span>
   </a>
   
@@ -1196,9 +1073,7 @@
           <li class="md-nav__item">
   <a href="#parameter-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameter Examples
-      
+      Parameter Examples
     </span>
   </a>
   
@@ -1208,9 +1083,7 @@
           <li class="md-nav__item">
   <a href="#jump-with-height" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Jump with Height
-      
+      Jump with Height
     </span>
   </a>
   
@@ -1219,9 +1092,7 @@
           <li class="md-nav__item">
   <a href="#draw-polygon" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Draw Polygon
-      
+      Draw Polygon
     </span>
   </a>
   
@@ -1230,9 +1101,7 @@
           <li class="md-nav__item">
   <a href="#glide-to-position" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Glide to Position
-      
+      Glide to Position
     </span>
   </a>
   
@@ -1251,9 +1120,7 @@
         <li class="md-nav__item">
   <a href="#abstraction-hiding-complexity" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Abstraction — Hiding Complexity!
-      
+      Abstraction — Hiding Complexity!
     </span>
   </a>
   
@@ -1263,9 +1130,7 @@
           <li class="md-nav__item">
   <a href="#what-is-abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is Abstraction?
-      
+      What Is Abstraction?
     </span>
   </a>
   
@@ -1274,9 +1139,7 @@
           <li class="md-nav__item">
   <a href="#in-scratch-custom-blocks-abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        In Scratch: Custom Blocks = Abstraction!
-      
+      In Scratch: Custom Blocks = Abstraction!
     </span>
   </a>
   
@@ -1285,9 +1148,7 @@
           <li class="md-nav__item">
   <a href="#why-abstraction-helps" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Why Abstraction Helps
-      
+      Why Abstraction Helps
     </span>
   </a>
   
@@ -1301,9 +1162,7 @@
         <li class="md-nav__item">
   <a href="#pen-extension-deep-dive-drawing-details" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Extension Deep Dive — Drawing Details!
-      
+      Pen Extension Deep Dive — Drawing Details!
     </span>
   </a>
   
@@ -1313,9 +1172,7 @@
           <li class="md-nav__item">
   <a href="#pen-blocks-review-pen-green" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Blocks Review (Pen → Green)
-      
+      Pen Blocks Review (Pen → Green)
     </span>
   </a>
   
@@ -1324,9 +1181,7 @@
           <li class="md-nav__item">
   <a href="#pen-down-pen-up" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Down / Pen Up
-      
+      Pen Down / Pen Up
     </span>
   </a>
   
@@ -1335,9 +1190,7 @@
           <li class="md-nav__item">
   <a href="#pen-color" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Color
-      
+      Pen Color
     </span>
   </a>
   
@@ -1346,9 +1199,7 @@
           <li class="md-nav__item">
   <a href="#pen-size" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Size
-      
+      Pen Size
     </span>
   </a>
   
@@ -1357,9 +1208,7 @@
           <li class="md-nav__item">
   <a href="#clear-graphics" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Clear Graphics
-      
+      Clear Graphics
     </span>
   </a>
   
@@ -1368,9 +1217,7 @@
           <li class="md-nav__item">
   <a href="#pen-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Examples
-      
+      Pen Examples
     </span>
   </a>
   
@@ -1380,9 +1227,7 @@
           <li class="md-nav__item">
   <a href="#rainbow-spiral" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Rainbow Spiral
-      
+      Rainbow Spiral
     </span>
   </a>
   
@@ -1391,9 +1236,7 @@
           <li class="md-nav__item">
   <a href="#stamp-circle" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Stamp Circle
-      
+      Stamp Circle
     </span>
   </a>
   
@@ -1412,9 +1255,7 @@
         <li class="md-nav__item">
   <a href="#motion-detection-camera-magic" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Motion Detection — Camera Magic!
-      
+      Motion Detection — Camera Magic!
     </span>
   </a>
   
@@ -1424,9 +1265,7 @@
           <li class="md-nav__item">
   <a href="#video-sensing-recap-extensions-video-sensing" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Video Sensing Recap (Extensions → Video Sensing)
-      
+      Video Sensing Recap (Extensions → Video Sensing)
     </span>
   </a>
   
@@ -1435,9 +1274,7 @@
           <li class="md-nav__item">
   <a href="#motion-detection-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Motion Detection Example
-      
+      Motion Detection Example
     </span>
   </a>
   
@@ -1451,9 +1288,7 @@
         <li class="md-nav__item">
   <a href="#talking-sprites-text-to-speech" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Talking Sprites — Text to Speech!
-      
+      Talking Sprites — Text to Speech!
     </span>
   </a>
   
@@ -1463,9 +1298,7 @@
           <li class="md-nav__item">
   <a href="#text-to-speech-recap-extensions-text-to-speech" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Text to Speech Recap (Extensions → Text to Speech)
-      
+      Text to Speech Recap (Extensions → Text to Speech)
     </span>
   </a>
   
@@ -1474,9 +1307,7 @@
           <li class="md-nav__item">
   <a href="#voices-alto-tenor-soprano-random" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Voices: alto, tenor, soprano, random
-      
+      Voices: alto, tenor, soprano, random
     </span>
   </a>
   
@@ -1485,9 +1316,7 @@
           <li class="md-nav__item">
   <a href="#languages-english-spanish-french-german-chinese-japanese-korean" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
-      
+      Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
     </span>
   </a>
   
@@ -1496,9 +1325,7 @@
           <li class="md-nav__item">
   <a href="#text-to-speech-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Text to Speech Example
-      
+      Text to Speech Example
     </span>
   </a>
   
@@ -1512,9 +1339,7 @@
         <li class="md-nav__item">
   <a href="#accessibility-features-making-games-for-everyone" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessibility Features — Making Games for Everyone!
-      
+      Accessibility Features — Making Games for Everyone!
     </span>
   </a>
   
@@ -1524,9 +1349,7 @@
           <li class="md-nav__item">
   <a href="#why-accessibility-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Why Accessibility Matters
-      
+      Why Accessibility Matters
     </span>
   </a>
   
@@ -1535,9 +1358,7 @@
           <li class="md-nav__item">
   <a href="#scratch-accessibility-features" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Scratch Accessibility Features
-      
+      Scratch Accessibility Features
     </span>
   </a>
   
@@ -1546,9 +1367,7 @@
           <li class="md-nav__item">
   <a href="#accessible-design-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible Design Tips
-      
+      Accessible Design Tips
     </span>
   </a>
   
@@ -1562,9 +1381,7 @@
         <li class="md-nav__item">
   <a href="#multilingual-projects-games-for-the-world" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Multilingual Projects — Games for the World!
-      
+      Multilingual Projects — Games for the World!
     </span>
   </a>
   
@@ -1574,9 +1391,7 @@
           <li class="md-nav__item">
   <a href="#translate-text-to-speech-polyglot-games" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Translate + Text to Speech = Polyglot Games!
-      
+      Translate + Text to Speech = Polyglot Games!
     </span>
   </a>
   
@@ -1585,9 +1400,7 @@
           <li class="md-nav__item">
   <a href="#supported-languages" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Supported Languages
-      
+      Supported Languages
     </span>
   </a>
   
@@ -1596,9 +1409,7 @@
           <li class="md-nav__item">
   <a href="#multilingual-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Multilingual Example
-      
+      Multilingual Example
     </span>
   </a>
   
@@ -1612,9 +1423,7 @@
         <li class="md-nav__item">
   <a href="#block-mechanics-snap-together" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Block Mechanics — Snap Together!
-      
+      Block Mechanics — Snap Together!
     </span>
   </a>
   
@@ -1624,9 +1433,7 @@
           <li class="md-nav__item">
   <a href="#how-blocks-connect" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How Blocks Connect
-      
+      How Blocks Connect
     </span>
   </a>
   
@@ -1635,9 +1442,7 @@
           <li class="md-nav__item">
   <a href="#snap-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Snap Rules
-      
+      Snap Rules
     </span>
   </a>
   
@@ -1651,9 +1456,7 @@
         <li class="md-nav__item">
   <a href="#remix-exploration-learn-from-others" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remix Exploration — Learn from Others!
-      
+      Remix Exploration — Learn from Others!
     </span>
   </a>
   
@@ -1663,9 +1466,7 @@
           <li class="md-nav__item">
   <a href="#what-is-remixing" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is Remixing?
-      
+      What Is Remixing?
     </span>
   </a>
   
@@ -1674,9 +1475,7 @@
           <li class="md-nav__item">
   <a href="#how-to-remix" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Remix
-      
+      How to Remix
     </span>
   </a>
   
@@ -1685,9 +1484,7 @@
           <li class="md-nav__item">
   <a href="#learning-from-remixes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Learning from Remixes
-      
+      Learning from Remixes
     </span>
   </a>
   
@@ -1696,9 +1493,7 @@
           <li class="md-nav__item">
   <a href="#remix-etiquette" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remix Etiquette
-      
+      Remix Etiquette
     </span>
   </a>
   
@@ -1712,9 +1507,7 @@
         <li class="md-nav__item">
   <a href="#project-tags-help-others-find-your-game" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Project Tags — Help Others Find Your Game!
-      
+      Project Tags — Help Others Find Your Game!
     </span>
   </a>
   
@@ -1724,9 +1517,7 @@
           <li class="md-nav__item">
   <a href="#what-are-tags" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Are Tags?
-      
+      What Are Tags?
     </span>
   </a>
   
@@ -1735,9 +1526,7 @@
           <li class="md-nav__item">
   <a href="#good-tags" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Good Tags
-      
+      Good Tags
     </span>
   </a>
   
@@ -1746,9 +1535,7 @@
           <li class="md-nav__item">
   <a href="#tagging-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Tagging Tips
-      
+      Tagging Tips
     </span>
   </a>
   
@@ -1762,9 +1549,7 @@
         <li class="md-nav__item">
   <a href="#summary_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Summary
-      
+      Summary
     </span>
   </a>
   
@@ -1773,9 +1558,7 @@
         <li class="md-nav__item">
   <a href="#key-terms-to-remember" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Key Terms to Remember
-      
+      Key Terms to Remember
     </span>
   </a>
   
@@ -1784,9 +1567,7 @@
         <li class="md-nav__item">
   <a href="#try-it-yourself" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Try It Yourself! 🎯
-      
+      Try It Yourself! 🎯
     </span>
   </a>
   
@@ -1795,9 +1576,7 @@
         <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What's Next?
-      
+      What's Next?
     </span>
   </a>
   
@@ -1822,16 +1601,9 @@
       <a href="../08-animation-parallelism-debugging/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     8. Animation, Parallelism, and Debugging
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1850,16 +1622,9 @@
       <a href="../09-advanced-control-operators/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     9. Advanced Control and Operators
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1878,16 +1643,9 @@
       <a href="../10-game-mechanics-win-lose/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     10. Game Mechanics and Win/Lose Conditions
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1906,16 +1664,9 @@
       <a href="../11-design-process-capstone/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     11. Design Process and Capstone Project
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1965,7 +1716,6 @@
     
     
     
-    
       
         
         
@@ -1976,20 +1726,12 @@
         
   
   
-  
     <a href="../../learning-graph/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     Learning Graph
-  
-
-    
   </span>
-  
   
 
       
@@ -2017,34 +1759,61 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
-    
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2058,20 +1827,12 @@
         
   
   
-  
     <a href="../../sims/" class="md-nav__link">
       
   
-  
   <span class="md-ellipsis">
-    
-  
     MicroSims
-  
-
-    
   </span>
-  
   
 
       
@@ -2095,16 +1856,9 @@
       <a href="../../faq/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2122,16 +1876,9 @@
       <a href="../../glossary/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Glossary
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2149,16 +1896,9 @@
       <a href="../../license/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     License
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2176,16 +1916,9 @@
       <a href="../../contact/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Contact
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -2217,14 +1950,12 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Summary
-      
+      Summary
     </span>
   </a>
   
@@ -2233,9 +1964,7 @@
         <li class="md-nav__item">
   <a href="#concepts-covered" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Concepts Covered
-      
+      Concepts Covered
     </span>
   </a>
   
@@ -2244,9 +1973,7 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Prerequisites
-      
+      Prerequisites
     </span>
   </a>
   
@@ -2255,9 +1982,7 @@
         <li class="md-nav__item">
   <a href="#comparison-operators-making-number-decisions" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Comparison Operators — Making Number Decisions!
-      
+      Comparison Operators — Making Number Decisions!
     </span>
   </a>
   
@@ -2267,9 +1992,7 @@
           <li class="md-nav__item">
   <a href="#greater-than-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Greater Than Operator (&gt;)
-      
+      Greater Than Operator (&gt;)
     </span>
   </a>
   
@@ -2278,9 +2001,7 @@
           <li class="md-nav__item">
   <a href="#equal-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Equal Operator (=)
-      
+      Equal Operator (=)
     </span>
   </a>
   
@@ -2289,9 +2010,7 @@
           <li class="md-nav__item">
   <a href="#all-three-comparison-operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        All Three Comparison Operators
-      
+      All Three Comparison Operators
     </span>
   </a>
   
@@ -2305,9 +2024,7 @@
         <li class="md-nav__item">
   <a href="#random-numbers-pick-random" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Numbers — Pick Random!
-      
+      Random Numbers — Pick Random!
     </span>
   </a>
   
@@ -2317,9 +2034,7 @@
           <li class="md-nav__item">
   <a href="#pick-random-block-operators-green" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pick Random Block (Operators → Green)
-      
+      Pick Random Block (Operators → Green)
     </span>
   </a>
   
@@ -2328,9 +2043,7 @@
           <li class="md-nav__item">
   <a href="#random-number-uses" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Number Uses
-      
+      Random Number Uses
     </span>
   </a>
   
@@ -2339,9 +2052,7 @@
           <li class="md-nav__item">
   <a href="#random-in-action" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random in Action
-      
+      Random in Action
     </span>
   </a>
   
@@ -2351,9 +2062,7 @@
           <li class="md-nav__item">
   <a href="#random-spawn-position" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Spawn Position
-      
+      Random Spawn Position
     </span>
   </a>
   
@@ -2362,9 +2071,7 @@
           <li class="md-nav__item">
   <a href="#random-chance-20-1-in-5" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Chance (20% = 1 in 5)
-      
+      Random Chance (20% = 1 in 5)
     </span>
   </a>
   
@@ -2373,9 +2080,7 @@
           <li class="md-nav__item">
   <a href="#random-wait" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Random Wait
-      
+      Random Wait
     </span>
   </a>
   
@@ -2394,9 +2099,7 @@
         <li class="md-nav__item">
   <a href="#counted-repetition-exact-loops" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Counted Repetition — Exact Loops!
-      
+      Counted Repetition — Exact Loops!
     </span>
   </a>
   
@@ -2406,9 +2109,7 @@
           <li class="md-nav__item">
   <a href="#repeat-block-control-orange" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Repeat Block (Control → Orange)
-      
+      Repeat Block (Control → Orange)
     </span>
   </a>
   
@@ -2417,9 +2118,7 @@
           <li class="md-nav__item">
   <a href="#counted-repeat-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Counted Repeat Examples
-      
+      Counted Repeat Examples
     </span>
   </a>
   
@@ -2429,9 +2128,7 @@
           <li class="md-nav__item">
   <a href="#draw-a-polygon" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Draw a Polygon
-      
+      Draw a Polygon
     </span>
   </a>
   
@@ -2440,9 +2137,7 @@
           <li class="md-nav__item">
   <a href="#spawn-exact-number" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Spawn Exact Number
-      
+      Spawn Exact Number
     </span>
   </a>
   
@@ -2451,9 +2146,7 @@
           <li class="md-nav__item">
   <a href="#countdown" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Countdown
-      
+      Countdown
     </span>
   </a>
   
@@ -2472,9 +2165,7 @@
         <li class="md-nav__item">
   <a href="#variable-basics-your-data-boxes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Basics — Your Data Boxes!
-      
+      Variable Basics — Your Data Boxes!
     </span>
   </a>
   
@@ -2484,9 +2175,7 @@
           <li class="md-nav__item">
   <a href="#what-is-a-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is a Variable?
-      
+      What Is a Variable?
     </span>
   </a>
   
@@ -2495,9 +2184,7 @@
           <li class="md-nav__item">
   <a href="#variable-blocks-variables-red" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Blocks (Variables → Red)
-      
+      Variable Blocks (Variables → Red)
     </span>
   </a>
   
@@ -2506,9 +2193,7 @@
           <li class="md-nav__item">
   <a href="#creating-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Creating Variables
-      
+      Creating Variables
     </span>
   </a>
   
@@ -2517,9 +2202,7 @@
           <li class="md-nav__item">
   <a href="#variable-scope-who-can-see-it" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Scope — Who Can See It?
-      
+      Variable Scope — Who Can See It?
     </span>
   </a>
   
@@ -2528,9 +2211,7 @@
           <li class="md-nav__item">
   <a href="#variable-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Variable Examples
-      
+      Variable Examples
     </span>
   </a>
   
@@ -2540,9 +2221,7 @@
           <li class="md-nav__item">
   <a href="#score-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Score System
-      
+      Score System
     </span>
   </a>
   
@@ -2551,9 +2230,7 @@
           <li class="md-nav__item">
   <a href="#lives-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lives System
-      
+      Lives System
     </span>
   </a>
   
@@ -2562,9 +2239,7 @@
           <li class="md-nav__item">
   <a href="#timer" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Timer
-      
+      Timer
     </span>
   </a>
   
@@ -2583,9 +2258,7 @@
         <li class="md-nav__item">
   <a href="#showhide-variables-control-the-display" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Show/Hide Variables — Control the Display!
-      
+      Show/Hide Variables — Control the Display!
     </span>
   </a>
   
@@ -2595,9 +2268,7 @@
           <li class="md-nav__item">
   <a href="#show-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Show Variable
-      
+      Show Variable
     </span>
   </a>
   
@@ -2606,9 +2277,7 @@
           <li class="md-nav__item">
   <a href="#hide-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Hide Variable
-      
+      Hide Variable
     </span>
   </a>
   
@@ -2617,9 +2286,7 @@
           <li class="md-nav__item">
   <a href="#when-to-showhide" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        When to Show/Hide
-      
+      When to Show/Hide
     </span>
   </a>
   
@@ -2633,9 +2300,7 @@
         <li class="md-nav__item">
   <a href="#lists-collections-of-values" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lists — Collections of Values!
-      
+      Lists — Collections of Values!
     </span>
   </a>
   
@@ -2645,9 +2310,7 @@
           <li class="md-nav__item">
   <a href="#what-is-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is a List?
-      
+      What Is a List?
     </span>
   </a>
   
@@ -2656,9 +2319,7 @@
           <li class="md-nav__item">
   <a href="#creating-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Creating a List
-      
+      Creating a List
     </span>
   </a>
   
@@ -2667,9 +2328,7 @@
           <li class="md-nav__item">
   <a href="#list-blocks-variables-dark-red" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        List Blocks (Variables → Dark Red)
-      
+      List Blocks (Variables → Dark Red)
     </span>
   </a>
   
@@ -2678,9 +2337,7 @@
           <li class="md-nav__item">
   <a href="#list-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        List Examples
-      
+      List Examples
     </span>
   </a>
   
@@ -2690,9 +2347,7 @@
           <li class="md-nav__item">
   <a href="#inventory-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Inventory System
-      
+      Inventory System
     </span>
   </a>
   
@@ -2701,9 +2356,7 @@
           <li class="md-nav__item">
   <a href="#high-score-list" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        High Score List
-      
+      High Score List
     </span>
   </a>
   
@@ -2722,9 +2375,7 @@
         <li class="md-nav__item">
   <a href="#block-parameters-custom-block-inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Block Parameters — Custom Block Inputs!
-      
+      Block Parameters — Custom Block Inputs!
     </span>
   </a>
   
@@ -2734,9 +2385,7 @@
           <li class="md-nav__item">
   <a href="#what-are-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Are Parameters?
-      
+      What Are Parameters?
     </span>
   </a>
   
@@ -2745,9 +2394,7 @@
           <li class="md-nav__item">
   <a href="#adding-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Adding Parameters
-      
+      Adding Parameters
     </span>
   </a>
   
@@ -2756,9 +2403,7 @@
           <li class="md-nav__item">
   <a href="#parameter-types" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameter Types
-      
+      Parameter Types
     </span>
   </a>
   
@@ -2767,9 +2412,7 @@
           <li class="md-nav__item">
   <a href="#parameter-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Parameter Examples
-      
+      Parameter Examples
     </span>
   </a>
   
@@ -2779,9 +2422,7 @@
           <li class="md-nav__item">
   <a href="#jump-with-height" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Jump with Height
-      
+      Jump with Height
     </span>
   </a>
   
@@ -2790,9 +2431,7 @@
           <li class="md-nav__item">
   <a href="#draw-polygon" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Draw Polygon
-      
+      Draw Polygon
     </span>
   </a>
   
@@ -2801,9 +2440,7 @@
           <li class="md-nav__item">
   <a href="#glide-to-position" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Glide to Position
-      
+      Glide to Position
     </span>
   </a>
   
@@ -2822,9 +2459,7 @@
         <li class="md-nav__item">
   <a href="#abstraction-hiding-complexity" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Abstraction — Hiding Complexity!
-      
+      Abstraction — Hiding Complexity!
     </span>
   </a>
   
@@ -2834,9 +2469,7 @@
           <li class="md-nav__item">
   <a href="#what-is-abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is Abstraction?
-      
+      What Is Abstraction?
     </span>
   </a>
   
@@ -2845,9 +2478,7 @@
           <li class="md-nav__item">
   <a href="#in-scratch-custom-blocks-abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        In Scratch: Custom Blocks = Abstraction!
-      
+      In Scratch: Custom Blocks = Abstraction!
     </span>
   </a>
   
@@ -2856,9 +2487,7 @@
           <li class="md-nav__item">
   <a href="#why-abstraction-helps" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Why Abstraction Helps
-      
+      Why Abstraction Helps
     </span>
   </a>
   
@@ -2872,9 +2501,7 @@
         <li class="md-nav__item">
   <a href="#pen-extension-deep-dive-drawing-details" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Extension Deep Dive — Drawing Details!
-      
+      Pen Extension Deep Dive — Drawing Details!
     </span>
   </a>
   
@@ -2884,9 +2511,7 @@
           <li class="md-nav__item">
   <a href="#pen-blocks-review-pen-green" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Blocks Review (Pen → Green)
-      
+      Pen Blocks Review (Pen → Green)
     </span>
   </a>
   
@@ -2895,9 +2520,7 @@
           <li class="md-nav__item">
   <a href="#pen-down-pen-up" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Down / Pen Up
-      
+      Pen Down / Pen Up
     </span>
   </a>
   
@@ -2906,9 +2529,7 @@
           <li class="md-nav__item">
   <a href="#pen-color" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Color
-      
+      Pen Color
     </span>
   </a>
   
@@ -2917,9 +2538,7 @@
           <li class="md-nav__item">
   <a href="#pen-size" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Size
-      
+      Pen Size
     </span>
   </a>
   
@@ -2928,9 +2547,7 @@
           <li class="md-nav__item">
   <a href="#clear-graphics" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Clear Graphics
-      
+      Clear Graphics
     </span>
   </a>
   
@@ -2939,9 +2556,7 @@
           <li class="md-nav__item">
   <a href="#pen-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pen Examples
-      
+      Pen Examples
     </span>
   </a>
   
@@ -2951,9 +2566,7 @@
           <li class="md-nav__item">
   <a href="#rainbow-spiral" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Rainbow Spiral
-      
+      Rainbow Spiral
     </span>
   </a>
   
@@ -2962,9 +2575,7 @@
           <li class="md-nav__item">
   <a href="#stamp-circle" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Stamp Circle
-      
+      Stamp Circle
     </span>
   </a>
   
@@ -2983,9 +2594,7 @@
         <li class="md-nav__item">
   <a href="#motion-detection-camera-magic" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Motion Detection — Camera Magic!
-      
+      Motion Detection — Camera Magic!
     </span>
   </a>
   
@@ -2995,9 +2604,7 @@
           <li class="md-nav__item">
   <a href="#video-sensing-recap-extensions-video-sensing" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Video Sensing Recap (Extensions → Video Sensing)
-      
+      Video Sensing Recap (Extensions → Video Sensing)
     </span>
   </a>
   
@@ -3006,9 +2613,7 @@
           <li class="md-nav__item">
   <a href="#motion-detection-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Motion Detection Example
-      
+      Motion Detection Example
     </span>
   </a>
   
@@ -3022,9 +2627,7 @@
         <li class="md-nav__item">
   <a href="#talking-sprites-text-to-speech" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Talking Sprites — Text to Speech!
-      
+      Talking Sprites — Text to Speech!
     </span>
   </a>
   
@@ -3034,9 +2637,7 @@
           <li class="md-nav__item">
   <a href="#text-to-speech-recap-extensions-text-to-speech" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Text to Speech Recap (Extensions → Text to Speech)
-      
+      Text to Speech Recap (Extensions → Text to Speech)
     </span>
   </a>
   
@@ -3045,9 +2646,7 @@
           <li class="md-nav__item">
   <a href="#voices-alto-tenor-soprano-random" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Voices: alto, tenor, soprano, random
-      
+      Voices: alto, tenor, soprano, random
     </span>
   </a>
   
@@ -3056,9 +2655,7 @@
           <li class="md-nav__item">
   <a href="#languages-english-spanish-french-german-chinese-japanese-korean" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
-      
+      Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
     </span>
   </a>
   
@@ -3067,9 +2664,7 @@
           <li class="md-nav__item">
   <a href="#text-to-speech-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Text to Speech Example
-      
+      Text to Speech Example
     </span>
   </a>
   
@@ -3083,9 +2678,7 @@
         <li class="md-nav__item">
   <a href="#accessibility-features-making-games-for-everyone" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessibility Features — Making Games for Everyone!
-      
+      Accessibility Features — Making Games for Everyone!
     </span>
   </a>
   
@@ -3095,9 +2688,7 @@
           <li class="md-nav__item">
   <a href="#why-accessibility-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Why Accessibility Matters
-      
+      Why Accessibility Matters
     </span>
   </a>
   
@@ -3106,9 +2697,7 @@
           <li class="md-nav__item">
   <a href="#scratch-accessibility-features" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Scratch Accessibility Features
-      
+      Scratch Accessibility Features
     </span>
   </a>
   
@@ -3117,9 +2706,7 @@
           <li class="md-nav__item">
   <a href="#accessible-design-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accessible Design Tips
-      
+      Accessible Design Tips
     </span>
   </a>
   
@@ -3133,9 +2720,7 @@
         <li class="md-nav__item">
   <a href="#multilingual-projects-games-for-the-world" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Multilingual Projects — Games for the World!
-      
+      Multilingual Projects — Games for the World!
     </span>
   </a>
   
@@ -3145,9 +2730,7 @@
           <li class="md-nav__item">
   <a href="#translate-text-to-speech-polyglot-games" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Translate + Text to Speech = Polyglot Games!
-      
+      Translate + Text to Speech = Polyglot Games!
     </span>
   </a>
   
@@ -3156,9 +2739,7 @@
           <li class="md-nav__item">
   <a href="#supported-languages" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Supported Languages
-      
+      Supported Languages
     </span>
   </a>
   
@@ -3167,9 +2748,7 @@
           <li class="md-nav__item">
   <a href="#multilingual-example" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Multilingual Example
-      
+      Multilingual Example
     </span>
   </a>
   
@@ -3183,9 +2762,7 @@
         <li class="md-nav__item">
   <a href="#block-mechanics-snap-together" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Block Mechanics — Snap Together!
-      
+      Block Mechanics — Snap Together!
     </span>
   </a>
   
@@ -3195,9 +2772,7 @@
           <li class="md-nav__item">
   <a href="#how-blocks-connect" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How Blocks Connect
-      
+      How Blocks Connect
     </span>
   </a>
   
@@ -3206,9 +2781,7 @@
           <li class="md-nav__item">
   <a href="#snap-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Snap Rules
-      
+      Snap Rules
     </span>
   </a>
   
@@ -3222,9 +2795,7 @@
         <li class="md-nav__item">
   <a href="#remix-exploration-learn-from-others" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remix Exploration — Learn from Others!
-      
+      Remix Exploration — Learn from Others!
     </span>
   </a>
   
@@ -3234,9 +2805,7 @@
           <li class="md-nav__item">
   <a href="#what-is-remixing" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Is Remixing?
-      
+      What Is Remixing?
     </span>
   </a>
   
@@ -3245,9 +2814,7 @@
           <li class="md-nav__item">
   <a href="#how-to-remix" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Remix
-      
+      How to Remix
     </span>
   </a>
   
@@ -3256,9 +2823,7 @@
           <li class="md-nav__item">
   <a href="#learning-from-remixes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Learning from Remixes
-      
+      Learning from Remixes
     </span>
   </a>
   
@@ -3267,9 +2832,7 @@
           <li class="md-nav__item">
   <a href="#remix-etiquette" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Remix Etiquette
-      
+      Remix Etiquette
     </span>
   </a>
   
@@ -3283,9 +2846,7 @@
         <li class="md-nav__item">
   <a href="#project-tags-help-others-find-your-game" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Project Tags — Help Others Find Your Game!
-      
+      Project Tags — Help Others Find Your Game!
     </span>
   </a>
   
@@ -3295,9 +2856,7 @@
           <li class="md-nav__item">
   <a href="#what-are-tags" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What Are Tags?
-      
+      What Are Tags?
     </span>
   </a>
   
@@ -3306,9 +2865,7 @@
           <li class="md-nav__item">
   <a href="#good-tags" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Good Tags
-      
+      Good Tags
     </span>
   </a>
   
@@ -3317,9 +2874,7 @@
           <li class="md-nav__item">
   <a href="#tagging-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Tagging Tips
-      
+      Tagging Tips
     </span>
   </a>
   
@@ -3333,9 +2888,7 @@
         <li class="md-nav__item">
   <a href="#summary_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Summary
-      
+      Summary
     </span>
   </a>
   
@@ -3344,9 +2897,7 @@
         <li class="md-nav__item">
   <a href="#key-terms-to-remember" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Key Terms to Remember
-      
+      Key Terms to Remember
     </span>
   </a>
   
@@ -3355,9 +2906,7 @@
         <li class="md-nav__item">
   <a href="#try-it-yourself" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Try It Yourself! 🎯
-      
+      Try It Yourself! 🎯
     </span>
   </a>
   
@@ -3366,9 +2915,7 @@
         <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        What's Next?
-      
+      What's Next?
     </span>
   </a>
   
@@ -3384,62 +2931,12 @@
           
           
             <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-  
-
-
-  <nav class="md-path" aria-label="Navigation">
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Chapters
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
-              
               <article class="md-content__inner md-typeset">
                 
                   
 
-
   
-    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/07-variables-lists-data/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/arunbatchu/scratch-textbook/blob/main/docs/chapters/07-variables-lists-data/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -4645,6 +4142,8 @@
 
 
 
+  
+
 
 
 
@@ -4656,7 +4155,7 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
@@ -4727,13 +4226,10 @@
     </div>
     
     
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.7.1/build/scratchblocks.min.js"></script>
       
