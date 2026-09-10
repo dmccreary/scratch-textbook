@@ -86,11 +86,11 @@ target boards that run Python variants rather than Arduino C++.
 
 ### BIPES
 
-BIPES (Block-based Integrated Platform for Embedded Systems) is the example
-in the prompt for this appendix. It runs entirely in the browser — no
+BIPES (Block-based Integrated Platform for Embedded Systems) is another
+example of block-oriented physical computing. It runs entirely in the browser — no
 software install — and its Blockly-based blocks generate MicroPython,
-CircuitPython, or Snek code that is sent to the board over WebREPL via
-USB, network, or Bluetooth. It supports boards including the ESP32,
+CircuitPython, or [Snek code](../../glossary.md#snek-code) that is sent to the board over 
+WebREPL via USB, network, or Bluetooth. It supports boards including the ESP32,
 ESP8266, Raspberry Pi Pico, and BBC micro:bit, and can drive LEDs, motors,
 and other components wired to those boards.
 ([bipes.net.br](https://bipes.net.br))
@@ -128,12 +128,58 @@ program to equivalent Python, which makes it a common on-ramp from blocks
 to text-based code in robotics classrooms.
 ([vexrobotics.com/vexcode/blocks](https://www.vexrobotics.com/vexcode/blocks))
 
-## Choosing a System for a Lesson
+## Choosing a Physical Computing Block Programming System
 
-For students who already know Scratch, mBlock, Snap4Arduino, or the
-Tinkercad code editor will feel the most familiar, since they reuse
-Scratch's own block shapes and categories. For a lesson focused on real
-sensors and actuators wired up by hand (breadboard-style circuits), BIPES
-and MakeCode are the most widely used because they run in a browser with no
-install and target inexpensive, easy-to-source boards (ESP32, Raspberry Pi
-Pico, micro:bit).
+With over a dozen systems to pick from, the right choice depends on where a
+reader is starting from and where they're headed next. This section gives a
+decision guide rather than a single recommendation.
+
+### Where This Textbook Series Is Headed
+
+The other books in this series build on **MicroPython running on the
+Raspberry Pi Pico**, because the Pico costs about **$4**, which makes it
+cheap enough to put in low-cost classroom kits — students (or schools) don't
+need to invest in an Arduino, a micro:bit, or a robotics kit just to start
+wiring up LEDs and motors. That has a direct consequence for this appendix:
+most readers of this book will eventually want to **migrate off
+Scratch-style blocks and onto a system that generates real MicroPython for
+the Pico**, so their block-programming skills carry forward instead of
+being a dead end.
+
+Of the systems listed above, **BIPES** is the closest match to that path: it
+explicitly supports the Raspberry Pi Pico, generates real MicroPython (not a
+proprietary language), runs in the browser with no install, and is free. A
+reader who works through this Scratch textbook and then wants to try real
+hardware can move to BIPES on a Pico without changing boards, budgets, or
+programming languages, and can later drop the blocks entirely and write the
+generated MicroPython by hand — which is exactly the skill the rest of the
+series assumes.
+
+### Decision Guide
+
+| If your priority is... | Choose... | Why |
+|---|---|---|
+| Staying on the path this series is built around (MicroPython, Raspberry Pi Pico, low-cost kits) | **BIPES** | Only Blockly system here with first-class Pico support that generates real MicroPython |
+| Keeping the exact block shapes students already know from Scratch | **mBlock**, **PictoBlox**, or **Snap4Arduino** | Built on Scratch Blocks (or Snap!), so muscle memory transfers directly |
+| The cheapest possible official board with strong classroom support | **MakeCode** on a **BBC micro:bit** | Free board-specific editor, huge base of lesson plans, no install |
+| A student is already in a LEGO or VEX robotics program | **LEGO SPIKE Word Blocks** or **VEXcode Blocks** | Matches the hardware and competition rules the student already uses |
+| Simulating a circuit before buying any hardware | **Tinkercad Circuits Code Editor** | Free, in-browser Arduino simulator with a Scratch-style code view |
+| AI features (face/pose detection, ChatGPT) alongside physical computing | **PictoBlox** | Only system here with built-in AI/ML extensions |
+| Already own M5Stack or Propeller-based hardware | **UIFlow** or **BlocklyProp** | Purpose-built for those specific board families |
+
+### A Suggested Path for Readers of This Book
+
+1. **Learn the concepts here in Scratch** — sequencing, loops, conditionals,
+   variables, and events, with no hardware required.
+2. **Bridge to physical computing with BIPES on a Raspberry Pi Pico** — the
+   blocks look and behave like the ones in this book, but now a real LED or
+   motor responds, and the underlying code is genuine MicroPython.
+3. **Read the generated MicroPython, then start editing it directly** — this
+   is the on-ramp to the rest of this textbook series, which assumes readers
+   are writing MicroPython by hand on the Pico.
+
+A reader who instead started on mBlock, MakeCode, or VEXcode Blocks hasn't
+wasted anything — the programming *concepts* (loops, conditionals, events,
+variables) transfer to any of these systems. What doesn't automatically
+transfer is the board and the language, so budget some extra time to switch
+to a Pico and MicroPython before starting the next book in the series.
