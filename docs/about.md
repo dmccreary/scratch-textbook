@@ -1,6 +1,6 @@
-# About
+# About the Scratch Programming Textbook
 
-An interactive textbook teaching Scratch programming to young learners (ages 8–12) through games, stories, and creative projects.
+This is a level 2.9 interactive intelligent textbook teaching Scratch programming to young learners (ages 8–12) through games, stories, and creative projects.
 
 ## Audience
 

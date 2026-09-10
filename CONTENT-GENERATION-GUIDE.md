@@ -7,6 +7,23 @@ glossary prose, or workshop material.
 Instructor-facing content (teacher guides, instructor guides, answer keys)
 is exempt from any persona/mascot guidance this file may later define.
 
+## Block Rendering
+
+This book uses inline `scratchblocks` to render high-quality images
+of all scratch programs.  We use HTML `div` statements with a class of `scratch`
+to generate these images like this:
+
+```html
+<div class="scratch">
+when green flag clicked
+move (10) steps
+turn right (15) degrees
+</div>
+```
+
+See [Sample Use of Scratchblocks](./docs/learning-graph/scratchblocks-test.md) for an
+example of the format.
+
 ## Learning Mascot: Scratch the Cat
 
 ### Mascot File Index
