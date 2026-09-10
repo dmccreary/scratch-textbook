@@ -56,6 +56,7 @@ nav:
       - Concept Enumeration: learning-graph/concept-list.md
       - Concept Taxonomy: learning-graph/concept-taxonomy.md
       - Graph Quality Analysis: learning-graph/quality-metrics.md
+      - Glossary Quality Report: learning-graph/glossary-quality-report.md
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Test Page: learning-graph/mascot-test.md
       - Scratchblocks Test Page: learning-graph/scratchblocks-test.md
@@ -78,6 +79,10 @@ nav:
       - Stage Coordinate System: sims/stage-coordinates/index.md
       - Stage Layout and Boundaries: sims/stage-layout/index.md
       - Three Tabs Explained: sims/three-tabs/index.md
+
+  - Appendices:
+      - Introduction: appendices/index.md
+      - List of Scratch Blocks: appendices/list-of-scrach-blocks.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
