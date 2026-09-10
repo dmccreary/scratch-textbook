@@ -1320,6 +1320,10 @@
       
         
       
+        
+          
+        
+      
     
     
     
@@ -2236,14 +2240,15 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">🎯 Test Your Center!</p>
-<p>After setting the center, go to Code tab and add:
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>when green flag clicked
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>forever
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    turn 15 degrees
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    wait 0.1 secs
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>end
-</span></code></pre></div>
-Watch how it spins — if it wobbles, adjust the center!<p></p>
+<p>After setting the center, go to Code tab and add:</p>
+<p></p><div class="scratch">
+when green flag clicked
+forever
+turn (15) degrees
+wait (0.1) secs
+end
+</div><p></p>
+<p>Watch how it spins — if it wobbles, adjust the center!</p>
 </div>
 <hr>
 <h2 id="sound-blocks-making-noise">Sound Blocks — Making Noise!<a class="headerlink" href="#sound-blocks-making-noise" title="Permanent link">¶</a></h2>
@@ -2324,17 +2329,18 @@ Watch how it spins — if it wobbles, adjust the center!<p></p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">🎵 Background Music + Sound Effects</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when green flag clicked
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>start sound [background-music v]    // Music plays continuously
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>forever
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    if &lt;key [space] pressed?&gt; then
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        start sound [jump v]        // Jump sound overlaps music
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        change y by 50
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        wait 0.3 secs
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        change y by -50
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    end
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>end
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+start sound [background-music v] // Music plays continuously
+forever
+if &lt;key [space v] pressed?&gt; then
+start sound [jump v] // Jump sound overlaps music
+change y by (50)
+wait (0.3) secs
+change y by (-50)
+end
+end
+</div><p></p>
 </div>
 <hr>
 <h3 id="recording-your-own-sounds">Recording Your Own Sounds!<a class="headerlink" href="#recording-your-own-sounds" title="Permanent link">¶</a></h3>
@@ -2465,29 +2471,31 @@ Watch how it spins — if it wobbles, adjust the center!<p></p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">🎨 Draw a Square</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when green flag clicked
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>erase all
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pen down
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>repeat 4
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    move 100 steps
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    turn 90 degrees
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>end
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>pen up
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+erase all
+pen down
+repeat (4)
+move (100) steps
+turn right (90) degrees
+end
+pen up
+</div><p></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">🌈 Rainbow Pen Trick</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when green flag clicked
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>erase all
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>pen down
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>set pen size to 10
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>repeat 360
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    move 5 steps
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    turn 1 degrees
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    change pen color by 1
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>end
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>pen up
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+erase all
+pen down
+set pen size to (10)
+repeat (360)
+move (5) steps
+turn right (1) degrees
+change pen [color v] by (1)
+end
+pen up
+</div><p></p>
 </div>
 <hr>
 <h3 id="video-sensing-camera-magic">Video Sensing — Camera Magic!<a class="headerlink" href="#video-sensing-camera-magic" title="Permanent link">¶</a></h3>
@@ -2525,16 +2533,17 @@ Watch how it spins — if it wobbles, adjust the center!<p></p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">📷 Motion-Controlled Game</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when green flag clicked
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>turn video on
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>set video transparency to 50
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>forever
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    if &lt;video [motion] on [this sprite] &gt; 30&gt; then
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        change color effect by 10
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        play sound [pop v]
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    end
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>end
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+turn video [on v]
+set video transparency to (50)
+forever
+if &lt;(video [motion v] on [this sprite v]) &gt; (30)&gt; then
+change [color v] effect by (10)
+play sound [pop v]
+end
+end
+</div><p></p>
 </div>
 <hr>
 <h3 id="text-to-speech-talking-sprites">Text to Speech — Talking Sprites!<a class="headerlink" href="#text-to-speech-talking-sprites" title="Permanent link">¶</a></h3>
@@ -2568,12 +2577,13 @@ Watch how it spins — if it wobbles, adjust the center!<p></p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">🗣️ Talking Character</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when green flag clicked
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>set voice to [tenor v]
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>set language to [English v]
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>speak [Welcome to my game!] and wait
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>speak [Press space to jump!]
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+set voice to [tenor v]
+set language to [English v]
+speak [Welcome to my game!] and wait
+speak [Press space to jump!]
+</div><p></p>
 </div>
 <hr>
 <h3 id="translate-speak-many-languages">Translate — Speak Many Languages!<a class="headerlink" href="#translate-speak-many-languages" title="Permanent link">¶</a></h3>
@@ -2599,10 +2609,11 @@ Watch how it spins — if it wobbles, adjust the center!<p></p>
 </table>
 <div class="admonition example">
 <p class="admonition-title">🌍 Multilingual Greeting</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when green flag clicked
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>set language to [Spanish v]
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>speak (translate [Hello, friend!] to [Spanish v]) and wait
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+set language to [Spanish v]
+speak (translate [Hello, friend!] to [Spanish v]) and wait
+</div><p></p>
 </div>
 <hr>
 <h2 id="the-backpack-your-portable-toolbox">The Backpack — Your Portable Toolbox!<a class="headerlink" href="#the-backpack-your-portable-toolbox" title="Permanent link">¶</a></h2>

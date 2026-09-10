@@ -1377,6 +1377,10 @@
       
         
       
+        
+          
+        
+      
     
     
     
@@ -2596,18 +2600,23 @@ Color scheme: Match Scratch Motion blue</p>
 <hr>
 <h3 id="going-to-specific-positions">Going to Specific Positions<a class="headerlink" href="#going-to-specific-positions" title="Permanent link">¶</a></h3>
 <h4 id="go-to-x-y-instant-teleport"><code>go to x: y:</code> — Instant Teleport<a class="headerlink" href="#go-to-x-y-instant-teleport" title="Permanent link">¶</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>when green flag clicked
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>go to x: -200 y: 100    // Teleport to top-left area
-</span></code></pre></div>
+<div class="scratch">
+when green flag clicked
+go to x: (-200) y: (100) // Teleport to top-left area
+</div>
+
 <h4 id="glide-secs-to-x-y-smooth-slide"><code>glide secs to x: y:</code> — Smooth Slide<a class="headerlink" href="#glide-secs-to-x-y-smooth-slide" title="Permanent link">¶</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>when green flag clicked
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>glide 2 secs to x: 200 y: -100   // Smooth slide to bottom-right
-</span></code></pre></div>
+<div class="scratch">
+when green flag clicked
+glide (2) secs to x: (200) y: (-100) // Smooth slide to bottom-right
+</div>
+
 <div class="admonition example">
 <p class="admonition-title">🎮 Platformer Spawn Point</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>when green flag clicked
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>go to x: -200 y: -100    // Start at left platform
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+go to x: (-200) y: (-100) // Start at left platform
+</div><p></p>
 </div>
 <hr>
 <h2 id="looks-blocks-changing-how-sprites-look">Looks Blocks — Changing How Sprites Look<a class="headerlink" href="#looks-blocks-changing-how-sprites-look" title="Permanent link">¶</a></h2>
@@ -2686,13 +2695,14 @@ Color scheme: Match Scratch Motion blue</p>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">🎭 Costume Animation Secret</p>
-<p>The <strong>smoothest animations</strong> use <code>next costume</code> inside a <code>forever</code> loop with a tiny <code>wait</code>!
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>when green flag clicked
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>forever
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    next costume
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    wait 0.1 secs
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>end
-</span></code></pre></div><p></p>
+<p>The <strong>smoothest animations</strong> use <code>next costume</code> inside a <code>forever</code> loop with a tiny <code>wait</code>!</p>
+<p></p><div class="scratch">
+when green flag clicked
+forever
+next costume
+wait (0.1) secs
+end
+</div><p></p>
 </div>
 <hr>
 <h3 id="speech-vs-thought-bubbles">Speech vs. Thought Bubbles<a class="headerlink" href="#speech-vs-thought-bubbles" title="Permanent link">¶</a></h3>
@@ -2825,38 +2835,42 @@ Color scheme: Match Scratch Motion blue</p>
 <hr>
 <h3 id="clicking-sprites-interactive-fun">Clicking Sprites — Interactive Fun!<a class="headerlink" href="#clicking-sprites-interactive-fun" title="Permanent link">¶</a></h3>
 <p><code>when this sprite clicked</code> makes sprites <strong>react to player clicks</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>when this sprite clicked
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>play sound [pop v] until done
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>change color effect by 25
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>wait 0.2 secs
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>clear graphic effects
-</span></code></pre></div>
+<div class="scratch">
+when this sprite clicked
+play sound [pop v] until done
+change [color v] effect by (25)
+wait (0.2) secs
+clear graphic effects
+</div>
+
 <div class="admonition example">
 <p class="admonition-title">🎮 Clicker Game Start</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>when green flag clicked
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>set score to 0
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>show
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>when this sprite clicked
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>change score by 1
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>play sound [pop v] until done
-</span></code></pre></div>
+<p></p><div class="scratch">
+when green flag clicked
+set [score v] to (0)
+show<p></p>
+<p>when this sprite clicked
+change [score v] by (1)
+play sound [pop v] until done
+</p></div><p></p>
 </div>
 <hr>
 <h3 id="keyboard-control-player-movement">Keyboard Control — Player Movement!<a class="headerlink" href="#keyboard-control-player-movement" title="Permanent link">¶</a></h3>
 <p><code>when [key] key pressed</code> lets players <strong>control sprites</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>when [right arrow v] key pressed
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>change x by 10
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>when [left arrow v] key pressed
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>change x by -10
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>when [up arrow v] key pressed
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>change y by 10
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>when [down arrow v] key pressed
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>change y by -10
-</span></code></pre></div>
+<div class="scratch">
+when [right arrow v] key pressed
+change x by (10)
+
+when [left arrow v] key pressed
+change x by (-10)
+
+when [up arrow v] key pressed
+change y by (10)
+
+when [down arrow v] key pressed
+change y by (-10)
+</div>
+
 <div class="admonition tip">
 <p class="admonition-title">⌨️ Smooth Movement Trick</p>
 <p>For <strong>smooth continuous movement</strong>, use <code>forever</code> + <code>if key pressed?</code> (Sensing) instead of hat blocks — we'll learn this in Chapter 6!</p>
@@ -2882,11 +2896,13 @@ Color scheme: Match Scratch Motion blue</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Receiver script:</strong>
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>when I receive [game-over v]
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>hide
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>play sound [sad-trombone v] until done
-</span></code></pre></div><p></p>
+<p><strong>Receiver script:</strong></p>
+<div class="scratch">
+when I receive [game-over v]
+hide
+play sound [sad-trombone v] until done
+</div>
+
 <div class="admonition info">
 <p class="admonition-title">📡 Broadcast = Event</p>
 <p>Broadcasting <strong>creates an event</strong> that other sprites can listen for with <code>when I receive</code>. It's how sprites coordinate!</p>
