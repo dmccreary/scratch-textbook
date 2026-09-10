@@ -33,7 +33,7 @@ This MicroSim animates three Scratch loop blocks side by side: repeat (a counted
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/loop-comparison/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/loop-comparison/main.html"
         height="485px"
         width="100%"
         scrolling="no"></iframe>

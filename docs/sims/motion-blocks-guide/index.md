@@ -32,7 +32,7 @@ This MicroSim is an interactive visual reference for all of Scratch's Motion blo
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/motion-blocks-guide/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/motion-blocks-guide/main.html"
         height="665px"
         width="100%"
         scrolling="no"></iframe>

@@ -33,7 +33,7 @@ This MicroSim displays all 10 Scratch block categories - Motion, Looks, Sound, E
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-categories/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/block-categories/main.html"
         height="800px"
         width="100%"
        ></iframe>

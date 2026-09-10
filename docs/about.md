@@ -54,4 +54,4 @@ By the end of this book, readers will be able to:
 
 ## Author
 
-Arun Batchu
+Dan McCreary

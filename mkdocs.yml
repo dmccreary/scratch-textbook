@@ -3,10 +3,10 @@
 # Use the book-installer skill to add features incrementally
 # (math, mascot, slides, learning graph viewer, etc.).
 
-site_name: 'Scratch Programming for Kids'
-site_description: 'An interactive textbook teaching Scratch programming to young learners (ages 8-12) through games, stories, and creative projects'
-site_author: 'Arun Batchu'
-site_url: 'https://arunbatchu.github.io/scratch-textbook/'
+site_name: 'Scratch Programming'
+site_description: 'An interactive intelligent textbook teaching Scratch programming to ages 8-12 through games, stories, and creative projects'
+site_author: 'Dan McCreary'
+site_url: 'https://dmccreary.github.io/scratch-textbook/'
 
 # Hooks — runs local Python before/after page processing.
 # `plugins/social_override.py` injects og:title, og:description, og:image,
@@ -22,11 +22,11 @@ hooks:
 
 # Repository
 repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/arunbatchu/scratch-textbook'
+repo_url: 'https://github.com/dmccreary/scratch-textbook'
 edit_uri: 'blob/main/docs'
 
 # Copyright
-copyright: 'Copyright &copy; 2026 Arun Batchu. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.'
+copyright: 'Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.'
 
 # Navigation
 # IMPORTANT: do NOT add `navigation.tabs` — these books use side navigation
@@ -56,6 +56,7 @@ nav:
       - Concept Enumeration: learning-graph/concept-list.md
       - Concept Taxonomy: learning-graph/concept-taxonomy.md
       - Graph Quality Analysis: learning-graph/quality-metrics.md
+      - Glossary Quality Report: learning-graph/glossary-quality-report.md
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Test Page: learning-graph/mascot-test.md
       - Scratchblocks Test Page: learning-graph/scratchblocks-test.md
@@ -78,6 +79,10 @@ nav:
       - Stage Coordinate System: sims/stage-coordinates/index.md
       - Stage Layout and Boundaries: sims/stage-layout/index.md
       - Three Tabs Explained: sims/three-tabs/index.md
+
+  - Appendices:
+      - Introduction: appendices/index.md
+      - List of Scratch Blocks: appendices/list-of-scrach-blocks.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
@@ -193,10 +198,10 @@ extra:
   # Intelligent-textbook URI scheme (see
   # https://dmccreary.github.io/intelligent-textbooks/uri-scheme/)
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
-  textbook_name: 'Scratch Programming for Kids'
+  textbook_name: 'Scratch Programming'
   textbook_version: '0.1'
 
-  # Google Analytics — uncomment once a property ID exists:
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
+  # Google Analytics — property ID: G-X328R30VNC
+  analytics:
+    provider: google
+    property: G-X328R30VNC

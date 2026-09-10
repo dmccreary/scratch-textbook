@@ -2,7 +2,7 @@
 
 [![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/Material%20for%20MkDocs-526CFE?logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
-[![GitHub Pages](https://img.shields.io/badge/View%20on-GitHub%20Pages-blue?logo=github)](https://arunbatchu.github.io/scratch-textbook/)
+[![GitHub Pages](https://img.shields.io/badge/View%20on-GitHub%20Pages-blue?logo=github)](https://dmccreary.github.io/scratch-textbook/)
 [![Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-DA7857?logo=anthropic)](https://claude.ai/code)
 [![p5.js](https://img.shields.io/badge/p5.js-ED225D?logo=p5.js&logoColor=white)](https://p5js.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -10,7 +10,7 @@
 
 ## View the Live Site
 
-Visit the interactive textbook at: [arunbatchu.github.io/scratch-textbook](https://arunbatchu.github.io/scratch-textbook/)
+Visit the interactive textbook at: [dmccreary.github.io/scratch-textbook](https://dmccreary.github.io/scratch-textbook/)
 
 ## Overview
 
@@ -40,7 +40,7 @@ A friendly mascot, **Scratch the Cat**, appears throughout the book to guide, en
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/arunbatchu/scratch-textbook.git
+git clone https://github.com/dmccreary/scratch-textbook.git
 cd scratch-textbook
 ```
 
@@ -113,7 +113,7 @@ scratch-textbook/
 
 Found a bug, typo, or have a suggestion for improvement? Please report it:
 
-[GitHub Issues](https://github.com/arunbatchu/scratch-textbook/issues)
+[GitHub Issues](https://github.com/dmccreary/scratch-textbook/issues)
 
 When reporting issues, please include:
 
@@ -153,8 +153,9 @@ This project is built on the shoulders of giants in the open source community:
 
 ## Contact
 
-**Arun Batchu**
+**Dan McCreary**
 
-- LinkedIn: [linkedin.com/in/arunbatchu](https://www.linkedin.com/in/arunbatchu/)
+- LinkedIn: [linkedin.com/in/danmccreary](https://www.linkedin.com/in/danmccreary/)
+- GitHub: [@dmccreary](https://github.com/dmccreary)
 
 Questions, suggestions, or collaboration opportunities? Feel free to connect on LinkedIn or open an issue on GitHub.

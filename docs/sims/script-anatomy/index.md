@@ -31,7 +31,7 @@ This MicroSim displays a simple five-block Scratch script (when green flag click
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/script-anatomy/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/script-anatomy/main.html"
         height="415px"
         width="100%"
         scrolling="no"></iframe>

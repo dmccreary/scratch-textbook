@@ -410,23 +410,23 @@ turn ccw 90 degrees →  now facing 0 (up again)
 
 #### `go to x: y:` — Instant Teleport
 
-```
+<div class="scratch">
 when green flag clicked
-go to x: -200 y: 100    // Teleport to top-left area
-```
+go to x: (-200) y: (100) // Teleport to top-left area
+</div>
 
 #### `glide secs to x: y:` — Smooth Slide
 
-```
+<div class="scratch">
 when green flag clicked
-glide 2 secs to x: 200 y: -100   // Smooth slide to bottom-right
-```
+glide (2) secs to x: (200) y: (-100) // Smooth slide to bottom-right
+</div>
 
 !!! example "🎮 Platformer Spawn Point"
-    ```blocks
+    <div class="scratch">
     when green flag clicked
-    go to x: -200 y: -100    // Start at left platform
-    ```
+    go to x: (-200) y: (-100) // Start at left platform
+    </div>
 
 ---
 
@@ -453,13 +453,14 @@ The **Looks category** (🟣 purple) lets you change appearance, speech, and siz
 
 !!! tip "🎭 Costume Animation Secret"
     The **smoothest animations** use `next costume` inside a `forever` loop with a tiny `wait`!
-    ```
+
+    <div class="scratch">
     when green flag clicked
     forever
-        next costume
-        wait 0.1 secs
+    next costume
+    wait (0.1) secs
     end
-    ```
+    </div>
 
 ---
 
@@ -522,24 +523,24 @@ The **green flag** is the most common way to start a project. **Put `when green 
 
 `when this sprite clicked` makes sprites **react to player clicks**:
 
-```
+<div class="scratch">
 when this sprite clicked
 play sound [pop v] until done
-change color effect by 25
-wait 0.2 secs
+change [color v] effect by (25)
+wait (0.2) secs
 clear graphic effects
-```
+</div>
 
 !!! example "🎮 Clicker Game Start"
-    ```
+    <div class="scratch">
     when green flag clicked
-    set score to 0
+    set [score v] to (0)
     show
-    
+
     when this sprite clicked
-    change score by 1
+    change [score v] by (1)
     play sound [pop v] until done
-    ```
+    </div>
 
 ---
 
@@ -547,19 +548,19 @@ clear graphic effects
 
 `when [key] key pressed` lets players **control sprites**:
 
-```
+<div class="scratch">
 when [right arrow v] key pressed
-change x by 10
+change x by (10)
 
 when [left arrow v] key pressed
-change x by -10
+change x by (-10)
 
 when [up arrow v] key pressed
-change y by 10
+change y by (10)
 
 when [down arrow v] key pressed
-change y by -10
-```
+change y by (-10)
+</div>
 
 !!! tip "⌨️ Smooth Movement Trick"
     For **smooth continuous movement**, use `forever` + `if key pressed?` (Sensing) instead of hat blocks — we'll learn this in Chapter 6!
@@ -576,11 +577,11 @@ change y by -10
 | `broadcast [message] and wait` | Shouts message, **waits for all receivers to finish** |
 
 **Receiver script:**
-```
+<div class="scratch">
 when I receive [game-over v]
 hide
 play sound [sad-trombone v] until done
-```
+</div>
 
 !!! info "📡 Broadcast = Event"
     Broadcasting **creates an event** that other sprites can listen for with `when I receive`. It's how sprites coordinate!

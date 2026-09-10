@@ -32,7 +32,7 @@ This MicroSim shows the Scratch Stage as a labeled coordinate plane divided into
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/coordinate-explorer/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/coordinate-explorer/main.html"
         height="555px"
         width="100%"
         scrolling="no"></iframe>

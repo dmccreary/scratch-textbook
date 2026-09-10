@@ -31,7 +31,7 @@ This diagram shows how the different Scratch block shapes connect together in a 
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/block-shape-flow/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/block-shape-flow/main.html"
         height="565px"
         width="100%"
         scrolling="no"></iframe>

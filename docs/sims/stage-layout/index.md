@@ -34,7 +34,7 @@ This MicroSim shows the Scratch stage's actual size (480x360 pixels) and its coo
 You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
-<iframe src="https://arunbatchu.github.io/scratch-textbook/sims/stage-layout/main.html"
+<iframe src="https://dmccreary.github.io/scratch-textbook/sims/stage-layout/main.html"
         height="505px"
         width="100%"
         scrolling="no"></iframe>

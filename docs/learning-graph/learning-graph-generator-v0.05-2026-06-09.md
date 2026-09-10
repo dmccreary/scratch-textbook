@@ -3,7 +3,7 @@
 **Skill Version:** 0.05  
 **Date:** 2026-06-09  
 **Textbook:** Scratch Programming for Kids  
-**Repository:** /Users/arunbatchu/CascadeProjects/scratch-textbook  
+**Repository:** /Users/dan/Documents/ws/scratch-textbook  
 
 ---
 
@@ -88,7 +88,7 @@ Updated `learning-graph.csv` with TaxonomyID column for all 226 concepts.
 Metadata includes:
 - Title: "Scratch Programming for Kids"
 - Description: Interactive textbook for ages 8-12
-- Creator: "Arun Batchu"
+- Creator: "Dan McCreary"
 - Date: 2026-06-09
 - Version: "1.0"
 - License: "CC BY-NC-SA 4.0 DEED"
