@@ -84,6 +84,7 @@ nav:
       - Introduction: appendices/index.md
       - List of Scratch Blocks: appendices/list-of-scratch-blocks.md
       - Block Programming for Physical Computing: appendices/physical-computing/index.md
+      - Transitioning to Python Turtle Graphics: appendices/transitioning-to-python-turtle-graphics.md
 
   - FAQ: faq.md
   - Glossary: glossary.md

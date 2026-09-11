@@ -39,6 +39,9 @@ and driving motors/servos while the Arduino stays tethered to the computer
 over USB (live/tethered model) — it was designed to teach programming and
 electronics together, not to produce a standalone Arduino sketch.
 
+**Adoption:** Niche and largely historical — its own creators moved on to
+build Snap4Arduino, and S4A sees little active use or maintenance today.
+
 ### Snap4Arduino
 
 Built by the same team as S4A, but on top of [Snap!](https://snap.berkeley.edu)
@@ -47,6 +50,10 @@ first-class functions) instead of Scratch itself. It supports live control
 of an attached Arduino as well as uploading a standalone program to the
 board.
 
+**Adoption:** A small, dedicated open-source community — used in some
+university and hobbyist circles, but far smaller in scale than the
+Scratch-based tools below.
+
 ### mBlock
 
 Makeblock's block editor, built on Scratch 3.0. It targets Arduino boards,
@@ -54,12 +61,22 @@ the BBC micro:bit, and Makeblock's own robot kits (mBot, mBot2, Codey
 Rocky). mBlock has two modes: an "upload" mode that compiles blocks into a
 real Arduino sketch, and a live mode for testing sensors interactively.
 
+**Adoption:** One of the most widely used Scratch-based tools for STEM
+classrooms worldwide, backed by Makeblock's own hardware line — though the
+company's headline user-count claims are marketing figures that don't
+fully reconcile with independently visible download numbers, so treat
+them skeptically.
+
 ### PictoBlox
 
 A newer, Scratch 3.0-based editor from STEMpedia/Makeblock that adds AI and
 IoT extensions on top of the same physical-computing blocks as mBlock — face
 detection, pose detection, and a ChatGPT extension, alongside support for
 Arduino, micro:bit, and STEMpedia's own boards (evive, Quarky).
+
+**Adoption:** A real and growing user base among STEM educators — smaller
+than mBlock's, but well-documented by STEMpedia's own usage reporting,
+particularly for its AI extensions.
 
 ### Tinkercad Circuits Code Editor
 
@@ -69,6 +86,11 @@ real hardware. Students can toggle between the blocks view and the
 generated Arduino C++ at any time, which makes it a useful bridge between
 block and text code.
 
+**Adoption:** Rides on Tinkercad's enormous overall user base — tens of
+millions of accounts across all of Tinkercad's tools — though Autodesk
+doesn't break out how many of those specifically use the Circuits block
+editor.
+
 ### LEGO Education SPIKE (Word Blocks)
 
 LEGO's programming app for the SPIKE Prime and SPIKE Essential hubs offers
@@ -76,6 +98,11 @@ a Scratch-styled block language called Word Blocks, alongside icon blocks
 for younger students and a Python mode for the transition to text. It
 controls LEGO's own motors, color sensors, and distance sensors built into
 the hub.
+
+**Adoption:** LEGO doesn't publish SPIKE-specific usage figures, but SPIKE
+is the official kit for FIRST LEGO League, a competition with hundreds of
+thousands of student participants each season — giving it very wide
+indirect reach even without a hard user count.
 
 ## Blockly-Based Systems (Non-Scratch)
 
@@ -95,6 +122,10 @@ ESP8266, Raspberry Pi Pico, and BBC micro:bit, and can drive LEDs, motors,
 and other components wired to those boards.
 ([bipes.net.br](https://bipes.net.br))
 
+**Adoption:** A small, actively maintained open-source academic project out
+of Brazil — a niche but genuine community rather than a mainstream
+classroom tool.
+
 ### Microsoft MakeCode
 
 A polished Blockly-derived editor with a side-by-side JavaScript (and
@@ -104,6 +135,11 @@ boards, compiling blocks down to a `.hex` file that is dragged onto the
 board and runs standalone afterward — no ongoing connection needed.
 ([makecode.microbit.org](https://makecode.microbit.org))
 
+**Adoption:** The most widely used system on this list by a wide margin —
+the BBC micro:bit Foundation reports millions of active users and tens of
+millions of young people reached worldwide, backed by over a decade of
+Microsoft and BBC investment.
+
 ### UIFlow (M5Stack)
 
 M5Stack's cloud-based Blockly editor for its own line of ESP32 devices
@@ -111,6 +147,10 @@ M5Stack's cloud-based Blockly editor for its own line of ESP32 devices
 connected device fetches and runs the program from M5Stack's flow server —
 similar in spirit to BIPES but tied to M5Stack's hardware and cloud
 service. ([flow.m5stack.com](https://flow.m5stack.com))
+
+**Adoption:** Solid, well-documented adoption within the maker and
+IoT-education community, tied to several million M5Stack devices sold —
+smaller in scale than MakeCode but a genuine, actively used platform.
 
 ### BlocklyProp (Parallax)
 
@@ -120,6 +160,9 @@ Blocks generate Spin or C code that compiles and uploads to the board with
 one click, after which the board runs standalone.
 ([parallax.com/blocklyprop](https://www.parallax.com/education/programming-languages/blocklyprop/))
 
+**Adoption:** Niche — a small, long-running community built specifically
+around Parallax's own Propeller-based hardware.
+
 ### VEXcode Blocks
 
 VEX Robotics' Blockly-based editor for its IQ, V5, and GO robotics kits. A
@@ -127,6 +170,11 @@ built-in "Convert to Switch" feature lets a student flip a finished blocks
 program to equivalent Python, which makes it a common on-ramp from blocks
 to text-based code in robotics classrooms.
 ([vexrobotics.com/vexcode/blocks](https://www.vexrobotics.com/vexcode/blocks))
+
+**Adoption:** Very wide reach through the VEX Robotics competition
+ecosystem, which spans well over a million students and tens of thousands
+of registered teams worldwide — VEXcode Blocks is the default entry point
+for nearly all of them.
 
 ## Choosing a Physical Computing Block Programming System
 
