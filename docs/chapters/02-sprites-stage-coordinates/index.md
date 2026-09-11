@@ -43,6 +43,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Welcome Back, Coder!"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ready for chapter two? In Chapter 1 you met one sprite — now you're about to build a whole cast of characters and learn exactly where to put each one on stage, down to the pixel. By the end of this chapter you'll move, glide, and steer sprites with total precision, and give them personality with speech bubbles and visual effects. Let's build something purr-fect!
+
 ## Meeting Your Cast: Sprites!
 
 In Chapter 1, you met the Scratch cat — your first **sprite**. But one sprite gets lonely! Real Scratch projects have **many sprites** working together, just like actors in a play.
@@ -85,10 +89,9 @@ In the **sprite pane** (bottom right), you have several ways to add sprites:
 2. Click the **name field** at the top (where it says "Sprite1")
 2. Type a descriptive name: `Player`, `Enemy`, `Coin`, `Background`
 
-!!! info "💡 Naming Tips"
-    - Use **capitalizing words**: `MainCharacter`, `EvilRobot`, `GoldenCoin`
-    - No spaces — use **camelCase** or **underscores**
-    - Be specific: `RedCar` not just `Car`
+!!! mascot-tip "Name It Like You'll Search For It"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Pick a name specific enough to spot in a long sprite list — `RedCar` beats `Car`, and `GoldenCoin` beats `Sprite2`. Stick to camelCase or underscores instead of spaces, and you'll never fight the editor over a name again.
 
 ### Each Sprite Has Its Own Everything!
 
@@ -101,8 +104,9 @@ This is **super important**: Every sprite is **completely independent**:
 | **Sounds** | Player has jump sound; Coin has "ching!" sound |
 | **Variables** | Player has `lives`; Enemy has `speed` |
 
-!!! note "🔑 Key Concept"
-    Code you write for **one sprite does NOT affect other sprites** — unless you use **broadcasts** (coming in Chapter 4!) or **variables for all sprites**.
+!!! mascot-thinking "Every Sprite Lives Alone"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that a script only ever talks to its own sprite — code on Player never reaches Enemy by accident. Think of each sprite as its own separate mini-program running side by side; if you want sprites to coordinate, they have to deliberately message each other with broadcasts, which you'll meet in Chapter 4.
 
 ---
 
@@ -208,6 +212,10 @@ The **stage** can wear costumes too — they're called **backdrops**!
 
 The stage uses a **coordinate system** — like a map with X and Y numbers that tell you exactly where things are.
 
+!!! mascot-thinking "From Picture to Grid"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the shift: stop seeing the stage as a picture and start seeing it as a grid of addresses. Once every spot on stage has its own (x, y) address, "move the sprite here" becomes a math problem you can solve exactly, instead of a guess.
+
 | Axis | Direction | Range | Center |
 |------|-----------|-------|--------|
 | **X (horizontal)** | Left ← → Right | -240 to +240 | 0 |
@@ -223,9 +231,9 @@ A position is written as **(x, y)** — always **X first, then Y**!
 - **(240, 180)** = Top-right corner
 - **(-240, -180)** = Bottom-left corner
 
-!!! tip "🧭 Remember: X comes before Y in the alphabet!"
-    - **X** = horizontal (left/right)
-    - **Y** = vertical (up/down)
+!!! mascot-tip "X Before Y, Just Like the Alphabet"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Whenever you see a coordinate like `(100, 50)`, read it in alphabet order: **X** (left/right) always comes first, **Y** (up/down) always comes second. Mix up the order and your sprite lands in the wrong spot every time.
 
 ---
 
@@ -299,6 +307,12 @@ Implementation notes:
 | Bottom half | Can be + or - | Negative (-) |
 | Center | 0 | 0 |
 
+!!! mascot-encourage "Negative Numbers Take a Minute"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If you have to stop and think every time you see a negative coordinate, you're not behind — that pause is normal for every coder at this stage. Drop a sprite at a few different spots and watch the numbers change; the quadrants click into place with practice, not memorization.
+
+Once that starts to feel automatic, try this quick check:
+
 !!! note "🔢 Quick Practice"
     - **Far right, middle height:** (240, 0)
     - **Far left, top:** (-240, 180)
@@ -316,8 +330,8 @@ Now for the fun part — **making things move!** The **Motion category** (🔵 b
 | Block | What It Does | Example Use |
 |-------|--------------|-------------|
 | `move (10) steps` | Move forward in current direction | Walking, flying |
-| `turn cw (15) degrees` | Turn clockwise (right) | Steering |
-| `turn ccw (15) degrees` | Turn counter-clockwise (left) | Steering |
+| `turn right (15) degrees` | Turn clockwise (right) | Steering |
+| `turn left (15) degrees` | Turn counter-clockwise (left) | Steering |
 | `go to x: (0) y: (0)` | Teleport to exact position | Spawning, resetting |
 | `go to (mouse-pointer v)` | Teleport to mouse or another sprite | Click-to-move |
 | `glide (1) secs to x: (0) y: (0)` | Smooth slide to position | Cutscenes, smooth movement |
@@ -392,14 +406,15 @@ Color scheme: Match Scratch Motion blue
 
 ### Turning — CW vs. CCW
 
-- **CW** = **Clockwise** (turn right) ⏩
-- **CCW** = **Counter-Clockwise** (turn left) ⏪
+- **CW** = **Clockwise** = the `turn right` block ⏩
+- **CCW** = **Counter-Clockwise** = the `turn left` block ⏪
 
-```
-Current direction: 0 (facing up)
-turn cw 90 degrees  →  now facing 90 (right)
-turn ccw 90 degrees →  now facing 0 (up again)
-```
+<div class="scratch">
+when green flag clicked
+point in direction (0) // facing up
+turn right (90) degrees // now facing 90, or right
+turn left (90) degrees // now facing 0, or up again
+</div>
 
 !!! tip "🎯 Pro Tip: `point towards`"
     Use `point towards [mouse-pointer v]` to make a sprite **always face the mouse** — perfect for aiming games!
@@ -487,8 +502,9 @@ The `change [effect] by` block has **7 effects**:
 | **brightness** | Lighten/darken | Day/night |
 | **ghost** | Makes transparent | Invisibility! |
 
-!!! warning "🧹 Clean Up Effects"
-    Always use `clear graphic effects` when done, or effects stack up and slow down your project!
+!!! mascot-warning "Effects Pile Up If You Let Them"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Every `change [effect] by` block adds on top of the last one, so a sprite clicked five times ends up five times ghostlier or five times more pixelated than you planned. Run `clear graphic effects` once you're done with a look, and your sprite resets to normal instead of drifting further away each time.
 
 ---
 
@@ -639,6 +655,10 @@ In this chapter, you learned:
 - ✅ **All 10 block categories** — colors, main jobs, key blocks
 - ✅ **Why color coding works** — color families group related functions
 - ✅ **Backdrops** — stage costumes for scene changes
+
+!!! mascot-celebration "You Just Learned to Command the Whole Stage!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You went from one lonely sprite to a full cast, and from guessing at positions to placing anything exactly where you want it with x and y coordinates. That's motion, looks, events, and the coordinate system all working together — the real toolkit behind every game and animation you'll build next.
 
 ---
 

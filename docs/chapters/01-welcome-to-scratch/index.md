@@ -71,7 +71,10 @@ Think about how you build with LEGO® bricks. You don't need to know how plastic
     ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     Notice what just changed: instead of memorizing exact spelling and punctuation, you're recognizing shapes that only fit together correctly. That's the same logic every professional programmer uses — you're just seeing the structure instead of typing it from memory.
 
-!!! tip "Did You Know?"
+Before you open the editor yourself, it helps to know where this whole idea came from.
+
+!!! mascot-neutral "Did You Know?"
+    ![Scratch the Cat in a neutral pose](../../img/mascot/neutral.png){ class="mascot-admonition-img" }
     Scratch was created by the **MIT Media Lab** — the same people who work on robots, new kinds of computers, and cool inventions! Over **100 million** people around the world use Scratch.
 
 ---
@@ -131,7 +134,8 @@ The editor has **three big sections** you'll use all the time:
 | **Code Area** (center) | Where you build scripts by snapping blocks together | Click a sprite first, then drag blocks here to program that sprite. |
 | **Stage** (top right) | Where your project runs and you see the action | Click the green flag to start. Click the stop sign to stop. |
 
-!!! info "💡 Pro Tip"
+!!! mascot-tip "Pro Tip"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     The **Stage** is 480 pixels wide by 360 pixels tall. The exact center is position **(0, 0)**. X goes from -240 (left) to +240 (right). Y goes from -180 (bottom) to +180 (top).
 
 ---
@@ -194,7 +198,8 @@ A **sprite** is a character or object in your Scratch project. Every sprite can:
 - **React to events** (like being clicked or a key pressed)
 - **Remember things** (using variables)
 
-!!! note "🎭 Sprite Fact"
+!!! mascot-neutral "Sprite Fact"
+    ![Scratch the Cat in a neutral pose](../../img/mascot/neutral.png){ class="mascot-admonition-img" }
     A Scratch project can have **many sprites** — each with its own scripts, costumes, and sounds. They all share the same stage!
 
 ### The Stage
@@ -396,7 +401,8 @@ Let's build your very first program together!
 4. **Click the green flag** 🟢 at the top of the stage
 5. **Watch the cat move!** 🐱
 
-!!! success "🎉 You Did It!"
+!!! mascot-celebration "You Did It!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just wrote your first computer program! The cat moved 10 steps to the right because `move 10 steps` means "move forward 10 pixels in the direction you're facing."
 
 ### Try These Variations
@@ -507,7 +513,8 @@ To save projects online, share them with the world, and join the community, you 
 | **Comment & heart** | Give feedback on projects you like |
 | **Remix** | Build on other people's projects |
 
-!!! info "🎨 Your Profile"
+!!! mascot-neutral "Your Profile"
+    ![Scratch the Cat in a neutral pose](../../img/mascot/neutral.png){ class="mascot-admonition-img" }
     Your profile page shows projects you've shared, studios you follow, and projects you've favorited. You can also write an "About Me" to tell people about yourself!
 
 ---
@@ -527,7 +534,8 @@ The Scratch community is **friendly, creative, and respectful**. When you join, 
 | **Protect privacy** | Don't share real names, addresses, phone numbers, passwords, or school names. |
 | **Be honest** | Don't pretend to be someone else. Don't claim others' work as your own. |
 
-!!! tip "🛡️ Stay Safe"
+!!! mascot-warning "Stay Safe"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
     If someone makes you feel uncomfortable, **tell a trusted adult** and **report** the user using the "Report" button. The Scratch Team reviews all reports.
 
 ---
@@ -552,7 +560,8 @@ A **studio** is like a gallery or a club where people collect projects around a 
 | **Curator** | Add projects, comment, follow |
 | **Follower** | See updates, comment |
 
-!!! example "🎨 Studio Ideas"
+!!! mascot-neutral "Studio Ideas"
+    ![Scratch the Cat in a neutral pose](../../img/mascot/neutral.png){ class="mascot-admonition-img" }
     - "Best Platformer Games"
     - "Animations About Space"
     - "Projects Using Clones"
@@ -578,7 +587,8 @@ You can **comment** on projects and studios to:
 | Suggest ideas kindly | Criticize harshly |
 | Use emojis to show tone 😊 | Use all caps (IT LOOKS LIKE SHOUTING) |
 
-!!! warning "🚫 No Spam"
+!!! mascot-warning "No Spam"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
     Don't post the same comment many times. Don't advertise your projects in other people's comments. That's called "spam" and it's not allowed.
 
 ---
@@ -605,7 +615,8 @@ You can **comment** on projects and studios to:
 | **Fix bugs** | Found a glitch? Fix it and share the improvement |
 | **Collaborate** | Take turns adding features with friends |
 
-!!! note "⚖️ Remixing Etiquette"
+!!! mascot-tip "Remixing Etiquette"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     - Always **credit the original creator** (Scratch does this automatically)
     - Make **meaningful changes** — don't just change the name
     - **Thank the creator** in your project notes
@@ -623,7 +634,8 @@ You can **comment** on projects and studios to:
 | **File → Save Now** | Menu option | Same as above |
 | **File → Save As** | Save a copy with new name | Before making big changes, so you have a backup |
 
-!!! tip "💾 Keyboard Shortcut"
+!!! mascot-tip "Keyboard Shortcut"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     Press **Ctrl+S** (Windows/Linux) or **Cmd+S** (Mac) to save quickly!
 
 ### Sharing Your Project
@@ -643,7 +655,8 @@ When your project is ready for the world:
 - It appears in **search results** and **category pages**
 - You can **embed it** on websites with the embed code
 
-!!! success "🌟 You're a Creator Now!"
+!!! mascot-celebration "You're a Creator Now!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     Sharing your first project is a big moment. Be proud! Every expert programmer started with a simple "Hello World" project.
 
 ---
@@ -661,7 +674,8 @@ Click **File** in the toolbar for these options:
 | **Download to Computer** | Save project as `.sb3` file (backup!) |
 | **Project Info** | Edit title, description, tags, visibility |
 
-!!! tip "📥 Backup Your Work"
+!!! mascot-tip "Backup Your Work"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     Use **File → Download to Computer** to save a `.sb3` file on your computer. If something happens to your online account, you still have your project!
 
 ---
@@ -690,7 +704,8 @@ When you click the green flag, Scratch **highlights each block** as it runs:
 - You can **see the flow** of your program
 - If something goes wrong, you can **spot where it stopped**
 
-!!! info "🐞 Debugging Superpower"
+!!! mascot-tip "Debugging Superpower"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     Block highlighting is your best debugging tool! If your sprite doesn't do what you expect, watch the highlighting. The bug is usually at the last highlighted block or the one right after it.
 
 ---
@@ -751,7 +766,8 @@ In this chapter, you learned:
 
 ---
 
-??? note "🤔 Quick Quiz - Click to Check Answers"
+??? mascot-neutral "Quick Quiz - Click to Check Answers"
+    ![Scratch the Cat in a neutral pose](../../img/mascot/neutral.png){ class="mascot-admonition-img" }
     **Q1:** What shape is a block that *starts* a script?
     **A:** Hat block (rounded top)
     
