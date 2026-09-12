@@ -1,6 +1,6 @@
 ---
 title: Design Process and Capstone Project
-description: Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect for young learners
+description: "Guides students through the complete design cycle: imagine, plan, create, test, improve, share, and reflect for young learners"
 generated_by: claude skill chapter-content-generator
 date: 2026-06-10 14:00:00
 version: 0.08
@@ -47,6 +47,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Time to Build Something All Your Own"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    This is it, creators — no more step-by-step tutorials! You already know how to move sprites, branch with if-else, sense collisions, and build whole game systems, so this chapter hands you the steering wheel for your own capstone game: imagined, planned, built, and shared entirely your way. There are barely any new blocks left to learn here — the real skill is turning YOUR idea into a finished game. Let's build something purr-fect!
+
 ## The Design Process — Your Creative Roadmap! 🗺️
 
 ### What Is the Design Process?
@@ -62,6 +66,10 @@ IMAGINE → PLAN → CREATE → TEST → IMPROVE → SHARE
 
 **Reflection happens at EVERY stage!** 🔄
 
+!!! mascot-thinking "Reflection Isn't a Stage, It's a Habit"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that reflection isn't its own box in the diagram — it wraps around all six stages, because real developers ask "is this working?" constantly, not just at the end. Once you start thinking in loops instead of a straight line, revising your game stops feeling like failure and starts feeling like progress.
+
 ---
 
 ## Stage 1: IMAGINE — Dream Big! 💭
@@ -69,6 +77,10 @@ IMAGINE → PLAN → CREATE → TEST → IMPROVE → SHARE
 ### What Is Imagine?
 
 **Imagine** = let your creativity run wild! No limits, no "that's impossible" — just pure ideas!
+
+!!! mascot-encourage "A Blank Project Is Supposed to Feel Big"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Staring at an empty Scratch project with no instructions to follow is genuinely one of the hardest parts of this whole book — even professional game designers feel it every time they start something new. You already have everything you need: pick ONE small idea, however simple, and let Stages 2 through 6 turn it into something real.
 
 ### Imagine Activities
 
@@ -213,6 +225,10 @@ START → Initialize Variables → MAIN LOOP
 | 🔵 Low | Particle effects | v1.0 |
 | 🔵 Low | Unlockable skins | v1.1 |
 
+!!! mascot-warning "Scope Creep Is the #1 Capstone Killer"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    It's tempting to plan a huge game with 10 levels, 5 enemy types, and a boss rush — but most first capstones never finish because the plan was too big to build in the time you have. Fix it before you start coding: cut your task list down to only the 🔴 Critical items for v0.1, and treat everything else as a stretch goal you add only if there's time left.
+
 ---
 
 ## Stage 3: CREATE — Build It! 🛠️
@@ -230,6 +246,10 @@ START → Initialize Variables → MAIN LOOP
 | **Use versioning** | Save v0.1, v0.2, v0.3... |
 | **Comment your code** | Future you will thank you |
 | **Clean up regularly** | Right-click → Clean up |
+
+!!! mascot-tip "Build in Tiny, Testable Slices"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Here's a shortcut that saves hours of confused debugging: get ONE feature fully working and tested before you start the next one. A half-built jump plus a half-built coin system is twice as hard to fix as two features finished one at a time.
 
 ### Create Order (Suggested)
 
@@ -263,6 +283,10 @@ START → Initialize Variables → MAIN LOOP
 | **Stress test** | Push limits (100 clones, 30 min) | You |
 | **Edge case test** | Weird inputs, rapid clicks | You |
 | **Regression test** | Old features after changes | You |
+
+!!! mascot-tip "Hand It to Someone Else, Early"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Want to catch bugs you'd never notice yourself? Watch someone else play your game without giving them any hints — the second they get stuck or do something you didn't expect, you've found your next fix.
 
 ---
 
@@ -362,6 +386,10 @@ PLAN → CREATE → TEST → IMPROVE → TEST → IMPROVE → TEST...
 
 **Each cycle makes the game better!** Most pro games go through 50+ iterations.
 
+!!! mascot-thinking "Perfect Isn't a Stage, It's a Loop"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Think of PLAN, CREATE, TEST, and IMPROVE less like four boxes to check off once and more like one wheel you keep spinning — real studios cycle through it dozens of times on the same game. Every time you come back around the loop, you're not starting over — you're improving a game that already works.
+
 ---
 
 ## Stage 6: SHARE — Show the World! 🌍
@@ -427,14 +455,15 @@ PLAN → CREATE → TEST → IMPROVE → TEST → IMPROVE → TEST...
 
 ### Instructions Screen Code
 
-```
+<div class="scratch">
 when I receive [show-instructions v]
 switch costume to [instructions-screen v]
 show
-when [space] key pressed
+
+when key [space v] pressed
 hide
 broadcast [game-start v]
-```
+</div>
 
 ---
 
@@ -530,38 +559,38 @@ THANK YOU FOR PLAYING!
 
 #### Coin Collect Juice
 
-```
+<div class="scratch">
 when I receive [coin-collected v]
 change [score v] by (10)
 play sound [coin v]
 create clone of [coin-particle v]
-change color effect by 50
-wait 0.05 secs
+change [color v] effect by (50)
+wait (0.05) seconds
 clear graphic effects
-```
+</div>
 
 #### Enemy Hit Juice
 
-```
+<div class="scratch">
 when I receive [enemy-hit v]
 broadcast [screen-shake v]
-change color effect by 100
+change [color v] effect by (100)
 play sound [hit v]
-wait 0.1 secs
+wait (0.1) seconds
 clear graphic effects
-```
+</div>
 
 #### Screen Shake (Broadcast)
 
-```
+<div class="scratch">
 when I receive [screen-shake v]
-repeat 5
-    change x by (pick random -5 to 5)
-    change y by (pick random -5 to 5)
-    wait 0.02 secs
+repeat (5)
+change x by (pick random (-5) to (5))
+change y by (pick random (-5) to (5))
+wait (0.02) seconds
 end
 go to x: (original-x) y: (original-y)
-```
+</div>
 
 ---
 
@@ -753,6 +782,7 @@ WEEK 5: SHARE + REFLECT
 **You've completed the Scratch Programming for Kids textbook!**
 
 You've journeyed from:
+
 - **Hello World** → **Capstone Game Developer**
 
 ### Remember:
@@ -760,6 +790,10 @@ You've journeyed from:
 > **"The best way to learn game development is to make games."**
 
 So keep making games. Keep learning. Keep sharing. Keep having fun!
+
+!!! mascot-celebration "You Finished the Whole Textbook"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    From your very first green-flag click all the way to variables, clones, broadcasts, conditionals, and now a complete design process, you built every one of those skills yourself, one script at a time — and you have a finished, playable, shareable game to prove it. That's not just a chapter complete, that's an entire textbook conquered. Let's build something purr-fect — starting with whatever you make next!
 
 ---
 

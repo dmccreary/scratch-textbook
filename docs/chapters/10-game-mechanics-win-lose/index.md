@@ -48,13 +48,17 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Let's Make a Real Game!"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ready to turn your sprites into an actual GAME? In this chapter you'll give your project real stakes — lists to track inventory and high scores, win conditions that celebrate victory, and lose conditions that know exactly when it's game over. By the end, you'll build a complete playable game with scoring, lives, and a proper ending. Let's build something purr-fect!
+
 ## List Item Access — Getting Specific Items! 📋
 
 ### List Item Block (Variables → Dark Red)
 
-```
+<div class="scratch">
 item (1) of [inventory v]
-```
+</div>
 
 **Reporter: gets the value at a specific position in the list.**
 
@@ -74,23 +78,23 @@ item (1) of [inventory v]
 
 #### Access Specific Item
 
-```
-say (item (1) of [inventory v]) for 2 secs  // Says first item
-```
+<div class="scratch">
+say (item (1) of [inventory v]) for (2) seconds // Says first item
+</div>
 
 #### Loop Through All Items
 
-```
+<div class="scratch">
 repeat (length of [inventory v])
-    say (item (loop-counter) of [inventory v]) for 1 secs
+    say (item (loop-counter) of [inventory v]) for (1) seconds
 end
-```
+</div>
 
 #### Get Last Item
 
-```
+<div class="scratch">
 set [last-item v] to (item (length of [list v]) of [list v])
-```
+</div>
 
 ---
 
@@ -98,13 +102,13 @@ set [last-item v] to (item (length of [list v]) of [list v])
 
 **Always check bounds before accessing!**
 
-```
-if < (index) > (length of [list v]) > then
-    say [Invalid index!] for 2 secs
+<div class="scratch">
+if &lt;(index) &gt; (length of [list v])&gt; then
+    say [Invalid index!] for (2) seconds
 else
-    say (item (index) of [list v]) for 2 secs
+    say (item (index) of [list v]) for (2) seconds
 end
-```
+</div>
 
 ---
 
@@ -112,26 +116,26 @@ end
 
 #### Use Item from Inventory
 
-```
+<div class="scratch">
 when I receive [use-item v]
-if < (length of [inventory v]) > 0 > then
+if &lt;(length of [inventory v]) &gt; (0)&gt; then
     set [item-to-use v] to (item (1) of [inventory v])
     delete (1) of [inventory v]
     // Use the item...
 end
-```
+</div>
 
 #### Equip Best Weapon
 
-```
+<div class="scratch">
 set [best-damage v] to (0)
 repeat (length of [weapons v])
-    if < (item (loop-counter) of [weapons v]) > (best-damage) > then
+    if &lt;(item (loop-counter) of [weapons v]) &gt; (best-damage)&gt; then
         set [best-damage v] to (item (loop-counter) of [weapons v])
         set [best-weapon-index v] to (loop-counter)
     end
 end
-```
+</div>
 
 ---
 
@@ -139,9 +143,9 @@ end
 
 ### Delete Block (Variables → Dark Red)
 
-```
+<div class="scratch">
 delete (1) of [inventory v]
-```
+</div>
 
 **Removes item at specified position** — remaining items shift down!
 
@@ -149,46 +153,46 @@ delete (1) of [inventory v]
 
 #### Remove Used Item
 
-```
+<div class="scratch">
 when I receive [use-potion v]
 delete (1) of [inventory v]  // Remove first item
-```
+</div>
 
 #### Remove Specific Item
 
-```
+<div class="scratch">
 delete (3) of [inventory v]  // Remove 3rd item
-```
+</div>
 
 #### Clear Entire List
 
-```
+<div class="scratch">
 delete all of [inventory v]
-```
+</div>
 
 #### Remove by Value (Search + Delete)
 
-```
+<div class="scratch">
 repeat (length of [inventory v])
-    if < (item (loop-counter) of [inventory v]) = [rotten-apple] > then
+    if &lt;(item (loop-counter) of [inventory v]) = [rotten-apple]&gt; then
         delete (loop-counter) of [inventory v]
     end
 end
-```
+</div>
 
 ---
 
 ### Delete + High Score List
 
-```
+<div class="scratch">
 when I receive [new-score v]
-if < (score) > (item (1) of [high-scores v]) > then
+if &lt;(score) &gt; (item (1) of [high-scores v])&gt; then
     insert (score) at (1) of [high-scores v]
-    if < (length of [high-scores v]) > 5 > then
+    if &lt;(length of [high-scores v]) &gt; (5)&gt; then
         delete (6) of [high-scores v]  // Keep top 5
     end
 end
-```
+</div>
 
 ---
 
@@ -196,9 +200,9 @@ end
 
 ### List Contains Block (Variables → Dark Red)
 
-```
-[apple v] in [inventory v]?
-```
+<div class="scratch">
+[inventory v] contains [apple]?
+</div>
 
 **Boolean: TRUE if item exists in list, FALSE otherwise.**
 
@@ -206,33 +210,33 @@ end
 
 #### Check for Item
 
-```
-if < [key v] in [inventory v]? > then
-    say [Door unlocked!] for 2 secs
+<div class="scratch">
+if &lt;[inventory v] contains [key]?&gt; then
+    say [Door unlocked!] for (2) seconds
     broadcast [door-open v]
 else
-    say [You need a key!] for 2 secs
+    say [You need a key!] for (2) seconds
 end
-```
+</div>
 
 #### Check for Duplicate Before Adding
 
-```
-if <not < [sword v] in [inventory v]? >> then
+<div class="scratch">
+if &lt;not &lt;[inventory v] contains [sword]?&gt;&gt; then
     add [sword] to [inventory v]
-    say [Got a sword!] for 2 secs
+    say [Got a sword!] for (2) seconds
 else
-    say [Already have a sword!] for 2 secs
+    say [Already have a sword!] for (2) seconds
 end
-```
+</div>
 
 #### Check for Quest Item
 
-```
-if < [ancient-scroll v] in [inventory v]? > then
+<div class="scratch">
+if &lt;[inventory v] contains [ancient-scroll]?&gt; then
     broadcast [quest-complete v]
 end
-```
+</div>
 
 ---
 
@@ -241,7 +245,7 @@ end
 | Block | Returns | Use For |
 |-------|---------|---------|
 | `item (1) of [list]` | **Value** at position | Get the actual item |
-| `[item] in [list]?` | **True/False** | Check existence |
+| `[list] contains (thing)?` | **True/False** | Check existence |
 
 ---
 
@@ -251,41 +255,53 @@ end
 
 ```
 high-scores list:
-[0] 10500  (1st place)
-[1] 9800   (2nd place)
-[2] 8750   (3rd place)
-[2] 7200   (4th place)
-[3] 5500   (5th place)
+[1] 10500  (1st place)
+[2] 9800   (2nd place)
+[3] 8750   (3rd place)
+[4] 7200   (4th place)
+[5] 5500   (5th place)
 ```
 
 ### High Score Logic
 
-```
+<div class="scratch">
 when green flag clicked
 delete all of [high-scores v]
-repeat 5
+repeat (5)
     add (0) to [high-scores v]
 end
 show list [high-scores v]
 
 when I receive [game-over v]
-if < (score) > (item (1) of [high-scores v]) > then
+if &lt;(score) &gt; (item (1) of [high-scores v])&gt; then
     // New high score!
     insert (score) at (1) of [high-scores v]
     delete (6) of [high-scores v]  // Keep top 5
-    say [NEW HIGH SCORE!] for 3 secs
+    say [NEW HIGH SCORE!] for (3) seconds
 end
-```
+</div>
 
 ---
 
 ### High Score Display
 
-| Display Method | Code |
-|----------------|------|
-| **List on stage** | `show list [high-scores]` |
-| **Custom display** | `repeat 5: say (join [#] (join (loop-counter) (join [: ] (item (loop-counter) of [high-scores])))) for 2 secs` |
-| **With names** | Store `join [name] (join [: ] (score))` in list |
+<div class="scratch">
+show list [high-scores v]
+</div>
+
+**List on stage.** Shows the list directly on the stage for everyone to see.
+
+<div class="scratch">
+say (join [#] (join (loop-counter) (join [: ] (item (loop-counter) of [high-scores v])))) for (2) seconds
+</div>
+
+**Custom display.** Builds one formatted row of text per list item.
+
+<div class="scratch">
+add (join [name] (join [: ] (score))) to [high-scores v]
+</div>
+
+**With names.** Stores a player's name and score together as one entry.
 
 ---
 
@@ -350,28 +366,26 @@ end
 
 ### Automated Testing (Custom Blocks)
 
-```
-define test-movement
-// Test: Player moves right
-go to x: 0 y: 0
-repeat 10
-    change x by 5
+<div class="scratch">
+define test-movement // Test: Player moves right
+go to x: (0) y: (0)
+repeat (10)
+    change x by (5)
 end
-if < (x position) = 50 > then
-    say [TEST PASS: Movement] for 2 secs
+if &lt;(x position) = (50)&gt; then
+    say [TEST PASS: Movement] for (2) seconds
 else
-    say [TEST FAIL: Movement] for 2 secs
+    say [TEST FAIL: Movement] for (2) seconds
 end
 
-define test-collision
-// Test: Wall collision
-go to x: 220 y: 0
-if <touching color [#FF0000]? > then
-    say [TEST PASS: Collision] for 2 secs
+define test-collision // Test: Wall collision
+go to x: (220) y: (0)
+if &lt;touching color [#FF0000]?&gt; then
+    say [TEST PASS: Collision] for (2) seconds
 else
-    say [TEST FAIL: Collision] for 2 secs
+    say [TEST FAIL: Collision] for (2) seconds
 end
-```
+</div>
 
 ---
 
@@ -405,17 +419,21 @@ end
 
 ### Debugging with `say` (Live Values!)
 
-```
+<div class="scratch">
 forever
-    say (join [x: ] (x position)) for 0.1 secs
-    say (join [y: ] (y position)) for 0.1 secs
-    say (join [vel-x: ] (velocity-x)) for 0.1 secs
-    say (join [onGround: ] (touching [ground v]?)) for 0.1 secs
-    wait 0.1 secs
+    say (join [x: ] (x position)) for (0.1) seconds
+    say (join [y: ] (y position)) for (0.1) seconds
+    say (join [vel-x: ] (velocity-x)) for (0.1) seconds
+    say (join [onGround: ] (touching [ground v]?)) for (0.1) seconds
+    wait (0.1) seconds
 end
-```
+</div>
 
 **Live dashboard of all important values!** 📊
+
+!!! mascot-tip "Print Everything, Then Clean Up"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    When a bug won't show itself, add a `say (variable)` block after every suspicious line so you can watch values change in real time. Just remember to delete or disable those debug `say` blocks before you share your project — nobody wants to play a game that's narrating its own variables!
 
 ---
 
@@ -476,7 +494,7 @@ end
 
 ### Storytelling Through Code
 
-```
+<div class="scratch">
 when green flag clicked
 broadcast [chapter1 v] and wait    // Setup
 broadcast [chapter2 v] and wait    // Rising action
@@ -485,15 +503,14 @@ broadcast [ending v]               // Resolution
 
 when I receive [chapter1 v]
 switch backdrop to [village v]
-speak [Our village was peaceful...] and wait
-speak [Until the Shadow King came...] and wait
+say [Our village was peaceful...] for (2) seconds
+say [Until the Shadow King came...] for (2) seconds
 broadcast [chapter1-done v]
 
 when I receive [chapter2 v]
 switch backdrop to [forest v]
-speak [You must find the three crystals...] and wait
-// Gameplay: collect 3 crystals
-```
+say [You must find the three crystals...] for (2) seconds // Gameplay: collect 3 crystals
+</div>
 
 ---
 
@@ -501,9 +518,9 @@ speak [You must find the three crystals...] and wait
 
 ### Broadcast And Wait Recap
 
-```
+<div class="scratch">
 broadcast [message v] and wait
-```
+</div>
 
 **Pauses sender until ALL `when I receive` scripts FINISH.**
 
@@ -523,10 +540,10 @@ broadcast [message v] and wait
 
 ### Synchronous Broadcast Example
 
-```
+<div class="scratch">
 when green flag clicked
 broadcast [initialize v] and wait
-wait 1 secs
+wait (1) seconds
 broadcast [spawn-player v] and wait
 broadcast [spawn-enemies v] and wait
 broadcast [spawn-ui v] and wait
@@ -537,15 +554,19 @@ set [score v] to (0)
 set [lives v] to (3)
 
 when I receive [spawn-player v]
-go to x: -200 y: -100
+go to x: (-200) y: (-100)
 show
 
 when I receive [spawn-enemies v]
-repeat 5
+repeat (5)
     create clone of [enemy v]
-    wait 0.2 secs
+    wait (0.2) seconds
 end
-```
+</div>
+
+!!! mascot-warning "Reset Score and Lives on Green Flag"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    If `score` and `lives` only get set inside a `when I receive [initialize]` script, clicking the green flag a second time can start a new game with last game's leftover numbers. Always set every game variable back to its starting value in a `when green flag clicked` script too, so every playthrough truly starts fresh.
 
 ---
 
@@ -579,20 +600,24 @@ end
 
 ### Broadcast Storm Example (BAD!)
 
-```
+<div class="scratch">
 forever
     broadcast [update v]    // STORM! Thousands per second
 end
-```
+</div>
 
 ### Broadcast Storm Fix (GOOD!)
 
-```
+<div class="scratch">
 forever
     broadcast [update v]
-    wait 0.1 secs   // Rate limited!
+    wait (0.1) seconds   // Rate limited!
 end
-```
+</div>
+
+!!! mascot-warning "Broadcasts Need a Speed Limit"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A `broadcast` sent from inside a `forever` loop with no `wait` fires hundreds of times a second — that's a broadcast storm, and it will lag or crash your project. Always pair a looping broadcast with a `wait` block, even a tiny one, to give Scratch room to breathe between messages.
 
 ---
 
@@ -611,11 +636,27 @@ end
 
 ### Loop Termination Blocks
 
-| Block | Stops |
-|-------|-------|
-| `stop [this script v]` | Current script only |
-| `stop [all v]` | EVERYTHING in project |
-| `stop [other scripts in sprite v]` | Other scripts in same sprite |
+<div class="scratch">
+stop [this script v]
+</div>
+
+**Stops only the current script** — every other script keeps running.
+
+<div class="scratch">
+stop [all v]
+</div>
+
+**Stops EVERYTHING** in the whole project.
+
+<div class="scratch">
+stop [other scripts in sprite v]
+</div>
+
+**Stops other scripts** running in this same sprite, but leaves the current one going.
+
+!!! mascot-thinking "Stop Has a Blast Radius"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Think of the three `stop` blocks as circles of different sizes: `stop [this script v]` only affects the train of blocks currently running, while `stop [all v]` reaches every script in every sprite at once. Reach for the smallest circle that gets the job done, and save `stop [all v]` for true game-over moments.
 
 ---
 
@@ -623,33 +664,33 @@ end
 
 #### Break Out of Forever
 
-```
+<div class="scratch">
 forever
-    if <key [escape] pressed?> then
+    if &lt;key [escape v] pressed?&gt; then
         stop [this script v]
     end
     // Game loop code
 end
-```
+</div>
 
 #### Exit Nested Loop
 
-```
+<div class="scratch">
 repeat (10)
     repeat (10)
-        if <touching [target v]?> then
+        if &lt;touching [target v]?&gt; then
             stop [this script v]  // Exits BOTH loops!
         end
     end
 end
-```
+</div>
 
 #### Stop All (Game Over)
 
-```
+<div class="scratch">
 when I receive [game-over v]
 stop [all v]
-```
+</div>
 
 ---
 
@@ -668,11 +709,23 @@ stop [all v]
 
 ### Combining Booleans (And/Or/Not)
 
-| Operator | Block | True When... |
-|----------|-------|--------------|
-| **AND** | `< > and < >` | BOTH true |
-| **OR** | `< > or < >` | AT LEAST ONE true |
-| **NOT** | `not < >` | Flips true/false |
+<div class="scratch">
+&lt;&gt; and &lt;&gt;
+</div>
+
+**AND** — true only when BOTH conditions are true.
+
+<div class="scratch">
+&lt;&gt; or &lt;&gt;
+</div>
+
+**OR** — true when AT LEAST ONE condition is true.
+
+<div class="scratch">
+not &lt;&gt;
+</div>
+
+**NOT** — flips true to false, and false to true.
 
 ---
 
@@ -680,21 +733,27 @@ stop [all v]
 
 #### Three Conditions (AND)
 
-```
-if < (score) > 100 > and < (lives) > 0 > and <not <touching [spike v]?>> then
+<div class="scratch">
+if &lt;&lt;(score) &gt; (100)&gt; and &lt;&lt;(lives) &gt; (0)&gt; and &lt;not &lt;touching [spike v]?&gt;&gt;&gt;&gt; then
     broadcast [bonus-level v]
 end
-```
+</div>
 
 #### Complex Condition
 
-```
-if < < (distance) < 50 > or <touching [player v]?> > and <not < (invincible) >> then
+<div class="scratch">
+if &lt;&lt;&lt;(distance) &lt; (50)&gt; or &lt;touching [player v]?&gt;&gt; and &lt;not &lt;(invincible)&gt;&gt;&gt; then
     broadcast [player-hit v]
 end
-```
+</div>
 
-#### De Morgan's Laws (Simplify!)
+!!! mascot-encourage "Nested Booleans Take a Second Look"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If stacking `and`, `or`, and `not` inside each other made your eyes cross, that's completely normal — even experienced programmers build these one condition at a time. You already handled if/else and comparisons just fine in earlier chapters, so try building a nested condition piece by piece: get one comparison working, then wrap the next one around it.
+
+---
+
+### De Morgan's Laws (Simplify!)
 
 | Original | Equivalent (Simplified) |
 |----------|------------------------|
@@ -707,27 +766,37 @@ end
 
 #### Complex Jump Condition
 
-```
-if <key [space] pressed?> and <touching [ground v]?> and <not < (in-air) >> then
+<div class="scratch">
+if &lt;&lt;key [space v] pressed?&gt; and &lt;&lt;touching [ground v]?&gt; and &lt;not &lt;(in-air)&gt;&gt;&gt;&gt; then
     set [velocity-y v] to (15)
 end
-```
+</div>
 
 #### Enemy AI Decision
 
-```
-if < (distance to player) < 100 > and <not < (stunned) >> then
-    if < (player-x) > (x position) > then
+<div class="scratch">
+if &lt;&lt;(distance to [player v]) &lt; (100)&gt; and &lt;not &lt;(stunned)&gt;&gt;&gt; then
+    if &lt;(player-x) &gt; (x position)&gt; then
         set [velocity-x v] to (3)
     else
         set [velocity-x v] to (-3)
     end
 end
-```
+</div>
 
 ---
 
 ## Win Condition — Victory! 🏆
+
+<div class="scratch">
+if &lt;(score) &gt; (1000)&gt; then
+    broadcast [win v]
+end
+</div>
+
+!!! mascot-thinking "Your Game Is Always in One State"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that a game is never "playing" AND "won" at the same time — it's always in exactly one state: menu, playing, won, or lost. Every `forever` loop that checks win and lose conditions is really just asking "which state are we in right now?" and broadcasting the answer to every sprite that needs to react.
 
 ### What Is a Win Condition?
 
@@ -735,54 +804,100 @@ end
 
 ### Common Win Conditions
 
-| Type | Condition | Example |
-|------|-----------|---------|
-| **Score target** | `score > 1000` | Collect 100 coins |
-| **All collected** | `length of [coins] = 0` | Get all items |
-| **Reach location** | `x > 200 and y > 150` | Reach exit |
-| **Defeat boss** | `boss-health = 0` | Defeat final boss |
-| **Survive time** | `timer > 300` | Survive 5 minutes |
-| **All enemies gone** | `length of [enemies] = 0` | Clear room |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(score) &gt; (1000)&gt;
+</div>
+
+**Score target.** Collect 100 coins — score passes 1000.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(length of [coins v]) = (0)&gt;
+</div>
+
+**All collected.** Every item is gone from the list.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;&lt;(x position) &gt; (200)&gt; and &lt;(y position) &gt; (150)&gt;&gt;
+</div>
+
+**Reach location.** The sprite crosses both an X and a Y threshold.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(boss-health) = (0)&gt;
+</div>
+
+**Defeat boss.** The boss's health reaches zero.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(timer) &gt; (300)&gt;
+</div>
+
+**Survive time.** The timer passes 300 seconds (5 minutes).
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(length of [enemies v]) = (0)&gt;
+</div>
+
+**All enemies gone.** The enemies list is empty.
+</div>
+
+</div>
+
+Most games check several of these every frame — and playtesting is how you find the right target number.
+
+!!! mascot-tip "Playtest to Find the Right Difficulty"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    A win condition that's too easy feels boring, and one that's too hard feels unfair — the only way to know which is to watch someone else play. Hand your game to a friend, say nothing, and watch where they get stuck or breeze through; that's your cue for what number to change.
 
 ---
 
 ### Win Condition Implementation
 
-```
-forever
-    // Check win conditions each frame
-    if < (score) > 1000 > then
+<div class="scratch">
+forever // Check win conditions each frame
+    if &lt;(score) &gt; (1000)&gt; then
         broadcast [win v]
         stop [this script v]
     end
-    
-    if < (length of [coins v]) = 0 > then
+    if &lt;(length of [coins v]) = (0)&gt; then
         broadcast [win v]
         stop [this script v]
     end
-    
-    if < (boss-health) = 0 > then
+    if &lt;(boss-health) = (0)&gt; then
         broadcast [win v]
         stop [this script v]
     end
 end
-```
+</div>
 
 ---
 
 ### Win Sequence
 
-```
+<div class="scratch">
 when I receive [win v]
 stop [all v]
 switch backdrop to [victory v]
 play sound [fanfare v]
-say [YOU WIN!] for 5 secs
-wait 3 secs
+say [YOU WIN!] for (5) seconds
+wait (3) seconds
 show variable [final-score v]
-wait 5 secs
+wait (5) seconds
 broadcast [return-to-menu v]
-```
+</div>
 
 ---
 
@@ -800,64 +915,102 @@ broadcast [return-to-menu v]
 
 ## Lose Condition — Game Over! 💀
 
+<div class="scratch">
+if &lt;(lives) = (0)&gt; then
+    broadcast [game-over v]
+end
+</div>
+
 ### What Is a Lose Condition?
 
 **Lose condition** = specific situation where the player **fails** and game ends!
 
 ### Common Lose Conditions
 
-| Type | Condition | Example |
-|-------|-----------|---------|
-| **No lives** | `lives = 0` | 3 hits = game over |
-| **Time out** | `timer = 0` | Didn't finish in time |
-| **Fall off world** | `y < -200` | Fell in pit |
-| **Touch hazard** | `touching lava/spikes` | Instant death |
-| **Fail objective** | `failed to protect NPC` | Escort mission failed |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(lives) = (0)&gt;
+</div>
+
+**No lives.** Three hits and the game ends.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(timer) = (0)&gt;
+</div>
+
+**Time out.** The countdown reaches zero before the goal is met.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;(y position) &lt; (-200)&gt;
+</div>
+
+**Fall off world.** The sprite drops below the bottom of the stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;touching [lava v]?&gt;
+</div>
+
+**Touch hazard.** One touch of lava or spikes is instant death.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;not &lt;(npc-protected)&gt;&gt;
+</div>
+
+**Fail objective.** An escort mission ends the moment the NPC doesn't survive.
+</div>
+
+</div>
 
 ---
 
 ### Lose Condition Implementation
 
-```
-forever
-    // Check lose conditions
-    if < (lives) = 0 > then
+<div class="scratch">
+forever // Check lose conditions
+    if &lt;(lives) = (0)&gt; then
         broadcast [game-over v]
         stop [this script v]
     end
-    
-    if < (timer) = 0 > then
+    if &lt;(timer) = (0)&gt; then
         broadcast [game-over v]
         stop [this script v]
     end
-    
-    if < (y position) < -200 > then
+    if &lt;(y position) &lt; (-200)&gt; then
         broadcast [game-over v]
         stop [this script v]
     end
-    
-    if <touching [lava v]?> then
+    if &lt;touching [lava v]?&gt; then
         broadcast [game-over v]
         stop [this script v]
     end
 end
-```
+</div>
 
 ---
 
 ### Game Over Sequence
 
-```
+<div class="scratch">
 when I receive [game-over v]
 stop [all v]
 switch backdrop to [game-over v]
 play sound [game-over-sound v]
-say [GAME OVER] for 3 secs
-wait 2 secs
-say (join [Final Score: ] (score)) for 5 secs
-wait 3 secs
+say [GAME OVER] for (3) seconds
+wait (2) seconds
+say (join [Final Score: ] (score)) for (5) seconds
+wait (3) seconds
 broadcast [return-to-menu v]
-```
+</div>
 
 ---
 
@@ -883,24 +1036,68 @@ broadcast [return-to-menu v]
 
 ```
 inventory list:
-[0] "health-potion"
-[1] "iron-sword"
-[2] "gold-key"
-[3] "magic-scroll"
+[1] "health-potion"
+[2] "iron-sword"
+[3] "gold-key"
+[4] "magic-scroll"
 ```
 
 ---
 
 ### Inventory Operations
 
-| Operation | Code |
-|-----------|------|
-| **Add item** | `add [potion] to [inventory v]` |
-| **Remove item** | `delete (1) of [inventory v]` |
-| **Use item** | `item (1) of [inventory v]`, then `delete (1)` |
-| **Check item** | `[potion] in [inventory v]?` |
-| **Count items** | `length of [inventory v]` |
-| **Show inventory** | `show list [inventory v]` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+add [potion] to [inventory v]
+</div>
+
+**Add item.** Adds a new item to the end of the list.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+delete (1) of [inventory v]
+</div>
+
+**Remove item.** Removes the item at a specific position.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [item-to-use v] to (item (1) of [inventory v])
+delete (1) of [inventory v]
+</div>
+
+**Use item.** Reads the item, then removes it from the list.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+[inventory v] contains [potion]?
+</div>
+
+**Check item.** True or false — is this item in the list?
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+length of [inventory v]
+</div>
+
+**Count items.** How many items are currently in the list.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+show list [inventory v]
+</div>
+
+**Show inventory.** Displays the list on the stage.
+</div>
+
+</div>
 
 ---
 
@@ -908,54 +1105,54 @@ inventory list:
 
 #### Simple Inventory (Stack)
 
-```
+<div class="scratch">
 when I receive [pickup-item v]
 add [item-name] to [inventory v]
-say (join [Got: ] (item-name)) for 2 secs
-```
+say (join [Got: ] (item-name)) for (2) seconds
+</div>
 
 #### Categorized Inventory
 
-```
-Categories: weapons, potions, keys, quest
+Group pickups into separate lists — weapons, potions, keys, and quest items:
 
+<div class="scratch">
 when I receive [pickup v]
-if < (item-type) = [weapon] > then
+if &lt;(item-type) = [weapon]&gt; then
     add (item) to [weapons v]
 else
-    if < (item-type) = [potion] > then
+    if &lt;(item-type) = [potion]&gt; then
         add (item) to [potions v]
     end
 end
-```
+</div>
 
 #### Weight/Slot Limit
 
-```
-if < (length of [inventory v]) < 20 > then
+<div class="scratch">
+if &lt;(length of [inventory v]) &lt; (20)&gt; then
     add [item] to [inventory v]
 else
-    say [Inventory full!] for 2 secs
+    say [Inventory full!] for (2) seconds
 end
-```
+</div>
 
 ---
 
 ### Inventory UI
 
-```
+<div class="scratch">
 when green flag clicked
 hide list [inventory v]
 
-when [i] key pressed
-if < (showing-inventory) > then
+when key [i v] pressed
+if &lt;(showing-inventory)&gt; then
     hide list [inventory v]
     set [showing-inventory v] to (false)
 else
     show list [inventory v]
     set [showing-inventory v] to (true)
 end
-```
+</div>
 
 ---
 
@@ -984,6 +1181,10 @@ In this chapter, you learned:
 - ✅ **Broadcast Storm** — Rate limiting, cooldowns
 - ✅ **Loop Termination** — Clean `stop` usage
 - ✅ **Boolean Combination** — And/Or/Not for complex conditions
+
+!!! mascot-celebration "You Just Built a Complete Game!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just mastered list-based inventories and high scores, wrote real win and lose conditions, coordinated sprites with synchronous broadcasts, and learned to test and debug like a pro. That's every system a finished game needs — score, lives, victory, defeat, and quality control — all working together in one project!
 
 ---
 

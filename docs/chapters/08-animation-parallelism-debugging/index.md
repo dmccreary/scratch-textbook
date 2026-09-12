@@ -56,6 +56,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Lights, Camera, Parallelism!"
+    ![Scratch the Cat waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ready to make your sprites move like they're alive, run dozens of scripts at once, and squash bugs like a pro? This chapter is where your projects stop feeling like slideshows and start feeling like real games — animated characters, scrolling worlds, and music that syncs to the action. You'll learn the exact techniques real game creators use for smooth animation, true parallel scripts, and systematic debugging. Let's build something purr-fect!
+
 ## Project Description — What Are We Building?
 
 ### The Big Picture
@@ -82,8 +86,9 @@ Before writing code, we **describe the project** — like a movie pitch!
 > **Controls:** Arrow keys move, Space jumps, Shift dashes.
 > **Look & Feel:** Bright cartoon style, upbeat chiptune music, particle effects on coin collect.
 
-!!! tip "📝 Write It Down First!"
-    A clear project description **keeps you focused** and helps you explain your game to others!
+!!! mascot-tip "Write It Down First!"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Before you drag a single block, jot down your project's title, core mechanic, and controls in a few sentences. A clear description keeps you focused while you build and makes it easy to explain your game to a friend later.
 
 ---
 
@@ -108,7 +113,7 @@ An **algorithm** is a **step-by-step recipe** for solving a problem — precise 
 | Thinking Step | Scratch Translation |
 |---------------|---------------------|
 | **Sequence** | Blocks top-to-bottom |
-| **Condition** | `if < > then else` |
+| **Condition** | `if <> then else` |
 | **Loop** | `repeat`, `forever`, `repeat until` |
 | **Variable** | `score`, `timer`, `velocity` |
 | **Function** | Custom block (`define jump`) |
@@ -117,31 +122,47 @@ An **algorithm** is a **step-by-step recipe** for solving a problem — precise 
 
 ## Costume Animation — Bring Sprites to Life!
 
+<div class="scratch">
+next costume
+</div>
+
 ### How Animation Works
 
-**Animation** = rapidly switching **costumes** (pictures) to create illusion of movement!
+**Animation** = rapidly switching **costumes** (pictures) to create the illusion of movement!
 
-### Animation Blocks (Looks → Purple)
+### Animation Blocks
 
-| Block | What It Does |
-|-------|--------------|
-| `switch costume to [costume1 v]` | Instant change to specific costume |
-| `next costume` | Cycle to next in list |
-| `costume #` | Reporter: current costume number |
+<div class="scratch">
+switch costume to [costume1 v]
+</div>
+
+Instant change to a specific costume.
+
+<div class="scratch">
+next costume
+</div>
+
+Cycles to the next costume in the list.
+
+<div class="scratch">
+(costume [number v])
+</div>
+
+Reporter — tells you the current costume number.
 
 ---
 
 ### Smooth Animation Pattern
 
-```
+<div class="scratch">
 when green flag clicked
 forever
     next costume
-    wait 0.1 secs
+    wait (0.1) seconds
 end
-```
+</div>
 
-**Cycles through all costumes** with a 0.1 sec delay between each!
+**Cycles through all costumes** with a 0.1 second delay between each!
 
 ---
 
@@ -160,45 +181,46 @@ end
 
 #### Walking Animation (4 costumes: walk1, walk2, walk3, walk4)
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    if <key [right arrow] pressed?> then
+    if &lt;key [right arrow v] pressed?&gt; then
         next costume
-        wait 0.1 secs
+        wait (0.1) seconds
     else
         switch costume to [idle v]
     end
 end
-```
+</div>
 
 #### Flying Animation (2 costumes: wings-up, wings-down)
 
-```
+<div class="scratch">
+when green flag clicked
 forever
     next costume
-    wait 0.15 secs
+    wait (0.15) seconds
 end
-```
+</div>
 
 #### Attack Animation (3 frames: windup, strike, recovery)
 
-```
-when [space] key pressed
+<div class="scratch">
+when key [space v] pressed
 switch costume to [windup v]
-wait 0.1 secs
+wait (0.1) seconds
 switch costume to [strike v]
-wait 0.05 secs
+wait (0.05) seconds
 switch costume to [recovery v]
-wait 0.1 secs
+wait (0.1) seconds
 switch costume to [idle v]
-```
+</div>
 
 ---
 
 ### Costume Center Reminder!
 
-**Set costume center to FEET** for walking characters — prevents "floating" or "sinking" during animation!
+**Set the costume center to FEET** for walking characters — this prevents "floating" or "sinking" during animation!
 
 ---
 
@@ -206,84 +228,84 @@ switch costume to [idle v]
 
 ### What Is Continuous Motion?
 
-**Continuous motion** = sprite moves **smoothly every frame** while key held, not in jumps!
+**Continuous motion** = a sprite moves **smoothly every frame** while a key is held, not in jumps!
 
 ### The Secret: Forever + If (Not Hat Blocks!)
 
 #### ❌ Wrong: Hat Blocks (Choppy!)
 
-```
-when [right arrow] key pressed
-change x by 10
-```
+<div class="scratch">
+when key [right arrow v] pressed
+change x by (10)
+</div>
 
 **Only moves ONCE per key press!** Choppy!
 
 #### ✅ Correct: Forever + If (Smooth!)
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    if <key [right arrow] pressed?> then
-        change x by 5
-        point in direction 90
+    if &lt;key [right arrow v] pressed?&gt; then
+        change x by (5)
+        point in direction (90)
         next costume
     end
-    if <key [left arrow] pressed?> then
-        change x by -5
-        point in direction -90
+    if &lt;key [left arrow v] pressed?&gt; then
+        change x by (-5)
+        point in direction (-90)
         next costume
     end
 end
-```
+</div>
 
 **Checks every frame** — buttery smooth!
+
+!!! mascot-thinking "One Trigger vs. Every Single Frame"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice the shift here: a hat block like `when key [right arrow v] pressed` fires once per press, but `forever` + `if` checks the condition again and again, dozens of times a second. That's the mental flip from "something happened" to "keep checking, frame after frame" — and it's the trick behind every smooth-feeling game.
 
 ---
 
 ### Continuous Motion Template
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    // Horizontal
-    if <key [right arrow] pressed?> then
+    if &lt;key [right arrow v] pressed?&gt; then
         change x by (speed)
-        point in direction 90
+        point in direction (90)
         next costume
     end
-    if <key [left arrow] pressed?> then
-        change x by (speed * -1)
-        point in direction -90
+    if &lt;key [left arrow v] pressed?&gt; then
+        change x by ((speed) * (-1))
+        point in direction (-90)
         next costume
     end
-    
-    // Vertical (gravity, jump)
-    // ... jump code here ...
-    
-    wait 0.01 secs    // Critical! Prevents lag
+    wait (0.01) seconds // critical! prevents lag
 end
-```
+</div>
+
+Vertical movement (gravity, jumping) slots in right alongside the horizontal checks above.
 
 ---
 
 ### Speed Variables
 
-```
+<div class="scratch">
 when green flag clicked
 set [walk-speed v] to (5)
 set [run-speed v] to (10)
 set [jump-power v] to (15)
 
 forever
-    if <key [right arrow] pressed?> then
+    if &lt;key [right arrow v] pressed?&gt; then
         change x by (walk-speed)
     end
-    // ...
 end
-```
+</div>
 
-**Easy to tweak!** Change `walk-speed` variable to adjust feel.
+**Easy to tweak!** Change the `walk-speed` variable to adjust the feel.
 
 ---
 
@@ -291,47 +313,47 @@ end
 
 ### The Illusion of Movement
 
-**Scrolling background** = move background opposite to player = feels like player moves through big world!
+**Scrolling background** = move the background opposite to the player = feels like the player moves through a big world!
 
 ---
 
 ### Method 1: Multiple Background Sprites
 
-```
-Background1 (original)
-Background2 (copy, positioned right next to 1)
+Use two copies of the backdrop sprite — `Background1` (the original) and `Background2` (a copy positioned right next to it) — then scroll both together:
 
+<div class="scratch">
 forever
-    change x by (-scroll-speed)  // Move left
-    if <x < -480> then
-        go to x: 480   // Wrap to right side
+    change x by ((-1) * (scroll-speed)) // move left
+    if &lt;(x position) &lt; (-480)&gt; then
+        set x to (480) // wrap to the right side
     end
 end
-```
+</div>
 
 ### Method 2: Backdrop Switching
 
-```
+<div class="scratch">
 forever
-    if <player near edge> then
+    if &lt;touching [edge v]?&gt; then
         next backdrop
-        // Reposition everything for new scene
     end
 end
-```
+</div>
+
+Reposition every sprite for the new scene right after switching.
 
 ### Scrolling Background Example
 
-```
+<div class="scratch">
 when green flag clicked
-go to x: 0 y: 0
+go to x: (0) y: (0)
 forever
-    change x by (-3)    // Scroll left at speed 3
-    if < (x position) < -480 > then
-        go to x: 480     // Teleport to right side
+    change x by (-3) // scroll left at speed 3
+    if &lt;(x position) &lt; (-480)&gt; then
+        set x to (480) // teleport to the right side
     end
 end
-```
+</div>
 
 **Two copies side-by-side** = infinite seamless scroll!
 
@@ -339,62 +361,78 @@ end
 
 ## Beat Synchronization — Music + Action!
 
+<div class="scratch">
+(tempo)
+</div>
+
 ### What Is Beat Sync?
 
 **Beat synchronization** = game actions happen **on the musical beat**!
 
 ### Using Tempo
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    wait (60 / tempo) secs    // One beat at current tempo
-    // Do something on beat
-    change color effect by 25
+    wait ((60) / (tempo)) seconds
+    change [color v] effect by (25)
 end
-```
+</div>
+
+One beat at the current tempo triggers whatever comes next.
+
+!!! mascot-tip "Ride the Beat Variable"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Drop `wait ((60) / (tempo)) seconds` inside a `forever` loop and any block right after it fires exactly on the beat. Change the `tempo` reporter's value, and your whole game speeds up or slows down with the music — no extra math needed.
 
 ### Beat Sync Examples
 
 #### Visual Beat
 
-```
+<div class="scratch">
+when green flag clicked
 forever
-    wait (60 / tempo) secs
-    change size by 10
-    wait 0.1 secs
-    change size by -10
+    wait ((60) / (tempo)) seconds
+    change size by (10)
+    wait (0.1) seconds
+    change size by (-10)
 end
-```
+</div>
 
 #### Obstacle Spawn on Beat
 
-```
+<div class="scratch">
+when green flag clicked
 forever
-    wait (60 / tempo) secs
-    if < (pick random 1 to 4) = 1 > then
+    wait ((60) / (tempo)) seconds
+    if &lt;(pick random (1) to (4)) = (1)&gt; then
         create clone of [obstacle v]
     end
 end
-```
+</div>
 
 #### Music-Reactive Background
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    wait (60 / tempo) secs
-    change color effect by 10
-    change pen color by 5
+    wait ((60) / (tempo)) seconds
+    change [color v] effect by (10)
+    change pen [color v] by (5)
 end
-```
-
-!!! tip "🎵 Beat Sync = Rhythm Game!"
-    Scratch's `tempo` variable (default 60 BPM) lets you sync **everything to music**!
+</div>
 
 ---
 
 ## Loop Nesting — Loops Inside Loops!
+
+<div class="scratch">
+repeat (10)
+    repeat (10)
+        move (10) steps
+    end
+end
+</div>
 
 ### What Is Loop Nesting?
 
@@ -402,13 +440,13 @@ end
 
 ### Nested Loop Structure
 
-```
+<div class="scratch">
 repeat (outer)
     repeat (inner)
-        // Do something many times
+        move (10) steps
     end
 end
-```
+</div>
 
 **Total iterations = outer × inner**
 
@@ -418,45 +456,46 @@ end
 
 #### Grid Pattern (Rows × Columns)
 
-```
-repeat (5)          // 5 rows
-    repeat (10)     // 10 columns
+<div class="scratch">
+repeat (5) // 5 rows
+    repeat (10) // 10 columns
         stamp
-        move 20 steps
+        move (20) steps
     end
-    go to x: -100 y: (y + 20)   // Next row
+    set x to (-100)
+    change y by (20) // next row
 end
-```
+</div>
 
 **Creates 50 stamps in a 5×10 grid!**
 
 #### Nested Animation
 
-```
-repeat (3)              // 3 waves
-    repeat (10)         // 10 ripples per wave
-        change size by 5
-        wait 0.05 secs
+<div class="scratch">
+repeat (3) // 3 waves
+    repeat (10) // 10 ripples per wave
+        change size by (5)
+        wait (0.05) seconds
     end
     repeat (10)
-        change size by -5
-        wait 0.05 secs
+        change size by (-5)
+        wait (0.05) seconds
     end
 end
-```
+</div>
 
 #### Spiral with Nested Loops
 
-```
-repeat (6)              // 6 arms
-    repeat (60)         // 60 steps per arm
-        move 5 steps
-        turn 1 degrees
-        change pen color by 1
+<div class="scratch">
+repeat (6) // 6 arms
+    repeat (60) // 60 steps per arm
+        move (5) steps
+        turn right (1) degrees
+        change pen [color v] by (1)
     end
-    turn 60 degrees     // Next arm
+    turn right (60) degrees // next arm
 end
-```
+</div>
 
 ---
 
@@ -476,39 +515,40 @@ end
 
 ### Patrol Enemy (Back and Forth)
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    move 3 steps
-    if <touching [edge v]?> then
-        turn 180 degrees
+    move (3) steps
+    if &lt;touching [edge v]?&gt; then
+        turn right (180) degrees
     end
 end
-```
+</div>
 
 ### Chase Enemy
 
-```
+<div class="scratch">
 when green flag clicked
 forever
     point towards [player v]
-    move 2 steps
-    if <touching [player v]?> then
+    move (2) steps
+    if &lt;touching [player v]?&gt; then
         broadcast [player-hit v]
     end
 end
-```
+</div>
 
 ### Smart Patrol (Platform Edges)
 
-```
+<div class="scratch">
+when green flag clicked
 forever
-    move 2 steps
-    if <touching [edge v]?> or <not <touching color [#8B4513]?>> then
-        turn 180 degrees
+    move (2) steps
+    if &lt;touching [edge v]?&gt; or not &lt;touching color [#8B4513]?&gt; then
+        turn right (180) degrees
     end
 end
-```
+</div>
 
 **Turns around at platform edges** (brown color #8B4513 = ground)!
 
@@ -518,14 +558,18 @@ end
 
 | Variation | Code Change |
 |-----------|-------------|
-| **Fast enemy** | `move 5 steps` instead of 2 |
-| **Jumping enemy** | Add jump logic on timer |
-| **Shooting enemy** | `if <distance < 200> then broadcast [shoot]` |
-| **Boss** | Phases: `broadcast [phase1]`, `broadcast [phase2]` |
+| **Fast enemy** | `move (5) steps` instead of 2 |
+| **Jumping enemy** | Add jump logic on a timer |
+| **Shooting enemy** | `if <(distance to [player v]) < (200)> then broadcast [shoot v]` |
+| **Boss** | Phases: `broadcast [phase1 v]`, `broadcast [phase2 v]` |
 
 ---
 
 ## Debugging Basics — Finding and Fixing Bugs!
+
+<div class="scratch">
+say (score) for (2) seconds
+</div>
 
 ### What Is a Bug?
 
@@ -539,8 +583,8 @@ A **bug** = code that doesn't do what you intended. **Debugging** = finding and 
 | **2. Isolate** | Find which script/block causes it |
 | **3. Hypothesize** | "I think the `change x by` is wrong" |
 | **4. Test** | Change one thing, test again |
-| **4. Fix** | Apply the correction |
-| **5. Verify** | Test thoroughly — did it fix? Any new bugs? |
+| **5. Fix** | Apply the correction |
+| **6. Verify** | Test thoroughly — did it fix? Any new bugs? |
 
 ---
 
@@ -550,9 +594,13 @@ A **bug** = code that doesn't do what you intended. **Debugging** = finding and 
 |------|------------|
 | **Block Highlighting** | Watch which block glows when running |
 | **Variable Watchers** | Show variables on stage — watch values live |
-| **`say` for Debug** | `say (variable) for 2 secs` — prints value |
-| **Single Step** | Click green flag, then press space to step (in some versions) |
-| **`wait` for Timing** | Add `wait 1 secs` to slow down and watch |
+| **`say` for Debug** | `say (variable) for (2) seconds` — prints the value |
+| **Single Step** | Slow the project down with `wait` blocks to watch each step |
+| **`wait` for Timing** | Add `wait (1) seconds` to slow down and watch |
+
+!!! mascot-tip "See What Your Sprite Is Thinking"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Stuck on a bug? Drag a `say (variable) for (2) seconds` block into the suspicious script, or right-click a variable and turn on its watcher on the stage. Watching the real value change beats guessing every time.
 
 ---
 
@@ -560,26 +608,29 @@ A **bug** = code that doesn't do what you intended. **Debugging** = finding and 
 
 | Bug | Likely Cause | Fix |
 |-----|--------------|-----|
-| **Sprite doesn't move** | Wrong hat block, or `forever` missing | Check hat block, add `forever` |
-| **Moves wrong direction** | `change x by -10` vs `10` | Check positive/negative |
-| **Jumps forever** | No ground check | Add `touching ground?` |
-| **Stuck in wall** | No edge check | Add `touching color?` check |
+| **Sprite doesn't move** | Wrong hat block, or `forever` missing | Check the hat block, add `forever` |
+| **Moves wrong direction** | `change x by (-10)` vs `(10)` | Check positive vs. negative |
+| **Jumps forever** | No ground check | Add a `touching [ground v]?` check |
+| **Stuck in wall** | No edge check | Add a `touching color [...]?` check |
 | **Score doesn't increase** | Wrong variable name | Check spelling: `score` vs `Score` |
-| **Infinite loop** | Missing `wait` in `forever` | Add `wait 0.01 secs` |
+| **Infinite loop feels frozen** | Missing `wait` in a busy loop | Add `wait (0.01) seconds` |
 
 ---
 
 ### Debugging with `say`
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    say (join [x: ] (x position)) for 0.1 secs
-    // Shows x position live!
+    say (join [x: ] (x position)) for (0.1) seconds
 end
-```
+</div>
 
 **Live variable display** — watch values change in real time!
+
+!!! mascot-encourage "Debugging Feels Slow at First — That's Normal"
+    ![Scratch the Cat giving an encouraging smile](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If hunting down a bug feels frustrating, you're right on schedule — every coder spends real time debugging, even the pros. You already know how to test one change at a time from earlier chapters; now just add a `say` block or a variable watcher and keep narrowing down where things go wrong.
 
 ---
 
@@ -587,10 +638,17 @@ end
 
 ### Broadcast vs Broadcast And Wait
 
-| Block | Behavior |
-|-------|----------|
-| `broadcast [msg]` | Sends, continues immediately |
-| `broadcast [msg] and wait` | Sends, **waits for ALL receivers** |
+<div class="scratch">
+broadcast [message1 v]
+</div>
+
+Sends the message and continues immediately.
+
+<div class="scratch">
+broadcast [message1 v] and wait
+</div>
+
+Sends the message and **waits for ALL receivers** to finish.
 
 ---
 
@@ -599,24 +657,24 @@ end
 | Use Case | Why |
 |----------|-----|
 | **Level start** | All sprites ready before gameplay |
-| **Cutscene steps** | Each phase completes before next |
+| **Cutscene steps** | Each phase completes before the next |
 | **Save game** | All data saved before continuing |
-| **Level complete** | All effects finish before next level |
+| **Level complete** | All effects finish before the next level |
 
 ---
 
 ### Broadcast And Wait Example
 
-```
+<div class="scratch">
 when green flag clicked
 broadcast [setup-level v] and wait
-wait 1 secs
+wait (1) seconds
 broadcast [spawn-player v] and wait
 broadcast [spawn-enemies v] and wait
 broadcast [game-start v]
-```
+</div>
 
-**Each phase finishes completely before next starts!**
+**Each phase finishes completely before the next starts!**
 
 ---
 
@@ -640,9 +698,9 @@ broadcast [game-start v]
 
 | Pattern | Sender | Receiver | Use For |
 |---------|--------|----------|---------|
-| **Event** | `broadcast [coin]` | `when I receive [coin]` | Score +10 |
-| **Command** | `broadcast [jump]` | `when I receive [jump]` | All sprites jump |
-| **Query** | `broadcast [get-score]` | `when I receive [get-score]` → `broadcast [score-is] + wait` | Get data |
+| **Event** | `broadcast [coin v]` | `when I receive [coin v]` | Score +10 |
+| **Command** | `broadcast [jump v]` | `when I receive [jump v]` | All sprites jump |
+| **Query** | `broadcast [get-score v]` | `when I receive [get-score v]` → `broadcast [score-is v] and wait` | Get data |
 
 ---
 
@@ -650,20 +708,19 @@ broadcast [game-start v]
 
 ### Broadcast (Fire and Forget)
 
-```
+<div class="scratch">
 broadcast [explosion v]
-// Continues immediately!
-```
+</div>
 
-**Doesn't wait** — sender continues instantly.
+**Doesn't wait** — the sender continues instantly.
 
 ### When to Use Async Broadcast
 
 | Situation | Why Async |
 |-----------|-----------|
 | **Effects** | Explosion, particles — don't block gameplay |
-| **Notifications** | "Achievement unlocked" — don't pause game |
-| **Logging** | Send analytics — don't slow down |
+| **Notifications** | "Achievement unlocked" — don't pause the game |
+| **Logging** | Send analytics — don't slow things down |
 
 ---
 
@@ -672,20 +729,65 @@ broadcast [explosion v]
 ### Decision Making in Code
 
 **Every game is a series of decisions:**
-- Is player on ground? → Allow jump
-- Is score > 100? → Level up
-- Touching enemy? → Lose life
-- Timer = 0? → Game over
+
+- Is the player on the ground? → Allow jump
+- Is the score greater than 100? → Level up
+- Touching an enemy? → Lose a life
+- Is the timer at 0? → Game over
 
 ### Decision Blocks
 
-| Block | Use For |
-|-------|---------|
-| `if < > then` | One option |
-| `if < > then else` | Two paths |
-| `repeat until < >` | Loop until condition |
-| `< > and < >` | Both must be true |
-| `< > or < >` | Either true |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;touching [edge v]?&gt; then
+    turn right (180) degrees
+end
+</div>
+
+One path — runs only when the condition is true.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;touching [coin v]?&gt; then
+    change [score v] by (10)
+else
+    change [lives v] by (-1)
+end
+</div>
+
+Two paths — picks one branch based on the condition.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat until &lt;touching [edge v]?&gt;
+    move (10) steps
+end
+</div>
+
+Loops until the condition becomes true.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;touching [coin v]?&gt; and &lt;(lives) > (0)&gt;
+</div>
+
+True only when both conditions are true.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;touching [spike v]?&gt; or &lt;touching [lava v]?&gt;
+</div>
+
+True when at least one condition is true.
+</div>
+
+</div>
 
 ---
 
@@ -693,39 +795,43 @@ broadcast [explosion v]
 
 ### If-Else Review
 
-```
-if <condition> then
-    // TRUE path
+<div class="scratch">
+if &lt;touching [edge v]?&gt; then
+    turn right (180) degrees
 else
-    // FALSE path
+    turn left (180) degrees
 end
-```
+</div>
+
+---
 
 ### Branching Examples
 
 #### Simple Branch
 
-```
-if <touching [coin v]?> then
-    change score by 10
+<div class="scratch">
+if &lt;touching [coin v]?&gt; then
+    change [score v] by (10)
 else
-    // Nothing, keep playing
+
 end
-```
+</div>
+
+An empty `else` branch is perfectly valid — it just means nothing happens when the coin isn't touched.
 
 #### Multi-Level Branch
 
-```
-if < (score) > 1000 > then
+<div class="scratch">
+if &lt;(score) > (1000)&gt; then
     broadcast [level-3 v]
 else
-    if < (score) > 500 > then
+    if &lt;(score) > (500)&gt; then
         broadcast [level-2 v]
     else
         broadcast [level-1 v]
     end
 end
-```
+</div>
 
 ---
 
@@ -733,9 +839,9 @@ end
 
 ### Clone Hat Block
 
-```
+<div class="scratch">
 when I start as a clone
-```
+</div>
 
 **Runs automatically for EACH new clone** — perfect for initialization!
 
@@ -743,20 +849,19 @@ when I start as a clone
 
 ### Clone Initialization Pattern
 
-```
+<div class="scratch">
 when I start as a clone
-go to x: (pick random -200 to 200) y: (180)
+go to x: (pick random (-200) to (200)) y: (180)
 set [velocity-y v] to (0)
 show
-
 forever
     change y by (velocity-y)
-    change [velocity-y v] by (-1)   // Gravity
-    if <touching [ground v]?> then
+    change [velocity-y v] by (-1) // gravity
+    if &lt;touching [ground v]?&gt; then
         delete this clone
     end
 end
-```
+</div>
 
 **Every clone sets itself up automatically!**
 
@@ -766,14 +871,30 @@ end
 
 | Step | Code |
 |------|------|
-| **Position** | `go to x: (random) y: (top)` |
-| **Variables** | `set [velocity v] to (0)` |
+| **Position** | `go to x: (pick random (-200) to (200)) y: (180)` |
+| **Variables** | `set [velocity-y v] to (0)` |
 | **Appearance** | `switch costume to [rock v]`, `show` |
-| **Behavior** | `forever { physics, check delete }` |
+| **Behavior** | `forever` loop with physics and a delete check |
 
 ---
 
 ## Concurrent Scripts — Parallel Power!
+
+<div class="scratch">
+when green flag clicked
+forever
+    move (2) steps
+end
+</div>
+
+<div class="scratch">
+when green flag clicked
+forever
+    next costume
+end
+</div>
+
+Both scripts belong to the **same sprite** and start the moment the green flag is clicked — and then they run together, not one after the other.
 
 ### What Are Concurrent Scripts?
 
@@ -783,6 +904,10 @@ end
 
 **Every hat block starts a new "thread"** that runs independently.
 
+!!! mascot-thinking "Not Taking Turns — Really at Once"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the paradigm shift: those two scripts above aren't secretly running one at a time super fast — Scratch genuinely juggles every hat block in parallel, all the time. Once you stop picturing your project as "one script doing everything in order" and start picturing "many small scripts, each minding its own business," parallel programs suddenly make a lot more sense.
+
 ### Managing Concurrency
 
 | Challenge | Solution |
@@ -791,32 +916,40 @@ end
 | **Race conditions** | Single "manager" script for shared data |
 | **Too many loops** | Combine into one main game loop |
 
+!!! mascot-warning "When Two Scripts Grab the Same Variable"
+    ![Scratch the Cat waving a warning sign](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    If two parallel scripts both change `score` at the exact same moment, one script's change can get stomped by the other — a race condition. Give shared variables a single "manager" script that owns the changes, or use `broadcast and wait` so updates happen in a guaranteed order.
+
 ---
 
 ### Concurrency Example
 
-```
-when green flag clicked          // Script 1: Player
+<div class="scratch">
+when green flag clicked // Script 1: Player
 forever
-    // Movement, jump, animation
+    change x by (2)
 end
 
-when green flag clicked          // Script 2: Enemies
+when green flag clicked // Script 2: Enemies
 forever
-    // Spawn, move, check collisions
+    next costume
 end
 
-when green flag clicked          // Script 3: UI
+when green flag clicked // Script 3: UI
 forever
-    // Update score display, timer
+    say (join [Score: ] (score)) for (0.1) seconds
 end
-```
+</div>
 
 **All three run simultaneously!**
 
 ---
 
 ## Physical Computing — Code Meets Reality!
+
+<div class="scratch">
+when [button A v] pressed
+</div>
 
 ### What Is Physical Computing?
 
@@ -825,7 +958,7 @@ end
 ### Scratch Hardware Extensions
 
 | Hardware | Extension | What It Does |
-|----------|-----------|--------------|
+|----------|-----------|---------------|
 | **Makey Makey** | Makey Makey | Everyday objects → keys |
 | **micro:bit** | micro:bit | Buttons, LEDs, accelerometer |
 | **LEGO SPIKE** | LEGO® | Motors, sensors, robots |
@@ -835,31 +968,33 @@ end
 
 ### Makey Makey Example
 
-```
-when [banana] key pressed
-change x by 10
-```
+<div class="scratch">
+when key [right arrow v] pressed // banana = right arrow key
+change x by (10)
+</div>
 
-**Banana = right arrow key!**
+**Banana = right arrow key!** Makey Makey turns everyday objects into keyboard presses, so any `when key [_ v] pressed` hat block works.
 
 ### micro:bit Example
 
-```
-when [button A] pressed
-change x by 10
+<div class="scratch">
+when [button A v] pressed
+change x by (10)
+</div>
 
-when [tilt left] detected
-turn 15 degrees
-```
+<div class="scratch">
+when tilted [left v]
+turn right (15) degrees
+</div>
 
 ### Physical Computing Ideas
 
 | Project | Hardware | Code Idea |
 |---------|----------|-----------|
-| **Fruit Piano** | Makey Makey | Each fruit = note |
-| **Tilt Maze** | micro:bit | Tilt to roll ball |
+| **Fruit Piano** | Makey Makey | Each fruit = a note |
+| **Tilt Maze** | micro:bit | Tilt to roll the ball |
 | **Robot Dance** | LEGO SPIKE | Code dance moves |
-| **Weather Station** | Go Direct | Log temp, graph it |
+| **Weather Station** | Go Direct | Log temperature, graph it |
 
 ---
 
@@ -867,13 +1002,13 @@ turn 15 degrees
 
 ### Repeat Until Block
 
-```
-repeat until <condition>
-    // Runs until condition becomes TRUE
+<div class="scratch">
+repeat until &lt;condition&gt;
+    move (10) steps
 end
-```
+</div>
 
-**Checks condition at START of each iteration.**
+**Checks the condition at the START of each iteration.**
 
 ---
 
@@ -881,51 +1016,81 @@ end
 
 #### Move Until Edge
 
-```
-repeat until <touching [edge v]?>
-    move 5 steps
+<div class="scratch">
+repeat until &lt;touching [edge v]?&gt;
+    move (5) steps
 end
-```
+</div>
 
 #### Wait for Button
 
-```
-repeat until <key [space] pressed?>
+<div class="scratch">
+repeat until &lt;key [space v] pressed?&gt;
     say [Press SPACE to start]
-    wait 0.5 secs
+    wait (0.5) seconds
 end
-```
+</div>
 
 #### Wait for Condition
 
-```
-repeat until < (score) > 100 >
-    wait 1 secs
+<div class="scratch">
+repeat until &lt;(score) > (100)&gt;
+    wait (1) seconds
 end
 broadcast [level-complete v]
-```
+</div>
 
 ---
 
 ### Repeat Until vs Other Loops
 
-| Loop Type | Stops When... |
-|-----------|---------------|
-| `repeat (10)` | After 10 iterations |
-| `forever` | Never (until stop) |
-| `repeat until <cond>` | Condition becomes TRUE |
+<div class="scratch">
+repeat (10)
+
+end
+</div>
+
+Stops after 10 iterations.
+
+<div class="scratch">
+forever
+
+end
+</div>
+
+Never stops (until the project itself stops).
+
+<div class="scratch">
+repeat until &lt;condition&gt;
+
+end
+</div>
+
+Stops as soon as the condition becomes true.
 
 ---
 
 ## Boolean Logic — And, Or, Not!
 
-### Boolean Operators (Operators → Green)
+### Boolean Operators
 
-| Block | Symbol | True When... |
-|-------|--------|--------------|
-| `< > and < >` | AND | Both TRUE |
-| `< > or < >` | OR | At least one TRUE |
-| `not < >` | NOT | Flips TRUE↔FALSE |
+<div class="scratch">
+&lt;touching [edge v]?&gt; and &lt;touching [coin v]?&gt;
+</div>
+
+True only when **both** are true.
+
+<div class="scratch">
+&lt;touching [edge v]?&gt; or &lt;touching [coin v]?&gt;
+</div>
+
+True when **at least one** is true.
+
+<div class="scratch">
+not &lt;touching [edge v]?&gt;
+</div>
+
+Flips true ↔ false.
 
 ---
 
@@ -933,28 +1098,27 @@ broadcast [level-complete v]
 
 #### AND — Both Must Be True
 
-```
-if <touching [coin v]?> and < (lives) > 0 > then
-    change score by 10
+<div class="scratch">
+if &lt;touching [coin v]?&gt; and &lt;(lives) > (0)&gt; then
+    change [score v] by (10)
 end
-```
+</div>
 
 #### OR — At Least One
 
-```
-if <touching [spike v]?> or <touching [lava v]?> then
+<div class="scratch">
+if &lt;touching [spike v]?&gt; or &lt;touching [lava v]?&gt; then
     broadcast [player-hit v]
 end
-```
+</div>
 
 #### NOT — Flip It
 
-```
-if <not <touching [ground v]?>> then
-    // In the air!
-    change [velocity-y v] by (-1)   // Gravity
+<div class="scratch">
+if not &lt;touching [ground v]?&gt; then
+    change [velocity-y v] by (-1) // gravity
 end
-```
+</div>
 
 ### Truth Tables
 
@@ -971,20 +1135,49 @@ end
 
 ### Dice Roll = Pick Random 1 to 6
 
-```
+<div class="scratch">
 pick random (1) to (6)
-```
+</div>
 
 **Simulates a 6-sided die!**
 
 ### Dice Roll Uses
 
-| Code | Simulates | Use For |
-|------|-----------|---------|
-| `pick random 1 to 6` | 1d6 | Board games, RPGs |
-| `pick random 1 to 20` | 1d20 | D&D style |
-| `(pick random 1 to 6) + (pick random 1 to 6)` | 2d6 | Monopoly, Catan |
-| `pick random 1 to 100` | d100 | Percentile rolls |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (6)
+</div>
+
+Simulates 1d6 — great for board games and RPGs.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (20)
+</div>
+
+Simulates 1d20 — the D&D-style roll.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(pick random (1) to (6)) + (pick random (1) to (6))
+</div>
+
+Simulates 2d6 — Monopoly and Catan style rolls.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (100)
+</div>
+
+Simulates a d100 — percentile rolls.
+</div>
+
+</div>
 
 ---
 
@@ -992,33 +1185,32 @@ pick random (1) to (6)
 
 #### Attack Roll
 
-```
-if < (pick random 1 to 20) > 15 > then
-    // Critical hit!
+<div class="scratch">
+if &lt;(pick random (1) to (20)) > (15)&gt; then
     change [damage v] by (10)
 else
     change [damage v] by (5)
 end
-```
+</div>
 
 #### Loot Table
 
-```
-set [roll v] to (pick random 1 to 100)
-if < (roll) < 50 > then
+<div class="scratch">
+set [roll v] to (pick random (1) to (100))
+if &lt;(roll) &lt; (50)&gt; then
     add [common-item] to [inventory v]
 else
-    if < (roll) < 80 > then
+    if &lt;(roll) &lt; (80)&gt; then
         add [uncommon-item] to [inventory v]
     else
-        if < (roll) < 95 > then
+        if &lt;(roll) &lt; (95)&gt; then
             add [rare-item] to [inventory v]
         else
             add [legendary-item] to [inventory v]
         end
     end
 end
-```
+</div>
 
 ---
 
@@ -1026,21 +1218,57 @@ end
 
 ### Change Variable Block
 
-```
+<div class="scratch">
 change [score v] by (10)
-```
+</div>
 
-**Adds (or subtracts) from current value.**
+**Adds (or subtracts) from the current value.**
 
 ### Change Variable Patterns
 
-| Code | Effect |
-|------|--------|
-| `change [score v] by (10)` | +10 |
-| `change [score v] by (-5)` | -5 |
-| `change [x v] by (10)` | Move right |
-| `change [x v] by (-10)` | Move left |
-| `change [velocity-y v] by (-1)` | Gravity! |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (10)
+</div>
+
++10 to the score.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (-5)
+</div>
+
+-5 from the score.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change x by (10)
+</div>
+
+Moves right.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change x by (-10)
+</div>
+
+Moves left.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [velocity-y v] by (-1)
+</div>
+
+Gravity!
+</div>
+
+</div>
 
 ---
 
@@ -1048,7 +1276,7 @@ change [score v] by (10)
 
 #### Score System
 
-```
+<div class="scratch">
 when I receive [coin v]
 change [score v] by (10)
 
@@ -1057,36 +1285,37 @@ change [score v] by (50)
 
 when I receive [boss-defeated v]
 change [score v] by (1000)
-```
+</div>
 
 #### Physics Velocity
 
-```
+<div class="scratch">
 when green flag clicked
 set [velocity-x v] to (0)
 set [velocity-y v] to (0)
 forever
-    change [velocity-y v] by (-0.5)   // Gravity
+    change [velocity-y v] by (-0.5) // gravity
     change x by (velocity-x)
     change y by (velocity-y)
 end
-```
+</div>
 
 #### Cooldown Timer
 
-```
-when [space] key pressed
-if < (cooldown) = 0 > then
-    set [cooldown v] to (30)   // 30 frames = 0.5 sec at 60fps
+<div class="scratch">
+when key [space v] pressed
+if &lt;(cooldown) = (0)&gt; then
+    set [cooldown v] to (30) // 30 frames = 0.5 sec at 60fps
     broadcast [shoot v]
 end
 
+when green flag clicked
 forever
-    if < (cooldown) > 0 > then
+    if &lt;(cooldown) > (0)&gt; then
         change [cooldown v] by (-1)
     end
 end
-```
+</div>
 
 ---
 
@@ -1094,17 +1323,17 @@ end
 
 ### For All Sprites (Global)
 
-```
-set [score v] to (0)    // ONE box, everyone shares
-```
+<div class="scratch">
+set [score v] to (0)
+</div>
 
 **All sprites see and change the SAME value.**
 
 ### For This Sprite Only (Local)
 
-```
-set [health v] to (100)    // EACH sprite has own box
-```
+<div class="scratch">
+set [health v] to (100)
+</div>
 
 **Each sprite has its OWN private copy.**
 
@@ -1121,15 +1350,15 @@ set [health v] to (100)    // EACH sprite has own box
 
 ### Scope Example
 
-```
-Player script:
-set [score v] to (0)           // Global
-set [player-health v] to (100) // Local
+<div class="scratch">
+set [score v] to (0) // global — Player script
+set [player-health v] to (100) // local — Player script
+</div>
 
-Enemy script:
+<div class="scratch">
 when I start as a clone
-set [enemy-health v] to (50)   // Local (each clone own!)
-```
+set [enemy-health v] to (50) // local — each clone owns its own copy, Enemy script
+</div>
 
 ---
 
@@ -1137,11 +1366,11 @@ set [enemy-health v] to (50)   // Local (each clone own!)
 
 ### Add To List Block
 
-```
+<div class="scratch">
 add [apple] to [inventory v]
-```
+</div>
 
-**Appends to END of list.**
+**Appends to the END of the list.**
 
 ---
 
@@ -1149,26 +1378,26 @@ add [apple] to [inventory v]
 
 #### Inventory System
 
-```
+<div class="scratch">
 when I receive [found-apple v]
 add [apple] to [inventory v]
-say [Got an apple!] for 2 secs
-```
+say [Got an apple!] for (2) seconds
+</div>
 
 #### High Score List
 
-```
+<div class="scratch">
 when I receive [game-over v]
 add (score) to [high-scores v]
-```
+</div>
 
 #### Level Codes
 
-```
+<div class="scratch">
 when green flag clicked
 add [LEVEL1-CODE] to [level-codes v]
 add [LEVEL2-CODE] to [level-codes v]
-```
+</div>
 
 ---
 
@@ -1176,11 +1405,11 @@ add [LEVEL2-CODE] to [level-codes v]
 
 ### Length of List Block
 
-```
+<div class="scratch">
 length of [inventory v]
-```
+</div>
 
-**Reporter: tells you how many items in list.**
+**Reporter: tells you how many items are in the list.**
 
 ---
 
@@ -1188,28 +1417,28 @@ length of [inventory v]
 
 #### Check If Empty
 
-```
-if < (length of [inventory v]) = 0 > then
-    say [Inventory empty!] for 2 secs
+<div class="scratch">
+if &lt;(length of [inventory v]) = (0)&gt; then
+    say [Inventory empty!] for (2) seconds
 end
-```
+</div>
 
 #### Limit List Size
 
-```
+<div class="scratch">
 add (new-score) to [high-scores v]
-if < (length of [high-scores v]) > 10 > then
-    delete (11) of [high-scores v]   // Remove 11th (keep top 10)
+if &lt;(length of [high-scores v]) > (10)&gt; then
+    delete (11) of [high-scores v]
 end
-```
+</div>
 
 #### Loop Through List
 
-```
+<div class="scratch">
 repeat (length of [inventory v])
-    say (item (loop-counter) of [inventory v]) for 1 secs
+    say (item (loop-counter) of [inventory v]) for (1) seconds
 end
-```
+</div>
 
 ---
 
@@ -1241,6 +1470,10 @@ In this chapter, you learned:
 - ✅ **Variable Scope** — Global vs local variables
 - ✅ **Add To List** — Build collections dynamically
 - ✅ **List Length** — Count items, limit size, loop through
+
+!!! mascot-celebration "You're an Animator, a Debugger, and a Parallel Programmer!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Look at everything you just mastered — costume animation, scrolling backgrounds, nested loops, clones, and broadcasting with real synchronization, all while running many scripts at once without them tripping over each other. You even learned to debug like a pro. That's a huge chunk of what makes a real game tick!
 
 ---
 

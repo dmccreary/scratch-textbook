@@ -59,6 +59,36 @@ boolean-slot condition, fetch the built page's raw HTML and confirm there
 is no stray closing tag (like `</key>` or `</touching>`) immediately before
 the div's own `</div>` — that stray tag is the signature of this bug.
 
+**A bare `<` (less-than) needs the same escaping, even outside a boolean
+wrapper.** Independent of the HTML-tag issue above, scratchblocks.js itself
+mis-parses a literal `<` comparison operator written at the top level of a
+script line — `(10) < (20)` silently renders as `1020`, with the operator
+just gone. `>` and `=` do not have this problem and may be written bare.
+Always escape a literal `<` as `&lt;`, e.g. `(timer) &lt; (10)`; when showing
+a bare comparison as a standalone example (not already inside an `if`/
+`repeat until`), wrap the whole thing in `&lt;...&gt;` too, since a
+comparison is semantically a boolean/hexagon value, e.g. `&lt;(10) &lt;
+(20)&gt;`.
+
+**A comment-only `else` branch is silently dropped.** If an `else` branch's
+only content is a `// comment` line with no real block, scratchblocks drops
+that comment from the rendered SVG entirely — no error, it just isn't
+there. (A comment-only `then` branch with no `else` renders fine; it's
+specifically the empty-looking `else` case that fails.) If you need to show
+an "otherwise, do nothing" branch, leave it truly empty and put the
+explanation in surrounding prose instead of inside the block.
+
+**A blank line inside a script starts a new, disconnected script.** Within
+one `div.scratch` block, a blank line is scratchblocks' syntax for "end this
+script, start a new independent one" — it is not just cosmetic whitespace.
+Never put a blank line between sibling blocks that must stay connected
+(e.g. between two `if` blocks that both belong inside the same `forever`
+loop); doing so silently splits the loop into two disconnected top-level
+scripts in the rendered output. Only use a blank line inside a div when you
+genuinely intend to show multiple separate scripts side by side (e.g. a
+`when green flag clicked` script next to an unrelated `when I receive`
+script).
+
 ### Lead With the Block
 
 When introducing a **new block** for the first time, place an inline
@@ -464,3 +494,12 @@ pedagogical requirement rather than a garnish.
    --strict` fails with a "target is not found among documentation files"
    warning.
 3. **Admonition bodies** are indented four spaces.
+4. **Frontmatter `description:` values containing a colon must be quoted.**
+   `description: Guides you through the cycle: imagine, plan, create` is
+   invalid YAML as a plain scalar — the embedded `:` breaks parsing. Unlike
+   most content mistakes, `mkdocs build --strict` does **not** flag this;
+   the frontmatter silently fails to parse as metadata and the raw
+   `description:` line renders as visible text at the top of the page. Wrap
+   any `description` (or `title`) value that contains a colon in double
+   quotes: `description: "Guides you through the cycle: imagine, plan,
+   create"`.

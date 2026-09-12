@@ -54,21 +54,37 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Time to Give Your Project a Memory!"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ready to give your projects a memory? In this chapter you'll build score counters, inventories, and high-score lists — the same tools real game developers use to track everything that changes. You'll turn simple boxes called variables and ordered lists into the backbone of a real game. Let's build something purr-fect!
+
 ## Comparison Operators — Making Number Decisions!
 
 ### Greater Than Operator (>)
 
-```
-< (10) > (5) >
-```
+<div class="scratch">
+&lt;(10) > (5)&gt;
+</div>
 
 **True if left number is BIGGER than right number.**
 
-| Example | Result |
-|---------|--------|
-| `10 > 5` | True ✅ |
-| `5 > 10` | False ❌ |
-| `10 > 10` | False ❌ (not greater, equal) |
+<div class="scratch">
+&lt;(10) > (5)&gt;
+</div>
+
+**True** — 10 is bigger than 5.
+
+<div class="scratch">
+&lt;(5) > (10)&gt;
+</div>
+
+**False** — 5 is not bigger than 10.
+
+<div class="scratch">
+&lt;(10) > (10)&gt;
+</div>
+
+**False** — equal numbers are never "greater than."
 
 **Use for:** High score checks, boundary limits, "is big enough?"
 
@@ -76,17 +92,29 @@ This chapter builds on concepts from:
 
 ### Equal Operator (=)
 
-```
-< (10) = (10) >
-```
+<div class="scratch">
+&lt;(10) = (10)&gt;
+</div>
 
 **True if both numbers are EXACTLY the same.**
 
-| Example | Result |
-|---------|--------|
-| `10 = 10` | True ✅ |
-| `10 = 5` | False ❌ |
-| `0 = 0` | True ✅ |
+<div class="scratch">
+&lt;(10) = (10)&gt;
+</div>
+
+**True** — both sides match exactly.
+
+<div class="scratch">
+&lt;(10) = (5)&gt;
+</div>
+
+**False** — 10 and 5 are different.
+
+<div class="scratch">
+&lt;(0) = (0)&gt;
+</div>
+
+**True** — zero equals zero.
 
 **Use for:** Exact matches, "did we reach exactly 100?", "is timer 0?"
 
@@ -96,9 +124,9 @@ This chapter builds on concepts from:
 
 | Block | Symbol | True When... | Memory Trick |
 |-------|--------|--------------|--------------|
-| `< >` | < | Left SMALLER than right | "Less than" points to smaller |
-| `< >` | > | Left BIGGER than right | "Greater than" points to bigger |
-| `< = >` | = | Left EQUALS right | Two lines = same |
+| `(1) < (2)` | < | Left SMALLER than right | "Less than" points to smaller |
+| `(1) > (2)` | > | Left BIGGER than right | "Greater than" points to bigger |
+| `(1) = (2)` | = | Left EQUALS right | Two lines = same |
 
 ---
 
@@ -106,20 +134,49 @@ This chapter builds on concepts from:
 
 ### Pick Random Block (Operators → Green)
 
-```
+<div class="scratch">
 pick random (1) to (10)
-```
+</div>
 
 **Gives a random whole number** between the two numbers (including both!).
 
 ### Random Number Uses
 
-| Code | Range | Use For |
-|------|-------|---------|
-| `pick random 1 to 6` | 1–6 | Dice roll |
-| `pick random 1 to 100` | 1–100 | Percent chance (1% each) |
-| `pick random -10 to 10` | -10 to 10 | Random direction |
-| `pick random 0 to 360` | 0–360 | Random angle |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (6)
+</div>
+
+Roll a die (1–6).
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (100)
+</div>
+
+Percent chance, 1% per number.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (-10) to (10)
+</div>
+
+Random direction.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (0) to (360)
+</div>
+
+Random angle.
+</div>
+
+</div>
 
 ---
 
@@ -127,28 +184,28 @@ pick random (1) to (10)
 
 #### Random Spawn Position
 
-```
+<div class="scratch">
 when I start as a clone
-go to x: (pick random -200 to 200) y: (pick random -150 to 150)
-```
+go to x: (pick random (-200) to (200)) y: (pick random (-150) to (150))
+</div>
 
 #### Random Chance (20% = 1 in 5)
 
-```
-if < (pick random 1 to 5) = 1 > then
+<div class="scratch">
+if &lt;(pick random (1) to (5)) = (1)&gt; then
     // 20% chance!
     broadcast [rare-item v]
 end
-```
+</div>
 
 #### Random Wait
 
-```
+<div class="scratch">
 forever
-    wait (pick random 1 to 3) secs
+    wait (pick random (1) to (3)) seconds
     create clone of [myself v]
 end
-```
+</div>
 
 ---
 
@@ -156,12 +213,12 @@ end
 
 ### Repeat Block (Control → Orange)
 
-```
+<div class="scratch">
 repeat (10)
-    move 10 steps
-    turn 15 degrees
+    move (10) steps
+    turn right (15) degrees
 end
-```
+</div>
 
 **Runs exactly N times** — perfect when you know how many!
 
@@ -171,31 +228,31 @@ end
 
 #### Draw a Polygon
 
-```
+<div class="scratch">
 repeat (5)        // Pentagon
-    move 100 steps
-    turn 72 degrees    // 360/5 = 72
+    move (100) steps
+    turn right (72) degrees    // 360/5 = 72
 end
-```
+</div>
 
 #### Spawn Exact Number
 
-```
+<div class="scratch">
 repeat (10)
     create clone of [myself v]
-    wait 0.5 secs
+    wait (0.5) seconds
 end
-```
+</div>
 
 #### Countdown
 
-```
+<div class="scratch">
 set [countdown v] to (10)
 repeat (10)
-    say (countdown) for 1 secs
+    say (countdown) for (1) seconds
     change [countdown v] by (-1)
 end
-```
+</div>
 
 ---
 
@@ -203,22 +260,58 @@ end
 
 ### What Is a Variable?
 
-A **variable** is a **named box** that holds **one value** that can **change**.
-
-```
+<div class="scratch">
 set [score v] to (0)    // Put 0 in the "score" box
 change [score v] by (10)  // Add 10 to the box
-```
+</div>
+
+A **variable** is a **named box** that holds **one value** that can **change**.
 
 ### Variable Blocks (Variables → Red)
 
-| Block | What It Does |
-|-------|--------------|
-| `set [name v] to (value)` | Put exact value in box |
-| `change [name v] by (amount)` | Add/subtract from box |
-| `show variable [name]` | Display on stage |
-| `hide variable [name]` | Remove from stage |
-| `variable` (reporter) | Get current value |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+set [score v] to (0)
+</div>
+
+Put an exact value in the box.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (1)
+</div>
+
+Add or subtract from the box.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+show variable [score v]
+</div>
+
+Display the variable on stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+hide variable [score v]
+</div>
+
+Remove the variable from stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(score)
+</div>
+
+Reporter: get the current value.
+</div>
+
+</div>
 
 ---
 
@@ -228,9 +321,11 @@ change [score v] by (10)  // Add 10 to the box
 2. Click **Make a Variable**
 3. Name it: `score`, `lives`, `timer`, `level`, `high-score`
 4. Choose scope:
+
    - **For all sprites** = shared (one box for everyone)
    - **For this sprite only** = private (each sprite has own)
-3. Click OK!
+
+5. Click OK!
 
 ---
 
@@ -241,46 +336,50 @@ change [score v] by (10)  // Add 10 to the box
 | **For all sprites** | Everyone shares ONE box | Score, timer, high score, level |
 | **For this sprite only** | Each sprite has own box | Player health, enemy speed, sprite state |
 
+!!! mascot-warning "Mind Where Your Variable Lives"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Pick "for this sprite only" and every other sprite quietly gets its own separate copy — build a shared score that way and it will look broken. If more than one sprite needs to read or change a value, like a score or a timer, make it "for all sprites" instead.
+
 ---
 
 ### Variable Examples
 
 #### Score System
 
-```
+<div class="scratch">
 when green flag clicked
 set [score v] to (0)
 show variable [score v]
 
 when I receive [coin-collected v]
 change [score v] by (10)
-```
+</div>
 
 #### Lives System
 
-```
+<div class="scratch">
 when green flag clicked
 set [lives v] to (3)
 show variable [lives v]
 
 when I receive [player-hit v]
 change [lives v] by (-1)
-if < (lives) = 0 > then
+if &lt;(lives) = (0)&gt; then
     broadcast [game-over v]
 end
-```
+</div>
 
 #### Timer
 
-```
+<div class="scratch">
 when green flag clicked
 set [timer v] to (0)
 show variable [timer v]
 forever
-    wait (1) secs
+    wait (1) seconds
     change [timer v] by (1)
 end
-```
+</div>
 
 ---
 
@@ -288,17 +387,17 @@ end
 
 ### Show Variable
 
-```
+<div class="scratch">
 show variable [score v]
-```
+</div>
 
 **Displays the variable** on the stage (top-left by default).
 
 ### Hide Variable
 
-```
+<div class="scratch">
 hide variable [score v]
-```
+</div>
 
 **Removes from stage** — but value still exists!
 
@@ -313,23 +412,32 @@ hide variable [score v]
 | Game over | `hide variable [lives]`, `show variable [final-score]` |
 | Pause menu | `hide variable [timer]` |
 
-!!! tip "👁️ Show What Matters!"
-    Only show variables the player **needs to see right now**. Too many = clutter!
+!!! mascot-tip "Show What Matters!"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Only show the variables your player needs to see right now — hide the rest so the stage doesn't turn into clutter. A clean stage with just a score and a lives counter reads far better than five stacked numbers nobody asked for.
 
 ---
 
 ## Lists — Collections of Values!
 
+<div class="scratch">
+add [thing v] to [my list v]
+</div>
+
 ### What Is a List?
 
 A **list** is like a variable, but holds **MULTIPLE values** in order — like a shopping list!
 
+!!! mascot-thinking "One Box vs. Many Boxes"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    A variable is a single box that holds one value at a time — set a new value, and the old one is gone forever. A list is a whole shelf of numbered boxes that all exist at once, in order, so you can keep every high score instead of just the latest one. Once you can picture that difference, you'll know instantly whether a piece of data belongs in a variable or a list.
+
 ```
 List: inventory
-[0] "sword"
-[1] "shield"
-[2] "potion"
-[3] "key"
+1: "sword"
+2: "shield"
+3: "potion"
+4: "key"
 ```
 
 ---
@@ -346,18 +454,93 @@ List: inventory
 
 ### List Blocks (Variables → Dark Red)
 
-| Block | What It Does |
-|-------|--------------|
-| `add [thing v] to [list v]` | Append to end |
-| `delete (1) of [list v]` | Remove item at position |
-| `insert [thing v] at (1) of [list v]` | Insert at position |
-| `replace item (1) of [list v] with [thing v]` | Change existing |
-| `item (1) of [list v]` | Reporter: get value at position |
-| `length of [list v]` | Reporter: how many items |
-| `list contains [thing v]?` | Boolean: is it in list? |
-| `show list [name]` | Display on stage |
-| `hide list [name]` | Hide from stage |
-| `delete all of [list v]` | Clear everything |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+add [thing v] to [list v]
+</div>
+
+Append to the end.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+delete (1) of [list v]
+</div>
+
+Remove the item at a position.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+delete all of [list v]
+</div>
+
+Clear everything.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+insert [thing v] at (1) of [list v]
+</div>
+
+Insert at a position.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+replace item (1) of [list v] with [thing v]
+</div>
+
+Change an existing item.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+item (1) of [list v]
+</div>
+
+Reporter: get the value at a position.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+length of [list v]
+</div>
+
+Reporter: how many items are in the list.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+&lt;[list v] contains [thing v]?&gt;
+</div>
+
+Boolean: is it in the list?
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+show list [list v]
+</div>
+
+Display the list on stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+hide list [list v]
+</div>
+
+Hide the list from stage.
+</div>
+
+</div>
+
+!!! mascot-warning "Lists Start at 1, Not 0!"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Unlike many programming languages, Scratch lists number their first item position (1), not position (0) — ask for `item (0) of [list v]` and you'll just get nothing. When you need the first item, always reach for `item (1) of [list v]`.
 
 ---
 
@@ -365,32 +548,32 @@ List: inventory
 
 #### Inventory System
 
-```
+<div class="scratch">
 when green flag clicked
 delete all of [inventory v]
-add [sword] to [inventory v]
-add [shield] to [inventory v]
+add [sword v] to [inventory v]
+add [shield v] to [inventory v]
 show list [inventory v]
 
 when I receive [found-potion v]
-add [potion] to [inventory v]
-```
+add [potion v] to [inventory v]
+</div>
 
 #### High Score List
 
-```
+<div class="scratch">
 when green flag clicked
 delete all of [high-scores v]
-repeat 5
+repeat (5)
     add (0) to [high-scores v]
 end
 
 when I receive [new-score v]
-if < (score) > (item (1) of [high-scores v]) > then
+if &lt;(score) > (item (1) of [high-scores v])&gt; then
     insert (score) at (1) of [high-scores v]
     delete (6) of [high-scores v]  // Keep top 5
 end
-```
+</div>
 
 ---
 
@@ -398,16 +581,20 @@ end
 
 ### What Are Parameters?
 
-**Parameters** are **inputs** for your custom blocks — like function arguments!
-
-```
+<div class="scratch">
 define jump (height)
 change y by (height)
-wait 0.2 secs
-change y by (height * -1)
-```
+wait (0.2) seconds
+change y by ((height) * (-1))
+</div>
+
+**Parameters** are **inputs** for your custom blocks — like function arguments!
 
 **Use it:** `jump (100)` → jumps high! `jump (20)` → small hop!
+
+!!! mascot-encourage "Parameters Take Practice"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If custom block parameters feel confusing at first, that's completely normal — you're combining two big ideas, custom blocks and changeable inputs, at once. You already mastered variables, so try building a single one-parameter block, like `jump (height)`, before adding a second input.
 
 ---
 
@@ -417,7 +604,7 @@ change y by (height * -1)
 2. Click **Options** (gear icon)
 3. Click **Add number input** or **Add string input**
 4. Name it: `height`, `speed`, `name`, `color`
-6. Click OK — parameter appears in `define` hat!
+5. Click OK — parameter appears in `define` hat!
 
 ---
 
@@ -435,33 +622,33 @@ change y by (height * -1)
 
 #### Jump with Height
 
-```
+<div class="scratch">
 define jump (height)
 change y by (height)
-wait 0.2 secs
-change y by (height * -1)
-```
+wait (0.2) seconds
+change y by ((height) * (-1))
+</div>
 
 **Use:** `jump (100)` = high jump, `jump (20)` = small hop
 
 #### Draw Polygon
 
-```
+<div class="scratch">
 define polygon (sides) (size)
 repeat (sides)
     move (size) steps
-    turn (360 / sides) degrees
+    turn right ((360) / (sides)) degrees
 end
-```
+</div>
 
 **Use:** `polygon (5) (100)` = pentagon, `polygon (8) (50)` = octagon!
 
 #### Glide to Position
 
-```
+<div class="scratch">
 define glide-to (target-x) (target-y) (seconds)
 glide (seconds) secs to x: (target-x) y: (target-y)
-```
+</div>
 
 **Use:** `glide-to (100) (50) (2)` — smooth move to (100, 50) in 2 secs!
 
@@ -477,21 +664,25 @@ glide (seconds) secs to x: (target-x) y: (target-y)
 
 ### In Scratch: Custom Blocks = Abstraction!
 
-```
+<div class="scratch">
 define draw-house (size)
-repeat 4
+repeat (4)
     move (size) steps
-    turn 90 degrees
+    turn right (90) degrees
 end
 move (size) steps
-turn 30 degrees
-repeat 3
+turn right (30) degrees
+repeat (3)
     move (size) steps
-    turn 120 degrees
+    turn right (120) degrees
 end
-```
+</div>
 
 **User just types:** `draw-house (100)` — doesn't need to know the math!
+
+!!! mascot-thinking "Abstraction: Hiding the How"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice how `draw-house (100)` hides an entire sequence of moves and turns behind one simple name — the person using the block doesn't need to know the math inside it at all. That's the same idea behind pressing "Start" on a microwave: a simple interface hiding a complicated mechanism. Every custom block you write from now on is really a tiny act of abstraction.
 
 ---
 
@@ -510,27 +701,84 @@ end
 
 ### Pen Blocks Review (Pen → Green)
 
-| Block | What It Does |
-|-------|--------------|
-| `pen down` | Start drawing trail |
-| `pen up` | Stop drawing |
-| `erase all` | Clear all pen marks |
-| `set pen color to [color]` | Set exact color |
-| `change pen color by (10)` | Cycle through colors |
-| `set pen size to (5)` | Line thickness |
-| `change pen size by (5)` | Thicker/thinner |
-| `stamp` | Leave costume copy as drawing |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pen down
+</div>
+
+Start drawing a trail.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pen up
+</div>
+
+Stop drawing.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+erase all
+</div>
+
+Clear all pen marks.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen color to [#0000ff]
+</div>
+
+Set an exact color.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen color by (10)
+</div>
+
+Cycle through colors.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen size to (5)
+</div>
+
+Set the line thickness.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen size by (5)
+</div>
+
+Make the line thicker or thinner.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+stamp
+</div>
+
+Leave a costume copy as a drawing.
+</div>
+
+</div>
 
 ---
 
 ### Pen Down / Pen Up
 
-```
+<div class="scratch">
 pen down      // Start drawing
-move 100 steps
+move (100) steps
 pen up        // Stop drawing
-move 50 steps // No trail
-```
+move (50) steps // No trail
+</div>
 
 **Only draws when pen is DOWN!**
 
@@ -538,27 +786,35 @@ move 50 steps // No trail
 
 ### Pen Color
 
-| Block | What It Does |
-|-------|--------------|
-| `set pen color to [color]` | Pick exact color |
-| `change pen color by (10)` | Cycle through spectrum (0-200) |
+<div class="scratch">
+set pen color to [#0000ff]
+</div>
+
+Pick an exact color.
+
+<div class="scratch">
+change pen color by (10)
+</div>
+
+Cycle through the color spectrum (0–200).
 
 ### Pen Size
 
-```
+<div class="scratch">
 set pen size to (10)     // Thick line
 change pen size by (5)   // Thicker
 set pen size to (1)      // Thin line
-```
+</div>
 
 ---
 
 ### Clear Graphics
 
-| Block | What It Does |
-|-------|--------------|
-| `erase all` | Clear ALL pen marks |
-| `clear graphics` | Same as erase all |
+<div class="scratch">
+erase all
+</div>
+
+**Clears every pen mark** on the stage — sprites and backdrops are untouched, only pen trails and stamps disappear. "Clear Graphics" is just another name for this same action; Scratch's actual block is called `erase all`.
 
 ---
 
@@ -566,32 +822,32 @@ set pen size to (1)      // Thin line
 
 #### Rainbow Spiral
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen down
-set pen size to 5
-repeat 360
-    move 5 steps
-    turn 1 degrees
-    change pen color by 1
+set pen size to (5)
+repeat (360)
+    move (5) steps
+    turn right (1) degrees
+    change pen color by (1)
 end
 pen up
-```
+</div>
 
 #### Stamp Circle
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen up
-repeat 12
-    go to x: 0 y: 0
-    move 100 steps
+repeat (12)
+    go to x: (0) y: (0)
+    move (100) steps
     stamp
-    turn 30 degrees
+    turn right (30) degrees
 end
-```
+</div>
 
 ---
 
@@ -599,29 +855,65 @@ end
 
 ### Video Sensing Recap (Extensions → Video Sensing)
 
-| Block | What It Does |
-|-------|--------------|
-| `turn video [on v]` | Start/stop camera |
-| `video [on v] on [stage v]` | Show/hide video |
-| `video transparency (50)` | See-through amount |
-| `video [motion v] on [this sprite v]` | Motion amount (0-100) |
-| `when video [motion] > (50)` | Hat: triggers on motion |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+turn video [on v]
+</div>
+
+Start or stop the camera.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+video [on v] on [stage v]
+</div>
+
+Show or hide the video.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set video transparency to (50)
+</div>
+
+Set the see-through amount.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+video [motion v] on [this sprite v]
+</div>
+
+Reporter: motion amount (0–100).
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when video [motion v] > (50)
+</div>
+
+Hat: triggers on motion.
+</div>
+
+</div>
 
 ---
 
 ### Motion Detection Example
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
-set video transparency to 50
+turn video [on v]
+set video transparency to (50)
 forever
-    if <video [motion] on [this sprite] > 30> then
-        change color effect by 10
+    if &lt;(video [motion v] on [this sprite v]) > (30)&gt; then
+        change color effect by (10)
         play sound [pop v]
     end
 end
-```
+</div>
 
 **Wave at camera → sprite reacts!**
 
@@ -631,12 +923,41 @@ end
 
 ### Text to Speech Recap (Extensions → Text to Speech)
 
-| Block | What It Does |
-|-------|--------------|
-| `speak [Hello!]` | Speaks immediately |
-| `speak [Hello!] and wait` | Speaks, waits for finish |
-| `set voice to [alto v]` | Choose voice |
-| `set language to [English v]` | Choose language |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Hello!]
+</div>
+
+Speaks immediately.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Hello!] and wait
+</div>
+
+Speaks, then waits for it to finish.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set voice to [alto v]
+</div>
+
+Choose a voice.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set language to [English v]
+</div>
+
+Choose a language.
+</div>
+
+</div>
 
 ### Voices: `alto`, `tenor`, `soprano`, `random`
 ### Languages: English, Spanish, French, German, Chinese, Japanese, Korean...
@@ -645,13 +966,13 @@ end
 
 ### Text to Speech Example
 
-```
+<div class="scratch">
 when green flag clicked
 set voice to [tenor v]
 set language to [English v]
 speak [Welcome to my game!] and wait
 speak [Use arrow keys to move.]
-```
+</div>
 
 ---
 
@@ -688,11 +1009,11 @@ Games should be **fun for everyone** — including players with different abilit
 
 ### Translate + Text to Speech = Polyglot Games!
 
-```
+<div class="scratch">
 when green flag clicked
 set language to [Spanish v]
 speak (translate [Welcome!] to [Spanish v]) and wait
-```
+</div>
 
 ### Supported Languages
 
@@ -702,17 +1023,17 @@ English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean
 
 ### Multilingual Example
 
-```
+<div class="scratch">
 when green flag clicked
 set language to [Spanish v]
 speak (translate [Welcome to my game!] to [Spanish v]) and wait
-wait 1 secs
+wait (1) seconds
 set language to [French v]
 speak (translate [Bienvenue dans mon jeu!] to [French v]) and wait
-wait 1 secs
+wait (1) seconds
 set language to [Japanese v]
 speak (translate [ようこそ！] to [Japanese v]) and wait
-```
+</div>
 
 ---
 
@@ -763,8 +1084,9 @@ speak (translate [ようこそ！] to [Japanese v]) and wait
 | **How they managed state** | Variables, lists, broadcasts |
 | **How they organized code** | Custom blocks, comments, clean up |
 
-!!! tip "🔍 Remix = Free Tutorial!"
-    Every remixed project is a **free masterclass** — see exactly how they did it!
+!!! mascot-tip "Remix = Free Tutorial!"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Every remixed project is a free masterclass — open "See Inside" on a game you love and study exactly how they built it. Look specifically at their variables and lists; that's usually where the real logic lives.
 
 ---
 
@@ -826,6 +1148,10 @@ In this chapter, you learned:
 - ✅ **Remixing** — Learn by modifying others' work
 - ✅ **Project tags** — Help players find your game
 
+!!! mascot-celebration "You're a Data Master!"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just leveled up from single-value variables to full inventory and high-score lists, and you even built your own custom blocks with parameters. That's real abstraction — hiding complexity behind a simple name — one of the harder ideas in this whole book, and you've got it!
+
 ---
 
 ## Key Terms to Remember
@@ -869,7 +1195,7 @@ In this chapter, you learned:
 
 **Challenge 6:** Add **tags** to your best project and share it
 
-**Challenge 6:** Make your game **multilingual** — at least 3 languages
+**Challenge 7:** Make your game **multilingual** — at least 3 languages
 
 ---
 

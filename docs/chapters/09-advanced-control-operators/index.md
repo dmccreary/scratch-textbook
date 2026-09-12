@@ -56,6 +56,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Loops, Logic, and Clones Galore"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Get ready to level up your Scratch superpowers! In this chapter you'll build reusable custom blocks, spin up clones for particles and enemies, paint with the pen tool, and combine booleans with and/or/not to make truly smart decisions. By the end you'll have the exact toolkit real game designers use for randomness, timers, and clean bug-free loops. Let's build something purr-fect!
+
 ## Reusability — Write Once, Use Everywhere!
 
 ### What Is Reusability?
@@ -77,12 +81,12 @@ This chapter builds on concepts from:
 
 #### 1. Custom Blocks (Best for Same Project)
 
-```
+<div class="scratch">
 define jump (height)
 change y by (height)
-wait 0.2 secs
-change y by (height * -1)
-```
+wait (0.2) seconds
+change y by ((height) * (-1))
+</div>
 
 **Use anywhere:** `jump (100)`, `jump (20)`, `jump (50)`
 
@@ -151,21 +155,25 @@ change y by (height * -1)
 
 ---
 
+!!! mascot-tip "When in Doubt, Leave Turbo Off"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    A quick test: if a human needs to *see* it happen step by step (a jump, a hit effect, a walk cycle), Turbo mode will break it. Save "Run without screen refresh" for instant math, list building, and setup code where nobody needs to watch it happen.
+
 ### Turbo Mode Example
 
-```
-define generate-level (width) (height)  // Turbo ON!
+<div class="scratch">
+define generate-level (width) (height) // Turbo ON!
 // Generates entire 100x100 platformer level in 1 frame
 repeat (width)
-    repeat (height)
-        if < (pick random 1 to 10) < 3 > then
-            add [platform] to [level-data v]
-        else
-            add [empty] to [level-data v]
-        end
-    end
+repeat (height)
+if &lt;(pick random (1) to (10)) &lt; (3)&gt; then
+add [platform] to [level-data v]
+else
+add [empty] to [level-data v]
 end
-```
+end
+end
+</div>
 
 **Generates 10,000 tiles in ONE frame!** ⚡
 
@@ -173,10 +181,10 @@ end
 
 ### Turbo + Backpack = Universal Tools!
 
-```
-define quick-sort (list)  // Turbo ON!
+<div class="scratch">
+define quick-sort (list) // Turbo ON!
 // Sort any list instantly
-```
+</div>
 
 **Save to Backpack → use in ANY project for instant sorting!**
 
@@ -184,34 +192,88 @@ define quick-sort (list)  // Turbo ON!
 
 ## Drawing Trails — Pen Magic! 🎨
 
+<div class="scratch">
+pen down
+</div>
+
 ### Pen Extension Recap
 
 **Extensions → Pen → Add** → green **Pen** category!
 
 ### Pen Drawing Blocks
 
-| Block | What It Does |
-|-------|--------------|
-| `pen down` | Start drawing |
-| `pen up` | Stop drawing |
-| `erase all` | Clear everything |
-| `stamp` | Leave costume copy as drawing |
-| `set pen color to [color]` | Set exact color |
-| `change pen color by (10)` | Cycle colors |
-| `set pen size to (5)` | Line thickness |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pen down
+</div>
+
+Start drawing.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pen up
+</div>
+
+Stop drawing.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+erase all
+</div>
+
+Clear everything.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+stamp
+</div>
+
+Leave a costume copy as a drawing.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen color to [#0000ff]
+</div>
+
+Set an exact color.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen color by (10)
+</div>
+
+Cycle colors.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen size to (5)
+</div>
+
+Line thickness.
+</div>
+
+</div>
 
 ---
 
 ### Drawing Trails = Move + Pen Down!
 
-```
+<div class="scratch">
 pen down
 repeat (360)
-    move 10 steps
-    turn 1 degrees
+move (10) steps
+turn right (1) degrees
 end
 pen up
-```
+</div>
 
 **Every step leaves a trail!** Creates a circle.
 
@@ -219,24 +281,108 @@ pen up
 
 ### Trail Patterns
 
-| Pattern | Code | Result |
-|---------|------|--------|
-| **Circle** | `repeat 360: move 1, turn 1` | Perfect circle |
-| **Spiral** | `repeat 360: move 2, turn 1, change color by 1` | Colorful spiral |
-| **Polygon** | `repeat sides: move size, turn 360/sides` | Any polygon |
-| **Star** | `repeat 5: move 100, turn 144` | 5-pointed star |
-| **Flower** | `repeat 36: move 100, turn 170` | Flower pattern |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (360)
+move (1) steps
+turn right (1) degrees
+end
+</div>
+
+Perfect circle.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (360)
+move (2) steps
+turn right (1) degrees
+change pen color by (1)
+end
+</div>
+
+Colorful spiral.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (sides)
+move (size) steps
+turn right ((360) / (sides)) degrees
+end
+</div>
+
+Any polygon — set `sides` and `size` as variables.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (5)
+move (100) steps
+turn right (144) degrees
+end
+</div>
+
+5-pointed star.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (36)
+move (100) steps
+turn right (170) degrees
+end
+</div>
+
+Flower pattern.
+</div>
+
+</div>
 
 ---
 
 ### Trail Effects
 
-| Effect | Code |
-|--------|------|
-| **Rainbow trail** | `change pen color by 1` each step |
-| **Fading trail** | `change pen size by -0.1` each step |
-| **Dotted line** | `pen down, move 5, pen up, move 5` |
-| **Thick to thin** | `change pen size by -0.1` each step |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen color by (1)
+</div>
+
+Shift color every step for a rainbow trail.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen size by (-0.1)
+</div>
+
+Shrink the line every step for a fading trail.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pen down
+move (5) steps
+pen up
+move (5) steps
+</div>
+
+Alternate pen down/up for a dotted line.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change pen size by (-0.1)
+</div>
+
+Shrink the line from thick to thin.
+</div>
+
+</div>
 
 ---
 
@@ -244,9 +390,9 @@ pen up
 
 ### Change Pen Color by (10)
 
-```
+<div class="scratch">
 change pen color by (10)
-```
+</div>
 
 **Cycles through color spectrum** (0-200) — creates rainbow!
 
@@ -254,18 +400,18 @@ change pen color by (10)
 
 ### Rainbow Pen Pattern
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen down
-set pen size to 5
-repeat 720
-    move 5 steps
-    turn 1 degrees
-    change pen color by 1
+set pen size to (5)
+repeat (720)
+move (5) steps
+turn right (1) degrees
+change pen color by (1)
 end
 pen up
-```
+</div>
 
 **Draws a beautiful rainbow spiral!** 🌈
 
@@ -273,27 +419,67 @@ pen up
 
 ### Rainbow Variations
 
-| Variation | Code Change |
-|-----------|-------------|
-| **Thick rainbow** | `set pen size to 10` |
-| **Thin rainbow** | `set pen size to 1` |
-| **Double rainbow** | Two spirals, opposite directions |
-| **Rainbow star** | `repeat 5: move 100, turn 144, change color by 40` |
-| **Rainbow flower** | `repeat 36: move 100, turn 170, change color by 10` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen size to (10)
+</div>
+
+Thicker rainbow line.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set pen size to (1)
+</div>
+
+Thin, delicate rainbow line.
+</div>
+
+<div class="card" markdown>
+Two spirals drawn in opposite directions.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (5)
+move (100) steps
+turn right (144) degrees
+change pen color by (40)
+end
+</div>
+
+Rainbow-colored star.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (36)
+move (100) steps
+turn right (170) degrees
+change pen color by (10)
+end
+</div>
+
+Rainbow-colored flower.
+</div>
+
+</div>
 
 ---
 
 ### Rainbow + Stamp = Magic! ✨
 
-```
-repeat 60
-    move 50 steps
-    stamp
-    turn 6 degrees
-    change pen color by 3
-    change pen size by -0.1
+<div class="scratch">
+repeat (60)
+move (50) steps
+stamp
+turn right (6) degrees
+change pen color by (3)
+change pen size by (-0.1)
 end
-```
+</div>
 
 **Stamps leave rainbow copies of sprite!** 🌈✨
 
@@ -301,19 +487,51 @@ end
 
 ## Camera Games — Body as Controller! 📷
 
+<div class="scratch">
+when video motion &gt; (50)
+</div>
+
 ### Video Sensing Extension
 
 **Extensions → Video Sensing → Add** → purple **Video Sensing** category!
 
 ### Video Sensing Blocks Recap
 
-| Block | What It Does |
-|-------|--------------|
-| `turn video [on v]` | Start camera |
-| `video [on v] on [stage v]` | Show/hide video |
-| `video transparency (50)` | See-through amount |
-| `video [motion v] on [this sprite v]` | Motion amount (0-100) |
-| `when video [motion] > (50)` | Hat: motion detected |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+turn video [on v]
+</div>
+
+Start or stop the camera.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set video transparency to (50)
+</div>
+
+Set how see-through the video is.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+video [motion v] on [this sprite v]
+</div>
+
+Reporter: motion amount, 0-100.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when video motion &gt; (50)
+</div>
+
+Hat block: runs when motion crosses the threshold.
+</div>
+
+</div>
 
 ---
 
@@ -334,17 +552,17 @@ end
 
 #### Simple Motion Mirror
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
-set video transparency to 50
+turn video [on v]
+set video transparency to (50)
 forever
-    if <video [motion] on [this sprite] > 30> then
-        change color effect by 10
-        play sound [pop v]
-    end
+if &lt;(video [motion v] on [this sprite v]) &gt; (30)&gt; then
+change color effect by (10)
+play sound [pop v]
 end
-```
+end
+</div>
 
 **Wave at camera → sprite reacts!** 👋
 
@@ -352,35 +570,35 @@ end
 
 #### Hand-Controlled Sprite
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
+turn video [on v]
 forever
-    // Sprite follows motion
-    if <video [motion] on [this sprite] > 20> then
-        // Move toward motion center
-        // (Requires additional logic for position)
-        change color effect by 5
-    end
+// Sprite follows motion
+if &lt;(video [motion v] on [this sprite v]) &gt; (20)&gt; then
+// Move toward motion center
+// (Requires additional logic for position)
+change color effect by (5)
 end
-```
+end
+</div>
 
 ---
 
 #### Beat Detection (Advanced)
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
+turn video [on v]
 forever
-    if <video [motion] on [this sprite] > 50> then
-        change color effect by 25
-        play sound [drum v]
-        wait 0.2 secs
-        clear graphic effects
-    end
+if &lt;(video [motion v] on [this sprite v]) &gt; (50)&gt; then
+change color effect by (25)
+play sound [drum v]
+wait (0.2) seconds
+clear graphic effects
 end
-```
+end
+</div>
 
 **Dance to the beat!** 🎵🕺
 
@@ -428,12 +646,12 @@ When you **Remix** a project, Scratch **automatically adds**:
 
 ### Credit in Code (Comments)
 
-```
-define jump (height)  // Jump physics adapted from @CoderJane's platformer tutorial
+<div class="scratch">
+define jump (height) // Jump physics adapted from @CoderJane's platformer tutorial
 change y by (height)
-wait 0.2 secs
-change y by (height * -1)
-```
+wait (0.2) seconds
+change y by ((height) * (-1))
+</div>
 
 ---
 
@@ -590,9 +808,9 @@ FUNCTIONS (custom blocks):
 
 ### Stamp Block (Pen → Green)
 
-```
+<div class="scratch">
 stamp
-```
+</div>
 
 **Leaves a copy of current costume** as a permanent drawing on stage!
 
@@ -613,33 +831,33 @@ stamp
 
 #### Stamp Circle (Flower)
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen up
-repeat 12
-    go to x: 0 y: 0
-    move 100 steps
-    stamp
-    turn 30 degrees
+repeat (12)
+go to x: (0) y: (0)
+move (100) steps
+stamp
+turn right (30) degrees
 end
-```
+</div>
 
 **12 stamps in a circle = flower!** 🌸
 
 #### Stamp Trail (Particle Effect)
 
-```
+<div class="scratch">
 when I start as a clone
-go to x: (pick random -200 to 200) y: 180
-repeat 20
-    stamp
-    change y by -10
-    change ghost effect by 5
-    wait 0.05 secs
+go to x: (pick random (-200) to (200)) y: (180)
+repeat (20)
+stamp
+change y by (-10)
+change ghost effect by (5)
+wait (0.05) seconds
 end
 delete this clone
-```
+</div>
 
 **Falling particle trail!** ✨
 
@@ -647,12 +865,61 @@ delete this clone
 
 ### Stamp Patterns
 
-| Pattern | Code |
-|---------|------|
-| **Circle** | `repeat 12: move 100, stamp, turn 30` |
-| **Spiral** | `repeat 50: move 10, stamp, turn 20, change size by -2` |
-| **Grid** | `repeat 5: repeat 5: move 50, stamp, turn 0, end, go to next row` |
-| **Explosion** | `repeat 20: stamp, turn 18, change ghost by 5` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (12)
+move (100) steps
+stamp
+turn right (30) degrees
+end
+</div>
+
+12 stamps around a circle.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (50)
+move (10) steps
+stamp
+turn right (20) degrees
+change size by (-2)
+end
+</div>
+
+Shrinking spiral of stamps.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (5)
+repeat (5)
+move (50) steps
+stamp
+end
+turn right (90) degrees
+move (50) steps
+end
+</div>
+
+Rows and columns of stamps.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+repeat (20)
+stamp
+turn right (18) degrees
+change ghost effect by (5)
+end
+</div>
+
+Fading ring of stamps, like an explosion.
+</div>
+
+</div>
 
 ---
 
@@ -664,13 +931,49 @@ delete this clone
 
 ### Sources of Randomness
 
-| Source | Block | Use For |
-|--------|-------|---------|
-| **Random position** | `pick random -200 to 200` | Spawn locations |
-| **Random timing** | `pick random 1 to 5` | Spawn intervals |
-| **Random type** | `pick random 1 to 3` | Enemy variety |
-| **Random reward** | `pick random 1 to 100` | Loot tables |
-| **Random movement** | `pick random -10 to 10` | Wandering AI |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (-200) to (200)
+</div>
+
+Spawn locations.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (5)
+</div>
+
+Spawn intervals.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (3)
+</div>
+
+Enemy variety.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (100)
+</div>
+
+Loot tables.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (-10) to (10)
+</div>
+
+Wandering AI.
+</div>
+
+</div>
 
 ---
 
@@ -678,12 +981,39 @@ delete this clone
 
 **Pure randomness can feel unfair. Control it!**
 
-| Technique | How |
-|-----------|-----|
-| **Weighted random** | `if <pick random 1 to 100 < 20> then rare else common` |
-| **Guaranteed drops** | `if <kills = 10> then guaranteed rare` |
-| **Shuffle bag** | Fill list, shuffle, pull sequentially |
-| **Pseudo-random seed** | Same seed = same sequence (for replays) |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;(pick random (1) to (100)) &lt; (20)&gt; then
+say [Rare item!] for (1) seconds
+else
+say [Common item] for (1) seconds
+end
+</div>
+
+About a 20% chance of the rare branch.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;(kills) = (10)&gt; then
+say [Guaranteed rare drop!] for (1) seconds
+end
+</div>
+
+Force a rare reward at a milestone.
+</div>
+
+<div class="card" markdown>
+Fill a list with every possible item, shuffle it, then pull items one at a time so nothing repeats too soon.
+</div>
+
+<div class="card" markdown>
+Using the same starting seed produces the same sequence of "random" numbers — handy for replays.
+</div>
+
+</div>
 
 ---
 
@@ -691,52 +1021,52 @@ delete this clone
 
 #### Random Enemy Spawner
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    wait (pick random 1 to 3) secs
-    create clone of [enemy v]
+wait (pick random (1) to (3)) seconds
+create clone of [enemy v]
 end
 
 when I start as a clone
-go to x: (pick random -200 to 200) y: 180
-set [type v] to (pick random 1 to 3)  // 1=fast, 2=strong, 3=fast+strong
-```
+go to x: (pick random (-200) to (200)) y: (180)
+set [type v] to (pick random (1) to (3)) // 1=fast, 2=strong, 3=fast+strong
+</div>
 
 #### Random Loot (Weighted)
 
-```
-set [roll v] to (pick random 1 to 100)
-if < (roll) < 50 > then
-    add [common-sword] to [inventory v]      // 50%
+<div class="scratch">
+set [roll v] to (pick random (1) to (100))
+if &lt;(roll) &lt; (50)&gt; then
+add [common-sword] to [inventory v] // 50%
 else
-    if < (roll) < 80 > then
-        add [uncommon-shield] to [inventory v]  // 30%
-    else
-        if < (roll) < 95 > then
-            add [rare-potion] to [inventory v]   // 15%
-        else
-            add [legendary-ring] to [inventory v] // 5%
-        end
-    end
+if &lt;(roll) &lt; (80)&gt; then
+add [uncommon-shield] to [inventory v] // 30%
+else
+if &lt;(roll) &lt; (95)&gt; then
+add [rare-potion] to [inventory v] // 15%
+else
+add [legendary-ring] to [inventory v] // 5%
 end
-```
+end
+end
+</div>
 
 #### Procedural Level Generation
 
-```
+<div class="scratch">
 define generate-level
 delete all of [level-data v]
-repeat (20)    // 20 columns
-    set [height v] to (pick random 2 to 8)
-    repeat (height)
-        add [block] to [level-data v]
-    end
-    repeat (10 - height)
-        add [empty] to [level-data v]
-    end
+repeat (20) // 20 columns
+set [height v] to (pick random (2) to (8))
+repeat (height)
+add [block] to [level-data v]
 end
-```
+repeat ((10) - (height))
+add [empty] to [level-data v]
+end
+end
+</div>
 
 ---
 
@@ -754,7 +1084,6 @@ end
 | **List index out of range** | `item (10) of [list]` when length=5 | Check `length of list` first |
 | **Variable not initialized** | Using `score` before `set score to 0` | Check `score` exists |
 | **Infinite loop** | `forever` without `wait` | Add `wait 0.01 secs` |
-| **Division by zero** | `10 / (x - x)` | Check denominator ≠ 0 |
 
 ---
 
@@ -762,53 +1091,52 @@ end
 
 #### Check Before Divide
 
-```
-if < (denominator) = 0 > then
-    set [result v] to (0)    // Or handle error
+<div class="scratch">
+if &lt;(denominator) = (0)&gt; then
+set [result v] to (0) // Or handle error
 else
-    set [result v] to ( (numerator) / (denominator) )
+set [result v] to ((numerator) / (denominator))
 end
-```
+</div>
 
 #### Check List Bounds
 
-```
-if < (index) > (length of [list v]) > then
-    say [Index out of range!] for 2 secs
+<div class="scratch">
+if &lt;(index) &gt; (length of [list v])&gt; then
+say [Index out of range!] for (2) seconds
 else
-    set [item v] to (item (index) of [list v])
+set [item v] to (item (index) of [list v])
 end
-```
+</div>
 
 #### Initialize Variables
 
-```
+<div class="scratch">
 when green flag clicked
-set [score v] to (0)        // ALWAYS initialize!
+set [score v] to (0) // ALWAYS initialize!
 set [lives v] to (3)
 set [level v] to (1)
-```
+</div>
 
 ---
 
 ### Error Detection in Game Loops
 
-```
+<div class="scratch">
 forever
-    // Safe movement
-    if < (x position) > 220 > then
-        set x to 220
-    end
-    if < (x position) < -220 > then
-        set x to -220
-    end
-    
-    // Safe variable access
-    if < (length of [inventory v]) > 0 > then
-        // Safe to access items
-    end
+// Safe movement
+if &lt;(x position) &gt; (220)&gt; then
+set x to (220)
 end
-```
+if &lt;(x position) &lt; (-220)&gt; then
+set x to (-220)
+end
+// Safe variable access
+if &lt;(length of [inventory v]) &gt; (0)&gt; then
+// Safe to access items
+end
+end
+</div>
 
 ---
 
@@ -827,27 +1155,51 @@ end
 
 ### Infinite Loop Prevention
 
-| Pattern | Safe Version |
-|---------|--------------|
-| `forever { move 10 }` | `forever { move 10, wait 0.01 secs }` |
-| `repeat until <x > 100> { }` | Ensure x changes inside! |
-| `forever { broadcast [A] }` | `forever { broadcast [A], wait 1 secs }` |
+<div class="scratch">
+forever
+move (10) steps
+wait (0.01) seconds
+end
+</div>
+
+Add a tiny wait so `forever { move 10 }` doesn't freeze the project.
+
+<div class="scratch">
+repeat until &lt;(x position) &gt; (100)&gt;
+change x by (5)
+end
+</div>
+
+Make sure the variable actually changes inside a `repeat until`, or the condition never becomes true.
+
+<div class="scratch">
+forever
+broadcast [A v]
+wait (1) seconds
+end
+</div>
+
+Add a wait between broadcasts so they don't fire thousands of times per second.
 
 ---
 
+!!! mascot-warning "A `forever` Loop Needs Breathing Room"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A `forever` loop with no `wait` inside runs thousands of times per second, which can freeze your project or spam broadcasts. The fix is simple: drop in a small `wait (0.01) seconds` (or longer) so the loop breathes between iterations.
+
 ### Infinite Loop Detection Script
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    if < (frame-count) > 10000 > then
-        say [Possible infinite loop!] for 2 secs
-        stop [all v]
-    end
-    change [frame-count v] by (1)
-    wait 0.01 secs
+if &lt;(frame-count) &gt; (10000)&gt; then
+say [Possible infinite loop!] for (2) seconds
+stop [all v]
 end
-```
+change [frame-count v] by (1)
+wait (0.01) seconds
+end
+</div>
 
 **Frame counter watchdog** — stops project if too many frames!
 
@@ -871,13 +1223,13 @@ end
 
 ### Simple Lip Sync (Costume Swap)
 
-```
+<div class="scratch">
 define speak (text)
 switch costume to [mouth-open v]
 speak (text)
-wait (length of text * 0.1) secs  // Estimate duration
+wait ((length of (text)) * (0.1)) seconds // Estimate duration
 switch costume to [mouth-closed v]
-```
+</div>
 
 ### Costume Setup for Lip Sync
 
@@ -892,12 +1244,12 @@ switch costume to [mouth-closed v]
 
 ### Lip Sync with Text to Speech
 
-```
+<div class="scratch">
 define say-with-lip-sync (text)
 switch costume to [mouth-open v]
 speak (text) and wait
 switch costume to [mouth-closed v]
-```
+</div>
 
 **Costume changes sync with speech!** 🗣️
 
@@ -911,21 +1263,48 @@ switch costume to [mouth-closed v]
 
 ### Scene Coordination Patterns
 
-| Pattern | How It Works |
-|---------|--------------|
-| **Broadcast chain** | `broadcast [scene1] and wait` → `broadcast [scene2]` |
-| **Backdrop switch** | `switch backdrop to [scene2]` + `broadcast [scene2-ready]` |
-| **State variable** | `set [scene v] to [2]` → scripts check `scene` variable |
-| **Scene manager sprite** | One sprite controls all transitions |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+broadcast [scene1 v] and wait
+broadcast [scene2 v]
+</div>
+
+Wait for scene 1 to finish, then start scene 2.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+switch backdrop to [scene2 v]
+broadcast [scene2-ready v]
+</div>
+
+Change the backdrop, then tell everyone the new scene is ready.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [scene v] to (2)
+</div>
+
+Other scripts check the `scene` variable to know what to do.
+</div>
+
+<div class="card" markdown>
+One dedicated sprite controls every scene transition, so the logic lives in one place.
+</div>
+
+</div>
 
 ---
 
 ### Scene Coordination Example
 
-```
+<div class="scratch">
 when green flag clicked
 broadcast [intro-scene v] and wait
-wait 2 secs
+wait (2) seconds
 broadcast [level1-load v] and wait
 broadcast [game-start v]
 
@@ -938,7 +1317,7 @@ when I receive [level1-load v]
 switch backdrop to [level1 v]
 broadcast [spawn-player v] and wait
 broadcast [spawn-enemies v] and wait
-```
+</div>
 
 ---
 
@@ -950,39 +1329,102 @@ broadcast [spawn-enemies v] and wait
 
 ### Dialogue Timing Techniques
 
-| Technique | Code |
-|---------|------|
-| **Speak and wait** | `speak [Hello!] and wait` |
-| **Speak, pause, speak** | `speak [Hi!] and wait, wait 1 secs, speak [How are you?]` |
-| **Character switching** | `broadcast [char1-speak] and wait, broadcast [char2-speak] and wait` |
-| **Interrupt** | `speak [Wait!] for 0.5 secs` (short, urgent) |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Hello!] and wait
+</div>
+
+Pause the script until the line finishes.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Hi!] and wait
+wait (1) seconds
+speak [How are you?] and wait
+</div>
+
+A short beat between lines feels more natural.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+broadcast [char1-speak v] and wait
+broadcast [char2-speak v] and wait
+</div>
+
+Each character waits their turn to talk.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Wait!] for (0.5) seconds
+</div>
+
+A short, urgent line that doesn't wait to finish.
+</div>
+
+</div>
 
 ---
 
 ### Dialogue Timing Example
 
-```
+<div class="scratch">
 when I receive [start-dialogue v]
 speak [Hello there, traveler!] and wait
-wait 1 secs
+wait (1) seconds
 speak [What brings you to our village?] and wait
-wait 0.5 secs
+wait (0.5) seconds
 broadcast [player-response v] and wait
 speak [Ah, I see!] and wait
-wait 0.5 secs
+wait (0.5) seconds
 speak [Well, good luck on your journey!] and wait
-```
+</div>
 
 ---
 
 ### Natural Dialogue Tips
 
-| Tip | Code |
-|-----|------|
-| **Vary pause length** | `wait (pick random 0.5 to 1.5) secs` |
-| **Short for urgency** | `speak [Run!] for 0.3 secs` |
-| **Long for thought** | `wait 2 secs, speak [Hmm...]` |
-| **Overlap (advanced)** | `speak [Hi] and wait` + simultaneous `broadcast [nod]` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+wait (pick random (0.5) to (1.5)) seconds
+</div>
+
+Random pause length feels less robotic.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Run!] for (0.3) seconds
+</div>
+
+A quick line for urgent moments.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+wait (2) seconds
+speak [Hmm...] for (1) seconds
+</div>
+
+A longer pause before a thoughtful line.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+speak [Hi] and wait
+broadcast [nod v]
+</div>
+
+Broadcast a matching animation while the line plays.
+</div>
+
+</div>
 
 ---
 
@@ -990,9 +1432,9 @@ speak [Well, good luck on your journey!] and wait
 
 ### Delete This Clone Block
 
-```
+<div class="scratch">
 delete this clone
-```
+</div>
 
 **Removes the clone running this script** — only works inside clone scripts!
 
@@ -1000,12 +1442,48 @@ delete this clone
 
 ### When to Delete Clones
 
-| Situation | Delete Code |
-|-----------|-------------|
-| **Off-screen** | `if < (y position) < -200 > then delete this clone` |
-| **Hit something** | `if <touching [player v]?> then delete this clone` |
-| **Lifetime expired** | `wait 10 secs, delete this clone` |
-| **Reached target** | `if <distance to [target] < 5> then delete this clone` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;(y position) &lt; (-200)&gt; then
+delete this clone
+end
+</div>
+
+Clean up once a clone falls off the bottom of the stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;touching [player v]?&gt; then
+delete this clone
+end
+</div>
+
+Remove the clone the moment it hits its target.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+wait (10) seconds
+delete this clone
+</div>
+
+Give every clone a fixed lifespan.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+if &lt;(distance to [target v]) &lt; (5)&gt; then
+delete this clone
+end
+</div>
+
+Delete once the clone arrives close enough to its target.
+</div>
+
+</div>
 
 ---
 
@@ -1013,47 +1491,47 @@ delete this clone
 
 #### Falling Debris (Delete on Ground)
 
-```
+<div class="scratch">
 when I start as a clone
-go to x: (pick random -200 to 200) y: 180
+go to x: (pick random (-200) to (200)) y: (180)
 forever
-    change y by -5
-    if <touching [ground v]?> then
-        wait 1 secs
-        delete this clone
-    end
+change y by (-5)
+if &lt;touching [ground v]?&gt; then
+wait (1) seconds
+delete this clone
 end
-```
+end
+</div>
 
 #### Projectile (Delete on Hit)
 
-```
+<div class="scratch">
 when I start as a clone
 point towards [player v]
 forever
-    move 10 steps
-    if <touching [player v]?> then
-        broadcast [player-hit v]
-        delete this clone
-    end
-    if <touching [edge v]?> then
-        delete this clone
-    end
+move (10) steps
+if &lt;touching [player v]?&gt; then
+broadcast [player-hit v]
+delete this clone
 end
-```
+if &lt;touching [edge v]?&gt; then
+delete this clone
+end
+end
+</div>
 
 #### Particle Effect (Lifetime)
 
-```
+<div class="scratch">
 when I start as a clone
-repeat 30
-    stamp
-    change ghost effect by 3
-    change y by -2
-    wait 0.05 secs
+repeat (30)
+stamp
+change ghost effect by (3)
+change y by (-2)
+wait (0.05) seconds
 end
 delete this clone
-```
+</div>
 
 ---
 
@@ -1085,37 +1563,38 @@ delete this clone
 
 ---
 
+!!! mascot-thinking "Every Clone Has a Life Story"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice the pattern: `create clone of` is a birth, `when I start as a clone` is childhood setup, the `forever` loop is its whole life, and `delete this clone` is the end. Once you see clones as tiny characters with a beginning, middle, and end, particle effects, enemies, and projectiles all start to look like the same three-act structure.
+
 ### Clone Behavior Template
 
-```
+<div class="scratch">
 when I start as a clone
 // 1. INITIALIZE
-go to x: (random) y: (random)
+go to x: (pick random (-200) to (200)) y: (pick random (-180) to (180))
 set [velocity-x v] to (0)
 set [velocity-y v] to (0)
 switch costume to [default v]
 show
-
 // 2. MAIN LOOP
 forever
-    // PHYSICS
-    change [velocity-y v] by (-0.5)   // Gravity
-    change x by (velocity-x)
-    change y by (velocity-y)
-    
-    // BEHAVIOR
-    // ... specific to clone type ...
-    
-    // CLEANUP CHECKS
-    if <touching [edge v]?> then
-        delete this clone
-    end
-    if <touching [player v]?> then
-        broadcast [player-hit v]
-        delete this clone
-    end
+// PHYSICS
+change [velocity-y v] by (-0.5) // Gravity
+change x by (velocity-x)
+change y by (velocity-y)
+// BEHAVIOR
+// ... specific to clone type ...
+// CLEANUP CHECKS
+if &lt;touching [edge v]?&gt; then
+delete this clone
 end
-```
+if &lt;touching [player v]?&gt; then
+broadcast [player-hit v]
+delete this clone
+end
+end
+</div>
 
 ---
 
@@ -1160,11 +1639,11 @@ end
 
 ### Event Queue Example
 
-```
+<div class="scratch">
 when green flag clicked
-broadcast [setup v] and wait    // Waits for ALL receivers
-broadcast [spawn v] and wait    // Waits for ALL receivers  
-broadcast [go v]                // Fire and forget
+broadcast [setup v] and wait // Waits for ALL receivers
+broadcast [spawn v] and wait // Waits for ALL receivers
+broadcast [go v] // Fire and forget
 
 when I receive [setup v]
 set [score v] to (0)
@@ -1174,9 +1653,9 @@ create clone of [enemy v]
 
 when I receive [go v]
 forever
-    // Game loop
+// Game loop
 end
-```
+</div>
 
 **Order: setup → spawn → go (sequential due to "and wait")**
 
@@ -1186,11 +1665,11 @@ end
 
 ### Repeat Until Loop (Control → Orange)
 
-```
-repeat until <condition>
-    // Runs until condition becomes TRUE
+<div class="scratch">
+repeat until &lt;condition&gt;
+// Runs until condition becomes TRUE
 end
-```
+</div>
 
 **Checks condition at START of each iteration.**
 
@@ -1200,40 +1679,44 @@ end
 
 #### Move Until Edge
 
-```
-repeat until <touching [edge v]?>
-    move 5 steps
+<div class="scratch">
+repeat until &lt;touching [edge v]?&gt;
+move (5) steps
 end
-```
+</div>
 
 #### Wait for Button
 
-```
-repeat until <key [space] pressed?>
-    say [Press SPACE to start]
-    wait 0.5 secs
+<div class="scratch">
+repeat until &lt;key [space v] pressed?&gt;
+say [Press SPACE to start]
+wait (0.5) seconds
 end
-```
+</div>
 
 #### Chase Until Close
 
-```
-repeat until <distance to [target v] < 20>
-    point towards [target v]
-    move 3 steps
+<div class="scratch">
+repeat until &lt;(distance to [target v]) &lt; (20)&gt;
+point towards [target v]
+move (3) steps
 end
-```
+</div>
 
 #### Wait for Condition
 
-```
-repeat until < (score) > 100 >
-    wait 1 secs
+<div class="scratch">
+repeat until &lt;(score) &gt; (100)&gt;
+wait (1) seconds
 end
 broadcast [level-complete v]
-```
+</div>
 
 ---
+
+!!! mascot-tip "Replace forever-then-stop with repeat until"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    If you catch yourself writing a `forever` loop with an `if <condition> then stop this script` buried inside, try a `repeat until <condition>` instead. It says the exact same thing in one clean block instead of two.
 
 ### Repeat Until vs Other Loops
 
@@ -1249,9 +1732,9 @@ broadcast [level-complete v]
 
 ### And Block (Operators → Green)
 
-```
-< <condition1> and <condition2> >
-```
+<div class="scratch">
+&lt;&lt;touching [Sprite2 v]?&gt; and &lt;key [space v] pressed?&gt;&gt;
+</div>
 
 **TRUE only if BOTH conditions are TRUE.**
 
@@ -1259,29 +1742,33 @@ broadcast [level-complete v]
 
 #### Both Conditions Required
 
-```
-if <touching [coin v]?> and < (lives) > 0 > then
-    change [score v] by (10)
+<div class="scratch">
+if &lt;&lt;touching [coin v]?&gt; and &lt;(lives) &gt; (0)&gt;&gt; then
+change [score v] by (10)
 end
-```
+</div>
 
 #### Multiple Safety Checks
 
-```
-if <key [space] pressed?> and <touching [ground v]?> then
-    // Jump only if on ground AND space pressed
+<div class="scratch">
+if &lt;&lt;key [space v] pressed?&gt; and &lt;touching [ground v]?&gt;&gt; then
+// Jump only if on ground AND space pressed
 end
-```
+</div>
 
 #### Complex Conditions
 
-```
-if < (score) > 100 > and < (lives) > 0 > and <not <touching [spike v]?>> then
-    broadcast [bonus-level v]
+<div class="scratch">
+if &lt;&lt;&lt;(score) &gt; (100)&gt; and &lt;(lives) &gt; (0)&gt;&gt; and &lt;not &lt;touching [spike v]?&gt;&gt;&gt; then
+broadcast [bonus-level v]
 end
-```
+</div>
 
 ---
+
+!!! mascot-encourage "Nested Booleans Take Two Reads"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    A condition with `and`, `or`, and `not` all nested together looks intimidating, but you already handled simpler if-else chains back in Chapter 6 — this is the same skill, just stacked one level deeper. Read it from the innermost hexagon outward, one piece at a time, and it untangles fast.
 
 ### And Truth Table
 
@@ -1298,9 +1785,9 @@ end
 
 ### Or Block (Operators → Green)
 
-```
-< <condition1> or <condition2> >
-```
+<div class="scratch">
+&lt;&lt;touching [spike v]?&gt; or &lt;touching [lava v]?&gt;&gt;
+</div>
 
 **TRUE if AT LEAST ONE condition is TRUE.**
 
@@ -1308,27 +1795,27 @@ end
 
 #### Either Condition Works
 
-```
-if <touching [spike v]?> or <touching [lava v]?> then
-    broadcast [player-hit v]
+<div class="scratch">
+if &lt;&lt;touching [spike v]?&gt; or &lt;touching [lava v]?&gt;&gt; then
+broadcast [player-hit v]
 end
-```
+</div>
 
 #### Multiple Triggers
 
-```
-if <key [space] pressed?> or <key [w] pressed?> then
-    // Jump with Space OR W
+<div class="scratch">
+if &lt;&lt;key [space v] pressed?&gt; or &lt;key [w v] pressed?&gt;&gt; then
+// Jump with Space OR W
 end
-```
+</div>
 
 #### Alternate Conditions
 
-```
-if <touching [enemy v]?> or < (lives) = 0 > then
-    broadcast [game-over v]
+<div class="scratch">
+if &lt;&lt;touching [enemy v]?&gt; or &lt;(lives) = (0)&gt;&gt; then
+broadcast [game-over v]
 end
-```
+</div>
 
 ---
 
@@ -1347,9 +1834,9 @@ end
 
 ### Not Block (Operators → Green)
 
-```
-not <condition>
-```
+<div class="scratch">
+not &lt;touching [ground v]?&gt;
+</div>
 
 **Flips TRUE ↔ FALSE.**
 
@@ -1357,29 +1844,29 @@ not <condition>
 
 #### Invert Condition
 
-```
-if <not <touching [ground v]?>> then
-    // In the air!
-    change [velocity-y v] by (-1)   // Apply gravity
+<div class="scratch">
+if &lt;not &lt;touching [ground v]?&gt;&gt; then
+// In the air!
+change [velocity-y v] by (-1) // Apply gravity
 end
-```
+</div>
 
 #### Invert Sensor
 
-```
-if <not <key [space] pressed?>> then
-    // Space NOT pressed
-    set [running v] to (false)
+<div class="scratch">
+if &lt;not &lt;key [space v] pressed?&gt;&gt; then
+// Space NOT pressed
+set [running v] to (false)
 end
-```
+</div>
 
 #### Double Negative (Avoid!)
 
-```
-if <not <not <touching [ground v]?>>> then
-    // Confusing! Just use: touching ground?
+<div class="scratch">
+if &lt;not &lt;not &lt;touching [ground v]?&gt;&gt;&gt; then
+// Confusing! Just use: touching ground?
 end
-```
+</div>
 
 ---
 
@@ -1392,50 +1879,95 @@ end
 
 ---
 
+!!! mascot-thinking "Three Tiny Tools, Infinite Conditions"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    `and`, `or`, and `not` are each dead simple on their own, but snapped together like LEGO bricks they can express almost any rule you can imagine — touching the ground AND not invincible, touching a spike OR out of lives. Complex game logic is usually just simple booleans, nested.
+
 ## Score Variable — Tracking Points! 🏆
 
 ### Score Variable Setup
 
-```
+<div class="scratch">
 when green flag clicked
 set [score v] to (0)
 show variable [score v]
-```
+</div>
 
 ### Score Patterns
 
-| Pattern | Code |
-|---------|------|
-| **Basic points** | `change [score v] by (10)` |
-| **Bonus multiplier** | `change [score v] by ( (level) * 100 )` |
-| **Combo bonus** | `change [score v] by ( (combo) * 50 )` |
-| **Time bonus** | `change [score v] by ( (300 - timer) * 10 )` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (10)
+</div>
+
+A flat number of points.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by ((level) * (100))
+</div>
+
+Points scale with the current level.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by ((combo) * (50))
+</div>
+
+Points scale with the combo count.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (((300) - (timer)) * (10))
+</div>
+
+Reward finishing with time to spare.
+</div>
+
+</div>
 
 ---
 
+!!! mascot-warning "`=` Checks, `set` Changes"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    It's easy to reach for `<(score) = (100)>` when you actually meant to change the value — but `=` only asks a true/false question, it never assigns anything. If you want `score` to become a new number, you need `set [score v] to (...)` or `change [score v] by (...)` instead.
+
 ### Score Display
 
-| Display | Code |
-|---------|------|
-| **On stage** | `show variable [score v]` |
-| **In speech bubble** | `say (join [Score: ] (score)) for 2 secs` |
-| **Custom display** | Custom block `update-score-display` |
+<div class="scratch">
+show variable [score v]
+</div>
+
+Show the built-in stage variable display.
+
+<div class="scratch">
+say (join [Score: ] (score)) for (2) seconds
+</div>
+
+Show the score in a speech bubble.
+
+Or build a custom block like `update-score-display` for full visual control.
 
 ---
 
 ### High Score System
 
-```
+<div class="scratch">
 when green flag clicked
 set [high-score v] to (0)
 show variable [high-score v]
 
 when I receive [game-over v]
-if < (score) > (high-score) > then
-    set [high-score v] to (score)
-    say [NEW HIGH SCORE!] for 3 secs
+if &lt;(score) &gt; (high-score)&gt; then
+set [high-score v] to (score)
+say [NEW HIGH SCORE!] for (3) seconds
 end
-```
+</div>
 
 ---
 
@@ -1443,47 +1975,75 @@ end
 
 ### Lives Variable Setup
 
-```
+<div class="scratch">
 when green flag clicked
 set [lives v] to (3)
 show variable [lives v]
-```
+</div>
 
 ### Lives Patterns
 
-| Pattern | Code |
-|---------|------|
-| **Lose life** | `change [lives v] by (-1)` |
-| **Gain life** | `change [lives v] by (1)` (cap at max) |
-| **Invincibility** | `set [invincible v] to (true), wait 2 secs, set [invincible v] to (false)` |
+<div class="scratch">
+change [lives v] by (-1)
+</div>
+
+Lose a life.
+
+<div class="scratch">
+change [lives v] by (1)
+</div>
+
+Gain a life (remember to cap it at a max).
+
+<div class="scratch">
+set [invincible v] to (true)
+wait (2) seconds
+set [invincible v] to (false)
+</div>
+
+A short window of invincibility after getting hit.
 
 ---
 
 ### Lives Logic
 
-```
+<div class="scratch">
 when I receive [player-hit v]
-if <not < (invincible) >> then
-    change [lives v] by (-1)
-    if < (lives) = 0 > then
-        broadcast [game-over v]
-    else
-        set [invincible v] to (true)
-        wait 2 secs
-        set [invincible v] to (false)
-    end
+if &lt;(invincible) = (false)&gt; then
+change [lives v] by (-1)
+if &lt;(lives) = (0)&gt; then
+broadcast [game-over v]
+else
+set [invincible v] to (true)
+wait (2) seconds
+set [invincible v] to (false)
 end
-```
+end
+</div>
 
 ---
 
 ### Lives Display
 
-| Display | Code |
-|---------|------|
-| **Number** | `show variable [lives v]` |
-| **Hearts** | Custom: `repeat (lives): stamp heart` |
-| **Speech** | `say (join [Lives: ] (lives)) for 1 secs` |
+<div class="scratch">
+show variable [lives v]
+</div>
+
+Show the lives counter on stage.
+
+<div class="scratch">
+repeat (lives)
+stamp
+end
+</div>
+
+Stamp one heart per life (switch to a heart costume first).
+
+<div class="scratch">
+say (join [Lives: ] (lives)) for (1) seconds
+</div>
+
+Announce lives left in a speech bubble.
 
 ---
 
@@ -1491,51 +2051,138 @@ end
 
 ### Timer Variable Setup
 
-```
+<div class="scratch">
 when green flag clicked
 set [timer v] to (0)
 show variable [timer v]
 forever
-    wait (1) secs
-    change [timer v] by (1)
+wait (1) seconds
+change [timer v] by (1)
 end
-```
+</div>
 
 ---
 
 ### Timer Patterns
 
-| Pattern | Code |
-|---------|------|
-| **Count up** | `change [timer v] by (1)` each second |
-| **Count down** | `set [timer v] to (60), forever { wait 1, change by -1 }` |
-| **Level timer** | `set [level-timer v] to (300), count down` |
-| **Cooldown** | `set [cooldown v] to (60), forever { if >0: change by -1 }` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+forever
+wait (1) seconds
+change [timer v] by (1)
+end
+</div>
+
+Add one every second.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [timer v] to (60)
+forever
+wait (1) seconds
+change [timer v] by (-1)
+end
+</div>
+
+Subtract one every second, starting from 60.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [level-timer v] to (300)
+</div>
+
+Start a 300-second countdown for the level.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [cooldown v] to (60)
+forever
+if &lt;(cooldown) &gt; (0)&gt; then
+change [cooldown v] by (-1)
+end
+end
+</div>
+
+Only counts down while above zero.
+</div>
+
+</div>
 
 ---
 
 ### Timer Uses
 
-| Use | Code |
-|-----|------|
-| **Survival time** | `set [timer] to 0, forever { wait 1, change by 1 }` |
-| **Level time limit** | `set [timer] to 120, repeat until <timer = 0> { wait 1, change by -1 }` |
-| **Speedrun timer** | `set [timer] to 0, forever { wait 0.01, change by 0.01 }` |
-| **Cooldown** | `set [cooldown] to 30, forever { if >0: change by -1 }` |
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+set [timer v] to (0)
+forever
+wait (1) seconds
+change [timer v] by (1)
+end
+</div>
+
+Count up how long the player has survived.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [timer v] to (120)
+repeat until &lt;(timer) = (0)&gt;
+wait (1) seconds
+change [timer v] by (-1)
+end
+</div>
+
+Count down to zero, then the level ends.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [timer v] to (0)
+forever
+wait (0.01) seconds
+change [timer v] by (0.01)
+end
+</div>
+
+Precise hundredths-of-a-second timing.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [cooldown v] to (30)
+forever
+if &lt;(cooldown) &gt; (0)&gt; then
+change [cooldown v] by (-1)
+end
+end
+</div>
+
+Only counts down while above zero.
+</div>
+
+</div>
 
 ---
 
 ### Timer Display
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    set [minutes v] to ( (timer) / 60 )
-    set [seconds v] to ( (timer) mod 60 )
-    say (join (join [Time: ] (minutes)) (join [:] (seconds))) for 0.1 secs
-    wait 0.1 secs
+set [minutes v] to ((timer) / (60))
+set [seconds v] to ((timer) mod (60))
+say (join (join [Time: ] (minutes)) (join [:] (seconds))) for (0.1) seconds
+wait (0.1) seconds
 end
-```
+</div>
 
 **Live timer display!** ⏱️
 
@@ -1566,6 +2213,10 @@ In this chapter, you learned:
 - ✅ **Condition Controlled Loop** — `repeat until` smart loops
 - ✅ **And/Or/Not Operators** — Complex boolean logic
 - ✅ **Score/Lives/Timer Variables** — Core game state management
+
+!!! mascot-celebration "You've Mastered Advanced Control and Operators"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Look at everything you just built: reusable custom blocks, clone-based particles and enemies with full lifecycles, pen-drawn art, and boolean logic that combines `and`, `or`, and `not` into real game rules. You also picked up defensive coding, controlled randomness, and clean `repeat until` loops — that's a professional game-programming toolkit!
 
 ---
 
