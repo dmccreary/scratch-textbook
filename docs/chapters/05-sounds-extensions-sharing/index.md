@@ -53,7 +53,15 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "New Superpowers Await"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Time to level up! This chapter hands you randomness, variables that remember things, custom blocks you invent yourself, and a whole toolbox of extensions — camera sensing, talking sprites, translation, even real hardware. By the end you'll be building with tools professional Scratchers use every day. Let's build something purr-fect!
+
 ## Random Numbers — Unpredictable Fun!
+
+<div class="scratch">
+pick random (1) to (10)
+</div>
 
 ### What Is a Random Number?
 
@@ -61,20 +69,51 @@ A **random number** is a number that Scratch picks **unpredictably** from a rang
 
 ### The Random Block (Operators → Green)
 
-```
+<div class="scratch">
 pick random (1) to (10)
-```
+</div>
 
 **Gives a random integer** between the two numbers (inclusive).
 
 ### Random Number Examples
 
-| Block | Possible Results | Use For |
-|-------|------------------|---------|
-| `pick random (1) to (6)` | 1, 2, 3, 4, 5, 6 | Dice rolls |
-| `pick random (1) to (100)` | 1 to 100 | Percent chance |
-| `pick random (-10) to (10)` | -10 to 10 | Random direction |
-| `pick random (0) to (360)` | 0 to 360 | Random angle |
+**Examples:**
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (6)
+</div>
+
+Dice rolls.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (100)
+</div>
+
+Percent chance.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (-10) to (10)
+</div>
+
+Random direction.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (0) to (360)
+</div>
+
+Random angle.
+</div>
+
+</div>
 
 !!! tip "🎲 Random = Surprise!"
     Random numbers make games **different every time** — enemies spawn in new places, loot varies, levels feel fresh!
@@ -85,32 +124,31 @@ pick random (1) to (10)
 
 #### Random Position
 
-```
+<div class="scratch">
 when I start as a clone
-go to x: (pick random -200 to 200) y: (pick random -150 to 150)
-```
+go to x: (pick random (-200) to (200)) y: (pick random (-150) to (150))
+</div>
 
 **Spawns clone at random position** on stage!
 
 #### Random Wait
 
-```
+<div class="scratch">
 forever
-    wait (pick random 1 to 5) secs
-    create clone of [myself v]
+wait (pick random (1) to (5)) seconds
+create clone of [myself v]
 end
-```
+</div>
 
 **Creates clones at random intervals** — 1 to 5 seconds apart!
 
 #### Random Chance
 
-```
-if < (pick random 1 to 10) < 3 > then
-    // 20% chance (2 out of 10)
-    broadcast [rare-item v]
+<div class="scratch">
+if &lt;(pick random (1) to (10)) &lt; (3)&gt; then
+broadcast [rare-item v] // 20% chance: 2 out of 10
 end
-```
+</div>
 
 **20% chance** something special happens!
 
@@ -118,11 +156,19 @@ end
 
 ## Variables — Remembering Things!
 
+<div class="scratch">
+set [my variable v] to (0)
+</div>
+
 ### What Is a Variable?
 
 A **variable** is a **named container** that holds **one value** (number or text) that can **change** during your program.
 
 Think of it like a **labeled box** — you can put something in, take it out, check what's inside, or replace it.
+
+!!! mascot-thinking "A Box That Outlives the Block"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that a variable keeps its value even after the script that set it has finished running — it's not a temporary answer like a reporter, it's storage. That persistence is what lets a score survive between coin pickups, or a timer keep counting while everything else in your project happens around it.
 
 ### Creating a Variable
 
@@ -134,13 +180,51 @@ Think of it like a **labeled box** — you can put something in, take it out, ch
 
 ### Variable Blocks
 
-| Block | What It Does |
-|-------|--------------|
-| `set [score v] to (0)` | Put value in box |
-| `change [score v] by (1)` | Add/subtract from box |
-| `show variable [score v]` | Display on stage |
-| `hide variable [score v]` | Hide from stage |
-| `score` (reporter) | Get current value |
+**Examples:**
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+set [score v] to (0)
+</div>
+
+Put a value in the box.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change [score v] by (1)
+</div>
+
+Add or subtract from the box.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+show variable [score v]
+</div>
+
+Display it on stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+hide variable [score v]
+</div>
+
+Hide it from stage.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(score)
+</div>
+
+The reporter — get the current value.
+</div>
+
+</div>
 
 ---
 
@@ -160,48 +244,56 @@ Think of it like a **labeled box** — you can put something in, take it out, ch
 
 #### Score Counter
 
-```
+<div class="scratch">
 when green flag clicked
 set [score v] to (0)
 show variable [score v]
 
 when I receive [coin-collected v]
 change [score v] by (10)
-```
+</div>
 
 #### Lives System
 
-```
+<div class="scratch">
 when green flag clicked
 set [lives v] to (3)
 show variable [lives v]
 
 when I receive [player-hit v]
 change [lives v] by (-1)
-if < (lives) = 0 > then
-    broadcast [game-over v]
+if &lt;(lives) = (0)&gt; then
+broadcast [game-over v]
 end
-```
+</div>
 
 #### Timer
 
-```
+<div class="scratch">
 when green flag clicked
 set [timer v] to (0)
 show variable [timer v]
 forever
-    wait (1) secs
-    change [timer v] by (1)
+wait (1) seconds
+change [timer v] by (1)
 end
-```
+</div>
 
 ---
 
 ## Custom Blocks — Make Your Own Blocks!
 
+<div class="scratch">
+define jump
+</div>
+
 ### What Are Custom Blocks?
 
 **My Blocks** (🩷 Pink) let you **create your own blocks** — like inventing new LEGO® pieces!
+
+!!! mascot-thinking "You're Naming a New Verb"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    A custom block isn't just a shortcut for typing less — it's you inventing a new word the rest of your project can speak. Once `jump` exists, every script can say "jump" instead of re-explaining three motion blocks, the same way real programmers wrap complexity behind a simple name.
 
 ### Why Make Custom Blocks?
 
@@ -230,32 +322,36 @@ end
 
 #### Simple Custom Block (No Parameters)
 
-```
+<div class="scratch">
 define jump
-change y by 50
-wait 0.2 secs
-change y by -50
-```
+change y by (50)
+wait (0.2) seconds
+change y by (-50)
+</div>
 
 **Use it:** `jump` — always jumps 50 pixels
 
 #### Custom Block with Parameter
 
-```
+<div class="scratch">
 define jump (height)
 change y by (height)
-wait 0.2 secs
-change y by (height * -1)
-```
+wait (0.2) seconds
+change y by ((height) * (-1))
+</div>
 
 **Use it:** `jump (100)` — jumps high! `jump (20)` — small hop
 
+!!! mascot-encourage "Parameters Take a Second Look"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If it's not obvious yet why `(height)` inside the definition can mean something different every time you call `jump`, that's completely normal — parameters are one of the first real abstractions in this book. Try calling `jump (20)` and `jump (100)` back to back and watch the difference; seeing it beats reading about it.
+
 #### Custom Block with Multiple Parameters
 
-```
+<div class="scratch">
 define glide-to (target-x) (target-y) (seconds)
 glide (seconds) secs to x: (target-x) y: (target-y)
-```
+</div>
 
 **Use it:** `glide-to (100) (50) (2)` — smooth move to (100, 50) in 2 seconds!
 
@@ -275,8 +371,9 @@ In the **Make a Block** options, check **"Run without screen refresh"**.
 | Movement, animation, player sees it | **Unchecked** |
 | Math calculation, setup, instant teleport | **Checked** |
 
-!!! tip "⚡ Turbo Mode for Math!"
-    Use "Run without screen refresh" for: calculations, setup scripts, instant positioning, generating levels. **Don't** use it for animations the player should see!
+!!! mascot-tip "Turbo Mode for Math"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Reach for "Run without screen refresh" on anything the player shouldn't watch happen step by step — calculations, setup scripts, instant positioning, generating a level. Leave it unchecked for anything the player SHOULD see, like a jump or a walk animation.
 
 ---
 
@@ -311,6 +408,10 @@ In the **Make a Block** options, check **"Run without screen refresh"**.
 
 ## Pen Extension — Draw With Code!
 
+<div class="scratch">
+pen down
+</div>
+
 ### Adding Pen
 
 **Extensions → Pen → Add** → **Pen** category appears (🟢 Green)!
@@ -332,46 +433,46 @@ In the **Make a Block** options, check **"Run without screen refresh"**.
 
 #### Draw a Square
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen down
-repeat 4
-    move 100 steps
-    turn 90 degrees
+repeat (4)
+move (100) steps
+turn right (90) degrees
 end
 pen up
-```
+</div>
 
 #### Rainbow Spiral
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen down
-set pen size to 5
-repeat 360
-    move 5 steps
-    turn 1 degrees
-    change pen color by 1
+set pen size to (5)
+repeat (360)
+move (5) steps
+turn right (1) degrees
+change pen [color v] by (1)
 end
 pen up
-```
+</div>
 
 #### Stamp Pattern
 
-```
+<div class="scratch">
 when green flag clicked
 erase all
 pen up
-repeat 12
-    go to x: 0 y: 0
-    point in direction (30 * (repeat count))
-    move 100 steps
-    stamp
-    turn 30 degrees
+repeat (12)
+go to x: (0) y: (0)
+point in direction ((30) * (repeat count))
+move (100) steps
+stamp
+turn right (30) degrees
 end
-```
+</div>
 
 !!! tip "🎨 Pen = Math Art!"
     Combine **loops + pen + math** to create amazing geometric art, spirographs, fractals, and more!
@@ -379,6 +480,10 @@ end
 ---
 
 ## Video Sensing — Camera Games!
+
+<div class="scratch">
+turn video [on v]
+</div>
 
 ### Adding Video Sensing
 
@@ -398,32 +503,32 @@ end
 
 #### Motion Mirror
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
-set video transparency to 50
+turn video [on v]
+set video transparency to (50)
 forever
-    if <video [motion] on [this sprite] > 30> then
-        change color effect by 10
-        play sound [pop v]
-    end
+if &lt;(video [motion v] on [this sprite v]) > (30)&gt; then
+change color effect by (10)
+play sound [pop v]
 end
-```
+end
+</div>
 
 **Wave at camera → sprite reacts!**
 
 #### Hand-Controlled Sprite
 
-```
+<div class="scratch">
 when green flag clicked
-turn video on
+turn video [on v]
 forever
-    go to [mouse-pointer v]  // or use video position
-    if <video [motion] on [this sprite] > 50> then
-        play sound [pop v]
-    end
+go to [mouse-pointer v] // or use video position
+if &lt;(video [motion v] on [this sprite v]) > (50)&gt; then
+play sound [pop v]
 end
-```
+end
+</div>
 
 !!! tip "📷 Video = Body Control!"
     Use your **body as the controller** — dance, wave, jump to control the game!
@@ -431,6 +536,10 @@ end
 ---
 
 ## Text to Speech — Talking Sprites!
+
+<div class="scratch">
+speak [Hello!]
+</div>
 
 ### Adding Text to Speech
 
@@ -462,23 +571,23 @@ English, Spanish, French, German, Italian, Chinese, Japanese, Korean, and many m
 
 #### Talking Greeter
 
-```
+<div class="scratch">
 when green flag clicked
 set voice to [tenor v]
 set language to [English v]
 speak [Welcome to my game!] and wait
 speak [Use arrow keys to move.]
-```
+</div>
 
 #### Multilingual Character
 
-```
+<div class="scratch">
 when this sprite clicked
 set language to [Spanish v]
 speak [¡Hola! ¿Cómo estás?] and wait
 set language to [French v]
 speak [Bonjour! Comment ça va?] and wait
-```
+</div>
 
 !!! tip "🗣️ No Recording Needed!"
     Text to Speech **generates voice from text** — no microphone, no recording, infinite possibilities!
@@ -486,6 +595,10 @@ speak [Bonjour! Comment ça va?] and wait
 ---
 
 ## Translate Extension — Many Languages!
+
+<div class="scratch">
+translate [Hello] to [Spanish v]
+</div>
 
 ### Adding Translate
 
@@ -502,11 +615,11 @@ speak [Bonjour! Comment ça va?] and wait
 
 #### Multilingual Greeting
 
-```
+<div class="scratch">
 when green flag clicked
 set language to [Spanish v]
 speak (translate [Hello, friend!] to [Spanish v]) and wait
-```
+</div>
 
 !!! tip "🌍 Translate + Text to Speech = Polyglot Sprites!"
     Combine both extensions for sprites that **speak any language**!
@@ -514,6 +627,10 @@ speak (translate [Hello, friend!] to [Spanish v]) and wait
 ---
 
 ## micro:bit Extension — Hardware Fun!
+
+<div class="scratch">
+when [button A v] pressed
+</div>
 
 ### What Is micro:bit?
 
@@ -590,8 +707,9 @@ The **BBC micro:bit** is a tiny programmable computer with buttons, LEDs, accele
 | **Right-click → Delete** | Right-click → "Delete" |
 | **Delete key** | Select block → press Delete/Backspace |
 
-!!! tip "🗑️ Deleting Top Block = Whole Stack!"
-    Deleting a **hat block** deletes the **entire stack** below it. Be careful!
+!!! mascot-warning "Deleting the Top Block Deletes Everything"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A common surprise: dragging away or deleting a hat block takes the **entire stack** below it with it, not just that one block. Before deleting a hat block, drag the rest of the stack off it first if you want to keep it.
 
 ---
 
@@ -606,8 +724,9 @@ The **BBC micro:bit** is a tiny programmable computer with buttons, LEDs, accele
 | **TODO reminders** | "TODO: Add double-jump here" |
 | **Credit others** | "Enemy AI from @CoolCoder123" |
 
-!!! tip "💬 Comments = Future You Thanks Present You!"
-    Your future self **will forget** why you wrote that weird math. Leave a comment!
+!!! mascot-tip "Future You Will Thank Present You"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Your future self **will forget** why you wrote that weird math or what a tricky script does. Right-click and add a comment the moment it's clear in your head — not later, when it won't be.
 
 ---
 
@@ -630,20 +749,22 @@ The **BBC micro:bit** is a tiny programmable computer with buttons, LEDs, accele
 
 ### Play Sound Until Done
 
-```
+<div class="scratch">
 play sound [jump v] until done
-```
+</div>
 
 **Waits** for sound to completely finish before next block.
+
 - Use for: **Dialogue, sound effects that must finish**
 
 ### Start Sound
 
-```
+<div class="scratch">
 start sound [jump v]
-```
+</div>
 
 **Continues immediately** — sound plays in background.
+
 - Use for: **Background music, rapid effects, overlapping sounds**
 
 ---
@@ -659,28 +780,32 @@ start sound [jump v]
 | "Game over" fanfare | `play sound [game-over] until done` |
 
 !!! example "🎵 Music + Effects Together"
-    ```
+    <div class="scratch">
     when green flag clicked
-    start sound [background-music v]    // Music plays continuously
+    start sound [background-music v] // Music plays continuously
     forever
-        if <key [space] pressed?> then
-            start sound [jump v]        // Overlaps music perfectly
-            change y by 50
-            wait 0.3 secs
-            change y by -50
-        end
+    if &lt;key [space v] pressed?&gt; then
+    start sound [jump v] // Overlaps music perfectly
+    change y by (50)
+    wait (0.3) seconds
+    change y by (-50)
     end
-    ```
+    end
+    </div>
 
 ---
 
 ## Changing Tempo — Speed Up the Beat!
 
+<div class="scratch">
+change tempo by (20)
+</div>
+
 ### Tempo Block
 
-```
+<div class="scratch">
 change tempo by (20)
-```
+</div>
 
 **Changes playback speed** of sounds (pitch changes too!).
 
@@ -691,6 +816,7 @@ change tempo by (20)
 | `set tempo to (100)` | Normal speed |
 
 !!! tip "🎶 Tempo = Mood!"
+
     - **Fast tempo** = excitement, action, panic
     - **Slow tempo** = sadness, tension, slow-motion
 
@@ -837,13 +963,19 @@ ORDER:
 
 ## Forever Loop — The Game Engine!
 
+<div class="scratch">
+forever
+move (10) steps
+end
+</div>
+
 ### What Is Forever?
 
-```
+<div class="scratch">
 forever
-    // These blocks run OVER AND OVER
+// These blocks run over and over
 end
-```
+</div>
 
 **Runs until stopped** — the heartbeat of your game!
 
@@ -860,17 +992,18 @@ end
 
 ### Forever Loop + Wait = Smooth!
 
-```
+<div class="scratch">
 forever
-    // Do something
-    wait 0.01 secs   // ← CRITICAL!
+// Do something
+wait (0.01) seconds // Critical!
 end
-```
+</div>
 
 **Without `wait`**, the loop runs **thousands of times per second** — can lag or freeze Scratch!
 
-!!! warning "⏱️ Forever Needs a Break!"
-    **Always** put a tiny `wait` (even 0.01 secs) in a `forever` loop, or use `forever if` pattern!
+!!! mascot-warning "Forever Needs a Break"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Skip the `wait` inside a `forever` loop and it runs thousands of times a second, which can lag or freeze your whole project. Always tuck a tiny `wait (0.01) seconds` inside — small enough that players never notice, big enough to keep Scratch breathing.
 
 ---
 
@@ -896,21 +1029,27 @@ end
 
 ### X in Code
 
-```
-when [right arrow] key pressed
-change x by 10        // Move RIGHT (positive)
+<div class="scratch">
+when key [right arrow v] pressed
+change x by (10) // Move RIGHT (positive)
+</div>
 
-when [left arrow] key pressed
-change x by -10       // Move LEFT (negative)
+<div class="scratch">
+when key [left arrow v] pressed
+change x by (-10) // Move LEFT (negative)
+</div>
 
-if < (x position) > 200 > then
-    set x to 200      // Stop at right edge
+<div class="scratch">
+if &lt;(x position) > (200)&gt; then
+set x to (200) // Stop at right edge
 end
+</div>
 
-if < (x position) < -200 > then
-    set x to -200     // Stop at left edge
+<div class="scratch">
+if &lt;(x position) &lt; (-200)&gt; then
+set x to (-200) // Stop at left edge
 end
-```
+</div>
 
 !!! tip "➡️ Right = Positive, ⬅️ Left = Negative"
     **Remember:** Number line! Positive right, negative left. Just like math class!
@@ -939,6 +1078,10 @@ In this chapter, you learned:
 - ✅ **Step-by-step thinking** — Plan before coding
 - ✅ **Forever loop** — Game engine, always with wait!
 - ✅ **Positive/Negative X** — Right/left movement
+
+!!! mascot-celebration "You've Got a Whole Toolbox Now"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Randomness, variables that remember, custom blocks you invented yourself, five different extensions, and the editor skills to keep it all tidy — that's a professional Scratcher's toolbox, and it's yours now. Next up: putting it all to work on real interactive logic.
 
 ---
 

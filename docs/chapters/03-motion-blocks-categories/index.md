@@ -35,6 +35,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Cracking the Code of Shapes"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ever notice how a jigsaw piece only fits one way? Scratch blocks play the same trick, and once you can read a block's shape at a glance, you'll stop wasting time dragging the wrong piece into the wrong slot. By the end of this chapter you'll be adding sound, superpowers from extensions, and even packing your best scripts into a backpack to reuse later. Let's build something purr-fect!
+
 ## Block Shapes — The Secret Language of Scratch
 
 In Chapters 1 and 2, you saw that blocks come in **different shapes**. These shapes aren't just for looks — they tell you **exactly how the block works** and **where it can go** in a script.
@@ -47,6 +51,10 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 
 ### 1. Hat Blocks 🎩 — The Script Starters
 
+<div class="scratch">
+when green flag clicked
+</div>
+
 **Shape:** Rounded top, flat bottom (like a hat!)
 
 **Job:** **Start a script** when something happens. Every script MUST begin with a hat block.
@@ -54,10 +62,34 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 **Where they go:** ONLY at the very top of a script. Nothing can go above them!
 
 **Examples:**
-- `when green flag clicked` 🟢
-- `when this sprite clicked` 👆
-- `when [space] key pressed` ⌨️
-- `when I receive [message]` 📡
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+when green flag clicked
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when this sprite clicked
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when [space v] key pressed
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when I receive [message v]
+</div>
+</div>
+
+</div>
 
 !!! tip "🎩 One Hat Per Script"
     Every separate script stack needs its **own hat block**. You can't have two hat blocks in the same stack!
@@ -66,6 +98,10 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 
 ### 2. Stack Blocks 🧱 — The Action Doers
 
+<div class="scratch">
+move (10) steps
+</div>
+
 **Shape:** Puzzle-piece notches on top AND bottom (like a brick!)
 
 **Job:** **Do something** — move, turn, say, wait, change a variable, play a sound, etc.
@@ -73,12 +109,46 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 **Where they go:** In the **middle** of a script, snapped between other stack blocks or under a hat block.
 
 **Examples:**
-- `move 10 steps` 🔵
-- `say Hello!` 🟣
-- `play sound pop` 🩷
-- `wait 1 seconds` 🟠
-- `change x by 10` 🔵
-- `set score to 0` 🔴
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+move (10) steps
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+say [Hello!]
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+play sound [pop v]
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+wait (1) seconds
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+change x by (10)
+</div>
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+set [score v] to (0)
+</div>
+</div>
+
+</div>
 
 !!! note "🧱 Stack Blocks Chain Together"
     Stack blocks snap together **vertically** — the bottom notch of one fits into the top notch of the next. They run **in order, top to bottom**.
@@ -87,6 +157,10 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 
 ### 3. Reporter Blocks 📊 — The Value Givers
 
+<div class="scratch">
+x position
+</div>
+
 **Shape:** Rounded rectangle (like a pill!)
 
 **Job:** **Give a value** — a number or text — that other blocks can use.
@@ -94,25 +168,75 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 **Where they go:** Inside the **white holes** (slots) of other blocks. They **don't stand alone**!
 
 **Examples:**
-- `x position` 🔵 — gives current X coordinate
-- `y position` 🔵 — gives current Y coordinate
-- `direction` 🔵 — gives current facing angle
-- `pick random 1 to 10` 🟢 — gives random number
-- `timer` 🟡 — gives seconds since green flag
-- `answer` 🔷 — gives what player typed
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+x position
+</div>
+
+Gives the current X coordinate.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+y position
+</div>
+
+Gives the current Y coordinate.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+direction
+</div>
+
+Gives the current facing angle.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+pick random (1) to (10)
+</div>
+
+Gives a random number.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+timer
+</div>
+
+Gives seconds since the green flag was clicked.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+answer
+</div>
+
+Gives what the player typed.
+</div>
+
+</div>
 
 !!! info "📊 Reporters Fit Inside Slots"
     See those **white oval/rectangular holes** in other blocks? That's where reporter blocks go!
-    
-    ```
+
+    <div class="scratch">
     go to x: (x position) y: (y position)
-                    ↑           ↑
-              reporter      reporter
-    ```
+    </div>
+
+    Both `(x position)` and `(y position)` are reporters plugged straight into the white number slots of `go to x: _ y: _`.
 
 ---
 
 ### 4. Boolean Blocks ⬡ — The True/False Answerers
+
+<div class="scratch">
+touching [mouse-pointer v]?
+</div>
 
 **Shape:** Hexagon (six-sided, like a nut!)
 
@@ -121,26 +245,69 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 **Where they go:** Inside **hexagonal (pointy) slots** in other blocks. Usually in `if`, `repeat until`, or `wait until` blocks.
 
 **Examples:**
-- `touching [mouse-pointer v]?` 🔷 — true if touching mouse
-- `key [space] pressed?` 🔷 — true if space held down
-- `< 5 > 3` 🟢 — true (5 is greater than 3)
-- `= 10 10` 🟢 — true (10 equals 10)
-- `< [score] > 100` 🔴 — true if score > 100
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+touching [mouse-pointer v]?
+</div>
+
+True if touching the mouse-pointer.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+key [space v] pressed?
+</div>
+
+True if space is held down.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(5) > (3)
+</div>
+
+True — 5 is greater than 3.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(10) = (10)
+</div>
+
+True — 10 equals 10.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(score) > (100)
+</div>
+
+True if score is greater than 100.
+</div>
+
+</div>
 
 !!! note "⬡ Boolean = Yes/No"
     Think of Boolean blocks as **questions** that Scratch answers with **YES (true)** or **NO (false)**.
-    
-    ```
-    if <touching [edge v]?> then
-        bounce
+
+    <div class="scratch">
+    if &lt;touching [edge v]?&gt; then
+    turn right (180) degrees
     end
-         ↑
-    Boolean block fits here
-    ```
+    </div>
+
+    The hexagonal `<touching [edge v]?>` block fits only into the hexagonal notch carved into the `if` block.
 
 ---
 
 ### 5. Cap Blocks 🛑 — The Script Stoppers
+
+<div class="scratch">
+stop [all v]
+</div>
 
 **Shape:** Flat top, rounded bottom (like a cap on a bottle!)
 
@@ -149,12 +316,28 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 **Where they go:** ONLY at the **very bottom** of a script stack. Nothing can go below them!
 
 **Examples:**
-- `stop [this script v]` 🟠 — stops just this stack
-- `stop [all v]` 🟠 — stops EVERYTHING (like hitting the stop sign)
-- `stop [other scripts in sprite v]` 🟠 — stops other stacks in same sprite
 
-!!! warning "🛑 Cap = The End"
-    Nothing runs after a cap block. It's like a period at the end of a sentence — the script is DONE.
+<div class="scratch">
+stop [this script v]
+</div>
+
+Stops just this stack.
+
+<div class="scratch">
+stop [all v]
+</div>
+
+Stops EVERYTHING — like hitting the stop sign.
+
+<div class="scratch">
+stop [other scripts in sprite v]
+</div>
+
+Stops other stacks in the same sprite.
+
+!!! mascot-warning "Nothing Runs After The End"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A common trap is dragging more blocks under a cap block and expecting them to run — they never will, because the script already stopped there. If a block seems to do nothing, check whether it accidentally landed below a `stop` block and drag it back above instead.
 
 ---
 
@@ -167,6 +350,10 @@ Think of block shapes like **puzzle pieces** — each shape has a specific job a
 | 📊 | **Reporter** | No | No | ✅ YES | No | No | **Inside white slots** |
 | ⬡ | **Boolean** | No | No | No | ✅ YES/NO | No | **Inside hexagonal slots** |
 | 🛑 | **Cap** | No | No | No | No | ✅ YES | **Bottom only** |
+
+!!! mascot-thinking "One Shape, One Job"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Look at that table again: every shape appears in exactly one "Where It Goes" column. That's not an accident — Scratch designed the shapes so a script that snaps together is automatically a script that makes sense, the same way you'd never wedge a puzzle-piece sky into a puzzle-piece ocean.
 
 ---
 
@@ -184,6 +371,7 @@ Type: diagram
 Purpose: Show how block shapes fit together in a complete script
 
 Components to show:
+
 - A complete script with all 5 shapes in correct positions:
   1. Hat block at top: `when green flag clicked`
   2. Stack blocks in middle: `move 10 steps`, `turn 15 degrees`, `wait 1 secs`
@@ -204,6 +392,7 @@ Components to show:
 Style: Annotated script with color-coded connection lines (green=valid, red=invalid)
 
 Labels:
+
 - "Hat starts the script"
 - "Stacks do actions in order"
 - "Reporters fill white slots"
@@ -239,8 +428,9 @@ The **script area** is the big gray space in the middle where you build scripts.
 | **Clean up** | Right-click empty space → "Clean up" (aligns blocks neatly) |
 | **Block help** | Right-click block → "Help" (shows what it does!) |
 
-!!! tip "💬 Comments Are Your Friends!"
-    **Right-click any block → "Add comment"** to leave notes for yourself or others. Great for remembering what a tricky section does!
+!!! mascot-tip "Comments Are Your Friends!"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Right-click any block and choose **"Add comment"** to pin a little yellow sticky note right next to it. Future-you (or a friend reading your project) will thank you for explaining what a tricky section does.
 
 ---
 
@@ -267,6 +457,10 @@ Every costume has a **center point** (crosshair) that determines:
 | **Spinning object** | **Exact geometric center** — spins smoothly |
 | **Car/vehicle** | **Bottom center of wheels** — drives on ground |
 | **Projectile (bullet)** | **Tip/front** — hits target from front |
+
+!!! mascot-encourage "Pivot Points Take Practice"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If picking a costume's pivot point still feels like guesswork, that's completely normal — even experienced creators nudge the crosshair a few times before a sprite stops wobbling. Set it once, try the spin test below, and adjust; you'll feel the difference the moment it clicks.
 
 !!! tip "🎯 Test Your Center!"
     After setting the center, go to Code tab and add:
@@ -307,6 +501,10 @@ The **Sound category** (🩷 pink) lets you add audio to your projects.
 | `play sound [pop] until done` | **Waits** for sound to finish before next block | Dialogue, sound effects that must complete |
 | `start sound [pop]` | **Continues immediately** — sound plays in background | Background music, rapid-fire effects |
 
+!!! mascot-tip "Waiting or Not?"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Stuck choosing a sound block? If the next block needs to wait for the sound to finish, reach for `play sound until done` — otherwise, use `start sound` and let the action continue while it plays.
+
 !!! example "🎵 Background Music + Sound Effects"
     <div class="scratch">
     when green flag clicked
@@ -334,6 +532,7 @@ The **Sound category** (🩷 pink) lets you add audio to your projects.
 6. Trim if needed, then **Save**
 
 !!! tip "🎤 Sound Ideas"
+
     - Record your own **jump sound** (say "boing!")
     - Record **character voices** for story games
     - Record **real-world sounds** (door creak, coin chime)
@@ -498,6 +697,10 @@ The **Backpack** (🎒 icon at bottom of sidebar) lets you **save blocks, sprite
 | **Costumes** | Drag costume from costumes list |
 | **Sounds** | Drag sound from sounds list |
 
+!!! mascot-thinking "Projects Aren't Sealed Boxes"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Up to now, each project probably felt like its own separate world. The backpack quietly breaks that rule: it's storage that lives outside every project, so a script, sprite, or sound can travel from one world to the next without you rebuilding it from scratch.
+
 ### How to Use the Backpack
 
 | Action | How To |
@@ -529,6 +732,10 @@ In this chapter, you learned:
 - ✅ **Text to Speech** — Synthetic voices in many languages
 - ✅ **Translate** — Instant translation between languages
 - ✅ **Backpack** — Save and reuse blocks/sprites across projects
+
+!!! mascot-celebration "You Can Read Scratch's Whole Grammar Now"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just learned to recognize all 5 block shapes on sight, tame the script area, aim a costume's pivot point, add sound and superpowers with extensions, and stash your best work in a backpack. That's the grammar of Scratch — every chapter from here just adds new vocabulary.
 
 ---
 

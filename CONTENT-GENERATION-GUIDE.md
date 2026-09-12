@@ -24,6 +24,108 @@ turn right (15) degrees
 See [Sample Use of Scratchblocks](./docs/learning-graph/scratchblocks-test.md) for an
 example of the format.
 
+### Escape Angle Brackets in Boolean Slots
+
+A `<div class="scratch">` block is raw HTML passthrough — the browser's HTML
+parser sees its contents **before** `scratchblocks.js` ever runs. Any boolean
+or comparison block written with literal `<...>` (the hexagonal boolean-slot
+syntax, e.g. `if <key (space v) pressed?> then`) gets misread as an actual
+HTML start tag. The browser silently inserts a matching close tag right
+before `</div>`, swallowing everything in between — the rendered block shows
+an empty hexagon slot instead of the condition, with no build warning to
+flag it.
+
+**Fix:** always write the angle brackets as HTML entities instead of literal
+characters:
+
+```html
+<div class="scratch">
+if &lt;key (space v) pressed?&gt; then
+change [score v] by (1)
+end
+</div>
+```
+
+The browser decodes `&lt;`/`&gt;` back into literal `<`/`>` text (never
+re-parsed as markup) before scratchblocks reads it, so this renders
+identically to the intended block. Plain reporters (`(...)`) and dropdowns
+(`[...]`) are unaffected — only the boolean/hexagon `<...>` wrapper needs
+escaping, and only inside a `div.scratch` block (backtick-fenced inline code
+elsewhere auto-escapes this for you).
+
+**How to check a chapter:** after writing or editing any `div.scratch`
+block containing an `if`, `repeat until`, `wait until`, or other
+boolean-slot condition, fetch the built page's raw HTML and confirm there
+is no stray closing tag (like `</key>` or `</touching>`) immediately before
+the div's own `</div>` — that stray tag is the signature of this bug.
+
+### Lead With the Block
+
+When introducing a **new block** for the first time, place an inline
+`scratchblocks` diagram of that exact block as the **first part of the
+introduction** — before any prose explaining what it does or how it works.
+The reader should see the block before they read about it.
+
+When introducing a **category** of blocks (a block shape, a palette
+category, an extension's block set, etc.), give the single **most common
+block** in that category as the representative example, using the same
+lead-with-the-block placement.
+
+For example, when introducing Hat Blocks in
+[Motion Blocks and Block Categories](/chapters/03-motion-blocks-categories/#1-hat-blocks-the-script-starters),
+the most common hat block is `when green flag clicked`, so it opens the
+section:
+
+```html
+<div class="scratch">
+when green flag clicked
+</div>
+```
+
+### Grouping Multiple Examples
+
+When a list of block examples has **more than three** items, lay them out as
+an mkdocs-material grid instead of a plain bullet list, with one `scratchblocks`
+diagram per cell. With **three or fewer** items, keep them as plain
+stacked/inline `scratchblocks` diagrams — a grid isn't worth it for that few.
+
+Use the **generic** `.grid` layout with an explicit `.card` wrapper div per
+cell — **not** the `.grid.cards` list (`-` item) syntax. The list-based cards
+syntax only supports pure-Markdown content (text, links, images); as soon as
+a list item contains a nested raw HTML block like a scratchblocks `div`,
+`md_in_html` silently breaks after the first item and the rest of the
+examples fall out of the grid entirely. The `.grid` + `.card` div pattern
+below has no such issue and renders identically (bordered cards in a
+responsive grid):
+
+```html
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+x position
+</div>
+
+Gives the current X coordinate.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+y position
+</div>
+
+Gives the current Y coordinate.
+</div>
+
+</div>
+```
+
+A card's caption paragraph (if any) goes inside the same `.card` div, after
+the `scratchblocks` div, separated by a blank line. See the Reporter and
+Boolean block examples in
+[Motion Blocks and Block Categories](/chapters/03-motion-blocks-categories/#3-reporter-blocks-the-value-givers)
+for a working reference.
+
 ## Learning Mascot: Scratch the Cat
 
 ### Mascot File Index

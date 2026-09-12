@@ -39,7 +39,7 @@ end
 when green flag clicked
 set [score v] to (0)
 forever
-if <key (space v) pressed?> then
+if &lt;key (space v) pressed?&gt; then
 change [score v] by (1)
 end
 end

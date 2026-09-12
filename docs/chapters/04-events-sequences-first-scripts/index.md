@@ -51,7 +51,15 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Let's Make Things Happen"
+    ![Scratch the Cat waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Ready to make Scratch actually *do* something? This chapter is where sprites start reacting to clicks, keys, and each other — the green flag, loops that repeat, decisions with if blocks, and clones that multiply one sprite into an army. By the end you'll build three complete working scripts from scratch. Let's build something purr-fect!
+
 ## Events — When Things Happen
+
+<div class="scratch">
+when green flag clicked
+</div>
 
 ### What Is an Event?
 
@@ -59,19 +67,65 @@ In Scratch, an **event** is something that happens that can **start a script**. 
 
 Events make Scratch **event-driven** — your code doesn't just run all at once; it waits for things to happen, then responds.
 
+!!! mascot-thinking "Code That Waits"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice something different here: your script doesn't run the instant the project loads — it just sits there until its event fires. That's a real shift from "run top to bottom" thinking: a Scratch project is really a pile of separate scripts, each waiting for its own cue.
+
 ### The Event Blocks (Yellow Hat Blocks)
 
-| Block | Triggers When... | Example Use |
-|-------|-------------------|-------------|
-| `when green flag clicked` 🟢 | Player clicks the green flag | Start the whole game |
-| `when this sprite clicked` 👆 | Player clicks/taps this sprite | Buttons, collectibles |
-| `when [space] key pressed` ⌨️ | Specific key is pressed | Player movement |
-| `when backdrop switches to [backdrop1]` 🎭 | Backdrop changes | Scene transitions |
-| `when I receive [message]` 📡 | Broadcast received | Sprite communication |
+**Examples:**
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+when green flag clicked
+</div>
+
+Player clicks the green flag — starts the whole game.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when this sprite clicked
+</div>
+
+Player clicks or taps this sprite — buttons, collectibles.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when [space v] key pressed
+</div>
+
+A specific key is pressed — player movement.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when backdrop switches to [backdrop1 v]
+</div>
+
+The backdrop changes — scene transitions.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when I receive [message v]
+</div>
+
+A broadcast is received — sprite communication.
+</div>
+
+</div>
 
 ---
 
 ## The Green Flag — Your Universal "Start" Button
+
+<div class="scratch">
+when green flag clicked
+</div>
 
 The **green flag** (🟢) is the most important event in Scratch. When clicked, it fires **ALL scripts that start with `when green flag clicked`** — at the same time!
 
@@ -89,13 +143,13 @@ The **green flag** (🟢) is the most important event in Scratch. When clicked, 
 2. **Use it to set starting values** — position, variables, costumes
 3. **Keep it simple** — just setup, not gameplay logic
 
-```
+<div class="scratch">
 when green flag clicked
-go to x: -200 y: -100    // Start position
-set score to 0           // Reset score
-switch costume to [player-idle v]  // Starting look
-show                     // Make sure visible
-```
+go to x: (-200) y: (-100) // Start position
+set [score v] to (0) // Reset score
+switch costume to [player-idle v] // Starting look
+show // Make sure visible
+</div>
 
 !!! tip "🏁 One Green Flag to Rule Them All"
     The green flag is like the **starting whistle** in a sports game — everyone begins at the same moment!
@@ -109,6 +163,7 @@ show                     // Make sure visible
 A **sequence** is a set of instructions that run **one after another**, in order, from **top to bottom**.
 
 Think of a recipe:
+
 1. First, crack eggs
 2. Then, add flour
 3. Then, mix
@@ -120,13 +175,13 @@ If you bake before mixing — disaster! **Order matters.**
 
 In Scratch, blocks in a stack run **one at a time**, from the **hat block down to the cap block** (or end of stack).
 
-```
-when green flag clicked          ← 1. STARTS FIRST
-say [Hello!] for 2 secs          ← 2. RUNS SECOND
-wait 1 secs                      ← 3. RUNS THIRD (after say finishes)
-move 100 steps                   ← 4. RUNS FOURTH
-turn 90 degrees                  ← 5. RUNS FIFTH
-```
+<div class="scratch">
+when green flag clicked // 1. Starts first
+say [Hello!] for (2) seconds // 2. Runs second, after say finishes
+wait (1) seconds // 3. Runs third
+move (100) steps // 4. Runs fourth
+turn right (90) degrees // 5. Runs fifth
+</div>
 
 ### Why Sequence Matters
 
@@ -135,18 +190,18 @@ turn 90 degrees                  ← 5. RUNS FIFTH
 | `move 100` then `say` | Sprite moves, THEN speaks (looks weird) |
 | `say` then `move 100` | Sprite speaks, THEN moves (natural!) |
 
-```
+<div class="scratch">
 when green flag clicked
-go to x: -200 y: 0       // 1. Position FIRST
-switch costume to [run1 v]  // 2. Look ready
-say [Ready, set, GO!] for 2 secs  // 3. Announce
-wait 1 secs              // 4. Dramatic pause
-forever                  // 5. Then start game loop
-    if <key [right arrow] pressed?> then
-        change x by 10
-    end
+go to x: (-200) y: (0) // 1. Position first
+switch costume to [run1 v] // 2. Look ready
+say [Ready, set, GO!] for (2) seconds // 3. Announce
+wait (1) seconds // 4. Dramatic pause
+forever // 5. Then start the game loop
+if &lt;key [right arrow v] pressed?&gt; then
+change x by (10)
 end
-```
+end
+</div>
 
 !!! note "⬇️ Top to Bottom = First to Last"
     Scratch **always** runs blocks in order from the hat block down. If your script does something weird, check the order!
@@ -170,8 +225,9 @@ The **stop sign** (🛑 red octagon) next to the green flag **stops everything i
 - **Infinite loops** — `forever` with no exit condition
 - **Game over** — Combined with `stop [all]` block in code
 
-!!! warning "🛑 Stop Sign = Emergency Only"
-    Don't use the stop sign as a "game over" in your final project — use `stop [all]` block in your code instead. The stop sign is for **you, the programmer**, during testing.
+!!! mascot-warning "The Stop Sign Is Not Game Over"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A common trap: reaching for the stop sign as your game's "you lose" screen — but players can't click it, only you can, while testing. Use the `stop [all v]` block inside your code instead, and save the stop sign for catching runaway loops while you build.
 
 ---
 
@@ -181,14 +237,14 @@ The **stop sign** (🛑 red octagon) next to the green flag **stops everything i
 
 A sprite that says hello when clicked:
 
-```
+<div class="scratch">
 when this sprite clicked
-say [Hello there!] for 2 secs
+say [Hello there!] for (2) seconds
 play sound [pop v] until done
-change color effect by 25
-wait 0.5 secs
+change color effect by (25)
+wait (0.5) seconds
 clear graphic effects
-```
+</div>
 
 **Concepts used:** `when this sprite clicked` (Event), `say` (Looks), `play sound` (Sound), `change color effect` (Looks), `wait` (Control), `clear graphic effects` (Looks)
 
@@ -198,12 +254,12 @@ clear graphic effects
 
 A sprite that moves to where you click:
 
-```
+<div class="scratch">
 when this sprite clicked
-glide 1 secs to [mouse-pointer v]
+glide (1) secs to [mouse-pointer v]
 play sound [pop v]
-say [I'm here!] for 1 secs
-```
+say [I'm here!] for (1) seconds
+</div>
 
 **Concepts used:** `when this sprite clicked`, `glide` (Motion), `mouse-pointer` (Sensing), `play sound`, `say`
 
@@ -213,28 +269,28 @@ say [I'm here!] for 1 secs
 
 Control a sprite with arrow keys:
 
-```
+<div class="scratch">
 when green flag clicked
-go to x: 0 y: 0
+go to x: (0) y: (0)
 forever
-    if <key [right arrow] pressed?> then
-        change x by 10
-        point in direction 90
-        next costume
-    end
-    if <key [left arrow] pressed?> then
-        change x by -10
-        point in direction -90
-        next costume
-    end
-    if <key [up arrow] pressed?> then
-        change y by 10
-    end
-    if <key [down arrow] pressed?> then
-        change y by -10
-    end
+if &lt;key [right arrow v] pressed?&gt; then
+change x by (10)
+point in direction (90)
+next costume
 end
-```
+if &lt;key [left arrow v] pressed?&gt; then
+change x by (-10)
+point in direction (-90)
+next costume
+end
+if &lt;key [up arrow v] pressed?&gt; then
+change y by (10)
+end
+if &lt;key [down arrow v] pressed?&gt; then
+change y by (-10)
+end
+end
+</div>
 
 **Concepts used:** `when green flag`, `go to`, `forever`, `if`, `key pressed?` (Sensing), `change x/y`, `point in direction`, `next costume`
 
@@ -242,18 +298,24 @@ end
 
 ## Repeat Loops — Do It Again (and Again!)
 
+<div class="scratch">
+repeat (10)
+move (10) steps
+end
+</div>
+
 ### What Is a Loop?
 
 A **loop** repeats a set of instructions **multiple times** without you having to copy-paste blocks.
 
 ### The Repeat Block (Control → Orange)
 
-```
+<div class="scratch">
 repeat (10)
-    move 10 steps
-    turn 15 degrees
+move (10) steps
+turn right (15) degrees
 end
-```
+</div>
 
 This runs the inside blocks **10 times** — drawing a spiral!
 
@@ -269,43 +331,44 @@ This runs the inside blocks **10 times** — drawing a spiral!
 
 ### Counted Repeat — Exact Repetitions
 
-```
+<div class="scratch">
 repeat (4)
-    move 100 steps
-    turn 90 degrees
+move (100) steps
+turn right (90) degrees
 end
-```
+</div>
 
 **Draws a perfect square!** Runs exactly 4 times.
 
 ### Forever Loop — Continuous Action
 
-```
+<div class="scratch">
 when green flag clicked
 forever
-    if <key [right arrow] pressed?> then
-        change x by 5
-    end
-    if <key [left arrow] pressed?> then
-        change x by -5
-    end
+if &lt;key [right arrow v] pressed?&gt; then
+change x by (5)
 end
-```
+if &lt;key [left arrow v] pressed?&gt; then
+change x by (-5)
+end
+end
+</div>
 
 **Runs constantly** — perfect for game loops, animations, checking sensors.
 
-!!! warning "⚡ Forever Needs a Break!"
-    A `forever` loop with **no `wait` inside** will run so fast it can lag your project. Add `wait 0.01 secs` or use `forever if` (which we'll learn later).
+!!! mascot-warning "Forever Needs to Breathe"
+    ![Scratch the Cat waving a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    A `forever` loop with nothing slowing it down runs thousands of times per second, which can lag your whole project. Drop in a tiny `wait (0.01) seconds` — barely noticeable to a player, but it gives Scratch room to breathe.
 
 ---
 
 ### Repeat Until — Smart Loops
 
-```
-repeat until <touching [edge v]?>
-    move 10 steps
+<div class="scratch">
+repeat until &lt;touching [edge v]?&gt;
+move (10) steps
 end
-```
+</div>
 
 **Keeps moving until it hits the edge**, then stops automatically!
 
@@ -325,18 +388,21 @@ Type: microsim
 Learning objective: Visualize the difference between repeat, forever, and repeat until
 
 Canvas layout:
+
 - Three side-by-side panels, each showing a sprite and loop type
 - Panel 1: `repeat (4)` — draws square, stops
 - Panel 2: `forever` — continuous spiral, stop button
 - Panel 3: `repeat until <touching edge?>` — moves to edge, stops
 
 Visual elements:
+
 - Sprite drawing trail (Pen extension)
 - Loop counter display: "Iteration: 1/4"
 - Code preview for each loop type
 - Play/Pause/Reset for each panel
 
 Interactive controls:
+
 - Play/Pause each loop independently
 - Speed slider (0.1x to 5x)
 - "Show code" toggle
@@ -351,6 +417,7 @@ Data Visibility Requirements:
 Instructional Rationale: Side-by-side comparison with visual output helps learners distinguish loop behaviors concretely rather than abstractly.
 
 Implementation notes:
+
 - Use p5.js with three canvas instances or one wide canvas
 - Pen trails for visual feedback
 - Loop state machines for each panel
@@ -360,36 +427,87 @@ Implementation notes:
 
 ## If Blocks — Making Decisions
 
+<div class="scratch">
+if &lt;touching [edge v]?&gt; then
+turn right (180) degrees
+end
+</div>
+
 ### What Is an If Block?
 
 An **if block** (Control → Orange) lets your code **make choices** based on conditions.
 
-```
-if <condition> then
-    // Do this ONLY if condition is TRUE
+<div class="scratch">
+if &lt;condition&gt; then
+move (10) steps // Do this ONLY if condition is TRUE
 end
-```
+</div>
 
 ### If-Else — Two Paths
 
-```
-if <condition> then
-    // Do this if TRUE
+<div class="scratch">
+if &lt;condition&gt; then
+move (10) steps // Do this if TRUE
 else
-    // Do this if FALSE
+turn right (15) degrees // Do this if FALSE
 end
-```
+</div>
 
 ### Common Conditions (Sensing + Operators)
 
-| Condition Block | Category | True When... |
-|-----------------|----------|--------------|
-| `touching [mouse-pointer v]?` | Sensing | Sprite touches mouse cursor |
-| `touching [Ball v]?` | Sensing | Touches specific sprite |
-| `touching color [#FF0000]?` | Sensing | Touches red pixels |
-| `key [space] pressed?` | Sensing | Space bar held down |
-| `< (x position) > 200 >` | Operators | X is right of center |
-| `< [score] > 100 >` | Operators | Score exceeds 100 |
+**Examples:**
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+touching [mouse-pointer v]?
+</div>
+
+Sensing — true when the sprite touches the mouse cursor.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+touching [Ball v]?
+</div>
+
+Sensing — true when it touches a specific sprite.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+touching color [#FF0000]?
+</div>
+
+Sensing — true when it touches red pixels.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+key [space v] pressed?
+</div>
+
+Sensing — true while the space bar is held down.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(x position) > (200)
+</div>
+
+Operators — true when X is right of center.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+(score) > (100)
+</div>
+
+Operators — true when score exceeds 100.
+</div>
+
+</div>
 
 ---
 
@@ -397,131 +515,173 @@ end
 
 #### Simple If — React to Edge
 
-```
+<div class="scratch">
 forever
-    move 5 steps
-    if <touching [edge v]?> then
-        turn 180 degrees
-    end
+move (5) steps
+if &lt;touching [edge v]?&gt; then
+turn right (180) degrees
 end
-```
+end
+</div>
 
 **Bounces off walls!**
 
 #### If-Else — Two Behaviors
 
-```
+<div class="scratch">
 forever
-    if <key [space] pressed?> then
-        change y by 20    // Jump!
-        wait 0.5 secs
-        change y by -20
-    else
-        // Do nothing, just wait
-    end
+if &lt;key [space v] pressed?&gt; then
+change y by (20) // Jump!
+wait (0.5) seconds
+change y by (-20)
+else
 end
-```
+end
+</div>
+
+If space isn't pressed, the `else` branch runs instead — here, that's simply nothing, so the sprite just waits.
 
 #### Nested Ifs — Complex Choices
 
-```
+<div class="scratch">
 forever
-    if <touching [coin v]?> then
-        change score by 10
-        play sound [coin v]
-        // Move coin to new random spot
-        go to x: (pick random -200 to 200) y: (pick random -150 to 150)
-    end
-    
-    if <touching [enemy v]?> then
-        change lives by -1
-        play sound [hurt v]
-        if <lives = 0> then
-            broadcast [game-over v]
-            stop [this script v]
-        end
-    end
+if &lt;touching [coin v]?&gt; then
+change [score v] by (10)
+play sound [coin v]
+go to x: (pick random (-200) to (200)) y: (pick random (-150) to (150)) // Move coin to a new random spot
 end
-```
+if &lt;touching [enemy v]?&gt; then
+change [lives v] by (-1)
+play sound [hurt v]
+if &lt;(lives) = (0)&gt; then
+broadcast [game-over v]
+stop [this script v]
+end
+end
+end
+</div>
 
-!!! tip "🔍 Indentation Helps!"
-    In Scratch, you can't indent code, but **mentally group** your if/else blocks. The `else` always pairs with the **closest `if` above it**.
+!!! mascot-tip "Track Else By Proximity"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Scratch won't let you add extra indentation for clarity, so train your eye instead: an `else` always belongs to the nearest `if` wrapped directly around it, never one further up the stack. When scripts get deep, trace each `if` from the top down to find its matching `else`.
 
 ---
 
 ## Comparison Operators — Math Decisions
 
+<div class="scratch">
+(score) > (100)
+</div>
+
 The **Operators category** (🟢 green) has blocks for comparing values.
 
 ### Comparison Blocks
 
-| Block | Symbol | True When... | Example |
-|-------|--------|--------------|---------|
-| `< >` | < | Left < Right | `10 < 20` → true |
-| `< >` | > | Left > Right | `50 > 5` → true |
-| `< = >` | = | Left = Right | `10 = 10` → true |
+**Examples:**
+
+<div class="scratch">
+&lt;(10) &lt; (20)&gt;
+</div>
+
+Left less than right — true.
+
+<div class="scratch">
+(50) > (5)
+</div>
+
+Left greater than right — true.
+
+<div class="scratch">
+(10) = (10)
+</div>
+
+Left equal to right — true.
 
 ### Using Comparisons in If Blocks
 
-```
-if < [score] > 100 > then
-    broadcast [level-complete v]
+<div class="scratch">
+if &lt;(score) > (100)&gt; then
+broadcast [level-complete v]
 end
+</div>
 
-if < [lives] = 0 > then
-    broadcast [game-over v]
+<div class="scratch">
+if &lt;(lives) = (0)&gt; then
+broadcast [game-over v]
 end
+</div>
 
-if < [timer] < 10 > then
-    say [Hurry up!] for 1 secs
+<div class="scratch">
+if &lt;(timer) &lt; (10)&gt; then
+say [Hurry up!] for (1) seconds
 end
-```
+</div>
 
 ### Combining Comparisons (And/Or/Not)
 
-| Block | What It Does | Example |
-|-------|--------------|---------|
-| `< > and < >` | Both must be true | `score > 100 AND lives > 0` |
-| `< > or < >` | At least one true | `touching enemy OR touching spike` |
-| `not < >` | Flips true/false | `not touching ground` |
+<div class="scratch">
+&lt;(score) > (100)&gt; and &lt;(lives) > (0)&gt;
+</div>
+
+Both must be true.
+
+<div class="scratch">
+&lt;touching [enemy v]?&gt; or &lt;touching [spike v]?&gt;
+</div>
+
+At least one true.
+
+<div class="scratch">
+not &lt;touching [ground v]?&gt;
+</div>
+
+Flips true to false, and false to true.
 
 ---
 
 ## Broadcast Messages — Sprites Talking!
 
+<div class="scratch">
+broadcast [message1 v]
+</div>
+
 ### Sending Messages
 
-```
+<div class="scratch">
 broadcast [game-start v]
-```
+</div>
 
 Shouts a message to **all sprites** (including the stage!). Continues immediately.
 
 ### Broadcast and Wait
 
-```
+<div class="scratch">
 broadcast [level-start v] and wait
-```
+</div>
 
 Sends message, then **pauses this script** until ALL sprites that receive it finish their `when I receive` scripts.
 
 ### Receiving Messages
 
-```
+<div class="scratch">
 when I receive [game-start v]
-go to x: -200 y: -100
+go to x: (-200) y: (-100)
 show
-```
+</div>
+
+!!! mascot-thinking "Decoupled by Design"
+    ![Scratch the Cat thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that the broadcasting sprite never names who's listening — it just shouts a message into the air, and any sprite (or none) can choose to react. That's a real architecture idea called decoupling: sender and receivers don't need to know anything about each other, only the message name they agree on.
 
 ### Broadcast Chains — Coordinated Starts
 
-```
+<div class="scratch">
 when green flag clicked
 broadcast [reset-all v] and wait
 broadcast [spawn-player v] and wait
 broadcast [spawn-enemies v] and wait
 broadcast [start-game v]
-```
+</div>
 
 **Each sprite responds to the message it cares about!**
 
@@ -541,6 +701,7 @@ Type: diagram
 Purpose: Visualize how broadcasts coordinate multiple sprites
 
 Components to show:
+
 - Central "Broadcast" node: `broadcast [game-start v] and wait`
 - Arrows to 4 sprites: Player, Enemy, Coin, UI
 - Each sprite shows its `when I receive [game-start v]` script
@@ -550,6 +711,7 @@ Components to show:
 Style: Network diagram with animated pulse traveling from center to sprites
 
 Labels:
+
 - "Sender: broadcasts message"
 - "Receiver 1 (Player): initializes position"
 - "Receiver 2 (Enemy): spawns at random position"
@@ -564,42 +726,82 @@ Color scheme: Events yellow for broadcast, sprite-specific colors for receivers
 
 ## Cloning — Many Sprites From One!
 
+<div class="scratch">
+create clone of [myself v]
+</div>
+
 ### What Is a Clone?
 
 A **clone** is a **copy of a sprite** created **during runtime** (while the project runs). Clones:
+
 - Run the **same scripts** as the original
 - Have their **own position, direction, costume**
 - Are **temporary** — deleted when project stops
 
+!!! mascot-encourage "Clones Confuse Everyone at First"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    If "the original runs one script while clones run a totally different one" doesn't click immediately, you're in good company — this is one of the trickier ideas in Scratch. Start small: make ONE clone, watch exactly where it appears and what it does, then work up to ten.
+
 ### Clone Blocks
 
-| Block | What It Does |
-|-------|--------------|
-| `create clone of [myself v]` | Makes a copy of this sprite |
-| `create clone of [Sprite2 v]` | Makes a copy of another sprite |
-| `when I start as a clone` | Hat block: runs for EACH new clone |
-| `delete this clone` | Removes this clone |
+**Examples:**
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+<div class="scratch">
+create clone of [myself v]
+</div>
+
+Makes a copy of this sprite.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+create clone of [Sprite2 v]
+</div>
+
+Makes a copy of another sprite.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+when I start as a clone
+</div>
+
+Hat block — runs for EACH new clone.
+</div>
+
+<div class="card" markdown>
+<div class="scratch">
+delete this clone
+</div>
+
+Removes this clone.
+</div>
+
+</div>
 
 ---
 
 ### How Cloning Works
 
-```
+<div class="scratch">
 when green flag clicked
-repeat 10
-    create clone of [myself v]
-    wait 0.5 secs
+repeat (10)
+create clone of [myself v]
+wait (0.5) seconds
 end
 
 when I start as a clone
-go to x: (pick random -200 to 200) y: (pick random -150 to 150)
+go to x: (pick random (-200) to (200)) y: (pick random (-150) to (150))
 forever
-    move 3 steps
-    if <touching [edge v]?> then
-        delete this clone
-    end
+move (3) steps
+if &lt;touching [edge v]?&gt; then
+delete this clone
 end
-```
+end
+</div>
 
 **Creates 10 clones over 5 seconds**, each wandering until hitting an edge!
 
@@ -615,26 +817,31 @@ end
 | **`delete this clone`** | Only works inside a clone script |
 | **Stop sign deletes all** | Clones vanish when project stops |
 
-!!! tip "🌟 Cloning = Particle Systems!"
-    Use clones for: **rain, snow, stars, explosions, enemy swarms, bullet hell, trailing effects**
+!!! mascot-tip "Clones Are Particle Systems"
+    ![Scratch the Cat pointing at a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Anywhere you'd want dozens of similar little things — rain, snow, stars, an explosion, a swarm of enemies — reach for cloning instead of drawing dozens of separate sprites by hand. One script, `create clone of [myself v]` on repeat, and Scratch handles the rest.
 
 ---
 
 ## Touching Sensors — Detecting Contact
 
+<div class="scratch">
+touching [mouse-pointer v]?
+</div>
+
 ### Touching Sprite
 
-```
+<div class="scratch">
 touching [Ball v]?
-```
+</div>
 
 True if **any part** of this sprite touches **any part** of the target sprite.
 
 ### Touching Color
 
-```
+<div class="scratch">
 touching color [#FF0000]?
-```
+</div>
 
 True if **any pixel** of this sprite touches **that exact color** anywhere on stage.
 
@@ -646,34 +853,48 @@ True if **any pixel** of this sprite touches **that exact color** anywhere on st
 
 !!! tip "🎨 Color Touching = Level Boundaries"
     Draw your **maze walls in pure red (#FF0000)**, then:
-    ```
-    if <touching color [#FF0000]?> then
-        go to start position
+
+    <div class="scratch">
+    if &lt;touching color [#FF0000]?&gt; then
+    go to start position
     end
-    ```
+    </div>
 
 ---
 
 ## X and Y Coordinates — Precise Positioning
 
+<div class="scratch">
+x position
+</div>
+
 ### Reporter Blocks for Position
 
-| Block | What It Gives | Range |
-|-------|---------------|-------|
-| `x position` | Current horizontal position | -240 to 240 |
-| `y position` | Current vertical position | -180 to 180 |
+**Examples:**
+
+<div class="scratch">
+x position
+</div>
+
+Current horizontal position — ranges from -240 to 240.
+
+<div class="scratch">
+y position
+</div>
+
+Current vertical position — ranges from -180 to 180.
 
 ### Using Position Reporters
 
-```
-go to x: (x position) y: (100)
-// Keeps current X, sets Y to 100 (jump to same height)
+<div class="scratch">
+go to x: (x position) y: (100) // Keeps current X, sets Y to 100
+</div>
 
-if < (x position) > 200 > then
-    set x to 200
+<div class="scratch">
+if &lt;(x position) > (200)&gt; then
+set x to (200) // Prevents going past the right edge
 end
-// Prevents going past right edge
-```
+</div>
 
 ---
 
@@ -691,18 +912,21 @@ Type: microsim
 Learning objective: See live x position and y position values as sprite moves
 
 Canvas layout:
+
 - Stage with draggable sprite
 - Live display: "x position: 0" "y position: 0"
 - Code snippet showing `go to x: (x position) y: (100)`
 - "Jump to top" button demonstrating reporter use
 
 Visual elements:
+
 - Sprite follows mouse or clicks
 - Large coordinate display in top corner
 - Visual indicators for X axis (horizontal arrow) and Y axis (vertical arrow)
 - Boundary markers at -240, 240, -180, 180
 
 Interactive controls:
+
 - Drag sprite to see live coordinates
 - "Freeze display" to capture values
 - "Show code example" toggle
@@ -716,6 +940,7 @@ Data Visibility Requirements:
 Instructional Rationale: Live coordinate display with immediate manipulation builds intuition for coordinate reporters as dynamic values.
 
 Implementation notes:
+
 - p5.js mouse tracking
 - Reporter blocks simulated as live values
 </details>
@@ -824,6 +1049,10 @@ In this chapter, you learned:
 - ✅ **Stage center** — The (0, 0) reference point
 - ✅ **Sharing projects** — Publish with good instructions
 - ✅ **Versioning** — Save numbered backups
+
+!!! mascot-celebration "You Just Built Real Interactive Programs"
+    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You went from a single script to full event-driven programs: scripts that react to clicks and keys, loop with purpose, make decisions with if/else, talk to each other with broadcasts, and multiply themselves with clones. That's everything a real Scratch game needs — the rest of this book is about making it look and feel great.
 
 ---
 

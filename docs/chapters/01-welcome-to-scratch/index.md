@@ -401,8 +401,8 @@ Let's build your very first program together!
 4. **Click the green flag** 🟢 at the top of the stage
 5. **Watch the cat move!** 🐱
 
-!!! mascot-celebration "You Did It!"
-    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+!!! mascot-encourage "You Did It!"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
     You just wrote your first computer program! The cat moved 10 steps to the right because `move 10 steps` means "move forward 10 pixels in the direction you're facing."
 
 ### Try These Variations
@@ -655,8 +655,8 @@ When your project is ready for the world:
 - It appears in **search results** and **category pages**
 - You can **embed it** on websites with the embed code
 
-!!! mascot-celebration "You're a Creator Now!"
-    ![Scratch the Cat celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+!!! mascot-encourage "You're a Creator Now!"
+    ![Scratch the Cat giving an encouraging thumbs-up](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
     Sharing your first project is a big moment. Be proud! Every expert programmer started with a simple "Hello World" project.
 
 ---
