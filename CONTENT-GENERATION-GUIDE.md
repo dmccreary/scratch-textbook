@@ -483,6 +483,33 @@ pedagogical requirement rather than a garnish.
 - **Tools**: p5.js for physics, graphics, and simulation; Chart.js for data;
   vis-network for graphs; Mermaid for flow and sequence diagrams.
 
+### MicroSim Layout Standard
+
+All 13 sims under `docs/sims/` were polished to one standard in June 2026, after
+the generated versions had controls overlapping drawn text, clipped iframes,
+unstyled widgets and visible `describe()` text on github.io. New and edited sims
+follow it.
+
+- **Control rows.** DOM controls sit in fixed rows below the draw area: row 1 at
+  `drawHeight + 12`, row 2 at `drawHeight + 50`, row 3 at `drawHeight + 88`.
+  `controlHeight` is 50, 90 or 130 for one, two or three rows. Never draw canvas
+  text at those y positions.
+- **Hint text** goes inside the draw area, one line, `textSize(11)`, gray
+  `#666`, near `drawHeight - 10`.
+- **`describe('...')` without the `LABEL` argument.** `LABEL` renders a visible
+  duplicate of the text below the canvas.
+- **Shared style block.** Every `main.html` carries the same `<style>` block
+  (styled buttons, inputs and selects, orange `accent-color: #e8871e`, a
+  `.back-link` class). Copy it from an existing sim such as
+  `docs/sims/three-tabs/main.html`.
+- **Iframe height.** Every embed, in chapters and in the sim's own `index.md`,
+  needs `height` of at least `drawHeight + controlHeight + 15` px or the sim is
+  clipped. `scrolling="no"` is the default; drop it for a sim that grows, such as
+  block-categories.
+- **Deploy and preview.** Deploy with `mkdocs gh-deploy` from the main checkout
+  after merging. `mkdocs serve` here does not reliably rebuild on file changes, so
+  restart it after edits before checking in a browser.
+
 ## Markdown Formatting Rules
 
 1. **List spacing.** EVERY Markdown list — bulleted or numbered — MUST have a
